@@ -1,11 +1,8 @@
 ---
 title: "Læringsmål"
 output:
-  html_document:
-    toc: yes
-    df_print: paged
   html_notebook:
-    toc: yes
+    toc: no
 abstract: ''
 ---
 
