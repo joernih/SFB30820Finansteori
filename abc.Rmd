@@ -26,5 +26,3 @@ df
 # Forelesning 12
 # Forelesning 13
 
-
-# abc
