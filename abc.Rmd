@@ -10,9 +10,8 @@ abstract: ""
 source("timeplan.R")
 df
 ```
-
-
 # Forelesning 1
+![abc](screen.png)
 # Forelesning 2
 # Forelesning 3
 # Forelesning 4
@@ -26,3 +25,5 @@ df
 # Forelesning 12
 # Forelesning 13
 
+
+Some more text here
