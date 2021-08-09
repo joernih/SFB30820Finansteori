@@ -6,10 +6,13 @@ output:
 abstract: ""
 ---
 
+![drawio](abc.png)
+
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
-df
 ```
+
 # Forelesning 1
 ![abc](screen.png)
 # Forelesning 2
@@ -24,6 +27,10 @@ df
 # Forelesning 11
 # Forelesning 12
 # Forelesning 13
+  
+  Some more text here
 
 
-Some more text here
+# Emnebeskrivelse
+[emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+
