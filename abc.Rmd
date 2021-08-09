@@ -28,9 +28,10 @@ source("timeplan.R")
 # Forelesning 12
 # Forelesning 13
   
-  Some more text here
+Some more text here
 
 
 # Emnebeskrivelse
 [emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 
+Some more text goes here0
