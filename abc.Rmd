@@ -12,26 +12,40 @@ abstract: ""
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
 ```
+![abc](screen.png)
+
 
 # Forelesning 1
-![abc](screen.png)
+abc
 # Forelesning 2
+
 # Forelesning 3
+
 # Forelesning 4
+
 # Forelesning 5
+
 # Forelesning 6
+
 # Forelesning 7
+
 # Forelesning 8
+
 # Forelesning 9
+
 # Forelesning 10
+
 # Forelesning 11
+
 # Forelesning 12
+
 # Forelesning 13
   
-Some more text here
 
 
 # Emnebeskrivelse
 [emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 
-Some more text goes here0
+https://eportal.fagbokforlaget.no/Pages/programs.aspx
+
+
