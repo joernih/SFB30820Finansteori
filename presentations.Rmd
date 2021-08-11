@@ -20,6 +20,27 @@ output:
 #writeLines(purrr::map_chr(127:length(lines), ~ lines[.]), "test1s.Rmd")
 ```
 
-```{r, child='test1s.Rmd'}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#source("timeplan.R")
+#tema[1]
 ```
 
+---
+
+# Forelesning 1:
+
+---
+
+## Læringsmål
+
+- Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
+- Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
+- konstruere en kontantstrøm fra prosjektdata.
+- forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
+- beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
+- gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+
+---
