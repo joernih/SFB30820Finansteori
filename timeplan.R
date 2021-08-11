@@ -6,7 +6,7 @@ library(magrittr)
 ukenr <- seq(33,46)
 timer <- rep(3,14)
 tema <- c(
-	  "Introduksjon",
+	  "Introduksjon og overblikk",
 	  "Porteføljeteori to fond",
 	  "Porteføljeteori 3 til n-fond",
 	  "Effisiens",
@@ -19,6 +19,7 @@ tema <- c(
 	  "",
 	  "",
 	  "Finansielle instrumenter for behandling av usikkerhet",
+	  ""
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -36,11 +37,36 @@ literatur <- c(
 	       "Kap. 12: Opsjoner",
 	       "Kap. 13: Risikostyring"
 )
+oppgaver <- c(
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  ""
+)
 
 ## Output
-df <- data.frame(Literatur=literatur,Tema=tema,Ukenr=ukenr,Timer=timer)
-htmlTable(df)
-#https://finans2.portfolio.no/
+df1 <- data.frame(Literatur=literatur,
+		 Tema=tema,
+		 Oppgaver=oppgaver,
+		 Ukenr=ukenr,
+		 Timer=timer
+)
+df2 <- data.frame(Literatur=literatur,
+		 Tema=tema,
+		 Oppgaver=oppgaver,
+		 Ukenr=ukenr,
+		 Timer=timer
+)
 
 
 

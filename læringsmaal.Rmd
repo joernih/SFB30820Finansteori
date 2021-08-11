@@ -6,7 +6,12 @@ output:
 abstract: ''
 ---
 
+# Emnebeskrivelse
+[emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+[Fagbokforlaget](https://eportal.fagbokforlaget.no/Pages/programs.aspx)
+[Ressurs](https://finans2.portfolio.no/read_container/b7293def-6aa3-4f4b-81c7-f62972d97d5a)|
 # Læringsmål kapittel 1
+
 1. Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
 1. Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
 1. konstruere en kontantstrøm fra prosjektdata.
