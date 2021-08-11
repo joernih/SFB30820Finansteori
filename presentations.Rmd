@@ -1,35 +1,30 @@
 ---
-title: "ABC"
-#subtitle: "Oversikt over faget"
+title: "Finansteori (SFB30820)"
+subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
 date: "2021/01/11 (updated: `r Sys.Date()`)"
-output:
-  xaringan::moon_reader:
-    # includes:
-    #   in_header: "mathjax-equation-numbers.html"
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+output: 
+  html_notebook:
+    toc: false
+#output:
+#  xaringan::moon_reader:
+#    # includes:
+#    #   in_header: "mathjax-equation-numbers.html"
+#    lib_dir: libs
+#    nature:
+#      highlightStyle: github
+#      highlightLines: true
+#      countIncrementalSlides: false
 #bibliography: pensum.bib
 ---
 
-```{r include=FALSE}
-#lines <- readLines("../forelesning_10.Rmd")
-#writeLines(purrr::map_chr(127:length(lines), ~ lines[.]), "test1s.Rmd")
-```
-
-
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-#source("timeplan.R")
-#tema[1]
+source("timeplan.R")
 ```
 
----
+class: inverse, center, middle
 
-# Forelesning 1:
+# Forelesning 1: `r tema[1]`
 
 ---
 
@@ -42,5 +37,31 @@ output:
 - beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
+# Forelesning 2: `r tema[2]`
+# Forelesning 3: `r tema[3]`
+# Forelesning 4: `r tema[4]`
+# Forelesning 5: `r tema[5]` 
+# Forelesning 6: `r tema[6]`
+# Forelesning 7: `r tema[7]`
+# Forelesning 8: `r tema[8]`
+# Forelesning 9: `r tema[9]`
+# Forelesning 10 `r tema[10]`
+# Forelesning 11 `r tema[11]`
+# Forelesning 12 `r tema[12]`
+# Forelesning 13 `r tema[13]`
+
+
+# Timeplan
+```{r}
+htmlTable(df1)
+```
+
+# Anbefalte oppgaver
+```{r}
+htmlTable(df2)
+```
+# Eksamen
+
+# Kursbeskrivelse
 
 ---

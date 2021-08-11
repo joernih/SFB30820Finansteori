@@ -1,6 +1,6 @@
 library(htmlTable)
 library(magrittr)
-
+library(xaringan)
 # Timeplan
 ## Input
 ukenr <- seq(33,46)
