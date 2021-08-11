@@ -27,10 +27,22 @@ source("timeplan.R")
 # Forelesning 11
 # Forelesning 12
 # Forelesning 13
-  
-  Some more text here
+Some more text here
+
+
+Pensumliste
+Kursmateriale
+Oppgave (web + bok løsningsforslag)
+Ekamen (skole + innlevering)
+Studentene
 
 
 # Emnebeskrivelse
 [emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+
+
+
+
+
+
 
