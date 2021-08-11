@@ -83,7 +83,6 @@ imap ,rc <Plug>RClearAll
 imap jj 
 let &cpo=s:cpo_save
 unlet s:cpo_save
-set background=dark
 set backspace=indent,eol,start
 set backupdir=~/.cache/vim/backup//
 set belloff=all
@@ -98,7 +97,6 @@ set shell=zsh
 set statusline=%F
 set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.inx,.jpg,.log,.out,.png,.toc
 set noswapfile
-set switchbuf=useopen
 set undodir=~/.cache/vim/undo//
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
@@ -111,28 +109,18 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd timeplan.R
-edit timeplan.R
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 99 + 78) / 157)
-exe 'vert 2resize ' . ((&columns * 57 + 78) / 157)
-tcd ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori
+edit abc.Rmd
 argglobal
+balt abc.Rmd
+noremap <buffer> <silent> ,gN :call b:PreviousRChunk()
+noremap <buffer> <silent> ,gn :call b:NextRChunk()
+noremap <buffer> <silent> ,ca :call b:SendChunkToR("echo", "down")
+noremap <buffer> <silent> ,cd :call b:SendChunkToR("silent", "down")
+noremap <buffer> <silent> ,ce :call b:SendChunkToR("echo", "stay")
+noremap <buffer> <silent> ,cc :call b:SendChunkToR("silent", "stay")
+vnoremap <buffer> <silent> ,kn :call RKnit()
+nnoremap <buffer> <silent> ,kn :call RKnit()
+onoremap <buffer> <silent> ,kn :call RKnit()
 vnoremap <buffer> <silent> ,rd :call RSetWD()
 nnoremap <buffer> <silent> ,rd :call RSetWD()
 onoremap <buffer> <silent> ,rd :call RSetWD()
@@ -213,7 +201,6 @@ nnoremap <buffer> <silent> ,rl :call g:SendCmdToR("ls()")
 onoremap <buffer> <silent> ,rl :call g:SendCmdToR("ls()")
 noremap <buffer> <silent> ,ud :call RAction("undebug")
 noremap <buffer> <silent> ,bg :call RAction("debug")
-noremap <buffer> <silent> ,su :call SendAboveLinesToR()
 let s:cpo_save=&cpo
 set cpo&vim
 noremap <buffer> <silent> ,r<Right> :call RSendPartOfLine("right", 0)
@@ -224,6 +211,7 @@ nnoremap <buffer> <silent> ,o :call SendLineToRAndInsertOutput()0
 onoremap <buffer> <silent> ,o :call SendLineToRAndInsertOutput()0
 noremap <buffer> <silent> ,d :call SendLineToR("down")0
 noremap <buffer> <silent> ,l :call SendLineToR("stay")
+noremap <buffer> <silent> ,ch :call SendFHChunkToR()
 noremap <buffer> <silent> ,pa :call SendParagraphToR("echo", "down")
 noremap <buffer> <silent> ,pd :call SendParagraphToR("silent", "down")
 noremap <buffer> <silent> ,pe :call SendParagraphToR("echo", "stay")
@@ -257,10 +245,6 @@ noremap <buffer> <silent> ,ba :call SendMBlockToR("echo", "down")
 noremap <buffer> <silent> ,bd :call SendMBlockToR("silent", "down")
 noremap <buffer> <silent> ,be :call SendMBlockToR("echo", "stay")
 noremap <buffer> <silent> ,bb :call SendMBlockToR("silent", "stay")
-noremap <buffer> <silent> ,ks :call RSpin()
-noremap <buffer> <silent> ,ao :call ShowRout()
-noremap <buffer> <silent> ,ae :call SendFileToR("echo")
-noremap <buffer> <silent> ,aa :call SendFileToR("silent")
 vnoremap <buffer> <silent> ,; :call MovePosRCodeComment("selection")
 nnoremap <buffer> <silent> ,; :call MovePosRCodeComment("normal")
 onoremap <buffer> <silent> ,; :call MovePosRCodeComment("normal")
@@ -288,6 +272,7 @@ onoremap <buffer> <silent> ,rf :call StartR("R")
 vnoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
 nnoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
 onoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
+inoremap <buffer> <silent> ` :call RWriteRmdChunk()a
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
@@ -306,7 +291,7 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#',:###,:##,:#
+setlocal comments=fb:*,fb:-,fb:+,n:>
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
@@ -324,8 +309,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'r'
-setlocal filetype=r
+if &filetype != 'rmd'
+setlocal filetype=rmd
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -338,17 +323,17 @@ setlocal foldmethod=manual
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatexpr=FormatRmd()
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^\\s*[-*+]\\s\\+
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetRIndent()
-setlocal indentkeys=0{,0},:,!^F,o,O,e
+setlocal indentexpr=GetRmdIndent()
+setlocal indentkeys=0{,0},<:>,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,.
 setlocal keywordprg=
@@ -393,8 +378,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'r'
-setlocal syntax=r
+if &syntax != 'rmd'
+setlocal syntax=rmd
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -416,158 +401,19 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 47 - ((29 * winheight(0) + 18) / 37)
+let s:l = 25 - ((24 * winheight(0) + 40) / 80)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 47
+keepjumps 25
 normal! 0
-wincmd w
-argglobal
-terminal ++curwin ++cols=57 ++rows=37 R
-let s:term_buf_2 = bufnr()
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal nobuflisted
-setlocal buftype=terminal
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != ''
-setlocal filetype=
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal listchars=
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal nomodifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal winfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 18) / 37)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 99 + 78) / 157)
-exe 'vert 2resize ' . ((&columns * 57 + 78) / 157)
 tabnext 1
-badd +0 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/timeplan.R
+badd +9 abc.Rmd
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20 shortmess=filnxtToOS
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
