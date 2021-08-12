@@ -13,13 +13,13 @@ tema <- c(
 	  "Kapitalverdimodellen",
 	  "Finansielle instrumenter for finansiering",
 	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "Finansielle instrumenter for behandling av usikkerhet",
-	  ""
+	  "Gjeldsgrad og risiko",
+	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
+	  "Gjeldsgrad og verdi med imperfeksjoner",
+	  "Sammenkobling",
+	  "Dividende",
+	  "Opsjoner",
+	  "Finansielle instrumenter til påvirking av kontantstrømmer"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -29,14 +29,15 @@ literatur <- c(
 	       "Kap. 3: Relevant risiko og kapitalkostnad",
 	       "Kap. 5: Langsiktige finansieringsformer",
 	       "Kap. 6: Gjeldsgrad og risiko",
+	       "**Høstferie**",
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
-	       "Kap. 9: Sammenkobling og verdsettelse",
-	       "Kap. 10: Verdifastsettelse",
+	       "Kap. 9-10: Sammenkobling og verdsettelse",
 	       "Kap. 11: Dividende",
 	       "Kap. 12: Opsjoner",
 	       "Kap. 13: Risikostyring"
 )
+
 oppgaver <- c(
 	  "",
 	  "",
@@ -55,11 +56,11 @@ oppgaver <- c(
 )
 
 ## Output
-df1 <- data.frame(Literatur=literatur,
-		 Tema=tema,
-		 Oppgaver=oppgaver,
-		 Ukenr=ukenr,
-		 Timer=timer
+df1 <- data.frame(
+		  Uke=ukenr,
+		  Literatur=literatur,
+		  Temaer=tema,
+		  Timer=timer
 )
 df2 <- data.frame(Literatur=literatur,
 		 Tema=tema,

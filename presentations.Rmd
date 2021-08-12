@@ -22,46 +22,121 @@ output:
 source("timeplan.R")
 ```
 
+# Timeplan
+```{r, echo=F}
+htmlTable(df1)
+```
+
 class: inverse, center, middle
 
 # Forelesning 1: `r tema[1]`
 
 ---
 
-## Læringsmål
+**Læringsmål:**
 
 - Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
 - Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
-- konstruere en kontantstrøm fra prosjektdata.
-- forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
-- beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
-- gi et oversiktsbilde av innholdet i boken og bokens nettside.
+- Konstruere en kontantstrøm fra prosjektdata.
+- Forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
+- Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 # Forelesning 2: `r tema[2]`
+
+**Læringsmål:**
+
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
 # Forelesning 3: `r tema[3]`
+
+**Læringsmål:**
+
+-  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+-  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+-  Gi eksempler på kilder for systematisk og usystematisk risiko.
+
 # Forelesning 4: `r tema[4]`
+
+**Læringsmål:**
+
+- Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
+
 # Forelesning 5: `r tema[5]` 
+
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
+- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
+- Beskrive kapitalverdimodellens sterke og svake sider.
+- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+**Læringsmål:**
+
+
 # Forelesning 6: `r tema[6]`
-# Forelesning 7: `r tema[7]`
-# Forelesning 8: `r tema[8]`
-# Forelesning 9: `r tema[9]`
-# Forelesning 10 `r tema[10]`
-# Forelesning 11 `r tema[11]`
-# Forelesning 12 `r tema[12]`
-# Forelesning 13 `r tema[13]`
+
+**Læringsmål:**
+
+- Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
+- Beregne markedsverdi og effektiv rente for en obligasjon.
+- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
+- Lage en balanseoppstilling basert på bokverdier og markedsverdier.
+- Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
+- Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
+
+# Forelesning 7: `r tema[8]`
+
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+# Forelesning 8: `r tema[9]`
+
+**Læringsmål:**
+
+# Forelesning 9: `r tema[10]`
+
+**Læringsmål:**
+
+# Forelesning 10 `r tema[11]`
+
+**Læringsmål:**
+
+# Forelesning 11 `r tema[12]`
+
+**Læringsmål:**
+
+# Forelesning 12 `r tema[13]`
+
+**Læringsmål:**
+# Forelesning 13 `r tema[14]`
 
 
-# Timeplan
-```{r}
-htmlTable(df1)
-```
 
 # Anbefalte oppgaver
-```{r}
+```{r, echo=F}
 htmlTable(df2)
 ```
 # Eksamen
+Eksamen avholdes den
 
-# Kursbeskrivelse
+# Viktige lenker
 
----
+- [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+- [Statens pensjonsfond utland](https://www.nbim.no/no/)
+
+
+
+1. forklare forskjellen mellom bokverdi og markedsverdi for bedrifter og prosjekter.
+1. redegjøre for begrepene investeringsrisiko og finansieringsrisiko.
+1. forklare hvordan finansieringsformen kan påvirke verdien av et investeringsprosjekt.
+1. beskrive tre imperfeksjoner som kan påvirke bedriftens dividendepolitikk.
+1. definere begrepet opsjon.
+1. nevne tre finansielle instrumenter som brukes i risikostyring.
