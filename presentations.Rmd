@@ -18,6 +18,11 @@ output:
 #bibliography: pensum.bib
 ---
 
+```{r, eval=F}
+#xaringan::inf_mr("presentations.Rmd")
+```
+
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
 ```
@@ -25,7 +30,7 @@ source("timeplan.R")
 # Timeplan
 ```{r, echo=F}
 htmlTable(df1)
-```
+``
 
 class: inverse, center, middle
 
@@ -132,7 +137,9 @@ Eksamen avholdes den
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
 
-
+```{r, echo=F}
+#knitr::knit_exit()
+```
 
 1. forklare forskjellen mellom bokverdi og markedsverdi for bedrifter og prosjekter.
 1. redegjøre for begrepene investeringsrisiko og finansieringsrisiko.

@@ -4,6 +4,7 @@ library(xaringan)
 # Timeplan
 ## Input
 ukenr <- seq(33,46)
+forenr <- c(seq(1,7),"",seq(8,13))
 timer <- rep(3,14)
 tema <- c(
 	  "Introduksjon og overblikk",
@@ -12,10 +13,10 @@ tema <- c(
 	  "Effisiens",
 	  "Kapitalverdimodellen",
 	  "Finansielle instrumenter for finansiering",
+	  "Gjeld, total risiko og systematisk risiko",
 	  "",
-	  "Gjeldsgrad og risiko",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
-	  "Gjeldsgrad og verdi med imperfeksjoner",
+	  "Skatt",
 	  "Sammenkobling",
 	  "Dividende",
 	  "Opsjoner",
@@ -58,6 +59,7 @@ oppgaver <- c(
 ## Output
 df1 <- data.frame(
 		  Uke=ukenr,
+		  Forelesning=forenr,
 		  Literatur=literatur,
 		  Temaer=tema,
 		  Timer=timer
