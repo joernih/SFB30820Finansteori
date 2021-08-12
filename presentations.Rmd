@@ -18,7 +18,7 @@ output:
 #bibliography: pensum.bib
 ---
 
-```{r, eval=F}
+```{r eval=FALSE, include=FALSE}
 #xaringan::inf_mr("presentations.Rmd")
 ```
 
@@ -28,9 +28,9 @@ source("timeplan.R")
 ```
 
 # Timeplan
-```{r, echo=F}
+```{r echo=F}
 htmlTable(df1)
-``
+```
 
 class: inverse, center, middle
 
@@ -137,8 +137,8 @@ Eksamen avholdes den
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
 
-```{r, echo=F}
-#knitr::knit_exit()
+```{r}
+knitr::knit_exit()
 ```
 
 1. forklare forskjellen mellom bokverdi og markedsverdi for bedrifter og prosjekter.
