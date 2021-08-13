@@ -2,20 +2,20 @@
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
-date: "2021/01/11 (updated: `r Sys.Date()`)"
-output: 
-  html_notebook:
-    toc: false
-#output:
-#  xaringan::moon_reader:
-#    # includes:
-#    #   in_header: "mathjax-equation-numbers.html"
-#    lib_dir: libs
-#    nature:
-#      highlightStyle: github
-#      highlightLines: true
-#      countIncrementalSlides: false
+date: "2021/08/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 #bibliography: pensum.bib
+#output: 
+#  html_notebook:
+#  toc: false
 ---
 
 ```{r eval=FALSE, include=FALSE}
@@ -32,11 +32,12 @@ source("timeplan.R")
 htmlTable(df1)
 ```
 
+
+---
+
 class: inverse, center, middle
 
 # Forelesning 1: `r tema[1]`
-
----
 
 **Læringsmål:**
 
@@ -47,6 +48,92 @@ class: inverse, center, middle
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
+---
+
+## Nåverdiberegninger
+
+Tidligere: Uten usikkerhet
+
+\begin{align}
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{0} +  \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+\end{align}
+
+Beslutningsregel:
+- Gitt uavhengig
+- Gitt avhengigprosjekter
+
+Merk: Benevning
+
+---
+
+Nå: Med usikkerhet (risiko)
+
+\begin{align}
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{1} \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+\end{align}
+
+Beslutningsregel:
+
+---
+
+Teller: Forventet kontantstrøm
+
+Nevner: Kapitalkostnad
+
+$Kapitalkostnad=123$
+
+---
+
+## Investerings- vs. finansieringsprosjekt
+
+Et investeringsprosjekt gir verdien
+
+Et finansieringsprosjekt gir verdien
+
+---
+
+## Prosjektets kontantstrøm
+
+```{r, echo=F}
+df <- head(iris)
+df
+```
+
+
+---
+
+## Forventet kontantstrøm
+
+## Porteføljeavkastning
+
+
+### Metode 1:
+
+\begin{align}
+E(X) = \sum_{s=1}^{T}Pr(s)X
+\end{align}
+
+### Metode 2:
+
+\begin{align}
+E(X) = \sum_{s=1}^{T}w_{i}
+\end{align}
+
+---
+
+## Veien framover
+
+Øvelse til neste gang:
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+---
+
+```{r}
+knitr::knit_exit()
+```
+
+class: inverse, center, middle
+
 # Forelesning 2: `r tema[2]`
 
 **Læringsmål:**
@@ -54,6 +141,16 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+---
+
+## Totalrisiko
+
+---
+
+## Relevant risiko
+
+class: inverse, center, middle
 
 # Forelesning 3: `r tema[3]`
 
@@ -63,13 +160,23 @@ class: inverse, center, middle
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 -  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
+---
+
+class: inverse, center, middle
+
 # Forelesning 4: `r tema[4]`
 
 **Læringsmål:**
 
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
 
+---
+
+class: inverse, center, middle
+
 # Forelesning 5: `r tema[5]` 
+
+**Læringsmål:**
 
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
 - Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
@@ -77,8 +184,9 @@ class: inverse, center, middle
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
-**Læringsmål:**
+---
 
+class: inverse, center, middle
 
 # Forelesning 6: `r tema[6]`
 
@@ -91,7 +199,11 @@ class: inverse, center, middle
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
 
-# Forelesning 7: `r tema[8]`
+---
+
+class: inverse, center, middle
+
+# Forelesning 7: `r tema[7]`
 
 **Læringsmål:**
 
@@ -102,42 +214,109 @@ class: inverse, center, middle
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
 
+---
+
+class: inverse, center, middle
+
 # Forelesning 8: `r tema[9]`
 
 **Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+---
+
+class: inverse, center, middle
 
 # Forelesning 9: `r tema[10]`
 
 **Læringsmål:**
 
-# Forelesning 10 `r tema[11]`
+- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+- Definere et nøytralt skattesystem ved toleddsskatt.
+- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+- Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+---
+
+class: inverse, center, middle
+
+# Forelesning 10: `r tema[11]`
 
 **Læringsmål:**
 
-# Forelesning 11 `r tema[12]`
+---
+
+class: inverse, center, middle
+
+
+# Forelesning 11: `r tema[12]`
 
 **Læringsmål:**
 
-# Forelesning 12 `r tema[13]`
+- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+- Redegjøre for teori og empiri om dividendens signalfunksjon.
+- Forklare hvorfor dividende kan påvirke agentkostnader.
+- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 12: `r tema[13]`
 
 **Læringsmål:**
-# Forelesning 13 `r tema[14]`
 
+- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+- Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
+- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
+---
+
+class: inverse, center, middle
+
+# Forelesning 13: `r tema[14]`
+
+- Begrunne hvorfor risikostyring kan være viktig.
+- Redegjøre for viktige risikokilder.
+- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
+- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
+- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
+- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
+---
 
 # Anbefalte oppgaver
+
 ```{r, echo=F}
 htmlTable(df2)
 ```
+
+---
+# Pensum
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 # Eksamen
 Eksamen avholdes den
 
-# Viktige lenker
+---
 
+# Viktige lenker 
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
+- [Bokens nettside](https://finans2.portfolio.no/)
 
-```{r}
+---
+
+```{r include=FALSE}
 knitr::knit_exit()
 ```
 
@@ -147,3 +326,8 @@ knitr::knit_exit()
 1. beskrive tre imperfeksjoner som kan påvirke bedriftens dividendepolitikk.
 1. definere begrepet opsjon.
 1. nevne tre finansielle instrumenter som brukes i risikostyring.
+
+
+**Huskeliste til neste forelesning**
+
+

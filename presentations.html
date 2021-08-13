@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Finansteori (SFB30820)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jørn I.Halvorsen" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Finansteori (SFB30820)
+## Forelesningsnotater
+### Jørn I.Halvorsen
+### 2021/08/12 (updated: 2021-08-13)
+
+---
+
+
+
+
+
+
+
+# Timeplan
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Porteføljeteori to fond&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Porteføljeteori 3 til n-fond&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter for finansiering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;39&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeld, total risiko og systematisk risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 9-10: Sammenkobling og verdsettelse&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Sammenkobling&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 1: Introduksjon og overblikk
+
+**Læringsmål:**
+
+- Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
+- Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
+- Konstruere en kontantstrøm fra prosjektdata.
+- Forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
+- Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+---
+
+## Nåverdiberegninger
+
+Tidligere: Uten usikkerhet
+
+`\begin{align}
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{0} +  \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+\end{align}`
+
+Beslutningsregel:
+- Gitt uavhengig
+- Gitt avhengigprosjekter
+
+Merk: Benevning
+
+---
+
+Nå: Med usikkerhet (risiko)
+
+`\begin{align}
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{1} \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+\end{align}`
+
+Beslutningsregel:
+
+---
+
+Teller: Forventet kontantstrøm
+
+Nevner: Kapitalkostnad
+
+`\(Kapitalkostnad=123\)`
+
+---
+
+## Investerings- vs. finansieringsprosjekt
+
+Et investeringsprosjekt gir verdien
+
+Et finansieringsprosjekt gir verdien
+
+---
+
+## Prosjektets kontantstrøm
+
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+```
+
+
+---
+
+## Forventet kontantstrøm
+
+## Porteføljeavkastning
+
+
+### Metode 1:
+
+`\begin{align}
+E(X) = \sum_{s=1}^{T}Pr(s)X
+\end{align}`
+
+### Metode 2:
+
+`\begin{align}
+E(X) = \sum_{s=1}^{T}w_{i}
+\end{align}`
+
+---
+
+## Veien framover
+
+Øvelse til neste gang:
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+---
+
+
+```r
+knitr::knit_exit()
+```
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

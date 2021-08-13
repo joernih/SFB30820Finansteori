@@ -70,8 +70,3 @@ df2 <- data.frame(Literatur=literatur,
 		 Ukenr=ukenr,
 		 Timer=timer
 )
-
-
-
-
-
