@@ -39,8 +39,7 @@ literatur <- c(
 	       "Kap. 13: Risikostyring"
 )
 
-oppgaver <- c(
-	  "",
+oppgaver_bok <- c(
 	  "",
 	  "",
 	  "",
@@ -56,6 +55,21 @@ oppgaver <- c(
 	  ""
 )
 
+oppgaver_nett <- c(
+	  "N.1.1,N.1.2,N.1.3,N.1.4,",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  ""
+)
 ## Output
 df1 <- data.frame(
 		  Uke=ukenr,
@@ -64,9 +78,8 @@ df1 <- data.frame(
 		  Temaer=tema,
 		  Timer=timer
 )
-df2 <- data.frame(Literatur=literatur,
-		 Tema=tema,
-		 Oppgaver=oppgaver,
-		 Ukenr=ukenr,
-		 Timer=timer
+df1
+df2 <- data.frame(
+		 OppgaverB=oppgaver_bok,
+		 OppgaverN=oppgaver_nett
 )

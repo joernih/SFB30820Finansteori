@@ -7,6 +7,8 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -163,8 +165,6 @@ class: center, middle, inverse, title-slide
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-
 ---
 
 class: inverse, center, middle
@@ -182,12 +182,13 @@ class: inverse, center, middle
 
 ---
 
-## Nåverdiberegninger
+## Nåverdiberegninger med og uten usikkerhet
 
 Tidligere: Uten usikkerhet
 
 `\begin{align}
-NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{0} +  \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = 
+X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{align}`
 
 Beslutningsregel:
@@ -200,8 +201,10 @@ Merk: Benevning
 
 Nå: Med usikkerhet (risiko)
 
+J-Nåverdi
 `\begin{align}
-NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = X_{1} \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^t} + ... + \frac{X_{T}}{(1+k)^T} 
+NV = \sum_{t=0}^{T} \frac{E(X_{t})}{(1+k)^t} = 
+E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X_{T})}{(1+k)^T} 
 \end{align}`
 
 Beslutningsregel:
@@ -212,7 +215,7 @@ Teller: Forventet kontantstrøm
 
 Nevner: Kapitalkostnad
 
-`\(Kapitalkostnad=123\)`
+`\(\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}\)`
 
 ---
 
@@ -226,35 +229,81 @@ Et finansieringsprosjekt gir verdien
 
 ## Prosjektets kontantstrøm
 
-
-```
-##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-```
-
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; radnr &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Tilstand_1 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Salgsinntekt &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Driftsutgift &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Investering &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ny arbeidskapital &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Avskrivninger &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Skattbart overskudd &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Skatt &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Kontantstrøm etter skatt &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Sannsynlighet &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
 ## Forventet kontantstrøm
 
+- Sannsynlighet
+- Tilstand
+- Utfall
+
 ## Porteføljeavkastning
 
+Selve porteføljeavkastningen er gitt ved
+
+---
 
 ### Metode 1:
 
 `\begin{align}
-E(X) = \sum_{s=1}^{T}Pr(s)X
+E(X) = \sum_{s=1}^{S}Pr(s)X(s) =
+Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
 \end{align}`
+
+---
 
 ### Metode 2:
 
 `\begin{align}
-E(X) = \sum_{s=1}^{T}w_{i}
+E(X) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
+w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 \end{align}`
 
 ---
@@ -265,6 +314,26 @@ E(X) = \sum_{s=1}^{T}w_{i}
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 ---
+
+class: inverse, center, middle
+
+# Forelesning 2: Porteføljeteori to fond
+
+**Læringsmål:**
+
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+---
+
+## Totalrisiko
+
+---
+
+## Relevant risiko
+
+class: inverse, center, middle
 
 
 ```r
