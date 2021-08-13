@@ -31,8 +31,18 @@ source("timeplan.R")
 
 # Timeplan
 ```{r echo=F}
-htmlTable(df1)
+timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Timer") 
+htmlTable(df1,header=timenavn)
 ```
+---
+
+# Anbefalte oppgaver
+
+```{r, echo=F}
+oppgnavn <- c("Oppgaver pensumbok","Oppgaver nettside")
+htmlTable(df2,header=oppgnavn)
+```
+
 ---
 
 class: inverse, center, middle
@@ -319,13 +329,6 @@ class: inverse, center, middle
 
 ---
 
-# Anbefalte oppgaver
-
-```{r, echo=F}
-htmlTable(df2)
-```
-
----
 # Pensum
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 # Eksamen

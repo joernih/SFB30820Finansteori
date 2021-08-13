@@ -70,6 +70,7 @@ oppgaver_nett <- c(
 	  "",
 	  ""
 )
+
 ## Output
 df1 <- data.frame(
 		  Uke=ukenr,
