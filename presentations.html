@@ -7,6 +7,13 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x61fc82b96dd46e7aa76eb215fdb6283","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
     <script src="libs/kePrint-0.0.1/kePrint.js"></script>
     <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
@@ -32,6 +39,7 @@ class: center, middle, inverse, title-slide
 ### 2021/08/12 (updated: 2021-08-14)
 
 ---
+
 
 
 
@@ -300,7 +308,6 @@ Nevner: Kapitalkostnad
 ---
 
 ## Investerings- vs. finansieringsprosjekt
-
 Et investeringsprosjekt gir verdien
 
 Et finansieringsprosjekt gir verdien
@@ -411,6 +418,34 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+---
+
+## Formula
+
+generell tilfelle
+**Uten vekter**
+
+Varians
+`\begin{equation}
+Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+\end{equation}`
+`\begin{equation}
+Std(X)=\sqrt{123}
+\end{equation}`
+
+---
+
+Standardavvik
+`\begin{equation}
+Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+\end{equation}`
+
+**med vekter**
+
+`\begin{equation}
+Std(X)=\sqrt{123}
+\end{equation}`
 
 ---
 

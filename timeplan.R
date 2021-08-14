@@ -38,7 +38,22 @@ literatur <- c(
 	       "Kap. 12: Opsjoner",
 	       "Kap. 13: Risikostyring"
 )
-
+undervform <- c(
+	  "Zoom",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  "",
+	  ""
+)
 oppgaver_bok <- c(
 	  "",
 	  "",
@@ -54,7 +69,6 @@ oppgaver_bok <- c(
 	  "",
 	  ""
 )
-
 oppgaver_nett <- c(
 	  "N.1.1,N.1.2,N.1.3,N.1.4,",
 	  "",
@@ -77,9 +91,11 @@ df1 <- data.frame(
 		  Forelesning=forenr,
 		  Literatur=literatur,
 		  Temaer=tema,
-		  Timer=timer
+		  undervform,
+		  Timer=timer,
 )
-timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Timer") 
+timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer") 
+
 timeplan <- htmlTable(df1,header=timenavn)
 
 df2 <- data.frame(

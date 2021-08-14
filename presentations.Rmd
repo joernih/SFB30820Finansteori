@@ -24,9 +24,14 @@ Sys.which('decktape')
 xaringan::inf_mr("presentations.Rmd")
 ```
 
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_editable(expires = 1)
+```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
+df <- iris
 ```
 
 # Timeplan
@@ -96,7 +101,6 @@ $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
 ---
 
 ## Investerings- vs. finansieringsprosjekt
-
 Et investeringsprosjekt gir verdien
 
 Et finansieringsprosjekt gir verdien
@@ -175,6 +179,34 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+---
+
+## Formula
+
+generell tilfelle
+**Uten vekter**
+
+Varians
+\begin{equation}
+Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+\end{equation}
+\begin{equation}
+Std(X)=\sqrt{123}
+\end{equation}
+
+---
+
+Standardavvik
+\begin{equation}
+Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+\end{equation}
+
+**med vekter**
+
+\begin{equation}
+Std(X)=\sqrt{123}
+\end{equation}
 
 ---
 
