@@ -92,7 +92,7 @@ df1 <- data.frame(
 		  Literatur=literatur,
 		  Temaer=tema,
 		  undervform,
-		  Timer=timer,
+		  Timer=timer
 )
 timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer") 
 
@@ -105,3 +105,6 @@ df2 <- data.frame(
 oppgnavn <- c("Pensumbok","Nettside (ressurs)")
 
 oppgaveplan <- htmlTable(df2,header=oppgnavn)
+
+
+

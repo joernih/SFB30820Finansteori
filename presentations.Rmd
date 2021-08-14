@@ -31,12 +31,11 @@ xaringanExtra::use_editable(expires = 1)
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
-df <- iris
 ```
 
 # Timeplan
 ```{r echo=F}
-timeplan
+#timeplan
 ```
 ---
 
