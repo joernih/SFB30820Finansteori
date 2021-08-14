@@ -31,16 +31,14 @@ source("timeplan.R")
 
 # Timeplan
 ```{r echo=F}
-timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Timer") 
-htmlTable(df1,header=timenavn)
+timeplan
 ```
 ---
 
 # Anbefalte oppgaver
 
 ```{r, echo=F}
-oppgnavn <- c("Oppgaver pensumbok","Oppgaver nettside")
-htmlTable(df2,header=oppgnavn)
+oppgaveplan
 ```
 
 ---
@@ -173,7 +171,11 @@ class: inverse, center, middle
 
 ---
 
-## Totalrisiko
+## Generelt om risiko
+
+---
+
+## Totalri
 
 ---
 
