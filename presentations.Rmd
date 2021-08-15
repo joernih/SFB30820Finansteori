@@ -170,31 +170,6 @@ $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}$
 
 ---
 
-**Oppgave N.1.2**
-
-AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
-
-```{r, echo=F}
-#Prosjekt	Nedgangstid	Oppgangstid
-#X	3	3
-#Y	5	12
-#Z	9	11
-#Sannsynlighet	30 %	70 %
-dfn12 <- data.frame(prob=c(0.30,0.70),x=c(3,3),y=c(5,12),z=c(9,11))
-#htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-htmlTable(dfn12,header=c("Sannøynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-```
-
-Hva er særtrekket ved prosjekt X?
-
-Beregn forventet avkastning for hvert prosjekt.
-
-Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-
-Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-
----
-
 ## Investerings- vs. finansieringsprosjekt
 
 Et investeringsprosjekt gir verdien
@@ -292,9 +267,34 @@ w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 
 ---
 
+**Oppgave** N.1.2
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+Prosjekt	Nedgangstid	Oppgangstid
+X	3	3
+Y	5	12
+Z	9	11
+Sannsynlighet	30 %	70 %
+
+1. Hva er særtrekket ved prosjekt X?
+1. Beregn forventet avkastning for hvert prosjekt.
+1. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+1. Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+---
+
+**Oppgave** N.1.3
+
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+1. Er det fornuftig å sette alle pengene i prosjekt X?
+
 ## Veien framover
 
-Øvelse til neste gang:
+Øvelse til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 .can-edit[Sett inn]
@@ -528,15 +528,5 @@ knitr::knit_exit()
 ]
 
 ---
-
-**Oppgave N.1.1**
-
-Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
-
-Hva er kontantstrømmen verd i dag?
-
-Hva er sikkerhetsekvivalenten ved slutten av perioden?
-
-Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 
 ## .can-edit[You can edit this slide title]
