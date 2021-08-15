@@ -65,32 +65,42 @@ oppgaveplan
 
 ## Hovedbok
 
-[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
-
-
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
 ```
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 ]
 
 .pull-right[
 
 ## Supplerende
-[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
-
-
 ```{r, echo=FALSE, out.width="25%", fig.cap=""}
 knitr::include_graphics("pensum/falitt.jpg")
 ```
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
 
 ]
 
 ---
 
-# Eksamen
+# Kursgodkjennelse
+
+Består av ....123 
+
+## Obligatorisk innleveringsoppgave
+
+## Eksamen
 Eksamen avholdes den
+
+Individuell, skriftlig firetimers eksamen.
+
+Karakterregel: A-F.
+
+Hjelpemidler: godkjent kalkulator.
 
 ---
 
@@ -118,50 +128,47 @@ class: inverse, center, middle
 
 ## Nåverdiberegninger med og uten usikkerhet
 
-Tidligere: Uten usikkerhet
+**Uten usikkerhet (til nå)**
 
+Nåverdi
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = 
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{equation}
 
 Beslutningsregel:
-- Gitt uavhengig
-- Gitt avhengigprosjekter
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) > 0
+- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) igangsettes 
 
-Merk: Benevning
-
----
-
-**Oppgave N.1.1**
-
-Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
-
-Hva er kontantstrømmen verd i dag?
-
-Hva er sikkerhetsekvivalenten ved slutten av perioden?
-
-Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+Merk: Benevning ...
 
 ---
 
-Nå: Med usikkerhet (risiko)
+**Uten usikkerhet (framover)**
 
-J-Nåverdi
+Risikojustert-nåverdi (RJ-Nåverdi)
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{E(X_{t})}{(1+k)^t} = 
 E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X_{T})}{(1+k)^T} 
 \end{equation}
 
-Beslutningsregel:
+- Telleren er nå erstattet med *forventet* kontantstrøm
+- Nevneren er nå erstattet med kapitalkostnad som er *risikojusert*
+
+Beslutningsregel (som tidligere):
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) > 0
+- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) igangsettes 
 
 ---
 
-Teller: Forventet kontantstrøm
+### Forventet kontantstrøm
 
-Nevner: Kapitalkostnad
+---
+
+### Kapitalkostnad
 
 $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
+
 ---
 
 **Oppgave N.1.2**
@@ -186,6 +193,7 @@ Beregn forventet avkastning for hvert prosjekt.
 Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 
 Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
 ---
 
 ## Investerings- vs. finansieringsprosjekt
@@ -194,11 +202,21 @@ Et investeringsprosjekt gir verdien
 
 Et finansieringsprosjekt gir verdien
 
-abc
+---
+
+**Oppgave N.1.4**
+
+1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
+1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
+1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
 
 ---
 
 ## Prosjektets kontantstrøm
+
+```{r, eval=F,echo=FALSE, out.width="40%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-03.png")
+```
 
 .panelset[
 .panel[.panel-name[R Kode]
@@ -239,16 +257,11 @@ df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
 kableExtra::kbl(df_prosj_kontantstrøm)
 ```
 
----
-
-```{r, echo=FALSE, out.width="100%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-03.png")
-```
 
 
 ---
 
-## Forventet kontantstrøm
+## Nærmere om forventet kontantstrøm
 
 - Sannsynlighet
 - Tilstand
@@ -506,3 +519,23 @@ knitr::knit_exit()
 - Pdf-files out of Xaringam
 - Temaer viske ut
 - Anbefalte oppgaver
+
+
+
+.pull-left[
+]
+.pull-right[
+]
+
+---
+
+**Oppgave N.1.1**
+
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
