@@ -1,3 +1,9 @@
+---
+title: "Finansteori (SFB30820)"
+output: 
+  html_notebook:
+  toc: true
+---
 # Kapittel 1
 **Oppgave** N.1.1
 Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
