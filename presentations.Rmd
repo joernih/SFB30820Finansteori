@@ -20,6 +20,7 @@ output:
 
 
 ```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
 xaringanExtra::use_scribble()
@@ -257,8 +258,6 @@ df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
 kableExtra::kbl(df_prosj_kontantstrøm)
 ```
 
-
-
 ---
 
 ## Nærmere om forventet kontantstrøm
@@ -297,6 +296,8 @@ w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 
 Øvelse til neste gang:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+.can-edit[Sett inn]
 
 ---
 
@@ -539,3 +540,4 @@ Hva er sikkerhetsekvivalenten ved slutten av perioden?
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 
+## .can-edit[You can edit this slide title]
