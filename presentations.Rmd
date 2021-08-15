@@ -57,9 +57,18 @@ oppgaveplan
 
 ---
 
-
 # Pensum
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+
+```{r, echo=FALSE, out.width="70%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-01.png")
+```
+
+
+
+---
+
 # Eksamen
 Eksamen avholdes den
 
@@ -71,6 +80,7 @@ Eksamen avholdes den
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
 
 ---
+
 
 
 ---
@@ -128,9 +138,12 @@ $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
 ---
 
 ## Investerings- vs. finansieringsprosjekt
+
 Et investeringsprosjekt gir verdien
 
 Et finansieringsprosjekt gir verdien
+
+abc
 
 ---
 
@@ -150,6 +163,13 @@ tils1 <- seq(1,9)
 df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
 kableExtra::kbl(df_prosj_kontantstrøm)
 ```
+
+---
+
+```{r, echo=FALSE, out.width="100%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-03.png")
+```
+
 
 ---
 
