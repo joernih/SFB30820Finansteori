@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbbe83f7a0ab4eb7b5d43f6862cb3a51","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x51d2c27f2c94f68894c2f241980fd74","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -407,44 +407,15 @@ Beslutningsregel (som tidligere):
 
 ---
 
-**Oppgave N.1.2**
+**Oppgave** N.1.1
 
-AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannøynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt X&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Y&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Z&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.7&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;11&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+Hva er kontantstrømmen verd i dag?
 
-Hva er særtrekket ved prosjekt X?
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
 
-Beregn forventet avkastning for hvert prosjekt.
-
-Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-
-Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 
 ---
 
@@ -544,7 +515,7 @@ a &lt;- head(iris)*1000
 &lt;/table&gt;
 ]
 .panel[.panel-name[Plot]
-![](presentations_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](presentations_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 ]
 ]
 
@@ -604,6 +575,8 @@ Gjør om til Excel
 
 ## Nærmere om forventet kontantstrøm
 
+`\(E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)\)`
+
 - Sannsynlighet
 - Tilstand
 - Utfall
@@ -619,7 +592,7 @@ Selve porteføljeavkastningen (rp) er gitt ved
 ### Metode 1:
 
 `\begin{align}
-E(X) = \sum_{s=1}^{S}Pr(s)X(s) =
+E(rp) = \sum_{s=1}^{S}Pr(s)X(s) =
 Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
 \end{align}`
 
@@ -628,15 +601,40 @@ Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 ### Metode 2:
 
 `\begin{align}
-E(X) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
+E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
 w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 \end{align}`
 
 ---
 
+**Oppgave** N.1.2
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+Prosjekt	Nedgangstid	Oppgangstid
+X	3	3
+Y	5	12
+Z	9	11
+Sannsynlighet	30 %	70 %
+
+1. Hva er særtrekket ved prosjekt X?
+1. Beregn forventet avkastning for hvert prosjekt.
+1. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+1. Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+---
+
+**Oppgave** N.1.3
+
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+1. Er det fornuftig å sette alle pengene i prosjekt X?
+
 ## Veien framover
 
-Øvelse til neste gang:
+Øvelse til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 .can-edit[Sett inn]
