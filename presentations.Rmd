@@ -24,6 +24,8 @@ xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
 xaringanExtra::use_scribble()
 xaringanExtra::use_webcam()
+xaringanExtra::use_slide_tone()
+xaringanExtra::use_panelset()
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -57,15 +59,33 @@ oppgaveplan
 
 ---
 
-# Pensum
+# Pensumliste
+
+.pull-left[
+
+## Hovedbok
+
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 
-```{r, echo=FALSE, out.width="70%", fig.cap=""}
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
 ```
 
+]
 
+.pull-right[
+
+## Supplerende
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+
+```{r, echo=FALSE, out.width="25%", fig.cap=""}
+knitr::include_graphics("pensum/falitt.jpg")
+```
+
+]
 
 ---
 
@@ -78,10 +98,6 @@ Eksamen avholdes den
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Bokens nettside](https://finans2.portfolio.no/)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
-
----
-
-
 
 ---
 
@@ -117,6 +133,18 @@ Merk: Benevning
 
 ---
 
+**Oppgave N.1.1**
+
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
+---
+
 Nå: Med usikkerhet (risiko)
 
 J-Nåverdi
@@ -134,7 +162,30 @@ Teller: Forventet kontantstrøm
 Nevner: Kapitalkostnad
 
 $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
+---
 
+**Oppgave N.1.2**
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+```{r, echo=F}
+#Prosjekt	Nedgangstid	Oppgangstid
+#X	3	3
+#Y	5	12
+#Z	9	11
+#Sannsynlighet	30 %	70 %
+dfn12 <- data.frame(prob=c(0.30,0.70),x=c(3,3),y=c(5,12),z=c(9,11))
+#htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+htmlTable(dfn12,header=c("Sannøynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+```
+
+Hva er særtrekket ved prosjekt X?
+
+Beregn forventet avkastning for hvert prosjekt.
+
+Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+
+Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
 ---
 
 ## Investerings- vs. finansieringsprosjekt
@@ -148,6 +199,30 @@ abc
 ---
 
 ## Prosjektets kontantstrøm
+
+.panelset[
+.panel[.panel-name[R Kode]
+
+```{r}
+a <- head(iris)*1000
+```
+]
+.panel[.panel-name[Tabell]
+```{r echo=FALSE}
+htmlTable(a)
+```
+]
+.panel[.panel-name[Plot]
+```{r echo=FALSE}
+plot(a[,1],a[,1])
+```
+]
+]
+
+*Øvelse:*
+Gjør om til Excel
+
+---
 
 ```{r, echo=F}
 radnr <- c("Salgsinntekt",
@@ -181,7 +256,9 @@ knitr::include_graphics("pensum/figurer-03.png")
 
 ## Porteføljeavkastning
 
-Selve porteføljeavkastningen er gitt ved
+Selve porteføljeavkastningen (rp) er gitt ved
+
+$rp=\frac{P_{t}+Div-P_{0}}{P_{0}}$
 
 ---
 
@@ -213,19 +290,12 @@ w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 class: inverse, center, middle
 
 # Forelesning 2: `r tema[2]`
-# Forelesning 3: `r tema[3]`
 
 **Læringsmål:**
 
 -  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 -  Gi eksempler på kilder for systematisk og usystematisk risiko.
-
-**Læringsmål:**
-
--  Tallfeste risiko i en portefølje ved å beregne standardavvik.
--  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
--  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 
 ---
 
@@ -270,6 +340,20 @@ Std(X)=\sqrt{123}
 ---
 
 ## Typer av risiko
+
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 3: `r tema[3]`
+
+**Læringsmål:**
+
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
 
 
 ---

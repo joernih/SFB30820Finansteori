@@ -40,19 +40,19 @@ literatur <- c(
 )
 undervform <- c(
 	  "Zoom",
+	  "Zoom",
+	  "Zoom",
+	  "Zoom",
+	  "Zoom",
+	  "Zoom",
+	  "Zoom",
 	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  "",
-	  ""
+	  "?",
+	  "?",
+	  "?",
+	  "?",
+	  "?",
+	  "?"
 )
 oppgaver_bok <- c(
 	  "",
