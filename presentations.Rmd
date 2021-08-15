@@ -131,7 +131,7 @@ class: inverse, center, middle
 
 **Uten usikkerhet (til nå)**
 
-Nåverdi
+*Nåverdikriteriet*
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = 
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
@@ -147,7 +147,7 @@ Merk: Benevning ...
 
 **Uten usikkerhet (framover)**
 
-Risikojustert-nåverdi (RJ-Nåverdi)
+*Risikojustert-rente-metoden (RJ-metoden)*
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{E(X_{t})}{(1+k)^t} = 
 E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X_{T})}{(1+k)^T} 
@@ -164,11 +164,9 @@ Beslutningsregel (som tidligere):
 
 ### Forventet kontantstrøm
 
----
-
 ### Kapitalkostnad
 
-$\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
+$\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}$
 
 ---
 

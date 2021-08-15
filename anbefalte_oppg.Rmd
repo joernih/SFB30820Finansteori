@@ -1,0 +1,272 @@
+
+# Kapittel 1
+Oppgave N.1.1
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
+Oppgave N.1.2
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+Prosjekt	Nedgangstid	Oppgangstid
+X	3	3
+Y	5	12
+Z	9	11
+Sannsynlighet	30 %	70 %
+Hva er særtrekket ved prosjekt X?
+
+Beregn forventet avkastning for hvert prosjekt.
+
+Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+
+Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+Oppgave N.1.3
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+
+Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+
+Er det fornuftig å sette alle pengene i prosjekt X?
+
+Oppgave N.1.4
+Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
+
+Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
+
+Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
+
+# Kapittel 2
+Oppgave N.2.1
+Om seks ulike porteføljer har du følgende opplysninger, hvor alle tall er i prosent:
+
+Portefølje
+A	B	C	D	E	F
+Forventet avkastning	8	10	14	18	21	21
+Standardavvik	0	4	9	9	14	12
+Lag en ﬁgur som viser hver porteføljes forventede avkastning og standardavvik.
+
+Hvilke porteføljer er aktuelle for en risikoavers investor?
+
+Hvilken portefølje vil en risikoavers investor velge?
+
+Oppgave N.2.2
+For tre ettårige investeringsprosjekter er det beregnet følgende tilstandsbetingede kontantstrømmer:
+
+Tilstand	Prosjekt A	Prosjekt B	Prosjekt C	Sannsynlighet
+1	100	30	60	0,2
+2	150	40	40	0,6
+3	200	50	20	0,2
+Prosjektenes investeringskostnader regnes som sikre og er hhv. 50, 20 og 20 kroner for A, B og C.
+
+Beregn forventet avkastning og standardavvik for kontantstrøm etter ett år i alle tre prosjektene. Hvordan vil du rangere prosjektene ut fra forventning-standardavvik-kriteriet?
+
+Du har allerede bestemt deg for å investere i prosjekt A. Spørsmålet nå er hvilket av prosjektene B og C du skal velge sammen med A. Hvilken prosjektportefølje er best; A og B eller A og C?
+
+Oppgave N.2.3
+Ta utgangspunkt i opplysninger og beregninger utført i oppgave 2.3 i læreboken. Beregn det veide gjennomsnittet for enkeltaksjenes standardavvik i de to porteføljene av aksjene A og B. Bruk vekter på hhv. wA = wB = 0,5 og wA = 0,75 og wB = 0,25. Sammenlign resultatene med de beregnede standardavvikene til porteføljene fra oppgave 2.3 og kommenter resultatene.
+
+Oppgave N.2.4
+Hva er sammenhengen mellom diversiﬁseringsgevinst og aksjeavkastningenes samvariasjon?
+
+Hva er sammenhengen mellom antall aksjer og diversiﬁseringsgevinst? Har dette forholdet noen betydning for småinvestorer?
+
+Oppgave N.2.5
+På grunnlag av opplysningene i oppgave 2.6 i læreboken skal du beregne forventet avkastning og standardavvik for de fem porteføljene når korrelasjonskoefﬁsienten er hhv. –½, 0 og ½.
+
+Vis resultatene fra spørsmål 1 i en ﬁgur.
+
+Oppgave N.2.6
+Som i eksempel 2.6 vurderer du å sette sammen en portefølje med 40 % av pengene plassert i aksje A, 40 % i aksje B og resten i aksje C. Aksjenes forventede avkastning og standardavvik er som i eksempel 2.6, men korrelasjonskoefﬁsientene har du fått nye data for. De gamle og nye dataene er oppsummert i denne tabellen:
+
+Aksje	E(r)	Std(r)	Korri,j
+A	0,12	0,10	KorrA,B = 0,5
+B	0,15	0,20	KorrA,C = 0,2
+C	0,25	0,40	KorrB,C = 0,9
+Beregn forventet avkastning og standardavvik for porteføljen.
+
+Oppgave N.2.7
+Aksjefondet Delphi vurderer å plassere en del av forvaltningskapitalen i aksjeselskapet Spekula. Dette selskapet er nylig tatt opp til notering på børsen, og det foreligger derfor ikke noe anslag på selskapets betakoeffisient. En av Delphis analytikere, Analytiker 1, har fått i oppdrag å gjøre et slikt estimat. I den forbindelse har hun satt opp følgende tabell:
+
+Avkastning, %	
+Børstilstand	Spekula	Aksjemarkedet	Sannsynlighet
+1	–20	–12	10 %
+2	–12	–5	15 %
+3	5	2	25 %
+4	14	9	25 %
+5	22	14	15 %
+6	40	22	10 %
+Beregn Spekulas systematiske risiko.
+
+Basert på Spekulas resultater en del år forut for børsintroduksjonen har en annen analytiker i Delphi, Analytiker 2, anslått at Spekulas korrelasjon med markedet er hele 0,91. Fra samme grunnlagsmateriale er aksjeavkastningens varians i Spekula anslått til 0,0484. Standardavviket til markedsporteføljens avkastning er 10 %.
+
+Hva blir Analytiker 2s anslag på Spekulas betakoeffisient?
+
+Tegn karakteristisk linje for Spekula-aksjen, både for Analytiker 1 og Analytiker 2. Anta at begge karakteristiske linjer går gjennom origo.
+
+Ta utgangspunkt i Analytiker 2 og forklar betydningen av den estimerte betakoeffisienten når:
+
+markedsavkastningen øker med 2 prosentpoeng, og
+markedsavkastningen faller med 5 prosentpoeng.
+
+# Kapittel 3
+Oppgave N.3.1
+I markedet omsettes to evigvarende obligasjoner med fast rente. Obligasjon A betaler en årlig rente på 100 kroner og har en beta på 0,4. Obligasjon B betaler bare 80 kroner pr. år, men er mindre risikabel; beta er bare 0,2. Risikofri rente er 3 %, og markedets risikopremie er 5 %. Hvilke(n) obligasjon(er) ville du kjøpe hvis markedsprisen for begge er kr 1 000?# Kapittel 4
+
+Oppgave N.3.2
+Aksjeselskapet Ekspeditt vurderer å satse kr 160 000 i egenkapital på et svært konjunkturfølsomt prosjekt. Det skal selges igjen ett år senere og forventes da å gi kr 180 000 til egenkapitalen etter skatt. Forventet avkastning på markedsporteføljen er 7 %, mens risikofri rente er 2 %.
+
+Analytiker er i sterk tvil om prosjektets risiko, men mener βE = 2,3 er det beste anslaget hun kan gjøre. Bør prosjektet aksepteres?
+
+Hva kan risikoen maksimalt være for at investeringen skal være lønnsom?
+
+Oppgave N.3.3
+Du er blitt interessert i internasjonale aksjeinvesteringer. I den forbindelse har du innhentet følgende opplysninger om forventet avkastning og risiko på markedsporteføljen i andre land (nominelle tall etter selskapsskatt):
+
+Land	Forventet avkastning, %	Standardavvik, %
+(A)	Australia	14,1	19,95
+(B)	Belgia	13,8	12,98
+(D)	Danmark	10,5	15,22
+(E)	England	20,9	24,59
+(F)	Frankrike	22,1	29,88
+(H)	Hongkong	13,8	20,20
+(I)	Italia	18,2	26,19
+(J)	Japan	14,0	14,97
+(C)	Canada	14,7	22,53
+(N)	Nederland	13,2	15,98
+(S)	Sveits	14,9	15,04
+(U)	USA	10,6	13,38
+(T)	Tyskland	13,3	14,26
+Hva er det effisiente (ikke-sløsende) settet hvis du bare kan investere i ett av disse landene? Tegn en figur som viser de effisiente punktene.
+
+Skal du investere i en internasjonalt diversifisert aksjeportefølje, må du også estimere et samvariasjonsmål mellom hvert par av land. Tabellen under gir estimater på korrelasjonskoeffisienter mellom markedsporteføljene i disse landene.
+
+A	1,00												
+B	0,06	1,00											
+D	0,03	0,38	1,00										
+E	0,25	0,40	0,42	1,00									
+F	0,26	0,28	0,02	0,35	1,00								
+H	0,11	0,36	0,02	0,22	0,12	1,00							
+I	0,23	0,31	0,07	0,39	0,29	0,20	1,00						
+J	0,32	0,49	0,20	0,26	0,32	0,20	0,27	1,00					
+C	0,46	0,24	–0,05	0,16	0,20	0,13	–0,07	0,26	1,00				
+N	0,15	0,56	0,33	0,21	0,11	0,22	0,09	0,33	0,14	1,00			
+S	0,14	0,48	0,33	0,43	0,28	0,16	0,36	0,48	0,18	0,51	1,00		
+U	0,24	0,27	0,03	0,26	0,25	0,06	0,05	0,11	0,54	0,18	0,20	1,00	
+T	–0,00	0,60	0,29	0,29	0,30	0,10	0,24	0,47	0,07	0,57	0,67	0,03	1,00
+A	B	D	E	F	H	I	J	K	N	S	U	T
+Disse dataene kjører du gjennom et PC-program som beregner det effisiente settet. Tabellen under viser sammensetningen av de effisiente porteføljene og deres forventede avkastning og standardavvik.
+
+Portefølje	Forventet avkastning	Porteføljens std.avvik	Prosent investert i hvert land
+A	B	D	E	F	H	I	J	K	N	S	U	T
+1	22,1	29,9	–	–	–	–	100	–	–	–	–	–	–	–	–
+2	21,4	22,1	–	–	–	55	45	–	–	–	–	–	–	–	–
+3	21,1	21,1	–	–	–	51	39	–	10	–	–	–	–	–	–
+4	20,3	19,1	–	–	–	44	32	–	14	–	10	–	–	–	–
+5	20,2	19,0	–	–	–	43	31	–	14	–	10	1	–	–	–
+6	20,0	18,6	–	–	–	42	31	–	14	–	11	2	1	–	–
+7	18,8	16,0	–	–	–	32	24	4	13	–	12	7	7	–	–
+8	17,3	13,4	–	–	–	21	16	8	11	8	12	13	10	–	–
+9	17,2	13,2	0	–	–	21	16	8	11	8	12	13	10	–	–
+10	16,8	12,6	2	4	–	18	16	9	10	9	12	12	11	–	–
+11	16,4	12,1	5	7	–	15	12	9	9	8	11	11	11	–	3
+12	16,0	11,6	5	8	3	13	11	0	8	8	10	10	11	–	4
+13	13,2	8,8	9	4	15	–	4	10	6	8	2	2	4	21	15
+14	12,6	8,4	9	2	17	–	1	11	4	9	–	0	1	27	19
+15	12,4	8,3	9	–	18	–	–	11	4	9	–	–	–	29	20
+Tegn det nye effisiente settet i samme figur som den du tegnet til delspørsmål a. Kommenter resultatene.
+
+Oppgave N.3.4
+I tillegg til å investere i en internasjonalt diversifisert portefølje (oppgave N.3.3) kan du også kjøpe risikofrie norske statsobligasjoner. Disse gir en avkastning på 3 %. Tegn en figur som viser det nye effisiente settet.
+
+Hva blir din optimale investering hvis du har kr 100 000 som skal plasseres og du ønsker en forventet avkastning på 10 %?
+
+Hva blir den optimale portefølje for en annen investor som skal plassere kr 50 000 og som er villig til å akseptere en portefølje med et standardavvik på 20 %?
+
+Den tilpasningen som skjer for å finne den optimale porteføljen i spm. 2 og 3, har et spesielt navn. Hva kalles dette resultatet, og hva innebærer det?
+
+Oppgave N.3.5
+Skriv uttrykket for kapitalmarkedslinjen hvis risikofri rente er 0,03 og markedsporteføljen har forventet avkastning på 0,09 med varians lik 0,0576. Tegn figur, og bruk denne når du svarer på spm. 2.
+
+Om portefølje A og B har du fått vite at de har forventet avkastning på hhv. 0,10 og 0,06. De tilsvarende standardavvik er 0,28 og 0,16. A og B er ikke nødvendigvis rene aksjeporteføljer, så de kan også inneholde elementer av risikofri låning eller sparing.
+
+Merk av porteføljene i figuren fra delspørsmål 1, og kommenter porteføljenes diversifiseringsgrad.# Kapittel 5
+
+Oppgave N.3.6
+Ministaten Montavia har nylig fått sin selvstendighet etter mange års kolonialisering. Landet har også nettopp etablert en aksjebørs. Inntil videre er det bare fire selskaper på børsen; selskapene Alfa, Beta, Gamma og Delta. Disse fire selskapene har utstedt henholdsvis 10 000, 5 000, 9 000 og 6 000 aksjer, pålydende hhv. 60, 80, 100 og 100 mont (mont er myntenheten i Montavia).
+
+Det er tre store familier som totalt dominerer Montavias økonomi. De tre familiene, som vi anonymiserer ved å kalle dem X, Y og Z, har bl.a. monopolisert investeringsmulighetene i aksjer. De er seg imellom blitt enige om at aksjemarkedet skal deles i forholdet 45, 35 og 20 prosent mellom hhv. X, Y, og Z. Sist noterte aksjepriser i Alfa, Beta, Gamma og Delta er hhv. 162, 432, 60 og 180 mont.
+
+Vis at aksjemarkedet i Montavia ikke kan være i likevekt hvis alle de tre familiene danner aksjeporteføljer med vekter basert på selskapenes bokførte aksjekapital. Vis også at markedet er i likevekt med markedsbaserte vekter.
+
+Oppgave N.3.7
+En investor vurderer fire ettårige investeringsalternativer. Følgende data er innhentet om kontantstrøm ved årets slutt (alle alternativer krever samme investeringsbeløp ved årets begynnelse):
+
+Alternativ	Forventning	Standardavvik
+A	10	0
+B	30	20
+C	10	20
+D	20	30
+Investor kan bare velge ett av alternativene. Hvilket bør da velges hvis holdningen til risiko kan beskrives som:
+
+Ekstremt risikomotvillig.
+Risikomotvillig.
+Risikonøytral, dvs. bryr seg ikke om risiko.
+Risikosøkende, dvs. ønsker mer risiko fremfor mindre.
+Anta nå at investor kan velge kombinasjoner av to investeringer (men ikke velge samme prosjekt to ganger). Korrelasjonskoeffisientene mellom investeringenes netto innstrømning er:
+
+AB: 0
+AC: 0
+AD: 0
+BC: –0,1
+BD: 0,9
+CD: 0,1
+Hvilke kombinasjoner bør nå velges hvis holdning til risiko kan beskrives som:
+
+Risikomotvillig.
+Risikonøytral.
+Risikosøkende.
+
+Oppgave N.3.8
+Følgende effisiente (ikke-sløsende) sett er beregnet:
+
+Portefølje	Forventet avkastning (%)	Standardavvik (%)
+A	9,5	10,0
+B	9,0	7,5
+C	8,0	4,5
+D	5,5	2,5
+E	3,0	2,0
+Hva blir det reviderte effisiente settet hvis du kan låne og spare risikofritt til 2 % ? Hva blir det reviderte effisiente settet hvis lånerenten er 4 % og sparerenten er 2 %? Illustrer med figur(er).
+
+På hvilken måte vil et perfekt kapitalmarked gjøre investering i verdipapirer til en to-trinnsprosess?
+
+Forklar hva som menes med systematisk og usystematisk risiko.
+
+Oppgave N.3.9
+Bedriften Jappi vurderer to gjensidig utelukkende prosjekter A og B. Estimatene på forventet avkastning og risiko for eierne er:
+
+Prosjekt A	Prosjekt B
+Forventet avkastning (%)	12	15
+Standardavvik (%)	50	75
+Egenkapitalbeta	1,8	1,4
+Anta at risikofri rente er 2 %, og at forventet avkastning på markedsporteføljen er 9 %.
+
+Bør Jappi investere i A eller i B?
+Oppgave N.3.10
+Vanligvis inndeles markedets informasjonseffisiens i tre typer. Definer disse tre gradene av effisiens, og angi hvordan de kan undersøkes empirisk.# Kapittel 6
+
+# Kapittel 4
+# Kapittel 5
+# Kapittel 6
+# Kapittel 7
+# Kapittel 8
+# Kapittel 9
+# Kapittel 10
+# Kapittel 11
+# Kapittel 12
+# Kapittel 13
