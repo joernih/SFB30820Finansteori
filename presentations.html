@@ -9,11 +9,12 @@
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view-0.2.6/tile-view.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"fbf32bc4a6c74fe1ac9220ef5cebab89","expires":1}</script>
-    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
-    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
-    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
-    <script src="libs/editable-0.2.6/editable.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <script src="libs/kePrint-0.0.1/kePrint.js"></script>
     <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
@@ -36,7 +37,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-14)
+### 2021/08/12 (updated: 2021-08-15)
 
 ---
 
@@ -47,7 +48,167 @@ class: center, middle, inverse, title-slide
 
 
 
-# Timeplan
+
+
+## Timeplan
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Porteføljeteori to fond&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Porteføljeteori 3 til n-fond&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter for finansiering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;39&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjeld, total risiko og systematisk risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 9-10: Sammenkobling og verdsettelse&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Sammenkobling&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
@@ -128,6 +289,24 @@ class: center, middle, inverse, title-slide
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+---
+
+
+# Pensum
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+# Eksamen
+Eksamen avholdes den
+
+---
+
+# Lenker benyttet i kurset 
+- [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+- [Bokens nettside](https://finans2.portfolio.no/)
+- [Statens pensjonsfond utland](https://www.nbim.no/no/)
+
+---
+
 
 ---
 
@@ -339,14 +518,140 @@ Std(X)=\sqrt{123}
 
 ## Typer av risiko
 
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 4: Effisiens
+
+**Læringsmål:**
+
+- Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 5: Kapitalverdimodellen 
+
+**Læringsmål:**
+
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
+- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
+- Beskrive kapitalverdimodellens sterke og svake sider.
+- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 6: Finansielle instrumenter for finansiering
+
+**Læringsmål:**
+
+- Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
+- Beregne markedsverdi og effektiv rente for en obligasjon.
+- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
+- Lage en balanseoppstilling basert på bokverdier og markedsverdier.
+- Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
+- Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 7: Gjeld, total risiko og systematisk risiko
+
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 8: Gjeldgrad og verdi i perfekte kapitalmarkeder
+
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 9: Skatt
+
+**Læringsmål:**
+
+- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+- Definere et nøytralt skattesystem ved toleddsskatt.
+- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+- Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+---
+
+class: inverse, center, middle
+
+# Forelesning 10: Sammenkobling
+
+**Læringsmål:**
+
 ---
 
 class: inverse, center, middle
 
 
-```r
-knitr::knit_exit()
-```
+# Forelesning 11: Dividende
+
+**Læringsmål:**
+
+- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+- Redegjøre for teori og empiri om dividendens signalfunksjon.
+- Forklare hvorfor dividende kan påvirke agentkostnader.
+- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 12: Opsjoner
+
+**Læringsmål:**
+
+- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+- Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
+- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 13: Finansielle instrumenter til påvirking av kontantstrømmer
+
+- Begrunne hvorfor risikostyring kan være viktig.
+- Redegjøre for viktige risikokilder.
+- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
+- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
+- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
+- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
 
 
 

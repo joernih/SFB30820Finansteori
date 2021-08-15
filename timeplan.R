@@ -96,7 +96,9 @@ df1 <- data.frame(
 )
 timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer") 
 
-timeplan <- htmlTable(df1,header=timenavn)
+timep <- htmlTable(df1,header=timenavn)
+timep_i <- htmlTable(df1[1:7,],header=timenavn)
+timep_ii <- htmlTable(df1[8:14,],header=timenavn)
 
 df2 <- data.frame(
 		 OppgaverB=oppgaver_bok,
@@ -105,6 +107,4 @@ df2 <- data.frame(
 oppgnavn <- c("Pensumbok","Nettside (ressurs)")
 
 oppgaveplan <- htmlTable(df2,header=oppgnavn)
-
-
 
