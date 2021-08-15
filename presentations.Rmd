@@ -170,6 +170,18 @@ $\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}$
 
 ---
 
+**Oppgave** N.1.1
+
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
+---
+
 ## Investerings- vs. finansieringsprosjekt
 
 Et investeringsprosjekt gir verdien
