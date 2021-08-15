@@ -1,0 +1,823 @@
+---
+title: "Finansteori (SFB30820)"
+output: 
+  html_notebook:
+  toc: true
+---
+# Kapittel 1
+**Oppgave** N.1.1
+
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
+**Oppgave** N.1.2
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+Prosjekt	Nedgangstid	Oppgangstid
+X	3	3
+Y	5	12
+Z	9	11
+Sannsynlighet	30 %	70 %
+Hva er særtrekket ved prosjekt X?
+
+Beregn forventet avkastning for hvert prosjekt.
+
+Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+
+Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+**Oppgave** N.1.3
+
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+
+Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+
+Er det fornuftig å sette alle pengene i prosjekt X?
+
+**Oppgave** N.1.4
+
+Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
+
+Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
+
+Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
+
+# Kapittel 2
+
+**Oppgave** N.2.1
+
+Om seks ulike porteføljer har du følgende opplysninger, hvor alle tall er i prosent:
+
+Portefølje
+A	B	C	D	E	F
+Forventet avkastning	8	10	14	18	21	21
+Standardavvik	0	4	9	9	14	12
+Lag en ﬁgur som viser hver porteføljes forventede avkastning og standardavvik.
+
+Hvilke porteføljer er aktuelle for en risikoavers investor?
+
+Hvilken portefølje vil en risikoavers investor velge?
+
+**Oppgave** N.2.2
+
+For tre ettårige investeringsprosjekter er det beregnet følgende tilstandsbetingede kontantstrømmer:
+
+Tilstand	Prosjekt A	Prosjekt B	Prosjekt C	Sannsynlighet
+1	100	30	60	0,2
+2	150	40	40	0,6
+3	200	50	20	0,2
+Prosjektenes investeringskostnader regnes som sikre og er hhv. 50, 20 og 20 kroner for A, B og C.
+
+Beregn forventet avkastning og standardavvik for kontantstrøm etter ett år i alle tre prosjektene. Hvordan vil du rangere prosjektene ut fra forventning-standardavvik-kriteriet?
+
+Du har allerede bestemt deg for å investere i prosjekt A. Spørsmålet nå er hvilket av prosjektene B og C du skal velge sammen med A. Hvilken prosjektportefølje er best; A og B eller A og C?
+
+**Oppgave** N.2.3
+
+Ta utgangspunkt i opplysninger og beregninger utført i oppgave 2.3 i læreboken. Beregn det veide gjennomsnittet for enkeltaksjenes standardavvik i de to porteføljene av aksjene A og B. Bruk vekter på hhv. wA = wB = 0,5 og wA = 0,75 og wB = 0,25. Sammenlign resultatene med de beregnede standardavvikene til porteføljene fra oppgave 2.3 og kommenter resultatene.
+
+**Oppgave** N.2.4
+
+Hva er sammenhengen mellom diversiﬁseringsgevinst og aksjeavkastningenes samvariasjon?
+
+Hva er sammenhengen mellom antall aksjer og diversiﬁseringsgevinst? Har dette forholdet noen betydning for småinvestorer?
+
+**Oppgave** N.2.5
+På grunnlag av opplysningene i oppgave 2.6 i læreboken skal du beregne forventet avkastning og standardavvik for de fem porteføljene når korrelasjonskoefﬁsienten er hhv. –½, 0 og ½.
+
+Vis resultatene fra spørsmål 1 i en ﬁgur.
+
+**Oppgave** N.2.6
+
+Som i eksempel 2.6 vurderer du å sette sammen en portefølje med 40 % av pengene plassert i aksje A, 40 % i aksje B og resten i aksje C. Aksjenes forventede avkastning og standardavvik er som i eksempel 2.6, men korrelasjonskoefﬁsientene har du fått nye data for. De gamle og nye dataene er oppsummert i denne tabellen:
+
+Aksje	E(r)	Std(r)	Korri,j
+A	0,12	0,10	KorrA,B = 0,5
+B	0,15	0,20	KorrA,C = 0,2
+C	0,25	0,40	KorrB,C = 0,9
+Beregn forventet avkastning og standardavvik for porteføljen.
+
+**Oppgave** N.2.7
+
+Aksjefondet Delphi vurderer å plassere en del av forvaltningskapitalen i aksjeselskapet Spekula. Dette selskapet er nylig tatt opp til notering på børsen, og det foreligger derfor ikke noe anslag på selskapets betakoeffisient. En av Delphis analytikere, Analytiker 1, har fått i oppdrag å gjøre et slikt estimat. I den forbindelse har hun satt opp følgende tabell:
+
+Avkastning, %	
+Børstilstand	Spekula	Aksjemarkedet	Sannsynlighet
+1	–20	–12	10 %
+2	–12	–5	15 %
+3	5	2	25 %
+4	14	9	25 %
+5	22	14	15 %
+6	40	22	10 %
+Beregn Spekulas systematiske risiko.
+
+Basert på Spekulas resultater en del år forut for børsintroduksjonen har en annen analytiker i Delphi, Analytiker 2, anslått at Spekulas korrelasjon med markedet er hele 0,91. Fra samme grunnlagsmateriale er aksjeavkastningens varians i Spekula anslått til 0,0484. Standardavviket til markedsporteføljens avkastning er 10 %.
+
+Hva blir Analytiker 2s anslag på Spekulas betakoeffisient?
+
+Tegn karakteristisk linje for Spekula-aksjen, både for Analytiker 1 og Analytiker 2. Anta at begge karakteristiske linjer går gjennom origo.
+
+Ta utgangspunkt i Analytiker 2 og forklar betydningen av den estimerte betakoeffisienten når:
+
+markedsavkastningen øker med 2 prosentpoeng, og
+markedsavkastningen faller med 5 prosentpoeng.
+
+# Kapittel 3
+
+**Oppgave** N.3.1
+
+I markedet omsettes to evigvarende obligasjoner med fast rente. Obligasjon A betaler en årlig rente på 100 kroner og har en beta på 0,4. Obligasjon B betaler bare 80 kroner pr. år, men er mindre risikabel; beta er bare 0,2. Risikofri rente er 3 %, og markedets risikopremie er 5 %. Hvilke(n) obligasjon(er) ville du kjøpe hvis markedsprisen for begge er kr 1 000?# Kapittel 4
+
+**Oppgave** N.3.2
+
+Aksjeselskapet Ekspeditt vurderer å satse kr 160 000 i egenkapital på et svært konjunkturfølsomt prosjekt. Det skal selges igjen ett år senere og forventes da å gi kr 180 000 til egenkapitalen etter skatt. Forventet avkastning på markedsporteføljen er 7 %, mens risikofri rente er 2 %.
+
+Analytiker er i sterk tvil om prosjektets risiko, men mener βE = 2,3 er det beste anslaget hun kan gjøre. Bør prosjektet aksepteres?
+
+Hva kan risikoen maksimalt være for at investeringen skal være lønnsom?
+
+**Oppgave** N.3.3
+
+Du er blitt interessert i internasjonale aksjeinvesteringer. I den forbindelse har du innhentet følgende opplysninger om forventet avkastning og risiko på markedsporteføljen i andre land (nominelle tall etter selskapsskatt):
+
+Land	Forventet avkastning, %	Standardavvik, %
+(A)	Australia	14,1	19,95
+(B)	Belgia	13,8	12,98
+(D)	Danmark	10,5	15,22
+(E)	England	20,9	24,59
+(F)	Frankrike	22,1	29,88
+(H)	Hongkong	13,8	20,20
+(I)	Italia	18,2	26,19
+(J)	Japan	14,0	14,97
+(C)	Canada	14,7	22,53
+(N)	Nederland	13,2	15,98
+(S)	Sveits	14,9	15,04
+(U)	USA	10,6	13,38
+(T)	Tyskland	13,3	14,26
+Hva er det effisiente (ikke-sløsende) settet hvis du bare kan investere i ett av disse landene? Tegn en figur som viser de effisiente punktene.
+
+Skal du investere i en internasjonalt diversifisert aksjeportefølje, må du også estimere et samvariasjonsmål mellom hvert par av land. Tabellen under gir estimater på korrelasjonskoeffisienter mellom markedsporteføljene i disse landene.
+
+A	1,00												
+B	0,06	1,00											
+D	0,03	0,38	1,00										
+E	0,25	0,40	0,42	1,00									
+F	0,26	0,28	0,02	0,35	1,00								
+H	0,11	0,36	0,02	0,22	0,12	1,00							
+I	0,23	0,31	0,07	0,39	0,29	0,20	1,00						
+J	0,32	0,49	0,20	0,26	0,32	0,20	0,27	1,00					
+C	0,46	0,24	–0,05	0,16	0,20	0,13	–0,07	0,26	1,00				
+N	0,15	0,56	0,33	0,21	0,11	0,22	0,09	0,33	0,14	1,00			
+S	0,14	0,48	0,33	0,43	0,28	0,16	0,36	0,48	0,18	0,51	1,00		
+U	0,24	0,27	0,03	0,26	0,25	0,06	0,05	0,11	0,54	0,18	0,20	1,00	
+T	–0,00	0,60	0,29	0,29	0,30	0,10	0,24	0,47	0,07	0,57	0,67	0,03	1,00
+A	B	D	E	F	H	I	J	K	N	S	U	T
+Disse dataene kjører du gjennom et PC-program som beregner det effisiente settet. Tabellen under viser sammensetningen av de effisiente porteføljene og deres forventede avkastning og standardavvik.
+
+Portefølje	Forventet avkastning	Porteføljens std.avvik	Prosent investert i hvert land
+A	B	D	E	F	H	I	J	K	N	S	U	T
+1	22,1	29,9	–	–	–	–	100	–	–	–	–	–	–	–	–
+2	21,4	22,1	–	–	–	55	45	–	–	–	–	–	–	–	–
+3	21,1	21,1	–	–	–	51	39	–	10	–	–	–	–	–	–
+4	20,3	19,1	–	–	–	44	32	–	14	–	10	–	–	–	–
+5	20,2	19,0	–	–	–	43	31	–	14	–	10	1	–	–	–
+6	20,0	18,6	–	–	–	42	31	–	14	–	11	2	1	–	–
+7	18,8	16,0	–	–	–	32	24	4	13	–	12	7	7	–	–
+8	17,3	13,4	–	–	–	21	16	8	11	8	12	13	10	–	–
+9	17,2	13,2	0	–	–	21	16	8	11	8	12	13	10	–	–
+10	16,8	12,6	2	4	–	18	16	9	10	9	12	12	11	–	–
+11	16,4	12,1	5	7	–	15	12	9	9	8	11	11	11	–	3
+12	16,0	11,6	5	8	3	13	11	0	8	8	10	10	11	–	4
+13	13,2	8,8	9	4	15	–	4	10	6	8	2	2	4	21	15
+14	12,6	8,4	9	2	17	–	1	11	4	9	–	0	1	27	19
+15	12,4	8,3	9	–	18	–	–	11	4	9	–	–	–	29	20
+Tegn det nye effisiente settet i samme figur som den du tegnet til delspørsmål a. Kommenter resultatene.
+
+**Oppgave** N.3.4
+I tillegg til å investere i en internasjonalt diversifisert portefølje (oppgave N.3.3) kan du også kjøpe risikofrie norske statsobligasjoner. Disse gir en avkastning på 3 %. Tegn en figur som viser det nye effisiente settet.
+
+Hva blir din optimale investering hvis du har kr 100 000 som skal plasseres og du ønsker en forventet avkastning på 10 %?
+
+Hva blir den optimale portefølje for en annen investor som skal plassere kr 50 000 og som er villig til å akseptere en portefølje med et standardavvik på 20 %?
+
+Den tilpasningen som skjer for å finne den optimale porteføljen i spm. 2 og 3, har et spesielt navn. Hva kalles dette resultatet, og hva innebærer det?
+
+**Oppgave** N.3.5
+Skriv uttrykket for kapitalmarkedslinjen hvis risikofri rente er 0,03 og markedsporteføljen har forventet avkastning på 0,09 med varians lik 0,0576. Tegn figur, og bruk denne når du svarer på spm. 2.
+
+Om portefølje A og B har du fått vite at de har forventet avkastning på hhv. 0,10 og 0,06. De tilsvarende standardavvik er 0,28 og 0,16. A og B er ikke nødvendigvis rene aksjeporteføljer, så de kan også inneholde elementer av risikofri låning eller sparing.
+
+Merk av porteføljene i figuren fra delspørsmål 1, og kommenter porteføljenes diversifiseringsgrad.# Kapittel 5
+
+**Oppgave** N.3.6
+Ministaten Montavia har nylig fått sin selvstendighet etter mange års kolonialisering. Landet har også nettopp etablert en aksjebørs. Inntil videre er det bare fire selskaper på børsen; selskapene Alfa, Beta, Gamma og Delta. Disse fire selskapene har utstedt henholdsvis 10 000, 5 000, 9 000 og 6 000 aksjer, pålydende hhv. 60, 80, 100 og 100 mont (mont er myntenheten i Montavia).
+
+Det er tre store familier som totalt dominerer Montavias økonomi. De tre familiene, som vi anonymiserer ved å kalle dem X, Y og Z, har bl.a. monopolisert investeringsmulighetene i aksjer. De er seg imellom blitt enige om at aksjemarkedet skal deles i forholdet 45, 35 og 20 prosent mellom hhv. X, Y, og Z. Sist noterte aksjepriser i Alfa, Beta, Gamma og Delta er hhv. 162, 432, 60 og 180 mont.
+
+Vis at aksjemarkedet i Montavia ikke kan være i likevekt hvis alle de tre familiene danner aksjeporteføljer med vekter basert på selskapenes bokførte aksjekapital. Vis også at markedet er i likevekt med markedsbaserte vekter.
+
+**Oppgave** N.3.7
+En investor vurderer fire ettårige investeringsalternativer. Følgende data er innhentet om kontantstrøm ved årets slutt (alle alternativer krever samme investeringsbeløp ved årets begynnelse):
+
+Alternativ	Forventning	Standardavvik
+A	10	0
+B	30	20
+C	10	20
+D	20	30
+Investor kan bare velge ett av alternativene. Hvilket bør da velges hvis holdningen til risiko kan beskrives som:
+
+Ekstremt risikomotvillig.
+Risikomotvillig.
+Risikonøytral, dvs. bryr seg ikke om risiko.
+Risikosøkende, dvs. ønsker mer risiko fremfor mindre.
+Anta nå at investor kan velge kombinasjoner av to investeringer (men ikke velge samme prosjekt to ganger). Korrelasjonskoeffisientene mellom investeringenes netto innstrømning er:
+
+AB: 0
+AC: 0
+AD: 0
+BC: –0,1
+BD: 0,9
+CD: 0,1
+Hvilke kombinasjoner bør nå velges hvis holdning til risiko kan beskrives som:
+
+Risikomotvillig.
+Risikonøytral.
+Risikosøkende.
+
+**Oppgave** N.3.8
+Følgende effisiente (ikke-sløsende) sett er beregnet:
+
+Portefølje	Forventet avkastning (%)	Standardavvik (%)
+A	9,5	10,0
+B	9,0	7,5
+C	8,0	4,5
+D	5,5	2,5
+E	3,0	2,0
+Hva blir det reviderte effisiente settet hvis du kan låne og spare risikofritt til 2 % ? Hva blir det reviderte effisiente settet hvis lånerenten er 4 % og sparerenten er 2 %? Illustrer med figur(er).
+
+På hvilken måte vil et perfekt kapitalmarked gjøre investering i verdipapirer til en to-trinnsprosess?
+
+Forklar hva som menes med systematisk og usystematisk risiko.
+
+**Oppgave** N.3.9
+Bedriften Jappi vurderer to gjensidig utelukkende prosjekter A og B. Estimatene på forventet avkastning og risiko for eierne er:
+
+Prosjekt A	Prosjekt B
+Forventet avkastning (%)	12	15
+Standardavvik (%)	50	75
+Egenkapitalbeta	1,8	1,4
+Anta at risikofri rente er 2 %, og at forventet avkastning på markedsporteføljen er 9 %.
+
+Bør Jappi investere i A eller i B?
+**Oppgave** N.3.10
+Vanligvis inndeles markedets informasjonseffisiens i tre typer. Definer disse tre gradene av effisiens, og angi hvordan de kan undersøkes empirisk.# Kapittel 6
+
+**Oppgave** N.3.11
+En ivrig norsk investor uttalte at «det norske aksjemarkedet kan ikke være effisient. Nå har markedet i fire år oversett den virkelige verdien av Prosperitus ASA. Investorene våknet først da ledelsen i selskapet besluttet å selge ut noen av eiendelene, deriblant fast eiendom. Hvordan kan du argumentere for at markedet er effisient når aksjekursene, som her, så ofte viser seg å være feil?»
+
+Kommenter investorens begrunnelse for påstanden om at markedet ikke kan være effisient.
+
+**Oppgave** N.3.12
+Et nytt prosjekt under planlegging har forventet levetid på ett år. Investeringen på kr 50 000 er det full sikkerhet om, men netto kontantstrøm etter ett år er usikker. Ledelsen mener likevel at både omsatt volum og variable enhetskostnader kan anses som deterministiske (sikre) i analysene. Derimot føler ledelsen seg atskillig mer usikker på enhetsprisen og faste kostnader. Selskapet er ikke i skatteposisjon.
+
+Salgspris og betalbare faste kostnader anslås i basistilfellet til hhv. kr 100 og 20 000. Avvik fra dette med inntil +/– 20 % i pris og +/– 40 % i faste kostnader anses mulig. Omsatt (og produsert) volum forventes å bli 1 000 enheter, mens variable enhetskostnader er budsjettert til kr 20. Alle tall er nominelle.
+
+Beregn prosjektets kontantstrøm og internrente i basistilfellet.
+
+Vis hvordan internrenten avhenger av salgsprisen. Gjør det samme for effekten av faste kostnader. Illustrer resultatene i et stjernediagram, som også skal vise kritisk verdi, dvs. hva som skal til for at prosjektet akkurat inntjener et avkastningskrav på 12 %.
+
+Avgjør internrentens følsomhet overfor samtidige avvik fra basis i pris og faste kostnader. Fremstill resultatene i et diagram som også viser kritiske kombinasjoner av faste kostnader og pris.
+
+Hva slags risikotype belyser denne følsomhetsanalysen?
+
+**Oppgave** N.3.13
+Ledelsen i AS Fiesta planlegger et nytt prosjekt som eventuelt vil medføre eksport til USA og strekke seg over minst 10 år. I forbindelse med prosjektanalysen har også ledelsen gjort seg opp en mening om typiske kombinasjoner av fremtidig norsk inflasjon, rentenivå og dollarkurs. Følgende scenarier er satt opp:
+
+Scenario	Inflasjon, %	Nominell risikofri rente, %	Dollarkurs (NOK/USD)
+1	6	5	6,50
+2	5	5	6,50
+3	3	4	7,10
+4	1	4	7,50
+Gi din begrunnede mening om ledelsens valg av scenarier. Ta her stilling til samsvar mellom inflasjons- og renteforutsetninger. Sjekk også forholdet mellom antatt inflasjon og dollarkurs.
+
+Sett opp ditt eget forslag til scenarier ut fra dine begrunnelser i spm. 1. Ta de fire anslagene på fremtidig inflasjonstakt som gitt.
+
+Eierne i AS Fiesta er veldiversifiserte. Vil en analyse utført med disse scenariene gi eierne verdifull risikoinformasjon?
+
+**Oppgave** N.3.14
+
+En BI-student som også er juletreselger på Youngstorget, står overfor usikkerhet både i pris og kvantum: Prisen han kan forlange, avhenger av hva de fleste andre selgerne på torget bestemmer seg for å ta. Han bestemmer seg for å ta samme pris som nærmeste konkurrent. Studenten har også erfart at selv med en gitt pris er omsatt kvantum usikkert. Dette skyldes bl.a. at folk kan kjøpe juletrær mange andre steder enn på Youngstorget. Likevel mener han at det er en viss sammenheng mellom de to størrelsene. Basert på tidligere suksess og fiasko anslås følgende for den forestående sesong:
+
+Blir prisen (P) 100, er det 40 % sjanse for et kvantum (K) på 500 og 60 % sjanse for K = 800.
+
+Blir prisen 130, er det 80 % sjanse for K = 500 og 20 % sjanse for K = 800.
+
+Pris på 100 eller 130 anses like sannsynlige.
+
+Beregn sannsynlighetsfordelingen for alternative kombinasjoner av pris og kvantum.
+
+Studenten leser sitt finanspensum mellom juletrærne. Han vil derfor simulere salgsinntekten ved å trekke 20 lodd fra sin strikkelue. Loddene nummereres fortløpende fra 1 til 20.
+
+Bestem forholdet mellom pris, kvantum og loddnumre.
+
+Mellom to juletresalg trekker studenten 15 lapper med numrene 11, 20, 3, 7, 14, 19, 1, 3, 8, 17, 9, 8, 5, 10, 5.
+
+Hva er simulert hyppighet for salgsinntekt på minst kr 80 000? Hva er tilsvarende sannsynlighet i inngangsfordelingen?
+
+Hva slags risikotype kommer ut av denne analysen?
+# Kapittel 4
+# Kapittel 5
+**Oppgave** N.5.1
+I Dagens Næringsliv kunne du 18. februar 2016 lese at omsetningskursen på første noteringsdag for Den norske stats obligasjon 16/26 var 100,44. Denne obligasjonen har 10 års løpetid, pålydende kr 100, kupongrente 1,5 % og årlig rentebetaling.
+
+Hva er obligasjonens effektive rente (markedsrente) hvis du forutsetter at det er nøyaktig 12 måneder til første rentebetaling?
+
+Hvilken effektiv rente ville blitt rapportert i markedet dersom det hadde vært halvårlig rentebetaling? Forutsett nå at det er nøyaktig seks måneder til første rentebetaling.
+
+**Oppgave** N.5.2
+Fra dagens terminstruktur for risikofrie statsobligasjoner kan følgende renter avleses:
+
+1 år til forfall:   2,0 %
+2 år til forfall:   2,5 %
+3 år til forfall:   3,0 %
+
+Hva er forwardrentene (de korte rentene) i de tre årene?
+
+Lag en figur for rentens terminstruktur.
+
+Et treårig verdipapirs forventede årlige kontantstrømselementer er hhv. 5, 7 og 53 kroner. Markedets risikopremie forventes å være 5 % i alle tre år. Verdipapirets systematiske risiko (beta) er 0,4. Hva er nåverdien? Se bort fra skatt.
+
+**Oppgave** N.5.3
+Lokalbank A/S har følgende balanse (sterkt forenklet):
+
+Markedsverdi	Durasjon
+Eiendeler		
+Innskudd i Norges Bank	43	0
+Verdipapirinvesteringer	615	4 mnd.
+Driftskreditter	345	9 mnd.
+Kortsiktige utlån	55	5 år
+Langsiktige utlån	197	15 år
+Egenkapital og gjeld		
+Egenkapital	145	
+Langsiktig gjeld	250	10 år
+Innskudd på tid	370	18 mnd.
+Innskudd uten oppsigelse	490	0
+Beregn durasjon (varighet) både for eiendeler (aktiva) og egenkapital og gjeld (passiva) i Lokalbank. Kommenter resultatene.
+
+Hva må eiendelsdurasjonen endres til for at Lokalbank skal være beskyttet mot renterisiko? Anta at passivadurasjonen holdes konstant.
+
+**Oppgave** N.5.4
+Fem obligasjoner med lik risiko har følgende avkastning til forfall:
+
+År til forfall	Avkastning
+1	2,5 %
+2	2,0 %
+3	3,0 %
+4	3,5 %
+5	3,8 %
+Tegn kurven for rentens terminstruktur.
+
+**Oppgave** N.5.5
+Anta at staten har emittert tre nullkupongobligasjoner. Den første utbetaler kr 1 000 om ett år og omsettes for kr 952,38. Den andre utbetaler kr 1 000 om to år og omsettes i dag for kr 898,45. Den tredje obligasjonen utbetaler kr 1 000 om tre år og omsettes for kr 839,62.
+
+Hva er spot- og terminrentene for de tre årene?
+
+En av dine venner har bedt om et lån på kr 15 000. Som motytelse tilbyr hun å tilbakebetale over tre år med kr 5 000 om ett år, kr 5 500 om to år og kr 6 000 om tre år. Bør du gi vennen din dette lånet? Forutsett at hun klarer å følge opp tilbakebetalingsplanen.
+
+Hva er terminrenten (forward-renten) i år 3?
+
+Hva er forventet avkastning om du kjøper en obligasjon på tidspunkt 2 og selger den på tidspunkt 4?
+
+**Oppgave** N.5.6
+LeMonde ASA har utestående et konvertibelt obligasjonslån hvor hver obligasjon pålydende 1 000 kroner kan konverteres i aksjer for kr 50 pr. aksje. Nominell rente på KO er 6 %, og lånet forfaller om 20 år. Det konvertible lånet kan tilbakekalles til 107 % av pålydende. LeMondes skattesats er 28 %.
+
+Hva er konverteringsverdien hvis LeMondes aksjer i dag omsettes for kr 51?
+
+Hva er verdien av KO som ren obligasjon hvis vanlige obligasjoner med tilsvarende risiko gir en avkastning på 8 % før skatt?
+
+Bruk svarene fra 1 og 2 og gi et realistisk estimat på markedsverdien av en KO (det forutsettes ingen beregninger her).
+
+Hva er konverteringsverdien hvis aksjeprisen stiger til 70 kroner?
+
+Hva er ditt estimat på markedsverdien av KO gitt situasjonen beskrevet i 4? (Fortsatt er ingen beregninger nødvendig.)
+
+Hva må aksjeprisen minst være før det er mulig for LeMonde å fremtvinge konvertering?
+
+Endrede inflasjonsforventninger fører til at avkastningen på ordinære obligasjoner med tilsvarende risiko og løpetid faller til 4 %. Hvordan vil dette påvirke verdien av LeMondes KO?
+
+**Oppgave** N.5.7
+En 6 % konvertibel obligasjon pålydende kr 1 000 kan konverteres i 30 aksjer som for tiden omsettes for kr 30. Etter emisjonen av KO for fire år siden har rentenivået falt. Markedets avkastningskrav for ordinære obligasjoner med tilsvarende løpetid og risiko er nå 6 %.
+
+Hva er minimumsverdi for en KO i dag?
+
+Hva er minimumsverdi hvis aksjeprisen stiger til kr 36?
+
+Hva er minimumsverdi hvis markedets avkastningskrav for tilsvarende ordinære obligasjoner øker til 8 %, samtidig som aksjeprisen holder seg på kr 36?
+
+**Oppgave** N.5.8
+Et selskaps årsrapport for 2015 har følgende balanseoppstilling:
+
+Eiendeler (NOK mill.)	Egenkapital og gjeld (NOK mill.)
+Immaterielle eiendeler	624	Aksjekapital	1 597
+Varige driftsmidler	557	Opptjent egenkapital	742
+Finansielle anleggsmidler	227	Langsiktig gjeld	129
+Omløpsmidler	1 854	Kortsiktig gjeld	794
+Sum eiendeler	3 262	Sum EK og gjeld	3 262
+Ved årsslutt var aksjekapitalen fordelt på 178,49 mill. ordinære aksjer pålydende kr 1.
+
+Hva er bokbasert egenkapitalandel ved utgangen av 2015?
+
+Aksjekursen den 31.12.2015 var 27,20 kroner. Hva var markedsbasert egenkapitalandel? Anta at markedsverdi av gjeld er lik bokført verdi.
+
+**Oppgave** N.5.9
+Et selskap skal emittere aksjer for 20 mill. kroner. Aksjekapitalen i dag er 5 mill. kroner (500 000 aksjer à kr 10). Aksjene omsettes nå for kr 50 pr. aksje. Emisjonen vil være med fortrinnsrett for gamle aksjonærer. Emisjonskursen er fastsatt til kr 40 pr. aksje.
+
+Hvor mange retter trengs for å kjøpe en ny aksje?
+
+Hva er teoretisk verdi pr. tegningsrett?
+
+Hva forventer du at aksjeprisen vil bli den dagen aksjene noteres uten tegningsrett (ex-rights)?
+
+Vis at formuen til en aksjonær med 100 aksjer er uendret uansett om hun selger tegningsrettene eller bruker dem selv.
+
+**Oppgave** N.5.10
+En bedrift vil finansiere 9,9 mill. kroner fra eksterne kilder. I den forbindelse vurderer ledelsen å emittere et konvertibelt obligasjonslån (KO). Kursen på selskapets aksjer er for tiden kr 50. Selskapet tror at KO kan legges ut med en konverteringspris 10 % over dagens aksjekurs.
+
+Hva blir konverteringsforholdet hvis KO har pålydende kr 1 000?
+
+Hvor mange nye aksjer må emitteres hvis selskapet alternativt kan utstede aksjer til emisjonskurs kr 45? Hvor mange aksjer må emitteres ved full konvertering av alle KO? Hvorfor avviker disse tallene?
+
+Hvorfor kan ikke markedskursen på KO være lavere enn den minste verdien av den rene obligasjonsverdien og konverteringsverdien
+
+**Oppgave** N.5.11
+ODUL ASA har følgende kapitalstruktur:
+
+Egenkapital	
+Innskutt egenkapital (aksjekapital lik 100 000 aksjer à kr 100)	10 mill. kr
+Opptjent egenkapital	40 mill. kr
+Gjeld	100 mill. kr
+Sum egenkapital og gjeld	150 mill. kr
+ODUL ønsker å styrke egenkapitalen med til sammen 5 mill. kroner ved en aksjeemisjon. Emisjonskurs er kr 200, og de nye aksjene har rett til fullt utbytte. Markedskursen på aksjene rights-on er kr 250. En investor eier 20 aksjer i selskapet.
+
+Vis at investor ikke taper noe hvis han selger tegningsrettene uten å tegne.
+
+Vis at investors formue er uendret hvis han tegner nye aksjer.
+
+Vis hva investors formue er hvis han verken selger tegningsrettene eller tegner nye aksjer.
+
+**Oppgave** N.5.12
+GATT ASA har utestående 15 000 aksjer pålydende kr 30. Dagens aksjepris er kr 150. Ledelsen bestemmer seg for å gjennomføre en aksjesplitt i forholdet 4:3 (dvs. fire nye aksjer for tre gamle). Høyresiden i GATTs balanse ser slik ut før splitten:
+
+Egenkapital	
+Innskutt egenkapital	kr 450 000
+Opptjent egenkapital	kr 1 900 000
+Gjeld	kr 1 650 000
+Sum egenkapital og gjeld	kr 4 000 000
+Forsvinner de gamle aksjene etter aksjesplitten?
+
+Vis hvordan balansens høyreside vil se ut etter aksjesplitten.
+
+I stedet for en aksjesplitt bestemmer ledelsen seg for å gjennomføre en 30 % fondsemisjon (3:10, dvs. tre nye aksjer for hver 10 gamle). Hvordan vil balansen se ut etter dette?
+
+Forsvinner de gamle aksjene etter fondsemisjonen?
+
+**Oppgave** N.5.13
+ODUL ASA i oppgave N.5.11 vurderer å gjennomføre en 50 % fondsemisjon i stedet for nyemisjonen.
+
+Hvilken virkning vil dette få på investors formue?
+
+Er det noen forskjell i kontantstrømeffekt for selskapet sammenlignet med i oppgave N.5.11?
+
+**Oppgave** N.5.14
+ODUL ASA i oppgavene N.5.11 og N.5.13 vurderer nå et tredje alternativ til nyemisjon og fondsemisjon. Dette består i en aksjesplitt som skal redusere aksjenes pålydende fra kr 100 til kr 50 (2:1 splitt). Vis hvilken virkning dette har på investors formue.
+
+# Kapittel 6
+**Oppgave** N.6.1
+Det børsnoterte selskapet Havstein ASA opplever et uventet etterspørselssjokk for sine ferdigprodukter. Ledelsen anslår at dette har økt risikoen i kontantstrømmen fra driften, men ikke forventningen. Uttrykt ved selskapets systematiske investeringsrisiko målt ved beta mener ledelsen denne har steget fra 0,6 til 1,1.
+
+Påvirkes eksisterende eieres formue av denne hendelsen?
+
+Hva med nye eiere som kjøper aksjer i senere emisjoner?
+
+Påvirkes verdien av selskapets gjeld?# Kapittel 7
+
+**Oppgave** N.6.2
+Bravur ASA har 1 mill. aksjer utestående til kurs 50 kroner pr. aksje. Selskapets gjeld har tilsvarende verdi. I det kommende året anslår analytikerne at overskudd før renter og skatt blir 15 mill. kroner, og at selskapet vil betale 3 mill. i renter. Selskapet er ikke i skatteposisjon.
+
+Beregn forventet overskudd pr. aksje.
+
+Styret vurderer å øke gjelden med 50 % og redusere egenkapitalen tilsvarende. Både lånerenten og aksjekursen forventes å bli uendret av denne refinansieringen.
+
+Hva er forventet overskudd pr. aksje med endret finansiering?
+
+Vil du anbefale Bravur å skifte til den foreslåtte gjeldsgraden?
+
+**Oppgave** N.6.3
+Seacom ASA er for tiden gjeldfritt og har en markedsverdi på 8 mrd. kroner fordelt på 1 mill. aksjer. Ledelsen har nå lagt fram et forslag om å refinansiere selskapet. Planen er å utstede et obligasjonslån på 6 mrd. kroner til markedsrenten på 10 %. Pengene skal brukes til å kjøpe tilbake selskapets aksjer. Selskapet er ikke i skatteposisjon. Kommende års overskudd før renter (OFR) avhenger av konjunkturene, og følgende estimater er gjort (tall i mill. kroner):
+
+Nedgangstid	Stabilt	Oppgangstid
+OFR	600	1 400	2 200
+Anta at alle tre utfall er like sannsynlige.
+
+Beregn forventning, standardavvik og variasjonskoeffisient pr. aksje for overskudd pr. aksje (OPA) med dagens finansiering.
+
+Gjør tilsvarende beregning med den foreslåtte finansieringen.
+
+Hvilken generell sammenheng illustrerer resultatene fra spm. 1 og 2?
+
+**Oppgave** N.6.3
+Seacom ASA er for tiden gjeldfritt og har en markedsverdi på 8 mrd. kroner fordelt på 1 mill. aksjer. Ledelsen har nå lagt fram et forslag om å refinansiere selskapet. Planen er å utstede et obligasjonslån på 6 mrd. kroner til markedsrenten på 10 %. Pengene skal brukes til å kjøpe tilbake selskapets aksjer. Selskapet er ikke i skatteposisjon. Kommende års overskudd før renter (OFR) avhenger av konjunkturene, og følgende estimater er gjort (tall i mill. kroner):
+
+Nedgangstid	Stabilt	Oppgangstid
+OFR	600	1 400	2 200
+Anta at alle tre utfall er like sannsynlige.
+
+Beregn forventning, standardavvik og variasjonskoeffisient pr. aksje for overskudd pr. aksje (OPA) med dagens finansiering.
+
+Gjør tilsvarende beregning med den foreslåtte finansieringen.
+
+Hvilken generell sammenheng illustrerer resultatene fra spm. 1 og 2?
+
+**Oppgave** N.6.4
+AS Invento, som ikke betaler skatt for tiden, har følgende budsjett for kommende år, avhengig av markedsforholdene (tall i mill. kroner):
+
+Etterspørsel
+Svak	Middels	Høy
+Salgsinntekt	600	1 000	1 400
+Faste kostnader	200	200	200
+Variable kostnader	240	400	560
+Beregn forventning, standardavvik og variasjonskoeffisient for driftsresultatet (OFR).
+
+Ledelsen vurderer å endre teknologien slik at de faste kostnadene stiger og de variable synker. Det anslås at med ny teknologi vil de variable kostnadene utgjøre 20 % av salgsinntektene (mot før 40 %), mens de faste kostnadene blir 300 mill. (mot før 200 mill.)
+
+Besvar spm. 1 under de nye forutsetningene om kostnadsstruktur.
+
+Ser du noen parallell mellom effekten av å endre kostnadsstruktur i produksjonen (som her) og å endre strukturen på finansieringen (som eksempelvis i oppgave N.6.3)?
+
+# Kapittel 7
+**Oppgave** N.7.1
+Komposto ASA har så langt vært gjeldfritt. Selskapet har dessuten betalt dividende på 9 mill. årlig, som tilsvarer hele overskuddet. Egenkapitalkostnaden er 9 %, risikofri rente er 5 %, og forventet risikopremie er 6 %. Komposto opptar nå gjeld for 50 mill. til markedsrenten på 5 %. Lånebeløpet brukes til å tilbakekjøpe aksjer. Ny gjeldsgrad regnet til markedsverdi er 1. Anta at M&M-forutsetningene holder, og se bort fra skatt.
+
+Hvordan påvirkes selskapets egenkapitalkostnad av refinansieringen?
+
+Hva vil skje med verdien av selskapet?# Kapittel 8
+
+**Oppgave** N.7.2
+Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer. Hva vil skje, forutsatt en M&M-verden uten skatt?
+
+Gjeldsgraden synker.
+
+Forventet avkastning og risiko pr. aksje øker.
+
+Forventet avkastning og risiko pr. aksje faller.
+
+Forventet avkastning pr. aksje øker og risikoen forblir uendret.
+
+**Oppgave** N.7.3
+Eltronica ASA har en egenkapitalkostnad på 7 % og er gjeldfritt. Ledelsen planlegger å øke gjeldsandelen til 50 % uten å endre eiendelssiden av balansen. Lånerenten er 4 %. Forutsett en M&M-verden uten skatt.
+
+Hva er totalkapitalkostnaden før kapitalstrukturen endres?
+
+Beregn egenkapitalkostnaden etter refinansieringen.
+
+**Oppgave** N.7.4
+
+Inductor ASA er et ungt, gjeldfritt selskap som delvis er finansiert med venturekapital. På grunn av stort kapitalbehov til produktutvikling må selskapet snart hente inn ny egenkapital fra det ventureselskapet som har investert i Inductor siden oppstart. Ventureselskapet er imidlertid ikke villig til å skyte inn mer penger før aksjekursen når 13 kroner. Dagens kurs er 10. Ledelsen mener at kursen kan økes ved å øke gjeldsgraden. Planen er derfor å tilbakekjøpe en firedel av selskapets egenkapital ved hjelp av et nytt obligasjonslån.
+
+Støtter du ledelsens plan om refinansiering? Begrunn svaret.
+
+# Kapittel 8
+**Oppgave** N.8.1
+Det børsnoterte selskapet Yamin ASA har nettopp gjort et gjennombrudd i sin produktutvikling. Ledelsen tror nå det er gode utsikter til et stort og usedvanlig lønnsomt prosjekt. En avgjørende forutsetning er imidlertid at selskapet greier å holde konkurrentene uvitende om detaljer i prosjektet over de neste 12 måneder. Yamin trenger å øke eksternfinansieringen sin med 40 % på grunn av dette prosjektet, og ledelsen vurderer følgende alternativer:
+
+Offentlig emisjon av nye aksjer.
+
+Rettet emisjon mot tre av selskapets største eiere.
+
+Banklån.
+
+Hvilket finansieringsalternativ vil du anbefale?# Kapittel 9
+
+**Oppgave** N.8.2
+Et delvis gjeldsfinansiert selskap er verd 30 mill. kroner. Ledelsen lurer på hva som vil skje med selskapsverdien hvis all gjelden erstattes med egenkapital. Forutsett at selskapet er i skatteposisjon, at investorene har samme skatt på eierinntekt som renteinntekt, og at det ikke er Miller-likevekt. Begrunn hvilket av disse tre alternative selskapsverdiene du mener er mest sannsynlig etter refinansieringen:
+
+30 mill. kroner
+
+45 mill. kroner
+
+25 mill. kroner
+
+**Oppgave** N.8.3
+Agrip ASA forventer OFRS på 30 mill. kroner i all overskuelig fremtid. Selskapet har så langt vært helt egenkapitalfinansiert, og egenkapitalkostnaden er 10 %. Selskapet låner nå 50 mill. til 8 % og bruker pengene til å kjøpe tilbake egne aksjer. Besvar spørsmålene ut fra de forutsetninger Miller og Modigliani gjorde for en situasjon uten investorskatt, men med selskapssskatt (40 % i dette tilfellet).
+
+Hvor mye er selskapet verd før refinansieringen?
+
+Hva er årlig rentebetaling etter skatt med ny kapitalstruktur?
+
+Hva er selskapet verd etter refinansieringen?
+
+# Kapittel 9
+**Oppgave** N.9.1
+Vekteren ASA har 2 mill. aksjer med bokverdi 12 kroner pr. aksje. Aksjekursen er 26. Selskapet har også gjeld pålydende 60 mill. kroner med 7 % kupongrente. Disse obligasjonene handles nå til 20 % under pålydende. Egenkapitalkostnaden er 12 %, og skattesatsen er 28 %.
+
+Hva er gjeldskostnaden før skatt i Vekteren?
+
+Beregn totalkapitalkostnaden etter skatt.
+
+**Oppgave** N.9.2
+Daglig leder for Vekteren i oppgave N.9.1 mener selskapet har for mye gjeld. I styret har hun derfor foreslått å halvere gjeldsandelen ut fra dagens nivå. Hun mener dette både vil øke verdien av selskapet og øke kursen på aksjene.
+
+Anta at du er styremedlem i Vekteren. Hvilke spørsmål bør du stille daglig leder?
+
+Hvorfor er egenkapital i et selskap alltid mer risikabel enn gjeld så sant det er usikkerhet i kontantstømmen fra driften?
+
+**Oppgave** N.9.3
+Finanskonsulenten i AS Kabal skal verdsette et nytt, femårig investeringsprosjekt som krever en investering på 10 mill. kroner umiddelbart. Forventet årlig kontantstrøm fra driften er 4 mill. kroner pr. år, avskrivningene er lineære over prosjektets levetid, og utrangeringsverdien antas å bli null. Prosjektet skal finansieres med 60 % gjeld til 7 % rente, men krever ingen arbeidskapital. Risiko og finansiering i det nye prosjektet antas å være som i bedriften for øvrig. Finanskonsulenten har estimert at selskapet har en totalkapitalkostnad på 6 %, og at investeringsrisikoen i selskapet tilsvarer en kapitalkostnad på 8 %. Selskapets skattesats er 28 %.
+
+Gjør finanskonsulenten noen implisitt forutsetning om forholdet mellom gjeldsgrad i verdi i selskapet?
+
+Hva er prosjektet verd ifølge totalkapitalmetoden?
+
+**Oppgave** N.9.4
+Ta utgangspunkt i prosjektforutsetningne for AS Kabal i oppgave N.9.3.
+
+Hva er prosjektets gjeldskapasitet, renter og avdrag basert på bokverdier?
+
+Hva er prosjektet verd ifølge JNV-metoden?
+
+Fikk du samme svar som ved totalkapitalmetoden i oppgave N.9.3?
+Er du overrasket over svaret?
+
+# Kapittel 10
+**Oppgave** N.10.1
+Selskapet ENI opererer i to forskjellig bransjer; sjømat og energi. Investeringsbeta i sjømatbransjen er 0,8, mens den er 0,9 i energibransjen. ENI har omtrent halvparten av sine totale eiendeler i hver bransje og ingen gjeld. Egenkapitalbetaen til ENI er 0,85. Risikofri rente er 2,5 %, og markedets risikopremie er 5 %.
+
+ENI vurderer å bygge et nytt produksjonsanlegg for laks i nærheten av Sogndal. Hva er kapitalkostnaden hvis prosjektet er egenkapitalfinansiert?
+
+ENI vurderer også å utvide sin virksomhet ved å starte et programvareselskap. Dette selskapet skal spesialisere seg på programvare for undervisningssektoren. Dette prosjektet vil også i sin helhet finansieres med egenkapital. Har du tilstrekkelig informasjon til å beregne kapitalkostnaden for prosjektet? Hvis ikke, hvilken informasjon mangler du? Beregn kapitalkostnaden hvis du har den informasjonen du trenger.# Kapittel 11
+
+**Oppgave** N.10.2
+Du skal beregne kapitalkostnaden til et oljeserviceprosjekt. Du har data for tre børsnoterte selskaper i oljeservicebransjen. Tabellen nedenfor viser estimert egenkapitalbeta og gjeldsgrad.
+
+Selskap 1	Selskap 2	Selskap 3
+Estimert egenkapitalbeta	1,5	2,2	1,4
+G/E	1	2	0,5
+Hva blir justerte egenkapitalbetaer hvis du bruker en justeringsfaktor (w) på 0,75 og en gjeldsbeta på 0,2?
+
+Hva blir median og gjennomsnittlig investeringsbeta?
+
+**Oppgave** N.10.3
+For selskapet Nydalen Fossekompani har du følgende regnskapsinformasjon:
+
+Fra resultatregnskapet	2015	2016
+Driftsinntekter	110	120
+Driftskostnader	65	50
+Avskrivninger	12	5
+Renter	0	15
+Dividende	25	0
+Investeringer	30	25
+Fra balansen	2015	2016
+Kontanter	5	5
+Bokført verdi gjeld	0	100
+Bokført verdi egenkapital	15	15
+Kundefordringer	20	30
+Varelager	10	5
+Leverandørgjeld	20	10
+Selskapet har en skattesats på 25 % og må ha 2 % av eiendelene som kontanter. Hva er fri kontantstrøm for 2016?
+
+**Oppgave** N.10.4
+Tombola A/S har slitt med lønnsomheten de siste årene: Veksten har vært 0 %, og avkastning på investert kapital (APIK) har vært 10 %. I 2016 hadde Tombola et driftsresultat etter skatt på 15 mill. kr. Driftsresultatet forventes å bli det samme for 2017. Ledelsen i selskapet har bestemt seg for å legge om driften. De har fått råd fra konsulentselskapet QPR om å endre sin prisingsstrategi for å få fart på den langsiktige veksten. Analysene fra QPR viser at det er mulig å øke den langsiktige veksten fra 0 % til 3 % fra og med 2018 uten at APIK endres nevneverdig. Relevant kapitalkostnad for Tombola er 10 %.
+
+Hva er verdien av Tombola 1. januar 2017 hvis den langsiktige veksten er 0 %?
+
+Hva er verdien av Tombola hvis den langsiktige veksten er 3 %?
+
+Foreslå en alternativ strategi Tombola kan vurdere som har større effekt på verdien av Tombola enn å øke veksten.
+
+**Oppgave** N.10.5
+Du skal verdsette selskapet Tarantara på tidspunktet 1. januar 2017 og har samlet inn tall fra årsregnskapene de siste årene. Basert på en analyse av disse regnskapene og framtidsutsiktene for bransjen har du kommet frem til følgende antagelser for de neste fem årene for Tarantara:
+
+Antagelser	2017E	2018E	2019E	2020E	2021E
+Prosentvis vekst i driftsinntekter	3 %	3 %	3 %	3 %	3 %
+Driftskostnader i prosent av inntekter	75 %	75 %	75 %	75 %	75 %
+Avskr. imm. eiendeler i % av driftsinntekter	0 %	0 %	0 %	0 %	0 %
+Skatt på DFRSI	25 %	25 %	25 %	25 %	25 %
+Varige driftsmidler i prosent av driftsinntekter	50 %	50 %	50 %	50 %	50 %
+Kundefordringer i prosent av driftsinntekter	8 %	8 %	8 %	8 %	8 %
+Varelager i prosent av driftsinntekter	10 %	10 %	10 %	10 %	10 %
+Leverandørgjeld i prosent av driftsinntekter	15 %	15 %	15 %	15 %	15 %
+Avskrivninger i prosent av varige driftsmidler	5 %	5 %	5 %	5 %	5 %
+Investeringer i prosent av varige driftsmidler	5 %	5 %	5 %	5 %	5 %
+Driftsinntekter og arbeidskapital for Tarantara i 2016 var henholdsvis 500 og 38 mill. kr. Regn ut fri kontantstrøm for årene 2017–2021.
+
+Regn ut avkastning på investert kapital for årene 2017–2021.
+
+**Oppgave** N.10.6
+Du har samlet inn multiplikatorer for fem selskaper i samme bransje som Kvasir ASA. Første del av tabellen nedenfor viser EV/EBITDA og P/E multiplikatorer basert på selskapsverdi (EV) og egenkapitalverdi (P) ved slutten av 2016. Siste del av tabellen viser tilsvarende EBITDA og E i mill. kr. for Kvasir ASA.
+
+EBITDA og E fra 2016
+Selskap	EV/EBITDA	P/E
+Selskap 1	5,5	12,0
+Selskap 2	5,0	11,5
+Selskap 3	5,6	11,7
+Selskap 4	6,1	12,8
+Selskap 5	5,1	10,5
+2016
+EBITDA	E
+Kvasir A/S	2 340	650
+Regn ut medianverdien av de to multiplikatorene.
+
+Regn ut selskapsverdi og egenkapitalverdi for Kvasir A/S basert på medianverdi for hver multiplikator.
+
+# Kapittel 11
+
+**Oppgave** N.11.1
+AS Remi AS har et resultat (overskudd) etter skatt på 2 mill. kroner. Selskapet ønsker å holde seg til et utdelingsforhold på 60 %, slik det har vært i mange år. Det er utstedt 1 mill. aksjer i Remi.
+
+Hva er utbytte pr. aksje i AS Remi?
+
+Hva skjer med markedsverdien av Remi når dividenden betales?
+
+Hvilken effekt har dividendebetalingen på regnskapsbalansen?
+
+Hva er dividendeinntekt etter investorskatt for en som eier 100 aksjer i selskapet?
+
+
+**Oppgave** N.11.2
+Ledelsen i AS Remi fra oppgave 11.N.1 vurderer å tilbakekjøpe aksjer for 2 mill. kroner i stedet for å betale dividende.
+
+Finnes det skattehensyn som taler for tilbakekjøp?
+
+Er det andre grunner for å velge tilbakekjøp i dette tilfellet?
+
+**Oppgave** N.11.3
+Ta stilling til følgende påstander:
+
+Når selskapet betaler dividende, øker gjeldsgraden.
+
+Jo høyere tilbakeholdt overskudd (opptjent egenkapital), desto mer likvid selskap.
+
+Dividenden kan ikke påvirke selskapets inntjening.
+
+Eiernes skatteposisjon er selskapet uvedkommende.
+
+
+# Kapittel 12
+
+**Oppgave** N.12.1
+I august kjøpte du en aksje og en kjøpsopsjon på aksjen. Samtidig skrev (solgte) du en salgsopsjon på samme aksje. Innløsningskursen var kr 200 for begge opsjonene.
+
+Lag en figur som viser hvordan enkeltobjektenes og porteføljens kontantstrøm ved forfall avhenger av aksjekursen.
+
+**Oppgave** N.12.2
+Hva er årlig risikofri rente basert på opplysningene i bokens oppgave 12.4? Tidsintervallet fra 05.08 til 20.10 er 76 dager.
+
+**Oppgave** N.12.3
+Ifølge opsjonskurslisten den 05.08.15 var markedskursen kr 8,25 for en salgsopsjon på DNB-aksjer med innløsningskurs kr 85 og forfall 19.08. Dersom du hadde beregnet salgsopsjonens verdi med utgangspunkt i SKP, ville du ha beregnet salgsopsjonens verdi til kr 9,30.
+
+Vis hvordan du gjennom arbitrasjehandel kunne ha utnyttet denne situasjonen økonomisk.
+
+**Oppgave** N.12.4
+En aksje vil enten være verd kr 150 eller kr 90 om ett år. På denne aksjen er det skrevet en kjøpsopsjon (call) med innløsningskurs kr 110 og med forfall om ett år. Du velger å investere i en sikret portefølje.
+
+Hva må du gjøre for å oppnå en sikret portefølje?
+
+Anta at du sikrer en portefølje med 1 000 aksjer ved å selge kjøpsopsjoner. Hva er denne porteføljen verd om ett år?
+
+Aksjeprisen ved årets begynnelse er kr 95. Hva er kjøpsopsjonen verd ved årets begynnelse hvis risikofri årsrente er 3 %?
+
+**Oppgave** N.12.5
+Hva skjer med verdien av kjøpsopsjonen i bokens oppgave 12.8 hvis Euro ASA ombestemmer seg og utbetaler kr 20 pr. aksje i dividende om tre måneder?
+
+Hva er dagens verdi av denne opsjonen hvis dividendeutbetalingen på kr 20 var ventet?
+
+**Oppgave** N.12.6
+Forklar hvordan eierne kan påvirke verdien av selskapets egenkapital ved å velge en bestemt risikoprofil på investeringene.
+
+Forklar på hvilken måte eierne har en kjøpsopsjon når selskapet utsteder obligasjonslån med tilbakekallingsrett.
+
+# Kapittel 13
+
+**Oppgave** N.13.1
+En obligasjon er det underliggende ﬁnansielle instrumentet for en futureskontrakt som forfaller om seks måneder. Obligasjonen som kan kjøpes i dag for kr 84, betaler kr 4 i halvårlig rente. Neste rentebetaling er rett før futureskontrakten forfaller om seks måneder. Risikofri årsrente for kommende halvår er 6 %.
+
+Hva er den teoretiske futuresprisen?
+
+Hva vil du gjøre hvis futuresprisen er kr 839
+
+**Oppgave** N.13.2
+En aksje forventes å utbetale 1 krone i dividende om henholdsvis 2 måneder og 5 måneder. Aksjeprisen er 50 kroner, og risikofri rente er 8 % pr. år. En investor har nettopp tatt en short (kort) posisjon i en 6-måneders futureskontrakt på aksjen.
+
+Hva er futuresprisen og verdien av futureskontrakten?
+
+Tre måneder senere er aksjeprisen falt til 48 kroner. Risikofri rente er uendret. Hva er prisen på futureskontrakten nå?
+
+

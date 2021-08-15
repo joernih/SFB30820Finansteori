@@ -131,7 +131,7 @@ class: inverse, center, middle
 
 **Uten usikkerhet (til nå)**
 
-Nåverdi
+*Nåverdikriteriet*
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = 
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
@@ -147,7 +147,7 @@ Merk: Benevning ...
 
 **Uten usikkerhet (framover)**
 
-Risikojustert-nåverdi (RJ-Nåverdi)
+*Risikojustert-rente-metoden (RJ-metoden)*
 \begin{equation}
 NV = \sum_{t=0}^{T} \frac{E(X_{t})}{(1+k)^t} = 
 E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X_{T})}{(1+k)^T} 
@@ -164,36 +164,21 @@ Beslutningsregel (som tidligere):
 
 ### Forventet kontantstrøm
 
----
-
 ### Kapitalkostnad
 
-$\text{Risikojusert rente}=\text{risikofri rente}+\text{risikofri rente}$
+$\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}$
 
 ---
 
-**Oppgave N.1.2**
+**Oppgave** N.1.1
 
-AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
 
-```{r, echo=F}
-#Prosjekt	Nedgangstid	Oppgangstid
-#X	3	3
-#Y	5	12
-#Z	9	11
-#Sannsynlighet	30 %	70 %
-dfn12 <- data.frame(prob=c(0.30,0.70),x=c(3,3),y=c(5,12),z=c(9,11))
-#htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-htmlTable(dfn12,header=c("Sannøynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-```
+Hva er kontantstrømmen verd i dag?
 
-Hva er særtrekket ved prosjekt X?
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
 
-Beregn forventet avkastning for hvert prosjekt.
-
-Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-
-Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 
 ---
 
@@ -262,6 +247,8 @@ kableExtra::kbl(df_prosj_kontantstrøm)
 
 ## Nærmere om forventet kontantstrøm
 
+$E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
+
 - Sannsynlighet
 - Tilstand
 - Utfall
@@ -277,7 +264,7 @@ $rp=\frac{P_{t}+Div-P_{0}}{P_{0}}$
 ### Metode 1:
 
 \begin{align}
-E(X) = \sum_{s=1}^{S}Pr(s)X(s) =
+E(rp) = \sum_{s=1}^{S}Pr(s)X(s) =
 Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
 \end{align}
 
@@ -286,15 +273,40 @@ Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 ### Metode 2:
 
 \begin{align}
-E(X) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
+E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
 w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 \end{align}
 
 ---
 
+**Oppgave** N.1.2
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+Prosjekt	Nedgangstid	Oppgangstid
+X	3	3
+Y	5	12
+Z	9	11
+Sannsynlighet	30 %	70 %
+
+1. Hva er særtrekket ved prosjekt X?
+1. Beregn forventet avkastning for hvert prosjekt.
+1. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+1. Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+---
+
+**Oppgave** N.1.3
+
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+1. Er det fornuftig å sette alle pengene i prosjekt X?
+
 ## Veien framover
 
-Øvelse til neste gang:
+Øvelse til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 .can-edit[Sett inn]
@@ -520,8 +532,7 @@ knitr::knit_exit()
 - Pdf-files out of Xaringam
 - Temaer viske ut
 - Anbefalte oppgaver
-
-
+- Zoom-kamera
 
 .pull-left[
 ]
@@ -529,15 +540,5 @@ knitr::knit_exit()
 ]
 
 ---
-
-**Oppgave N.1.1**
-
-Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
-
-Hva er kontantstrømmen verd i dag?
-
-Hva er sikkerhetsekvivalenten ved slutten av perioden?
-
-Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 
 ## .can-edit[You can edit this slide title]

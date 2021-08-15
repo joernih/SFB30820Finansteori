@@ -17,10 +17,10 @@ tema <- c(
 	  "",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Skatt",
-	  "Sammenkobling",
 	  "Dividende",
 	  "Opsjoner",
-	  "Finansielle instrumenter til påvirking av kontantstrømmer"
+	  "Finansielle instrumenter til påvirking av kontantstrømmer",
+	  "Repetisjon"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -33,10 +33,10 @@ literatur <- c(
 	       "**Høstferie**",
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
-	       "Kap. 9-10: Sammenkobling og verdsettelse",
 	       "Kap. 11: Dividende",
 	       "Kap. 12: Opsjoner",
-	       "Kap. 13: Risikostyring"
+	       "Kap. 13: Risikostyring",
+	       "Kap. 1,2-4,5-8,11,12,13"
 )
 undervform <- c(
 	  "Zoom",
