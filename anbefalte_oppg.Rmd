@@ -480,10 +480,324 @@ Oppgave N.5.14
 ODUL ASA i oppgavene N.5.11 og N.5.13 vurderer nå et tredje alternativ til nyemisjon og fondsemisjon. Dette består i en aksjesplitt som skal redusere aksjenes pålydende fra kr 100 til kr 50 (2:1 splitt). Vis hvilken virkning dette har på investors formue.
 
 # Kapittel 6
+Oppgave N.6.1
+Det børsnoterte selskapet Havstein ASA opplever et uventet etterspørselssjokk for sine ferdigprodukter. Ledelsen anslår at dette har økt risikoen i kontantstrømmen fra driften, men ikke forventningen. Uttrykt ved selskapets systematiske investeringsrisiko målt ved beta mener ledelsen denne har steget fra 0,6 til 1,1.
+
+Påvirkes eksisterende eieres formue av denne hendelsen?
+
+Hva med nye eiere som kjøper aksjer i senere emisjoner?
+
+Påvirkes verdien av selskapets gjeld?# Kapittel 7
+
+Oppgave N.6.2
+Bravur ASA har 1 mill. aksjer utestående til kurs 50 kroner pr. aksje. Selskapets gjeld har tilsvarende verdi. I det kommende året anslår analytikerne at overskudd før renter og skatt blir 15 mill. kroner, og at selskapet vil betale 3 mill. i renter. Selskapet er ikke i skatteposisjon.
+
+Beregn forventet overskudd pr. aksje.
+
+Styret vurderer å øke gjelden med 50 % og redusere egenkapitalen tilsvarende. Både lånerenten og aksjekursen forventes å bli uendret av denne refinansieringen.
+
+Hva er forventet overskudd pr. aksje med endret finansiering?
+
+Vil du anbefale Bravur å skifte til den foreslåtte gjeldsgraden?
+
+Oppgave N.6.3
+Seacom ASA er for tiden gjeldfritt og har en markedsverdi på 8 mrd. kroner fordelt på 1 mill. aksjer. Ledelsen har nå lagt fram et forslag om å refinansiere selskapet. Planen er å utstede et obligasjonslån på 6 mrd. kroner til markedsrenten på 10 %. Pengene skal brukes til å kjøpe tilbake selskapets aksjer. Selskapet er ikke i skatteposisjon. Kommende års overskudd før renter (OFR) avhenger av konjunkturene, og følgende estimater er gjort (tall i mill. kroner):
+
+Nedgangstid	Stabilt	Oppgangstid
+OFR	600	1 400	2 200
+Anta at alle tre utfall er like sannsynlige.
+
+Beregn forventning, standardavvik og variasjonskoeffisient pr. aksje for overskudd pr. aksje (OPA) med dagens finansiering.
+
+Gjør tilsvarende beregning med den foreslåtte finansieringen.
+
+Hvilken generell sammenheng illustrerer resultatene fra spm. 1 og 2?
+
+Oppgave N.6.3
+Seacom ASA er for tiden gjeldfritt og har en markedsverdi på 8 mrd. kroner fordelt på 1 mill. aksjer. Ledelsen har nå lagt fram et forslag om å refinansiere selskapet. Planen er å utstede et obligasjonslån på 6 mrd. kroner til markedsrenten på 10 %. Pengene skal brukes til å kjøpe tilbake selskapets aksjer. Selskapet er ikke i skatteposisjon. Kommende års overskudd før renter (OFR) avhenger av konjunkturene, og følgende estimater er gjort (tall i mill. kroner):
+
+Nedgangstid	Stabilt	Oppgangstid
+OFR	600	1 400	2 200
+Anta at alle tre utfall er like sannsynlige.
+
+Beregn forventning, standardavvik og variasjonskoeffisient pr. aksje for overskudd pr. aksje (OPA) med dagens finansiering.
+
+Gjør tilsvarende beregning med den foreslåtte finansieringen.
+
+Hvilken generell sammenheng illustrerer resultatene fra spm. 1 og 2?
+
+Oppgave N.6.4
+AS Invento, som ikke betaler skatt for tiden, har følgende budsjett for kommende år, avhengig av markedsforholdene (tall i mill. kroner):
+
+Etterspørsel
+Svak	Middels	Høy
+Salgsinntekt	600	1 000	1 400
+Faste kostnader	200	200	200
+Variable kostnader	240	400	560
+Beregn forventning, standardavvik og variasjonskoeffisient for driftsresultatet (OFR).
+
+Ledelsen vurderer å endre teknologien slik at de faste kostnadene stiger og de variable synker. Det anslås at med ny teknologi vil de variable kostnadene utgjøre 20 % av salgsinntektene (mot før 40 %), mens de faste kostnadene blir 300 mill. (mot før 200 mill.)
+
+Besvar spm. 1 under de nye forutsetningene om kostnadsstruktur.
+
+Ser du noen parallell mellom effekten av å endre kostnadsstruktur i produksjonen (som her) og å endre strukturen på finansieringen (som eksempelvis i oppgave N.6.3)?
+
 # Kapittel 7
+Oppgave N.7.1
+Komposto ASA har så langt vært gjeldfritt. Selskapet har dessuten betalt dividende på 9 mill. årlig, som tilsvarer hele overskuddet. Egenkapitalkostnaden er 9 %, risikofri rente er 5 %, og forventet risikopremie er 6 %. Komposto opptar nå gjeld for 50 mill. til markedsrenten på 5 %. Lånebeløpet brukes til å tilbakekjøpe aksjer. Ny gjeldsgrad regnet til markedsverdi er 1. Anta at M&M-forutsetningene holder, og se bort fra skatt.
+
+Hvordan påvirkes selskapets egenkapitalkostnad av refinansieringen?
+
+Hva vil skje med verdien av selskapet?# Kapittel 8
+
+Oppgave N.7.2
+Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer. Hva vil skje, forutsatt en M&M-verden uten skatt?
+
+Gjeldsgraden synker.
+
+Forventet avkastning og risiko pr. aksje øker.
+
+Forventet avkastning og risiko pr. aksje faller.
+
+Forventet avkastning pr. aksje øker og risikoen forblir uendret.
+
+Oppgave N.7.3
+Eltronica ASA har en egenkapitalkostnad på 7 % og er gjeldfritt. Ledelsen planlegger å øke gjeldsandelen til 50 % uten å endre eiendelssiden av balansen. Lånerenten er 4 %. Forutsett en M&M-verden uten skatt.
+
+Hva er totalkapitalkostnaden før kapitalstrukturen endres?
+
+Beregn egenkapitalkostnaden etter refinansieringen.
+
+Oppgave N.7.4
+
+Inductor ASA er et ungt, gjeldfritt selskap som delvis er finansiert med venturekapital. På grunn av stort kapitalbehov til produktutvikling må selskapet snart hente inn ny egenkapital fra det ventureselskapet som har investert i Inductor siden oppstart. Ventureselskapet er imidlertid ikke villig til å skyte inn mer penger før aksjekursen når 13 kroner. Dagens kurs er 10. Ledelsen mener at kursen kan økes ved å øke gjeldsgraden. Planen er derfor å tilbakekjøpe en firedel av selskapets egenkapital ved hjelp av et nytt obligasjonslån.
+
+Støtter du ledelsens plan om refinansiering? Begrunn svaret.
+
 # Kapittel 8
+Oppgave N.8.1
+Det børsnoterte selskapet Yamin ASA har nettopp gjort et gjennombrudd i sin produktutvikling. Ledelsen tror nå det er gode utsikter til et stort og usedvanlig lønnsomt prosjekt. En avgjørende forutsetning er imidlertid at selskapet greier å holde konkurrentene uvitende om detaljer i prosjektet over de neste 12 måneder. Yamin trenger å øke eksternfinansieringen sin med 40 % på grunn av dette prosjektet, og ledelsen vurderer følgende alternativer:
+
+Offentlig emisjon av nye aksjer.
+
+Rettet emisjon mot tre av selskapets største eiere.
+
+Banklån.
+
+Hvilket finansieringsalternativ vil du anbefale?# Kapittel 9
+
+Oppgave N.8.2
+Et delvis gjeldsfinansiert selskap er verd 30 mill. kroner. Ledelsen lurer på hva som vil skje med selskapsverdien hvis all gjelden erstattes med egenkapital. Forutsett at selskapet er i skatteposisjon, at investorene har samme skatt på eierinntekt som renteinntekt, og at det ikke er Miller-likevekt. Begrunn hvilket av disse tre alternative selskapsverdiene du mener er mest sannsynlig etter refinansieringen:
+
+30 mill. kroner
+
+45 mill. kroner
+
+25 mill. kroner
+
+Oppgave N.8.3
+Agrip ASA forventer OFRS på 30 mill. kroner i all overskuelig fremtid. Selskapet har så langt vært helt egenkapitalfinansiert, og egenkapitalkostnaden er 10 %. Selskapet låner nå 50 mill. til 8 % og bruker pengene til å kjøpe tilbake egne aksjer. Besvar spørsmålene ut fra de forutsetninger Miller og Modigliani gjorde for en situasjon uten investorskatt, men med selskapssskatt (40 % i dette tilfellet).
+
+Hvor mye er selskapet verd før refinansieringen?
+
+Hva er årlig rentebetaling etter skatt med ny kapitalstruktur?
+
+Hva er selskapet verd etter refinansieringen?
+
 # Kapittel 9
+Oppgave N.9.1
+Vekteren ASA har 2 mill. aksjer med bokverdi 12 kroner pr. aksje. Aksjekursen er 26. Selskapet har også gjeld pålydende 60 mill. kroner med 7 % kupongrente. Disse obligasjonene handles nå til 20 % under pålydende. Egenkapitalkostnaden er 12 %, og skattesatsen er 28 %.
+
+Hva er gjeldskostnaden før skatt i Vekteren?
+
+Beregn totalkapitalkostnaden etter skatt.
+
+Oppgave N.9.2
+Daglig leder for Vekteren i oppgave N.9.1 mener selskapet har for mye gjeld. I styret har hun derfor foreslått å halvere gjeldsandelen ut fra dagens nivå. Hun mener dette både vil øke verdien av selskapet og øke kursen på aksjene.
+
+Anta at du er styremedlem i Vekteren. Hvilke spørsmål bør du stille daglig leder?
+
+Hvorfor er egenkapital i et selskap alltid mer risikabel enn gjeld så sant det er usikkerhet i kontantstømmen fra driften?
+
+Oppgave N.9.3
+Finanskonsulenten i AS Kabal skal verdsette et nytt, femårig investeringsprosjekt som krever en investering på 10 mill. kroner umiddelbart. Forventet årlig kontantstrøm fra driften er 4 mill. kroner pr. år, avskrivningene er lineære over prosjektets levetid, og utrangeringsverdien antas å bli null. Prosjektet skal finansieres med 60 % gjeld til 7 % rente, men krever ingen arbeidskapital. Risiko og finansiering i det nye prosjektet antas å være som i bedriften for øvrig. Finanskonsulenten har estimert at selskapet har en totalkapitalkostnad på 6 %, og at investeringsrisikoen i selskapet tilsvarer en kapitalkostnad på 8 %. Selskapets skattesats er 28 %.
+
+Gjør finanskonsulenten noen implisitt forutsetning om forholdet mellom gjeldsgrad i verdi i selskapet?
+
+Hva er prosjektet verd ifølge totalkapitalmetoden?
+
+Oppgave N.9.4
+Ta utgangspunkt i prosjektforutsetningne for AS Kabal i oppgave N.9.3.
+
+Hva er prosjektets gjeldskapasitet, renter og avdrag basert på bokverdier?
+
+Hva er prosjektet verd ifølge JNV-metoden?
+
+Fikk du samme svar som ved totalkapitalmetoden i oppgave N.9.3?
+Er du overrasket over svaret?
+
 # Kapittel 10
+Oppgave N.10.1
+Selskapet ENI opererer i to forskjellig bransjer; sjømat og energi. Investeringsbeta i sjømatbransjen er 0,8, mens den er 0,9 i energibransjen. ENI har omtrent halvparten av sine totale eiendeler i hver bransje og ingen gjeld. Egenkapitalbetaen til ENI er 0,85. Risikofri rente er 2,5 %, og markedets risikopremie er 5 %.
+
+ENI vurderer å bygge et nytt produksjonsanlegg for laks i nærheten av Sogndal. Hva er kapitalkostnaden hvis prosjektet er egenkapitalfinansiert?
+
+ENI vurderer også å utvide sin virksomhet ved å starte et programvareselskap. Dette selskapet skal spesialisere seg på programvare for undervisningssektoren. Dette prosjektet vil også i sin helhet finansieres med egenkapital. Har du tilstrekkelig informasjon til å beregne kapitalkostnaden for prosjektet? Hvis ikke, hvilken informasjon mangler du? Beregn kapitalkostnaden hvis du har den informasjonen du trenger.# Kapittel 11
+
+Oppgave N.10.2
+Du skal beregne kapitalkostnaden til et oljeserviceprosjekt. Du har data for tre børsnoterte selskaper i oljeservicebransjen. Tabellen nedenfor viser estimert egenkapitalbeta og gjeldsgrad.
+
+Selskap 1	Selskap 2	Selskap 3
+Estimert egenkapitalbeta	1,5	2,2	1,4
+G/E	1	2	0,5
+Hva blir justerte egenkapitalbetaer hvis du bruker en justeringsfaktor (w) på 0,75 og en gjeldsbeta på 0,2?
+
+Hva blir median og gjennomsnittlig investeringsbeta?
+
+Oppgave N.10.3
+For selskapet Nydalen Fossekompani har du følgende regnskapsinformasjon:
+
+Fra resultatregnskapet	2015	2016
+Driftsinntekter	110	120
+Driftskostnader	65	50
+Avskrivninger	12	5
+Renter	0	15
+Dividende	25	0
+Investeringer	30	25
+Fra balansen	2015	2016
+Kontanter	5	5
+Bokført verdi gjeld	0	100
+Bokført verdi egenkapital	15	15
+Kundefordringer	20	30
+Varelager	10	5
+Leverandørgjeld	20	10
+Selskapet har en skattesats på 25 % og må ha 2 % av eiendelene som kontanter. Hva er fri kontantstrøm for 2016?
+
+Oppgave N.10.4
+Tombola A/S har slitt med lønnsomheten de siste årene: Veksten har vært 0 %, og avkastning på investert kapital (APIK) har vært 10 %. I 2016 hadde Tombola et driftsresultat etter skatt på 15 mill. kr. Driftsresultatet forventes å bli det samme for 2017. Ledelsen i selskapet har bestemt seg for å legge om driften. De har fått råd fra konsulentselskapet QPR om å endre sin prisingsstrategi for å få fart på den langsiktige veksten. Analysene fra QPR viser at det er mulig å øke den langsiktige veksten fra 0 % til 3 % fra og med 2018 uten at APIK endres nevneverdig. Relevant kapitalkostnad for Tombola er 10 %.
+
+Hva er verdien av Tombola 1. januar 2017 hvis den langsiktige veksten er 0 %?
+
+Hva er verdien av Tombola hvis den langsiktige veksten er 3 %?
+
+Foreslå en alternativ strategi Tombola kan vurdere som har større effekt på verdien av Tombola enn å øke veksten.
+
+Oppgave N.10.5
+Du skal verdsette selskapet Tarantara på tidspunktet 1. januar 2017 og har samlet inn tall fra årsregnskapene de siste årene. Basert på en analyse av disse regnskapene og framtidsutsiktene for bransjen har du kommet frem til følgende antagelser for de neste fem årene for Tarantara:
+
+Antagelser	2017E	2018E	2019E	2020E	2021E
+Prosentvis vekst i driftsinntekter	3 %	3 %	3 %	3 %	3 %
+Driftskostnader i prosent av inntekter	75 %	75 %	75 %	75 %	75 %
+Avskr. imm. eiendeler i % av driftsinntekter	0 %	0 %	0 %	0 %	0 %
+Skatt på DFRSI	25 %	25 %	25 %	25 %	25 %
+Varige driftsmidler i prosent av driftsinntekter	50 %	50 %	50 %	50 %	50 %
+Kundefordringer i prosent av driftsinntekter	8 %	8 %	8 %	8 %	8 %
+Varelager i prosent av driftsinntekter	10 %	10 %	10 %	10 %	10 %
+Leverandørgjeld i prosent av driftsinntekter	15 %	15 %	15 %	15 %	15 %
+Avskrivninger i prosent av varige driftsmidler	5 %	5 %	5 %	5 %	5 %
+Investeringer i prosent av varige driftsmidler	5 %	5 %	5 %	5 %	5 %
+Driftsinntekter og arbeidskapital for Tarantara i 2016 var henholdsvis 500 og 38 mill. kr. Regn ut fri kontantstrøm for årene 2017–2021.
+
+Regn ut avkastning på investert kapital for årene 2017–2021.
+
+Oppgave N.10.6
+Du har samlet inn multiplikatorer for fem selskaper i samme bransje som Kvasir ASA. Første del av tabellen nedenfor viser EV/EBITDA og P/E multiplikatorer basert på selskapsverdi (EV) og egenkapitalverdi (P) ved slutten av 2016. Siste del av tabellen viser tilsvarende EBITDA og E i mill. kr. for Kvasir ASA.
+
+EBITDA og E fra 2016
+Selskap	EV/EBITDA	P/E
+Selskap 1	5,5	12,0
+Selskap 2	5,0	11,5
+Selskap 3	5,6	11,7
+Selskap 4	6,1	12,8
+Selskap 5	5,1	10,5
+2016
+EBITDA	E
+Kvasir A/S	2 340	650
+Regn ut medianverdien av de to multiplikatorene.
+
+Regn ut selskapsverdi og egenkapitalverdi for Kvasir A/S basert på medianverdi for hver multiplikator.
+
 # Kapittel 11
+
+Oppgave N.11.1
+AS Remi AS har et resultat (overskudd) etter skatt på 2 mill. kroner. Selskapet ønsker å holde seg til et utdelingsforhold på 60 %, slik det har vært i mange år. Det er utstedt 1 mill. aksjer i Remi.
+
+Hva er utbytte pr. aksje i AS Remi?
+
+Hva skjer med markedsverdien av Remi når dividenden betales?
+
+Hvilken effekt har dividendebetalingen på regnskapsbalansen?
+
+Hva er dividendeinntekt etter investorskatt for en som eier 100 aksjer i selskapet?
+
+
+Oppgave N.11.2
+Ledelsen i AS Remi fra oppgave 11.N.1 vurderer å tilbakekjøpe aksjer for 2 mill. kroner i stedet for å betale dividende.
+
+Finnes det skattehensyn som taler for tilbakekjøp?
+
+Er det andre grunner for å velge tilbakekjøp i dette tilfellet?
+
+Oppgave N.11.3
+Ta stilling til følgende påstander:
+
+Når selskapet betaler dividende, øker gjeldsgraden.
+
+Jo høyere tilbakeholdt overskudd (opptjent egenkapital), desto mer likvid selskap.
+
+Dividenden kan ikke påvirke selskapets inntjening.
+
+Eiernes skatteposisjon er selskapet uvedkommende.
+
+
 # Kapittel 12
+
+Oppgave N.12.1
+I august kjøpte du en aksje og en kjøpsopsjon på aksjen. Samtidig skrev (solgte) du en salgsopsjon på samme aksje. Innløsningskursen var kr 200 for begge opsjonene.
+
+Lag en figur som viser hvordan enkeltobjektenes og porteføljens kontantstrøm ved forfall avhenger av aksjekursen.
+
+Oppgave N.12.2
+Hva er årlig risikofri rente basert på opplysningene i bokens oppgave 12.4? Tidsintervallet fra 05.08 til 20.10 er 76 dager.
+
+Oppgave N.12.3
+Ifølge opsjonskurslisten den 05.08.15 var markedskursen kr 8,25 for en salgsopsjon på DNB-aksjer med innløsningskurs kr 85 og forfall 19.08. Dersom du hadde beregnet salgsopsjonens verdi med utgangspunkt i SKP, ville du ha beregnet salgsopsjonens verdi til kr 9,30.
+
+Vis hvordan du gjennom arbitrasjehandel kunne ha utnyttet denne situasjonen økonomisk.
+
+Oppgave N.12.4
+En aksje vil enten være verd kr 150 eller kr 90 om ett år. På denne aksjen er det skrevet en kjøpsopsjon (call) med innløsningskurs kr 110 og med forfall om ett år. Du velger å investere i en sikret portefølje.
+
+Hva må du gjøre for å oppnå en sikret portefølje?
+
+Anta at du sikrer en portefølje med 1 000 aksjer ved å selge kjøpsopsjoner. Hva er denne porteføljen verd om ett år?
+
+Aksjeprisen ved årets begynnelse er kr 95. Hva er kjøpsopsjonen verd ved årets begynnelse hvis risikofri årsrente er 3 %?
+
+Oppgave N.12.5
+Hva skjer med verdien av kjøpsopsjonen i bokens oppgave 12.8 hvis Euro ASA ombestemmer seg og utbetaler kr 20 pr. aksje i dividende om tre måneder?
+
+Hva er dagens verdi av denne opsjonen hvis dividendeutbetalingen på kr 20 var ventet?
+
+Oppgave N.12.6
+Forklar hvordan eierne kan påvirke verdien av selskapets egenkapital ved å velge en bestemt risikoprofil på investeringene.
+
+Forklar på hvilken måte eierne har en kjøpsopsjon når selskapet utsteder obligasjonslån med tilbakekallingsrett.
+
 # Kapittel 13
+
+Oppgave N.13.1
+En obligasjon er det underliggende ﬁnansielle instrumentet for en futureskontrakt som forfaller om seks måneder. Obligasjonen som kan kjøpes i dag for kr 84, betaler kr 4 i halvårlig rente. Neste rentebetaling er rett før futureskontrakten forfaller om seks måneder. Risikofri årsrente for kommende halvår er 6 %.
+
+Hva er den teoretiske futuresprisen?
+
+Hva vil du gjøre hvis futuresprisen er kr 839
+
+Oppgave N.13.2
+En aksje forventes å utbetale 1 krone i dividende om henholdsvis 2 måneder og 5 måneder. Aksjeprisen er 50 kroner, og risikofri rente er 8 % pr. år. En investor har nettopp tatt en short (kort) posisjon i en 6-måneders futureskontrakt på aksjen.
+
+Hva er futuresprisen og verdien av futureskontrakten?
+
+Tre måneder senere er aksjeprisen falt til 48 kroner. Risikofri rente er uendret. Hva er prisen på futureskontrakten nå?
+
+
