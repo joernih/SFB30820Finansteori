@@ -260,8 +260,225 @@ Bør Jappi investere i A eller i B?
 Oppgave N.3.10
 Vanligvis inndeles markedets informasjonseffisiens i tre typer. Definer disse tre gradene av effisiens, og angi hvordan de kan undersøkes empirisk.# Kapittel 6
 
+Oppgave N.3.11
+En ivrig norsk investor uttalte at «det norske aksjemarkedet kan ikke være effisient. Nå har markedet i fire år oversett den virkelige verdien av Prosperitus ASA. Investorene våknet først da ledelsen i selskapet besluttet å selge ut noen av eiendelene, deriblant fast eiendom. Hvordan kan du argumentere for at markedet er effisient når aksjekursene, som her, så ofte viser seg å være feil?»
+
+Kommenter investorens begrunnelse for påstanden om at markedet ikke kan være effisient.
+
+Oppgave N.3.12
+Et nytt prosjekt under planlegging har forventet levetid på ett år. Investeringen på kr 50 000 er det full sikkerhet om, men netto kontantstrøm etter ett år er usikker. Ledelsen mener likevel at både omsatt volum og variable enhetskostnader kan anses som deterministiske (sikre) i analysene. Derimot føler ledelsen seg atskillig mer usikker på enhetsprisen og faste kostnader. Selskapet er ikke i skatteposisjon.
+
+Salgspris og betalbare faste kostnader anslås i basistilfellet til hhv. kr 100 og 20 000. Avvik fra dette med inntil +/– 20 % i pris og +/– 40 % i faste kostnader anses mulig. Omsatt (og produsert) volum forventes å bli 1 000 enheter, mens variable enhetskostnader er budsjettert til kr 20. Alle tall er nominelle.
+
+Beregn prosjektets kontantstrøm og internrente i basistilfellet.
+
+Vis hvordan internrenten avhenger av salgsprisen. Gjør det samme for effekten av faste kostnader. Illustrer resultatene i et stjernediagram, som også skal vise kritisk verdi, dvs. hva som skal til for at prosjektet akkurat inntjener et avkastningskrav på 12 %.
+
+Avgjør internrentens følsomhet overfor samtidige avvik fra basis i pris og faste kostnader. Fremstill resultatene i et diagram som også viser kritiske kombinasjoner av faste kostnader og pris.
+
+Hva slags risikotype belyser denne følsomhetsanalysen?
+
+Oppgave N.3.13
+Ledelsen i AS Fiesta planlegger et nytt prosjekt som eventuelt vil medføre eksport til USA og strekke seg over minst 10 år. I forbindelse med prosjektanalysen har også ledelsen gjort seg opp en mening om typiske kombinasjoner av fremtidig norsk inflasjon, rentenivå og dollarkurs. Følgende scenarier er satt opp:
+
+Scenario	Inflasjon, %	Nominell risikofri rente, %	Dollarkurs (NOK/USD)
+1	6	5	6,50
+2	5	5	6,50
+3	3	4	7,10
+4	1	4	7,50
+Gi din begrunnede mening om ledelsens valg av scenarier. Ta her stilling til samsvar mellom inflasjons- og renteforutsetninger. Sjekk også forholdet mellom antatt inflasjon og dollarkurs.
+
+Sett opp ditt eget forslag til scenarier ut fra dine begrunnelser i spm. 1. Ta de fire anslagene på fremtidig inflasjonstakt som gitt.
+
+Eierne i AS Fiesta er veldiversifiserte. Vil en analyse utført med disse scenariene gi eierne verdifull risikoinformasjon?
+
+Oppgave N.3.14
+
+En BI-student som også er juletreselger på Youngstorget, står overfor usikkerhet både i pris og kvantum: Prisen han kan forlange, avhenger av hva de fleste andre selgerne på torget bestemmer seg for å ta. Han bestemmer seg for å ta samme pris som nærmeste konkurrent. Studenten har også erfart at selv med en gitt pris er omsatt kvantum usikkert. Dette skyldes bl.a. at folk kan kjøpe juletrær mange andre steder enn på Youngstorget. Likevel mener han at det er en viss sammenheng mellom de to størrelsene. Basert på tidligere suksess og fiasko anslås følgende for den forestående sesong:
+
+Blir prisen (P) 100, er det 40 % sjanse for et kvantum (K) på 500 og 60 % sjanse for K = 800.
+
+Blir prisen 130, er det 80 % sjanse for K = 500 og 20 % sjanse for K = 800.
+
+Pris på 100 eller 130 anses like sannsynlige.
+
+Beregn sannsynlighetsfordelingen for alternative kombinasjoner av pris og kvantum.
+
+Studenten leser sitt finanspensum mellom juletrærne. Han vil derfor simulere salgsinntekten ved å trekke 20 lodd fra sin strikkelue. Loddene nummereres fortløpende fra 1 til 20.
+
+Bestem forholdet mellom pris, kvantum og loddnumre.
+
+Mellom to juletresalg trekker studenten 15 lapper med numrene 11, 20, 3, 7, 14, 19, 1, 3, 8, 17, 9, 8, 5, 10, 5.
+
+Hva er simulert hyppighet for salgsinntekt på minst kr 80 000? Hva er tilsvarende sannsynlighet i inngangsfordelingen?
+
+Hva slags risikotype kommer ut av denne analysen?
 # Kapittel 4
 # Kapittel 5
+Oppgave N.5.1
+I Dagens Næringsliv kunne du 18. februar 2016 lese at omsetningskursen på første noteringsdag for Den norske stats obligasjon 16/26 var 100,44. Denne obligasjonen har 10 års løpetid, pålydende kr 100, kupongrente 1,5 % og årlig rentebetaling.
+
+Hva er obligasjonens effektive rente (markedsrente) hvis du forutsetter at det er nøyaktig 12 måneder til første rentebetaling?
+
+Hvilken effektiv rente ville blitt rapportert i markedet dersom det hadde vært halvårlig rentebetaling? Forutsett nå at det er nøyaktig seks måneder til første rentebetaling.
+
+Oppgave N.5.2
+Fra dagens terminstruktur for risikofrie statsobligasjoner kan følgende renter avleses:
+
+1 år til forfall:   2,0 %
+2 år til forfall:   2,5 %
+3 år til forfall:   3,0 %
+
+Hva er forwardrentene (de korte rentene) i de tre årene?
+
+Lag en figur for rentens terminstruktur.
+
+Et treårig verdipapirs forventede årlige kontantstrømselementer er hhv. 5, 7 og 53 kroner. Markedets risikopremie forventes å være 5 % i alle tre år. Verdipapirets systematiske risiko (beta) er 0,4. Hva er nåverdien? Se bort fra skatt.
+
+Oppgave N.5.3
+Lokalbank A/S har følgende balanse (sterkt forenklet):
+
+Markedsverdi	Durasjon
+Eiendeler		
+Innskudd i Norges Bank	43	0
+Verdipapirinvesteringer	615	4 mnd.
+Driftskreditter	345	9 mnd.
+Kortsiktige utlån	55	5 år
+Langsiktige utlån	197	15 år
+Egenkapital og gjeld		
+Egenkapital	145	
+Langsiktig gjeld	250	10 år
+Innskudd på tid	370	18 mnd.
+Innskudd uten oppsigelse	490	0
+Beregn durasjon (varighet) både for eiendeler (aktiva) og egenkapital og gjeld (passiva) i Lokalbank. Kommenter resultatene.
+
+Hva må eiendelsdurasjonen endres til for at Lokalbank skal være beskyttet mot renterisiko? Anta at passivadurasjonen holdes konstant.
+
+Oppgave N.5.4
+Fem obligasjoner med lik risiko har følgende avkastning til forfall:
+
+År til forfall	Avkastning
+1	2,5 %
+2	2,0 %
+3	3,0 %
+4	3,5 %
+5	3,8 %
+Tegn kurven for rentens terminstruktur.
+
+Oppgave N.5.5
+Anta at staten har emittert tre nullkupongobligasjoner. Den første utbetaler kr 1 000 om ett år og omsettes for kr 952,38. Den andre utbetaler kr 1 000 om to år og omsettes i dag for kr 898,45. Den tredje obligasjonen utbetaler kr 1 000 om tre år og omsettes for kr 839,62.
+
+Hva er spot- og terminrentene for de tre årene?
+
+En av dine venner har bedt om et lån på kr 15 000. Som motytelse tilbyr hun å tilbakebetale over tre år med kr 5 000 om ett år, kr 5 500 om to år og kr 6 000 om tre år. Bør du gi vennen din dette lånet? Forutsett at hun klarer å følge opp tilbakebetalingsplanen.
+
+Hva er terminrenten (forward-renten) i år 3?
+
+Hva er forventet avkastning om du kjøper en obligasjon på tidspunkt 2 og selger den på tidspunkt 4?
+
+Oppgave N.5.6
+LeMonde ASA har utestående et konvertibelt obligasjonslån hvor hver obligasjon pålydende 1 000 kroner kan konverteres i aksjer for kr 50 pr. aksje. Nominell rente på KO er 6 %, og lånet forfaller om 20 år. Det konvertible lånet kan tilbakekalles til 107 % av pålydende. LeMondes skattesats er 28 %.
+
+Hva er konverteringsverdien hvis LeMondes aksjer i dag omsettes for kr 51?
+
+Hva er verdien av KO som ren obligasjon hvis vanlige obligasjoner med tilsvarende risiko gir en avkastning på 8 % før skatt?
+
+Bruk svarene fra 1 og 2 og gi et realistisk estimat på markedsverdien av en KO (det forutsettes ingen beregninger her).
+
+Hva er konverteringsverdien hvis aksjeprisen stiger til 70 kroner?
+
+Hva er ditt estimat på markedsverdien av KO gitt situasjonen beskrevet i 4? (Fortsatt er ingen beregninger nødvendig.)
+
+Hva må aksjeprisen minst være før det er mulig for LeMonde å fremtvinge konvertering?
+
+Endrede inflasjonsforventninger fører til at avkastningen på ordinære obligasjoner med tilsvarende risiko og løpetid faller til 4 %. Hvordan vil dette påvirke verdien av LeMondes KO?
+
+Oppgave N.5.7
+En 6 % konvertibel obligasjon pålydende kr 1 000 kan konverteres i 30 aksjer som for tiden omsettes for kr 30. Etter emisjonen av KO for fire år siden har rentenivået falt. Markedets avkastningskrav for ordinære obligasjoner med tilsvarende løpetid og risiko er nå 6 %.
+
+Hva er minimumsverdi for en KO i dag?
+
+Hva er minimumsverdi hvis aksjeprisen stiger til kr 36?
+
+Hva er minimumsverdi hvis markedets avkastningskrav for tilsvarende ordinære obligasjoner øker til 8 %, samtidig som aksjeprisen holder seg på kr 36?
+
+Oppgave N.5.8
+Et selskaps årsrapport for 2015 har følgende balanseoppstilling:
+
+Eiendeler (NOK mill.)	Egenkapital og gjeld (NOK mill.)
+Immaterielle eiendeler	624	Aksjekapital	1 597
+Varige driftsmidler	557	Opptjent egenkapital	742
+Finansielle anleggsmidler	227	Langsiktig gjeld	129
+Omløpsmidler	1 854	Kortsiktig gjeld	794
+Sum eiendeler	3 262	Sum EK og gjeld	3 262
+Ved årsslutt var aksjekapitalen fordelt på 178,49 mill. ordinære aksjer pålydende kr 1.
+
+Hva er bokbasert egenkapitalandel ved utgangen av 2015?
+
+Aksjekursen den 31.12.2015 var 27,20 kroner. Hva var markedsbasert egenkapitalandel? Anta at markedsverdi av gjeld er lik bokført verdi.
+
+Oppgave N.5.9
+Et selskap skal emittere aksjer for 20 mill. kroner. Aksjekapitalen i dag er 5 mill. kroner (500 000 aksjer à kr 10). Aksjene omsettes nå for kr 50 pr. aksje. Emisjonen vil være med fortrinnsrett for gamle aksjonærer. Emisjonskursen er fastsatt til kr 40 pr. aksje.
+
+Hvor mange retter trengs for å kjøpe en ny aksje?
+
+Hva er teoretisk verdi pr. tegningsrett?
+
+Hva forventer du at aksjeprisen vil bli den dagen aksjene noteres uten tegningsrett (ex-rights)?
+
+Vis at formuen til en aksjonær med 100 aksjer er uendret uansett om hun selger tegningsrettene eller bruker dem selv.
+
+Oppgave N.5.10
+En bedrift vil finansiere 9,9 mill. kroner fra eksterne kilder. I den forbindelse vurderer ledelsen å emittere et konvertibelt obligasjonslån (KO). Kursen på selskapets aksjer er for tiden kr 50. Selskapet tror at KO kan legges ut med en konverteringspris 10 % over dagens aksjekurs.
+
+Hva blir konverteringsforholdet hvis KO har pålydende kr 1 000?
+
+Hvor mange nye aksjer må emitteres hvis selskapet alternativt kan utstede aksjer til emisjonskurs kr 45? Hvor mange aksjer må emitteres ved full konvertering av alle KO? Hvorfor avviker disse tallene?
+
+Hvorfor kan ikke markedskursen på KO være lavere enn den minste verdien av den rene obligasjonsverdien og konverteringsverdien
+
+Oppgave N.5.11
+ODUL ASA har følgende kapitalstruktur:
+
+Egenkapital	
+Innskutt egenkapital (aksjekapital lik 100 000 aksjer à kr 100)	10 mill. kr
+Opptjent egenkapital	40 mill. kr
+Gjeld	100 mill. kr
+Sum egenkapital og gjeld	150 mill. kr
+ODUL ønsker å styrke egenkapitalen med til sammen 5 mill. kroner ved en aksjeemisjon. Emisjonskurs er kr 200, og de nye aksjene har rett til fullt utbytte. Markedskursen på aksjene rights-on er kr 250. En investor eier 20 aksjer i selskapet.
+
+Vis at investor ikke taper noe hvis han selger tegningsrettene uten å tegne.
+
+Vis at investors formue er uendret hvis han tegner nye aksjer.
+
+Vis hva investors formue er hvis han verken selger tegningsrettene eller tegner nye aksjer.
+
+Oppgave N.5.12
+GATT ASA har utestående 15 000 aksjer pålydende kr 30. Dagens aksjepris er kr 150. Ledelsen bestemmer seg for å gjennomføre en aksjesplitt i forholdet 4:3 (dvs. fire nye aksjer for tre gamle). Høyresiden i GATTs balanse ser slik ut før splitten:
+
+Egenkapital	
+Innskutt egenkapital	kr 450 000
+Opptjent egenkapital	kr 1 900 000
+Gjeld	kr 1 650 000
+Sum egenkapital og gjeld	kr 4 000 000
+Forsvinner de gamle aksjene etter aksjesplitten?
+
+Vis hvordan balansens høyreside vil se ut etter aksjesplitten.
+
+I stedet for en aksjesplitt bestemmer ledelsen seg for å gjennomføre en 30 % fondsemisjon (3:10, dvs. tre nye aksjer for hver 10 gamle). Hvordan vil balansen se ut etter dette?
+
+Forsvinner de gamle aksjene etter fondsemisjonen?
+
+Oppgave N.5.13
+ODUL ASA i oppgave N.5.11 vurderer å gjennomføre en 50 % fondsemisjon i stedet for nyemisjonen.
+
+Hvilken virkning vil dette få på investors formue?
+
+Er det noen forskjell i kontantstrømeffekt for selskapet sammenlignet med i oppgave N.5.11?
+
+Oppgave N.5.14
+ODUL ASA i oppgavene N.5.11 og N.5.13 vurderer nå et tredje alternativ til nyemisjon og fondsemisjon. Dette består i en aksjesplitt som skal redusere aksjenes pålydende fra kr 100 til kr 50 (2:1 splitt). Vis hvilken virkning dette har på investors formue.
+
 # Kapittel 6
 # Kapittel 7
 # Kapittel 8
