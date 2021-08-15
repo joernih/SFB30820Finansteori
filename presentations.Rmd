@@ -260,6 +260,8 @@ kableExtra::kbl(df_prosj_kontantstrøm)
 
 ## Nærmere om forventet kontantstrøm
 
+$E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
+
 - Sannsynlighet
 - Tilstand
 - Utfall
@@ -275,7 +277,7 @@ $rp=\frac{P_{t}+Div-P_{0}}{P_{0}}$
 ### Metode 1:
 
 \begin{align}
-E(X) = \sum_{s=1}^{S}Pr(s)X(s) =
+E(rp) = \sum_{s=1}^{S}Pr(s)X(s) =
 Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
 \end{align}
 
@@ -284,7 +286,7 @@ Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 ### Metode 2:
 
 \begin{align}
-E(X) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
+E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
 w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 \end{align}
 
@@ -518,8 +520,7 @@ knitr::knit_exit()
 - Pdf-files out of Xaringam
 - Temaer viske ut
 - Anbefalte oppgaver
-
-
+- Zoom-kamera
 
 .pull-left[
 ]
