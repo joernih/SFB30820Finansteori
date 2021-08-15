@@ -11,9 +11,15 @@ Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand 
 
 Hva er kontantstrømmen verd i dag?
 
+$NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.174312$
+
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
 
+$9.174312=\frac{X}{1+(0.02)}, dvs. X=9.174312*(1.02)=9.174312*(1.02)=9.357$
+
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+
+$NV=9.174312$
 
 **Oppgave** N.1.2
 
@@ -26,11 +32,21 @@ Z	9	11
 Sannsynlighet	30 %	70 %
 Hva er særtrekket ved prosjekt X?
 
+$Konstanstrømmen er sikker (lik 3 i begge perioder)$
+
 Beregn forventet avkastning for hvert prosjekt.
+
+$E(r_x)=0.30\cdot 3+0.70\cdot 3=$
+$E(r_y)=0.30\cdot 5+0.70\cdot 12=$
+$E(r_z)=0.30\cdot 9+0.70\cdot 12=$
 
 Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 
+$E(r_p)=1/3+1/3+1/3=1/3(+ + +)=1/3$
+
 Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+
+$E(r_p)=1/3+1/3+1/3=1/3(+ + +)=1/3$
 
 **Oppgave** N.1.3
 

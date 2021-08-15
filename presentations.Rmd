@@ -18,15 +18,17 @@ output:
 #  toc: false
 ---
 
-
 ```{r xaringan-tile-view, echo=FALSE}
 xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
 xaringanExtra::use_scribble()
 xaringanExtra::use_webcam()
-xaringanExtra::use_slide_tone()
+#xaringanExtra::use_slide_tone()
 xaringanExtra::use_panelset()
+library(htmlTable)
+library(magrittr)
+library(xaringan)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -145,7 +147,7 @@ Merk: Benevning ...
 
 ---
 
-**Uten usikkerhet (framover)**
+**Med usikkerhet/risiko (framover)**
 
 *Risikojustert-rente-metoden (RJ-metoden)*
 \begin{equation}
@@ -160,6 +162,7 @@ Beslutningsregel (som tidligere):
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) > 0
 - Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) igangsettes 
 
+Et alternativ til RJ-metoden er å beholde , men .... *sikkerhetsekvivalenten*
 ---
 
 ### Forventet kontantstrøm
@@ -194,14 +197,24 @@ Et finansieringsprosjekt gir verdien
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
-
+<!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?-->
 ---
 
 ## Prosjektets kontantstrøm
 
-```{r, eval=F,echo=FALSE, out.width="40%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-03.png")
+```{r, echo=F}
+radnr <- c("Salgsinntekt",
+	   "Driftsutgift",
+	   "Investering",
+	   "Ny arbeidskapital",
+	   "Avskrivninger",
+	   "Skattbart overskudd",
+	   "Skatt",
+	   "Kontantstrøm etter skatt",
+	   "Sannsynlighet")
+tils1 <- seq(1,9)
+df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
+kableExtra::kbl(df_prosj_kontantstrøm)
 ```
 
 .panelset[
@@ -228,23 +241,6 @@ Gjør om til Excel
 
 ---
 
-```{r, echo=F}
-radnr <- c("Salgsinntekt",
-	   "Driftsutgift",
-	   "Investering",
-	   "Ny arbeidskapital",
-	   "Avskrivninger",
-	   "Skattbart overskudd",
-	   "Skatt",
-	   "Kontantstrøm etter skatt",
-	   "Sannsynlighet")
-tils1 <- seq(1,9)
-df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
-kableExtra::kbl(df_prosj_kontantstrøm)
-```
-
----
-
 ## Nærmere om forventet kontantstrøm
 
 $E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
@@ -253,24 +249,22 @@ $E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
 - Tilstand
 - Utfall
 
+---
+
 ## Porteføljeavkastning
 
 Selve porteføljeavkastningen (rp) er gitt ved
 
 $rp=\frac{P_{t}+Div-P_{0}}{P_{0}}$
 
----
-
-### Metode 1:
+### Metode 1: Forventet avkastning
 
 \begin{align}
 E(rp) = \sum_{s=1}^{S}Pr(s)X(s) =
 Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
 \end{align}
 
----
-
-### Metode 2:
+### Metode 2: Forventet avkastning
 
 \begin{align}
 E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
@@ -279,20 +273,33 @@ w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 
 ---
 
-**Oppgave** N.1.2
+**Oppgave N.1.2**
 
 AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 
-Prosjekt	Nedgangstid	Oppgangstid
-X	3	3
-Y	5	12
-Z	9	11
-Sannsynlighet	30 %	70 %
+```{r, echo=F}
+#Prosjekt	Nedgangstid	Oppgangstid
+#X	3	3
+#Y	5	12
+#Z	9	11
+#Sannsynlighet	30 %	70 %
+dfn12 <- data.frame(prob=c(0.30,0.70),x=c(3,3),y=c(5,12),z=c(9,11))
+#htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+htmlTable(dfn12,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+```
 
 1. Hva er særtrekket ved prosjekt X?
-1. Beregn forventet avkastning for hvert prosjekt.
-1. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-1. Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+2. Beregn forventet avkastning for hvert prosjekt.
+3. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+.panelset[
+.panel[.panel-name[Metode 1]
+$E(rp)=...$
+]
+.panel[.panel-name[Metode 2]
+]
+$E(rp)=...$
+]
+4. Hva er svaret på spm. 3 abc hvis begge tilstander er like sannsynlige?
 
 ---
 
@@ -303,6 +310,8 @@ Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
 1. Er det fornuftig å sette alle pengene i prosjekt X?
+
+---
 
 ## Veien framover
 
@@ -542,3 +551,21 @@ knitr::knit_exit()
 ---
 
 ## .can-edit[You can edit this slide title]
+.panelset[
+.panel[.panel-name[R Kode]
+
+```{r}
+dfn12
+```
+]
+.panel[.panel-name[Tabell]
+```{r echo=FALSE}
+htmlTable(a)
+```
+]
+.panel[.panel-name[Plot]
+```{r echo=FALSE}
+plot(a[,1],a[,1])
+```
+]
+]
