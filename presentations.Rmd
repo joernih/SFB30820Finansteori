@@ -1,4 +1,4 @@
----
+﻿---
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
@@ -166,7 +166,7 @@ E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X
 \end{equation}
 
 - Telleren er nå erstattet med *forventet* kontantstrøm
-- Nevneren er nå erstattet med kapitalkostnad som er *risikojusert*
+- Nevneren er nå erstattet med kapitalkostnad som er *risikojustert*
 
 Beslutningsregel (som tidligere):
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) > 0
@@ -176,7 +176,7 @@ Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojuste
 
 ---
 
-Sammmenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
+Sammenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
 beregne
 
 - Forventet kontantstrøm
@@ -192,12 +192,12 @@ Formelt kan vi uttrykke dette som
 \text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}
 \end{equation}
 
-Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosejekt vil denne komponentene er produktet av en *pris (kostnad per risikokomponent)* og *kvantumskomponent (antall risikoenheter tihørende prosjektet)*. 
+Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosjekt vil denne komponentene er produktet av en *pris (kostnad per risikokomponent)* og *kvantumkomponent (antall risikoenheter tilhørende prosjektet)*. 
 ---
 
 **Oppgave** N.1.1
 
-Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
 <br>**Svar:**
@@ -220,7 +220,7 @@ NV=9.17
 
 ---
 
-## Investerings- vs. finansieringsprosjekt
+## Investerings- vs. finansierinsgprosjekt
 
 Et investeringsprosjekt viser bedriftens bruker av penger for å skaffe seg eiendeler i form av anlegg- og omløpsmidler (regnskapsbalansens venstreside)
 
@@ -322,7 +322,7 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 ```
 
 1. Hva er særtrekket ved prosjekt X?
-<br>**Svar:** Konstanstrømmen er sikker (lik 3 i begge perioder)
+<br>**Svar:** Kontantstrømmen er sikker (lik 3 i begge perioder)
 2. Beregn forventet avkastning for hvert prosjekt.
 <br>**Svar:**
 \begin{equation}
