@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x04fd764ab804345a2bd0bd00f030961","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7c0a9567e04412dacbe57686437d92f","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -615,6 +615,7 @@ AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsbeskrivelse&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt X&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Y&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Z&lt;/th&gt;
@@ -624,6 +625,7 @@ AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;5&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;9&lt;/td&gt;
@@ -631,6 +633,7 @@ AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 &lt;tr&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;11&lt;/td&gt;
@@ -647,12 +650,21 @@ E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
 E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
 E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
 \end{equation}`
+---
 3. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-&lt;br&gt;*Svar:* 
-Metode 1
+.panelset[
+.panel[.panel-name[Metode 1]
 `\begin{equation}
 E(r_p)=1/3\cdot+1/3\cdot+1/3\cdot=1/3\cdot(3+9.9+10.4)=1/3(23.3)=7.76
 \end{equation}`
+]
+.panel[.panel-name[Metode 2]
+`\begin{equation}
+E(r_p)=1/3\cdot+1/3\cdot+1/3\cdot=1/3\cdot(3+9.9+10.4)=1/3(23.3)=7.76
+\end{equation}`
+]
+]
+
 4. Hva er svaret på spm. 3 abc hvis begge tilstander er like sannsynlige?
 *Svar:*
 `\begin{equation}
@@ -666,11 +678,11 @@ E(r_p)=1/3+1/3+1/3=1/3(+ + +)=1/3
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-&lt;br&gt;*Svar:*
+&lt;br&gt;*Svar:* Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-&lt;br&gt;*Svar:*
+&lt;br&gt;*Svar:* Nei, prosjekt gir høyere avkastning under oppgangstid.
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-&lt;br&gt;*Svar:*
+&lt;br&gt;*Svar:* Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
 
 ---
 
@@ -884,6 +896,8 @@ class: inverse, center, middle
 - Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
 - Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
 - Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
+
 
 
 

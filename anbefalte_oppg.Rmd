@@ -38,7 +38,7 @@ Beregn forventet avkastning for hvert prosjekt.
 
 $E(r_x)=0.30\cdot 3+0.70\cdot 3=$
 $E(r_y)=0.30\cdot 5+0.70\cdot 12=$
-$E(r_z)=0.30\cdot 9+0.70\cdot 12=$
+$E(r_z)=0.30\cdot 9+0.70\cdot 11=$
 
 Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 
