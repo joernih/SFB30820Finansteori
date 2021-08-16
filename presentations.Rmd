@@ -172,12 +172,23 @@ Beslutningsregel (som tidligere):
 Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om lik benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
 ---
 
-### Forventet kontantstrøm
+Sammmenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
+beregne
 
-### Kapitalkostnad
+- Forventet kontantstrøm
 
-$\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}$
+Utgangspunktet her er at vi betrakter framtiden i form av ulike scenarioer, hvor vi tilknytter en sannsynlighet til hvert enkelt scenario.
 
+- Kapitalkostnad (risikojustert-rente)
+
+Dette uttrykket består nå både av en *tids-* og *usikkerhetsdimensjon*.
+
+Formelt kan vi uttrykke dette som
+\begin{equation}
+\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}
+\end{equation}
+
+Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosejekt vil denne komponentene er produktet av en *pris (kostnaden per risikokomponent)* og *kvantumskomponent (antall risikoenheter)*. 
 ---
 
 **Oppgave** N.1.1
@@ -234,42 +245,27 @@ radnr <- c("Salgsinntekt",
 	   "Skatt",
 	   "Kontantstrøm etter skatt",
 	   "Sannsynlighet")
-tils1 <- seq(1,9)
-df_prosj_kontantstrøm <- data.frame(radnr,Tilstand_1=tils1)
-kableExtra::kbl(df_prosj_kontantstrøm)
+tils1 <- c(1350,500,200,50,300,550,440,160,0.42)
+tils2 <- c(1350,500,200,50,300,550,440,160,0.42)
+tils3 <- c(1350,500,200,50,300,550,440,160,0.42)
+tils4 <- c(1350,500,200,50,300,550,440,160,0.42)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2,tils3,tils4)
+htmlTable(df_prosj_kontantstrøm, header=c(0,1,2,3,4))
 ```
-
-.panelset[
-.panel[.panel-name[R Kode]
-
-```{r}
-a <- head(iris)*1000
-```
-]
-.panel[.panel-name[Tabell]
-```{r echo=FALSE}
-htmlTable(a)
-```
-]
-.panel[.panel-name[Plot]
-```{r echo=FALSE}
-plot(a[,1],a[,1])
-```
-]
-]
-
-*Øvelse:*
-Gjør om til Excel
-
 ---
 
 ## Nærmere om forventet kontantstrøm
 
-$E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
+Formelt vil den forventede kontantstrømmen for en bestemt periode t kunne uttrykkes som den forventede verdien til en sannsynlighetsfordeling:
 
-- Sannsynlighet
-- Tilstand
-- Utfall
+\begin{equation}
+E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
+\end{equation}
+
+Her uttrykker
+- $Pr(s)$ gir oss sannsynligheten (verdi mellom 0 og 1) for at tilstand s inntreffer
+- $s \in \{1,2,..,S\}$ representer settet av alle mulige tilstander som kan inntreffe
+- $X(s)$ er verdien til kontantstrømmen dersom tilstand $s$ inntreffer
 
 ---
 
@@ -323,24 +319,23 @@ E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
 <p>3.</p> Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 .panelset[
 .panel[.panel-name[Metode 1]
-\begin{equation}
+$$
 E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
 0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76 
-\end{equation}
+$$
 ]
 .panel[.panel-name[Metode 2]
-\begin{equation}
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4)=1/3(23.3)=7.76
-\end{equation}
+$$
+E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
+$$
 ]
 ]
 <p>4.</p> Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
 <br>**Svar:**
-\begin{equation}
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
+$$
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) +  
 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
-\end{equation}
-
+$$
 ---
 
 **Oppgave** N.1.3
@@ -361,7 +356,7 @@ Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 Øvelse til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
-.can-edit[Sett inn]
+.can-edit[- ]
 
 ---
 

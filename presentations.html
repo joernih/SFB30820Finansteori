@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ea6d9904ddf54a9082d65baea05437b7","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x571e678177848f483a891ef79368dd1","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -22,8 +22,6 @@
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="libs/panelset-0.2.6/panelset.js"></script>
-    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -404,12 +402,23 @@ Beslutningsregel (som tidligere):
 Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om lik benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
 ---
 
-### Forventet kontantstrøm
+Sammmenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
+beregne
 
-### Kapitalkostnad
+- Forventet kontantstrøm
 
-`\(\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}\)`
+Utgangspunktet her er at vi betrakter framtiden i form av ulike scenarioer, hvor vi tilknytter en sannsynlighet til hvert enkelt scenario.
 
+- Kapitalkostnad (risikojustert-rente)
+
+Dette uttrykket består nå både av en *tids-* og *usikkerhetsdimensjon*.
+
+Formelt kan vi uttrykke dette som
+`\begin{equation}
+\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}
+\end{equation}`
+
+Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosejekt vil denne komponentene er produktet av en *pris (kostnaden per risikokomponent)* og *kvantumskomponent (antall risikoenheter)*. 
 ---
 
 **Oppgave** N.1.1
@@ -456,145 +465,105 @@ Et finansieringsprosjekt gir verdien
 
 Uten usikkerhet ber
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; radnr &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Tilstand_1 &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Salgsinntekt &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Driftsutgift &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Investering &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Ny arbeidskapital &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Avskrivninger &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Skattbart overskudd &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Skatt &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Kontantstrøm etter skatt &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Sannsynlighet &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-.panelset[
-.panel[.panel-name[R Kode]
-
-
-```r
-a &lt;- head(iris)*1000
-```
-
-```
-## Warning in Ops.factor(left, right): '*' not meaningful for factors
-```
-]
-.panel[.panel-name[Tabell]
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sepal.Length&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sepal.Width&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Petal.Length&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Petal.Width&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Species&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;0&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1400&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Salgsinntekt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4900&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1400&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Driftsutgift&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4700&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Investering&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4600&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Ny arbeidskapital&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3600&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1400&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Avskrivninger&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;6&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5400&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3900&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1700&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;400&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skattbart overskudd&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kontantstrøm etter skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-]
-.panel[.panel-name[Plot]
-![](presentations_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
-]
-]
-
-*Øvelse:*
-Gjør om til Excel
-
 ---
 
 ## Nærmere om forventet kontantstrøm
 
-`\(E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)\)`
+Formelt vil den forventede kontantstrømmen for en bestemt periode t kunne uttrykkes som den forventede verdien til en sannsynlighetsfordeling:
 
-- Sannsynlighet
-- Tilstand
-- Utfall
+`\begin{equation}
+E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
+\end{equation}`
+
+Her uttrykker
+- `\(Pr(s)\)` gir oss sannsynligheten (verdi mellom 0 og 1) for at tilstand s inntreffer
+- `\(s \in \{1,2,..,S\}\)` representer settet av alle mulige tilstander som kan inntreffe
+- `\(X(s)\)` er verdien til kontantstrømmen dersom tilstand `\(s\)` inntreffer
 
 ---
 
@@ -667,24 +636,23 @@ E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
 &lt;p&gt;3.&lt;/p&gt; Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 .panelset[
 .panel[.panel-name[Metode 1]
-`\begin{equation}
+$$
 E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
 0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76 
-\end{equation}`
+$$
 ]
 .panel[.panel-name[Metode 2]
-`\begin{equation}
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4)=1/3(23.3)=7.76
-\end{equation}`
+$$
+E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
+$$
 ]
 ]
 &lt;p&gt;4.&lt;/p&gt; Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
 &lt;br&gt;**Svar:**
-`\begin{equation}
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
+$$
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) +  
 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
-\end{equation}`
-
+$$
 ---
 
 **Oppgave** N.1.3
@@ -705,7 +673,7 @@ Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 Øvelse til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
-.can-edit[Sett inn]
+.can-edit[- ]
 
 ---
 
