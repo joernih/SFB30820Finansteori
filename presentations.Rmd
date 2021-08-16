@@ -1,4 +1,4 @@
---
+---
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"

@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x92613fabb6f4d34893d35bdcdc4a6de","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a6fd8aa11b10464fbebffe1f108061db","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -215,6 +215,7 @@ class: center, middle, inverse, title-slide
 </tbody>
 </table>
 
+---
 
 # Anbefalte oppgaver
 
@@ -228,7 +229,7 @@ class: center, middle, inverse, title-slide
 <tbody>
 <tr>
 <td style='text-align: left;'>1</td>
-<td style='text-align: center;'></td>
+<td style='text-align: center;'>1.1,1.2,1.4,1.5,1.7.1.8</td>
 <td style='text-align: center;'>N.1.1,N.1.2,N.1.3,N.1.4,</td>
 </tr>
 <tr>
@@ -326,9 +327,9 @@ Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen.
 
 ## Obligatorisk innleveringsoppgave
 
-XX-XX: obligatorisk arbeidskrav publiseres
+XX-XX: obligatorisk arbeidskrav publiseres (før høstferien)
 
-XX-XX: obligatorisk arbeidskrav innlevering
+XX-XX: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
 
 ## Eksamen
 
@@ -342,7 +343,7 @@ Hjelpemidler: godkjent kalkulator.
 
 ---
 
-# Lenker benyttet i kurset 
+# Lenker benyttet i kurset (foreløpig liste)
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Bokens nettside](https://finans2.portfolio.no/)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
@@ -376,8 +377,8 @@ X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)
 \end{equation}`
 
 Beslutningsregel:
-- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) &gt; 0
-- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) igangsettes 
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) `\(&gt; 0\)`
+- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de `\(&gt;0\)` igangsettes 
 
 Merk: Ved inkludering av faktorer som inflasjon, skatt og finansiering, endres benevningen *både*
 i teller og nevner.
@@ -393,16 +394,17 @@ E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X
 \end{equation}`
 
 - Telleren er nå erstattet med *forventet* kontantstrøm
-- Nevneren er nå erstattet med kapitalkostnad som er *risikojusert*
+- Nevneren er nå erstattet med kapitalkostnad som er *risikojustert*
 
 Beslutningsregel (som tidligere):
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) &gt; 0
 - Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) igangsettes 
 
 Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om lik benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
+
 ---
 
-Sammmenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
+Sammenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
 beregne
 
 - Forventet kontantstrøm
@@ -418,60 +420,59 @@ Formelt kan vi uttrykke dette som
 \text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}
 \end{equation}`
 
-Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosejekt vil denne komponentene er produktet av en *pris (kostnaden per risikokomponent)* og *kvantumskomponent (antall risikoenheter)*. 
+Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosjekt vil denne komponentene er produktet av en *pris (kostnad per risikokomponent)* og *kvantumkomponent (antall risikoenheter tilhørende prosjektet)*. 
 ---
 
 **Oppgave** N.1.1
 
-Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostand er 2 %, og prosjektet har en risikokostnad på 7 %.
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
-&lt;br&gt;**Svar:**
-`\begin{equation}
-NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.174312
-\end{equation}`
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- \begin{equation} --&gt;
+&lt;!-- NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17 --&gt;
+&lt;!-- \end{equation} --&gt;
 
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
-&lt;br&gt;**Svar:**
-`\begin{equation}
-9.174312=\frac{X}{1+(0.02)} \Leftrightarrow  \\ 
-X=9.174312\cdot (1.02)=9.174312\cdot (1.02)=9.357
-\end{equation}`
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- \begin{equation} --&gt;
+&lt;!-- 9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\  --&gt;
+&lt;!-- X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35 --&gt;
+&lt;!-- \end{equation} --&gt;
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
-&lt;br&gt;**Svar:**
-`\begin{equation}
-NV=9.174312
-\end{equation}`
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- \begin{equation} --&gt;
+&lt;!-- NV=9.17 --&gt;
+&lt;!-- \end{equation} --&gt;
 
 ---
 
-## Investerings- vs. finansieringsprosjekt
+## Investerings- vs. finansierinsgprosjekt
 
-Et investeringsprosjekt gir verdien
+Et investeringsprosjekt viser bedriftens bruker av penger for å skaffe seg eiendeler i form av anlegg- og omløpsmidler (regnskapsbalansens venstreside)
 
-Et finansieringsprosjekt gir verdien
-
+Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld og egenkapital (regnskapsbalansens høyreside)
 ---
 
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
-&lt;br&gt;**Svar:**
-I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+). Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
-
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- - I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)  --&gt;
+&lt;!-- - Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–) --&gt;
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-&lt;br&gt;**Svar:**
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den. --&gt;
 
 &lt;!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?--&gt;
 ---
 
 ## Prosjektets Kontantstrøm
-
-For prosjektets kontanstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
+For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
 
 Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
+
 <table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
 <thead>
 <tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
@@ -558,9 +559,12 @@ Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
 </tbody>
 </table>
 
+
 ---
 
 Den forventede kontantstrømmen framkommer derfor som 
+
+
 $$
 0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
 $$
@@ -575,9 +579,9 @@ E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 \end{equation}`
 
 Her uttrykker
-- `\(Pr(s)\)` gir oss sannsynligheten (verdi mellom 0 og 1) for at tilstand s inntreffer
-- `\(s \in \{1,2,..,S\}\)` representer settet av alle mulige tilstander som kan inntreffe
-- `\(X(s)\)` er verdien til kontantstrømmen dersom tilstand `\(s\)` inntreffer
+- `\(Pr(s)\)` gir oss *sannsynligheten* (verdi mellom 0 og 1) for at tilstand s inntreffer
+- `\(s \in \{1,2,..,S\}\)` representerer settet av alle mulige *tilstander* som kan inntreffe
+- `\(X(s)\)` er *utfallet* til kontantstrømmen dersom tilstand `\(s\)` inntreffer
 
 ---
 
@@ -585,21 +589,21 @@ Her uttrykker
 
 Selve porteføljeavkastningen (rp) uten skatt er gitt ved
 
-`\(rp=\frac{P_{T}+\sum_{t=1}^{T}Div_{t}-P_{0}}{P_{0}}\)`
+`\(rp=\frac{P_{T}+Div_{0,T}-P_{0}}{P_{0}}\)`
 
 ### Metode 1: Forventet avkastning
 
-`\begin{align}
-E(rp) = \sum_{s=1}^{S}Pr(s)X(s) =
+
+`\begin{equation}
+E(rp) = \sum_{s=1}^{S}Pr(s)X(s) = 
 Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
-\end{align}`
+\end{equation}`
 
 ### Metode 2: Forventet avkastning
 
-`\begin{align}
-E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i}) =
-w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
-\end{align}`
+`\begin{equation}
+E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i})=w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
+\end{equation}`
 
 ---
 
@@ -638,35 +642,41 @@ AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 </table>
 
 1. Hva er særtrekket ved prosjekt X?
-&lt;br&gt;**Svar:** Konstanstrømmen er sikker (lik 3 i begge perioder)
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt;  --&gt;
+&lt;!-- Kontantstrømmen er sikker (lik 3 i begge perioder) --&gt;
 2. Beregn forventet avkastning for hvert prosjekt.
-&lt;br&gt;**Svar:**
-`\begin{equation}
-E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
-E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
-E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
-\end{equation}`
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- \begin{equation} --&gt;
+&lt;!-- E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\ --&gt;
+&lt;!-- E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\ --&gt;
+&lt;!-- E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4 --&gt;
+&lt;!-- \end{equation} --&gt;
 ---
 &lt;p&gt;3.&lt;/p&gt; Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 .panelset[
 .panel[.panel-name[Metode 1]
-$$
-E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
-0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76 
-$$
+&lt;br&gt;
+&lt;br&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\  --&gt;
+&lt;!-- 0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76  --&gt;
+&lt;!-- $$ --&gt;
 ]
 .panel[.panel-name[Metode 2]
-$$
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
-$$
+&lt;br&gt;
+&lt;br&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76 --&gt;
+&lt;!-- $$ --&gt;
 ]
 ]
+
 &lt;p&gt;4.&lt;/p&gt; Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-&lt;br&gt;**Svar:**
-$$
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) +  
-0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
-$$
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt; --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + --&gt;
+&lt;!-- 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 --&gt;
+&lt;!-- $$ --&gt;
 ---
 
 **Oppgave** N.1.3
@@ -674,229 +684,23 @@ $$
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-&lt;br&gt;**Svar:** Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt;  --&gt;
+&lt;!-- Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen. --&gt;
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-&lt;br&gt;**Svar:** Nei, prosjekt gir høyere avkastning under oppgangstid.
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt;  --&gt;
+&lt;!-- Nei, prosjekt gir høyere avkastning under oppgangstid. --&gt;
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-&lt;br&gt;**Svar:** Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
+&lt;!-- &lt;br&gt;**Svar:**&lt;br&gt;  --&gt;
+&lt;!-- Nei, både Y og Z gir bedre avkastning enn X uansett tilstand. --&gt;
 
 ---
 
 ## Veien framover
 
-Øvelse til neste forelesning:
+Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 .can-edit[- ]
-
----
-
-class: inverse, center, middle
-
-# Forelesning 2: Porteføljeteori to fond
-
-**Læringsmål:**
-
--  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
--  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
-
----
-
-## Formula
-
-generell tilfelle
-**Uten vekter**
-
-Varians
-`\begin{equation}
-Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
-\end{equation}`
-`\begin{equation}
-Std(X)=\sqrt{123}
-\end{equation}`
-
----
-
-Standardavvik
-`\begin{equation}
-Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
-\end{equation}`
-
-**med vekter**
-
-`\begin{equation}
-Std(X)=\sqrt{123}
-\end{equation}`
-
----
-
-## Prosjektrisiko for eierne vs. bedriften
-
----
-
-## Porteføljers risikomål
-
----
-
-## Risikoholdning og risikokompenasjon
-
----
-
-## Typer av risiko
-
-
----
-
-class: inverse, center, middle
-
-# Forelesning 3: Porteføljeteori 3 til n-fond
-
-**Læringsmål:**
-
--  Tallfeste risiko i en portefølje ved å beregne standardavvik.
--  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
--  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
-
-
-
----
-
-class: inverse, center, middle
-
-# Forelesning 4: Effisiens
-
-**Læringsmål:**
-
-- Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 5: Kapitalverdimodellen 
-
-**Læringsmål:**
-
-- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
-- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
-- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
-- Beskrive kapitalverdimodellens sterke og svake sider.
-- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 6: Finansielle instrumenter for finansiering
-
-**Læringsmål:**
-
-- Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
-- Beregne markedsverdi og effektiv rente for en obligasjon.
-- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
-- Lage en balanseoppstilling basert på bokverdier og markedsverdier.
-- Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
-- Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 7: Gjeld, total risiko og systematisk risiko
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 8: Gjeldgrad og verdi i perfekte kapitalmarkeder
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 9: Skatt
-
-**Læringsmål:**
-
-- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
-- Definere et nøytralt skattesystem ved toleddsskatt.
-- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
-- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
-- Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
----
-
-class: inverse, center, middle
-
-# Forelesning 10: Dividende
-
-**Læringsmål:**
-
----
-
-class: inverse, center, middle
-
-
-# Forelesning 11: Opsjoner
-
-**Læringsmål:**
-
-- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
-- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
-- Redegjøre for teori og empiri om dividendens signalfunksjon.
-- Forklare hvorfor dividende kan påvirke agentkostnader.
-- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 12: Finansielle instrumenter til påvirking av kontantstrømmer
-
-**Læringsmål:**
-
-- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
-- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
-- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
-- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
-- Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
-- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 13: Repetisjon
-
-- Begrunne hvorfor risikostyring kan være viktig.
-- Redegjøre for viktige risikokilder.
-- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
-- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
-- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
-- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
-
----
-
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
