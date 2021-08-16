@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
@@ -33,7 +33,7 @@ library(xaringan)
 
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("presentations.Rmd")
-xaringan::inf_mr("abc.Rmd")
+#xaringan::inf_mr("abc.Rmd")
 servr::daemon_stop()
 ```
 
@@ -200,23 +200,23 @@ Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapi
 Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
-<br>**Svar:**
-\begin{equation}
-NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
-\end{equation}
+<!-- <br>**Svar:**<br> -->
+<!-- \begin{equation} -->
+<!-- NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17 -->
+<!-- \end{equation} -->
 
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
-<br>**Svar:**
-\begin{equation}
-9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\ 
-X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35
-\end{equation}
+<!-- <br>**Svar:**<br> -->
+<!-- \begin{equation} -->
+<!-- 9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\  -->
+<!-- X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35 -->
+<!-- \end{equation} -->
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
-<br>**Svar:**
-\begin{equation}
-NV=9.17
-\end{equation}
+<!-- <br>**Svar:**<br> -->
+<!-- \begin{equation} -->
+<!-- NV=9.17 -->
+<!-- \end{equation} -->
 
 ---
 
@@ -230,12 +230,12 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
-<br>**Svar:**<br>
-- I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+) 
-- Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+<!-- <br>**Svar:**<br> -->
+<!-- - I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)  -->
+<!-- - Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–) -->
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-<br>**Svar:**<br>
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+<!-- <br>**Svar:**<br> -->
+<!-- For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den. -->
 
 <!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?-->
 ---
@@ -263,7 +263,12 @@ df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2,tils3,tils4)
 htmlTable(df_prosj_kontantstrøm, header=c("Tilstand:","1","2","3","4"))
 ```
 
+
+---
+
 Den forventede kontantstrømmen framkommer derfor som 
+
+
 $$
 0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
 $$
@@ -278,9 +283,9 @@ E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 \end{equation}
 
 Her uttrykker
-- $Pr(s)$ gir oss sannsynligheten (verdi mellom 0 og 1) for at tilstand s inntreffer
-- $s \in \{1,2,..,S\}$ representer settet av alle mulige tilstander som kan inntreffe
-- $X(s)$ er verdien til kontantstrømmen dersom tilstand $s$ inntreffer
+- $Pr(s)$ gir oss *sannsynligheten* (verdi mellom 0 og 1) for at tilstand s inntreffer
+- $s \in \{1,2,..,S\}$ representerer settet av alle mulige *tilstander* som kan inntreffe
+- $X(s)$ er *utfallet* til kontantstrømmen dersom tilstand $s$ inntreffer
 
 ---
 
@@ -322,35 +327,41 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 ```
 
 1. Hva er særtrekket ved prosjekt X?
-<br>**Svar:** Kontantstrømmen er sikker (lik 3 i begge perioder)
+<!-- <br>**Svar:**<br>  -->
+<!-- Kontantstrømmen er sikker (lik 3 i begge perioder) -->
 2. Beregn forventet avkastning for hvert prosjekt.
-<br>**Svar:**
-\begin{equation}
-E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
-E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
-E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
-\end{equation}
+<!-- <br>**Svar:**<br> -->
+<!-- \begin{equation} -->
+<!-- E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\ -->
+<!-- E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\ -->
+<!-- E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4 -->
+<!-- \end{equation} -->
 ---
 <p>3.</p> Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 .panelset[
 .panel[.panel-name[Metode 1]
-$$
-E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\ 
-0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76 
-$$
+<br>
+<br>
+<!-- $$ -->
+<!-- E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\  -->
+<!-- 0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76  -->
+<!-- $$ -->
 ]
 .panel[.panel-name[Metode 2]
-$$
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
-$$
+<br>
+<br>
+<!-- $$ -->
+<!-- E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76 -->
+<!-- $$ -->
 ]
 ]
+
 <p>4.</p> Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-<br>**Svar:**
-$$
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) +  
-0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
-$$
+<!-- <br>**Svar:**<br> -->
+<!-- $$ -->
+<!-- E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + -->
+<!-- 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 -->
+<!-- $$ -->
 ---
 
 **Oppgave** N.1.3
@@ -358,17 +369,20 @@ $$
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-<br>**Svar:** Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
+<!-- <br>**Svar:**<br>  -->
+<!-- Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen. -->
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-<br>**Svar:** Nei, prosjekt gir høyere avkastning under oppgangstid.
+<!-- <br>**Svar:**<br>  -->
+<!-- Nei, prosjekt gir høyere avkastning under oppgangstid. -->
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-<br>**Svar:** Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
+<!-- <br>**Svar:**<br>  -->
+<!-- Nei, både Y og Z gir bedre avkastning enn X uansett tilstand. -->
 
 ---
 
 ## Veien framover
 
-Øvelse til neste forelesning:
+Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
 .can-edit[- ]
