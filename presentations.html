@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x571e678177848f483a891ef79368dd1","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x919944df58a49c58fb0bfdc8a299cd5","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -457,18 +457,25 @@ Et finansieringsprosjekt gir verdien
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
+&lt;br&gt;**Svar:**
+I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+). Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
+&lt;br&gt;**Svar:**
+For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+
 &lt;!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?--&gt;
 ---
 
 ## Prosjektets Kontantstrøm
 
-Uten usikkerhet ber
+For prosjektets kontanstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
 
+Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;0&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
@@ -480,17 +487,17 @@ Uten usikkerhet ber
 &lt;td style='text-align: left;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Salgsinntekt&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;2&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Driftsutgift&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;500&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;3&lt;/td&gt;
@@ -520,36 +527,43 @@ Uten usikkerhet ber
 &lt;td style='text-align: left;'&gt;6&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Skattbart overskudd&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;550&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;650&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;7&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;440&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;520&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;8&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Kontantstrøm etter skatt&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;70&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;180&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;90&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;9&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.28&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.18&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.12&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+---
+
+Den forventede kontantstrømmen framkommer derfor som 
+$$
+0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
+$$
 ---
 
 ## Nærmere om forventet kontantstrøm
