@@ -33,7 +33,10 @@ library(xaringan)
 
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("presentations.Rmd")
+xaringan::inf_mr("abc.Rmd")
+servr::daemon_stop()
 ```
+
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -52,7 +55,6 @@ timep_i
 timep_ii
 ```
 
----
 
 # Anbefalte oppgaver
 
@@ -576,6 +578,7 @@ class: inverse, center, middle
 - Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
 - Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
 
+---
 
 ```{r include=FALSE}
 knitr::knit_exit()
@@ -596,42 +599,4 @@ knitr::knit_exit()
 - Zoom-kamera
 - Antall studenter
 
-.pull-left[
-]
-.pull-right[
-]
 
----
-
-
-.panelset[
-.panel[.panel-name[Metode 1]
-]
-.panel[.panel-name[Metode 2]
-]
-.panel[.panel-name[Plot]
-```{r echo=FALSE}
-plot(a[,1],a[,1])
-```
-]
-]
-
-## .can-edit[You can edit this slide title]
-.panelset[
-.panel[.panel-name[R Kode]
-
-```{r}
-dfn12
-```
-]
-.panel[.panel-name[Tabell]
-```{r echo=FALSE}
-htmlTable(a)
-```
-]
-.panel[.panel-name[Plot]
-```{r echo=FALSE}
-plot(a[,1],a[,1])
-```
-]
-]

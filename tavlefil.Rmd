@@ -51,9 +51,3 @@ def
 ghi
 
 $\theta$
-
-
-
-\begin{equation}
-\theta
-\end{equation}
