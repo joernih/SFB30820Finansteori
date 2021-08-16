@@ -1,4 +1,4 @@
----
+--
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
@@ -149,8 +149,8 @@ X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)
 \end{equation}
 
 Beslutningsregel:
-- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) > 0
-- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) igangsettes 
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) $> 0$
+- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de $>0$ igangsettes 
 
 Merk: Ved inkludering av faktorer som inflasjon, skatt og finansiering, endres benevningen *både*
 i teller og nevner.
