@@ -241,7 +241,7 @@ For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For fin
 ---
 
 ## Prosjektets Kontantstrøm
-For prosjektets kontanstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
+For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
 
 Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
 
@@ -601,5 +601,19 @@ knitr::knit_exit()
 - Anbefalte oppgaver
 - Zoom-kamera
 - Antall studenter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
