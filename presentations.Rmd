@@ -92,12 +92,17 @@ knitr::include_graphics("pensum/falitt.jpg")
 
 # Kursgodkjennelse
 
-Består av ....123 
+Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen. 
 
 ## Obligatorisk innleveringsoppgave
 
+XX-XX: obligatorisk arbeidskrav publiseres
+
+XX-XX: obligatorisk arbeidskrav innlevering
+
 ## Eksamen
-Eksamen avholdes den
+
+Eksamen avholdes den XX-XX.
 
 Individuell, skriftlig firetimers eksamen.
 
@@ -111,6 +116,7 @@ Hjelpemidler: godkjent kalkulator.
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Bokens nettside](https://finans2.portfolio.no/)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
+- [Canvas](https://hiof.instructure.com/courses/5156)
 
 ---
 
@@ -143,7 +149,8 @@ Beslutningsregel:
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) > 0
 - Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) igangsettes 
 
-Merk: Benevning ...
+Merk: Ved inkludering av faktorer som inflasjon, skatt og finansiering, endres benevningen *både*
+i teller og nevner.
 
 ---
 
@@ -200,7 +207,9 @@ Et finansieringsprosjekt gir verdien
 <!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?-->
 ---
 
-## Prosjektets kontantstrøm
+## Prosjektets Kontantstrøm
+
+Uten usikkerhet ber
 
 ```{r, echo=F}
 radnr <- c("Salgsinntekt",
@@ -253,9 +262,9 @@ $E(X)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)$
 
 ## Porteføljeavkastning
 
-Selve porteføljeavkastningen (rp) er gitt ved
+Selve porteføljeavkastningen (rp) uten skatt er gitt ved
 
-$rp=\frac{P_{t}+Div-P_{0}}{P_{0}}$
+$rp=\frac{P_{T}+\sum_{t=1}^{T}Div_{t}-P_{0}}{P_{0}}$
 
 ### Metode 1: Forventet avkastning
 
@@ -289,17 +298,25 @@ htmlTable(dfn12,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z")
 ```
 
 1. Hva er særtrekket ved prosjekt X?
+<br>*Svar:* Konstanstrømmen er sikker (lik 3 i begge perioder)
 2. Beregn forventet avkastning for hvert prosjekt.
+<br>*Svar:* 
+\begin{equation}
+E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
+E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
+E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
+\end{equation}
 3. Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-.panelset[
-.panel[.panel-name[Metode 1]
-$E(rp)=...$
-]
-.panel[.panel-name[Metode 2]
-]
-$E(rp)=...$
-]
+<br>*Svar:* 
+Metode 1
+\begin{equation}
+E(r_p)=1/3\cdot+1/3\cdot+1/3\cdot=1/3\cdot(3+9.9+10.4)=1/3(23.3)=7.76
+\end{equation}
 4. Hva er svaret på spm. 3 abc hvis begge tilstander er like sannsynlige?
+*Svar:*
+\begin{equation}
+E(r_p)=1/3+1/3+1/3=1/3(+ + +)=1/3
+\end{equation}
 
 ---
 
@@ -308,8 +325,11 @@ $E(rp)=...$
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+<br>*Svar:*
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+<br>*Svar:*
 1. Er det fornuftig å sette alle pengene i prosjekt X?
+<br>*Svar:*
 
 ---
 
@@ -542,6 +562,7 @@ knitr::knit_exit()
 - Temaer viske ut
 - Anbefalte oppgaver
 - Zoom-kamera
+- Antall studenter
 
 .pull-left[
 ]
