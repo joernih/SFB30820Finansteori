@@ -170,9 +170,9 @@ E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X
 
 Beslutningsregel (som tidligere):
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) > 0
-- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) igangsettes 
+- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) av de $>0$ igangsettes 
 
-Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om lik benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
+Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om samme type benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
 
 ---
 
