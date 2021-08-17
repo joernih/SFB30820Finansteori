@@ -33,7 +33,7 @@ library(xaringan)
 
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("presentations.Rmd")
-#xaringan::inf_mr("abc.Rmd")
+xaringan::inf_mr("dagens.Rmd")
 servr::daemon_stop()
 ```
 
@@ -170,9 +170,9 @@ E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X
 
 Beslutningsregel (som tidligere):
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) > 0
-- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) igangsettes 
+- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) av de $>0$ igangsettes 
 
-Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om lik benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
+Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om samme type benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
 
 ---
 
@@ -200,23 +200,23 @@ Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapi
 Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
-<!-- <br>**Svar:**<br> -->
-<!-- \begin{equation} -->
-<!-- NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17 -->
-<!-- \end{equation} -->
+<br>**Svar:**<br>
+\begin{equation}
+NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
+\end{equation}
 
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
-<!-- <br>**Svar:**<br> -->
-<!-- \begin{equation} -->
-<!-- 9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\  -->
-<!-- X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35 -->
-<!-- \end{equation} -->
+<br>**Svar:**<br>
+\begin{equation}
+9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
+X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35
+\end{equation}
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
-<!-- <br>**Svar:**<br> -->
-<!-- \begin{equation} -->
-<!-- NV=9.17 -->
-<!-- \end{equation} -->
+<br>**Svar:**<br>
+\begin{equation}
+NV=9.17
+\end{equation}
 
 ---
 
@@ -230,12 +230,12 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
-<!-- <br>**Svar:**<br> -->
-<!-- - I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)  -->
-<!-- - Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–) -->
+<br>**Svar:**<br>
+- I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+- Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-<!-- <br>**Svar:**<br> -->
-<!-- For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den. -->
+<br>**Svar:**<br>
+For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
 
 <!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?-->
 ---
@@ -327,32 +327,32 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 ```
 
 1. Hva er særtrekket ved prosjekt X?
-<!-- <br>**Svar:**<br>  -->
-<!-- Kontantstrømmen er sikker (lik 3 i begge perioder) -->
+<br>**Svar:**<br>
+Kontantstrømmen er sikker (lik 3 i begge perioder)
 2. Beregn forventet avkastning for hvert prosjekt.
-<!-- <br>**Svar:**<br> -->
-<!-- \begin{equation} -->
-<!-- E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\ -->
-<!-- E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\ -->
-<!-- E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4 -->
-<!-- \end{equation} -->
+<br>**Svar:**<br>
+\begin{equation}
+E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
+E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
+E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
+\end{equation}
 ---
 <p>3.</p> Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 .panelset[
 .panel[.panel-name[Metode 1]
 <br>
 <br>
-<!-- $$ -->
-<!-- E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\  -->
-<!-- 0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76  -->
-<!-- $$ -->
+$$
+E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
+$$
 ]
 .panel[.panel-name[Metode 2]
 <br>
 <br>
-<!-- $$ -->
-<!-- E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76 -->
-<!-- $$ -->
+$$
+E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
+$$
 ]
 ]
 
@@ -369,14 +369,14 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-<!-- <br>**Svar:**<br>  -->
-<!-- Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen. -->
+<br>**Svar:**<br>
+Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-<!-- <br>**Svar:**<br>  -->
-<!-- Nei, prosjekt gir høyere avkastning under oppgangstid. -->
+<br>**Svar:**<br>
+Nei, prosjekt gir høyere avkastning under oppgangstid.
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-<!-- <br>**Svar:**<br>  -->
-<!-- Nei, både Y og Z gir bedre avkastning enn X uansett tilstand. -->
+<br>**Svar:**<br>
+Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
 
 ---
 
@@ -387,22 +387,15 @@ Oppgave til neste forelesning:
 
 .can-edit[- ]
 
----
-
-```{r include=FALSE}
-knitr::knit_exit()
-```
-
 class: inverse, center, middle
 
 # Forelesning 2: `r tema[2]`
 
 **Læringsmål:**
 
--  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
--  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
-
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 ---
 
 ## Formula
@@ -456,10 +449,9 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
--  Tallfeste risiko i en portefølje ved å beregne standardavvik.
--  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
--  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
-
+-  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+-  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+-  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
 
 ---
