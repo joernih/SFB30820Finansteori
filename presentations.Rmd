@@ -456,13 +456,6 @@ ex_b <- c(df_eks_2_1$avk_b%*%df_eks_2_1$prob)
 vx_a <- c((df_eks_2_1$avk_a-ex_a)^2%*%df_eks_2_1$prob)
 vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
-## Portefølje: 1-2
-#w <- c(0.25,0.75)
-### Metode 1
-#df_eks_2_1_w <- df_eks_2_1 %>%
-#  dplyr::mutate(wa=w[1],wb=w[2]) %>%
-#  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb) %>%
-#  dplyr::mutate(ev=prob*avk_c) %>%
 ```
 
 Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=00.00$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.00$.
@@ -485,15 +478,29 @@ Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0156
 
 Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$ kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 
+```{r}
+library(dplyr)
+# Portefølje: 1-2
+w <- c(0.25,0.75)
+## Metode 1
+df_eks_2_1_w <- df_eks_2_1 %>%
+  dplyr::mutate(wa=w[1],wb=w[2]) %>%
+  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
+
+ex_c <- c(df_eks_2_1_w$avk_c%*%df_eks_2_1_w$prob)
+vx_c <- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
+# Covarnaise missing
+```
+
 **Metode 1**
 \begin{equation*}
-Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
+Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.00716875
 \end{equation*}
 
 **Metode 2**
 Vi starter først med
 \begin{equation*}
-Var(r_c)=
+Var(r_c) =1/2+1/2+2(1/2)^2=0.00716875
 \end{equation*}
 
 ---
