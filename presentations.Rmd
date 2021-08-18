@@ -436,6 +436,20 @@ Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
 
 ## Risikoholdning og risikokompenasjon
 
+
+![](pensum/figurer-04.png)
+---
+
+![](pensum/figurer-04.png)
+
+---
+
+![](pensum/figurer-05.png)
+![](pensum/figurer-06.png)
+---
+![](pensum/figurer-07.png)
+
+
 ---
 
 ## Endring av samvariasjon og porteføljevekter
