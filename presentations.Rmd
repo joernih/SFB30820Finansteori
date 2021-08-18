@@ -413,41 +413,95 @@ class: inverse, center, middle
 **Metode 1 for måling av risiko**
 - Varians
 \begin{equation}
-Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(1)]^2+Pr(2)[X(2)-E(2)]^2+...+\\Pr(s)[X(s)-E(X)]^2
 \end{equation}
 - Standardavvik
 \begin{equation}
-Std(X)=\sqrt{123}
+Std(X)=\sqrt{Var(X)}
 \end{equation}
 
+Merk: Mens beregningen av standardavviket gir oss samme benevning som forventet verdi, er benevningen av variansen mer uklar ("kvadrert spredning")
 ---
 
 **Metode 2 for måling av risiko (2 fonds sammensatt)**
 - Varians
 \begin{equation}
-Var(X)=\sum_{i=0}^{N}=123
+Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
 \end{equation}
-- Standardavvik
+Hvor samvariasjonen er gitt ved
 \begin{equation}
-Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_1)]
+\end{equation}
+
+- Standardavviket
+\begin{equation}
+Std(r_p)=\sqrt{Var(r_p)}
 \end{equation}
 
 ---
 
 ## Måling av risiko enkeltvis
-**A**
-**B**
 
-## Måling av risiko sammensatt
+**Eksempel 2.1**
+```{r, echo=F}
+# Data input
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.2,0.5,0.3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
 
-**Metode 1**
+htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
+```
+Fond **A**
+\begin{equation*}
+Var(r_a)
+\end{equation*}
 
-**Metode 2**
+Fond **B**
+\begin{equation*}
+Var(r_a)
+\end{equation*}
 
 ---
 
+
+## Måling av risiko sammensatt fond C
+
+**Metode 1**
+Vi starter først med
+\begin{equation*}
+Var(r_c)=
+\end{equation*}
+
+**Metode 2**
+Vi starter først med
+\begin{equation*}
+Var(r_c)=
+\end{equation*}
+
+---
+
+**Øvelse:** Sett opp Excel ....
+
+```{r}
+
+```
+
+---
 ## Risikoholdning og risikokompenasjon
 
+### Holdning
+
+Skiller melllom *risiknøytral* og *risikoaversj* aktør
+
+Risikonøytral kun opptatt av forventet avkastning (+)
+
+Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+
+---
+
+### Risikokompenasjon
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-04.png")
@@ -479,8 +533,6 @@ knitr::include_graphics("pensum/figurer-06.png")
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
 ```
-
-
 
 
 ---
@@ -525,6 +577,22 @@ Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
 
 ## Betaverdien til et prosjekt
 
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-07.png")
+```
+
+---
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-07.png")
+```
+
+---
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-07.png")
+```
 
 ---
 
