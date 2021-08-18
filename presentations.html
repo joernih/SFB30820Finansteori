@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c14b453c5d6a40faaa701f3f383a4656","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c49640e495444fbd89105449585d774a","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -792,18 +792,18 @@ Std(r_p)=\sqrt{Var(r_p)}
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-Repetisjon: Fra metode 1 under første forelesning vet vi at `\(E(a)=\)` og `\(E(b)=1\)`
+Repetisjon: Ved bruk av metode 1 under første forelesning har vi at `\(E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=00.00\)` og `\(E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.00\)`.
 
 ---
 
 Fond **A**
 `\begin{equation*}
-Var(r_a) = 
+Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
 \end{equation*}`
 
 Fond **B**
 `\begin{equation*}
-Var(r_a) =
+Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2  
 \end{equation*}`
 
 ---
@@ -814,7 +814,7 @@ Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_
 
 **Metode 1**
 `\begin{equation*}
-Var(r_c)=
+Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
 \end{equation*}`
 
 **Metode 2**
@@ -831,7 +831,7 @@ Tips
 
 ```r
 # Portefølje: 1-2
-w &lt;- c(0.5,0.5)
+w &lt;- c(0.25,0.75)
 ## Metode 1
 df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
   dplyr::mutate(wa=w[1],wb=w[2]) %&gt;%
@@ -839,7 +839,66 @@ df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
   dplyr::mutate(ev=prob*avk_c) %&gt;%
   dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %&gt;%
   dplyr::mutate(wvar=dev^2*prob)
+htmlTable(df_eks_2_1_w, header=c("?",1,1,1,1,1,1,1,1,1))
 ```
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;?&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.25&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.0775&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.0155&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-0.1225&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.00300125&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.25&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.18&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.09&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-0.02&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2e-04&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.25&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.75&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.315&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.0945&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.115&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.0039675&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 `rsum(df_eks_2_1_w$ev)` og `sum(df_eks_2_1_w$wvar)` 
 og `sqrt(sum(df_eks_2_1_w$wvar))`
 

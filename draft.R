@@ -1,3 +1,6 @@
+library(htmlTable)
+library(magrittr)
+library(xaringan)
 library(dplyr)
 # Data input
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
@@ -16,6 +19,8 @@ df_eks_2_1_w <- df_eks_2_1 %>%
   dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %>%
   dplyr::mutate(wvar=dev^2*prob)
 
+
+htmlTable(df_eks_2_1_w)
 sum(df_eks_2_1_w$ev)
 sum(df_eks_2_1_w$wvar)
 sqrt(sum(df_eks_2_1_w$wvar))
