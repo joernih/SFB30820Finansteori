@@ -478,8 +478,7 @@ Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0156
 
 Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$ kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 
-```{r}
-library(dplyr)
+```{r, echo=F}
 # Portefølje: 1-2
 w <- c(0.25,0.75)
 ## Metode 1
@@ -511,7 +510,7 @@ Cov(r_a,r_b) = 0.2[0.016-0.02][0.016-0.02]+0.5[0.016-0.02][0.016-0.02]+0.3[0.016
 **Øvelse:** Sett opp Excel ....
 
 Tips
-```{r}
+```{r, echo=F}
 # Portefølje: 1-2
 w <- c(0.25,0.75)
 ## Metode 1
@@ -551,19 +550,13 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ### Porteføljevekter
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-05.png")
-```
-
-
-
 ---
 
 ### Samvariasjon
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-06.png")
-``` ---
+```
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
@@ -584,29 +577,30 @@ class: inverse, center, middle
 
 ---
 
-```{r, echo=FALSE}
-knitr::knit_exit()
-```
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
 **Metode 2: for måling av risiko**
 - Varians
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) \\
-+ w_a_2Std(1,)Std()Korr(1,) \\
-+ w_a_2StdStd(1,)Std()Korr(1,) \\
-+ w_a_2StdStd(2,)Std()Korr(1,) 
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
+2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+2w_aw_cStd(a)Std(c)Korr(a,c)+\\
+2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}
+
 ---
+
 - Varians n-fonds
 \begin{equation}
 Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\sum_{i=1}^{N}\sum_{i=j}^{N}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}
+
 ---
+
 - Standardavvik 1-n fonds
 \begin{equation}
-Std(r_p)=\sqrt{123}
+Std(r_p)=\sqrt{Var(rp)}
 \end{equation}
 
 ---
@@ -615,19 +609,19 @@ Std(r_p)=\sqrt{123}
 
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-07.png")
+knitr::include_graphics("pensum/figurer-08.png")
 ```
 
 ---
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-07.png")
+knitr::include_graphics("pensum/figurer-09.png")
 ```
 
 ---
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-07.png")
+knitr::include_graphics("pensum/figurer-10.png")
 ```
 
 ---
@@ -638,8 +632,9 @@ Unødvendig risiko vs. relevant risiko
 
 ---
 
----
-
+```{r include=FALSE}
+knitr::knit_exit()
+```
 
 class: inverse, center, middle
 
