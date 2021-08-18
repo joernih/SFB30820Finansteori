@@ -453,23 +453,28 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
 
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
 ```
+
+Repetisjon: Fra metode 1 under første forelesning vet vi at $E(a)=$ og $E(b)=1$
+
+---
+
 Fond **A**
 \begin{equation*}
-Var(r_a)
+Var(r_a) = 
 \end{equation*}
 
 Fond **B**
 \begin{equation*}
-Var(r_a)
+Var(r_a) =
 \end{equation*}
 
 ---
 
-
 ## Måling av risiko sammensatt fond C
 
+Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$ kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
+
 **Metode 1**
-Vi starter først med
 \begin{equation*}
 Var(r_c)=
 \end{equation*}
@@ -484,21 +489,32 @@ Var(r_c)=
 
 **Øvelse:** Sett opp Excel ....
 
+Tips
 ```{r}
-
+# Portefølje: 1-2
+w <- c(0.25,0.75)
+## Metode 1
+df_eks_2_1_w <- df_eks_2_1 %>%
+  dplyr::mutate(wa=w[1],wb=w[2]) %>%
+  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb) %>%
+  dplyr::mutate(ev=prob*avk_c) %>%
+  dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %>%
+  dplyr::mutate(wvar=dev^2*prob)
+htmlTable(df_eks_2_1_w, header=c("?",1,1,1,1,1,1,1,1,1))
 ```
+`rsum(df_eks_2_1_w$ev)` og `sum(df_eks_2_1_w$wvar)` 
+og `sqrt(sum(df_eks_2_1_w$wvar))`
 
 ---
 ## Risikoholdning og risikokompenasjon
 
 ### Holdning
 
-Skiller melllom *risiknøytral* og *risikoaversj* aktør
+Skiller melllom *risiknøytral* og *risikoaversjon* aktør
 
 Risikonøytral kun opptatt av forventet avkastning (+)
 
 Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
-
 ---
 
 ### Risikokompenasjon
