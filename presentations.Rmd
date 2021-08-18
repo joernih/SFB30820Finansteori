@@ -387,6 +387,8 @@ Oppgave til neste forelesning:
 
 .can-edit[- ]
 
+---
+
 class: inverse, center, middle
 
 # Forelesning 2: `r tema[2]`
@@ -398,39 +400,37 @@ class: inverse, center, middle
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 ---
 
-## Formula
+## Prosjektrisiko for eierne vs. bedriften
 
-generell tilfelle
-**Uten vekter**
+### Risiko for bedriften
 
-Varians
+### Risiko for eierne
+
+---
+
+## Måling av risiko (portefølje fra 1 til 2 fonds)
+
+**Metode 1 for måling av risiko**
+- Varians
 \begin{equation}
 Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
 \end{equation}
+- Standardavvik
 \begin{equation}
 Std(X)=\sqrt{123}
 \end{equation}
 
 ---
 
-Standardavvik
+**Metode 2 for måling av risiko (1-2 fonds)**
+- Varians
+\begin{equation}
+Var(X)=\sum_{i=0}^{N}=123
+\end{equation}
+- Standardavvik
 \begin{equation}
 Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
 \end{equation}
-
-**med vekter**
-
-\begin{equation}
-Std(X)=\sqrt{123}
-\end{equation}
-
----
-
-## Prosjektrisiko for eierne vs. bedriften
-
----
-
-## Porteføljers risikomål
 
 ---
 
@@ -438,8 +438,7 @@ Std(X)=\sqrt{123}
 
 ---
 
-## Typer av risiko
-
+## Endring av samvariasjon og porteføljevekter
 
 ---
 
@@ -453,8 +452,47 @@ class: inverse, center, middle
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 -  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
+---
+
+## Måling av risiko (portefølje fra 3 til n fonds)
+
+**Metode 1 for måling av risiko**
+- Varians
+\begin{equation}
+Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+\end{equation}
+- Standardavvik
+\begin{equation}
+Std(X)=\sqrt{123}
+\end{equation}
 
 ---
+
+**Metode 2 for måling av risiko (1-2 fonds)**
+- Varians
+\begin{equation}
+Var(X)=\sum_{i=0}^{N}=123
+\end{equation}
+- Standardavvik
+\begin{equation}
+Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+\end{equation}
+
+---
+
+## Betaverdien til et prosjekt
+
+
+---
+
+## Kilder til usystematisk og relevant risiko
+
+Unødvendig risiko vs. relevant risiko
+
+---
+
+---
+
 
 class: inverse, center, middle
 

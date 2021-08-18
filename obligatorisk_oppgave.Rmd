@@ -1,0 +1,19 @@
+---
+title: "obligatorisk oppgave"
+output: html_document
+---
+
+## Tema 1: Forventet kontantsrøm
+
+## Tema 2: Kapitalkostand
+
+## Tema 3: Gjeld vs. egenkapital
+
+## Tema 4: Finansielle instrumenter
+Gi en presis forklaring på begrepet finansielle instrumenter
+
+## Excel-del
+Bitcoin-find data
+
+
+
