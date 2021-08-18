@@ -422,7 +422,7 @@ Std(X)=\sqrt{123}
 
 ---
 
-**Metode 2 for måling av risiko (1-2 fonds)**
+**Metode 2 for måling av risiko (2 fonds sammensatt)**
 - Varians
 \begin{equation}
 Var(X)=\sum_{i=0}^{N}=123
@@ -434,25 +434,54 @@ Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
 
 ---
 
+## Måling av risiko enkeltvis
+**A**
+**B**
+
+## Måling av risiko sammensatt
+
+**Metode 1**
+
+**Metode 2**
+
+---
+
 ## Risikoholdning og risikokompenasjon
 
 
-![](pensum/figurer-04.png)
----
-
-![](pensum/figurer-04.png)
-
----
-
-![](pensum/figurer-05.png)
-![](pensum/figurer-06.png)
----
-![](pensum/figurer-07.png)
-
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-04.png")
+```
 
 ---
 
 ## Endring av samvariasjon og porteføljevekter
+
+
+### Porteføljevekter
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-05.png")
+```
+
+
+
+---
+
+### Samvariasjon
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-06.png")
+```
+
+---
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-07.png")
+```
+
+
+
 
 ---
 
