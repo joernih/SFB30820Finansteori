@@ -31,17 +31,9 @@ m <-as.matrix(df_eks_2_1_w[,3:4])
 c <-  cov.wt(m,v)$cov
 sum(as.vector(c))
 
-
 # Portefølje: 3-N
 
-
-
-
-123
-
-
-varnp <- function(){
-
+cpn <- function(m=NULL,p=NULL){
+	c <-  cov.wt(m,v)$cov
+	sum(as.vector(c))
 }
-
-?cov.wt
