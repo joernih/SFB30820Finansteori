@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c49640e495444fbd89105449585d774a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1a9cae609084396ab0eeb10c4e84554","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -798,12 +798,12 @@ Repetisjon: Ved bruk av metode 1 under første forelesning har vi at `\(E(r_a)=0
 
 Fond **A**
 `\begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
+Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0013
 \end{equation*}`
 
 Fond **B**
 `\begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2  
+Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0156
 \end{equation*}`
 
 ---
@@ -812,17 +812,35 @@ Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2
 
 Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)` kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 
+
+```r
+library(dplyr)
+# Portefølje: 1-2
+w &lt;- c(0.25,0.75)
+## Metode 1
+df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
+  dplyr::mutate(wa=w[1],wb=w[2]) %&gt;%
+  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
+
+ex_c &lt;- c(df_eks_2_1_w$avk_c%*%df_eks_2_1_w$prob)
+vx_c &lt;- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
+# Covarnaise missing
+```
+
 **Metode 1**
 `\begin{equation*}
-Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
+Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.00716875
 \end{equation*}`
 
 **Metode 2**
 Vi starter først med
 `\begin{equation*}
-Var(r_c)=
+Var(r_c) =1/2+1/2+2(1/2)^2=0.00716875
 \end{equation*}`
-
+Siden vi har at
+`\begin{equation*}
+Cov(r_a,r_b) = 0.2[0.016-0.02][0.016-0.02]+0.5[0.016-0.02][0.016-0.02]+0.3[0.016-0.02][0.016-0.02]=1
+\end{equation*}`
 ---
 
 **Øvelse:** Sett opp Excel ....
@@ -956,26 +974,23 @@ class: inverse, center, middle
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
-**Metode 1 for måling av risiko**
+**Metode 2: for måling av risiko**
 - Varians
 `\begin{equation}
-Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3)+ \\
+w_1w_2Std(1,)Std()Korr(1,) \\
+w_1w_2StdStd(1,)Std()Korr(1,) \\
+w_1w_2StdStd(2,)Std()Korr(1,) \\
 \end{equation}`
-- Standardavvik
-`\begin{equation}
-Std(X)=\sqrt{123}
-\end{equation}`
-
 ---
-
-**Metode 2 for måling av risiko (1-2 fonds)**
-- Varians
+- Varians n-fonds
 `\begin{equation}
-Var(X)=\sum_{i=0}^{N}=123
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\sum_{i=1}^{N}\sum_{i=j}^{N}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}`
-- Standardavvik
+---
+- Standardavvik 1-n fonds
 `\begin{equation}
-Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+Std(r_p)=\sqrt{123}
 \end{equation}`
 
 ---

@@ -563,9 +563,7 @@ knitr::include_graphics("pensum/figurer-05.png")
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-06.png")
-```
-
----
+``` ---
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
@@ -586,28 +584,29 @@ class: inverse, center, middle
 
 ---
 
+```{r, echo=FALSE}
+knitr::knit_exit()
+```
+
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
-**Metode 1 for måling av risiko**
+**Metode 2: for måling av risiko**
 - Varians
 \begin{equation}
-Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) \\
++ w_a_2Std(1,)Std()Korr(1,) \\
++ w_a_2StdStd(1,)Std()Korr(1,) \\
++ w_a_2StdStd(2,)Std()Korr(1,) 
 \end{equation}
-- Standardavvik
-\begin{equation}
-Std(X)=\sqrt{123}
-\end{equation}
-
 ---
-
-**Metode 2 for måling av risiko (1-2 fonds)**
-- Varians
+- Varians n-fonds
 \begin{equation}
-Var(X)=\sum_{i=0}^{N}=123
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\sum_{i=1}^{N}\sum_{i=j}^{N}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}
-- Standardavvik
+---
+- Standardavvik 1-n fonds
 \begin{equation}
-Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+Std(r_p)=\sqrt{123}
 \end{equation}
 
 ---
