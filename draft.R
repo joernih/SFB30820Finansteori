@@ -52,4 +52,11 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
  		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
-View(plotw)
+
+plotwf <- plotw %>% dplyr::filter(r==-1)
+str(plotwf)
+ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep)) + ggplot2::geom_point()
+
+plot(plotwf$vp,plotwf$ep)
+
+
