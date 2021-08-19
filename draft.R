@@ -25,9 +25,14 @@ sum(df_eks_2_1_w$ev)
 sum(df_eks_2_1_w$wvar)
 sqrt(sum(df_eks_2_1_w$wvar))
 
-
 ## Metode 2
+v <-as.vector(df_eks_2_1_w[,2])
+m <-as.matrix(df_eks_2_1_w[,3:4])
+c <-  cov.wt(m,v)$cov
+sum(as.vector(c))
+
 # Portefølje: 3-N
+<<<<<<< HEAD
 m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,v)$cov
@@ -35,3 +40,10 @@ cov.wt(m,v)$cov
 ?cov.wt
 
 
+=======
+
+cpn <- function(m=NULL,p=NULL){
+	c <-  cov.wt(m,v)$cov
+	sum(as.vector(c))
+}
+>>>>>>> be732c0b182483950dc774968c880425e4d874b4

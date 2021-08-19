@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a924579c7b68428ca68f2671754fa28c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c43090343ad04bbd94f5726790f72d2a","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -813,19 +813,6 @@ Var(r_a) =0.2[0.05-0.23]^2+0.5[0.016-0.20]^2+0.3[0.016-0.40]^2=0.0156
 Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)` kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 
 
-```r
-library(dplyr)
-# Portefølje: 1-2
-w &lt;- c(0.25,0.75)
-## Metode 1
-df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
-  dplyr::mutate(wa=w[1],wb=w[2]) %&gt;%
-  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
-
-ex_c &lt;- c(df_eks_2_1_w$avk_c%*%df_eks_2_1_w$prob)
-vx_c &lt;- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
-# Covarnaise missing
-```
 
 **Metode 1**
 `\begin{equation*}
@@ -846,20 +833,6 @@ Cov(r_a,r_b) = 0.2[0.016-0.02][0.016-0.02]+0.5[0.016-0.02][0.016-0.02]+0.3[0.016
 **Øvelse:** Sett opp Excel ....
 
 Tips
-
-```r
-# Portefølje: 1-2
-w &lt;- c(0.25,0.75)
-## Metode 1
-df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
-  dplyr::mutate(wa=w[1],wb=w[2]) %&gt;%
-  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb) %&gt;%
-  dplyr::mutate(ev=prob*avk_c) %&gt;%
-  dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %&gt;%
-  dplyr::mutate(wvar=dev^2*prob)
-htmlTable(df_eks_2_1_w, header=c("?",1,1,1,1,1,1,1,1,1))
-```
-
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
@@ -943,17 +916,11 @@ Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
 
 ### Porteføljevekter
 
-&lt;img src="pensum/figurer-05.png" width="75%" /&gt;
-
-
-
 ---
 
 ### Samvariasjon
 
 &lt;img src="pensum/figurer-06.png" width="75%" /&gt;
-
----
 
 &lt;img src="pensum/figurer-07.png" width="75%" /&gt;
 
@@ -972,28 +939,30 @@ class: inverse, center, middle
 
 ---
 
+
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
-**Metode 1 for måling av risiko**
+**Metode 2: for måling av risiko**
 - Varians
 `\begin{equation}
-Var(X)=\sum_{s=0}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(s)[X(s)-E(X)]^2+Pr(s)[X(s)-E(X)]^2+...+\\Pr(s)[X(s)-E(X)]^2
-\end{equation}`
-- Standardavvik
-`\begin{equation}
-Std(X)=\sqrt{123}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
+2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+2w_aw_cStd(a)Std(c)Korr(a,c)+\\
+2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}`
 
 ---
 
-**Metode 2 for måling av risiko (1-2 fonds)**
-- Varians
+- Varians n-fonds
 `\begin{equation}
-Var(X)=\sum_{i=0}^{N}=123
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\sum_{i=1}^{N}\sum_{i=j}^{N}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}`
-- Standardavvik
+
+---
+
+- Standardavvik 1-n fonds
 `\begin{equation}
-Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
+Std(r_p)=\sqrt{Var(rp)}
 \end{equation}`
 
 ---
@@ -1001,15 +970,15 @@ Var(X)=\sum_{i=0}^{N}Var(X_{i})+ \sum_{i=0}^{N}\sum_{i=0}^{N}
 ## Betaverdien til et prosjekt
 
 
-&lt;img src="pensum/figurer-07.png" width="75%" /&gt;
+&lt;img src="pensum/figurer-08.png" width="75%" /&gt;
 
 ---
 
-&lt;img src="pensum/figurer-07.png" width="75%" /&gt;
+&lt;img src="pensum/figurer-09.png" width="75%" /&gt;
 
 ---
 
-&lt;img src="pensum/figurer-07.png" width="75%" /&gt;
+&lt;img src="pensum/figurer-10.png" width="75%" /&gt;
 
 ---
 
@@ -1019,141 +988,7 @@ Unødvendig risiko vs. relevant risiko
 
 ---
 
----
 
-
-class: inverse, center, middle
-
-# Forelesning 4: Effisiens
-
-**Læringsmål:**
-
-- Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 5: Kapitalverdimodellen 
-
-**Læringsmål:**
-
-- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
-- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
-- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
-- Beskrive kapitalverdimodellens sterke og svake sider.
-- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 6: Finansielle instrumenter for finansiering
-
-**Læringsmål:**
-
-- Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
-- Beregne markedsverdi og effektiv rente for en obligasjon.
-- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
-- Lage en balanseoppstilling basert på bokverdier og markedsverdier.
-- Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
-- Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 7: Gjeld, total risiko og systematisk risiko
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 8: Gjeldgrad og verdi i perfekte kapitalmarkeder
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 9: Skatt
-
-**Læringsmål:**
-
-- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
-- Definere et nøytralt skattesystem ved toleddsskatt.
-- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
-- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
-- Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
----
-
-class: inverse, center, middle
-
-# Forelesning 10: Dividende
-
-**Læringsmål:**
-
----
-
-class: inverse, center, middle
-
-
-# Forelesning 11: Opsjoner
-
-**Læringsmål:**
-
-- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
-- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
-- Redegjøre for teori og empiri om dividendens signalfunksjon.
-- Forklare hvorfor dividende kan påvirke agentkostnader.
-- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 12: Finansielle instrumenter til påvirking av kontantstrømmer
-
-**Læringsmål:**
-
-- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
-- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
-- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
-- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
-- Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
-- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
-
----
-
-class: inverse, center, middle
-
-# Forelesning 13: Repetisjon
-
-- Begrunne hvorfor risikostyring kan være viktig.
-- Redegjøre for viktige risikokilder.
-- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
-- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
-- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
-- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
-
----
 
 
 
