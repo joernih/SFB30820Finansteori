@@ -28,3 +28,10 @@ sqrt(sum(df_eks_2_1_w$wvar))
 
 ## Metode 2
 # Portefølje: 3-N
+m <- as.matrix(df_eks_2_1[,(3:4)])
+v <- as.vector(df_eks_2_1[,(2)])
+cov.wt(m,v)$cov
+
+?cov.wt
+
+

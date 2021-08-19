@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c49640e495444fbd89105449585d774a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a924579c7b68428ca68f2671754fa28c","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-18)
+### 2021/08/12 (updated: 2021-08-19)
 
 ---
 
@@ -755,7 +755,7 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ---
 
-## Måling av risiko enkeltvis
+## Måling av risiko isolert
 
 **Eksempel 2.1**
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
@@ -792,18 +792,18 @@ Std(r_p)=\sqrt{Var(r_p)}
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-Repetisjon: Ved bruk av metode 1 under første forelesning har vi at `\(E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=00.00\)` og `\(E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.00\)`.
+Repetisjon: Ved bruk av metode 1 under første forelesning har vi at `\(E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11\)` og `\(E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23\)`.
 
----
+Det gir oss
 
 Fond **A**
 `\begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
+Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013
 \end{equation*}`
 
 Fond **B**
 `\begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2  
+Var(r_a) =0.2[0.05-0.23]^2+0.5[0.016-0.20]^2+0.3[0.016-0.40]^2=0.0156
 \end{equation*}`
 
 ---
@@ -812,17 +812,35 @@ Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2
 
 Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)` kan måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 
+
+```r
+library(dplyr)
+# Portefølje: 1-2
+w &lt;- c(0.25,0.75)
+## Metode 1
+df_eks_2_1_w &lt;- df_eks_2_1 %&gt;%
+  dplyr::mutate(wa=w[1],wb=w[2]) %&gt;%
+  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
+
+ex_c &lt;- c(df_eks_2_1_w$avk_c%*%df_eks_2_1_w$prob)
+vx_c &lt;- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
+# Covarnaise missing
+```
+
 **Metode 1**
 `\begin{equation*}
-Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2 
+Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.00716875
 \end{equation*}`
 
 **Metode 2**
 Vi starter først med
 `\begin{equation*}
-Var(r_c)=
+Var(r_c) =1/2+1/2+2(1/2)^2=0.00716875
 \end{equation*}`
-
+Siden vi har at
+`\begin{equation*}
+Cov(r_a,r_b) = 0.2[0.016-0.02][0.016-0.02]+0.5[0.016-0.02][0.016-0.02]+0.3[0.016-0.02][0.016-0.02]=1
+\end{equation*}`
 ---
 
 **Øvelse:** Sett opp Excel ....

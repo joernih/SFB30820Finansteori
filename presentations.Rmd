@@ -440,7 +440,7 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ---
 
-## Måling av risiko enkeltvis
+## Måling av risiko isolert
 
 **Eksempel 2.1**
 ```{r, echo=F}
@@ -458,18 +458,18 @@ vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
 ```
 
-Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=00.00$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.00$.
+Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
----
+Det gir oss
 
 Fond **A**
 \begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0013
+Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013
 \end{equation*}
 
 Fond **B**
 \begin{equation*}
-Var(r_a) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.0156
+Var(r_a) =0.2[0.05-0.23]^2+0.5[0.016-0.20]^2+0.3[0.016-0.40]^2=0.0156
 \end{equation*}
 
 ---
