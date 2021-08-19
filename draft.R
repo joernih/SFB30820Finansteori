@@ -48,15 +48,39 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
 	a <- data.frame(w=w) %>% 
 		dplyr::mutate(r=x) %>%
- 		dplyr::mutate(ep=w*10+(1-w)*5) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
  		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
 
-plotwf <- plotw %>% dplyr::filter(r==-1)
+plotwf <- plotw %>% dplyr::group_by(r)	
+#	dplyr::filter(r==-1)
 str(plotwf)
-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep)) + ggplot2::geom_point()
+ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point()
 
 plot(plotwf$vp,plotwf$ep)
 
+set.seed(1)
+mydf <- data.frame(
+  group = sample(letters[1:4], 50, replace = TRUE),
+  x = runif(50, 0, 7),
+  y = runif(50, 0, 7)
+)
+View(mydf)
+
+ggplot(data=mydf, aes(x=x, y=y, group = group, colour = group)) + geom_line() 
+
+lattice::xyplot(y ~ x, groups=mydf$group, data = mydf, 
+       auto.key = list(corner = c(0, .98)), cex = 1.5)
+
+
+mdf <- read.table( text="Company   2011   2013  2011   2013  2011   2013
+Company1  300    350   290    300   295    290
+Company2  320    430   305    301   300    400
+Company3  310    420   400    305   400    410", header = TRUE, check.names=FALSE )
+
+library(ggplot2)
+        ggplot(data=x, aes(x=Year, y=value, group = Company, colour = Company)) +
+          geom_line() +
+          geom_point( size=4, shape=21, fill="white")
 
