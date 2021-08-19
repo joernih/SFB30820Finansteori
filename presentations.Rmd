@@ -523,6 +523,8 @@ Std(r_c)=\sqrt(0.001975)=0.044
 0.3*(0.06-0.11)*(0.40-0.23)
 #
 (1/2)^2*(0.0013)+(1/2)^2*(0.0156)-2*(1/2)*(1/2)*0.0045
+cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
+	   (df_eks_2_1_w$avk_b-ex_b))%*%df_eks_2_1_w$prob)
 #m <- as.matrix(df_eks_2_1_w[,c(3,4)])
 #v <- as.vector(df_eks_2_1_w[,c(2)])
 #cov.wt(m,v)$cov
@@ -622,7 +624,7 @@ Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
 
 - Varians n-fonds
 \begin{equation}
-Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\sum_{i=1}^{N}\sum_{i=j}^{N}w_iw_jStd(i)Std(j)Korr(i,j)
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}
 
 ---

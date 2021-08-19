@@ -32,18 +32,25 @@ c <-  cov.wt(m,v)$cov
 sum(as.vector(c))
 
 # Portefølje: 3-N
-<<<<<<< HEAD
 m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,v)$cov
 
-?cov.wt
 
-
-=======
-
-cpn <- function(m=NULL,p=NULL){
-	c <-  cov.wt(m,v)$cov
-	sum(as.vector(c))
+cp2 <- function(v=NULL,w=NULL){
+ 	ex <- 0.10	
+ 	cx <- 0.10	
+	c(ex,cx)
 }
->>>>>>> be732c0b182483950dc774968c880425e4d874b4
+
+
+plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+w <- seq(0,1,0.1)
+			a <- data.frame(w=w) %>% dplyr::mutate(r=x)
+			 }
+)
+123
+2334+123
+w <- seq(0,1,0.01)
+w
+?map
