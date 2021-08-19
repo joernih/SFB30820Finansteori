@@ -45,12 +45,11 @@ cp2 <- function(v=NULL,w=NULL){
 
 
 plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
-w <- seq(0,1,0.1)
-			a <- data.frame(w=w) %>% dplyr::mutate(r=x)
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
-123
-2334+123
-w <- seq(0,1,0.01)
-w
-?map
+View(plotw)
