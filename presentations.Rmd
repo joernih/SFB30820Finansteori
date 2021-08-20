@@ -823,6 +823,7 @@ knitr::knit_exit()
 
 
 
+?cor
 
 
 
@@ -831,6 +832,4 @@ knitr::knit_exit()
 
 
 
-
-
-
+[abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)

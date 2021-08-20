@@ -91,12 +91,11 @@ library(ggplot2)
 # Portefølje: 3-N
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
 #                         prob=c(0.2,0.5,0.3),
-                         prob=c(1/3,1/3,1/3),
+                         prob=c(0.2,0.5,0.3),
                          avk_a=c(0.16,0.12,0.06),
                          avk_b=c(0.05,0.20,0.40)
                          )
 m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
-cov.wt(m,v)
+cov.wt(m,wt=v,method="ML")
 ########################################################################################
-
