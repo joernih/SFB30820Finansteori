@@ -21,6 +21,9 @@ df_eks_2_1_w <- df_eks_2_1 %>%
   dplyr::mutate(wvar=dev^2*prob)
 
 
+head(df_eks_2_1_w)
+
+
 htmlTable(df_eks_2_1_w)
 sum(df_eks_2_1_w$ev)
 sum(df_eks_2_1_w$wvar)
@@ -57,7 +60,7 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 plotwf <- plotw %>% dplyr::group_by(r)	
 #	dplyr::filter(r==-1)
 str(plotwf)
-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point()
+ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
 
 plot(plotwf$vp,plotwf$ep)
 
@@ -84,4 +87,16 @@ library(ggplot2)
         ggplot(data=x, aes(x=Year, y=value, group = Company, colour = Company)) +
           geom_line() +
           geom_point( size=4, shape=21, fill="white")
+########################################################################################
+# Portefølje: 3-N
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+#                         prob=c(0.2,0.5,0.3),
+                         prob=c(1/3,1/3,1/3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
+m <- as.matrix(df_eks_2_1[,(3:4)])
+v <- as.vector(df_eks_2_1[,(2)])
+cov.wt(m,v)
+########################################################################################
 
