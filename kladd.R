@@ -21,14 +21,6 @@ df_eks_2_1_w <- df_eks_2_1 %>%
   dplyr::mutate(wvar=dev^2*prob)
 
 
-head(df_eks_2_1_w)
-
-
-htmlTable(df_eks_2_1_w)
-sum(df_eks_2_1_w$ev)
-sum(df_eks_2_1_w$wvar)
-sqrt(sum(df_eks_2_1_w$wvar))
-
 ## Metode 2
 v <-as.vector(df_eks_2_1_w[,2])
 m <-as.matrix(df_eks_2_1_w[,3:4])
@@ -40,11 +32,23 @@ m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,v)$cov
 
-
-cp2 <- function(v=NULL,w=NULL){
- 	ex <- 0.10	
- 	cx <- 0.10	
-	c(ex,cx)
+############## Here now ################
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.2,0.5,0.3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
+vpn <- function(df=df_eks_2_1[,c(2:4)]){
+	m <- as.matrix(df[,(2:3)])
+	v <- as.vector(df[,(1)])
+        w <- c(1/2,1/2)
+	covall <- cov.wt(m,v,method="ML")
+	varp <- w^2*diag(as.matrix(covall$cov))
+	covp <- 
+	(m2 <- matrix(1:20, 4, 5))
+	lower.tri(m2)
+	m2[lower.tri(m2)] <- NA
+	m2
 }
 
 
