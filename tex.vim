@@ -113,7 +113,8 @@ set belloff=all
 set clipboard=unnamedplus
 set directory=~/gitclones/homepageJIH/external/sessions/swap/
 set fileencodings=ucs-bom,utf-8,default,latin1
-set helplang=en
+set helplang=nb
+set pyxversion=3
 set ruler
 set runtimepath=~/.vim,~/.vim/pack/tpope/start/speeddating,~/.vim/plugged/AutoComplPop,~/.vim/plugged/vimtex,~/.vim/plugged/fzf,~/.vim/plugged/Nvim-R,~/.vim/plugged/vim-floaterm,~/.vim/plugged/ncm2,~/.vim/plugged/vim-hug-neovim-rpc,~/.vim/plugged/UltiSnips,~/.vim/plugged/ncm2-ultisnips,~/.vim/plugged/Vundle.vim,~/.vim/plugged/vim-matlab,~/.vim/plugged/vim-orgmode,~/.vim/plugged/popup.nvim,~/.vim/plugged/plenary.nvim,/usr/share/vim/vimfiles,/usr/share/vim/vim82,/usr/share/vim/vimfiles/after,~/.vim/after,~/.vim/plugged/vimtex/after,~/.vim/plugged/UltiSnips/after,~/.vim/bundle/Vundle.vim
 set shell=zsh
@@ -132,18 +133,9 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd dagens.Rmd
-edit dagens.Rmd
+$argadd draft.R
+edit draft.R
 argglobal
-noremap <buffer> <silent> ,gN :call b:PreviousRChunk()
-noremap <buffer> <silent> ,gn :call b:NextRChunk()
-noremap <buffer> <silent> ,ca :call b:SendChunkToR("echo", "down")
-noremap <buffer> <silent> ,cd :call b:SendChunkToR("silent", "down")
-noremap <buffer> <silent> ,ce :call b:SendChunkToR("echo", "stay")
-noremap <buffer> <silent> ,cc :call b:SendChunkToR("silent", "stay")
-vnoremap <buffer> <silent> ,kn :call RKnit()
-nnoremap <buffer> <silent> ,kn :call RKnit()
-onoremap <buffer> <silent> ,kn :call RKnit()
 vnoremap <buffer> <silent> ,rd :call RSetWD()
 nnoremap <buffer> <silent> ,rd :call RSetWD()
 onoremap <buffer> <silent> ,rd :call RSetWD()
@@ -224,6 +216,7 @@ nnoremap <buffer> <silent> ,rl :call g:SendCmdToR("ls()")
 onoremap <buffer> <silent> ,rl :call g:SendCmdToR("ls()")
 noremap <buffer> <silent> ,ud :call RAction("undebug")
 noremap <buffer> <silent> ,bg :call RAction("debug")
+noremap <buffer> <silent> ,su :call SendAboveLinesToR()
 let s:cpo_save=&cpo
 set cpo&vim
 noremap <buffer> <silent> ,r<Right> :call RSendPartOfLine("right", 0)
@@ -234,7 +227,6 @@ nnoremap <buffer> <silent> ,o :call SendLineToRAndInsertOutput()0
 onoremap <buffer> <silent> ,o :call SendLineToRAndInsertOutput()0
 noremap <buffer> <silent> ,d :call SendLineToR("down")0
 noremap <buffer> <silent> ,l :call SendLineToR("stay")
-noremap <buffer> <silent> ,ch :call SendFHChunkToR()
 noremap <buffer> <silent> ,pa :call SendParagraphToR("echo", "down")
 noremap <buffer> <silent> ,pd :call SendParagraphToR("silent", "down")
 noremap <buffer> <silent> ,pe :call SendParagraphToR("echo", "stay")
@@ -268,6 +260,10 @@ noremap <buffer> <silent> ,ba :call SendMBlockToR("echo", "down")
 noremap <buffer> <silent> ,bd :call SendMBlockToR("silent", "down")
 noremap <buffer> <silent> ,be :call SendMBlockToR("echo", "stay")
 noremap <buffer> <silent> ,bb :call SendMBlockToR("silent", "stay")
+noremap <buffer> <silent> ,ks :call RSpin()
+noremap <buffer> <silent> ,ao :call ShowRout()
+noremap <buffer> <silent> ,ae :call SendFileToR("echo")
+noremap <buffer> <silent> ,aa :call SendFileToR("silent")
 vnoremap <buffer> <silent> ,; :call MovePosRCodeComment("selection")
 nnoremap <buffer> <silent> ,; :call MovePosRCodeComment("normal")
 onoremap <buffer> <silent> ,; :call MovePosRCodeComment("normal")
@@ -295,7 +291,6 @@ onoremap <buffer> <silent> ,rf :call StartR("R")
 vnoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
 nnoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
 onoremap <buffer> <silent> <Plug>RClearAll :call RClearAll()
-inoremap <buffer> <silent> ` :call RWriteRmdChunk()a
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
@@ -314,7 +309,7 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal comments=:#',:###,:##,:#
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
@@ -332,8 +327,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'rmd'
-setlocal filetype=rmd
+if &filetype != 'r'
+setlocal filetype=r
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -346,17 +341,17 @@ setlocal foldmethod=manual
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
-setlocal formatexpr=FormatRmd()
-setlocal formatoptions=tcqln
-setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^\\s*[-*+]\\s\\+
+setlocal formatexpr=
+setlocal formatoptions=cq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetRmdIndent()
-setlocal indentkeys=0{,0},<:>,!^F,o,O,e
+setlocal indentexpr=GetRIndent()
+setlocal indentkeys=0{,0},:,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,.
 setlocal keywordprg=
@@ -401,8 +396,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'rmd'
-setlocal syntax=rmd
+if &syntax != 'r'
+setlocal syntax=r
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -424,14 +419,14 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+let s:l = 1 - ((0 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
 tabnext 1
-badd +0 dagens.Rmd
+badd +0 draft.R
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

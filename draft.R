@@ -1,3 +1,4 @@
+# Start
 library(htmlTable)
 library(magrittr)
 library(xaringan)
@@ -73,7 +74,7 @@ ggplot(data=mydf, aes(x=x, y=y, group = group, colour = group)) + geom_line()
 lattice::xyplot(y ~ x, groups=mydf$group, data = mydf, 
        auto.key = list(corner = c(0, .98)), cex = 1.5)
 
-
+#
 mdf <- read.table( text="Company   2011   2013  2011   2013  2011   2013
 Company1  300    350   290    300   295    290
 Company2  320    430   305    301   300    400
