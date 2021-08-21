@@ -22,9 +22,14 @@ df_eks_2_1_w <- df_eks_2_1 %>%
 
 
 ## Metode 2
-v <-as.vector(df_eks_2_1_w[,2])
-m <-as.matrix(df_eks_2_1_w[,3:4])
-c <-  cov.wt(m,v)$cov
+
+
+
+
+
+v <- as.vector(df_eks_2_1_w[,2])
+m <- as.matrix(df_eks_2_1_w[,3:4])
+c <- cov.wt(m,v)$cov
 sum(as.vector(c))
 
 # Portefølje: 3-N
@@ -38,6 +43,8 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          avk_a=c(0.16,0.12,0.06),
                          avk_b=c(0.05,0.20,0.40)
                          )
+c(as.matrix(df_eks_2_1))
+
 vpn <- function(df=df_eks_2_1[,c(2:4)]){
 	m <- as.matrix(df[,(2:3)])
 	v <- as.vector(df[,(1)])
@@ -47,11 +54,12 @@ vpn <- function(df=df_eks_2_1[,c(2:4)]){
 	covp <- 
 	(m2 <- matrix(1:20, 4, 5))
 	lower.tri(m2)
-	m2[lower.tri(m2)] <- NA
-	m2
+	to <- m2[lower.tri(m2)] 
+	c(m2)
 }
 
-
+w <- c(1/5,2/5,3/5)
+w%*%t(w)
 plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
 	a <- data.frame(w=w) %>% 

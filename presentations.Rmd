@@ -566,6 +566,7 @@ Skiller melllom *risiknøytral* og *risikoaversjon* aktør
 Risikonøytral kun opptatt av forventet avkastning (+)
 
 Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+
 ---
 
 ### Risikokompenasjon
@@ -583,7 +584,20 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ---
 
-### Samvariasjon
+### samvariasjonen
+
+$$
+Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
+$$
+
+Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
+
+Som gjør at vi kan skrive
+\begin{equation}
+Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+\end{equation}
+
+---
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-06.png")
@@ -824,12 +838,4 @@ knitr::knit_exit()
 
 
 ?cor
-
-
-
-
-
-
-
-
 [abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)
