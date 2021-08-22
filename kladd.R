@@ -23,7 +23,7 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	totv <- sum(varp)+2*sum(covp)
 }
 ## Data frame 
-plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
 	a <- data.frame(w=w) %>% 
 		dplyr::mutate(r=x) %>%
@@ -32,7 +32,9 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 			 }
 )
 ## Plot function
-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+plotly::ggplotly(gg)
+
 ############## 3-n variable case ################
 ## Input
 
