@@ -582,8 +582,7 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ---
 
-## Endring av samvariasjon og porteføljevekter
-
+## Endring av porteføljevekter og samvariasjon
 
 ### Porteføljevekter
 
@@ -594,16 +593,36 @@ knitr::include_graphics("pensum/figurer-06.png")
 
 .panelset[
 .panel[.panel-name[Tabell]
-<br>
-<br>
+```{r, echo=F}
+htmlTable(df_eks_2_1)
+```
 ]
-.panel[.panel-name[R-kode]
-<br>
-<br>
+.panel[.panel-name[R-kode 123]
+```{r,echo=F}
+head(iris)
+vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method="ml")
+	varp <- diag(as.matrix(covall$cov))
+	covp <- covall[lower.tri(covall$cov)] 
+}
+## Data frame 
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+			 }
+)
+a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+```
 ]
 .panel[.panel-name[Plot]
-<br>
-<br>
+```{r}
+a
+```
 ]
 ]
 
@@ -630,22 +649,40 @@ knitr::include_graphics("pensum/figurer-07.png")
 ```
 
 ---
-
 .panelset[
 .panel[.panel-name[Tabell]
-<br>
-<br>
+```{r, echo=F}
+htmlTable(df_eks_2_1)
+```
 ]
-.panel[.panel-name[R-kode]
-<br>
-<br>
+.panel[.panel-name[R-kode 123]
+```{r,echo=F}
+head(iris)
+vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method="ml")
+	varp <- diag(as.matrix(covall$cov))
+	covp <- covall[lower.tri(covall$cov)] 
+}
+## Data frame 
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+			 }
+)
+a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+```
 ]
 .panel[.panel-name[Plot]
-<br>
-<br>
+```{r}
+a
+```
 ]
 ]
-
 ---
 
 class: inverse, center, middle
