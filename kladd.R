@@ -13,12 +13,14 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          )
 
 ## Function for varianse
-vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method="ml")
-	varp <- diag(as.matrix(covall$cov))
-	covp <- covall[lower.tri(covall$cov)] 
+	covall <- cov.wt(m,v,method='ML')
+	varamat <- covall$cov*(wp%*%t(wp))
+	varp <- diag(as.matrix(varamat))
+	covp <- covall$cov[lower.tri(covall$cov)] 
+	totv <- sum(varp)+2*sum(covp)
 }
 ## Data frame 
 plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
