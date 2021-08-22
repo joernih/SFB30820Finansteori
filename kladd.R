@@ -1,8 +1,86 @@
 # Start
+############## here now ################
 library(htmlTable)
 library(magrittr)
 library(xaringan)
 library(dplyr)
+############## 2-variable case ################
+## Input
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.2,0.5,0.3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
+
+## Function for varianse
+vpn <- function(df=df_eks_2_1[,c(2:4)]){
+	m <- as.matrix(df[,(2:3)])
+	v <- as.vector(df[,(1)])
+        w <- c(1/2,1/2)
+	w <- c(1/5,2/5,3/5)
+	w%*%t(w)
+	covall <- cov.wt(m,v,method="ml")
+	varp <- w^2*diag(as.matrix(covall$cov))
+	covp <- 
+	(m2 <- matrix(1:20, 4, 5))
+	lower.tri(m2)
+	to <- m2[lower.tri(m2)] 
+	c(m2)
+}
+## Plot function for weight and correlation
+plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+			 }
+)
+############## 3-n variable case ################
+## Input
+
+## Function for varianse
+
+## Plot function for weight and correlation
+
+############## here now ################
+
+plotwf <- plotw %>% dplyr::group_by(r)	
+#	dplyr::filter(r==-1)
+str(plotwf)
+ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+
+plot(plotwf$vp,plotwf$ep)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Data input
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          prob=c(0.2,0.5,0.3),
@@ -37,7 +115,7 @@ m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,v)$cov
 
-############## Here now ################
+############## here now ################
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          prob=c(0.2,0.5,0.3),
                          avk_a=c(0.16,0.12,0.06),
@@ -49,7 +127,7 @@ vpn <- function(df=df_eks_2_1[,c(2:4)]){
 	m <- as.matrix(df[,(2:3)])
 	v <- as.vector(df[,(1)])
         w <- c(1/2,1/2)
-	covall <- cov.wt(m,v,method="ML")
+	covall <- cov.wt(m,v,method="ml")
 	varp <- w^2*diag(as.matrix(covall$cov))
 	covp <- 
 	(m2 <- matrix(1:20, 4, 5))
