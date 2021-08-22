@@ -13,21 +13,14 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          )
 
 ## Function for varianse
-vpn <- function(df=df_eks_2_1[,c(2:4)]){
-	m <- as.matrix(df[,(2:3)])
-	v <- as.vector(df[,(1)])
-        w <- c(1/2,1/2)
-	w <- c(1/5,2/5,3/5)
-	w%*%t(w)
+vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
 	covall <- cov.wt(m,v,method="ml")
-	varp <- w^2*diag(as.matrix(covall$cov))
-	covp <- 
-	(m2 <- matrix(1:20, 4, 5))
-	lower.tri(m2)
-	to <- m2[lower.tri(m2)] 
-	c(m2)
+	varp <- diag(as.matrix(covall$cov))
+	covp <- covall[lower.tri(covall$cov)] 
 }
-## Plot function for weight and correlation
+## Data frame 
 plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
 	a <- data.frame(w=w) %>% 
@@ -36,6 +29,8 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
  		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
+## Plot function
+ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
 ############## 3-n variable case ################
 ## Input
 
