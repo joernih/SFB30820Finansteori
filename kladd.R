@@ -170,7 +170,11 @@ Company1  300    350   290    300   295    290
 Company2  320    430   305    301   300    400
 Company3  310    420   400    305   400    410", header = TRUE, check.names=FALSE )
 
-library(ggplot2)
+  1, 2, 3, 4 ), nrow=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- hadamard.prod( x, y ), 2, 3, 4 ), NROW=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- hadamard.prod( x, y )ibrary(ggplot2)
         ggplot(data=x, aes(x=Year, y=value, group = Company, colour = Company)) +
           geom_line() +
           geom_point( size=4, shape=21, fill="white")
@@ -186,3 +190,10 @@ m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,wt=v,method="ML")
 ########################################################################################
+
+x <- matrix( c( 1, 2, 3, 4 ), nrow=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- matrixcalc::hadamard.prod( x, y )
+z
+x*y
+
