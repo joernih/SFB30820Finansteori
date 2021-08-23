@@ -13,15 +13,17 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          )
 
 ## Function for varianse
-vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method="ml")
-	varp <- diag(as.matrix(covall$cov))
-	covp <- covall[lower.tri(covall$cov)] 
+	covall <- cov.wt(m,v,method='ML')
+	varamat <- covall$cov*(wp%*%t(wp))
+	varp <- diag(as.matrix(varamat))
+	covp <- covall$cov[lower.tri(covall$cov)] 
+	totv <- sum(varp)+2*sum(covp)
 }
 ## Data frame 
-plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
 	a <- data.frame(w=w) %>% 
 		dplyr::mutate(r=x) %>%
@@ -30,7 +32,9 @@ plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 			 }
 )
 ## Plot function
-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+plotly::ggplotly(gg)
+
 ############## 3-n variable case ################
 ## Input
 
@@ -52,7 +56,7 @@ plot(plotwf$vp,plotwf$ep)
 
 
 
-
+install.packages("ggplot2")
 
 
 
@@ -168,7 +172,11 @@ Company1  300    350   290    300   295    290
 Company2  320    430   305    301   300    400
 Company3  310    420   400    305   400    410", header = TRUE, check.names=FALSE )
 
-library(ggplot2)
+  1, 2, 3, 4 ), nrow=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- hadamard.prod( x, y ), 2, 3, 4 ), NROW=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- hadamard.prod( x, y )ibrary(ggplot2)
         ggplot(data=x, aes(x=Year, y=value, group = Company, colour = Company)) +
           geom_line() +
           geom_point( size=4, shape=21, fill="white")
@@ -184,3 +192,10 @@ m <- as.matrix(df_eks_2_1[,(3:4)])
 v <- as.vector(df_eks_2_1[,(2)])
 cov.wt(m,wt=v,method="ML")
 ########################################################################################
+
+x <- matrix( c( 1, 2, 3, 4 ), nrow=2, byrow=TRUE )
+y <- matrix( c( 2, 4, 6, 8 ), nrow=2, byrow=TRUE )
+z <- matrixcalc::hadamard.prod( x, y )
+z
+x*y
+

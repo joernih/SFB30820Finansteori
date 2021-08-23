@@ -398,6 +398,11 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+- Teori: Risikomotivasjon
+- Figurer: 
+- Formler: 
+- Kode
 ---
 
 ## Prosjektrisiko for eierne vs. bedriften
@@ -467,13 +472,13 @@ Det gir oss
 Fond **A**
 \begin{equation*}
 Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013 \\
-Std(r_a)=\sqrt(0.0013)=0.03605551
+Std(r_a)=\sqrt{0.0013}=0.03605551
 \end{equation*}
 
 Fond **B**
 \begin{equation*}
 Var(r_b) =0.2[0.05-0.23]^2+0.5[0.20-0.23]^2+0.3[0.40-0.23]^2=0.0156 \\
-Std(r_b)=\sqrt(0.0156)=0.1249
+Std(r_b)=\sqrt{0.0156}=0.1249
 \end{equation*}
 
 ---
@@ -503,7 +508,7 @@ Da kan vi måle risikoen til det sammensate fondet C ved bruk av 2 metoder
 **Metode 1**
 \begin{equation*}
 Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.001975\\
-Std(r_c)=\sqrt(0.001975)=0.044
+Std(r_c)=\sqrt{0.001975}=0.044
 \end{equation*}
 
 **Metode 2**
@@ -514,7 +519,7 @@ Siden vi har at
 \begin{equation*}
 Cov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
 0.3[0.06-0.11][0.40-0.23]=-0.045\\
-Std(r_c)=\sqrt(0.001975)=0.044
+Std(r_c)=\sqrt{0.001975}=0.044
 \end{equation*}
 
 ```{r, echo=F, eval=F}
@@ -577,14 +582,53 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ---
 
-## Endring av samvariasjon og porteføljevekter
-
+## Endring av porteføljevekter og samvariasjon
 
 ### Porteføljevekter
 
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-06.png")
+```
 ---
 
-### samvariasjonen
+.panelset[
+.panel[.panel-name[Tabell]
+```{r, echo=F}
+htmlTable(df_eks_2_1)
+```
+]
+.panel[.panel-name[R-kode 123]
+```{r,echo=F}
+head(iris)
+vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method="ml")
+	varp <- diag(as.matrix(covall$cov))
+	covp <- covall[lower.tri(covall$cov)] 
+}
+## Data frame 
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+			 }
+)
+a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+```
+]
+.panel[.panel-name[Plot]
+```{r}
+a
+```
+]
+]
+
+---
+
+### Samvariasjonen
 
 $$
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
@@ -599,15 +643,46 @@ Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 
 ---
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-06.png")
-```
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
 ```
 
-
+---
+.panelset[
+.panel[.panel-name[Tabell]
+```{r, echo=F}
+htmlTable(df_eks_2_1)
+```
+]
+.panel[.panel-name[R-kode 123]
+```{r,echo=F}
+head(iris)
+vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method="ml")
+	varp <- diag(as.matrix(covall$cov))
+	covp <- covall[lower.tri(covall$cov)] 
+}
+## Data frame 
+plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+	w <- seq(0,1,0.1)
+	a <- data.frame(w=w) %>% 
+		dplyr::mutate(r=x) %>%
+ 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
+ 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+			 }
+)
+a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+```
+]
+.panel[.panel-name[Plot]
+```{r}
+a
+```
+]
+]
 ---
 
 class: inverse, center, middle
@@ -826,12 +901,9 @@ knitr::knit_exit()
 1. nevne tre finansielle instrumenter som brukes i risikostyring.
 
 **Huskeliste til neste forelesning**
-- DWM-tables
-- Pdf-files out of Xaringam
-- Temaer viske ut
-- Anbefalte oppgaver
-- Zoom-kamera
-- Antall studenter
+- Målenhet på den ene oppgaven
+- Eksamensdato
+- Tillitsvalgte
 
 
 
