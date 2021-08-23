@@ -1,3 +1,20 @@
+df <- data.frame(dose=c("D0.5", "D1", "D2"),
+                len=c(4.2, 10, 29.5))
+
+ggplot(data=df, aes(x=dose, y=len)) + geom_bar(stat="identity")
+
+
+dfn12 <- data.frame(prob=c(0.20,30,50),
+		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
+		    tilstand=c(1,2,3),
+		    x=c(-30,5,30),
+		    y=c(-60,5,60),
+		    z=c(40,30,0))
+g1 <- ggplot(data=dfn12, aes(x=beskr, y=x)) + geom_bar(stat="identity")
+g2 <- ggplot(data=dfn12, aes(x=beskr, y=y)) + geom_bar(stat="identity")
+g3 <- ggplot(data=dfn12, aes(x=beskr, y=z)) + geom_bar(stat="identity")
+gridExtra::grid.arrange(g1,g2,g3)
+ggplot(dfn12, aes(x=tilstand, y=x)) + geom_bar()
 # Start
 ############## here now ################
 library(htmlTable)
@@ -23,12 +40,12 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	covp <- covall$cov[lower.tri(covall$cov)] 
 	totv <- sum(varp)+2*sum(covp)
 }
-## Data frame 
+## data frame 
 plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
+	covall <- cov.wt(m,v,method='ml')
 	avk <- as.vector(covall$center)
 	kov <- covall$cov[lower.tri(covall$cov)] 
 	var <- as.vector(diag(as.matrix(covall$cov)))
