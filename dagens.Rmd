@@ -304,7 +304,8 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
@@ -321,7 +322,7 @@ plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 ```
 ]
 .panel[.panel-name[Figur]
-```{r}
+```{r, echo=F}
 gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 plotly::ggplotly(gg)
 ```
@@ -402,7 +403,7 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 
 ]
 .panel[.panel-name[Figur]
-```{r}
+```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
 plotly::ggplotly(ggf)
 ```
