@@ -587,6 +587,8 @@ Vi kan skille melllom *risiknøytrale* og *risikoaversje* aktører
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
 	- Nordover og vestover i et x-y diagram
 
+I dette kurset legger vi til grunn at alle aktørene er risikoaversje (krever kompensasjon ...), men at graden av risikoaversjon kan variere mellom ulike aktører.
+
 ---
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
@@ -595,16 +597,18 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ---
 
-### Risikokompenasjon
+### Risikokompenasjon (noe empiri)
 
+Finner man igjen dette empirisk
 
 ---
 
-Oslo børs
+#### Veldiversifisert portefølje
 
 ```{r}
 
 ```
+#### Udiversifisert portefølje
 
 ---
 
