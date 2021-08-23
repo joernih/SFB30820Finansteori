@@ -24,8 +24,7 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	totv <- sum(varp)+2*sum(covp)
 }
 ## Data frame 
-r=-1
-plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
@@ -33,7 +32,7 @@ plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	avk <- as.vector(covall$center)
 	kov <- covall$cov[lower.tri(covall$cov)] 
 	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
+	avkdf <- tibble(corr=r,w1=1-w, w2=w) %>%
  		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
  		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
  		dplyr::mutate(stdavk=sqrt(varians))
@@ -42,6 +41,7 @@ plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 View(plotwf)
 plot(x=plotwf$stdavk,y=plotwf$forvavk)
 ## Plot function
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
 gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 gg
 plotly::ggplotly(gg)

@@ -625,29 +625,26 @@ htmlTable(df_eks_2_1)
 ]
 .panel[.panel-name[R-kode 123]
 ```{r,echo=F}
-head(iris)
-vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method="ml")
-	varp <- diag(as.matrix(covall$cov))
-	covp <- covall[lower.tri(covall$cov)] 
-}
-## Data frame 
-plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
-	w <- seq(0,1,0.1)
-	a <- data.frame(w=w) %>% 
-		dplyr::mutate(r=x) %>%
- 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
- 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+	covall <- cov.wt(m,v,method='ML')
+	avk <- as.vector(covall$center)
+	kov <- covall$cov[lower.tri(covall$cov)] 
+	var <- as.vector(diag(as.matrix(covall$cov)))
+	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
 			 }
 )
-a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 ```
 ]
 .panel[.panel-name[Plot]
 ```{r}
-a
+plotly::ggplotly(gg)
 ```
 ]
 ]
@@ -689,6 +686,7 @@ knitr::include_graphics("pensum/figurer-07.png")
 ```
 
 ---
+
 .panelset[
 .panel[.panel-name[Tabell]
 ```{r, echo=F}
@@ -697,32 +695,30 @@ htmlTable(df_eks_2_1)
 ]
 .panel[.panel-name[R-kode 123]
 ```{r,echo=F}
-head(iris)
-vpn <- function(df=df_eks_2_1,wp=c(1/5,2/5,3/5)){
+plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method="ml")
-	varp <- diag(as.matrix(covall$cov))
-	covp <- covall[lower.tri(covall$cov)] 
-}
-## Data frame 
-plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
-	w <- seq(0,1,0.1)
-	a <- data.frame(w=w) %>% 
-		dplyr::mutate(r=x) %>%
- 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
- 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+	covall <- cov.wt(m,v,method='ML')
+	avk <- as.vector(covall$center)
+	kov <- covall$cov[lower.tri(covall$cov)] 
+	var <- as.vector(diag(as.matrix(covall$cov)))
+	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
 			 }
 )
-a <-ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 ```
 ]
 .panel[.panel-name[Plot]
 ```{r}
-a
+plotly::ggplotly(gg)
 ```
 ]
 ]
+
 ---
 
 **Øvelse:** Forsøk å repliker følgende tabell i Excel
