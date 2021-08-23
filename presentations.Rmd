@@ -1,4 +1,4 @@
----
+﻿---
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
@@ -405,7 +405,7 @@ class: inverse, center, middle
 
 ## Prosjektrisiko for eierne vs. bedriften
 
-Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som makismerer verdien av egenkapitalen til eierne. 
+Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som maksimerer verdien av egenkapitalen til eierne. 
 
 ### Risiko for bedriften
 
@@ -422,10 +422,10 @@ De nye prosjektets bidrag til bedriftens kontantstrøm
 ### Risiko for eierne
 
 - Udeversifiserte eiere: 
-  - Ser forventet kontantstrømm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm
 
 - Veldiversifiserte eiere: 
-  - Ser forventet kontantstrømm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
 
 ---
 
@@ -519,7 +519,7 @@ vx_c <- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
 htmlTable(df_eks_2_1_w, header=c("Tilstand","Sansynlighet","Avk. A","Avk. B", "w_a","w_b","Avk. C"))
 ```
 
-Risikoen til dette sammensate fondet C kan måles ved bruk av både metode 1 og 2.
+Risikoen til det sammensatte fondet C kan måles ved bruk av både metode 1 og 2.
 
 ---
 
@@ -556,7 +556,7 @@ cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
 
 ---
 
-**Øvelse:** Ved bruk av Excel, forsøk å repliker resultatende fra følgende tabell
+**Øvelse:** Ved bruk av Excel, forsøk å replikere resultatene fra følgende tabell
 
 ```{r, echo=F}
 #0.2*(0.16-0.11)*(0.05-0.23)+
@@ -583,11 +583,11 @@ $Std(r_p)=$ `r sqrt(sum(df_eks_2_1_w$wvar))`
 
 ---
 
-## Risikoholdning og risikokompenasjon
+## Risikoholdning og risikokompensasjon
 
 ### Holdning
 
-Vi kan skille melllom *risiknøytrale* og *risikoaversje* aktører
+Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
 
 - Risikonøytral kun opptatt av forventet avkastning (+)
 	- Bedre ut: Nordover et diagram med risiko på x-aksen og forventet avkastning på y-aksen
@@ -627,7 +627,7 @@ htmlTable(udiportf, header=c("","Gjennomsnitt","Standardavvik"))
 **Hovedresultater fra undersøkelsen**
 
 1. Det er mye å hente ved diversifisering: Risikoen kan reduseres kraftig uten at du taper noe i form av lavere forventet avkastning
-2. Risikokompensjonen for en enkeltaksje er ikke knyttet til aksjens standardavvik (totalrisiko). Relevant risiko må derfor måles på andre måter.
+2. Risikokompensasjonen for en enkeltaksje er ikke knyttet til aksjens standardavvik (totalrisiko). Relevant risiko må derfor måles på andre måter.
 
 ---
 
@@ -721,7 +721,7 @@ knitr::include_graphics("pensum/figurer-07.png")
 
 ---
 
-**Øvelse:** Forsøk å repliker følgende tabell i Excel
+**Øvelse:** Forsøk å replikere følgende tabell i Excel
 
 .panelset[
 .panel[.panel-name[Tabell]
