@@ -477,10 +477,9 @@ vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
 ```
 
+Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
 ---
-
-Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
 Fond **A**
 \begin{equation*}
@@ -526,13 +525,14 @@ Std(r_c)=\sqrt{0.001975}=0.044
 
 **Metode 2**
 \begin{equation*}
-Var(r_c) =(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.045=0.001975
+Var(r_c) =(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.045=0.001975 \\
+Std(r_c)=\sqrt{0.001975}=0.044
 \end{equation*}
-Siden vi har at
+
+Hvor vi har benyttet at
 \begin{equation*}
 Cov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
-0.3[0.06-0.11][0.40-0.23]=-0.045\\
-Std(r_c)=\sqrt{0.001975}=0.044
+0.3[0.06-0.11][0.40-0.23]=-0.0045\\
 \end{equation*}
 
 ```{r, echo=F, eval=F}
@@ -714,7 +714,6 @@ a
 ```
 ]
 ]
-
 ---
 
 **Øvelse:** Forsøk å repliker følgende tabell i Excel

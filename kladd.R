@@ -5,11 +5,6 @@ library(magrittr)
 library(xaringan)
 library(dplyr)
 ############## 2-variable case ################
-
-df_eks_2_1_w <- df_eks_2_1 %>%
-  dplyr::mutate(wa=w[1],wb=w[2]) %>%
-  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
-
 ## Input
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          prob=c(0.2,0.5,0.3),
@@ -22,6 +17,7 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
 	covall <- cov.wt(m,v,method='ML')
+        cor(m[,1],m[,2])
 	varamat <- covall$cov*(wp%*%t(wp))
 	varp <- diag(as.matrix(varamat))
 	covp <- covall$cov[lower.tri(covall$cov)] 
@@ -29,19 +25,19 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 }
 ## Data frame 
 x=1
-plotwf <- seq(0.044) %>% purrr::map_dfr(function(x,df=df_eks_2_1){
+plotwf <- c(-1,0,1)[2] %>% purrr::map_dfr(function(x,df=df_eks_2_1){
 	w <- seq(0,1,0.1)
-	a <- df %>% 
- 		dplyr::mutate(ep=w) 
-		dplyr::mutate(w=w) %>% 
-		dplyr::mutate(r=x) %>%
- 		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
+	#x <- 0
+	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*0.11+w2*0.23) %>%
+ 		dplyr::mutate(varians=w1^2*0.0013+w2^2*0.0156) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
 			 }
 )
+View(plotwf)
 ## Plot function
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group=corr)) + ggplot2::geom_point() + ggplot2::geom_line()
 plotly::ggplotly(gg)
-a
 ############## 3-n variable case ################
 ## Input
 
