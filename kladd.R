@@ -5,6 +5,11 @@ library(magrittr)
 library(xaringan)
 library(dplyr)
 ############## 2-variable case ################
+
+df_eks_2_1_w <- df_eks_2_1 %>%
+  dplyr::mutate(wa=w[1],wb=w[2]) %>%
+  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb)
+
 ## Input
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          prob=c(0.2,0.5,0.3),
@@ -23,18 +28,20 @@ vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
 	totv <- sum(varp)+2*sum(covp)
 }
 ## Data frame 
-plotwf <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
+x=1
+plotwf <- seq(0.044) %>% purrr::map_dfr(function(x,df=df_eks_2_1){
 	w <- seq(0,1,0.1)
-	a <- data.frame(w=w) %>% 
+	a <- df %>% 
+ 		dplyr::mutate(ep=w) 
+		dplyr::mutate(w=w) %>% 
 		dplyr::mutate(r=x) %>%
- 		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
  		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
 ## Plot function
 gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
 plotly::ggplotly(gg)
-
+a
 ############## 3-n variable case ################
 ## Input
 
