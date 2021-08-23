@@ -1,21 +1,3 @@
-df <- data.frame(dose=c("D0.5", "D1", "D2"),
-                len=c(4.2, 10, 29.5))
-
-ggplot(data=df, aes(x=dose, y=len)) + geom_bar(stat="identity")
-
-
-dfn12 <- data.frame(prob=c(0.20,30,50),
-		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
-		    tilstand=c(1,2,3),
-		    x=c(-30,5,30),
-		    y=c(-60,5,60),
-		    z=c(40,30,0))
-g1 <- ggplot(data=dfn12, aes(x=beskr, y=x)) + geom_bar(stat="identity")
-g2 <- ggplot(data=dfn12, aes(x=beskr, y=y)) + geom_bar(stat="identity")
-g3 <- ggplot(data=dfn12, aes(x=beskr, y=z)) + geom_bar(stat="identity")
-gridExtra::grid.arrange(g1,g2,g3)
-ggplot(dfn12, aes(x=tilstand, y=x)) + geom_bar()
-# Start
 ############## here now ################
 library(htmlTable)
 library(magrittr)
@@ -28,26 +10,14 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          avk_a=c(0.16,0.12,0.06),
                          avk_b=c(0.05,0.20,0.40)
                          )
-
-## Function for varianse
-vpn <- function(df=df_eks_2_1,wp=c(2/5,3/5)){
-	v <- as.vector(df[,(2)])
-	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
-        cor(m[,1],m[,2])
-	varamat <- covall$cov*(wp%*%t(wp))
-	varp <- diag(as.matrix(varamat))
-	covp <- covall$cov[lower.tri(covall$cov)] 
-	totv <- sum(varp)+2*sum(covp)
-}
-## data frame 
+## data frame
 plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ml')
+	covall <- cov.wt(m,v,method='ML')
 	avk <- as.vector(covall$center)
-	kov <- covall$cov[lower.tri(covall$cov)] 
+	kov <- covall$cov[lower.tri(covall$cov)]
 	var <- as.vector(diag(as.matrix(covall$cov)))
 	avkdf <- tibble(corr=r,w1=1-w, w2=w) %>%
  		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
@@ -58,10 +28,10 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 View(plotwf)
 plot(x=plotwf$stdavk,y=plotwf$forvavk)
 ## Plot function
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-gg
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point()
 plotly::ggplotly(gg)
+ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point()
+plotly::ggplotly(ggf)
 ############## 3-n variable case ################
 ## Input
 
@@ -71,7 +41,7 @@ plotly::ggplotly(gg)
 
 ############## here now ################
 
-plotwf <- plotw %>% dplyr::group_by(r)	
+plotwf <- plotw %>% dplyr::group_by(r)
 #	dplyr::filter(r==-1)
 str(plotwf)
 ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
@@ -155,10 +125,10 @@ vpn <- function(df=df_eks_2_1[,c(2:4)]){
         w <- c(1/2,1/2)
 	covall <- cov.wt(m,v,method="ml")
 	varp <- w^2*diag(as.matrix(covall$cov))
-	covp <- 
+	covp <-
 	(m2 <- matrix(1:20, 4, 5))
 	lower.tri(m2)
-	to <- m2[lower.tri(m2)] 
+	to <- m2[lower.tri(m2)]
 	c(m2)
 }
 
@@ -166,14 +136,14 @@ w <- c(1/5,2/5,3/5)
 w%*%t(w)
 plotw <- seq(-1,1,0.1) %>% purrr::map_dfr(function(x){
 	w <- seq(0,1,0.1)
-	a <- data.frame(w=w) %>% 
+	a <- data.frame(w=w) %>%
 		dplyr::mutate(r=x) %>%
  		dplyr::mutate(ep=w*10+(1-w)*5+r) %>%
  		dplyr::mutate(vp=w^2*10^2+(1-w)^2*5^2)
 			 }
 )
 
-plotwf <- plotw %>% dplyr::group_by(r)	
+plotwf <- plotw %>% dplyr::group_by(r)
 #	dplyr::filter(r==-1)
 str(plotwf)
 ggplot2::ggplot(data=plotwf,ggplot2::aes(x=vp,y=ep, group=r)) + ggplot2::geom_point() + ggplot2::geom_line()
@@ -188,9 +158,9 @@ mydf <- data.frame(
 )
 View(mydf)
 
-ggplot(data=mydf, aes(x=x, y=y, group = group, colour = group)) + geom_line() 
+ggplot(data=mydf, aes(x=x, y=y, group = group, colour = group)) + geom_line()
 
-lattice::xyplot(y ~ x, groups=mydf$group, data = mydf, 
+lattice::xyplot(y ~ x, groups=mydf$group, data = mydf,
        auto.key = list(corner = c(0, .98)), cex = 1.5)
 
 #
@@ -226,3 +196,21 @@ z <- matrixcalc::hadamard.prod( x, y )
 z
 x*y
 
+df <- data.frame(dose=c("D0.5", "D1", "D2"),
+                 len=c(4.2, 10, 29.5))
+
+ggplot(data=df, aes(x=dose, y=len)) + geom_bar(stat="identity")
+
+
+dfn12 <- data.frame(prob=c(0.20,30,50),
+                    beskr=c("Nedgangstid","Trend","Oppgangstid"),
+                    tilstand=c(1,2,3),
+                    x=c(-30,5,30),
+                    y=c(-60,5,60),
+                    z=c(40,30,0))
+g1 <- ggplot(data=dfn12, aes(x=beskr, y=x)) + geom_bar(stat="identity")
+g2 <- ggplot(data=dfn12, aes(x=beskr, y=y)) + geom_bar(stat="identity")
+g3 <- ggplot(data=dfn12, aes(x=beskr, y=z)) + geom_bar(stat="identity")
+gridExtra::grid.arrange(g1,g2,g3)
+ggplot(dfn12, aes(x=tilstand, y=x)) + geom_bar()
+# Start

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater"
 author: "Jørn I.Halvorsen"
@@ -13,9 +13,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 #bibliography: pensum.bib
-#output: 
-#  html_notebook:
-#  toc: falseaaaa
 ---
 
 ```{r xaringan-tile-view, echo=FALSE}
@@ -37,7 +34,6 @@ xaringan::inf_mr("presentations.Rmd")
 #xaringan::inf_mr("dagens.Rmd")
 servr::daemon_stop()
 ```
-
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -564,7 +560,7 @@ Std(r_c)=\sqrt{0.001975}=0.044
 
 Hvor vi har benyttet at
 \begin{equation*}
-Cov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
+Kov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
 0.3[0.06-0.11][0.40-0.23]=-0.0045\\
 \end{equation*}
 
@@ -677,8 +673,8 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r, echo=T, eval=T}
-rn <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-plotwf <- c(rn) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+#rn <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
@@ -1014,5 +1010,4 @@ knitr::knit_exit()
 - Anbefalte oppgaver
 - Kontantstrøm
 
-?cor
 [abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)

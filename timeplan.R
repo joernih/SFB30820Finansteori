@@ -8,8 +8,8 @@ forenr <- c(seq(1,7),"",seq(8,13))
 timer <- rep(3,14)
 tema <- c(
 	  "Introduksjon og overblikk",
-	  "Porteføljeteori to fond",
-	  "Porteføljeteori 3 til n-fond",
+	  "Relevant risiko: Porteføljeteori to objekter",
+	  "Relevant risiko: Porteføljeteori 3-n objekter",
 	  "Effisiens",
 	  "Kapitalverdimodellen",
 	  "Finansielle instrumenter for finansiering",
