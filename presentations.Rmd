@@ -405,31 +405,33 @@ class: inverse, center, middle
 
 ## Prosjektrisiko for eierne vs. bedriften
 
-Forutsetning: 
-- Maksimere verdien av egenkapitalen til eierne
+Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som makismerer verdien av egenkapitalen til eierne. 
 
 ### Risiko for bedriften
 
-De nye prosjektets bidrag/samvariasjon til bedriftens kontantstrøm
+De nye prosjektets bidrag til bedriftens kontantstrøm
 
 ```{r, echo=FALSE, out.width="25%"}
-kontantstrom <- c(1,2,3)
-hist(kontantstrom)
+# Bedriften
+#kb <- data.frame(prob=c(0.30,0.70),beskr=c("Nedgangstid","Oppgangstid"),x=c(50,-30),y=c(5,12),z=c(9,11)) %>% tidyr::pivot_longer(c(x,y,z))
+#ggplot(kb, aes(x = factor(beskr), y = value)) + geom_histogram()
 ```
 
 ---
 
 ### Risiko for eierne
 
-- Veldiversifiserte eiere
+- Udeversifiserte eiere: 
+  - Ser forventet kontantstrømm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm
 
-- Udeversifiserte eiere
+- Veldiversifiserte eiere: 
+  - Ser forventet kontantstrømm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
 
 ---
 
 ## Måling av risiko 
 
-**Metode 1 for måling av risiko (1-n objekter)**
+**Metode 1 for måling av risiko (1-n investeringsobjekter)**
 - Varians
 \begin{equation}
 Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
@@ -439,10 +441,11 @@ Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2
 Std(X)=\sqrt{Var(X)}
 \end{equation}
 
-Merk: Mens beregningen av standardavviket gir oss samme benevning som forventet verdi, er benevningen av variansen mer uklar ("kvadrert spredning")
+Merk: Mens standardavviket gir oss samme benevning som forventet verdi, er benevningen til variansen vanskeligere å forholde seg til ("det kvadrerte til benevningen av standardavviket")
+
 ---
 
-**Metode 2 for måling av risiko (2 objekter)**
+**Metode 2 for måling av risiko (2 investeringsobjekter)**
 - Varians
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
@@ -460,7 +463,8 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ---
 
-## Måling av risiko isolert
+## Måling av risiko
+### Enkelobjekter
 
 **Eksempel 2.1**
 ```{r, echo=F}
@@ -477,9 +481,10 @@ vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
 ```
 
-Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
-
 ---
+
+
+Fra Metode 1 oppgitt under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
 Fond **A**
 \begin{equation*}
@@ -495,9 +500,10 @@ Std(r_b)=\sqrt{0.0156}=0.1249
 
 ---
 
-## Måling av risiko sammensatt fond C
+## Måling av risiko
+### Sammensatt fond 
 
-Vi antar nå  at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$. 
+Vi antar nå at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$. 
 
 ```{r, echo=F}
 # Portefølje: 1-2
@@ -513,7 +519,7 @@ vx_c <- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
 htmlTable(df_eks_2_1_w, header=c("Tilstand","Sansynlighet","Avk. A","Avk. B", "w_a","w_b","Avk. C"))
 ```
 
-Risikoen til det sammensate fondet kan måles ved bruk av både metode 1 og 2.
+Risikoen til dette sammensate fondet C kan måles ved bruk av både metode 1 og 2.
 
 ---
 
@@ -550,14 +556,14 @@ cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
 
 ---
 
-**Øvelse:** Forsøk å repliker følgende tabell i Excel
+**Øvelse:** Ved bruk av Excel, forsøk å repliker resultatende fra følgende tabell
 
 ```{r, echo=F}
-0.2*(0.16-0.11)*(0.05-0.23)+
-0.5*(0.12-0.11)*(0.20-0.23)+
-0.3*(0.06-0.11)*(0.40-0.23)
-#
-(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-(1/2)*(1/2)*0.0045
+#0.2*(0.16-0.11)*(0.05-0.23)+
+#0.5*(0.12-0.11)*(0.20-0.23)+
+#0.3*(0.06-0.11)*(0.40-0.23)
+##
+#(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-(1/2)*(1/2)*0.0045
 
 # Portefølje: 1-2
 w <- c(0.25,0.75)
@@ -567,11 +573,12 @@ df_eks_2_1_w <- df_eks_2_1 %>%
   dplyr::mutate(avk_c=avk_a*wa+avk_b*wb) %>%
   dplyr::mutate(ev=prob*avk_c) %>%
   dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %>%
-  dplyr::mutate(wvar=dev^2*prob)
-htmlTable(df_eks_2_1_w, header=c("?",1,1,1,1,1,1,1,1,1))
+  dplyr::mutate(wvar=round(dev^2*prob, digits=7))
+htmlTable(df_eks_2_1_w, header=c("Tilstand","Pr(s)","r_a(s)","r_b(s)","w1","w2","r_p(s)","Pr(s)r_p(s)","rp(s)-E(r_p)","[rp(s)-E(r_p)]^2"))
 ```
-`r sum(df_eks_2_1_w$ev)` og `r sum(df_eks_2_1_w$wvar)` 
-og `r sqrt(sum(df_eks_2_1_w$wvar))`
+
+Hvor $E(r_p)=$ `r sum(df_eks_2_1_w$ev)` , $Var(r_p)=$ `r sum(df_eks_2_1_w$wvar)` og 
+$Std(r_p)=$ `r sqrt(sum(df_eks_2_1_w$wvar))`
 
 
 ---
@@ -583,11 +590,11 @@ og `r sqrt(sum(df_eks_2_1_w$wvar))`
 Vi kan skille melllom *risiknøytrale* og *risikoaversje* aktører
 
 - Risikonøytral kun opptatt av forventet avkastning (+)
-	- Nordover et x-y diagram
+	- Bedre ut: Nordover et diagram med risiko på x-aksen og forventet avkastning på y-aksen
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
-	- Nordover og vestover i et x-y diagram
+	- Bedre ut: Nordøstover i et diagram med risiko på x-aksen og forventet avkastning på y-aksen
 
-I dette kurset legger vi til grunn at alle aktørene er risikoaversje (krever kompensasjon ...), men at graden av risikoaversjon kan variere mellom ulike aktører.
+I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
 
 ---
 
@@ -597,18 +604,30 @@ knitr::include_graphics("pensum/figurer-04.png")
 
 ---
 
-### Risikokompenasjon (noe empiri)
+### Risikokompenasjon (litt empiri)
 
-Finner man igjen dette empirisk
-
----
+Finner man igjen dette i det observerte tallmateriale?
 
 #### Veldiversifisert portefølje
 
-```{r}
-
+```{r, echo=F}
+velportf <- data.frame(label=c("Risikofri rente","Aksjeindeks"),gjsnitt=c(0.015,0.068),stavviks=c(0.01,0.127)) 
+htmlTable(velportf, header=c("","Gjennomsnitt","Standardavvik"))
 ```
+
 #### Udiversifisert portefølje
+
+```{r, echo=F}
+udiportf <- data.frame(label=c("Yara","Itera","Aker Solutions","","Portefølje (3 aksjer)"),gjsnitt=c(0.07,0.07,0.08,NA,0.07),stavviks=c(0.29,0.27,0.31,NA,0.21)) 
+htmlTable(udiportf, header=c("","Gjennomsnitt","Standardavvik"))
+```
+
+---
+
+**Hovedresultater fra undersøkelsen**
+
+1. Det er mye å hente ved diversifisering: Risikoen kan reduseres kraftig uten at du taper noe i form av lavere forventet avkastning
+2. Risikokompensjonen for en enkeltaksje er ikke knyttet til aksjens standardavvik (totalrisiko). Relevant risiko må derfor måles på andre måter.
 
 ---
 
@@ -621,35 +640,14 @@ knitr::include_graphics("pensum/figurer-06.png")
 ```
 ---
 
+**Øvelse:** Forsøk å repliker følgende resultater i Excel
+
 .panelset[
 .panel[.panel-name[Tabell]
-```{r, echo=F}
-htmlTable(df_eks_2_1)
-```
 ]
-.panel[.panel-name[R-kode 123]
-```{r,echo=F}
-plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-	w <- seq(0,1,0.01)
-	v <- as.vector(df[,(2)])
-	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
-	avk <- as.vector(covall$center)
-	kov <- covall$cov[lower.tri(covall$cov)] 
-	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
- 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
- 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
- 		dplyr::mutate(stdavk=sqrt(varians))
-			 }
-)
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-```
+.panel[.panel-name[R-kode (ikke pensum)]
 ]
-.panel[.panel-name[Plot]
-```{r}
-plotly::ggplotly(gg)
-```
+.panel[.panel-name[Figur]
 ]
 ]
 
@@ -661,9 +659,9 @@ plotly::ggplotly(gg)
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
 \end{equation}
 
-- Kor(r_a,r_b)=1 (fullstendig avhengige)
-- Kor(r_a,r_b)=0 (uavhengig)
-- Kor(r_a,r_b)=-1 (fullstendig motsatt)
+- $Kor(r_a,r_b)=1$ (fullstendig avhengige)
+- $Kor(r_a,r_b)=0$ (uavhengig)
+- $Kor(r_a,r_b)=-1$ (fullstendig motsatt)
 
 Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
 
@@ -672,14 +670,17 @@ Som gjør at vi kan skrive
 Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 \end{equation}
 
+---
+
 Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
-\begin{equation}
+\begin{equation*}
 Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
-\end{equation}
-Og at variansen til porteføljen kan uttrykkes som
-\begin{equation}
-Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 = 0.001975
-\end{equation}
+\end{equation*}
+
+Mens variansen til porteføljen kan uttrykkes som
+\begin{equation*}
+Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 \\ 0.001975
+\end{equation*}
 
 ---
 
@@ -689,7 +690,6 @@ knitr::include_graphics("pensum/figurer-05.png")
 
 ---
 
-**Øvelse:** Forsøk å repliker følgende tabell i Excel
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
@@ -697,42 +697,20 @@ knitr::include_graphics("pensum/figurer-07.png")
 
 ---
 
-.panelset[
-.panel[.panel-name[Tabell]
-```{r, echo=F}
-htmlTable(df_eks_2_1)
-```
-]
-.panel[.panel-name[R-kode 123]
-```{r,echo=F}
-plotwf <- c(-1,0,1)[1] %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-	w <- seq(0,1,0.01)
-	v <- as.vector(df[,(2)])
-	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
-	avk <- as.vector(covall$center)
-	kov <- covall$cov[lower.tri(covall$cov)] 
-	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- tibble(corr=x,w1=1-w, w2=w) %>%
- 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
- 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
- 		dplyr::mutate(stdavk=sqrt(varians))
-			 }
-)
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-```
-]
-.panel[.panel-name[Plot]
-```{r}
-plotly::ggplotly(gg)
-```
-]
-]
-
----
-
 **Øvelse:** Forsøk å repliker følgende tabell i Excel
 
+.panelset[
+.panel[.panel-name[Tabell]
+]
+.panel[.panel-name[R-kode (ikke pensum)]
+]
+.panel[.panel-name[Figur]
+]
+]
+
+```{r include=FALSE}
+knitr::knit_exit()
+```
 
 class: inverse, center, middle
 
@@ -957,7 +935,8 @@ knitr::knit_exit()
 - Var(X)
 - Studer øvelse nærmere for utvidelse
 - Sturktur på disikojson Risikokompenasjon
-
+- Anbefalte oppgaver
+- Kontantstrøm
 
 ?cor
 [abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)
