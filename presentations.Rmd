@@ -679,6 +679,12 @@ Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 = 0.001975
 
 ---
 
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-05.png")
+```
+
+---
+
 **Øvelse:** Forsøk å repliker følgende tabell i Excel
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
