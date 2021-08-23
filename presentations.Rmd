@@ -15,7 +15,7 @@ output:
 #bibliography: pensum.bib
 #output: 
 #  html_notebook:
-#  toc: false
+#  toc: falseaaaa
 ---
 
 ```{r xaringan-tile-view, echo=FALSE}
@@ -29,6 +29,7 @@ xaringanExtra::use_panelset()
 library(htmlTable)
 library(magrittr)
 library(xaringan)
+library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -357,11 +358,11 @@ $$
 ]
 
 <p>4.</p> Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-<!-- <br>**Svar:**<br> -->
-<!-- $$ -->
-<!-- E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + -->
-<!-- 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 -->
-<!-- $$ -->
+<br>**Svar:**<br> 
+$$
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + 
+0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
+$$ 
 ---
 
 **Oppgave** N.1.3
@@ -384,9 +385,11 @@ Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
 
 Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+![]()
 
-.can-edit[- ]
-
+```{r, echo=FALSE, out.width="25%", fig.cap=""}
+knitr::include_graphics("drawio/oversiktsbildet.png")
+```
 ---
 
 class: inverse, center, middle
@@ -395,30 +398,41 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
--  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
-
-- Teori: Risikomotivasjon
-- Figurer: 
-- Formler: 
-- Kode
 ---
 
 ## Prosjektrisiko for eierne vs. bedriften
 
+Forutsetning: 
+- Maksimere verdien av egenkapitalen til eierne
+
 ### Risiko for bedriften
 
-### Risiko for eierne
+De nye prosjektets bidrag/samvariasjon til bedriftens kontantstrøm
+
+```{r, echo=FALSE, out.width="25%"}
+kontantstrom <- c(1,2,3)
+hist(kontantstrom)
+```
 
 ---
 
-## Måling av risiko (portefølje fra 1 til 2 fonds)
+### Risiko for eierne
 
-**Metode 1 for måling av risiko**
+- Veldiversifiserte eiere
+
+- Udeversifiserte eiere
+
+---
+
+## Måling av risiko 
+
+**Metode 1 for måling av risiko (1-n objekter)**
 - Varians
 \begin{equation}
-Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(1)]^2+Pr(2)[X(2)-E(2)]^2+...+\\Pr(s)[X(s)-E(X)]^2
+Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
 \end{equation}
 - Standardavvik
 \begin{equation}
@@ -428,14 +442,15 @@ Std(X)=\sqrt{Var(X)}
 Merk: Mens beregningen av standardavviket gir oss samme benevning som forventet verdi, er benevningen av variansen mer uklar ("kvadrert spredning")
 ---
 
-**Metode 2 for måling av risiko (2 fonds sammensatt)**
+**Metode 2 for måling av risiko (2 objekter)**
 - Varians
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
 \end{equation}
 Hvor samvariasjonen er gitt ved
 \begin{equation}
-Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_1)]
+Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_1)] \\
+Pr(1)[r_1(1)-E(r_1)][r_2(1)-E(r_1)]+\\Pr(2)[r_1(2)-E(r_1)][r_2(2)-E(r_1)]+...+ \\ Pr(S)[r_1(S)-E(r_1)][r_2(S)-E(r_1)] 
 \end{equation}
 
 - Standardavviket
@@ -455,7 +470,6 @@ df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
                          avk_a=c(0.16,0.12,0.06),
                          avk_b=c(0.05,0.20,0.40)
                          )
-
 ex_a <- c(df_eks_2_1$avk_a%*%df_eks_2_1$prob)
 ex_b <- c(df_eks_2_1$avk_b%*%df_eks_2_1$prob)
 vx_a <- c((df_eks_2_1$avk_a-ex_a)^2%*%df_eks_2_1$prob)
@@ -463,11 +477,10 @@ vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
 htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
 ```
 
-Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
 ---
 
-Det gir oss
+Repetisjon: Ved bruk av metode 1 under første forelesning har vi at $E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$ og $E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$.
 
 Fond **A**
 \begin{equation*}
@@ -485,7 +498,7 @@ Std(r_b)=\sqrt{0.0156}=0.1249
 
 ## Måling av risiko sammensatt fond C
 
-Antar vi at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$. 
+Vi antar nå  at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$. 
 
 ```{r, echo=F}
 # Portefølje: 1-2
@@ -498,10 +511,10 @@ df_eks_2_1_w <- df_eks_2_1 %>%
 ex_c <- c(df_eks_2_1_w$avk_c%*%df_eks_2_1_w$prob)
 vx_c <- c((df_eks_2_1_w$avk_c-ex_c)^2%*%df_eks_2_1_w$prob)
 # Covarnaise missing
-htmlTable(df_eks_2_1_w, header=c("Tilstand","Sansynlighet","A","B", "w_a","w_b","C"))
+htmlTable(df_eks_2_1_w, header=c("Tilstand","Sansynlighet","Avk. A","Avk. B", "w_a","w_b","Avk. C"))
 ```
 
-Da kan vi måle risikoen til det sammensate fondet C ved bruk av 2 metoder
+Risikoen til det sammensate fondet kan måles ved bruk av både metode 1 og 2.
 
 ---
 
@@ -537,9 +550,8 @@ cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
 
 ---
 
-**Øvelse:** Sett opp Excel ....
+**Øvelse:** Forsøk å repliker følgende tabell i Excel
 
-Tips
 ```{r, echo=F}
 0.2*(0.16-0.11)*(0.05-0.23)+
 0.5*(0.12-0.11)*(0.20-0.23)+
@@ -558,26 +570,40 @@ df_eks_2_1_w <- df_eks_2_1 %>%
   dplyr::mutate(wvar=dev^2*prob)
 htmlTable(df_eks_2_1_w, header=c("?",1,1,1,1,1,1,1,1,1))
 ```
-`rsum(df_eks_2_1_w$ev)` og `sum(df_eks_2_1_w$wvar)` 
-og `sqrt(sum(df_eks_2_1_w$wvar))`
+`r sum(df_eks_2_1_w$ev)` og `r sum(df_eks_2_1_w$wvar)` 
+og `r sqrt(sum(df_eks_2_1_w$wvar))`
+
 
 ---
+
 ## Risikoholdning og risikokompenasjon
 
 ### Holdning
 
-Skiller melllom *risiknøytral* og *risikoaversjon* aktør
+Vi kan skille melllom *risiknøytrale* og *risikoaversje* aktører
 
-Risikonøytral kun opptatt av forventet avkastning (+)
+- Risikonøytral kun opptatt av forventet avkastning (+)
+	- Nordover et x-y diagram
+- Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+	- Nordover og vestover i et x-y diagram
 
-Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+---
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-04.png")
+```
 
 ---
 
 ### Risikokompenasjon
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-04.png")
+
+---
+
+Oslo børs
+
+```{r}
+
 ```
 
 ---
@@ -628,11 +654,15 @@ a
 
 ---
 
-### Samvariasjonen
+### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
 $$
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
 $$
+
+- Kor(r_a,r_b)=1 (fullstendig avhengige)
+- Kor(r_a,r_b)=0 (uavhengig)
+- Kor(r_a,r_b)=-1 (fullstendig motsatt)
 
 Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
 
@@ -643,6 +673,7 @@ Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 
 ---
 
+**Øvelse:** Forsøk å repliker følgende tabell i Excel
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-07.png")
@@ -683,7 +714,11 @@ a
 ```
 ]
 ]
+
 ---
+
+**Øvelse:** Forsøk å repliker følgende tabell i Excel
+
 
 class: inverse, center, middle
 
@@ -904,9 +939,10 @@ knitr::knit_exit()
 - Målenhet på den ene oppgaven
 - Eksamensdato
 - Tillitsvalgte
-
-
-
+- Fonds
+- Var(X)
+- Studer øvelse nærmere for utvidelse
+- Sturktur på disikojson Risikokompenasjon
 
 
 ?cor
