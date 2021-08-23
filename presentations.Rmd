@@ -656,9 +656,9 @@ a
 
 ### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
-$$
+\begin{equation}
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
-$$
+\end{equation}
 
 - Kor(r_a,r_b)=1 (fullstendig avhengige)
 - Kor(r_a,r_b)=0 (uavhengig)
@@ -669,6 +669,15 @@ Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
 Som gjør at vi kan skrive
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+\end{equation}
+
+Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
+\begin{equation}
+Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
+\end{equation}
+Og at variansen til porteføljen kan uttrykkes som
+\begin{equation}
+Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 = 0.001975
 \end{equation}
 
 ---

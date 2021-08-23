@@ -4,6 +4,9 @@ library(htmlTable)
 library(magrittr)
 library(xaringan)
 library(dplyr)
+
+(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-2*(1/2)*(1/2)*0.036*0.125
+
 ############## 2-variable case ################
 ## Input
 df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
