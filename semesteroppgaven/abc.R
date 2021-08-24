@@ -1,11 +1,8 @@
 library(dplyr)
 crypto_df <- list.files(path="csv",pattern = "*.csv") %>% purrr::map_df(~readr::read_delim(paste0("csv/",.)))
 
-
-
-
 unique(tbl$Currency)
-View(tbl)
+View(crypto_df)
 
 bitcoin_df <- readr::read_delim("csv/BTC_USD_2013-10-01_2021-08-24-CoinDesk.csv")
 
