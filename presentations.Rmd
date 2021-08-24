@@ -396,17 +396,7 @@ class: inverse, center, middle
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
----
 
-## Prosjektrisiko for eierne vs. bedriften
-
-Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som maksimerer verdien av egenkapitalen til eierne. 
-
-Vi tar utgangspunkt i fø**Læringsmål:**
-
--  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
--  Tallfeste risiko i en portefølje ved å beregne standardavvik.
--  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 ---
 
 ## Prosjektrisiko for eierne vs. bedriften
@@ -444,14 +434,14 @@ gridExtra::grid.arrange(g1,g2,ncol=2)
 ### Risiko for eierne
 
 - Udeversifiserte eiere: 
-  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **bedriftens** allerede eksisterende kontantstrøm
 
 ```{r, echo=FALSE, out.width="20%"}
 gridExtra::grid.arrange(g1,g3,ncol=2)
 ```
 
 - Veldiversifiserte eiere: 
-  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **porteføljens** eksisterende kontantstrøm
 
 ```{r, echo=FALSE, out.width="20%"}
 gridExtra::grid.arrange(g1,g4,ncol=2)
@@ -759,11 +749,11 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 .panel[.panel-name[Figur]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-plotly::ggplotly(ggf)
+#plotly::ggplotly(ggf)
 ```
 ]
 ]
-lgende tabell
+Følgende tabell
 ```{r, echo=FALSE, out.width="25%"}
 dfn12 <- data.frame(prob=c(0.20,0.30,0.50),
 		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
@@ -1037,7 +1027,7 @@ plotly::ggplotly(gg)
 
 ### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
-\begin{equation}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
+\begin{equation}
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
 \end{equation}
 
@@ -1109,7 +1099,7 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 .panel[.panel-name[Figur]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-plotly::ggplotly(ggf)
+#plotly::ggplotly(ggf)
 ```
 ]
 ]
