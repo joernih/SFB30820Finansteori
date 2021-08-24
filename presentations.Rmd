@@ -579,33 +579,6 @@ cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
 
 ---
 
-**Øvelse:** Ved bruk av Excel, forsøk å replikere resultatene fra følgende tabell
-
-```{r, echo=F}
-#0.2*(0.16-0.11)*(0.05-0.23)+
-#0.5*(0.12-0.11)*(0.20-0.23)+
-#0.3*(0.06-0.11)*(0.40-0.23)
-##
-#(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-(1/2)*(1/2)*0.0045
-
-# Portefølje: 1-2
-w <- c(0.25,0.75)
-## Metode 1
-df_eks_2_1_w <- df_eks_2_1 %>%
-  dplyr::mutate(wa=w[1],wb=w[2]) %>%
-  dplyr::mutate(avk_c=avk_a*wa+avk_b*wb) %>%
-  dplyr::mutate(ev=prob*avk_c) %>%
-  dplyr::mutate(dev=avk_c-weighted.mean(avk_c, prob)) %>%
-  dplyr::mutate(wvar=round(dev^2*prob, digits=7))
-htmlTable(df_eks_2_1_w, header=c("Tilstand","Pr(s)","r_a(s)","r_b(s)","w1","w2","r_p(s)","Pr(s)r_p(s)","rp(s)-E(r_p)","[rp(s)-E(r_p)]^2"))
-```
-
-Hvor $E(r_p)=$ `r sum(df_eks_2_1_w$ev)` , $Var(r_p)=$ `r sum(df_eks_2_1_w$wvar)` og 
-$Std(r_p)=$ `r sqrt(sum(df_eks_2_1_w$wvar))`
-
-
----
-
 ## Risikoholdning og risikokompensasjon
 
 ### Holdning
@@ -658,9 +631,11 @@ htmlTable(udiportf, header=c("","Gjennomsnitt","Standardavvik"))
 
 ### Porteføljevekter
 
+
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-06.png")
 ```
+
 ---
 
 **Øvelse:** Forsøk å repliker følgende resultater i Excel
@@ -672,9 +647,9 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
-```{r, echo=T, eval=T}
-#rn <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+```{r}
+r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
@@ -682,7 +657,7 @@ plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	avk <- as.vector(covall$center)
 	kov <- covall$cov[lower.tri(covall$cov)] 
 	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- tibble(corr=r,w1=1-w, w2=w) %>%
+	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
  		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
  		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
  		dplyr::mutate(stdavk=sqrt(varians))
@@ -692,8 +667,8 @@ plotwf <- c(-1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 ]
 .panel[.panel-name[Figur]
 ```{r, echo=F}
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point()
-gg
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
+plotly::ggplotly(gg)
 ```
 ]
 ]
@@ -753,8 +728,8 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
-```{r, echo=T, eval=T}
-plotwf <- c(-1,0,0.90,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+```{r}
+plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
@@ -762,23 +737,22 @@ plotwf <- c(-1,0,0.90,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	avk <- as.vector(covall$center)
 	kov <- covall$cov[lower.tri(covall$cov)] 
 	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- tibble(corr=r,w1=1-w, w2=w) %>%
+	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
  		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
  		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
  		dplyr::mutate(stdavk=sqrt(varians))
 			 }
 )
 ```
+
 ]
 .panel[.panel-name[Figur]
 ```{r, echo=F}
-ggr <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point()
-plotly::ggplotly(ggr)
+ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
+plotly::ggplotly(ggf)
 ```
 ]
 ]
-
-
 
 ```{r include=FALSE}
 knitr::knit_exit()

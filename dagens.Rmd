@@ -48,7 +48,7 @@ class: inverse, center, middle
 
 # Forelesning 2: `r tema[2]`
 
-**Læringsmål:**
+**Læringsmål:**N
 
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
@@ -61,7 +61,7 @@ Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslu
 
 Vi tar utgangspunkt i følgende tabell
 ```{r, echo=FALSE, out.width="25%"}
-dfn12 <- data.frame(prob=c(0.20,30,50),
+dfn12 <- data.frame(prob=c(0.20,0.30,0.50),
 		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
 		    tilstand=c(1,2,3),
 		    bedriften=c(-60,5,60),
@@ -72,7 +72,7 @@ g1 <- ggplot(data=dfn12, aes(x=beskr, y=nyttprosj)) + geom_bar(stat="identity")
 g2 <- ggplot(data=dfn12, aes(x=beskr, y=bedriften)) + geom_bar(stat="identity")
 g3 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_ikkediv)) + geom_bar(stat="identity")
 g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="identity")
-htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Nytt prosjekt","Bedriftens portefølje","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
+htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
 ```
 
 ---
@@ -204,7 +204,7 @@ Risikoen til det sammensatte fondet C kan måles ved bruk av både metode 1 og 2
 
 **Metode 1**
 \begin{equation*}
-Var(r_c) =0.2[0.016-0.02]^2+0.5[0.016-0.02]^2+0.3[0.016-0.02]^2=0.001975\\
+Var(r_c) =0.2[0.010-0.02]^2+0.5[0.016-0.02]^2+0.3[0.023-0.02]^2=0.001975\\
 Std(r_c)=\sqrt{0.001975}=0.044
 \end{equation*}
 
