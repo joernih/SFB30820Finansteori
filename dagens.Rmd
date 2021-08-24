@@ -48,7 +48,7 @@ class: inverse, center, middle
 
 # Forelesning 2: `r tema[2]`
 
-**Læringsmål:**N
+**Læringsmål:**
 
 -  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
