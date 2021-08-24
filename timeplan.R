@@ -56,7 +56,7 @@ undervform <- c(
 )
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
-	  "",
+	  "2.1,2.2,2.3,2.6",
 	  "",
 	  "",
 	  "",
@@ -71,7 +71,7 @@ oppgaver_bok <- c(
 )
 oppgaver_nett <- c(
 	  "N.1.1,N.1.2,N.1.3,N.1.4,",
-	  "",
+	  "N.2.1,N.2.2,N.2.3,N.2.4,",
 	  "",
 	  "",
 	  "",
@@ -100,11 +100,11 @@ timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
 timep_ii <- htmlTable(df1[8:14,],header=timenavn)
 
-df2 <- data.frame(
+df2 <- data.frame(Forelesning=seq(1,13),
 		 OppgaverB=oppgaver_bok,
-		 OppgaverN=oppgaver_nett
-)
-oppgnavn <- c("Pensumbok","Nettside (ressurs)")
+		 OppgaverN=oppgaver_nett)
+
+oppgnavn <- c("Forelesning","Pensumbok","Nettside (ressurs)")
 
 oppgaveplan <- htmlTable(df2,header=oppgnavn)
 

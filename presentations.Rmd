@@ -782,6 +782,11 @@ knitr::knit_exit()
 
 class: inverse, center, middle
 
+# Forelesning 3: `r tema[4]`
+class: inverse, center, middle
+
+---
+
 # Forelesning 4: `r tema[4]`
 
 **Læringsmål:**
