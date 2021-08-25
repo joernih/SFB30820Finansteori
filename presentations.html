@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f778a6843fa54692b82140a219b3ea01","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c4b5952c9f26432a81b584d01eaf2d83","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -50,38 +50,12 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-24)
+### 2021/08/12 (updated: 2021-08-25)
 
 ---
 
 
 
-```
-## Loading required package: ggplot2
-```
-
-```
-## 
-## Attaching package: 'plotly'
-```
-
-```
-## The following object is masked from 'package:ggplot2':
-## 
-##     last_plot
-```
-
-```
-## The following object is masked from 'package:stats':
-## 
-##     filter
-```
-
-```
-## The following object is masked from 'package:graphics':
-## 
-##     layout
-```
 
 
 
@@ -90,257 +64,258 @@ class: center, middle, inverse, title-slide
 
 ## Timeplan
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori to objekter&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori 3-n objekter&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Finansielle instrumenter for finansiering&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;7&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;39&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjeld, total risiko og systematisk risiko&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Zoom&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Uke</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Forelesning</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Literatur</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sentrale temaer</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Undervisningsform</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Timer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>33</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>Kap. 1: Introduksjon</td>
+<td style='text-align: center;'>Introduksjon og overblikk</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>34</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>Kap. 2: Relevant risiko</td>
+<td style='text-align: center;'>Relevant risiko: Porteføljeteori to objekter</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>35</td>
+<td style='text-align: center;'>3</td>
+<td style='text-align: center;'>Kap. 2: Relevant risiko</td>
+<td style='text-align: center;'>Relevant risiko: Porteføljeteori 3-n objekter</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'>36</td>
+<td style='text-align: center;'>4</td>
+<td style='text-align: center;'>Kap. 3: Relevant risiko og kapitalkostnad</td>
+<td style='text-align: center;'>Effisiens</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>5</td>
+<td style='text-align: center;'>37</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>Kap. 3: Relevant risiko og kapitalkostnad</td>
+<td style='text-align: center;'>Kapitalverdimodellen</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>6</td>
+<td style='text-align: center;'>38</td>
+<td style='text-align: center;'>6</td>
+<td style='text-align: center;'>Kap. 5: Langsiktige finansieringsformer</td>
+<td style='text-align: center;'>Finansielle instrumenter for finansiering</td>
+<td style='text-align: center;'>Zoom</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>7</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>39</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>7</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Kap. 6: Gjeldsgrad og risiko</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Gjeld, total risiko og systematisk risiko</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Zoom</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 1,2-4,5-8,11,12,13&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Repetisjon&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;?&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Uke</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Forelesning</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Literatur</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sentrale temaer</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Undervisningsform</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Timer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>8</td>
+<td style='text-align: center;'>40</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'>**Høstferie**</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>9</td>
+<td style='text-align: center;'>41</td>
+<td style='text-align: center;'>8</td>
+<td style='text-align: center;'>Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder</td>
+<td style='text-align: center;'>Gjeldgrad og verdi i perfekte kapitalmarkeder</td>
+<td style='text-align: center;'>?</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>10</td>
+<td style='text-align: center;'>42</td>
+<td style='text-align: center;'>9</td>
+<td style='text-align: center;'>Kap. 8: Gjeldsgrad og verdi med imperfeksjoner</td>
+<td style='text-align: center;'>Skatt</td>
+<td style='text-align: center;'>?</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>11</td>
+<td style='text-align: center;'>43</td>
+<td style='text-align: center;'>10</td>
+<td style='text-align: center;'>Kap. 11: Dividende</td>
+<td style='text-align: center;'>Dividende</td>
+<td style='text-align: center;'>?</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>12</td>
+<td style='text-align: center;'>44</td>
+<td style='text-align: center;'>11</td>
+<td style='text-align: center;'>Kap. 12: Opsjoner</td>
+<td style='text-align: center;'>Opsjoner</td>
+<td style='text-align: center;'>?</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='text-align: left;'>13</td>
+<td style='text-align: center;'>45</td>
+<td style='text-align: center;'>12</td>
+<td style='text-align: center;'>Kap. 13: Risikostyring</td>
+<td style='text-align: center;'>Finansielle instrumenter til påvirking av kontantstrømmer</td>
+<td style='text-align: center;'>?</td>
+<td style='text-align: center;'>3</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>14</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>46</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>13</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Kap. 1,2-4,5-8,11,12,13</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Repetisjon</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>?</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+</tr>
+</tbody>
+</table>
 
 ---
+
 
 # Anbefalte oppgaver
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Pensumbok&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nettside (ressurs)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.1,1.2,1.4,1.5,1.7.1.8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;N.1.1,N.1.2,N.1.3,N.1.4,&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2.1,2.2,2.3,2.6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;N.2.1,N.2.2,N.2.3,N.2.4,&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;7&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;13&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Forelesning</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Pensumbok</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Nettside (ressurs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>1.1,1.2,1.4,1.5,1.7.1.8</td>
+<td style='text-align: center;'>N.1.1,N.1.2,N.1.3,N.1.4,</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>2.1,2.2,2.3,2.6</td>
+<td style='text-align: center;'>N.2.1,N.2.2,N.2.3,N.2.4,</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>3</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'>4</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>5</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>6</td>
+<td style='text-align: center;'>6</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>7</td>
+<td style='text-align: center;'>7</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>8</td>
+<td style='text-align: center;'>8</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>9</td>
+<td style='text-align: center;'>9</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>10</td>
+<td style='text-align: center;'>10</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>11</td>
+<td style='text-align: center;'>11</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='text-align: left;'>12</td>
+<td style='text-align: center;'>12</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>13</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>13</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'></td>
+<td style='border-bottom: 2px solid grey; text-align: center;'></td>
+</tr>
+</tbody>
+</table>
 
 ---
 
@@ -411,7 +386,7 @@ class: inverse, center, middle
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
-Oppdatert: 2021-08-24
+Oppdatert: 2021-08-25
 
 ---
 
@@ -522,91 +497,91 @@ For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning 
 
 Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Salgsinntekt&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Driftsutgift&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Investering&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Ny arbeidskapital&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Avskrivninger&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Skattbart overskudd&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;650&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;520&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Kontantstrøm etter skatt&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;70&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;180&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;90&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;9&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.28&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.18&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.12&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand:</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>1</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>2</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>3</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Salgsinntekt</td>
+<td style='text-align: center;'>1350</td>
+<td style='text-align: center;'>900</td>
+<td style='text-align: center;'>1350</td>
+<td style='text-align: center;'>900</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Driftsutgift</td>
+<td style='text-align: center;'>500</td>
+<td style='text-align: center;'>500</td>
+<td style='text-align: center;'>400</td>
+<td style='text-align: center;'>400</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Investering</td>
+<td style='text-align: center;'>200</td>
+<td style='text-align: center;'>200</td>
+<td style='text-align: center;'>200</td>
+<td style='text-align: center;'>200</td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'>Ny arbeidskapital</td>
+<td style='text-align: center;'>50</td>
+<td style='text-align: center;'>50</td>
+<td style='text-align: center;'>50</td>
+<td style='text-align: center;'>50</td>
+</tr>
+<tr>
+<td style='text-align: left;'>5</td>
+<td style='text-align: center;'>Avskrivninger</td>
+<td style='text-align: center;'>300</td>
+<td style='text-align: center;'>300</td>
+<td style='text-align: center;'>300</td>
+<td style='text-align: center;'>300</td>
+</tr>
+<tr>
+<td style='text-align: left;'>6</td>
+<td style='text-align: center;'>Skattbart overskudd</td>
+<td style='text-align: center;'>550</td>
+<td style='text-align: center;'>100</td>
+<td style='text-align: center;'>650</td>
+<td style='text-align: center;'>200</td>
+</tr>
+<tr>
+<td style='text-align: left;'>7</td>
+<td style='text-align: center;'>Skatt</td>
+<td style='text-align: center;'>440</td>
+<td style='text-align: center;'>80</td>
+<td style='text-align: center;'>520</td>
+<td style='text-align: center;'>160</td>
+</tr>
+<tr>
+<td style='text-align: left;'>8</td>
+<td style='text-align: center;'>Kontantstrøm etter skatt</td>
+<td style='text-align: center;'>160</td>
+<td style='text-align: center;'>70</td>
+<td style='text-align: center;'>180</td>
+<td style='text-align: center;'>90</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>9</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Sannsynlighet</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.42</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.28</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.18</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.12</td>
+</tr>
+</tbody>
+</table>
 
 
 ---
@@ -660,35 +635,35 @@ E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i})=w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N}
 
 AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsbeskrivelse&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt X&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Y&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Z&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.7&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;11&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sannsynlighet</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstandsbeskrivelse</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Prosjekt X</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Prosjekt Y</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Prosjekt Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>0.3</td>
+<td style='text-align: center;'>Nedgangstid</td>
+<td style='text-align: center;'>3</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>9</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>2</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.7</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Oppgangstid</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>12</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>11</td>
+</tr>
+</tbody>
+</table>
 
 1. Hva er særtrekket ved prosjekt X?
 &lt;br&gt;**Svar:**&lt;br&gt;
@@ -763,7 +738,7 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 
-Oppdatert: 2021-08-24
+Oppdatert: 2021-08-25
 
 ---
 
@@ -772,51 +747,51 @@ Oppdatert: 2021-08-24
 Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som maksimerer verdien av egenkapitalen til eierne. 
 
 Vi tar utgangspunkt i følgende tabell
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynl.&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsb.&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nytt prosjekt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Bedriftens portefølje&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (ikke div.)&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (div.)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Trend&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-30&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sannsynl.</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstandsb.</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Nytt prosjekt</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Bedriftens portefølje</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Eierens portefølje (ikke div.)</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Eierens portefølje (div.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>Nedgangstid</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>-60</td>
+<td style='text-align: center;'>30</td>
+<td style='text-align: center;'>-60</td>
+<td style='text-align: center;'>10</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>30</td>
+<td style='text-align: center;'>Trend</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>2.5</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>5</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>50</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Oppgangstid</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>60</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>-30</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>60</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>-10</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
@@ -881,39 +856,39 @@ Std(r_p)=\sqrt{Var(r_p)}
 ### Enkelobjekter
 
 **Eksempel 2.1**
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;A&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sansynlighet</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>A</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>0.16</td>
+<td style='text-align: center;'>0.05</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.12</td>
+<td style='text-align: center;'>0.2</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.06</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.4</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
@@ -941,51 +916,51 @@ Std(r_b)=\sqrt{0.0156}=0.1249
 
 Vi antar nå at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)`. 
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. A&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. B&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_a&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_b&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. C&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.105&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.23&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sansynlighet</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avk. A</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avk. B</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_a</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_b</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avk. C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>0.16</td>
+<td style='text-align: center;'>0.05</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.105</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.12</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.16</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.06</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.4</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.23</td>
+</tr>
+</tbody>
+</table>
 
 Risikoen til det sammensatte fondet C kan måles ved bruk av både metode 1 og 2.
 
@@ -1038,73 +1013,73 @@ Finner man igjen dette i det observerte tallmateriale?
 
 #### Veldiversifisert portefølje
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Risikofri rente&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.015&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.01&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Aksjeindeks&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.068&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.127&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Gjennomsnitt</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Standardavvik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Risikofri rente</td>
+<td style='text-align: center;'>0.015</td>
+<td style='text-align: center;'>0.01</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>2</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Aksjeindeks</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.068</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.127</td>
+</tr>
+</tbody>
+</table>
 
 #### Udiversifisert portefølje
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Yara&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.29&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Itera&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.27&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Aker Solutions&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.31&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Portefølje (3 aksjer)&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.07&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.21&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Gjennomsnitt</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Standardavvik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Yara</td>
+<td style='text-align: center;'>0.07</td>
+<td style='text-align: center;'>0.29</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Itera</td>
+<td style='text-align: center;'>0.07</td>
+<td style='text-align: center;'>0.27</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Aker Solutions</td>
+<td style='text-align: center;'>0.08</td>
+<td style='text-align: center;'>0.31</td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+<td style='text-align: center;'></td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Portefølje (3 aksjer)</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.07</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.21</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
@@ -1128,39 +1103,39 @@ Finner man igjen dette i det observerte tallmateriale?
 
 .panelset[
 .panel[.panel-name[Tabell]
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning A&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sannsynlighet</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avkastning A</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avkastning B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>0.16</td>
+<td style='text-align: center;'>0.05</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.12</td>
+<td style='text-align: center;'>0.2</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.06</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.4</td>
+</tr>
+</tbody>
+</table>
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 
@@ -1183,8 +1158,8 @@ plotwf &lt;- c(r) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
 ```
 ]
 .panel[.panel-name[Figur]
-<div id="htmlwidget-ee76d352d1a997a47ce4" style="width:504px;height:504px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ee76d352d1a997a47ce4">{"x":{"data":[{"x":[0.0360555127546399,0.0344466486143681,0.0328378375235837,0.0312290876810483,0.0296204090663464,0.0280118139510204,0.0264033175964166,0.0247949392229481,0.0231867033824113,0.0215786419433646,0.0199707970346136,0.0183632255330405,0.0167560061308974,0.015149250893751,0.0135431250280998,0.0119378825640669,0.0103339351847176,0.00873199658681908,0.00713342022344672,0.00554111680783933,0.00396265549521323,0.00242521614936698,0.00111403764314321,0.00133448794348709,0.00273879681138769,0.00428970040662582,0.00587217360820731,0.00746616955962229,0.00906561220232352,0.0106680519784348,0.0122723149050225,0.0138777687307173,0.0154840430269452,0.017090906461598,0.0186982071493412,0.0203058412586635,0.0219137354083276,0.0235218362712634,0.0251301041641263,0.026738508947384,0.0283470273196435,0.0299556409828546,0.0315643353680784,0.0331730987317307,0.034781921502464,0.036390795801188,0.0379997150829547,0.0396086738660801,0.0412176675246798,0.0428266921279518,0.0444357443143633,0.0460448211922075,0.0476539202603001,0.0492630393442132,0.0508721765446077,0.052481330195068,0.0540904988274611,0.0556996811432988,0.0573088759899243,0.0589180823405996,0.060527299277769,0.0621365259789227,0.0637457617046015,0.065355005788173,0.0669642576270819,0.068573516675332,0.0701827824370028,0.0717920544606372,0.0734013323343677,0.0750106156816705,0.0766199041576537,0.078229197445804,0.0798384952551269,0.0814477973176257,0.0830571033860736,0.0846664132320403,0.0862757266441382,0.0878850434264631,0.0894943633972014,0.0911036863873858,0.0927130122397808,0.0943223408078814,0.0959316719550133,0.0975410055535221,0.099150341484041,0.100759679634829,0.102369019901173,0.10397836218484,0.105587706393589,0.107197052440715,0.108806400244644,0.11041574972856,0.112025100820057,0.113634453450834,0.115243807556403,0.11685316307583,0.118462519951492,0.120071878128855,0.121681237556269,0.123290598184784,0.124899959967968],"y":[0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23],"text":["stdavk: 0.036055513<br />forvavk: 0.1100","stdavk: 0.034446649<br />forvavk: 0.1112","stdavk: 0.032837838<br />forvavk: 0.1124","stdavk: 0.031229088<br />forvavk: 0.1136","stdavk: 0.029620409<br />forvavk: 0.1148","stdavk: 0.028011814<br />forvavk: 0.1160","stdavk: 0.026403318<br />forvavk: 0.1172","stdavk: 0.024794939<br />forvavk: 0.1184","stdavk: 0.023186703<br />forvavk: 0.1196","stdavk: 0.021578642<br />forvavk: 0.1208","stdavk: 0.019970797<br />forvavk: 0.1220","stdavk: 0.018363226<br />forvavk: 0.1232","stdavk: 0.016756006<br />forvavk: 0.1244","stdavk: 0.015149251<br />forvavk: 0.1256","stdavk: 0.013543125<br />forvavk: 0.1268","stdavk: 0.011937883<br />forvavk: 0.1280","stdavk: 0.010333935<br />forvavk: 0.1292","stdavk: 0.008731997<br />forvavk: 0.1304","stdavk: 0.007133420<br />forvavk: 0.1316","stdavk: 0.005541117<br />forvavk: 0.1328","stdavk: 0.003962655<br />forvavk: 0.1340","stdavk: 0.002425216<br />forvavk: 0.1352","stdavk: 0.001114038<br />forvavk: 0.1364","stdavk: 0.001334488<br />forvavk: 0.1376","stdavk: 0.002738797<br />forvavk: 0.1388","stdavk: 0.004289700<br />forvavk: 0.1400","stdavk: 0.005872174<br />forvavk: 0.1412","stdavk: 0.007466170<br />forvavk: 0.1424","stdavk: 0.009065612<br />forvavk: 0.1436","stdavk: 0.010668052<br />forvavk: 0.1448","stdavk: 0.012272315<br />forvavk: 0.1460","stdavk: 0.013877769<br />forvavk: 0.1472","stdavk: 0.015484043<br />forvavk: 0.1484","stdavk: 0.017090906<br />forvavk: 0.1496","stdavk: 0.018698207<br />forvavk: 0.1508","stdavk: 0.020305841<br />forvavk: 0.1520","stdavk: 0.021913735<br />forvavk: 0.1532","stdavk: 0.023521836<br />forvavk: 0.1544","stdavk: 0.025130104<br />forvavk: 0.1556","stdavk: 0.026738509<br />forvavk: 0.1568","stdavk: 0.028347027<br />forvavk: 0.1580","stdavk: 0.029955641<br />forvavk: 0.1592","stdavk: 0.031564335<br />forvavk: 0.1604","stdavk: 0.033173099<br />forvavk: 0.1616","stdavk: 0.034781922<br />forvavk: 0.1628","stdavk: 0.036390796<br />forvavk: 0.1640","stdavk: 0.037999715<br />forvavk: 0.1652","stdavk: 0.039608674<br />forvavk: 0.1664","stdavk: 0.041217668<br />forvavk: 0.1676","stdavk: 0.042826692<br />forvavk: 0.1688","stdavk: 0.044435744<br />forvavk: 0.1700","stdavk: 0.046044821<br />forvavk: 0.1712","stdavk: 0.047653920<br />forvavk: 0.1724","stdavk: 0.049263039<br />forvavk: 0.1736","stdavk: 0.050872177<br />forvavk: 0.1748","stdavk: 0.052481330<br />forvavk: 0.1760","stdavk: 0.054090499<br />forvavk: 0.1772","stdavk: 0.055699681<br />forvavk: 0.1784","stdavk: 0.057308876<br />forvavk: 0.1796","stdavk: 0.058918082<br />forvavk: 0.1808","stdavk: 0.060527299<br />forvavk: 0.1820","stdavk: 0.062136526<br />forvavk: 0.1832","stdavk: 0.063745762<br />forvavk: 0.1844","stdavk: 0.065355006<br />forvavk: 0.1856","stdavk: 0.066964258<br />forvavk: 0.1868","stdavk: 0.068573517<br />forvavk: 0.1880","stdavk: 0.070182782<br />forvavk: 0.1892","stdavk: 0.071792054<br />forvavk: 0.1904","stdavk: 0.073401332<br />forvavk: 0.1916","stdavk: 0.075010616<br />forvavk: 0.1928","stdavk: 0.076619904<br />forvavk: 0.1940","stdavk: 0.078229197<br />forvavk: 0.1952","stdavk: 0.079838495<br />forvavk: 0.1964","stdavk: 0.081447797<br />forvavk: 0.1976","stdavk: 0.083057103<br />forvavk: 0.1988","stdavk: 0.084666413<br />forvavk: 0.2000","stdavk: 0.086275727<br />forvavk: 0.2012","stdavk: 0.087885043<br />forvavk: 0.2024","stdavk: 0.089494363<br />forvavk: 0.2036","stdavk: 0.091103686<br />forvavk: 0.2048","stdavk: 0.092713012<br />forvavk: 0.2060","stdavk: 0.094322341<br />forvavk: 0.2072","stdavk: 0.095931672<br />forvavk: 0.2084","stdavk: 0.097541006<br />forvavk: 0.2096","stdavk: 0.099150341<br />forvavk: 0.2108","stdavk: 0.100759680<br />forvavk: 0.2120","stdavk: 0.102369020<br />forvavk: 0.2132","stdavk: 0.103978362<br />forvavk: 0.2144","stdavk: 0.105587706<br />forvavk: 0.2156","stdavk: 0.107197052<br />forvavk: 0.2168","stdavk: 0.108806400<br />forvavk: 0.2180","stdavk: 0.110415750<br />forvavk: 0.2192","stdavk: 0.112025101<br />forvavk: 0.2204","stdavk: 0.113634453<br />forvavk: 0.2216","stdavk: 0.115243808<br />forvavk: 0.2228","stdavk: 0.116853163<br />forvavk: 0.2240","stdavk: 0.118462520<br />forvavk: 0.2252","stdavk: 0.120071878<br />forvavk: 0.2264","stdavk: 0.121681238<br />forvavk: 0.2276","stdavk: 0.123290598<br />forvavk: 0.2288","stdavk: 0.124899960<br />forvavk: 0.2300"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":37.2602739726027,"l":48.9497716894977},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.00507525847309803,0.131089256084209],"tickmode":"array","ticktext":["0.000","0.025","0.050","0.075","0.100","0.125"],"tickvals":[0,0.025,0.05,0.075,0.1,0.125],"categoryorder":"array","categoryarray":["0.000","0.025","0.050","0.075","0.100","0.125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.236],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15,0.2],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"71aa73d62a714":{"x":{},"y":{},"type":"scatter"}},"cur_data":"71aa73d62a714","visdat":{"71aa73d62a714":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ee5d6c8d4a89024d8297" style="width:504px;height:504px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ee5d6c8d4a89024d8297">{"x":{"data":[{"x":[0.0360555127546399,0.0344466486143681,0.0328378375235837,0.0312290876810483,0.0296204090663464,0.0280118139510204,0.0264033175964166,0.0247949392229481,0.0231867033824113,0.0215786419433646,0.0199707970346136,0.0183632255330405,0.0167560061308974,0.015149250893751,0.0135431250280998,0.0119378825640669,0.0103339351847176,0.00873199658681908,0.00713342022344672,0.00554111680783933,0.00396265549521323,0.00242521614936698,0.00111403764314321,0.00133448794348709,0.00273879681138769,0.00428970040662582,0.00587217360820731,0.00746616955962229,0.00906561220232352,0.0106680519784348,0.0122723149050225,0.0138777687307173,0.0154840430269452,0.017090906461598,0.0186982071493412,0.0203058412586635,0.0219137354083276,0.0235218362712634,0.0251301041641263,0.026738508947384,0.0283470273196435,0.0299556409828546,0.0315643353680784,0.0331730987317307,0.034781921502464,0.036390795801188,0.0379997150829547,0.0396086738660801,0.0412176675246798,0.0428266921279518,0.0444357443143633,0.0460448211922075,0.0476539202603001,0.0492630393442132,0.0508721765446077,0.052481330195068,0.0540904988274611,0.0556996811432988,0.0573088759899243,0.0589180823405996,0.060527299277769,0.0621365259789227,0.0637457617046015,0.065355005788173,0.0669642576270819,0.068573516675332,0.0701827824370028,0.0717920544606372,0.0734013323343677,0.0750106156816705,0.0766199041576537,0.078229197445804,0.0798384952551269,0.0814477973176257,0.0830571033860736,0.0846664132320403,0.0862757266441382,0.0878850434264631,0.0894943633972014,0.0911036863873858,0.0927130122397808,0.0943223408078814,0.0959316719550133,0.0975410055535221,0.099150341484041,0.100759679634829,0.102369019901173,0.10397836218484,0.105587706393589,0.107197052440715,0.108806400244644,0.11041574972856,0.112025100820057,0.113634453450834,0.115243807556403,0.11685316307583,0.118462519951492,0.120071878128855,0.121681237556269,0.123290598184784,0.124899959967968],"y":[0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23],"text":["stdavk: 0.036055513<br />forvavk: 0.1100","stdavk: 0.034446649<br />forvavk: 0.1112","stdavk: 0.032837838<br />forvavk: 0.1124","stdavk: 0.031229088<br />forvavk: 0.1136","stdavk: 0.029620409<br />forvavk: 0.1148","stdavk: 0.028011814<br />forvavk: 0.1160","stdavk: 0.026403318<br />forvavk: 0.1172","stdavk: 0.024794939<br />forvavk: 0.1184","stdavk: 0.023186703<br />forvavk: 0.1196","stdavk: 0.021578642<br />forvavk: 0.1208","stdavk: 0.019970797<br />forvavk: 0.1220","stdavk: 0.018363226<br />forvavk: 0.1232","stdavk: 0.016756006<br />forvavk: 0.1244","stdavk: 0.015149251<br />forvavk: 0.1256","stdavk: 0.013543125<br />forvavk: 0.1268","stdavk: 0.011937883<br />forvavk: 0.1280","stdavk: 0.010333935<br />forvavk: 0.1292","stdavk: 0.008731997<br />forvavk: 0.1304","stdavk: 0.007133420<br />forvavk: 0.1316","stdavk: 0.005541117<br />forvavk: 0.1328","stdavk: 0.003962655<br />forvavk: 0.1340","stdavk: 0.002425216<br />forvavk: 0.1352","stdavk: 0.001114038<br />forvavk: 0.1364","stdavk: 0.001334488<br />forvavk: 0.1376","stdavk: 0.002738797<br />forvavk: 0.1388","stdavk: 0.004289700<br />forvavk: 0.1400","stdavk: 0.005872174<br />forvavk: 0.1412","stdavk: 0.007466170<br />forvavk: 0.1424","stdavk: 0.009065612<br />forvavk: 0.1436","stdavk: 0.010668052<br />forvavk: 0.1448","stdavk: 0.012272315<br />forvavk: 0.1460","stdavk: 0.013877769<br />forvavk: 0.1472","stdavk: 0.015484043<br />forvavk: 0.1484","stdavk: 0.017090906<br />forvavk: 0.1496","stdavk: 0.018698207<br />forvavk: 0.1508","stdavk: 0.020305841<br />forvavk: 0.1520","stdavk: 0.021913735<br />forvavk: 0.1532","stdavk: 0.023521836<br />forvavk: 0.1544","stdavk: 0.025130104<br />forvavk: 0.1556","stdavk: 0.026738509<br />forvavk: 0.1568","stdavk: 0.028347027<br />forvavk: 0.1580","stdavk: 0.029955641<br />forvavk: 0.1592","stdavk: 0.031564335<br />forvavk: 0.1604","stdavk: 0.033173099<br />forvavk: 0.1616","stdavk: 0.034781922<br />forvavk: 0.1628","stdavk: 0.036390796<br />forvavk: 0.1640","stdavk: 0.037999715<br />forvavk: 0.1652","stdavk: 0.039608674<br />forvavk: 0.1664","stdavk: 0.041217668<br />forvavk: 0.1676","stdavk: 0.042826692<br />forvavk: 0.1688","stdavk: 0.044435744<br />forvavk: 0.1700","stdavk: 0.046044821<br />forvavk: 0.1712","stdavk: 0.047653920<br />forvavk: 0.1724","stdavk: 0.049263039<br />forvavk: 0.1736","stdavk: 0.050872177<br />forvavk: 0.1748","stdavk: 0.052481330<br />forvavk: 0.1760","stdavk: 0.054090499<br />forvavk: 0.1772","stdavk: 0.055699681<br />forvavk: 0.1784","stdavk: 0.057308876<br />forvavk: 0.1796","stdavk: 0.058918082<br />forvavk: 0.1808","stdavk: 0.060527299<br />forvavk: 0.1820","stdavk: 0.062136526<br />forvavk: 0.1832","stdavk: 0.063745762<br />forvavk: 0.1844","stdavk: 0.065355006<br />forvavk: 0.1856","stdavk: 0.066964258<br />forvavk: 0.1868","stdavk: 0.068573517<br />forvavk: 0.1880","stdavk: 0.070182782<br />forvavk: 0.1892","stdavk: 0.071792054<br />forvavk: 0.1904","stdavk: 0.073401332<br />forvavk: 0.1916","stdavk: 0.075010616<br />forvavk: 0.1928","stdavk: 0.076619904<br />forvavk: 0.1940","stdavk: 0.078229197<br />forvavk: 0.1952","stdavk: 0.079838495<br />forvavk: 0.1964","stdavk: 0.081447797<br />forvavk: 0.1976","stdavk: 0.083057103<br />forvavk: 0.1988","stdavk: 0.084666413<br />forvavk: 0.2000","stdavk: 0.086275727<br />forvavk: 0.2012","stdavk: 0.087885043<br />forvavk: 0.2024","stdavk: 0.089494363<br />forvavk: 0.2036","stdavk: 0.091103686<br />forvavk: 0.2048","stdavk: 0.092713012<br />forvavk: 0.2060","stdavk: 0.094322341<br />forvavk: 0.2072","stdavk: 0.095931672<br />forvavk: 0.2084","stdavk: 0.097541006<br />forvavk: 0.2096","stdavk: 0.099150341<br />forvavk: 0.2108","stdavk: 0.100759680<br />forvavk: 0.2120","stdavk: 0.102369020<br />forvavk: 0.2132","stdavk: 0.103978362<br />forvavk: 0.2144","stdavk: 0.105587706<br />forvavk: 0.2156","stdavk: 0.107197052<br />forvavk: 0.2168","stdavk: 0.108806400<br />forvavk: 0.2180","stdavk: 0.110415750<br />forvavk: 0.2192","stdavk: 0.112025101<br />forvavk: 0.2204","stdavk: 0.113634453<br />forvavk: 0.2216","stdavk: 0.115243808<br />forvavk: 0.2228","stdavk: 0.116853163<br />forvavk: 0.2240","stdavk: 0.118462520<br />forvavk: 0.2252","stdavk: 0.120071878<br />forvavk: 0.2264","stdavk: 0.121681238<br />forvavk: 0.2276","stdavk: 0.123290598<br />forvavk: 0.2288","stdavk: 0.124899960<br />forvavk: 0.2300"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":37.2602739726027,"l":48.9497716894977},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.00507525847309803,0.131089256084209],"tickmode":"array","ticktext":["0.000","0.025","0.050","0.075","0.100","0.125"],"tickvals":[0,0.025,0.05,0.075,0.1,0.125],"categoryorder":"array","categoryarray":["0.000","0.025","0.050","0.075","0.100","0.125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.236],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15,0.2],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"71f432ece4b35":{"x":{},"y":{},"type":"scatter"}},"cur_data":"71f432ece4b35","visdat":{"71f432ece4b35":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
@@ -1204,7 +1179,7 @@ Løser denne for `\(Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)\)`
 
 Som gjør at vi kan skrive
 `\begin{equation}
-Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 \end{equation}`
 
 ---
@@ -1234,39 +1209,39 @@ Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 \\ 0.001975
 
 .panelset[
 .panel[.panel-name[Tabell]
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning A&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning B&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sannsynlighet</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avkastning A</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Avkastning B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>0.16</td>
+<td style='text-align: center;'>0.05</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>0.5</td>
+<td style='text-align: center;'>0.12</td>
+<td style='text-align: center;'>0.2</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.06</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.4</td>
+</tr>
+</tbody>
+</table>
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 
@@ -1289,56 +1264,133 @@ plotwf &lt;- c(-1,0,1) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
 
 ]
 .panel[.panel-name[Figur]
-<div id="htmlwidget-58a45a9ec088ecc3614e" style="width:504px;height:504px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-58a45a9ec088ecc3614e">{"x":{"data":[{"x":[0.0360555127546399,0.0344459580274138,0.0328364033001877,0.0312268485729617,0.0296172938457356,0.0280077391185095,0.0263981843912834,0.0247886296640573,0.0231790749368313,0.0215695202096052,0.0199599654823791,0.018350410755153,0.016740856027927,0.0151313013007009,0.0135217465734748,0.0119121918462487,0.0103026371190226,0.00869308239179655,0.0070835276645705,0.0054739729373444,0.00386441821011834,0.00225486348289225,0.000645308755666153,0.000964245971559929,0.00257380069878598,0.00418335542601208,0.00579291015323814,0.00740246488046425,0.00901201960769032,0.0106215743349164,0.0122311290621425,0.0138406837893686,0.0154502385165946,0.0170597932438207,0.0186693479710468,0.0202789026982729,0.0218884574254989,0.023498012152725,0.0251075668799511,0.0267171216071772,0.0283266763344033,0.0299362310616293,0.0315457857888554,0.0331553405160815,0.0347648952433076,0.0363744499705336,0.0379840046977597,0.0395935594249858,0.0412031141522119,0.0428126688794379,0.044422223606664,0.0460317783338901,0.0476413330611162,0.0492508877883423,0.0508604425155684,0.0524699972427944,0.0540795519700205,0.0556891066972466,0.0572986614244727,0.0589082161516987,0.0605177708789248,0.0621273256061509,0.063736880333377,0.0653464350606031,0.0669559897878291,0.0685655445150552,0.0701750992422813,0.0717846539695074,0.0733942086967335,0.0750037634239595,0.0766133181511856,0.0782228728784117,0.0798324276056378,0.0814419823328638,0.0830515370600899,0.084661091787316,0.0862706465145421,0.0878802012417682,0.0894897559689942,0.0910993106962203,0.0927088654234464,0.0943184201506725,0.0959279748778986,0.0975375296051246,0.0991470843323507,0.100756639059577,0.102366193786803,0.103975748514029,0.105585303241255,0.107194857968481,0.108804412695707,0.110413967422933,0.112023522150159,0.113633076877385,0.115242631604611,0.116852186331838,0.118461741059064,0.12007129578629,0.121680850513516,0.123290405240742,0.124899959967968,0.0360555127546399,0.035716802768445,0.0354225916612548,0.0351739960766473,0.034971988791031,0.0348173807171074,0.0347108052341054,0.0346527055220801,0.0346433254754794,0.0346827046234863,0.0347706773014274,0.0349068761134536,0.0350907395191381,0.0353215231834642,0.0355983145668443,0.0359200501113236,0.0362855343077651,0.0366934599077274,0.037142428568956,0.0376309712869599,0.0381575680566778,0.0387206663165809,0.0393186978421209,0.0399500938672239,0.0406132983147146,0.0413067791046458,0.0420290375811771,0.0427786161534008,0.0435541042842118,0.044354142985746,0.0451774279923061,0.0460227117845092,0.0468888046339422,0.0477745748280401,0.0486789482219984,0.0496009072497671,0.0505394895106787,0.0514937860328797,0.052462939300043,0.0534461411142095,0.0544426303552648,0.0554516906865787,0.0564726482467398,0.0575048693590378,0.0585477582833024,0.0596007550287746,0.0606633332417532,0.061734998177695,0.06281528476414,0.0639037557581712,0.065,0.0661036307626139,0.0672142841961439,0.0683316178646459,0.0694553093722863,0.0705850550754195,0.0717205688767177,0.0728615810973108,0.0740078374228027,0.0751590979190144,0.0763151361133556,0.0774757381378196,0.0786407019297259,0.0798098364864883,0.0809829611708537,0.0821599050632363,0.083340506357953,0.0845246118003508,0.0857120761619971,0.0869027617512815,0.0880965379569481,0.0892932808222433,0.0904928726475185,0.0916952016192777,0.0929001614637994,0.0941076511235936,0.0953175744550815,0.096529839945998,0.0977443604511278,0.0989610529450854,0.100179838290946,0.101400641023615,0.102623389146919,0.103848013943455,0.105074449796323,0.106302634021928,0.107532506713087,0.108764010591739,0.109997090870623,0.111231695123288,0.112467773161915,0.113705276922401,0.114944160356236,0.11618437932872,0.117425891523122,0.118668656350361,0.119912634863887,0.121157789679409,0.122404084899157,0.123651486040403,0.124899959967968,0.0360555127546399,0.0369439572267732,0.0378324016989065,0.0387208461710397,0.039609290643173,0.0404977351153063,0.0413861795874396,0.0422746240595729,0.0431630685317061,0.0440515130038394,0.0449399574759727,0.045828401948106,0.0467168464202393,0.0476052908923725,0.0484937353645058,0.0493821798366391,0.0502706243087724,0.0511590687809057,0.0520475132530389,0.0529359577251722,0.0538244021973055,0.0547128466694388,0.0556012911415721,0.0564897356137053,0.0573781800858386,0.0582666245579719,0.0591550690301052,0.0600435135022385,0.0609319579743718,0.061820402446505,0.0627088469186383,0.0635972913907716,0.0644857358629049,0.0653741803350382,0.0662626248071714,0.0671510692793047,0.068039513751438,0.0689279582235713,0.0698164026957046,0.0707048471678378,0.0715932916399711,0.0724817361121044,0.0733701805842377,0.074258625056371,0.0751470695285042,0.0760355140006375,0.0769239584727708,0.0778124029449041,0.0787008474170374,0.0795892918891706,0.0804777363613039,0.0813661808334372,0.0822546253055705,0.0831430697777038,0.084031514249837,0.0849199587219703,0.0858084031941036,0.0866968476662369,0.0875852921383702,0.0884737366105035,0.0893621810826367,0.09025062555477,0.0911390700269033,0.0920275144990366,0.0929159589711699,0.0938044034433031,0.0946928479154364,0.0955812923875697,0.096469736859703,0.0973581813318363,0.0982466258039695,0.0991350702761028,0.100023514748236,0.100911959220369,0.101800403692503,0.102688848164636,0.103577292636769,0.104465737108903,0.105354181581036,0.106242626053169,0.107131070525302,0.108019514997436,0.108907959469569,0.109796403941702,0.110684848413835,0.111573292885969,0.112461737358102,0.113350181830235,0.114238626302369,0.115127070774502,0.116015515246635,0.116903959718768,0.117792404190902,0.118680848663035,0.119569293135168,0.120457737607302,0.121346182079435,0.122234626551568,0.123123071023701,0.124011515495835,0.124899959967968],"y":[0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23],"text":["stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr: -1","stdavk: 0.0344459580<br />forvavk: 0.1112<br />corr: -1","stdavk: 0.0328364033<br />forvavk: 0.1124<br />corr: -1","stdavk: 0.0312268486<br />forvavk: 0.1136<br />corr: -1","stdavk: 0.0296172938<br />forvavk: 0.1148<br />corr: -1","stdavk: 0.0280077391<br />forvavk: 0.1160<br />corr: -1","stdavk: 0.0263981844<br />forvavk: 0.1172<br />corr: -1","stdavk: 0.0247886297<br />forvavk: 0.1184<br />corr: -1","stdavk: 0.0231790749<br />forvavk: 0.1196<br />corr: -1","stdavk: 0.0215695202<br />forvavk: 0.1208<br />corr: -1","stdavk: 0.0199599655<br />forvavk: 0.1220<br />corr: -1","stdavk: 0.0183504108<br />forvavk: 0.1232<br />corr: -1","stdavk: 0.0167408560<br />forvavk: 0.1244<br />corr: -1","stdavk: 0.0151313013<br />forvavk: 0.1256<br />corr: -1","stdavk: 0.0135217466<br />forvavk: 0.1268<br />corr: -1","stdavk: 0.0119121918<br />forvavk: 0.1280<br />corr: -1","stdavk: 0.0103026371<br />forvavk: 0.1292<br />corr: -1","stdavk: 0.0086930824<br />forvavk: 0.1304<br />corr: -1","stdavk: 0.0070835277<br />forvavk: 0.1316<br />corr: -1","stdavk: 0.0054739729<br />forvavk: 0.1328<br />corr: -1","stdavk: 0.0038644182<br />forvavk: 0.1340<br />corr: -1","stdavk: 0.0022548635<br />forvavk: 0.1352<br />corr: -1","stdavk: 0.0006453088<br />forvavk: 0.1364<br />corr: -1","stdavk: 0.0009642460<br />forvavk: 0.1376<br />corr: -1","stdavk: 0.0025738007<br />forvavk: 0.1388<br />corr: -1","stdavk: 0.0041833554<br />forvavk: 0.1400<br />corr: -1","stdavk: 0.0057929102<br />forvavk: 0.1412<br />corr: -1","stdavk: 0.0074024649<br />forvavk: 0.1424<br />corr: -1","stdavk: 0.0090120196<br />forvavk: 0.1436<br />corr: -1","stdavk: 0.0106215743<br />forvavk: 0.1448<br />corr: -1","stdavk: 0.0122311291<br />forvavk: 0.1460<br />corr: -1","stdavk: 0.0138406838<br />forvavk: 0.1472<br />corr: -1","stdavk: 0.0154502385<br />forvavk: 0.1484<br />corr: -1","stdavk: 0.0170597932<br />forvavk: 0.1496<br />corr: -1","stdavk: 0.0186693480<br />forvavk: 0.1508<br />corr: -1","stdavk: 0.0202789027<br />forvavk: 0.1520<br />corr: -1","stdavk: 0.0218884574<br />forvavk: 0.1532<br />corr: -1","stdavk: 0.0234980122<br />forvavk: 0.1544<br />corr: -1","stdavk: 0.0251075669<br />forvavk: 0.1556<br />corr: -1","stdavk: 0.0267171216<br />forvavk: 0.1568<br />corr: -1","stdavk: 0.0283266763<br />forvavk: 0.1580<br />corr: -1","stdavk: 0.0299362311<br />forvavk: 0.1592<br />corr: -1","stdavk: 0.0315457858<br />forvavk: 0.1604<br />corr: -1","stdavk: 0.0331553405<br />forvavk: 0.1616<br />corr: -1","stdavk: 0.0347648952<br />forvavk: 0.1628<br />corr: -1","stdavk: 0.0363744500<br />forvavk: 0.1640<br />corr: -1","stdavk: 0.0379840047<br />forvavk: 0.1652<br />corr: -1","stdavk: 0.0395935594<br />forvavk: 0.1664<br />corr: -1","stdavk: 0.0412031142<br />forvavk: 0.1676<br />corr: -1","stdavk: 0.0428126689<br />forvavk: 0.1688<br />corr: -1","stdavk: 0.0444222236<br />forvavk: 0.1700<br />corr: -1","stdavk: 0.0460317783<br />forvavk: 0.1712<br />corr: -1","stdavk: 0.0476413331<br />forvavk: 0.1724<br />corr: -1","stdavk: 0.0492508878<br />forvavk: 0.1736<br />corr: -1","stdavk: 0.0508604425<br />forvavk: 0.1748<br />corr: -1","stdavk: 0.0524699972<br />forvavk: 0.1760<br />corr: -1","stdavk: 0.0540795520<br />forvavk: 0.1772<br />corr: -1","stdavk: 0.0556891067<br />forvavk: 0.1784<br />corr: -1","stdavk: 0.0572986614<br />forvavk: 0.1796<br />corr: -1","stdavk: 0.0589082162<br />forvavk: 0.1808<br />corr: -1","stdavk: 0.0605177709<br />forvavk: 0.1820<br />corr: -1","stdavk: 0.0621273256<br />forvavk: 0.1832<br />corr: -1","stdavk: 0.0637368803<br />forvavk: 0.1844<br />corr: -1","stdavk: 0.0653464351<br />forvavk: 0.1856<br />corr: -1","stdavk: 0.0669559898<br />forvavk: 0.1868<br />corr: -1","stdavk: 0.0685655445<br />forvavk: 0.1880<br />corr: -1","stdavk: 0.0701750992<br />forvavk: 0.1892<br />corr: -1","stdavk: 0.0717846540<br />forvavk: 0.1904<br />corr: -1","stdavk: 0.0733942087<br />forvavk: 0.1916<br />corr: -1","stdavk: 0.0750037634<br />forvavk: 0.1928<br />corr: -1","stdavk: 0.0766133182<br />forvavk: 0.1940<br />corr: -1","stdavk: 0.0782228729<br />forvavk: 0.1952<br />corr: -1","stdavk: 0.0798324276<br />forvavk: 0.1964<br />corr: -1","stdavk: 0.0814419823<br />forvavk: 0.1976<br />corr: -1","stdavk: 0.0830515371<br />forvavk: 0.1988<br />corr: -1","stdavk: 0.0846610918<br />forvavk: 0.2000<br />corr: -1","stdavk: 0.0862706465<br />forvavk: 0.2012<br />corr: -1","stdavk: 0.0878802012<br />forvavk: 0.2024<br />corr: -1","stdavk: 0.0894897560<br />forvavk: 0.2036<br />corr: -1","stdavk: 0.0910993107<br />forvavk: 0.2048<br />corr: -1","stdavk: 0.0927088654<br />forvavk: 0.2060<br />corr: -1","stdavk: 0.0943184202<br />forvavk: 0.2072<br />corr: -1","stdavk: 0.0959279749<br />forvavk: 0.2084<br />corr: -1","stdavk: 0.0975375296<br />forvavk: 0.2096<br />corr: -1","stdavk: 0.0991470843<br />forvavk: 0.2108<br />corr: -1","stdavk: 0.1007566391<br />forvavk: 0.2120<br />corr: -1","stdavk: 0.1023661938<br />forvavk: 0.2132<br />corr: -1","stdavk: 0.1039757485<br />forvavk: 0.2144<br />corr: -1","stdavk: 0.1055853032<br />forvavk: 0.2156<br />corr: -1","stdavk: 0.1071948580<br />forvavk: 0.2168<br />corr: -1","stdavk: 0.1088044127<br />forvavk: 0.2180<br />corr: -1","stdavk: 0.1104139674<br />forvavk: 0.2192<br />corr: -1","stdavk: 0.1120235222<br />forvavk: 0.2204<br />corr: -1","stdavk: 0.1136330769<br />forvavk: 0.2216<br />corr: -1","stdavk: 0.1152426316<br />forvavk: 0.2228<br />corr: -1","stdavk: 0.1168521863<br />forvavk: 0.2240<br />corr: -1","stdavk: 0.1184617411<br />forvavk: 0.2252<br />corr: -1","stdavk: 0.1200712958<br />forvavk: 0.2264<br />corr: -1","stdavk: 0.1216808505<br />forvavk: 0.2276<br />corr: -1","stdavk: 0.1232904052<br />forvavk: 0.2288<br />corr: -1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr: -1","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  0","stdavk: 0.0357168028<br />forvavk: 0.1112<br />corr:  0","stdavk: 0.0354225917<br />forvavk: 0.1124<br />corr:  0","stdavk: 0.0351739961<br />forvavk: 0.1136<br />corr:  0","stdavk: 0.0349719888<br />forvavk: 0.1148<br />corr:  0","stdavk: 0.0348173807<br />forvavk: 0.1160<br />corr:  0","stdavk: 0.0347108052<br />forvavk: 0.1172<br />corr:  0","stdavk: 0.0346527055<br />forvavk: 0.1184<br />corr:  0","stdavk: 0.0346433255<br />forvavk: 0.1196<br />corr:  0","stdavk: 0.0346827046<br />forvavk: 0.1208<br />corr:  0","stdavk: 0.0347706773<br />forvavk: 0.1220<br />corr:  0","stdavk: 0.0349068761<br />forvavk: 0.1232<br />corr:  0","stdavk: 0.0350907395<br />forvavk: 0.1244<br />corr:  0","stdavk: 0.0353215232<br />forvavk: 0.1256<br />corr:  0","stdavk: 0.0355983146<br />forvavk: 0.1268<br />corr:  0","stdavk: 0.0359200501<br />forvavk: 0.1280<br />corr:  0","stdavk: 0.0362855343<br />forvavk: 0.1292<br />corr:  0","stdavk: 0.0366934599<br />forvavk: 0.1304<br />corr:  0","stdavk: 0.0371424286<br />forvavk: 0.1316<br />corr:  0","stdavk: 0.0376309713<br />forvavk: 0.1328<br />corr:  0","stdavk: 0.0381575681<br />forvavk: 0.1340<br />corr:  0","stdavk: 0.0387206663<br />forvavk: 0.1352<br />corr:  0","stdavk: 0.0393186978<br />forvavk: 0.1364<br />corr:  0","stdavk: 0.0399500939<br />forvavk: 0.1376<br />corr:  0","stdavk: 0.0406132983<br />forvavk: 0.1388<br />corr:  0","stdavk: 0.0413067791<br />forvavk: 0.1400<br />corr:  0","stdavk: 0.0420290376<br />forvavk: 0.1412<br />corr:  0","stdavk: 0.0427786162<br />forvavk: 0.1424<br />corr:  0","stdavk: 0.0435541043<br />forvavk: 0.1436<br />corr:  0","stdavk: 0.0443541430<br />forvavk: 0.1448<br />corr:  0","stdavk: 0.0451774280<br />forvavk: 0.1460<br />corr:  0","stdavk: 0.0460227118<br />forvavk: 0.1472<br />corr:  0","stdavk: 0.0468888046<br />forvavk: 0.1484<br />corr:  0","stdavk: 0.0477745748<br />forvavk: 0.1496<br />corr:  0","stdavk: 0.0486789482<br />forvavk: 0.1508<br />corr:  0","stdavk: 0.0496009072<br />forvavk: 0.1520<br />corr:  0","stdavk: 0.0505394895<br />forvavk: 0.1532<br />corr:  0","stdavk: 0.0514937860<br />forvavk: 0.1544<br />corr:  0","stdavk: 0.0524629393<br />forvavk: 0.1556<br />corr:  0","stdavk: 0.0534461411<br />forvavk: 0.1568<br />corr:  0","stdavk: 0.0544426304<br />forvavk: 0.1580<br />corr:  0","stdavk: 0.0554516907<br />forvavk: 0.1592<br />corr:  0","stdavk: 0.0564726482<br />forvavk: 0.1604<br />corr:  0","stdavk: 0.0575048694<br />forvavk: 0.1616<br />corr:  0","stdavk: 0.0585477583<br />forvavk: 0.1628<br />corr:  0","stdavk: 0.0596007550<br />forvavk: 0.1640<br />corr:  0","stdavk: 0.0606633332<br />forvavk: 0.1652<br />corr:  0","stdavk: 0.0617349982<br />forvavk: 0.1664<br />corr:  0","stdavk: 0.0628152848<br />forvavk: 0.1676<br />corr:  0","stdavk: 0.0639037558<br />forvavk: 0.1688<br />corr:  0","stdavk: 0.0650000000<br />forvavk: 0.1700<br />corr:  0","stdavk: 0.0661036308<br />forvavk: 0.1712<br />corr:  0","stdavk: 0.0672142842<br />forvavk: 0.1724<br />corr:  0","stdavk: 0.0683316179<br />forvavk: 0.1736<br />corr:  0","stdavk: 0.0694553094<br />forvavk: 0.1748<br />corr:  0","stdavk: 0.0705850551<br />forvavk: 0.1760<br />corr:  0","stdavk: 0.0717205689<br />forvavk: 0.1772<br />corr:  0","stdavk: 0.0728615811<br />forvavk: 0.1784<br />corr:  0","stdavk: 0.0740078374<br />forvavk: 0.1796<br />corr:  0","stdavk: 0.0751590979<br />forvavk: 0.1808<br />corr:  0","stdavk: 0.0763151361<br />forvavk: 0.1820<br />corr:  0","stdavk: 0.0774757381<br />forvavk: 0.1832<br />corr:  0","stdavk: 0.0786407019<br />forvavk: 0.1844<br />corr:  0","stdavk: 0.0798098365<br />forvavk: 0.1856<br />corr:  0","stdavk: 0.0809829612<br />forvavk: 0.1868<br />corr:  0","stdavk: 0.0821599051<br />forvavk: 0.1880<br />corr:  0","stdavk: 0.0833405064<br />forvavk: 0.1892<br />corr:  0","stdavk: 0.0845246118<br />forvavk: 0.1904<br />corr:  0","stdavk: 0.0857120762<br />forvavk: 0.1916<br />corr:  0","stdavk: 0.0869027618<br />forvavk: 0.1928<br />corr:  0","stdavk: 0.0880965380<br />forvavk: 0.1940<br />corr:  0","stdavk: 0.0892932808<br />forvavk: 0.1952<br />corr:  0","stdavk: 0.0904928726<br />forvavk: 0.1964<br />corr:  0","stdavk: 0.0916952016<br />forvavk: 0.1976<br />corr:  0","stdavk: 0.0929001615<br />forvavk: 0.1988<br />corr:  0","stdavk: 0.0941076511<br />forvavk: 0.2000<br />corr:  0","stdavk: 0.0953175745<br />forvavk: 0.2012<br />corr:  0","stdavk: 0.0965298399<br />forvavk: 0.2024<br />corr:  0","stdavk: 0.0977443605<br />forvavk: 0.2036<br />corr:  0","stdavk: 0.0989610529<br />forvavk: 0.2048<br />corr:  0","stdavk: 0.1001798383<br />forvavk: 0.2060<br />corr:  0","stdavk: 0.1014006410<br />forvavk: 0.2072<br />corr:  0","stdavk: 0.1026233891<br />forvavk: 0.2084<br />corr:  0","stdavk: 0.1038480139<br />forvavk: 0.2096<br />corr:  0","stdavk: 0.1050744498<br />forvavk: 0.2108<br />corr:  0","stdavk: 0.1063026340<br />forvavk: 0.2120<br />corr:  0","stdavk: 0.1075325067<br />forvavk: 0.2132<br />corr:  0","stdavk: 0.1087640106<br />forvavk: 0.2144<br />corr:  0","stdavk: 0.1099970909<br />forvavk: 0.2156<br />corr:  0","stdavk: 0.1112316951<br />forvavk: 0.2168<br />corr:  0","stdavk: 0.1124677732<br />forvavk: 0.2180<br />corr:  0","stdavk: 0.1137052769<br />forvavk: 0.2192<br />corr:  0","stdavk: 0.1149441604<br />forvavk: 0.2204<br />corr:  0","stdavk: 0.1161843793<br />forvavk: 0.2216<br />corr:  0","stdavk: 0.1174258915<br />forvavk: 0.2228<br />corr:  0","stdavk: 0.1186686564<br />forvavk: 0.2240<br />corr:  0","stdavk: 0.1199126349<br />forvavk: 0.2252<br />corr:  0","stdavk: 0.1211577897<br />forvavk: 0.2264<br />corr:  0","stdavk: 0.1224040849<br />forvavk: 0.2276<br />corr:  0","stdavk: 0.1236514860<br />forvavk: 0.2288<br />corr:  0","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  0","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  1","stdavk: 0.0369439572<br />forvavk: 0.1112<br />corr:  1","stdavk: 0.0378324017<br />forvavk: 0.1124<br />corr:  1","stdavk: 0.0387208462<br />forvavk: 0.1136<br />corr:  1","stdavk: 0.0396092906<br />forvavk: 0.1148<br />corr:  1","stdavk: 0.0404977351<br />forvavk: 0.1160<br />corr:  1","stdavk: 0.0413861796<br />forvavk: 0.1172<br />corr:  1","stdavk: 0.0422746241<br />forvavk: 0.1184<br />corr:  1","stdavk: 0.0431630685<br />forvavk: 0.1196<br />corr:  1","stdavk: 0.0440515130<br />forvavk: 0.1208<br />corr:  1","stdavk: 0.0449399575<br />forvavk: 0.1220<br />corr:  1","stdavk: 0.0458284019<br />forvavk: 0.1232<br />corr:  1","stdavk: 0.0467168464<br />forvavk: 0.1244<br />corr:  1","stdavk: 0.0476052909<br />forvavk: 0.1256<br />corr:  1","stdavk: 0.0484937354<br />forvavk: 0.1268<br />corr:  1","stdavk: 0.0493821798<br />forvavk: 0.1280<br />corr:  1","stdavk: 0.0502706243<br />forvavk: 0.1292<br />corr:  1","stdavk: 0.0511590688<br />forvavk: 0.1304<br />corr:  1","stdavk: 0.0520475133<br />forvavk: 0.1316<br />corr:  1","stdavk: 0.0529359577<br />forvavk: 0.1328<br />corr:  1","stdavk: 0.0538244022<br />forvavk: 0.1340<br />corr:  1","stdavk: 0.0547128467<br />forvavk: 0.1352<br />corr:  1","stdavk: 0.0556012911<br />forvavk: 0.1364<br />corr:  1","stdavk: 0.0564897356<br />forvavk: 0.1376<br />corr:  1","stdavk: 0.0573781801<br />forvavk: 0.1388<br />corr:  1","stdavk: 0.0582666246<br />forvavk: 0.1400<br />corr:  1","stdavk: 0.0591550690<br />forvavk: 0.1412<br />corr:  1","stdavk: 0.0600435135<br />forvavk: 0.1424<br />corr:  1","stdavk: 0.0609319580<br />forvavk: 0.1436<br />corr:  1","stdavk: 0.0618204024<br />forvavk: 0.1448<br />corr:  1","stdavk: 0.0627088469<br />forvavk: 0.1460<br />corr:  1","stdavk: 0.0635972914<br />forvavk: 0.1472<br />corr:  1","stdavk: 0.0644857359<br />forvavk: 0.1484<br />corr:  1","stdavk: 0.0653741803<br />forvavk: 0.1496<br />corr:  1","stdavk: 0.0662626248<br />forvavk: 0.1508<br />corr:  1","stdavk: 0.0671510693<br />forvavk: 0.1520<br />corr:  1","stdavk: 0.0680395138<br />forvavk: 0.1532<br />corr:  1","stdavk: 0.0689279582<br />forvavk: 0.1544<br />corr:  1","stdavk: 0.0698164027<br />forvavk: 0.1556<br />corr:  1","stdavk: 0.0707048472<br />forvavk: 0.1568<br />corr:  1","stdavk: 0.0715932916<br />forvavk: 0.1580<br />corr:  1","stdavk: 0.0724817361<br />forvavk: 0.1592<br />corr:  1","stdavk: 0.0733701806<br />forvavk: 0.1604<br />corr:  1","stdavk: 0.0742586251<br />forvavk: 0.1616<br />corr:  1","stdavk: 0.0751470695<br />forvavk: 0.1628<br />corr:  1","stdavk: 0.0760355140<br />forvavk: 0.1640<br />corr:  1","stdavk: 0.0769239585<br />forvavk: 0.1652<br />corr:  1","stdavk: 0.0778124029<br />forvavk: 0.1664<br />corr:  1","stdavk: 0.0787008474<br />forvavk: 0.1676<br />corr:  1","stdavk: 0.0795892919<br />forvavk: 0.1688<br />corr:  1","stdavk: 0.0804777364<br />forvavk: 0.1700<br />corr:  1","stdavk: 0.0813661808<br />forvavk: 0.1712<br />corr:  1","stdavk: 0.0822546253<br />forvavk: 0.1724<br />corr:  1","stdavk: 0.0831430698<br />forvavk: 0.1736<br />corr:  1","stdavk: 0.0840315142<br />forvavk: 0.1748<br />corr:  1","stdavk: 0.0849199587<br />forvavk: 0.1760<br />corr:  1","stdavk: 0.0858084032<br />forvavk: 0.1772<br />corr:  1","stdavk: 0.0866968477<br />forvavk: 0.1784<br />corr:  1","stdavk: 0.0875852921<br />forvavk: 0.1796<br />corr:  1","stdavk: 0.0884737366<br />forvavk: 0.1808<br />corr:  1","stdavk: 0.0893621811<br />forvavk: 0.1820<br />corr:  1","stdavk: 0.0902506256<br />forvavk: 0.1832<br />corr:  1","stdavk: 0.0911390700<br />forvavk: 0.1844<br />corr:  1","stdavk: 0.0920275145<br />forvavk: 0.1856<br />corr:  1","stdavk: 0.0929159590<br />forvavk: 0.1868<br />corr:  1","stdavk: 0.0938044034<br />forvavk: 0.1880<br />corr:  1","stdavk: 0.0946928479<br />forvavk: 0.1892<br />corr:  1","stdavk: 0.0955812924<br />forvavk: 0.1904<br />corr:  1","stdavk: 0.0964697369<br />forvavk: 0.1916<br />corr:  1","stdavk: 0.0973581813<br />forvavk: 0.1928<br />corr:  1","stdavk: 0.0982466258<br />forvavk: 0.1940<br />corr:  1","stdavk: 0.0991350703<br />forvavk: 0.1952<br />corr:  1","stdavk: 0.1000235147<br />forvavk: 0.1964<br />corr:  1","stdavk: 0.1009119592<br />forvavk: 0.1976<br />corr:  1","stdavk: 0.1018004037<br />forvavk: 0.1988<br />corr:  1","stdavk: 0.1026888482<br />forvavk: 0.2000<br />corr:  1","stdavk: 0.1035772926<br />forvavk: 0.2012<br />corr:  1","stdavk: 0.1044657371<br />forvavk: 0.2024<br />corr:  1","stdavk: 0.1053541816<br />forvavk: 0.2036<br />corr:  1","stdavk: 0.1062426261<br />forvavk: 0.2048<br />corr:  1","stdavk: 0.1071310705<br />forvavk: 0.2060<br />corr:  1","stdavk: 0.1080195150<br />forvavk: 0.2072<br />corr:  1","stdavk: 0.1089079595<br />forvavk: 0.2084<br />corr:  1","stdavk: 0.1097964039<br />forvavk: 0.2096<br />corr:  1","stdavk: 0.1106848484<br />forvavk: 0.2108<br />corr:  1","stdavk: 0.1115732929<br />forvavk: 0.2120<br />corr:  1","stdavk: 0.1124617374<br />forvavk: 0.2132<br />corr:  1","stdavk: 0.1133501818<br />forvavk: 0.2144<br />corr:  1","stdavk: 0.1142386263<br />forvavk: 0.2156<br />corr:  1","stdavk: 0.1151270708<br />forvavk: 0.2168<br />corr:  1","stdavk: 0.1160155152<br />forvavk: 0.2180<br />corr:  1","stdavk: 0.1169039597<br />forvavk: 0.2192<br />corr:  1","stdavk: 0.1177924042<br />forvavk: 0.2204<br />corr:  1","stdavk: 0.1186808487<br />forvavk: 0.2216<br />corr:  1","stdavk: 0.1195692931<br />forvavk: 0.2228<br />corr:  1","stdavk: 0.1204577376<br />forvavk: 0.2240<br />corr:  1","stdavk: 0.1213461821<br />forvavk: 0.2252<br />corr:  1","stdavk: 0.1222346266<br />forvavk: 0.2264<br />corr:  1","stdavk: 0.1231230710<br />forvavk: 0.2276<br />corr:  1","stdavk: 0.1240115155<br />forvavk: 0.2288<br />corr:  1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":37.2602739726027,"l":48.9497716894977},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.00556742380494894,0.131112692528583],"tickmode":"array","ticktext":["0.00","0.04","0.08","0.12"],"tickvals":[0,0.04,0.08,0.12],"categoryorder":"array","categoryarray":["0.00","0.04","0.08","0.12"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.236],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15,0.2],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"71aa71cf307c2":{"x":{},"y":{},"group_by":{},"type":"scatter"}},"cur_data":"71aa71cf307c2","visdat":{"71aa71cf307c2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fbe6887191dcb798a6ac" style="width:504px;height:504px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fbe6887191dcb798a6ac">{"x":{"data":[{"x":[0.0360555127546399,0.0344459580274138,0.0328364033001877,0.0312268485729617,0.0296172938457356,0.0280077391185095,0.0263981843912834,0.0247886296640573,0.0231790749368313,0.0215695202096052,0.0199599654823791,0.018350410755153,0.016740856027927,0.0151313013007009,0.0135217465734748,0.0119121918462487,0.0103026371190226,0.00869308239179655,0.0070835276645705,0.0054739729373444,0.00386441821011834,0.00225486348289225,0.000645308755666153,0.000964245971559929,0.00257380069878598,0.00418335542601208,0.00579291015323814,0.00740246488046425,0.00901201960769032,0.0106215743349164,0.0122311290621425,0.0138406837893686,0.0154502385165946,0.0170597932438207,0.0186693479710468,0.0202789026982729,0.0218884574254989,0.023498012152725,0.0251075668799511,0.0267171216071772,0.0283266763344033,0.0299362310616293,0.0315457857888554,0.0331553405160815,0.0347648952433076,0.0363744499705336,0.0379840046977597,0.0395935594249858,0.0412031141522119,0.0428126688794379,0.044422223606664,0.0460317783338901,0.0476413330611162,0.0492508877883423,0.0508604425155684,0.0524699972427944,0.0540795519700205,0.0556891066972466,0.0572986614244727,0.0589082161516987,0.0605177708789248,0.0621273256061509,0.063736880333377,0.0653464350606031,0.0669559897878291,0.0685655445150552,0.0701750992422813,0.0717846539695074,0.0733942086967335,0.0750037634239595,0.0766133181511856,0.0782228728784117,0.0798324276056378,0.0814419823328638,0.0830515370600899,0.084661091787316,0.0862706465145421,0.0878802012417682,0.0894897559689942,0.0910993106962203,0.0927088654234464,0.0943184201506725,0.0959279748778986,0.0975375296051246,0.0991470843323507,0.100756639059577,0.102366193786803,0.103975748514029,0.105585303241255,0.107194857968481,0.108804412695707,0.110413967422933,0.112023522150159,0.113633076877385,0.115242631604611,0.116852186331838,0.118461741059064,0.12007129578629,0.121680850513516,0.123290405240742,0.124899959967968,0.0360555127546399,0.035716802768445,0.0354225916612548,0.0351739960766473,0.034971988791031,0.0348173807171074,0.0347108052341054,0.0346527055220801,0.0346433254754794,0.0346827046234863,0.0347706773014274,0.0349068761134536,0.0350907395191381,0.0353215231834642,0.0355983145668443,0.0359200501113236,0.0362855343077651,0.0366934599077274,0.037142428568956,0.0376309712869599,0.0381575680566778,0.0387206663165809,0.0393186978421209,0.0399500938672239,0.0406132983147146,0.0413067791046458,0.0420290375811771,0.0427786161534008,0.0435541042842118,0.044354142985746,0.0451774279923061,0.0460227117845092,0.0468888046339422,0.0477745748280401,0.0486789482219984,0.0496009072497671,0.0505394895106787,0.0514937860328797,0.052462939300043,0.0534461411142095,0.0544426303552648,0.0554516906865787,0.0564726482467398,0.0575048693590378,0.0585477582833024,0.0596007550287746,0.0606633332417532,0.061734998177695,0.06281528476414,0.0639037557581712,0.065,0.0661036307626139,0.0672142841961439,0.0683316178646459,0.0694553093722863,0.0705850550754195,0.0717205688767177,0.0728615810973108,0.0740078374228027,0.0751590979190144,0.0763151361133556,0.0774757381378196,0.0786407019297259,0.0798098364864883,0.0809829611708537,0.0821599050632363,0.083340506357953,0.0845246118003508,0.0857120761619971,0.0869027617512815,0.0880965379569481,0.0892932808222433,0.0904928726475185,0.0916952016192777,0.0929001614637994,0.0941076511235936,0.0953175744550815,0.096529839945998,0.0977443604511278,0.0989610529450854,0.100179838290946,0.101400641023615,0.102623389146919,0.103848013943455,0.105074449796323,0.106302634021928,0.107532506713087,0.108764010591739,0.109997090870623,0.111231695123288,0.112467773161915,0.113705276922401,0.114944160356236,0.11618437932872,0.117425891523122,0.118668656350361,0.119912634863887,0.121157789679409,0.122404084899157,0.123651486040403,0.124899959967968,0.0360555127546399,0.0369439572267732,0.0378324016989065,0.0387208461710397,0.039609290643173,0.0404977351153063,0.0413861795874396,0.0422746240595729,0.0431630685317061,0.0440515130038394,0.0449399574759727,0.045828401948106,0.0467168464202393,0.0476052908923725,0.0484937353645058,0.0493821798366391,0.0502706243087724,0.0511590687809057,0.0520475132530389,0.0529359577251722,0.0538244021973055,0.0547128466694388,0.0556012911415721,0.0564897356137053,0.0573781800858386,0.0582666245579719,0.0591550690301052,0.0600435135022385,0.0609319579743718,0.061820402446505,0.0627088469186383,0.0635972913907716,0.0644857358629049,0.0653741803350382,0.0662626248071714,0.0671510692793047,0.068039513751438,0.0689279582235713,0.0698164026957046,0.0707048471678378,0.0715932916399711,0.0724817361121044,0.0733701805842377,0.074258625056371,0.0751470695285042,0.0760355140006375,0.0769239584727708,0.0778124029449041,0.0787008474170374,0.0795892918891706,0.0804777363613039,0.0813661808334372,0.0822546253055705,0.0831430697777038,0.084031514249837,0.0849199587219703,0.0858084031941036,0.0866968476662369,0.0875852921383702,0.0884737366105035,0.0893621810826367,0.09025062555477,0.0911390700269033,0.0920275144990366,0.0929159589711699,0.0938044034433031,0.0946928479154364,0.0955812923875697,0.096469736859703,0.0973581813318363,0.0982466258039695,0.0991350702761028,0.100023514748236,0.100911959220369,0.101800403692503,0.102688848164636,0.103577292636769,0.104465737108903,0.105354181581036,0.106242626053169,0.107131070525302,0.108019514997436,0.108907959469569,0.109796403941702,0.110684848413835,0.111573292885969,0.112461737358102,0.113350181830235,0.114238626302369,0.115127070774502,0.116015515246635,0.116903959718768,0.117792404190902,0.118680848663035,0.119569293135168,0.120457737607302,0.121346182079435,0.122234626551568,0.123123071023701,0.124011515495835,0.124899959967968],"y":[0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23],"text":["stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr: -1","stdavk: 0.0344459580<br />forvavk: 0.1112<br />corr: -1","stdavk: 0.0328364033<br />forvavk: 0.1124<br />corr: -1","stdavk: 0.0312268486<br />forvavk: 0.1136<br />corr: -1","stdavk: 0.0296172938<br />forvavk: 0.1148<br />corr: -1","stdavk: 0.0280077391<br />forvavk: 0.1160<br />corr: -1","stdavk: 0.0263981844<br />forvavk: 0.1172<br />corr: -1","stdavk: 0.0247886297<br />forvavk: 0.1184<br />corr: -1","stdavk: 0.0231790749<br />forvavk: 0.1196<br />corr: -1","stdavk: 0.0215695202<br />forvavk: 0.1208<br />corr: -1","stdavk: 0.0199599655<br />forvavk: 0.1220<br />corr: -1","stdavk: 0.0183504108<br />forvavk: 0.1232<br />corr: -1","stdavk: 0.0167408560<br />forvavk: 0.1244<br />corr: -1","stdavk: 0.0151313013<br />forvavk: 0.1256<br />corr: -1","stdavk: 0.0135217466<br />forvavk: 0.1268<br />corr: -1","stdavk: 0.0119121918<br />forvavk: 0.1280<br />corr: -1","stdavk: 0.0103026371<br />forvavk: 0.1292<br />corr: -1","stdavk: 0.0086930824<br />forvavk: 0.1304<br />corr: -1","stdavk: 0.0070835277<br />forvavk: 0.1316<br />corr: -1","stdavk: 0.0054739729<br />forvavk: 0.1328<br />corr: -1","stdavk: 0.0038644182<br />forvavk: 0.1340<br />corr: -1","stdavk: 0.0022548635<br />forvavk: 0.1352<br />corr: -1","stdavk: 0.0006453088<br />forvavk: 0.1364<br />corr: -1","stdavk: 0.0009642460<br />forvavk: 0.1376<br />corr: -1","stdavk: 0.0025738007<br />forvavk: 0.1388<br />corr: -1","stdavk: 0.0041833554<br />forvavk: 0.1400<br />corr: -1","stdavk: 0.0057929102<br />forvavk: 0.1412<br />corr: -1","stdavk: 0.0074024649<br />forvavk: 0.1424<br />corr: -1","stdavk: 0.0090120196<br />forvavk: 0.1436<br />corr: -1","stdavk: 0.0106215743<br />forvavk: 0.1448<br />corr: -1","stdavk: 0.0122311291<br />forvavk: 0.1460<br />corr: -1","stdavk: 0.0138406838<br />forvavk: 0.1472<br />corr: -1","stdavk: 0.0154502385<br />forvavk: 0.1484<br />corr: -1","stdavk: 0.0170597932<br />forvavk: 0.1496<br />corr: -1","stdavk: 0.0186693480<br />forvavk: 0.1508<br />corr: -1","stdavk: 0.0202789027<br />forvavk: 0.1520<br />corr: -1","stdavk: 0.0218884574<br />forvavk: 0.1532<br />corr: -1","stdavk: 0.0234980122<br />forvavk: 0.1544<br />corr: -1","stdavk: 0.0251075669<br />forvavk: 0.1556<br />corr: -1","stdavk: 0.0267171216<br />forvavk: 0.1568<br />corr: -1","stdavk: 0.0283266763<br />forvavk: 0.1580<br />corr: -1","stdavk: 0.0299362311<br />forvavk: 0.1592<br />corr: -1","stdavk: 0.0315457858<br />forvavk: 0.1604<br />corr: -1","stdavk: 0.0331553405<br />forvavk: 0.1616<br />corr: -1","stdavk: 0.0347648952<br />forvavk: 0.1628<br />corr: -1","stdavk: 0.0363744500<br />forvavk: 0.1640<br />corr: -1","stdavk: 0.0379840047<br />forvavk: 0.1652<br />corr: -1","stdavk: 0.0395935594<br />forvavk: 0.1664<br />corr: -1","stdavk: 0.0412031142<br />forvavk: 0.1676<br />corr: -1","stdavk: 0.0428126689<br />forvavk: 0.1688<br />corr: -1","stdavk: 0.0444222236<br />forvavk: 0.1700<br />corr: -1","stdavk: 0.0460317783<br />forvavk: 0.1712<br />corr: -1","stdavk: 0.0476413331<br />forvavk: 0.1724<br />corr: -1","stdavk: 0.0492508878<br />forvavk: 0.1736<br />corr: -1","stdavk: 0.0508604425<br />forvavk: 0.1748<br />corr: -1","stdavk: 0.0524699972<br />forvavk: 0.1760<br />corr: -1","stdavk: 0.0540795520<br />forvavk: 0.1772<br />corr: -1","stdavk: 0.0556891067<br />forvavk: 0.1784<br />corr: -1","stdavk: 0.0572986614<br />forvavk: 0.1796<br />corr: -1","stdavk: 0.0589082162<br />forvavk: 0.1808<br />corr: -1","stdavk: 0.0605177709<br />forvavk: 0.1820<br />corr: -1","stdavk: 0.0621273256<br />forvavk: 0.1832<br />corr: -1","stdavk: 0.0637368803<br />forvavk: 0.1844<br />corr: -1","stdavk: 0.0653464351<br />forvavk: 0.1856<br />corr: -1","stdavk: 0.0669559898<br />forvavk: 0.1868<br />corr: -1","stdavk: 0.0685655445<br />forvavk: 0.1880<br />corr: -1","stdavk: 0.0701750992<br />forvavk: 0.1892<br />corr: -1","stdavk: 0.0717846540<br />forvavk: 0.1904<br />corr: -1","stdavk: 0.0733942087<br />forvavk: 0.1916<br />corr: -1","stdavk: 0.0750037634<br />forvavk: 0.1928<br />corr: -1","stdavk: 0.0766133182<br />forvavk: 0.1940<br />corr: -1","stdavk: 0.0782228729<br />forvavk: 0.1952<br />corr: -1","stdavk: 0.0798324276<br />forvavk: 0.1964<br />corr: -1","stdavk: 0.0814419823<br />forvavk: 0.1976<br />corr: -1","stdavk: 0.0830515371<br />forvavk: 0.1988<br />corr: -1","stdavk: 0.0846610918<br />forvavk: 0.2000<br />corr: -1","stdavk: 0.0862706465<br />forvavk: 0.2012<br />corr: -1","stdavk: 0.0878802012<br />forvavk: 0.2024<br />corr: -1","stdavk: 0.0894897560<br />forvavk: 0.2036<br />corr: -1","stdavk: 0.0910993107<br />forvavk: 0.2048<br />corr: -1","stdavk: 0.0927088654<br />forvavk: 0.2060<br />corr: -1","stdavk: 0.0943184202<br />forvavk: 0.2072<br />corr: -1","stdavk: 0.0959279749<br />forvavk: 0.2084<br />corr: -1","stdavk: 0.0975375296<br />forvavk: 0.2096<br />corr: -1","stdavk: 0.0991470843<br />forvavk: 0.2108<br />corr: -1","stdavk: 0.1007566391<br />forvavk: 0.2120<br />corr: -1","stdavk: 0.1023661938<br />forvavk: 0.2132<br />corr: -1","stdavk: 0.1039757485<br />forvavk: 0.2144<br />corr: -1","stdavk: 0.1055853032<br />forvavk: 0.2156<br />corr: -1","stdavk: 0.1071948580<br />forvavk: 0.2168<br />corr: -1","stdavk: 0.1088044127<br />forvavk: 0.2180<br />corr: -1","stdavk: 0.1104139674<br />forvavk: 0.2192<br />corr: -1","stdavk: 0.1120235222<br />forvavk: 0.2204<br />corr: -1","stdavk: 0.1136330769<br />forvavk: 0.2216<br />corr: -1","stdavk: 0.1152426316<br />forvavk: 0.2228<br />corr: -1","stdavk: 0.1168521863<br />forvavk: 0.2240<br />corr: -1","stdavk: 0.1184617411<br />forvavk: 0.2252<br />corr: -1","stdavk: 0.1200712958<br />forvavk: 0.2264<br />corr: -1","stdavk: 0.1216808505<br />forvavk: 0.2276<br />corr: -1","stdavk: 0.1232904052<br />forvavk: 0.2288<br />corr: -1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr: -1","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  0","stdavk: 0.0357168028<br />forvavk: 0.1112<br />corr:  0","stdavk: 0.0354225917<br />forvavk: 0.1124<br />corr:  0","stdavk: 0.0351739961<br />forvavk: 0.1136<br />corr:  0","stdavk: 0.0349719888<br />forvavk: 0.1148<br />corr:  0","stdavk: 0.0348173807<br />forvavk: 0.1160<br />corr:  0","stdavk: 0.0347108052<br />forvavk: 0.1172<br />corr:  0","stdavk: 0.0346527055<br />forvavk: 0.1184<br />corr:  0","stdavk: 0.0346433255<br />forvavk: 0.1196<br />corr:  0","stdavk: 0.0346827046<br />forvavk: 0.1208<br />corr:  0","stdavk: 0.0347706773<br />forvavk: 0.1220<br />corr:  0","stdavk: 0.0349068761<br />forvavk: 0.1232<br />corr:  0","stdavk: 0.0350907395<br />forvavk: 0.1244<br />corr:  0","stdavk: 0.0353215232<br />forvavk: 0.1256<br />corr:  0","stdavk: 0.0355983146<br />forvavk: 0.1268<br />corr:  0","stdavk: 0.0359200501<br />forvavk: 0.1280<br />corr:  0","stdavk: 0.0362855343<br />forvavk: 0.1292<br />corr:  0","stdavk: 0.0366934599<br />forvavk: 0.1304<br />corr:  0","stdavk: 0.0371424286<br />forvavk: 0.1316<br />corr:  0","stdavk: 0.0376309713<br />forvavk: 0.1328<br />corr:  0","stdavk: 0.0381575681<br />forvavk: 0.1340<br />corr:  0","stdavk: 0.0387206663<br />forvavk: 0.1352<br />corr:  0","stdavk: 0.0393186978<br />forvavk: 0.1364<br />corr:  0","stdavk: 0.0399500939<br />forvavk: 0.1376<br />corr:  0","stdavk: 0.0406132983<br />forvavk: 0.1388<br />corr:  0","stdavk: 0.0413067791<br />forvavk: 0.1400<br />corr:  0","stdavk: 0.0420290376<br />forvavk: 0.1412<br />corr:  0","stdavk: 0.0427786162<br />forvavk: 0.1424<br />corr:  0","stdavk: 0.0435541043<br />forvavk: 0.1436<br />corr:  0","stdavk: 0.0443541430<br />forvavk: 0.1448<br />corr:  0","stdavk: 0.0451774280<br />forvavk: 0.1460<br />corr:  0","stdavk: 0.0460227118<br />forvavk: 0.1472<br />corr:  0","stdavk: 0.0468888046<br />forvavk: 0.1484<br />corr:  0","stdavk: 0.0477745748<br />forvavk: 0.1496<br />corr:  0","stdavk: 0.0486789482<br />forvavk: 0.1508<br />corr:  0","stdavk: 0.0496009072<br />forvavk: 0.1520<br />corr:  0","stdavk: 0.0505394895<br />forvavk: 0.1532<br />corr:  0","stdavk: 0.0514937860<br />forvavk: 0.1544<br />corr:  0","stdavk: 0.0524629393<br />forvavk: 0.1556<br />corr:  0","stdavk: 0.0534461411<br />forvavk: 0.1568<br />corr:  0","stdavk: 0.0544426304<br />forvavk: 0.1580<br />corr:  0","stdavk: 0.0554516907<br />forvavk: 0.1592<br />corr:  0","stdavk: 0.0564726482<br />forvavk: 0.1604<br />corr:  0","stdavk: 0.0575048694<br />forvavk: 0.1616<br />corr:  0","stdavk: 0.0585477583<br />forvavk: 0.1628<br />corr:  0","stdavk: 0.0596007550<br />forvavk: 0.1640<br />corr:  0","stdavk: 0.0606633332<br />forvavk: 0.1652<br />corr:  0","stdavk: 0.0617349982<br />forvavk: 0.1664<br />corr:  0","stdavk: 0.0628152848<br />forvavk: 0.1676<br />corr:  0","stdavk: 0.0639037558<br />forvavk: 0.1688<br />corr:  0","stdavk: 0.0650000000<br />forvavk: 0.1700<br />corr:  0","stdavk: 0.0661036308<br />forvavk: 0.1712<br />corr:  0","stdavk: 0.0672142842<br />forvavk: 0.1724<br />corr:  0","stdavk: 0.0683316179<br />forvavk: 0.1736<br />corr:  0","stdavk: 0.0694553094<br />forvavk: 0.1748<br />corr:  0","stdavk: 0.0705850551<br />forvavk: 0.1760<br />corr:  0","stdavk: 0.0717205689<br />forvavk: 0.1772<br />corr:  0","stdavk: 0.0728615811<br />forvavk: 0.1784<br />corr:  0","stdavk: 0.0740078374<br />forvavk: 0.1796<br />corr:  0","stdavk: 0.0751590979<br />forvavk: 0.1808<br />corr:  0","stdavk: 0.0763151361<br />forvavk: 0.1820<br />corr:  0","stdavk: 0.0774757381<br />forvavk: 0.1832<br />corr:  0","stdavk: 0.0786407019<br />forvavk: 0.1844<br />corr:  0","stdavk: 0.0798098365<br />forvavk: 0.1856<br />corr:  0","stdavk: 0.0809829612<br />forvavk: 0.1868<br />corr:  0","stdavk: 0.0821599051<br />forvavk: 0.1880<br />corr:  0","stdavk: 0.0833405064<br />forvavk: 0.1892<br />corr:  0","stdavk: 0.0845246118<br />forvavk: 0.1904<br />corr:  0","stdavk: 0.0857120762<br />forvavk: 0.1916<br />corr:  0","stdavk: 0.0869027618<br />forvavk: 0.1928<br />corr:  0","stdavk: 0.0880965380<br />forvavk: 0.1940<br />corr:  0","stdavk: 0.0892932808<br />forvavk: 0.1952<br />corr:  0","stdavk: 0.0904928726<br />forvavk: 0.1964<br />corr:  0","stdavk: 0.0916952016<br />forvavk: 0.1976<br />corr:  0","stdavk: 0.0929001615<br />forvavk: 0.1988<br />corr:  0","stdavk: 0.0941076511<br />forvavk: 0.2000<br />corr:  0","stdavk: 0.0953175745<br />forvavk: 0.2012<br />corr:  0","stdavk: 0.0965298399<br />forvavk: 0.2024<br />corr:  0","stdavk: 0.0977443605<br />forvavk: 0.2036<br />corr:  0","stdavk: 0.0989610529<br />forvavk: 0.2048<br />corr:  0","stdavk: 0.1001798383<br />forvavk: 0.2060<br />corr:  0","stdavk: 0.1014006410<br />forvavk: 0.2072<br />corr:  0","stdavk: 0.1026233891<br />forvavk: 0.2084<br />corr:  0","stdavk: 0.1038480139<br />forvavk: 0.2096<br />corr:  0","stdavk: 0.1050744498<br />forvavk: 0.2108<br />corr:  0","stdavk: 0.1063026340<br />forvavk: 0.2120<br />corr:  0","stdavk: 0.1075325067<br />forvavk: 0.2132<br />corr:  0","stdavk: 0.1087640106<br />forvavk: 0.2144<br />corr:  0","stdavk: 0.1099970909<br />forvavk: 0.2156<br />corr:  0","stdavk: 0.1112316951<br />forvavk: 0.2168<br />corr:  0","stdavk: 0.1124677732<br />forvavk: 0.2180<br />corr:  0","stdavk: 0.1137052769<br />forvavk: 0.2192<br />corr:  0","stdavk: 0.1149441604<br />forvavk: 0.2204<br />corr:  0","stdavk: 0.1161843793<br />forvavk: 0.2216<br />corr:  0","stdavk: 0.1174258915<br />forvavk: 0.2228<br />corr:  0","stdavk: 0.1186686564<br />forvavk: 0.2240<br />corr:  0","stdavk: 0.1199126349<br />forvavk: 0.2252<br />corr:  0","stdavk: 0.1211577897<br />forvavk: 0.2264<br />corr:  0","stdavk: 0.1224040849<br />forvavk: 0.2276<br />corr:  0","stdavk: 0.1236514860<br />forvavk: 0.2288<br />corr:  0","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  0","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  1","stdavk: 0.0369439572<br />forvavk: 0.1112<br />corr:  1","stdavk: 0.0378324017<br />forvavk: 0.1124<br />corr:  1","stdavk: 0.0387208462<br />forvavk: 0.1136<br />corr:  1","stdavk: 0.0396092906<br />forvavk: 0.1148<br />corr:  1","stdavk: 0.0404977351<br />forvavk: 0.1160<br />corr:  1","stdavk: 0.0413861796<br />forvavk: 0.1172<br />corr:  1","stdavk: 0.0422746241<br />forvavk: 0.1184<br />corr:  1","stdavk: 0.0431630685<br />forvavk: 0.1196<br />corr:  1","stdavk: 0.0440515130<br />forvavk: 0.1208<br />corr:  1","stdavk: 0.0449399575<br />forvavk: 0.1220<br />corr:  1","stdavk: 0.0458284019<br />forvavk: 0.1232<br />corr:  1","stdavk: 0.0467168464<br />forvavk: 0.1244<br />corr:  1","stdavk: 0.0476052909<br />forvavk: 0.1256<br />corr:  1","stdavk: 0.0484937354<br />forvavk: 0.1268<br />corr:  1","stdavk: 0.0493821798<br />forvavk: 0.1280<br />corr:  1","stdavk: 0.0502706243<br />forvavk: 0.1292<br />corr:  1","stdavk: 0.0511590688<br />forvavk: 0.1304<br />corr:  1","stdavk: 0.0520475133<br />forvavk: 0.1316<br />corr:  1","stdavk: 0.0529359577<br />forvavk: 0.1328<br />corr:  1","stdavk: 0.0538244022<br />forvavk: 0.1340<br />corr:  1","stdavk: 0.0547128467<br />forvavk: 0.1352<br />corr:  1","stdavk: 0.0556012911<br />forvavk: 0.1364<br />corr:  1","stdavk: 0.0564897356<br />forvavk: 0.1376<br />corr:  1","stdavk: 0.0573781801<br />forvavk: 0.1388<br />corr:  1","stdavk: 0.0582666246<br />forvavk: 0.1400<br />corr:  1","stdavk: 0.0591550690<br />forvavk: 0.1412<br />corr:  1","stdavk: 0.0600435135<br />forvavk: 0.1424<br />corr:  1","stdavk: 0.0609319580<br />forvavk: 0.1436<br />corr:  1","stdavk: 0.0618204024<br />forvavk: 0.1448<br />corr:  1","stdavk: 0.0627088469<br />forvavk: 0.1460<br />corr:  1","stdavk: 0.0635972914<br />forvavk: 0.1472<br />corr:  1","stdavk: 0.0644857359<br />forvavk: 0.1484<br />corr:  1","stdavk: 0.0653741803<br />forvavk: 0.1496<br />corr:  1","stdavk: 0.0662626248<br />forvavk: 0.1508<br />corr:  1","stdavk: 0.0671510693<br />forvavk: 0.1520<br />corr:  1","stdavk: 0.0680395138<br />forvavk: 0.1532<br />corr:  1","stdavk: 0.0689279582<br />forvavk: 0.1544<br />corr:  1","stdavk: 0.0698164027<br />forvavk: 0.1556<br />corr:  1","stdavk: 0.0707048472<br />forvavk: 0.1568<br />corr:  1","stdavk: 0.0715932916<br />forvavk: 0.1580<br />corr:  1","stdavk: 0.0724817361<br />forvavk: 0.1592<br />corr:  1","stdavk: 0.0733701806<br />forvavk: 0.1604<br />corr:  1","stdavk: 0.0742586251<br />forvavk: 0.1616<br />corr:  1","stdavk: 0.0751470695<br />forvavk: 0.1628<br />corr:  1","stdavk: 0.0760355140<br />forvavk: 0.1640<br />corr:  1","stdavk: 0.0769239585<br />forvavk: 0.1652<br />corr:  1","stdavk: 0.0778124029<br />forvavk: 0.1664<br />corr:  1","stdavk: 0.0787008474<br />forvavk: 0.1676<br />corr:  1","stdavk: 0.0795892919<br />forvavk: 0.1688<br />corr:  1","stdavk: 0.0804777364<br />forvavk: 0.1700<br />corr:  1","stdavk: 0.0813661808<br />forvavk: 0.1712<br />corr:  1","stdavk: 0.0822546253<br />forvavk: 0.1724<br />corr:  1","stdavk: 0.0831430698<br />forvavk: 0.1736<br />corr:  1","stdavk: 0.0840315142<br />forvavk: 0.1748<br />corr:  1","stdavk: 0.0849199587<br />forvavk: 0.1760<br />corr:  1","stdavk: 0.0858084032<br />forvavk: 0.1772<br />corr:  1","stdavk: 0.0866968477<br />forvavk: 0.1784<br />corr:  1","stdavk: 0.0875852921<br />forvavk: 0.1796<br />corr:  1","stdavk: 0.0884737366<br />forvavk: 0.1808<br />corr:  1","stdavk: 0.0893621811<br />forvavk: 0.1820<br />corr:  1","stdavk: 0.0902506256<br />forvavk: 0.1832<br />corr:  1","stdavk: 0.0911390700<br />forvavk: 0.1844<br />corr:  1","stdavk: 0.0920275145<br />forvavk: 0.1856<br />corr:  1","stdavk: 0.0929159590<br />forvavk: 0.1868<br />corr:  1","stdavk: 0.0938044034<br />forvavk: 0.1880<br />corr:  1","stdavk: 0.0946928479<br />forvavk: 0.1892<br />corr:  1","stdavk: 0.0955812924<br />forvavk: 0.1904<br />corr:  1","stdavk: 0.0964697369<br />forvavk: 0.1916<br />corr:  1","stdavk: 0.0973581813<br />forvavk: 0.1928<br />corr:  1","stdavk: 0.0982466258<br />forvavk: 0.1940<br />corr:  1","stdavk: 0.0991350703<br />forvavk: 0.1952<br />corr:  1","stdavk: 0.1000235147<br />forvavk: 0.1964<br />corr:  1","stdavk: 0.1009119592<br />forvavk: 0.1976<br />corr:  1","stdavk: 0.1018004037<br />forvavk: 0.1988<br />corr:  1","stdavk: 0.1026888482<br />forvavk: 0.2000<br />corr:  1","stdavk: 0.1035772926<br />forvavk: 0.2012<br />corr:  1","stdavk: 0.1044657371<br />forvavk: 0.2024<br />corr:  1","stdavk: 0.1053541816<br />forvavk: 0.2036<br />corr:  1","stdavk: 0.1062426261<br />forvavk: 0.2048<br />corr:  1","stdavk: 0.1071310705<br />forvavk: 0.2060<br />corr:  1","stdavk: 0.1080195150<br />forvavk: 0.2072<br />corr:  1","stdavk: 0.1089079595<br />forvavk: 0.2084<br />corr:  1","stdavk: 0.1097964039<br />forvavk: 0.2096<br />corr:  1","stdavk: 0.1106848484<br />forvavk: 0.2108<br />corr:  1","stdavk: 0.1115732929<br />forvavk: 0.2120<br />corr:  1","stdavk: 0.1124617374<br />forvavk: 0.2132<br />corr:  1","stdavk: 0.1133501818<br />forvavk: 0.2144<br />corr:  1","stdavk: 0.1142386263<br />forvavk: 0.2156<br />corr:  1","stdavk: 0.1151270708<br />forvavk: 0.2168<br />corr:  1","stdavk: 0.1160155152<br />forvavk: 0.2180<br />corr:  1","stdavk: 0.1169039597<br />forvavk: 0.2192<br />corr:  1","stdavk: 0.1177924042<br />forvavk: 0.2204<br />corr:  1","stdavk: 0.1186808487<br />forvavk: 0.2216<br />corr:  1","stdavk: 0.1195692931<br />forvavk: 0.2228<br />corr:  1","stdavk: 0.1204577376<br />forvavk: 0.2240<br />corr:  1","stdavk: 0.1213461821<br />forvavk: 0.2252<br />corr:  1","stdavk: 0.1222346266<br />forvavk: 0.2264<br />corr:  1","stdavk: 0.1231230710<br />forvavk: 0.2276<br />corr:  1","stdavk: 0.1240115155<br />forvavk: 0.2288<br />corr:  1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":37.2602739726027,"l":48.9497716894977},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.00556742380494894,0.131112692528583],"tickmode":"array","ticktext":["0.00","0.04","0.08","0.12"],"tickvals":[0,0.04,0.08,0.12],"categoryorder":"array","categoryarray":["0.00","0.04","0.08","0.12"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.236],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15,0.2],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"71f436b81e6a2":{"x":{},"y":{},"group_by":{},"type":"scatter"}},"cur_data":"71f436b81e6a2","visdat":{"71f436b81e6a2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 lgende tabell
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynl.&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsb.&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Bedriftens portefølje&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nytt prosjekt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (ikke div.)&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (div.)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Trend&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-30&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Sannsynl.</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstandsb.</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Tilstand</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Bedriftens portefølje</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Nytt prosjekt</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Eierens portefølje (ikke div.)</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Eierens portefølje (div.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>0.2</td>
+<td style='text-align: center;'>Nedgangstid</td>
+<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>-60</td>
+<td style='text-align: center;'>30</td>
+<td style='text-align: center;'>-60</td>
+<td style='text-align: center;'>10</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>0.3</td>
+<td style='text-align: center;'>Trend</td>
+<td style='text-align: center;'>2</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>2.5</td>
+<td style='text-align: center;'>5</td>
+<td style='text-align: center;'>5</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0.5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Oppgangstid</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>3</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>60</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>-30</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>60</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>-10</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 3: Relevant risiko: Porteføljeteori 3-n objekter
+
+**Læringsmål:**
+
+-  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+-  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+-  Gi eksempler på kilder for systematisk og usystematisk risiko.
+
+Oppdatert: 2021-08-25
+
+---
+
+## Måling av risiko (portefølje fra 3 til n fonds)
+
+**Metode 2 for måling av risiko (3 investeringsobjekter)**
+Porteføljens varians er gitt ved
+`\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
+ 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+2w_aw_cStd(a)Std(c)Korr(a,c)+\\
+2w_bw_cStd(b)Std(c)Korr(b,c) 
+\end{equation}`
+Mens standardavviket framkommer som
+`\begin{equation}
+Std(r_p)=\sqrt{Var(rp)}
+\end{equation}`
+
+---
+
+Eksempel 2.6
+
+
+```r
+eks_26 &lt;- head(iris)
+htmlTable("eks_26")
+```
+
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<tbody>
+<tr style='border-top: 2px solid grey;'>
+<td style='border-top: 2px solid grey; border-bottom: 2px solid grey; text-align: center;'>eks_26</td>
+</tr>
+</tbody>
+</table>
+
+---
+**Metode 2 for måling av risiko (n investeringsobjekter)**
+Porteføljens varians gitt ved
+`\begin{equation}
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
+\end{equation}`
+Mens standardavviket framkommer som
+`\begin{equation}
+Std(r_p)=\sqrt{Var(rp)}
+\end{equation}`
+
+---
+
+Oslo Børs 
+
+---
+
+## Kilder til usystematisk og relevant risiko
+
+Unødvendig risiko vs. relevant risiko
+
+---
+
+
+
+
+
 
 
 

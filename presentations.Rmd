@@ -55,6 +55,7 @@ timep_ii
 
 ---
 
+
 # Anbefalte oppgaver
 
 ```{r, echo=F}
@@ -695,7 +696,7 @@ Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
 
 Som gjør at vi kan skrive
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 \end{equation}
 
 ---
@@ -775,10 +776,7 @@ g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="ident
 htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
 ```
 
-
-```{r include=FALSE}
-knitr::knit_exit()
-```
+---
 
 class: inverse, center, middle
 
@@ -790,35 +788,61 @@ class: inverse, center, middle
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 -  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
----
+`r paste("Oppdatert:",Sys.Date())`
 
+---
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
-**Metode 2: for måling av risiko**
-- Varians
+**Metode 2 for måling av risiko (3 investeringsobjekter)**
+Porteføljens varians er gitt ved
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
-2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+ 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}
-
----
-
-- Varians n-fonds
-\begin{equation}
-Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
-\end{equation}
-
----
-
-- Standardavvik 1-n fonds
+Mens standardavviket framkommer som
 \begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
 \end{equation}
 
 ---
+
+Eksempel 2.6
+
+```{r}
+eks_26 <- head(iris)
+htmlTable("eks_26")
+```
+
+---
+**Metode 2 for måling av risiko (n investeringsobjekter)**
+Porteføljens varians gitt ved
+\begin{equation}
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
+\end{equation}
+Mens standardavviket framkommer som
+\begin{equation}
+Std(r_p)=\sqrt{Var(rp)}
+\end{equation}
+
+---
+
+Oslo Børs 
+
+---
+
+## Kilder til usystematisk og relevant risiko
+
+Unødvendig risiko vs. relevant risiko
+
+---
+
+```{r include=FALSE}
+knitr::knit_exit()
+```
+
 
 ## Betaverdien til et prosjekt
 
@@ -840,18 +864,6 @@ knitr::include_graphics("pensum/figurer-10.png")
 ```
 
 ---
-
-## Kilder til usystematisk og relevant risiko
-
-Unødvendig risiko vs. relevant risiko
-
----
-
-```{r include=FALSE}
-knitr::knit_exit()
-```
-
-
 
 # Forelesning 4: `r tema[4]`
 
