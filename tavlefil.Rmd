@@ -32,28 +32,41 @@ xaringan::inf_mr("tavlefil.Rmd")
 
 # NÅ 
 
-Eksempel 2.6
 
-```{r, eval=T, echo=F}
-w <- c(0.30, 0.40, 0.30)
-df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c(0.8,-0.1,0.5))
-htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
-```
+\begin{equation}
+Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
++(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
+\end{equation}
 
-Hvor investert beløp vektene er gitt ved `r w`
 
-Ved innsetting av formelen gir dette oss
+Gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
 
-\begin{equation*}
-Var(r_p)=(0.30)^20.10^2+(0.40)^20.20^2+(0.3)^20.40^2 + \\
-2\cdot 0.30_b0.10\cdot 0.2 \cdot 0.8+\\
-2\cdot 0.30_c0.10Std(c)\cdot -0.1+\\
-2\cdot 0.40\cdot 0.30.2\cdot 0.4\cdot 0.5 = 0.02722
-\end{equation*}
+$$
+\overline{Var}=\frac{1}{N}(Var(r_1)+Var(r_2)+...+Var(r_N))
+$$
 
-\begin{equation*}
-Std(r_p)=\sqrt{0.02722}=0.1649848
-\end{equation*}
+Mens gjennomsnittlig varians ( $\overline{Kov}$ ) er gitt ved
+
+$$
+\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
+$$
 
 ---
+
+Det gjør at vi kan skrive uttrykket over som
+
+\begin{equation}
+Var(r_p)=\\
+N(1/N)^2(\overline{Var}) \\
+\end{equation}
+
+Vi kan videre forenkle dette, slik at vi til slutt står igjen med
+
+\begin{equation}
+Var(r_p)=\\
+1/N(\overline{Var}) \\
++(1-1/N)(\overline{Kov})) 
+\end{equation}
+
+
 

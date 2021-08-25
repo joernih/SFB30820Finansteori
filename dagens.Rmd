@@ -96,7 +96,7 @@ Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\
 Std(r_p)=\sqrt{0.02722}=0.1649848
 \end{equation*}
 
-```{r, eval=T, echo=F}
+```{r, eval=T, echo=T}
 #! doublecheck
 (0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
 ```
@@ -129,12 +129,42 @@ Dersom vi antar at
 
 - Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
 
+\begin{equation}
+Var(r_p)=//
+(1/N)^2(Var(r_1+Var(r_2)+...+Var(r_N)))\\
++(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
+\end{equation}
+
+Gjennomsnittlig varians ($\overline{Var}$) er gitt ved
+$$
+\overline{Var}=\frac{1}{N}(Var(1)+Var(2)+...+Var(N))
+$$
+Mens gjjennomsnittlig kovarians ($\overline{Kov}$)er gitt ved
+$$
+\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2)
+$$
+
+Det gjør at vi kan skrive uttrykket over som
+Var(r_p)=//
+N(1/N)^2(\overline{Var}))\\
++(N^2-N)(1/N)^2(\overline{Kov}))\\
+\end{equation}
+
+
+---
+
 
 Eks. Oslo Børs 
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-08.png")
 ```
+
+Generalt vil vi ha egenskape Om
+
+-
+-
+- 
 
 ---
 

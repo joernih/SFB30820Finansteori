@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x087aa6431a84a0da3154a3baf29e20d","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f53ef69da55b47c48ba67dbcd9029f79","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -72,16 +72,16 @@ Oppdatert: 2021-08-25
 
 **Metode 2 for måling av risiko (3 investeringsobjekter)**
 Porteføljens varians er gitt ved
-`\begin{equation}
+\begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
-\end{equation}`
+\end{equation}
 Mens standardavviket framkommer som
-`\begin{equation}
+\begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
-\end{equation}`
+\end{equation}
 
 ---
 
@@ -125,17 +125,22 @@ Hvor investert beløp vektene er gitt ved 0.3, 0.4, 0.3
 
 Ved innsetting av formelen gir dette oss
 
-`\begin{equation}
+\begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
 +2 \cdot 0.30 \cdot 0.4 \cdot 0.10 \cdot 0.2 \cdot 0.8 \\ 
 -2 \cdot 0.30 \cdot 0.3 \cdot 0.10 \cdot 0.4 \cdot 0.1 \\ 
 +2 \cdot 0.40 \cdot 0.3 \cdot 0.20 \cdot 0.4 \cdot 0.5 = 0.02722
-\end{equation}`
+\end{equation}
 
-`\begin{equation*}
+\begin{equation*}
 Std(r_p)=\sqrt{0.02722}=0.1649848
-\end{equation*}`
+\end{equation*}
 
+
+```r
+#! doublecheck
+(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
+```
 
 ```
 ## [1] 0.03442
@@ -146,18 +151,18 @@ Std(r_p)=\sqrt{0.02722}=0.1649848
 **Metode 2 for måling av risiko (generell metode med n investeringsobjekter)**
 
 Porteføljens forventning er gitt ved
-`\begin{equation}
+\begin{equation}
 E(r_p)=\sum_{i=1}^{N}w_iE(r_i)=w_1E(r_1)+w_2E(r_2)+...+w_NE(r_N)
-\end{equation}`
+\end{equation}
 Porteføljens varians gitt ved
-`\begin{equation}
+\begin{equation}
 Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jKov(i,j)=\\
 \sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
-\end{equation}`
+\end{equation}
 Mens standardavviket (som tidligere) er gitt ved
-`\begin{equation}
+\begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
-\end{equation}`
+\end{equation}
 
 ---
 
@@ -169,10 +174,40 @@ Dersom vi antar at
 
 - Like stort beløp blir investert i hvert av de n objektene `\(\Rightarrow\)`
 
+\begin{equation}
+Var(r_p)=//
+(1/N)^2(Var(r_1+Var(r_2)+...+Var(r_N)))\\
++(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
+\end{equation}
+
+Gjennomsnittlig varians ($\overline{Var}$) er gitt ved
+$$
+\overline{Var}=\frac{1}{N}(Var(1)+Var(2)+...+Var(N))
+$$
+Mens gjjennomsnittlig kovarians ($\overline{Kov}$)er gitt ved
+$$
+\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2)
+$$
+
+Det gjør at vi kan skrive uttrykket over som
+Var(r_p)=//
+N(1/N)^2(\overline{Var}))\\
++(N^2-N)(1/N)^2(\overline{Kov}))\\
+\end{equation}
+
+
+---
+
 
 Eks. Oslo Børs 
 
 &lt;img src="pensum/figurer-08.png" width="55%" /&gt;
+
+Generalt vil vi ha egenskape Om
+
+-
+-
+- 
 
 ---
 
@@ -184,9 +219,9 @@ Unødvendig risiko vs. relevant risiko
 
 ## Betaverdien til et prosjekt
 
-`\begin{equation}
+\begin{equation}
 \beta_j=\frac{Cov(r_j,r_m)}{Var(r_m)}
-\end{equation}`
+\end{equation}
 
 ---
 
