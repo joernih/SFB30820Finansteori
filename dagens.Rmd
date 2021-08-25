@@ -129,42 +129,66 @@ Dersom vi antar at
 
 - Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
 
+
 \begin{equation}
-Var(r_p)=//
-(1/N)^2(Var(r_1+Var(r_2)+...+Var(r_N)))\\
+Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
 +(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
 \end{equation}
 
-Gjennomsnittlig varians ($\overline{Var}$) er gitt ved
+
+Gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
+
 $$
-\overline{Var}=\frac{1}{N}(Var(1)+Var(2)+...+Var(N))
-$$
-Mens gjjennomsnittlig kovarians ($\overline{Kov}$)er gitt ved
-$$
-\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2)
+\overline{Var}=\frac{1}{N}(Var(r_1)+Var(r_2)+...+Var(r_N))
 $$
 
-Det gjør at vi kan skrive uttrykket over som
-Var(r_p)=//
-N(1/N)^2(\overline{Var}))\\
-+(N^2-N)(1/N)^2(\overline{Kov}))\\
-\end{equation}
+Mens gjennomsnittlig varians ( $\overline{Kov}$ ) er gitt ved
+
+$$
+\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
+$$
 
 
 ---
 
+Det gjør at vi kan skrive uttrykket over som
+
+\begin{equation}
+Var(r_p)=\\
+N(1/N)^2(\overline{Var}) \\
+\end{equation}
+
+Vi kan videre forenkle dette, slik at vi til slutt står igjen med
+
+\begin{equation}
+Var(r_p)=\\
+1/N\overline{Var} \\
++(1-1/N)\overline{Kov}) 
+\end{equation}
+
+---
+
+Generalt vil vi ha egenskape Om
+
+- Økt
+-
+- 
+
+---
 
 Eks. Oslo Børs 
+
+Perioden 2011-2015 har vi at $\overline{Var}=0.021$
+og gjennomsnittlig $\overline{Kov}=0.0229$
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-08.png")
 ```
+---
 
-Generalt vil vi ha egenskape Om
+```{r }
 
--
--
-- 
+```
 
 ---
 

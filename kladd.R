@@ -1,4 +1,23 @@
+
+
+
+varo <- 0.21
+kovo <- 0.0229
+tportvar <- '(1/N)*varo + (1-1/N)*kovo'
+N <- 1:20
+df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
+
 ############## here now ################
+
+
+
+
+
+
+
+
+
 library(htmlTable)
 library(magrittr)
 library(xaringan)

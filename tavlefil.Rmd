@@ -33,40 +33,6 @@ xaringan::inf_mr("tavlefil.Rmd")
 # NÅ 
 
 
-\begin{equation}
-Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
-\end{equation}
-
-
-Gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
-
-$$
-\overline{Var}=\frac{1}{N}(Var(r_1)+Var(r_2)+...+Var(r_N))
-$$
-
-Mens gjennomsnittlig varians ( $\overline{Kov}$ ) er gitt ved
-
-$$
-\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
-$$
-
----
-
-Det gjør at vi kan skrive uttrykket over som
-
-\begin{equation}
-Var(r_p)=\\
-N(1/N)^2(\overline{Var}) \\
-\end{equation}
-
-Vi kan videre forenkle dette, slik at vi til slutt står igjen med
-
-\begin{equation}
-Var(r_p)=\\
-1/N(\overline{Var}) \\
-+(1-1/N)(\overline{Kov})) 
-\end{equation}
 
 
 
