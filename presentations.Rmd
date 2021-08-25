@@ -402,11 +402,8 @@ class: inverse, center, middle
 -  Tallfeste risiko i en portefølje ved å beregne standardavvik.
 -  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
 
-<<<<<<< HEAD
-=======
 `r paste("Oppdatert:",Sys.Date())`
 
->>>>>>> 7014769e2d1007c544bbe81770a61f6a625023b3
 ---
 
 ## Prosjektrisiko for eierne vs. bedriften

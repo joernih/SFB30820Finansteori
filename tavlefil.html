@@ -35,7 +35,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Beregninger
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-18)
+### 2021/08/12 (updated: 2021-08-25)
 
 ---
 
@@ -43,25 +43,62 @@ class: center, middle, inverse, title-slide
 
 
 
-# Tavlefil til forelesning 1
-`\begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
-2w_aw_bStd(a)Std(b)Korr(a,b)+\\
-2w_aw_cStd(a)Std(c)Korr(a,c)+\\
-2w_bw_cStd(b)Std(c)Korr(b,c) 
-\end{equation}`
+
+# NÅ 
+
+Eksempel 2.6
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Aksje&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forventet avkastning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Korrelasjonskoeffisient&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;A&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;B&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.15&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-0.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;C&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.25&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Hvor investert beløp vektene er gitt ved 0.3, 0.4, 0.3
+
+Ved innsetting av formelen gir dette oss
+
+`\begin{equation*}
+Var(r_p)=(0.30)^20.10^2+(0.40)^20.20^2+(0.3)^20.40^2 + \\
+2\cdot 0.30_b0.10\cdot 0.2 \cdot 0.8+\\
+2\cdot 0.30_c0.10Std(c)\cdot -0.1+\\
+2\cdot 0.40\cdot 0.30.2\cdot 0.4\cdot 0.5 = 0.02722
+\end{equation*}`
+
+`\begin{equation*}
+Std(r_p)=\sqrt{0.02722}=0.1649848
+\end{equation*}`
 
 ---
 
-# Tavlefil til forelesning 2
-
-abc
-
-def
-
-ghi
-
-`\(\theta\)`
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -40,6 +40,7 @@ servr::daemon_stop()
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
 ```
+---
 
 class: inverse, center, middle
 
@@ -61,7 +62,7 @@ class: inverse, center, middle
 Porteføljens varians er gitt ved
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
- 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}
@@ -74,17 +75,44 @@ Std(r_p)=\sqrt{Var(rp)}
 
 Eksempel 2.6
 
-```{r}
-eks_26 <- head(iris)
-htmlTable("eks_26")
+```{r, eval=T, echo=F}
+w <- c(0.30, 0.40, 0.30)
+df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c(0.8,-0.1,0.5))
+htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
+```
+
+Hvor investert beløp vektene er gitt ved `r w`
+
+Ved innsetting av formelen gir dette oss
+
+\begin{equation}
+Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
++2 \cdot 0.30 \cdot 0.4 \cdot 0.10 \cdot 0.2 \cdot 0.8 \\ 
+-2 \cdot 0.30 \cdot 0.3 \cdot 0.10 \cdot 0.4 \cdot 0.1 \\ 
++2 \cdot 0.40 \cdot 0.3 \cdot 0.20 \cdot 0.4 \cdot 0.5 = 0.02722
+\end{equation}
+
+\begin{equation*}
+Std(r_p)=\sqrt{0.02722}=0.1649848
+\end{equation*}
+
+```{r, eval=T, echo=F}
+#! doublecheck
+(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
 ```
 
 ---
 
-**Metode 2 for måling av risiko (n investeringsobjekter)**
+**Metode 2 for måling av risiko (generell metode med n investeringsobjekter)**
+
+Porteføljens forventning er gitt ved
+\begin{equation}
+E(r_p)=\sum_{i=1}^{N}w_iE(r_i)=w_1E(r_1)+w_2E(r_2)+...+w_NE(r_N)
+\end{equation}
 Porteføljens varians gitt ved
 \begin{equation}
-Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jKov(i,j)=\\
+\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}
 Mens standardavviket (som tidligere) er gitt ved
 \begin{equation}
@@ -93,7 +121,16 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ---
 
-Oslo Børs 
+Merk: I dette utrykket vil den første bestå av $N$ leddd, mens siste delen består av $N^2-N$ ledd
+
+---
+
+Dersom vi antar at
+
+- Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
+
+
+Eks. Oslo Børs 
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-08.png")
@@ -113,7 +150,6 @@ Unødvendig risiko vs. relevant risiko
 \beta_j=\frac{Cov(r_j,r_m)}{Var(r_m)}
 \end{equation}
 
-
 ---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
@@ -125,5 +161,4 @@ knitr::include_graphics("pensum/figurer-09.png")
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-10.png")
 ```
-
 

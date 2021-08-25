@@ -29,22 +29,31 @@ Sys.which('decktape')
 #xaringan::decktape("presentations.html", output="abc.pdf")
 xaringan::inf_mr("tavlefil.Rmd")
 ```
-# Tavlefil til forelesning 1
-\begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
-2w_aw_bStd(a)Std(b)Korr(a,b)+\\
-2w_aw_cStd(a)Std(c)Korr(a,c)+\\
-2w_bw_cStd(b)Std(c)Korr(b,c) 
-\end{equation}
+
+# NÅ 
+
+Eksempel 2.6
+
+```{r, eval=T, echo=F}
+w <- c(0.30, 0.40, 0.30)
+df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c(0.8,-0.1,0.5))
+htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
+```
+
+Hvor investert beløp vektene er gitt ved `r w`
+
+Ved innsetting av formelen gir dette oss
+
+\begin{equation*}
+Var(r_p)=(0.30)^20.10^2+(0.40)^20.20^2+(0.3)^20.40^2 + \\
+2\cdot 0.30_b0.10\cdot 0.2 \cdot 0.8+\\
+2\cdot 0.30_c0.10Std(c)\cdot -0.1+\\
+2\cdot 0.40\cdot 0.30.2\cdot 0.4\cdot 0.5 = 0.02722
+\end{equation*}
+
+\begin{equation*}
+Std(r_p)=\sqrt{0.02722}=0.1649848
+\end{equation*}
 
 ---
 
-# Tavlefil til forelesning 2
-
-abc
-
-def
-
-ghi
-
-$\theta$
