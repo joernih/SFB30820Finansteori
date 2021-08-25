@@ -776,12 +776,6 @@ g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="ident
 htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
 ```
 
-<<<<<<< HEAD
----
-=======
-<<<<<<< HEAD
----
-
 ### Risiko for bedriften
 
 De nye prosjektets bidrag til bedriftens kontantstrøm
@@ -1083,7 +1077,7 @@ knitr::include_graphics("pensum/figurer-07.png")
 **Øvelse:** Forsøk å replikere følgende tabell i Excel
 
 .panelset[
-.panel[.panel-name[Tabell]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
+.panel[.panel-name[Tabell]
 ```{r, echo=F}
 htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
 ```
@@ -1116,13 +1110,19 @@ ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=cor
 ]
 
 
-=======
->>>>>>> 7014769e2d1007c544bbe81770a61f6a625023b3
+class: inverse, center, middle
 
-```{r include=FALSE}
-knitr::knit_exit()
-```
->>>>>>> 5897ca4c0a28fcdd36e4917fcd3e95dafa7b0443
+# Forelesning 3: `r tema[3]`
+
+**Læringsmål:**
+
+-  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+-  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+-  Gi eksempler på kilder for systematisk og usystematisk risiko.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
 
 class: inverse, center, middle
 
@@ -1144,7 +1144,7 @@ class: inverse, center, middle
 Porteføljens varians er gitt ved
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
- 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
+2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}
@@ -1157,65 +1157,177 @@ Std(r_p)=\sqrt{Var(rp)}
 
 Eksempel 2.6
 
-```{r}
-eks_26 <- head(iris)
-htmlTable("eks_26")
+```{r, eval=T, echo=F}
+w <- c(0.30, 0.40, 0.30)
+df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c(0.8,-0.1,0.5))
+htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
+```
+
+Hvor investert beløp vektene er gitt ved `r w`
+
+Ved innsetting av formelen gir dette oss
+
+\begin{equation}
+Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
++2 \cdot 0.30 \cdot 0.4 \cdot 0.10 \cdot 0.2 \cdot 0.8 \\ 
+-2 \cdot 0.30 \cdot 0.3 \cdot 0.10 \cdot 0.4 \cdot 0.1 \\ 
++2 \cdot 0.40 \cdot 0.3 \cdot 0.20 \cdot 0.4 \cdot 0.5 = 0.02722
+\end{equation}
+
+\begin{equation*}
+Std(r_p)=\sqrt{0.02722}=0.1649848
+\end{equation*}
+
+```{r, eval=T, echo=T}
+#! doublecheck
+(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
 ```
 
 ---
-**Metode 2 for måling av risiko (n investeringsobjekter)**
+
+**Metode 2 for måling av risiko (generell metode med n investeringsobjekter)**
+
+Porteføljens forventning er gitt ved
+\begin{equation}
+E(r_p)=\sum_{i=1}^{N}w_iE(r_i)=w_1E(r_1)+w_2E(r_2)+...+w_NE(r_N)
+\end{equation}
 Porteføljens varians gitt ved
 \begin{equation}
-Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
+Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jKov(i,j)=\\
+\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
 \end{equation}
-Mens standardavviket framkommer som
+Mens standardavviket (som tidligere) er gitt ved
 \begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
 \end{equation}
 
 ---
 
-Oslo Børs 
+Merk: I dette utrykket vil den første bestå av $N$ leddd, mens siste delen består av $N^2-N$ ledd
+
+---
+
+Dersom vi antar at
+
+- Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
+
+
+\begin{equation}
+Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
++(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
+\end{equation}
+
+
+Gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
+
+$$
+\overline{Var}=\frac{1}{N}(Var(r_1)+Var(r_2)+...+Var(r_N))
+$$
+
+Mens gjennomsnittlig varians ( $\overline{Kov}$ ) er gitt ved
+
+$$
+\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
+$$
+
+
+---
+
+Det gjør at vi kan skrive uttrykket over som
+
+\begin{equation}
+Var(r_p)=\\
+N(1/N)^2(\overline{Var}) \\
+\end{equation}
+
+Vi kan videre forenkle dette, slik at vi til slutt står igjen med
+
+\begin{equation}
+Var(r_p)=\\
+1/N\overline{Var} \\
++(1-1/N)\overline{Kov}) 
+\end{equation}
+
+---
+
+Generalt vil vi ha egenskape Om
+
+- Økt
+-
+- 
+
+---
+
+Eks. Oslo Børs 
+
+Perioden 2011-2015 har vi at $\overline{Var}=0.021$
+og gjennomsnittlig $\overline{Kov}=0.0229$
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-08.png")
+```
+---
+
+```{r}
+varo <- 0.21
+kovo <- 0.0229
+tportvar <- '(1/N)*varo + (1-1/N)*kovo'
+N <- 1:20
+df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
+```
 
 ---
 
 ## Kilder til usystematisk og relevant risiko
 
+Kan skrives om som 
+
+\begin{equation}
+Var(r_p)=(\frac{1}{N})\overline{Var}+(1-\frac{1}{N})\overline{Cov}=\\ 
+\underset{\text{Systematisk risiko}}{\overline{Cov}} +
+(\frac{1}{N}) \underset{\text{Usystematisk riskiko}}{(\overline{Var}-\overline{Cov})} 
+\end{equation}
+
 Unødvendig risiko vs. relevant risiko
 
+eks øvelse
+
+-
+
+- 
+
+
 ---
-
-```{r include=FALSE}
-knitr::knit_exit()
-```
-
 
 ## Betaverdien til et prosjekt
 
+\begin{equation}
+\beta_j=\frac{Cov(r_j,r_m)}{Var(r_m)}
+\end{equation}
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-08.png")
-```
+- $\beta_j>1$
+- $\beta_j<1$
+- $\beta_j=0$
 
----
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-09.png")
 ```
 
 ---
 
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
----
 
 # Forelesning 4: `r tema[4]`
 
 **Læringsmål:**
 
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
 
 ---
 
@@ -1225,8 +1337,6 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
-- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
-- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
 - Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
