@@ -35,4 +35,14 @@ xaringan::inf_mr("tavlefil.Rmd")
 
 
 
+Kan skrives om som 
 
+\begin{equation}
+Var(r_p)=\\
+1/N\overline{Var} \\
++(1-1/N)\overline{Kov}) 
+\end{equation}
+Unødvendig risiko vs. relevant risiko
+
+
+e

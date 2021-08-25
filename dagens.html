@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x265d793836a4eaaa3c17c92d6be1328","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4b0c57b70fa4d41ac962ef9f8f38f1d","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -230,12 +230,37 @@ og gjennomsnittlig `\(\overline{Kov}=0.0229\)`
 ---
 
 
+```r
+varo &lt;- 0.21
+kovo &lt;- 0.0229
+tportvar &lt;- '(1/N)*varo + (1-1/N)*kovo'
+N &lt;- 1:20
+df_n &lt;- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
+```
+
+![](dagens_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
 
 ---
 
 ## Kilder til usystematisk og relevant risiko
 
+Kan skrives om som 
+
+`\begin{equation}
+Var(r_p)=(\frac{1}{N})\overline{Var}+(1-\frac{1}{N})\overline{Cov}=\\ 
+\underset{\text{Systematisk risiko}}{\overline{Cov}} +
+(\frac{1}{N}) \underset{\text{Usystematisk riskiko}}{(\overline{Var}-\overline{Cov})} 
+\end{equation}`
+
 Unødvendig risiko vs. relevant risiko
+
+eks øvelse
+
+-
+
+- 
+
 
 ---
 
@@ -245,7 +270,10 @@ Unødvendig risiko vs. relevant risiko
 \beta_j=\frac{Cov(r_j,r_m)}{Var(r_m)}
 \end{equation}`
 
----
+- `\(\beta_j&gt;1\)`
+- `\(\beta_j&lt;1\)`
+- `\(\beta_j=0\)`
+
 
 &lt;img src="pensum/figurer-09.png" width="55%" /&gt;
 
