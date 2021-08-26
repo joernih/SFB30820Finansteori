@@ -1317,8 +1317,6 @@ class: inverse, center, middle
 **Læringsmål:**
 
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
-- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
-- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 
 `r paste("Oppdatert:",Sys.Date())`
 
@@ -1327,7 +1325,8 @@ class: inverse, center, middle
 ## Effisiente porteføljer
 
 ### init
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
+
+	```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-15.png")
 ```
 ---
@@ -1342,26 +1341,48 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-17.png")
 ```
+---
+
+**Tofondsresultatet:**
+
+1. Uansett graden av risikoaversjon, aksjeporteføljen blir satt sammen på samme måte
+1. Den enkelte investors risikoaversjon..., ikke hvordan markedsporteføljen skal settes sammen
 
 ---
 
-## Kapitalverdimodellen
+### Utledning av kapitalmarkedslinjen
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-18.png")
-```
+\begin{equation}
+E(r_p)=wr_f+(1-w)E(r_m)
+\end{equation}
+
+\begin{equation}
+Var(r_p)=(1-w)^2Var(r_m)
+\end{equation}
+
+
+\begin{equation}
+\frac{Std(r_p)}{Std(r_m)
+}=(1-w) 
+\end{equation}
+
 
 ---
 
-## Kapitalkostnad for nye prosjekter
+\begin{equation}
+E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
+E(r_p)=r_f+(1-w)(E(r_m) - rf) 
+\end{equation}
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-19.png")
-```
+\begin{equation}
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
+\end{equation}
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-20.png")
-```
+--- 
+
+Eks.3.1
+
+
 
 ---
 
@@ -1371,10 +1392,65 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
 `r paste("Oppdatert:",Sys.Date())`
+
+---
+
+## Kapitalverdimodellen
+
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-18.png")
+```
+---
+
+### Kapitalkostnad for egenkapital og gjeld.
+
+\begin{equation}
+E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
+\end{equation}
+
+\begin{equation}
+k_E=r_f+\beta_E[E(r_m) - rf] 
+\end{equation}
+
+\begin{equation}
+k_G=r_f+\beta_G[E(r_m) - rf] 
+\end{equation}
+
+\begin{equation}
+k_T= k_E\underset{=w_E}{\frac{E}{E+G}} + 
+k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
+\end{equation}
+
+\begin{equation}
+k_T= k_Ew_E + k_G(1-s)w_G
+\end{equation}
+
+---
+
+### Kapitalkostnad for nye prosjekter
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-19.png")
+```
+---
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-20.png")
+```
+---
+
+### Risiko og kapitalkostnader
+
+---
+
+### Risiko og kapitalkostnader
 
 ---
 
@@ -1383,6 +1459,12 @@ class: inverse, center, middle
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-21.png")
 ```
+
+- *Svak effisiens:*
+- *Havlsterk effisiens:*
+- *Sterk effisiens:*
+
+
 ---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
@@ -1405,8 +1487,14 @@ knitr::include_graphics("pensum/figurer-23.png")
 knitr::include_graphics("pensum/figurer-24.png")
 ```
 
+---
 
 ## Oppsummering diskusjon II
+
+1. Følsomhetsanalsye
+1. Scenarioanalyse
+1. Simulering
+1. Beslutningstre
 
 ---
 
@@ -1538,14 +1626,8 @@ knitr::knit_exit()
 1. nevne tre finansielle instrumenter som brukes i risikostyring.
 
 **Huskeliste til neste forelesning**
-- Målenhet på den ene oppgaven
 - Eksamensdato
-- Tillitsvalgte
-- Fonds
-- Var(X)
 - Studer øvelse nærmere for utvidelse
-- Sturktur på disikojson Risikokompenasjon
 - Anbefalte oppgaver
-- Kontantstrøm
 
 [abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)

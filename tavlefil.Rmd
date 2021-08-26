@@ -30,26 +30,58 @@ Sys.which('decktape')
 xaringan::inf_mr("tavlefil.Rmd")
 ```
 
-# NÅ 
+# Kapitalmarkedslinja
 
 \begin{equation}
-E(r_p)=w\cdot r_f+(1-w)\cdot E(r_m)
+E(r_p)=wr_f+(1-w)E(r_m)
 \end{equation}
 
 \begin{equation}
-Var(r_p)=(1-w)^2\cdot Var(r_m)
+Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
 
 \begin{equation}
 \frac{Std(r_p)}{Std(r_m)
-}=(1-w)\cdot 
+}=(1-w) 
 \end{equation}
 
 \begin{equation}
-E(r_p)=w\cdot r_f+(1-w)\cdot E(r_m) + (r_f - r_f) \\
-E(r_p)=r_f+(1-w)\cdot (E(r_m) - rf) \\
+E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
+E(r_p)=r_f+(1-w)(E(r_m) - rf) \\
 \end{equation}
 
 \begin{equation}
-E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}\cdot (E(r_m) - rf) \\
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) \\
 \end{equation}
+
+---
+
+# Enkeltprosjekt
+
+
+\begin{equation}
+E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
+\end{equation}
+
+\begin{equation}
+k_E=r_f+\beta_E[E(r_m) - rf] 
+\end{equation}
+
+\begin{equation}
+k_G=r_f+\beta_G[E(r_m) - rf] 
+\end{equation}
+
+\begin{equation}
+k_T= k_E\underset{=w_E}{\frac{E}{E+G}} + 
+k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
+\end{equation}
+
+\begin{equation}
+k_T= k_Ew_E + k_G(1-s)w_G
+\end{equation}
+
+
+
+
+
+
