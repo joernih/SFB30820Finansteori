@@ -1323,10 +1323,13 @@ class: inverse, center, middle
 
 ## Effisiente porteføljer
 
+### init
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-15.png")
 ```
 ---
+
+### Inføring av risikofri rente
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-16.png")
@@ -1336,23 +1339,26 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-17.png")
 ```
----
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-18.png")
-```
----
-
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-19.png")
-```
 ---
 
 ## Kapitalverdimodellen
 
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-18.png")
+```
+
 ---
 
 ## Kapitalkostnad for nye prosjekter
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-19.png")
+```
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-20.png")
+```
 
 ---
 
@@ -1369,11 +1375,31 @@ class: inverse, center, middle
 
 ## Informasjonseffisiens
 
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-21.png")
+```
+---
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-22.png")
+```
+
 ---
 
 ## Oppsummering diskusjon I
 
 ---
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-23.png")
+```
+
+---
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-24.png")
+```
+
 
 ## Oppsummering diskusjon II
 
