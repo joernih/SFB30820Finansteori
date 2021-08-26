@@ -32,17 +32,24 @@ xaringan::inf_mr("tavlefil.Rmd")
 
 # NÅ 
 
-
-
-
-Kan skrives om som 
+\begin{equation}
+E(r_p)=w\cdot r_f+(1-w)\cdot E(r_m)
+\end{equation}
 
 \begin{equation}
-Var(r_p)=\\
-1/N\overline{Var} \\
-+(1-1/N)\overline{Kov}) 
+Var(r_p)=(1-w)^2\cdot Var(r_m)
 \end{equation}
-Unødvendig risiko vs. relevant risiko
 
+\begin{equation}
+\frac{Std(r_p)}{Std(r_m)
+}=(1-w)\cdot 
+\end{equation}
 
-e
+\begin{equation}
+E(r_p)=w\cdot r_f+(1-w)\cdot E(r_m) + (r_f - r_f) \\
+E(r_p)=r_f+(1-w)\cdot (E(r_m) - rf) \\
+\end{equation}
+
+\begin{equation}
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}\cdot (E(r_m) - rf) \\
+\end{equation}
