@@ -1109,6 +1109,7 @@ ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=cor
 ]
 ]
 
+---
 
 class: inverse, center, middle
 
@@ -1319,6 +1320,8 @@ class: inverse, center, middle
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
 - Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 ## Effisiente porteføljer
@@ -1371,6 +1374,8 @@ class: inverse, center, middle
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 ## Informasjonseffisiens
@@ -1418,6 +1423,8 @@ class: inverse, center, middle
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 class: inverse, center, middle
@@ -1432,6 +1439,8 @@ class: inverse, center, middle
 - Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+`r paste("Oppdatert:",Sys.Date())`
 
 ---
 
@@ -1448,6 +1457,8 @@ class: inverse, center, middle
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 class: inverse, center, middle
@@ -1461,20 +1472,15 @@ class: inverse, center, middle
 - Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
 - Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 - Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
----
 
-class: inverse, center, middle
-
-# Forelesning 10: `r tema[11]`
-
-**Læringsmål:**
+`r paste("Oppdatert:",Sys.Date())`
 
 ---
 
 class: inverse, center, middle
 
 
-# Forelesning 11: `r tema[12]`
+# Forelesning 10: `r tema[12]`
 
 **Læringsmål:**
 
@@ -1484,11 +1490,13 @@ class: inverse, center, middle
 - Forklare hvorfor dividende kan påvirke agentkostnader.
 - Forklare hvorfor det norske skattesystemet er dividendenøytralt.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 class: inverse, center, middle
 
-# Forelesning 12: `r tema[13]`
+# Forelesning 11: `r tema[13]`
 
 **Læringsmål:**
 
@@ -1499,11 +1507,13 @@ class: inverse, center, middle
 - Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
 class: inverse, center, middle
 
-# Forelesning 13: `r tema[14]`
+# Forelesning 12: `r tema[14]`
 
 - Begrunne hvorfor risikostyring kan være viktig.
 - Redegjøre for viktige risikokilder.
@@ -1511,6 +1521,8 @@ class: inverse, center, middle
 - Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
 - Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
 - Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
+`r paste("Oppdatert:",Sys.Date())`
 
 ---
 
