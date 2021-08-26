@@ -1307,32 +1307,48 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
+---
+
+class: inverse, center, middle
+
 # Forelesning 4: `r tema[4]`
 
 **Læringsmål:**
 
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 
 ---
 
 ## Effisiente porteføljer
 
---
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-15.png")
+```
+---
 
-## kapitalverdimodellen
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-16.png")
+```
+---
 
---
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-17.png")
+```
+---
 
-class: inverse, center, middle
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-18.png")
+```
+---
 
-# Forelesning 5: `r tema[5]` 
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-19.png")
+```
+---
 
-**Læringsmål:**
-
-- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
-- Beskrive kapitalverdimodellens sterke og svake sider.
-- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+## Kapitalverdimodellen
 
 ---
 
@@ -1340,11 +1356,26 @@ class: inverse, center, middle
 
 ---
 
+class: inverse, center, middle
+
+# Forelesning 5: `r tema[5]` 
+
+**Læringsmål:**
+
+- Beskrive kapitalverdimodellens sterke og svake sider.
+- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+---
+
 ## Informasjonseffisiens
 
 ---
 
-## Oppsummering diskusjon
+## Oppsummering diskusjon I
+
+---
+
+## Oppsummering diskusjon II
 
 ---
 
