@@ -1124,20 +1124,6 @@ class: inverse, center, middle
 
 ---
 
-class: inverse, center, middle
-
-# Forelesning 3: `r tema[3]`
-
-**Læringsmål:**
-
--  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
--  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
-
-`r paste("Oppdatert:",Sys.Date())`
-
----
-
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
 **Metode 2 for måling av risiko (3 investeringsobjekter)**
@@ -1321,7 +1307,6 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-
 # Forelesning 4: `r tema[4]`
 
 **Læringsmål:**
@@ -1330,6 +1315,14 @@ knitr::include_graphics("pensum/figurer-10.png")
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
 
 ---
+
+## Effisiente porteføljer
+
+--
+
+## kapitalverdimodellen
+
+--
 
 class: inverse, center, middle
 
@@ -1340,6 +1333,18 @@ class: inverse, center, middle
 - Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+---
+
+## Kapitalkostnad for nye prosjekter
+
+---
+
+## Informasjonseffisiens
+
+---
+
+## Oppsummering diskusjon
 
 ---
 
