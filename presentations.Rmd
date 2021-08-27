@@ -1534,24 +1534,7 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Forelesning 8: `r tema[9]`
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
-
-`r paste("Oppdatert:",Sys.Date())`
-
----
-
-class: inverse, center, middle
-
-# Forelesning 9: `r tema[10]`
+# Forelesning 8: `r tema[10]`
 
 **Læringsmål:**
 
@@ -1568,7 +1551,7 @@ class: inverse, center, middle
 class: inverse, center, middle
 
 
-# Forelesning 10: `r tema[12]`
+# Forelesning 9: `r tema[12]`
 
 **Læringsmål:**
 
@@ -1584,7 +1567,7 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Forelesning 11: `r tema[13]`
+# Forelesning 10: `r tema[13]`
 
 **Læringsmål:**
 
@@ -1601,7 +1584,7 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Forelesning 12: `r tema[14]`
+# Forelesning 11: `r tema[14]`
 
 - Begrunne hvorfor risikostyring kan være viktig.
 - Redegjøre for viktige risikokilder.
