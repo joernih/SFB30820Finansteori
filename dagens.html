@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x98f418e1a3b401c9beb0724852a7cf1","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8484631489a4ec2a3b075d5e6e06759","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -128,9 +128,9 @@ Ved innsetting av formelen gir dette oss
 `\begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
 +2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
-+2 \cdot 0.30 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
++2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.50 \\
 -2 \cdot 0.30 \cdot 0.40 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
-= 0.02722
+=0.02722
 \end{equation}`
 
 `\begin{equation*}
@@ -138,15 +138,12 @@ Std(r_p)=\sqrt{0.02722}=0.1649848
 \end{equation*}`
 
 
-```r
-#! doublecheck
-l1 &lt;- (0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2
-l2 &lt;- 2*0.30*0.40*0.10*0.20*0.80+2*0.30*0.30*0.20*0.40*0.50 -2*0.30*0.40*0.20*0.40*0.10  
-l1+l2
+```
+## [1] 0.02722
 ```
 
 ```
-## [1] 0.03082
+## [1] 0.1649848
 ```
 
 ---

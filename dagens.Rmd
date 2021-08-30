@@ -88,20 +88,21 @@ Ved innsetting av formelen gir dette oss
 \begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
 +2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
-+2 \cdot 0.30 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
++2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.50 \\
 -2 \cdot 0.30 \cdot 0.40 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
-= 0.02722
+=0.02722
 \end{equation}
 
 \begin{equation*}
 Std(r_p)=\sqrt{0.02722}=0.1649848
 \end{equation*}
 
-```{r, eval=T, echo=T}
+```{r, eval=T, echo=F}
 #! doublecheck
 l1 <- (0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2
-l2 <- 2*0.30*0.40*0.10*0.20*0.80+2*0.30*0.30*0.20*0.40*0.50 -2*0.30*0.40*0.20*0.40*0.10  
+l2 <- 2*0.30*0.40*0.10*0.20*0.80+2*0.30*0.30*0.10*0.40*0.50 -2*0.30*0.40*0.20*0.40*0.10  
 l1+l2
+sqrt(l1+l2)
 ```
 
 ---
