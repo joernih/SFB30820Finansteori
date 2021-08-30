@@ -595,7 +595,7 @@ Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
 - Risikonøytral kun opptatt av forventet avkastning (+)
 	- Bedre ut: *Nordover* et diagram med risiko på x-aksen og forventet avkastning på y-aksen
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
-	- Bedre ut: *Nordvestover* i et diagram med risiko på x-aksen og forventet avkastning på y-aksen
+	- Bedre ut: *Nordvestover* i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
 
 I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
 
