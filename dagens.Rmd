@@ -81,15 +81,15 @@ df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0
 htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
 ```
 
-Hvor investert beløp vektene er gitt ved `r w`
+Hvor investert beløp vektene er gitt ved $w_a$=`r w[1]`, $w_b$=`r w[2]` og $w_c$=`r 1-w[1]-w[2]`
 
 Ved innsetting av formelen gir dette oss
 
 \begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
 +2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
--2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.10 \\ 
-+2 \cdot 0.40 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
++2 \cdot 0.30 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
+-2 \cdot 0.30 \cdot 0.40 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
 = 0.02722
 \end{equation}
 
@@ -99,7 +99,9 @@ Std(r_p)=\sqrt{0.02722}=0.1649848
 
 ```{r, eval=T, echo=T}
 #! doublecheck
-(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.40*0.10*0.20*0.80-2*0.30*0.30*0.10*0.40*0.10 +2*0.40*0.30*0.20*0.40*0.50
+l1 <- (0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2
+l2 <- 2*0.30*0.40*0.10*0.20*0.80+2*0.30*0.30*0.20*0.40*0.50 -2*0.30*0.40*0.20*0.40*0.10  
+l1+l2
 ```
 
 ---
