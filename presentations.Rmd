@@ -594,7 +594,7 @@ Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
 - Risikonøytral kun opptatt av forventet avkastning (+)
 	- Bedre ut: *Nordover* et diagram med risiko på x-aksen og forventet avkastning på y-aksen
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
-	- Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
+- Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
 
 I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
 
@@ -784,8 +784,8 @@ class: inverse, center, middle
 **Læringsmål:**
 
 -  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+fgh-  Gi eksempler på kilder for systematisk og usystematisk risiko.
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
 `r paste("Oppdatert:",Sys.Date())`
 
