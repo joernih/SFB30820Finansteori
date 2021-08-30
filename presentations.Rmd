@@ -30,9 +30,8 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-#xaringan::inf_mr("presentations.Rmd")
+xaringan::inf_mr("presentations.Rmd")
 rmarkdown::render()
-xaringan::inf_mr("dagens.Rmd")
 servr::daemon_stop()
 ```
 
