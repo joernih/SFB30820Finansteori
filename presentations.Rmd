@@ -30,9 +30,9 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr("presentations.Rmd")
+#xaringan::inf_mr("presentations.Rmd")
 rmarkdown::render()
-#xaringan::inf_mr("dagens.Rmd")
+xaringan::inf_mr("dagens.Rmd")
 servr::daemon_stop()
 ```
 
@@ -886,20 +886,20 @@ $$
 Uttrykket ovenfor kan derfor skrives som
 
 \begin{equation}
-Var(r_p)=N(1/N)^2(\overline{Var}) + (N^2-N)(\frac{1}{N})^2(\overline{Cov})
+Var(r_p)=N(1/N)^2(\overline{Var}) + (N^2-N)(\frac{1}{N})^2(\overline{Kov})
 \end{equation}
 
 Vi kan forenkle dette, slik at vi står igjen med
 
 \begin{equation}
-Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Cov})
+Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Kov})
 \end{equation}
 
 Uttrykket forteller oss
 
-- Økt N gir
-- $ N \rightarrow $
-- Forholdet mellom
+- Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevarianse av $(1-\frac{1}{N})$ framfor $\frac{1}{N}$
+- Når $ N \rightarrow \infty $
+- Desto lavere $\overline{Kov}$ er i forhold til $\overline{Var}$
 
 ---
 

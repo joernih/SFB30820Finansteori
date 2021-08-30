@@ -130,7 +130,7 @@ Std(r_p)=\sqrt{Var(rp)}
 - Dersom vi antar at en like stort andel $1/N$ blir investert i hvert av de n objektene, kan vi skrive 
 \begin{equation}
 Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
++(1/N)^2(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
 \end{equation}
 
 Vi har at gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
@@ -142,7 +142,7 @@ $$
 Mens gjennomsnittlig kovarians ( $\overline{Kov}$ ) er gitt ved
 
 $$
-\overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
+\overline{Kov}=\frac{1}{N}(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))
 $$
 
 ---
@@ -150,20 +150,21 @@ $$
 Uttrykket ovenfor kan derfor skrives som
 
 \begin{equation}
-Var(r_p)=N(1/N)^2(\overline{Var}) + (N^2-N)(\frac{1}{N})^2(\overline{Cov})
+Var(r_p)=N(1/N)^2(\overline{Var}) + (N^2-N)(\frac{1}{N})^2(\overline{Kov})
 \end{equation}
 
-Vi kan forenkle dette, slik at vi står igjen med
+Vtarrow \infty kan forenkle dette, slik at vi står igjen med
 
 \begin{equation}
-Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Cov})
+Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Kov})
 \end{equation}
 
 Uttrykket forteller oss
 
-- Økt N gir
-- $ N \rightarrow $
-- Forholdet mellom
+- Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevariansen av $(1-\frac{1}{N})$ framfor $\frac{1}{N}$
+- Når $n \rightarrow \infty$, synker porteføljevariansen mot sin nedre grense gitt ved $\overline(Kov)$
+- Desto lavere $\overline{Kov}$ er i forhold til 
+  $\overline{Var}$, desto rasker synker porteføljevariansen når antall aksjer i porteføljen stiger
 
 ---
 
@@ -201,9 +202,9 @@ ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 Vi kan videre dekomponere (øvelse: se om du klarer å finne ut av det på egenhånd) uttrykket for porteføljevariansen for n finansobjekter.
 
 \begin{equation}
-Var(r_p)=(\frac{1}{N})\overline{Var}+(1-\frac{1}{N})\overline{Cov}=\\ 
-\underset{\text{Systematisk risiko}}{\overline{Cov}} +
-(\frac{1}{N}) \underset{\text{Usystematisk riskiko}}{(\overline{Var}-\overline{Cov})} 
+Var(r_p)=(\frac{1}{N})\overline{Var}+(1-\frac{1}{N})\overline{Kov}=\\ 
+\underset{\text{Systematisk risiko}}{\overline{Kov}} +
+(\frac{1}{N}) \underset{\text{Usystematisk riskiko}}{(\overline{Var}-\overline{Kov})} 
 \end{equation}
 
 Det første leddet er her et mål på porteføljens *systematiske* (ikke diversifiserbare) risiko, mens det siste leddet representerer den *usystematiske* risikoen. 
@@ -217,14 +218,14 @@ Det første leddet er her et mål på porteføljens *systematiske* (ikke diversi
 Forholdet mellom porteføljerisiko og risiko til en enkelt aksje
 
 \begin{equation}
-\beta_j=\frac{Cov(r_j,r_m)}{Var(r_m)}
+\beta_j=\frac{Kov(r_j,r_m)}{Var(r_m)}
 \end{equation}
 
 - $\beta_j>1$
 - $\beta_j<1$
 - $\beta_j=0$
 
-Ved å utnytte sammenhengen om at $Kor()=\frac{Cov()}{Std()Std()}$, kan vi også skrive dette som
+Ved å utnytte sammenhengen om at $Kor()=\frac{Kov()}{Std()Std()}$, kan vi også skrive dette som
 
 \begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
