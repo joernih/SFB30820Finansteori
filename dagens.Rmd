@@ -66,14 +66,14 @@ Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}
-Mens standardavviket framkommer som
+Mens standardavviket (som tidligere) framkommer som
 \begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
 \end{equation}
 
 ---
 
-Eksempel 2.6
+**Eksempel 2.6**
 
 ```{r, eval=T, echo=F}
 w <- c(0.30, 0.40, 0.30)
@@ -87,9 +87,10 @@ Ved innsetting av formelen gir dette oss
 
 \begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
-+2 \cdot 0.30 \cdot 0.4 \cdot 0.10 \cdot 0.2 \cdot 0.8 \\ 
--2 \cdot 0.30 \cdot 0.3 \cdot 0.10 \cdot 0.4 \cdot 0.1 \\ 
-+2 \cdot 0.40 \cdot 0.3 \cdot 0.20 \cdot 0.4 \cdot 0.5 = 0.02722
++2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
+-2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.10 \\ 
++2 \cdot 0.40 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
+= 0.02722
 \end{equation}
 
 \begin{equation*}
@@ -98,7 +99,7 @@ Std(r_p)=\sqrt{0.02722}=0.1649848
 
 ```{r, eval=T, echo=T}
 #! doublecheck
-(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
+(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.40*0.10*0.20*0.80-2*0.30*0.30*0.10*0.40*0.10 +2*0.40*0.30*0.20*0.40*0.50
 ```
 
 ---
@@ -121,20 +122,14 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ---
 
-Merk: I dette utrykket vil den første bestå av $N$ leddd, mens siste delen består av $N^2-N$ ledd
+- Merk: Den første delen består av $N$ leddd, mens siste delen består av $N^2-N$ ledd
 
----
-
-Dersom vi antar at
-
-- Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
-
+- Dersom vi antar at: Like stort beløp blir investert i hvert av de n objektene $\Rightarrow$
 
 \begin{equation}
 Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
 +(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
 \end{equation}
-
 
 Gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
 
@@ -147,7 +142,6 @@ Mens gjennomsnittlig varians ( $\overline{Kov}$ ) er gitt ved
 $$
 \overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
 $$
-
 
 ---
 
@@ -165,8 +159,6 @@ Var(r_p)=\\
 1/N\overline{Var} \\
 +(1-1/N)\overline{Kov}) 
 \end{equation}
-
----
 
 Generalt vil vi ha egenskape Om
 
@@ -186,14 +178,22 @@ knitr::include_graphics("pensum/figurer-08.png")
 ```
 ---
 
+
+.panelset[
+.panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
 varo <- 0.21
 kovo <- 0.0229
 tportvar <- '(1/N)*varo + (1-1/N)*kovo'
 N <- 1:20
 df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+```
+]
+.panel[.panel-name[Figur]
+```{r}
 ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
+]]
 
 ---
 
@@ -228,6 +228,7 @@ eks øvelse
 - $\beta_j<1$
 - $\beta_j=0$
 
+---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-09.png")

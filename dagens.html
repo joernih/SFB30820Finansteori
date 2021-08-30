@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4b0c57b70fa4d41ac962ef9f8f38f1d","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5d73490333c4ff6876fc6629ec04584","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-25)
+### 2021/08/12 (updated: 2021-08-30)
 
 ---
 
@@ -64,7 +64,7 @@ class: inverse, center, middle
 -  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 -  Gi eksempler på kilder for systematisk og usystematisk risiko.
 
-Oppdatert: 2021-08-25
+Oppdatert: 2021-08-30
 
 ---
 
@@ -78,14 +78,14 @@ Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
 \end{equation}`
-Mens standardavviket framkommer som
+Mens standardavviket (som tidligere) framkommer som
 `\begin{equation}
 Std(r_p)=\sqrt{Var(rp)}
 \end{equation}`
 
 ---
 
-Eksempel 2.6
+**Eksempel 2.6**
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
@@ -127,9 +127,10 @@ Ved innsetting av formelen gir dette oss
 
 `\begin{equation}
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
-+2 \cdot 0.30 \cdot 0.4 \cdot 0.10 \cdot 0.2 \cdot 0.8 \\ 
--2 \cdot 0.30 \cdot 0.3 \cdot 0.10 \cdot 0.4 \cdot 0.1 \\ 
-+2 \cdot 0.40 \cdot 0.3 \cdot 0.20 \cdot 0.4 \cdot 0.5 = 0.02722
++2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
+-2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.10 \\ 
++2 \cdot 0.40 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.50 \\
+= 0.02722
 \end{equation}`
 
 `\begin{equation*}
@@ -139,7 +140,7 @@ Std(r_p)=\sqrt{0.02722}=0.1649848
 
 ```r
 #! doublecheck
-(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.4*0.10*0.2*0.8-2*0.30*0.3*0.10*0.4*0.1+2*0.40*0.3*0.20*0.4*0.5
+(0.30)^2*0.10^2+(0.40)^2*0.20^2+(0.3)^2*0.40^2+2*0.30*0.40*0.10*0.20*0.80-2*0.30*0.30*0.10*0.40*0.10 +2*0.40*0.30*0.20*0.40*0.50
 ```
 
 ```
@@ -166,20 +167,14 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ---
 
-Merk: I dette utrykket vil den første bestå av `\(N\)` leddd, mens siste delen består av `\(N^2-N\)` ledd
+- Merk: Den første delen består av `\(N\)` leddd, mens siste delen består av `\(N^2-N\)` ledd
 
----
-
-Dersom vi antar at
-
-- Like stort beløp blir investert i hvert av de n objektene `\(\Rightarrow\)`
-
+- Dersom vi antar at: Like stort beløp blir investert i hvert av de n objektene `\(\Rightarrow\)`
 
 `\begin{equation}
 Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
 +(1/N)^2(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))))
 \end{equation}`
-
 
 Gjennomsnittlig varians ( `\(\overline{Var}\)` ) er gitt ved
 
@@ -192,7 +187,6 @@ Mens gjennomsnittlig varians ( `\(\overline{Kov}\)` ) er gitt ved
 $$
 \overline{Kov}=\frac{1}{N}(Cov(r_1,r_2)+Cov(r_1,r_2)+...+Cov(r_1,r_2))
 $$
-
 
 ---
 
@@ -211,8 +205,6 @@ Var(r_p)=\\
 +(1-1/N)\overline{Kov}) 
 \end{equation}`
 
----
-
 Generalt vil vi ha egenskape Om
 
 - Økt
@@ -230,16 +222,25 @@ og gjennomsnittlig `\(\overline{Kov}=0.0229\)`
 ---
 
 
+.panelset[
+.panel[.panel-name[R-kode (ikke pensum)]
+
 ```r
 varo &lt;- 0.21
 kovo &lt;- 0.0229
 tportvar &lt;- '(1/N)*varo + (1-1/N)*kovo'
 N &lt;- 1:20
 df_n &lt;- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+```
+]
+.panel[.panel-name[Figur]
+
+```r
 ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
 
-![](dagens_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+![](dagens_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+]]
 
 ---
 
@@ -274,6 +275,7 @@ eks øvelse
 - `\(\beta_j&lt;1\)`
 - `\(\beta_j=0\)`
 
+---
 
 &lt;img src="pensum/figurer-09.png" width="55%" /&gt;
 

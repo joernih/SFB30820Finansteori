@@ -1,4 +1,6 @@
+
 library(dplyr)
+install.packages("readr")
 crypto_df <- list.files(path="csv",pattern = "*.csv") %>% purrr::map_df(~readr::read_delim(paste0("csv/",.)))
 
 unique(tbl$Currency)
