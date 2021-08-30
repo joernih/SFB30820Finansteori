@@ -61,7 +61,7 @@ class: inverse, center, middle
 
 Porteføljens varians er gitt ved
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+w^2_3Var(r_3) + \\
+Var(r_p)=w_a^2Var(r_a)+w^2_bVar(r_b)+w^2_cVar(r_c) + \\
 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
@@ -78,8 +78,8 @@ Std(r_p)=\sqrt{Var(rp)}
 ```{r, eval=T, echo=F}
 w <- c(0.30, 0.40, 0.30)
 df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c("Mellom A og B: 0.8",
-												 "Mellom A og C: -0.1",
-												 "Mellom B og C: 0.5"))
+												 "Mellom A og C: 0.5",
+												 "Mellom B og C: -0.10"))
 htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
 ```
 
@@ -91,7 +91,7 @@ Ved innsetting av formelen gir dette oss
 Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
 +2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
 +2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.50 \\
--2 \cdot 0.30 \cdot 0.40 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
+-2 \cdot 0.40 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
 =0.02722
 \end{equation}
 
@@ -165,8 +165,8 @@ Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Kov})
 
 Dette uttrykket forteller oss:
 
-- Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevariansen av $(1-\frac{1}{N})$ framfor $\frac{1}{N}$
-- Når $n \rightarrow \infty$, synker porteføljevariansen mot sin nedre grense gitt ved $\overline(Kov)$
+- Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevariansen av $(1-\frac{1}{N})\overline{Kov}$ framfor $\frac{1}{N}\overline {Var}$
+- Når $N \rightarrow \infty$, synker porteføljevariansen mot sin nedre grense gitt ved $\overline(Kov)$
 - Desto lavere $\overline{Kov}$ er i forhold til 
   $\overline{Var}$, desto rasker synker porteføljevariansen når antall aksjer i porteføljen stiger
 
@@ -199,10 +199,12 @@ df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list
 ```
 ]
 .panel[.panel-name[Figur]
-```{r, echo=F}
+```{r, out.width="55%",echo=F}
 ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
 ]]
+
+**Øvelse:** Se om du klarer å replikere figuren som er vist her ved bruk av et regneark.
 
 ---
 
@@ -220,20 +222,33 @@ Det første leddet er her et mål på porteføljens *systematiske* (ikke diversi
 
 ---
 
-## Betaverdien til et prosjekt
+- Usystematisk risiko
+  - Ledelsen kompetanse eller helse
+  - Forsinkelser, lokal streik, brann
+  - Overgang til ny teknolog innen en bransje
 
-Risikoen til en enkelt aksje i enheter av ...
+- Systematisk risiko
+  - Konjunkturbevegelser
+  - Pandemi
+  - Krig eller fred 
+
+---
+
+## Betaverdien til en aksje eller et prosjekt
+
+Relevant risiko til en enkelt aksje eller et prosjekt kan forstås som 
+forholdet mellom aksjens eller prosjektets risiko i forhold til markedsporteføljen. Dette relativet risikomålet betegner vi som *beta* ( $\beta$ ):
 
 \begin{equation}
 \beta_j=\frac{Kov(r_j,r_m)}{Var(r_m)}
 \end{equation}
 
-- $\beta_j>1$ - Mer følsom desto høyere verdi
+- $\beta_j>1$ - Mer følsom enn markedsporteføljen
 - $\beta_j=1$ - Følsomhet lik markedsporteføljen 
-- $\beta_j<1$ - Mindre følsom desto lavere veri
-- $\beta_j=0$ - Risikofri aksje (null systematisk risiko)
+- $\beta_j<1$ - Mindre følsom enn markedsporteføljen
+- $\beta_j=0$ - Risikofri aksje (null systematisk risiko, man kan innehold usystematisk risiko)
 
-Ved å utnytte sammenhengen om at $Kor()=\frac{Kov()}{Std()Std()}$, kan vi også skrive dette som
+Ved å utnytte sammenhengen om at $Kor(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}$, kan vi også uttrykke beta som 
 
 \begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
