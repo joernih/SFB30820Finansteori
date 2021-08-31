@@ -129,12 +129,12 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ### Diversifisering og risikoreduksjon
 
-- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ leddd, mens siste består av $N^2-N$ ledd
+- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ ledd, mens siste består av $N^2-N$ ledd
 
 - Dersom vi antar at en like stort andel $1/N$ blir investert i hvert av de n objektene, kan vi skrive 
 \begin{equation}
-Var(r_p)=(1/N)^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(1/N)^2(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
+Var(r_p)=\frac{1}{N}^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
++(N^2-N)(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
 \end{equation}
 
 Vi har at gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
