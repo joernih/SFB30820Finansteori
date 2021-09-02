@@ -170,7 +170,8 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+inp_kor <- seq(-1,1,0.01)
+plotwf <- inp_kor %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
