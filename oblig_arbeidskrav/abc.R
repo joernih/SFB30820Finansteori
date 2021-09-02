@@ -19,6 +19,7 @@ gensh_df <- crypto_df %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::ungroup() 
 
+View(gensh_df)
 # Tasks
 ## Sheet 1: Individuelt
 ### 1. Finn tidsintervall
@@ -32,9 +33,12 @@ ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 ## Sheet 2: Samlet
 gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% print()
 ggplot2::ggplot(gensh_df_2, aes(x=date,y=rp, color=currency)) + geom_point()
+
+#View(tidyr::pivot_longer(gensh_df_2,currency, c(BTC,ETH,XRP)))
 ### 1. Finn Kovarians
 
 View(gensh_df_2)
+
 ## Sheet 3: Enkelt porteføljer 
 
 ## Sheet 4: Samlet porteføljer
