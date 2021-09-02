@@ -14,8 +14,8 @@ gensh_df <- crypto_df %>%
 	dplyr::group_by(currency) %>% 
 	dplyr::mutate(mdate=min(date)) %>%
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
-	dplyr::mutate(varp=rp)%>%
-	dplyr::mutate(stdp=std(varp)) %>%
+	dplyr::mutate(varp=var(rp))%>%
+	dplyr::mutate(stdp=varp^(1/2)) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::ungroup() 
 
@@ -25,7 +25,7 @@ gensh_df <- crypto_df %>%
 ### 2. Finn forventet verdi
 ### 3. Finn varians og standardavvik
 ### 4. Avkastning i prosent
-### 5. Graf
+### 5. Tidserieplot over utviklingen i avkastningen 
 gensh_df_1 <- gensh_df
 ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 
@@ -39,7 +39,5 @@ View(gensh_df_2)
 
 ## Sheet 4: Samlet porteføljer
 
+## Sheet 5: Med markedsindeks (New York)
 
-btc_df <- crypto_df %>% dplyr::filter(currency=='BTC')
-eth_df <- crypto_df %>% dplyr::filter(currency=='ETH')
-xrp_df <- crypto_df %>% dplyr::filter(currency=='XRP')
