@@ -14,6 +14,8 @@ gensh_df <- crypto_df %>%
 	dplyr::group_by(currency) %>% 
 	dplyr::mutate(mdate=min(date)) %>%
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
+	dplyr::mutate(varp=rp)%>%
+	dplyr::mutate(stdp=std(varp)) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::ungroup() 
 
@@ -32,6 +34,7 @@ gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% print()
 ggplot2::ggplot(gensh_df_2, aes(x=date,y=rp, color=currency)) + geom_point()
 ### 1. Finn Kovarians
 
+View(gensh_df_2)
 ## Sheet 3: Enkelt porteføljer 
 
 ## Sheet 4: Samlet porteføljer
