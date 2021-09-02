@@ -30,7 +30,6 @@ ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 ## Sheet 2: Samlet
 gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% print()
 ggplot2::ggplot(gensh_df_2, aes(x=date,y=rp, color=currency)) + geom_point()
-
 ### 1. Finn Kovarians
 
 ## Sheet 3: Enkelt porteføljer 
