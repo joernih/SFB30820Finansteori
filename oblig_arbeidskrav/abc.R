@@ -6,6 +6,8 @@ ls("package:SFB30820Finansteori")
 # Reading the data
 crypto_df <- list.files(path="csv",pattern = "*.csv") %>% purrr::map_df(~readr::read_delim(paste0("csv/",.)))
 names(crypto_df) <- c("currency","date","close","open","high","low") 
+# [1] "currency" "date"     "close"    "open"    
+# [5] "high"     "low"     
 
 # Genereal transformation
 unique(crypto_df$currency)
@@ -14,7 +16,7 @@ gensh_df <- crypto_df %>%
 	dplyr::group_by(currency) %>% 
 	dplyr::mutate(mdate=min(date)) %>%
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
-	dplyr::mutate(varp=var(rp))%>%
+	dplyr::mutate(varp=var(rp,na.rm=T))%>%
 	dplyr::mutate(stdp=varp^(1/2)) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::ungroup() 
@@ -27,17 +29,20 @@ View(gensh_df)
 ### 3. Finn varians og standardavvik
 ### 4. Avkastning i prosent
 ### 5. Tidserieplot over utviklingen i avkastningen 
-gensh_df_1 <- gensh_df
+gensh_df_1 <- gensh_df 
 ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 
 ## Sheet 2: Samlet
-gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% print()
-ggplot2::ggplot(gensh_df_2, aes(x=date,y=rp, color=currency)) + geom_point()
+gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
+	dplyr::select(currency,date,rp) %>%
+	tidyr::pivot_wider(names_from=currency, values_from=rp) %>%
+	dplyr::drop:na()
 
-#View(tidyr::pivot_longer(gensh_df_2,currency, c(BTC,ETH,XRP)))
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=XRP)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=BTC)) + geom_point()
+
 ### 1. Finn Kovarians
-
-View(gensh_df_2)
 
 ## Sheet 3: Enkelt porteføljer 
 
@@ -45,3 +50,5 @@ View(gensh_df_2)
 
 ## Sheet 5: Med markedsindeks (New York)
 
+## Appendiks
+https://www.quantshare.com/sa-620-10-new-ways-to-download-historical-stock-quotes-for-free
