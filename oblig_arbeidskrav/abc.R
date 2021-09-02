@@ -59,5 +59,8 @@ cor(gensh_df_2$XRP,gensh_df_2$ETH)
 https://www.quantshare.com/sa-620-10-new-ways-to-download-historical-stock-quotes-for-free
 
 # Explain differences between expected and realised values
-
-
+install.packages("foreign")
+library(foreign)
+ls("package:foreign")
+nyse <- read.dta("https://query1.finance.yahoo.com/v7/finance/download/%5ENYA?period1=1472774400&period2=1630540800&interval=1d&events=history&includeAdjustedClose=true")
+View(nyse)
