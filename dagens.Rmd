@@ -231,8 +231,6 @@ Var(r_p)=(1-w)^2Var(r_m)
 }=(1-w) 
 \end{equation}
 
----
-
 \begin{equation}
 E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
 E(r_p)=r_f+(1-w)(E(r_m) - rf) 
@@ -242,10 +240,9 @@ E(r_p)=r_f+(1-w)(E(r_m) - rf)
 E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
 \end{equation}
 
---- 
+---
 
-Eks.3.1
-
+**Eks.3.1**
 
 
 ---
@@ -364,5 +361,5 @@ knitr::include_graphics("pensum/figurer-24.png")
 
 # Huskeliste:
 1. Datoer
-
+1. Oljefondet strategi
 
