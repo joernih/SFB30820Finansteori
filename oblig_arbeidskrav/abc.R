@@ -24,17 +24,13 @@ gensh_df <- crypto_df %>%
 ### 3. Finn varians og standardavvik
 ### 4. Avkastning i prosent
 ### 5. Graf
-ggplot2::ggplot(gensh_df, aes(x=date,y=rp, color=currency)) + geom_point()
+gensh_df_1 <- gensh_df
+ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 
 ## Sheet 2: Samlet
-%>% dplyr::filter(date>=max(mdate))
+gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% print()
+ggplot2::ggplot(gensh_df_2, aes(x=date,y=rp, color=currency)) + geom_point()
 
-a <- crypto_df %>% dplyr::group_by(currency) %>% dplyr::mutate(mdate=min(date)) %>%
-	dplyr::ungroup() %>% dplyr::filter(date>=max(mdate))
-
-ggplot2::ggplot(a, aes(x=date,y=open)) + geom_point()
-
-View(a)
 ### 1. Finn Kovarians
 
 ## Sheet 3: Enkelt porteføljer 
