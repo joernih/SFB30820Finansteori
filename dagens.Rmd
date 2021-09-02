@@ -240,8 +240,6 @@ E(r_p)=r_f+(1-w)(E(r_m) - rf)
 E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
 \end{equation}
 
----
-
 **Eks.3.1**
 
 
