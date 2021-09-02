@@ -36,11 +36,16 @@ ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=currency)) + geom_point()
 gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
 	dplyr::select(currency,date,rp) %>%
 	tidyr::pivot_wider(names_from=currency, values_from=rp) %>%
-	dplyr::drop:na()
+	tidyr::drop_na()
 
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=XRP)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=BTC)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=ETH)) + geom_point()
+
+cor(gensh_df_2$BTC,gensh_df_2$ETH)
+cor(gensh_df_2$BTC,gensh_df_2$XRP)
+cor(gensh_df_2$XRP,gensh_df_2$ETH)
+
 
 ### 1. Finn Kovarians
 
@@ -52,3 +57,7 @@ ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=BTC)) + geom_point()
 
 ## Appendiks
 https://www.quantshare.com/sa-620-10-new-ways-to-download-historical-stock-quotes-for-free
+
+# Explain differences between expected and realised values
+
+
