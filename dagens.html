@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x913f4024d1749b28e2bcbbafa9e176a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4ea5ffd8c61412483161aff86ce2ab6","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -22,6 +22,14 @@
     <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+    <script src="libs/typedarray-0.1/typedarray.min.js"></script>
+    <script src="libs/jquery-3.5.1/jquery.min.js"></script>
+    <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -42,7 +50,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-08-31)
+### 2021/08/12 (updated: 2021-09-02)
 
 ---
 
@@ -52,244 +60,800 @@ class: center, middle, inverse, title-slide
 
 
 
+
+## Timeplan
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori to objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori 3-n objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter for finansiering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;39&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjeld, total risiko og systematisk risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 1,2-4,5-8,11,12,13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Repetisjon&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+## Timeplan
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori to objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori 3-n objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter for finansiering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;39&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjeld, total risiko og systematisk risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi i perfekte kapitalmarkeder&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 1,2-4,5-8,11,12,13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Repetisjon&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;?&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+# Anbefalte oppgaver
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Pensumbok&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nettside (ressurs)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.1,1.2,1.4,1.5,1.7.1.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.1.1,N.1.2,N.1.3,N.1.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.1,2.2,2.3,2.6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.2.1,N.2.2,N.2.3,N.2.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Pensumliste
+
+.pull-left[
+
+## Hovedbok
+
+
+&lt;img src="pensum/figurer-01.png" width="75%" /&gt;
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+]
+
+.pull-right[
+
+## Supplerende
+&lt;img src="pensum/falitt.jpg" width="25%" /&gt;
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+]
+
+---
+
+
+# Anbefalte oppgaver
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Pensumbok&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nettside (ressurs)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.1,1.2,1.4,1.5,1.7.1.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.1.1,N.1.2,N.1.3,N.1.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.1,2.2,2.3,2.6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.2.1,N.2.2,N.2.3,N.2.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Pensumliste
+
+.pull-left[
+
+## Hovedbok
+
+
+&lt;img src="pensum/figurer-01.png" width="75%" /&gt;
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+]
+
+.pull-right[
+
+## Supplerende
+&lt;img src="pensum/falitt.jpg" width="25%" /&gt;
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+]
+
+---
 
 class: inverse, center, middle
 
-# Forelesning 3: Relevant risiko: Porteføljeteori 3-n objekter
+# Forelesning 4: Effisiens
 
 **Læringsmål:**
 
--  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
--  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+- Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
 
-Oppdatert: 2021-08-31
+Oppdatert: 2021-09-02
 
 ---
 
-## Måling av risiko (portefølje fra 3 til n fonds)
+## Effisiente porteføljer
 
-**Metode 2 for måling av risiko (3 investeringsobjekter)**
+### Settet av mulige porteføljer
 
-Porteføljens varians er gitt ved
-`\begin{equation}
-Var(r_p)=w_a^2Var(r_a)+w^2_bVar(r_b)+w^2_cVar(r_c) + \\
-2w_aw_bStd(a)Std(b)Korr(a,b)+\\
-2w_aw_cStd(a)Std(c)Korr(a,c)+\\
-2w_bw_cStd(b)Std(c)Korr(b,c) 
-\end{equation}`
-Mens standardavviket (som tidligere) framkommer som
-`\begin{equation}
-Std(r_p)=\sqrt{Var(rp)}
-\end{equation}`
-
+&lt;img src="pensum/figurer-15.png" width="55%" /&gt;
 ---
-
-**Eksempel 2.6**
-
-<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
-<thead>
-<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Aksje</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Forventet avkastning</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Standardavvik</th>
-<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Korrelasjonskoeffisient</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style='text-align: left;'>1</td>
-<td style='text-align: center;'>A</td>
-<td style='text-align: center;'>0.12</td>
-<td style='text-align: center;'>0.1</td>
-<td style='text-align: center;'>Mellom A og B: 0.8</td>
-</tr>
-<tr>
-<td style='text-align: left;'>2</td>
-<td style='text-align: center;'>B</td>
-<td style='text-align: center;'>0.15</td>
-<td style='text-align: center;'>0.2</td>
-<td style='text-align: center;'>Mellom A og C: 0.5</td>
-</tr>
-<tr>
-<td style='border-bottom: 2px solid grey; text-align: left;'>3</td>
-<td style='border-bottom: 2px solid grey; text-align: center;'>C</td>
-<td style='border-bottom: 2px solid grey; text-align: center;'>0.25</td>
-<td style='border-bottom: 2px solid grey; text-align: center;'>0.4</td>
-<td style='border-bottom: 2px solid grey; text-align: center;'>Mellom B og C: -0.10</td>
-</tr>
-</tbody>
-</table>
-
-Hvor investert beløp vektene er gitt ved `\(w_a\)`=0.3, `\(w_b\)`=0.4 og `\(w_c\)`=0.3
-
-Ved innsetting av formelen gir dette oss
-
-`\begin{equation}
-Var(r_p)=(0.30)^2\cdot 0.10^2+(0.40)^2\cdot 0.20^2+(0.3)^2\cdot 0.40^2 \\ 
-+2 \cdot 0.30 \cdot 0.40 \cdot 0.10 \cdot 0.20 \cdot 0.80 \\ 
-+2 \cdot 0.30 \cdot 0.30 \cdot 0.10 \cdot 0.40 \cdot 0.50 \\
--2 \cdot 0.40 \cdot 0.30 \cdot 0.20 \cdot 0.40 \cdot 0.10 \\ 
-=0.02722
-\end{equation}`
-
-`\begin{equation*}
-Std(r_p)=\sqrt{0.02722}=0.1649848
-\end{equation*}`
-
-
-
----
-
-**Metode 2 for måling av risiko (generell metode med n investeringsobjekter)**
-
-Porteføljens forventning er gitt ved
-`\begin{equation}
-E(r_p)=\sum_{i=1}^{N}w_iE(r_i)=w_1E(r_1)+w_2E(r_2)+...+w_NE(r_N)
-\end{equation}`
-Porteføljens varians gitt ved
-`\begin{equation}
-Var(r_p)=\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jKov(i,j)=\\
-\sum_{i=1}^{N}w_i^2Var(r_i)+\underset{i\neq j}{\sum_{i=1}^{N}\sum_{j=1}^{N}}w_iw_jStd(i)Std(j)Korr(i,j)
-\end{equation}`
-Mens standardavviket (som tidligere) er gitt ved
-`\begin{equation}
-Std(r_p)=\sqrt{Var(rp)}
-\end{equation}`
-
----
-
-### Diversifisering og risikoreduksjon
-
-- Legg merke til at første del av uttrykket for porteføljevariansbestår av `\(N\)` ledd, mens siste består av `\(N^2-N\)` ledd
-
-- Dersom vi antar at en like stort andel `\(1/N\)` blir investert i hvert av de n objektene, kan vi skrive 
-`\begin{equation}
-Var(r_p)=\frac{1}{N}^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(N^2-N)(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
-\end{equation}`
-
-Vi har at gjennomsnittlig varians ( `\(\overline{Var}\)` ) er gitt ved
-
-$$
-\overline{Var}=\frac{1}{N}(Var(r_1)+Var(r_2)+...+Var(r_N))
-$$
-
-Mens gjennomsnittlig kovarians ( `\(\overline{Kov}\)` ) er gitt ved
-
-$$
-\overline{Kov}=\frac{1}{N}(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))
-$$
-
----
-
-Uttrykket ovenfor kan derfor skrives som
-
-`\begin{equation}
-Var(r_p)=N(1/N)^2(\overline{Var}) + (N^2-N)(\frac{1}{N})^2(\overline{Kov})
-\end{equation}`
-
-Vi kan forenkle dette, slik at vi til slutt står igjen med
-
-`\begin{equation}
-Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Kov})
-\end{equation}`
-
-Dette uttrykket forteller oss:
-
-- Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevariansen av `\((1-\frac{1}{N})\overline{Kov}\)` framfor `\(\frac{1}{N}\overline {Var}\)`
-- Når `\(N \rightarrow \infty\)`, synker porteføljevariansen mot sin nedre grense gitt ved `\(\overline(Kov)\)`
-- Desto lavere `\(\overline{Kov}\)` er i forhold til 
-  `\(\overline{Var}\)`, desto rasker synker porteføljevariansen når antall aksjer i porteføljen stiger
-
----
-
-Eks. Oslo Børs perioden 2011-2015. 
-
-
-&lt;img src="pensum/figurer-08.png" width="55%" /&gt;
-
-Her har vi at `\(\overline{Var}=0.21\)` og gjennomsnittlig `\(\overline{Kov}=0.0229\)`.
-
-`\begin{equation*}
-Var(r_p)=\frac{1}{N}(0.21) + (1-\frac{1}{N})(0.0229)
-\end{equation*}`
-
----
-
 
 .panelset[
+.panel[.panel-name[Tabell]
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
 .panel[.panel-name[R-kode (ikke pensum)]
 
 ```r
-varo &lt;- 0.21
-kovo &lt;- 0.0229
-tportvar &lt;- '(1/N)*varo + (1-1/N)*kovo'
-N &lt;- 1:60
-df_n &lt;- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+plotwf &lt;- c(-1,0,1) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w &lt;- seq(0,1,0.01)
+	v &lt;- as.vector(df[,(2)])
+	m &lt;- as.matrix(df[,(3:4)])
+	covall &lt;- cov.wt(m,v,method='ML')
+	avk &lt;- as.vector(covall$center)
+	kov &lt;- covall$cov[lower.tri(covall$cov)] 
+	var &lt;- as.vector(diag(as.matrix(covall$cov)))
+	avkdf &lt;- data.frame(corr=r,w1=1-w, w2=w) %&gt;%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %&gt;%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %&gt;%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
 ```
+
 ]
 .panel[.panel-name[Figur]
-&lt;img src="dagens_files/figure-html/unnamed-chunk-7-1.png" width="55%" /&gt;
-]]
-
-**Øvelse:** Se om du klarer å replikere figuren som er vist her ved bruk av et regneark.
+<div id="htmlwidget-01945c172bee83c97996" style="width:504px;height:504px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-01945c172bee83c97996">{"x":{"data":[{"x":[0.0360555127546399,0.0344459580274138,0.0328364033001877,0.0312268485729617,0.0296172938457356,0.0280077391185095,0.0263981843912834,0.0247886296640573,0.0231790749368313,0.0215695202096052,0.0199599654823791,0.018350410755153,0.016740856027927,0.0151313013007009,0.0135217465734748,0.0119121918462487,0.0103026371190226,0.00869308239179655,0.0070835276645705,0.0054739729373444,0.00386441821011834,0.00225486348289225,0.000645308755666153,0.000964245971559929,0.00257380069878598,0.00418335542601208,0.00579291015323814,0.00740246488046425,0.00901201960769032,0.0106215743349164,0.0122311290621425,0.0138406837893686,0.0154502385165946,0.0170597932438207,0.0186693479710468,0.0202789026982729,0.0218884574254989,0.023498012152725,0.0251075668799511,0.0267171216071772,0.0283266763344033,0.0299362310616293,0.0315457857888554,0.0331553405160815,0.0347648952433076,0.0363744499705336,0.0379840046977597,0.0395935594249858,0.0412031141522119,0.0428126688794379,0.044422223606664,0.0460317783338901,0.0476413330611162,0.0492508877883423,0.0508604425155684,0.0524699972427944,0.0540795519700205,0.0556891066972466,0.0572986614244727,0.0589082161516987,0.0605177708789248,0.0621273256061509,0.063736880333377,0.0653464350606031,0.0669559897878291,0.0685655445150552,0.0701750992422813,0.0717846539695074,0.0733942086967335,0.0750037634239595,0.0766133181511856,0.0782228728784117,0.0798324276056378,0.0814419823328638,0.0830515370600899,0.084661091787316,0.0862706465145421,0.0878802012417682,0.0894897559689942,0.0910993106962203,0.0927088654234464,0.0943184201506725,0.0959279748778986,0.0975375296051246,0.0991470843323507,0.100756639059577,0.102366193786803,0.103975748514029,0.105585303241255,0.107194857968481,0.108804412695707,0.110413967422933,0.112023522150159,0.113633076877385,0.115242631604611,0.116852186331838,0.118461741059064,0.12007129578629,0.121680850513516,0.123290405240742,0.124899959967968,0.0360555127546399,0.035716802768445,0.0354225916612548,0.0351739960766473,0.034971988791031,0.0348173807171074,0.0347108052341054,0.0346527055220801,0.0346433254754794,0.0346827046234863,0.0347706773014274,0.0349068761134536,0.0350907395191381,0.0353215231834642,0.0355983145668443,0.0359200501113236,0.0362855343077651,0.0366934599077274,0.037142428568956,0.0376309712869599,0.0381575680566778,0.0387206663165809,0.0393186978421209,0.0399500938672239,0.0406132983147146,0.0413067791046458,0.0420290375811771,0.0427786161534008,0.0435541042842118,0.044354142985746,0.0451774279923061,0.0460227117845092,0.0468888046339422,0.0477745748280401,0.0486789482219984,0.0496009072497671,0.0505394895106787,0.0514937860328797,0.052462939300043,0.0534461411142095,0.0544426303552648,0.0554516906865787,0.0564726482467398,0.0575048693590378,0.0585477582833024,0.0596007550287746,0.0606633332417532,0.061734998177695,0.06281528476414,0.0639037557581712,0.065,0.0661036307626139,0.0672142841961439,0.0683316178646459,0.0694553093722863,0.0705850550754195,0.0717205688767177,0.0728615810973108,0.0740078374228027,0.0751590979190144,0.0763151361133556,0.0774757381378196,0.0786407019297259,0.0798098364864883,0.0809829611708537,0.0821599050632363,0.083340506357953,0.0845246118003508,0.0857120761619971,0.0869027617512815,0.0880965379569481,0.0892932808222433,0.0904928726475185,0.0916952016192777,0.0929001614637994,0.0941076511235936,0.0953175744550815,0.096529839945998,0.0977443604511278,0.0989610529450854,0.100179838290946,0.101400641023615,0.102623389146919,0.103848013943455,0.105074449796323,0.106302634021928,0.107532506713087,0.108764010591739,0.109997090870623,0.111231695123288,0.112467773161915,0.113705276922401,0.114944160356236,0.11618437932872,0.117425891523122,0.118668656350361,0.119912634863887,0.121157789679409,0.122404084899157,0.123651486040403,0.124899959967968,0.0360555127546399,0.0369439572267732,0.0378324016989065,0.0387208461710397,0.039609290643173,0.0404977351153063,0.0413861795874396,0.0422746240595729,0.0431630685317061,0.0440515130038394,0.0449399574759727,0.045828401948106,0.0467168464202393,0.0476052908923725,0.0484937353645058,0.0493821798366391,0.0502706243087724,0.0511590687809057,0.0520475132530389,0.0529359577251722,0.0538244021973055,0.0547128466694388,0.0556012911415721,0.0564897356137053,0.0573781800858386,0.0582666245579719,0.0591550690301052,0.0600435135022385,0.0609319579743718,0.061820402446505,0.0627088469186383,0.0635972913907716,0.0644857358629049,0.0653741803350382,0.0662626248071714,0.0671510692793047,0.068039513751438,0.0689279582235713,0.0698164026957046,0.0707048471678378,0.0715932916399711,0.0724817361121044,0.0733701805842377,0.074258625056371,0.0751470695285042,0.0760355140006375,0.0769239584727708,0.0778124029449041,0.0787008474170374,0.0795892918891706,0.0804777363613039,0.0813661808334372,0.0822546253055705,0.0831430697777038,0.084031514249837,0.0849199587219703,0.0858084031941036,0.0866968476662369,0.0875852921383702,0.0884737366105035,0.0893621810826367,0.09025062555477,0.0911390700269033,0.0920275144990366,0.0929159589711699,0.0938044034433031,0.0946928479154364,0.0955812923875697,0.096469736859703,0.0973581813318363,0.0982466258039695,0.0991350702761028,0.100023514748236,0.100911959220369,0.101800403692503,0.102688848164636,0.103577292636769,0.104465737108903,0.105354181581036,0.106242626053169,0.107131070525302,0.108019514997436,0.108907959469569,0.109796403941702,0.110684848413835,0.111573292885969,0.112461737358102,0.113350181830235,0.114238626302369,0.115127070774502,0.116015515246635,0.116903959718768,0.117792404190902,0.118680848663035,0.119569293135168,0.120457737607302,0.121346182079435,0.122234626551568,0.123123071023701,0.124011515495835,0.124899959967968],"y":[0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23,0.11,0.1112,0.1124,0.1136,0.1148,0.116,0.1172,0.1184,0.1196,0.1208,0.122,0.1232,0.1244,0.1256,0.1268,0.128,0.1292,0.1304,0.1316,0.1328,0.134,0.1352,0.1364,0.1376,0.1388,0.14,0.1412,0.1424,0.1436,0.1448,0.146,0.1472,0.1484,0.1496,0.1508,0.152,0.1532,0.1544,0.1556,0.1568,0.158,0.1592,0.1604,0.1616,0.1628,0.164,0.1652,0.1664,0.1676,0.1688,0.17,0.1712,0.1724,0.1736,0.1748,0.176,0.1772,0.1784,0.1796,0.1808,0.182,0.1832,0.1844,0.1856,0.1868,0.188,0.1892,0.1904,0.1916,0.1928,0.194,0.1952,0.1964,0.1976,0.1988,0.2,0.2012,0.2024,0.2036,0.2048,0.206,0.2072,0.2084,0.2096,0.2108,0.212,0.2132,0.2144,0.2156,0.2168,0.218,0.2192,0.2204,0.2216,0.2228,0.224,0.2252,0.2264,0.2276,0.2288,0.23],"text":["stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr: -1","stdavk: 0.0344459580<br />forvavk: 0.1112<br />corr: -1","stdavk: 0.0328364033<br />forvavk: 0.1124<br />corr: -1","stdavk: 0.0312268486<br />forvavk: 0.1136<br />corr: -1","stdavk: 0.0296172938<br />forvavk: 0.1148<br />corr: -1","stdavk: 0.0280077391<br />forvavk: 0.1160<br />corr: -1","stdavk: 0.0263981844<br />forvavk: 0.1172<br />corr: -1","stdavk: 0.0247886297<br />forvavk: 0.1184<br />corr: -1","stdavk: 0.0231790749<br />forvavk: 0.1196<br />corr: -1","stdavk: 0.0215695202<br />forvavk: 0.1208<br />corr: -1","stdavk: 0.0199599655<br />forvavk: 0.1220<br />corr: -1","stdavk: 0.0183504108<br />forvavk: 0.1232<br />corr: -1","stdavk: 0.0167408560<br />forvavk: 0.1244<br />corr: -1","stdavk: 0.0151313013<br />forvavk: 0.1256<br />corr: -1","stdavk: 0.0135217466<br />forvavk: 0.1268<br />corr: -1","stdavk: 0.0119121918<br />forvavk: 0.1280<br />corr: -1","stdavk: 0.0103026371<br />forvavk: 0.1292<br />corr: -1","stdavk: 0.0086930824<br />forvavk: 0.1304<br />corr: -1","stdavk: 0.0070835277<br />forvavk: 0.1316<br />corr: -1","stdavk: 0.0054739729<br />forvavk: 0.1328<br />corr: -1","stdavk: 0.0038644182<br />forvavk: 0.1340<br />corr: -1","stdavk: 0.0022548635<br />forvavk: 0.1352<br />corr: -1","stdavk: 0.0006453088<br />forvavk: 0.1364<br />corr: -1","stdavk: 0.0009642460<br />forvavk: 0.1376<br />corr: -1","stdavk: 0.0025738007<br />forvavk: 0.1388<br />corr: -1","stdavk: 0.0041833554<br />forvavk: 0.1400<br />corr: -1","stdavk: 0.0057929102<br />forvavk: 0.1412<br />corr: -1","stdavk: 0.0074024649<br />forvavk: 0.1424<br />corr: -1","stdavk: 0.0090120196<br />forvavk: 0.1436<br />corr: -1","stdavk: 0.0106215743<br />forvavk: 0.1448<br />corr: -1","stdavk: 0.0122311291<br />forvavk: 0.1460<br />corr: -1","stdavk: 0.0138406838<br />forvavk: 0.1472<br />corr: -1","stdavk: 0.0154502385<br />forvavk: 0.1484<br />corr: -1","stdavk: 0.0170597932<br />forvavk: 0.1496<br />corr: -1","stdavk: 0.0186693480<br />forvavk: 0.1508<br />corr: -1","stdavk: 0.0202789027<br />forvavk: 0.1520<br />corr: -1","stdavk: 0.0218884574<br />forvavk: 0.1532<br />corr: -1","stdavk: 0.0234980122<br />forvavk: 0.1544<br />corr: -1","stdavk: 0.0251075669<br />forvavk: 0.1556<br />corr: -1","stdavk: 0.0267171216<br />forvavk: 0.1568<br />corr: -1","stdavk: 0.0283266763<br />forvavk: 0.1580<br />corr: -1","stdavk: 0.0299362311<br />forvavk: 0.1592<br />corr: -1","stdavk: 0.0315457858<br />forvavk: 0.1604<br />corr: -1","stdavk: 0.0331553405<br />forvavk: 0.1616<br />corr: -1","stdavk: 0.0347648952<br />forvavk: 0.1628<br />corr: -1","stdavk: 0.0363744500<br />forvavk: 0.1640<br />corr: -1","stdavk: 0.0379840047<br />forvavk: 0.1652<br />corr: -1","stdavk: 0.0395935594<br />forvavk: 0.1664<br />corr: -1","stdavk: 0.0412031142<br />forvavk: 0.1676<br />corr: -1","stdavk: 0.0428126689<br />forvavk: 0.1688<br />corr: -1","stdavk: 0.0444222236<br />forvavk: 0.1700<br />corr: -1","stdavk: 0.0460317783<br />forvavk: 0.1712<br />corr: -1","stdavk: 0.0476413331<br />forvavk: 0.1724<br />corr: -1","stdavk: 0.0492508878<br />forvavk: 0.1736<br />corr: -1","stdavk: 0.0508604425<br />forvavk: 0.1748<br />corr: -1","stdavk: 0.0524699972<br />forvavk: 0.1760<br />corr: -1","stdavk: 0.0540795520<br />forvavk: 0.1772<br />corr: -1","stdavk: 0.0556891067<br />forvavk: 0.1784<br />corr: -1","stdavk: 0.0572986614<br />forvavk: 0.1796<br />corr: -1","stdavk: 0.0589082162<br />forvavk: 0.1808<br />corr: -1","stdavk: 0.0605177709<br />forvavk: 0.1820<br />corr: -1","stdavk: 0.0621273256<br />forvavk: 0.1832<br />corr: -1","stdavk: 0.0637368803<br />forvavk: 0.1844<br />corr: -1","stdavk: 0.0653464351<br />forvavk: 0.1856<br />corr: -1","stdavk: 0.0669559898<br />forvavk: 0.1868<br />corr: -1","stdavk: 0.0685655445<br />forvavk: 0.1880<br />corr: -1","stdavk: 0.0701750992<br />forvavk: 0.1892<br />corr: -1","stdavk: 0.0717846540<br />forvavk: 0.1904<br />corr: -1","stdavk: 0.0733942087<br />forvavk: 0.1916<br />corr: -1","stdavk: 0.0750037634<br />forvavk: 0.1928<br />corr: -1","stdavk: 0.0766133182<br />forvavk: 0.1940<br />corr: -1","stdavk: 0.0782228729<br />forvavk: 0.1952<br />corr: -1","stdavk: 0.0798324276<br />forvavk: 0.1964<br />corr: -1","stdavk: 0.0814419823<br />forvavk: 0.1976<br />corr: -1","stdavk: 0.0830515371<br />forvavk: 0.1988<br />corr: -1","stdavk: 0.0846610918<br />forvavk: 0.2000<br />corr: -1","stdavk: 0.0862706465<br />forvavk: 0.2012<br />corr: -1","stdavk: 0.0878802012<br />forvavk: 0.2024<br />corr: -1","stdavk: 0.0894897560<br />forvavk: 0.2036<br />corr: -1","stdavk: 0.0910993107<br />forvavk: 0.2048<br />corr: -1","stdavk: 0.0927088654<br />forvavk: 0.2060<br />corr: -1","stdavk: 0.0943184202<br />forvavk: 0.2072<br />corr: -1","stdavk: 0.0959279749<br />forvavk: 0.2084<br />corr: -1","stdavk: 0.0975375296<br />forvavk: 0.2096<br />corr: -1","stdavk: 0.0991470843<br />forvavk: 0.2108<br />corr: -1","stdavk: 0.1007566391<br />forvavk: 0.2120<br />corr: -1","stdavk: 0.1023661938<br />forvavk: 0.2132<br />corr: -1","stdavk: 0.1039757485<br />forvavk: 0.2144<br />corr: -1","stdavk: 0.1055853032<br />forvavk: 0.2156<br />corr: -1","stdavk: 0.1071948580<br />forvavk: 0.2168<br />corr: -1","stdavk: 0.1088044127<br />forvavk: 0.2180<br />corr: -1","stdavk: 0.1104139674<br />forvavk: 0.2192<br />corr: -1","stdavk: 0.1120235222<br />forvavk: 0.2204<br />corr: -1","stdavk: 0.1136330769<br />forvavk: 0.2216<br />corr: -1","stdavk: 0.1152426316<br />forvavk: 0.2228<br />corr: -1","stdavk: 0.1168521863<br />forvavk: 0.2240<br />corr: -1","stdavk: 0.1184617411<br />forvavk: 0.2252<br />corr: -1","stdavk: 0.1200712958<br />forvavk: 0.2264<br />corr: -1","stdavk: 0.1216808505<br />forvavk: 0.2276<br />corr: -1","stdavk: 0.1232904052<br />forvavk: 0.2288<br />corr: -1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr: -1","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  0","stdavk: 0.0357168028<br />forvavk: 0.1112<br />corr:  0","stdavk: 0.0354225917<br />forvavk: 0.1124<br />corr:  0","stdavk: 0.0351739961<br />forvavk: 0.1136<br />corr:  0","stdavk: 0.0349719888<br />forvavk: 0.1148<br />corr:  0","stdavk: 0.0348173807<br />forvavk: 0.1160<br />corr:  0","stdavk: 0.0347108052<br />forvavk: 0.1172<br />corr:  0","stdavk: 0.0346527055<br />forvavk: 0.1184<br />corr:  0","stdavk: 0.0346433255<br />forvavk: 0.1196<br />corr:  0","stdavk: 0.0346827046<br />forvavk: 0.1208<br />corr:  0","stdavk: 0.0347706773<br />forvavk: 0.1220<br />corr:  0","stdavk: 0.0349068761<br />forvavk: 0.1232<br />corr:  0","stdavk: 0.0350907395<br />forvavk: 0.1244<br />corr:  0","stdavk: 0.0353215232<br />forvavk: 0.1256<br />corr:  0","stdavk: 0.0355983146<br />forvavk: 0.1268<br />corr:  0","stdavk: 0.0359200501<br />forvavk: 0.1280<br />corr:  0","stdavk: 0.0362855343<br />forvavk: 0.1292<br />corr:  0","stdavk: 0.0366934599<br />forvavk: 0.1304<br />corr:  0","stdavk: 0.0371424286<br />forvavk: 0.1316<br />corr:  0","stdavk: 0.0376309713<br />forvavk: 0.1328<br />corr:  0","stdavk: 0.0381575681<br />forvavk: 0.1340<br />corr:  0","stdavk: 0.0387206663<br />forvavk: 0.1352<br />corr:  0","stdavk: 0.0393186978<br />forvavk: 0.1364<br />corr:  0","stdavk: 0.0399500939<br />forvavk: 0.1376<br />corr:  0","stdavk: 0.0406132983<br />forvavk: 0.1388<br />corr:  0","stdavk: 0.0413067791<br />forvavk: 0.1400<br />corr:  0","stdavk: 0.0420290376<br />forvavk: 0.1412<br />corr:  0","stdavk: 0.0427786162<br />forvavk: 0.1424<br />corr:  0","stdavk: 0.0435541043<br />forvavk: 0.1436<br />corr:  0","stdavk: 0.0443541430<br />forvavk: 0.1448<br />corr:  0","stdavk: 0.0451774280<br />forvavk: 0.1460<br />corr:  0","stdavk: 0.0460227118<br />forvavk: 0.1472<br />corr:  0","stdavk: 0.0468888046<br />forvavk: 0.1484<br />corr:  0","stdavk: 0.0477745748<br />forvavk: 0.1496<br />corr:  0","stdavk: 0.0486789482<br />forvavk: 0.1508<br />corr:  0","stdavk: 0.0496009072<br />forvavk: 0.1520<br />corr:  0","stdavk: 0.0505394895<br />forvavk: 0.1532<br />corr:  0","stdavk: 0.0514937860<br />forvavk: 0.1544<br />corr:  0","stdavk: 0.0524629393<br />forvavk: 0.1556<br />corr:  0","stdavk: 0.0534461411<br />forvavk: 0.1568<br />corr:  0","stdavk: 0.0544426304<br />forvavk: 0.1580<br />corr:  0","stdavk: 0.0554516907<br />forvavk: 0.1592<br />corr:  0","stdavk: 0.0564726482<br />forvavk: 0.1604<br />corr:  0","stdavk: 0.0575048694<br />forvavk: 0.1616<br />corr:  0","stdavk: 0.0585477583<br />forvavk: 0.1628<br />corr:  0","stdavk: 0.0596007550<br />forvavk: 0.1640<br />corr:  0","stdavk: 0.0606633332<br />forvavk: 0.1652<br />corr:  0","stdavk: 0.0617349982<br />forvavk: 0.1664<br />corr:  0","stdavk: 0.0628152848<br />forvavk: 0.1676<br />corr:  0","stdavk: 0.0639037558<br />forvavk: 0.1688<br />corr:  0","stdavk: 0.0650000000<br />forvavk: 0.1700<br />corr:  0","stdavk: 0.0661036308<br />forvavk: 0.1712<br />corr:  0","stdavk: 0.0672142842<br />forvavk: 0.1724<br />corr:  0","stdavk: 0.0683316179<br />forvavk: 0.1736<br />corr:  0","stdavk: 0.0694553094<br />forvavk: 0.1748<br />corr:  0","stdavk: 0.0705850551<br />forvavk: 0.1760<br />corr:  0","stdavk: 0.0717205689<br />forvavk: 0.1772<br />corr:  0","stdavk: 0.0728615811<br />forvavk: 0.1784<br />corr:  0","stdavk: 0.0740078374<br />forvavk: 0.1796<br />corr:  0","stdavk: 0.0751590979<br />forvavk: 0.1808<br />corr:  0","stdavk: 0.0763151361<br />forvavk: 0.1820<br />corr:  0","stdavk: 0.0774757381<br />forvavk: 0.1832<br />corr:  0","stdavk: 0.0786407019<br />forvavk: 0.1844<br />corr:  0","stdavk: 0.0798098365<br />forvavk: 0.1856<br />corr:  0","stdavk: 0.0809829612<br />forvavk: 0.1868<br />corr:  0","stdavk: 0.0821599051<br />forvavk: 0.1880<br />corr:  0","stdavk: 0.0833405064<br />forvavk: 0.1892<br />corr:  0","stdavk: 0.0845246118<br />forvavk: 0.1904<br />corr:  0","stdavk: 0.0857120762<br />forvavk: 0.1916<br />corr:  0","stdavk: 0.0869027618<br />forvavk: 0.1928<br />corr:  0","stdavk: 0.0880965380<br />forvavk: 0.1940<br />corr:  0","stdavk: 0.0892932808<br />forvavk: 0.1952<br />corr:  0","stdavk: 0.0904928726<br />forvavk: 0.1964<br />corr:  0","stdavk: 0.0916952016<br />forvavk: 0.1976<br />corr:  0","stdavk: 0.0929001615<br />forvavk: 0.1988<br />corr:  0","stdavk: 0.0941076511<br />forvavk: 0.2000<br />corr:  0","stdavk: 0.0953175745<br />forvavk: 0.2012<br />corr:  0","stdavk: 0.0965298399<br />forvavk: 0.2024<br />corr:  0","stdavk: 0.0977443605<br />forvavk: 0.2036<br />corr:  0","stdavk: 0.0989610529<br />forvavk: 0.2048<br />corr:  0","stdavk: 0.1001798383<br />forvavk: 0.2060<br />corr:  0","stdavk: 0.1014006410<br />forvavk: 0.2072<br />corr:  0","stdavk: 0.1026233891<br />forvavk: 0.2084<br />corr:  0","stdavk: 0.1038480139<br />forvavk: 0.2096<br />corr:  0","stdavk: 0.1050744498<br />forvavk: 0.2108<br />corr:  0","stdavk: 0.1063026340<br />forvavk: 0.2120<br />corr:  0","stdavk: 0.1075325067<br />forvavk: 0.2132<br />corr:  0","stdavk: 0.1087640106<br />forvavk: 0.2144<br />corr:  0","stdavk: 0.1099970909<br />forvavk: 0.2156<br />corr:  0","stdavk: 0.1112316951<br />forvavk: 0.2168<br />corr:  0","stdavk: 0.1124677732<br />forvavk: 0.2180<br />corr:  0","stdavk: 0.1137052769<br />forvavk: 0.2192<br />corr:  0","stdavk: 0.1149441604<br />forvavk: 0.2204<br />corr:  0","stdavk: 0.1161843793<br />forvavk: 0.2216<br />corr:  0","stdavk: 0.1174258915<br />forvavk: 0.2228<br />corr:  0","stdavk: 0.1186686564<br />forvavk: 0.2240<br />corr:  0","stdavk: 0.1199126349<br />forvavk: 0.2252<br />corr:  0","stdavk: 0.1211577897<br />forvavk: 0.2264<br />corr:  0","stdavk: 0.1224040849<br />forvavk: 0.2276<br />corr:  0","stdavk: 0.1236514860<br />forvavk: 0.2288<br />corr:  0","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  0","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  1","stdavk: 0.0369439572<br />forvavk: 0.1112<br />corr:  1","stdavk: 0.0378324017<br />forvavk: 0.1124<br />corr:  1","stdavk: 0.0387208462<br />forvavk: 0.1136<br />corr:  1","stdavk: 0.0396092906<br />forvavk: 0.1148<br />corr:  1","stdavk: 0.0404977351<br />forvavk: 0.1160<br />corr:  1","stdavk: 0.0413861796<br />forvavk: 0.1172<br />corr:  1","stdavk: 0.0422746241<br />forvavk: 0.1184<br />corr:  1","stdavk: 0.0431630685<br />forvavk: 0.1196<br />corr:  1","stdavk: 0.0440515130<br />forvavk: 0.1208<br />corr:  1","stdavk: 0.0449399575<br />forvavk: 0.1220<br />corr:  1","stdavk: 0.0458284019<br />forvavk: 0.1232<br />corr:  1","stdavk: 0.0467168464<br />forvavk: 0.1244<br />corr:  1","stdavk: 0.0476052909<br />forvavk: 0.1256<br />corr:  1","stdavk: 0.0484937354<br />forvavk: 0.1268<br />corr:  1","stdavk: 0.0493821798<br />forvavk: 0.1280<br />corr:  1","stdavk: 0.0502706243<br />forvavk: 0.1292<br />corr:  1","stdavk: 0.0511590688<br />forvavk: 0.1304<br />corr:  1","stdavk: 0.0520475133<br />forvavk: 0.1316<br />corr:  1","stdavk: 0.0529359577<br />forvavk: 0.1328<br />corr:  1","stdavk: 0.0538244022<br />forvavk: 0.1340<br />corr:  1","stdavk: 0.0547128467<br />forvavk: 0.1352<br />corr:  1","stdavk: 0.0556012911<br />forvavk: 0.1364<br />corr:  1","stdavk: 0.0564897356<br />forvavk: 0.1376<br />corr:  1","stdavk: 0.0573781801<br />forvavk: 0.1388<br />corr:  1","stdavk: 0.0582666246<br />forvavk: 0.1400<br />corr:  1","stdavk: 0.0591550690<br />forvavk: 0.1412<br />corr:  1","stdavk: 0.0600435135<br />forvavk: 0.1424<br />corr:  1","stdavk: 0.0609319580<br />forvavk: 0.1436<br />corr:  1","stdavk: 0.0618204024<br />forvavk: 0.1448<br />corr:  1","stdavk: 0.0627088469<br />forvavk: 0.1460<br />corr:  1","stdavk: 0.0635972914<br />forvavk: 0.1472<br />corr:  1","stdavk: 0.0644857359<br />forvavk: 0.1484<br />corr:  1","stdavk: 0.0653741803<br />forvavk: 0.1496<br />corr:  1","stdavk: 0.0662626248<br />forvavk: 0.1508<br />corr:  1","stdavk: 0.0671510693<br />forvavk: 0.1520<br />corr:  1","stdavk: 0.0680395138<br />forvavk: 0.1532<br />corr:  1","stdavk: 0.0689279582<br />forvavk: 0.1544<br />corr:  1","stdavk: 0.0698164027<br />forvavk: 0.1556<br />corr:  1","stdavk: 0.0707048472<br />forvavk: 0.1568<br />corr:  1","stdavk: 0.0715932916<br />forvavk: 0.1580<br />corr:  1","stdavk: 0.0724817361<br />forvavk: 0.1592<br />corr:  1","stdavk: 0.0733701806<br />forvavk: 0.1604<br />corr:  1","stdavk: 0.0742586251<br />forvavk: 0.1616<br />corr:  1","stdavk: 0.0751470695<br />forvavk: 0.1628<br />corr:  1","stdavk: 0.0760355140<br />forvavk: 0.1640<br />corr:  1","stdavk: 0.0769239585<br />forvavk: 0.1652<br />corr:  1","stdavk: 0.0778124029<br />forvavk: 0.1664<br />corr:  1","stdavk: 0.0787008474<br />forvavk: 0.1676<br />corr:  1","stdavk: 0.0795892919<br />forvavk: 0.1688<br />corr:  1","stdavk: 0.0804777364<br />forvavk: 0.1700<br />corr:  1","stdavk: 0.0813661808<br />forvavk: 0.1712<br />corr:  1","stdavk: 0.0822546253<br />forvavk: 0.1724<br />corr:  1","stdavk: 0.0831430698<br />forvavk: 0.1736<br />corr:  1","stdavk: 0.0840315142<br />forvavk: 0.1748<br />corr:  1","stdavk: 0.0849199587<br />forvavk: 0.1760<br />corr:  1","stdavk: 0.0858084032<br />forvavk: 0.1772<br />corr:  1","stdavk: 0.0866968477<br />forvavk: 0.1784<br />corr:  1","stdavk: 0.0875852921<br />forvavk: 0.1796<br />corr:  1","stdavk: 0.0884737366<br />forvavk: 0.1808<br />corr:  1","stdavk: 0.0893621811<br />forvavk: 0.1820<br />corr:  1","stdavk: 0.0902506256<br />forvavk: 0.1832<br />corr:  1","stdavk: 0.0911390700<br />forvavk: 0.1844<br />corr:  1","stdavk: 0.0920275145<br />forvavk: 0.1856<br />corr:  1","stdavk: 0.0929159590<br />forvavk: 0.1868<br />corr:  1","stdavk: 0.0938044034<br />forvavk: 0.1880<br />corr:  1","stdavk: 0.0946928479<br />forvavk: 0.1892<br />corr:  1","stdavk: 0.0955812924<br />forvavk: 0.1904<br />corr:  1","stdavk: 0.0964697369<br />forvavk: 0.1916<br />corr:  1","stdavk: 0.0973581813<br />forvavk: 0.1928<br />corr:  1","stdavk: 0.0982466258<br />forvavk: 0.1940<br />corr:  1","stdavk: 0.0991350703<br />forvavk: 0.1952<br />corr:  1","stdavk: 0.1000235147<br />forvavk: 0.1964<br />corr:  1","stdavk: 0.1009119592<br />forvavk: 0.1976<br />corr:  1","stdavk: 0.1018004037<br />forvavk: 0.1988<br />corr:  1","stdavk: 0.1026888482<br />forvavk: 0.2000<br />corr:  1","stdavk: 0.1035772926<br />forvavk: 0.2012<br />corr:  1","stdavk: 0.1044657371<br />forvavk: 0.2024<br />corr:  1","stdavk: 0.1053541816<br />forvavk: 0.2036<br />corr:  1","stdavk: 0.1062426261<br />forvavk: 0.2048<br />corr:  1","stdavk: 0.1071310705<br />forvavk: 0.2060<br />corr:  1","stdavk: 0.1080195150<br />forvavk: 0.2072<br />corr:  1","stdavk: 0.1089079595<br />forvavk: 0.2084<br />corr:  1","stdavk: 0.1097964039<br />forvavk: 0.2096<br />corr:  1","stdavk: 0.1106848484<br />forvavk: 0.2108<br />corr:  1","stdavk: 0.1115732929<br />forvavk: 0.2120<br />corr:  1","stdavk: 0.1124617374<br />forvavk: 0.2132<br />corr:  1","stdavk: 0.1133501818<br />forvavk: 0.2144<br />corr:  1","stdavk: 0.1142386263<br />forvavk: 0.2156<br />corr:  1","stdavk: 0.1151270708<br />forvavk: 0.2168<br />corr:  1","stdavk: 0.1160155152<br />forvavk: 0.2180<br />corr:  1","stdavk: 0.1169039597<br />forvavk: 0.2192<br />corr:  1","stdavk: 0.1177924042<br />forvavk: 0.2204<br />corr:  1","stdavk: 0.1186808487<br />forvavk: 0.2216<br />corr:  1","stdavk: 0.1195692931<br />forvavk: 0.2228<br />corr:  1","stdavk: 0.1204577376<br />forvavk: 0.2240<br />corr:  1","stdavk: 0.1213461821<br />forvavk: 0.2252<br />corr:  1","stdavk: 0.1222346266<br />forvavk: 0.2264<br />corr:  1","stdavk: 0.1231230710<br />forvavk: 0.2276<br />corr:  1","stdavk: 0.1240115155<br />forvavk: 0.2288<br />corr:  1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":37.2602739726027,"l":48.9497716894977},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.00556742380494894,0.131112692528583],"tickmode":"array","ticktext":["0.00","0.04","0.08","0.12"],"tickvals":[0,0.04,0.08,0.12],"categoryorder":"array","categoryarray":["0.00","0.04","0.08","0.12"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.236],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15,0.2],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"16ebab65b7d6d5":{"x":{},"y":{},"group_by":{},"type":"scatter"}},"cur_data":"16ebab65b7d6d5","visdat":{"16ebab65b7d6d5":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+]
 
 ---
 
-## Kilder til usystematisk og relevant risiko
+### Inføring av risikofri rente
 
-Uttrykket for porteføljvariansen med N-objekter (**øvelse:** se om du klarer å finne ut av det på egenhånd) kan dekomponeres til å bestå av en komponent for *Systematisk* risiko og en annen komponent for *usystemtisk* risiko. 
+&lt;img src="pensum/figurer-16.png" width="55%" /&gt;
+---
+
+&lt;img src="pensum/figurer-17.png" width="55%" /&gt;
+---
+
+**Tofondsresultatet:**
+
+1. Uansett graden av risikoaversjon, aksjeporteføljen blir satt sammen på samme måte
+1. Den enkelte investors risikoaversjon..., ikke hvordan markedsporteføljen skal settes sammen
+
+---
+
+### Utledning av kapitalmarkedslinjen
 
 `\begin{equation}
-Var(r_p)=(\frac{1}{N})\overline{Var}+(1-\frac{1}{N})\overline{Kov}=\\ 
-\underset{\text{Systematisk risiko}}{\overline{Kov}} +
-(\frac{1}{N}) \underset{\text{Usystematisk riskiko}}{(\overline{Var}-\overline{Kov})} 
+E(r_p)=wr_f+(1-w)E(r_m)
 \end{equation}`
 
-Det første leddet er her et mål på porteføljens *systematiske* (ikke diversifiserbare) risiko, mens det siste leddet representerer den *usystematiske* risikoen. 
-
----
-
-- Usystematisk risiko
-  - Ledelsen kompetanse eller helse
-  - Forsinkelser, lokal streik, brann
-  - Overgang til ny teknolog innen en bransje
-
-- Systematisk risiko
-  - Konjunkturbevegelser
-  - Pandemi
-  - Krig eller fred 
-
----
-
-## Betaverdien til en aksje eller et prosjekt
-
-Relevant risiko til en enkelt aksje eller et prosjekt kan forstås som 
-forholdet mellom aksjens eller prosjektets risiko i forhold til markedsporteføljen. Dette relativet risikomålet betegner vi som *beta* ( `\(\beta\)` ):
-
 `\begin{equation}
-\beta_j=\frac{Kov(r_j,r_m)}{Var(r_m)}
+Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}`
 
-- `\(\beta_j&gt;1\)` - Mer følsom enn markedsporteføljen
-- `\(\beta_j=1\)` - Følsomhet lik markedsporteføljen 
-- `\(\beta_j&lt;1\)` - Mindre følsom enn markedsporteføljen
-- `\(\beta_j=0\)` - Risikofri aksje (null systematisk risiko, man kan innehold usystematisk risiko)
-
-Ved å utnytte sammenhengen om at `\(Kor(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}\)`, kan vi også uttrykke beta som 
-
 `\begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\frac{Std(r_p)}{Std(r_m)
+}=(1-w) 
 \end{equation}`
 
 ---
 
-&lt;img src="pensum/figurer-09.png" width="55%" /&gt;
+`\begin{equation}
+E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
+E(r_p)=r_f+(1-w)(E(r_m) - rf) 
+\end{equation}`
+
+`\begin{equation}
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
+\end{equation}`
+
+--- 
+
+Eks.3.1
+
+
 
 ---
 
-&lt;img src="pensum/figurer-10.png" width="55%" /&gt;
+class: inverse, center, middle
+
+# Forelesning 5: Kapitalverdimodellen 
+
+**Læringsmål:**
+
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
+- Beskrive kapitalverdimodellens sterke og svake sider.
+- Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+Oppdatert: 2021-09-02
+
+---
+
+## Kapitalverdimodellen
+
+
+&lt;img src="pensum/figurer-18.png" width="55%" /&gt;
+---
+
+### Kapitalkostnad for egenkapital og gjeld.
+
+`\begin{equation}
+E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
+\end{equation}`
+
+`\begin{equation}
+k_E=r_f+\beta_E[E(r_m) - rf] 
+\end{equation}`
+
+`\begin{equation}
+k_G=r_f+\beta_G[E(r_m) - rf] 
+\end{equation}`
+
+`\begin{equation}
+k_T= k_E\underset{=w_E}{\frac{E}{E+G}} + 
+k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
+\end{equation}`
+
+`\begin{equation}
+k_T= k_Ew_E + k_G(1-s)w_G
+\end{equation}`
+
+---
+
+### Kapitalkostnad for nye prosjekter
+
+&lt;img src="pensum/figurer-19.png" width="55%" /&gt;
+---
+
+&lt;img src="pensum/figurer-20.png" width="55%" /&gt;
+---
+
+### Risiko og kapitalkostnader
+
+---
+
+### Risiko og kapitalkostnader
+
+---
+
+## Informasjonseffisiens
+
+&lt;img src="pensum/figurer-21.png" width="55%" /&gt;
+
+- *Svak effisiens:*
+- *Havlsterk effisiens:*
+- *Sterk effisiens:*
+
+
+---
+
+&lt;img src="pensum/figurer-22.png" width="55%" /&gt;
+
+---
+
+## Oppsummering diskusjon I
+
+---
+
+&lt;img src="pensum/figurer-23.png" width="55%" /&gt;
+
+---
+
+&lt;img src="pensum/figurer-24.png" width="55%" /&gt;
+
+---
+
+## Oppsummering diskusjon II
+
+1. Følsomhetsanalsye
+1. Scenarioanalyse
+1. Simulering
+1. Beslutningstre
+
+---
+
+# Huskeliste:
+1. Datoer
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
