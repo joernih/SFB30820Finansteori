@@ -1009,6 +1009,7 @@ class: inverse, center, middle
 
 # Forelesning 4: `r tema[4]`
 
+
 **Læringsmål:**
 
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
@@ -1072,25 +1073,23 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```
 
 - Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
- - Til venstre for C, en andel av de oppsparte midlene de plaseres i banken 
- - Til høyre for C, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+ - Til venstre for C vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til høyre for C, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
 ---
 
-- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen M
- - Til venstre for M, en andel av de oppsparte midlene plaseres i banken 
- - Til høyre for M, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effisiente akjseporteføljen M
+ - Til venstre for M vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til høyre for M, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
-
-Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlåndsrenten
-
+Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
 
 **Tofondsresultatet:**
 
 1. Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte.
-1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikoable komponenten framfor den risikofrie. Ikke sammesetningen av den risikable komponenten.
+1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikable komponenten framfor den risikofrie. Ikke sammensetningen av den risikable komponenten.
 
-**Øvelse:** ... implisitt lagt til grunn
+**Øvelse:** Hvilken antagelse ligger implisitt til grunn under punkt 1 om investorenes forventninger?
 
 ---
 
@@ -1099,7 +1098,8 @@ Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er
 Forventet avkastning for porteføljen er gitt ved 
 
 \begin{equation}
-E(r_p)=wr_f+(1-w)E(r_m) \end{equation}
+E(r_p)=wr_f+(1-w)E(r_m) 
+\end{equation}
 
 Mens variansen fremkommer som
 
@@ -1156,14 +1156,13 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 
 - Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
   -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
-  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 \cdot 0.07+2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
   -  $Std(r_p)=\sqrt{.00004}  =0.06$
 - Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
   -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$
 
----
 
 class: inverse, center, middle
 
