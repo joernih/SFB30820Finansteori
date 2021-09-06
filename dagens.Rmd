@@ -235,8 +235,7 @@ Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er
 Forventet avkastning for porteføljen er gitt ved 
 
 \begin{equation}
-E(r_p)=wr_f+(1-w)E(r_m)
-\end{equation}
+E(r_p)=wr_f+(1-w)E(r_m) \end{equation}
 
 Mens variansen fremkommer som
 
@@ -290,13 +289,13 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 
 Eksempel 3.2
 - Vi har at investor A ønsker å plassere 80 prosent av formuen risikofritt
-  -  $E(X)$
-  -  $E(X)$
-  -  $E(X)$
+  -  $E(r_p)=0.8\cdot 0.04 0.2\cdot 0.07$ 
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.04 + 0.2^2 \cdot 0.07=0.00004$
+  -  $Std(r_p)=\sqrt(0.00004)=0.06$
 - Vi har at investor B ønsker at risikoen i porteføljen skal være på 8.5%
-  -  $E(X)$
-  -  $E(X)$
-  -  $E(X)$
+  -  $0.08=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.04 + 0.2^2 \cdot 0.07=0.00004$
+  -  $Std(r_p)=\sqrt(0.00004)=0.06$
 
 ---
 
