@@ -1019,65 +1019,149 @@ class: inverse, center, middle
 
 ## Effisiente porteføljer
 
-### init
+### Effisienslinjen uten risikofritt alternativ
 
-	```{r, echo=FALSE, out.width="55%", fig.cap=""}
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-15.png")
 ```
+
+**Øvelse:**: Ta utgangspunkt i forventning-standardavvik-kriteriet, og forklar hvorfor kurven B-C-D-E utgjør et *effisient sett* av porteføljer.
+
 ---
 
-### Inføring av risikofri rente
+.panelset[
+.panel[.panel-name[Tabell]
+```{r, echo=F}
+htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
+```
+]
+.panel[.panel-name[R-kode (ikke pensum)]
+```{r}
+inp_kor <- seq(-1,1,0.01)
+plotwf <- inp_kor %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w <- seq(0,1,0.01)
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method='ML')
+	avk <- as.vector(covall$center)
+	kov <- covall$cov[lower.tri(covall$cov)] 
+	var <- as.vector(diag(as.matrix(covall$cov)))
+	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
+```
+
+]
+.panel[.panel-name[Figur]
+```{r, echo=F}
+ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
+plotly::ggplotly(ggf)
+```
+]
+]
+
+---
+
+### Effisienslinjen med risikofritt alternativ
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-16.png")
 ```
+
+- Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
+ - Til venstre for C, en andel av de oppsparte midlene de plaseres i banken 
+ - Til høyre for C, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+
 ---
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-17.png")
-```
----
+- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen M
+ - Til venstre for M, en andel av de oppsparte midlene plaseres i banken 
+ - Til høyre for M, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+
+
+Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlåndsrenten
+
 
 **Tofondsresultatet:**
 
-1. Uansett graden av risikoaversjon, aksjeporteføljen blir satt sammen på samme måte
-1. Den enkelte investors risikoaversjon..., ikke hvordan markedsporteføljen skal settes sammen
+1. Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte.
+1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikoable komponenten framfor den risikofrie. Ikke sammesetningen av den risikable komponenten.
+
+**Øvelse:** ... implisitt lagt til grunn
 
 ---
 
-### Utledning av kapitalmarkedslinjen
+### Utledning av kapitalmarkedslinjen (n=2, kombinasjon av risikofri investering og markedsporteføljen M
+
+Forventet avkastning for porteføljen er gitt ved 
 
 \begin{equation}
-E(r_p)=wr_f+(1-w)E(r_m)
-\end{equation}
+E(r_p)=wr_f+(1-w)E(r_m) \end{equation}
+
+Mens variansen fremkommer som
 
 \begin{equation}
 Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
 
+Tar vi kvadratroten av denne på begge sider får vi
 
 \begin{equation}
 \frac{Std(r_p)}{Std(r_m)
 }=(1-w) 
 \end{equation}
 
+Porteføljeavkastningen kan dekomponeres til å bestå av
+
+$$
+E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) 
+$$
+
+$$
+E(r_p)=r_f+(1-w)(E(r_m) - r_f) 
+$$
 
 ---
 
+Kombinerer uttrykket for forventet avkastning og standardavvik ved å sett inn for $1-w$ gjør at vi kan skrive
 \begin{equation}
-E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
-E(r_p)=r_f+(1-w)(E(r_m) - rf) 
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - r_f) \Leftrightarrow
 \end{equation}
 
-\begin{equation}
-E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
-\end{equation}
+- Gitt at $0<w<1 \Rightarrow E(r_p) < E(r_m)$ 
+- Gitt at $w=1 \Rightarrow E(r_p) = E(r_m)$
+- Gitt at $w>1 \Rightarrow E(r_p) > E(r_m)$ 
 
---- 
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-17.png")
+```
 
-Eks.3.1
+---
 
+Fra eksempel 3.1-3.2 har vi følgende opplysninger
 
+```{r, echo=F}
+radnr <- c("Markedsporteføljen",
+	   "Portefølje I",
+	   "Portefølje I",
+	   "Risikofri rente")
+tils1 <- c(0.07,0.05,0.08,0.04)
+tils2 <- c(0.03,0.02,0.06,0.00)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+```
+
+- Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
+  -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 \cdot 0.07+2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
+  -  $Std(r_p)=\sqrt{.00004}  =0.06$
+- Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
+  -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
+  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
+  -  $Std(r_p)=\sqrt{.02}  =0.045$
 
 ---
 

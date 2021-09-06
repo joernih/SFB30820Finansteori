@@ -208,25 +208,23 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```
 
 - Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
- - Til venstre for C, en andel av de oppsparte midlene de plaseres i banken 
- - Til høyre for C, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+ - Til venstre for C vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til høyre for C, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
 ---
 
-- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen M
- - Til venstre for M, en andel av de oppsparte midlene plaseres i banken 
- - Til høyre for M, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effisiente akjseporteføljen M
+ - Til venstre for M vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til høyre for M, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
-
-Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlåndsrenten
-
+Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
 
 **Tofondsresultatet:**
 
 1. Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte.
-1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikoable komponenten framfor den risikofrie. Ikke sammesetningen av den risikable komponenten.
+1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikable komponenten framfor den risikofrie. Ikke sammensetningen av den risikable komponenten.
 
-**Øvelse:** ... implisitt lagt til grunn
+**Øvelse:** Hvilken antagelse ligger implisitt til grunn under punkt 1 om investorenes forventninger?
 
 ---
 
@@ -235,7 +233,8 @@ Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er
 Forventet avkastning for porteføljen er gitt ved 
 
 \begin{equation}
-E(r_p)=wr_f+(1-w)E(r_m) \end{equation}
+E(r_p)=wr_f+(1-w)E(r_m) 
+\end{equation}
 
 Mens variansen fremkommer som
 
@@ -243,7 +242,7 @@ Mens variansen fremkommer som
 Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
 
-Tar vi kvadratroten av denne på begge sider, får vi
+Tar vi kvadratroten av denne på begge sider får vi
 
 \begin{equation}
 \frac{Std(r_p)}{Std(r_m)
@@ -376,7 +375,7 @@ knitr::include_graphics("pensum/figurer-21.png")
 ```
 
 - *Svak effisiens:*
-- *Havlsterk effisiens:*
+- *Halvsterk effisiens:*
 - *Sterk effisiens:*
 
 
