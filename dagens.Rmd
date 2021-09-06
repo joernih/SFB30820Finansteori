@@ -362,3 +362,7 @@ knitr::include_graphics("pensum/figurer-24.png")
 1. Datoer
 1. Oljefondet strategi
 
+cor(gensh_df_2$BTC,gensh_df_2$ETH)
+
+
+De aller fleste eksamener arrangeres i eksamensperiodene – uke 48-51 i høst- og uke 18-24 i vårsemesteret. Alle høstens eksamensdatoer vil være publisert i Studentweb senest 15.september. Datoer for nye og utsatte eksamener på campus Halden høsten 2021 vil være klare i løpet av oktober. Datoer for nye og utsatte eksamener på campus Fredrikstad: sjekk med ditt studium.
