@@ -155,11 +155,14 @@ class: inverse, center, middle
 
 ## Effisiente porteføljer
 
-### Settet av mulige porteføljer
+### Effisienslinjen uten risikofritt alternativ
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-15.png")
 ```
+
+**Øvelse:**: Ta utgangspunkt i forventning-standardavvik-kriteriet, og forklar hvorfor kurven B-C-D-E utgjør et *effisient sett* av porteføljer.
+
 ---
 
 .panelset[
@@ -198,51 +201,102 @@ plotly::ggplotly(ggf)
 
 ---
 
-### Inføring av risikofri rente
+### Effisienslinjen med risikofritt alternativ
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-16.png")
 ```
+
+- Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
+ - Til venstre for C, en andel av de oppsparte midlene de plaseres i banken 
+ - Til høyre for C, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+
 ---
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-17.png")
-```
----
+- Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen M
+ - Til venstre for M, en andel av de oppsparte midlene plaseres i banken 
+ - Til høyre for M, ingen sparing og banklån benyttes til å finansiere kjøp i aksjeporteføljen
+
+
+Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlåndsrenten
+
 
 **Tofondsresultatet:**
 
-1. Uansett graden av risikoaversjon, aksjeporteføljen blir satt sammen på samme måte
-1. Den enkelte investors risikoaversjon..., ikke hvordan markedsporteføljen skal settes sammen
+1. Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte.
+1. Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikoable komponenten framfor den risikofrie. Ikke sammesetningen av den risikable komponenten.
+
+**Øvelse:** ... implisitt lagt til grunn
 
 ---
 
-### Utledning av kapitalmarkedslinjen
+### Utledning av kapitalmarkedslinjen (kombinasjon av risikofri investering og markedsporteføljen M
+
+Forventet avkastning for porteføljen er gitt ved 
 
 \begin{equation}
 E(r_p)=wr_f+(1-w)E(r_m)
 \end{equation}
 
+Mens variansen fremkommer som
+
 \begin{equation}
 Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
+
+Tar vi kvadratroten av denne på begge sider, får vi
 
 \begin{equation}
 \frac{Std(r_p)}{Std(r_m)
 }=(1-w) 
 \end{equation}
 
+Porteføljeavkastningen kan dekomponeres til å bestå av
+
 \begin{equation}
 E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) \\
-E(r_p)=r_f+(1-w)(E(r_m) - rf) 
+E(r_p)=r_f+(1-w)(E(r_m) - r_f) 
 \end{equation}
 
+---
+
+Kombinerer uttrykket for forventet avkastning og standardavvik ved å sett inn for $1-w$ gjør at vi kan skrive
 \begin{equation}
-E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - rf) 
+E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - r_f) \Leftrightarrow
 \end{equation}
 
-**Eks.3.1**
+- Gitt at $0<w<1 \Rightarrow E(r_p) < E(r_m)$ 
+- Gitt at $w=1 \Rightarrow E(r_p) = E(r_m)$
+- Gitt at $w>1 \Rightarrow E(r_p) > E(r_m)$ 
 
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-17.png")
+```
+
+---
+
+Fra eksempel 3.1 har vi følgende opplysninger
+
+```{r, echo=F}
+radnr <- c("Markedsporteføljen",
+	   "Portefølje I",
+	   "Portefølje I",
+	   "Risikofri rente")
+tils1 <- c(0.07,0.05,0.08,0.04)
+tils2 <- c(0.03,0.02,0.06,0.00)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+```
+
+Eksempel 3.2
+- Vi har at investor A ønsker å plassere 80 prosent av formuen risikofritt
+  -  $E(X)$
+  -  $E(X)$
+  -  $E(X)$
+- Vi har at investor B ønsker at risikoen i porteføljen skal være på 8.5%
+  -  $E(X)$
+  -  $E(X)$
+  -  $E(X)$
 
 ---
 
