@@ -165,54 +165,6 @@ knitr::include_graphics("pensum/figurer-15.png")
 
 ---
 
-.panelset[
-.panel[.panel-name[Tabell]
-```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
-```
-]
-.panel[.panel-name[R-kode (ikke pensum)]
-```{r}
-porttrekk <- 1:1000 
-plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
-        # Trekker investeringsandelene
-	n <- 3
-	x <- runif(3, 0, 1)
-	w <- x/sum(x)
-	#w <- c(0.3,0.4,0.3)
-	# Finner kovariansmatrisen
-	erp <- c(0.12,0.15,0.25)
-	std <- c(0.10,0.20,0.40)
-	korr <- c(0.8,0.5,-0.10)
-	kor_matq <- matrix(c(std[1],korr[1],korr[2],korr[1],std[2],korr[3],korr[2],korr[3],std[3]),nrow=3)
-	kovv <- c(0,0,0)
-	kovv[1]<- korr[1]*std[1]*std[2]  
-	kovv[2]<- korr[2]*std[1]*std[3]
-	kovv[3]<- korr[3]*std[2]*std[3]
-	cov_mat <- matrix(c(std[1]^2,kovv[1],kovv[2],kovv[1],std[2]^2,kovv[3],kovv[2],kovv[3],std[3]^2),nrow=3)
-	# Forventet avkastning	
-	port_returns <- (sum(w *df_eks_2_6$erp))
-        # Varians	
-	port_risk_v <- t(w) %*% (cov_mat %*% w)
-	port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
-	avkdf <- data.frame(pdraw=pd,w1=1-w[1], w2=w[2], w3=w[3],wc=sum(w)) %>%
- 	dplyr::mutate(forvavk=port_returns) %>%
- 	dplyr::mutate(varians=port_risk_v) %>%
-	 dplyr::mutate(stdavk=port_risk_s)
-})
-```
-
-]
-.panel[.panel-name[Figur]
-```{r, echo=F}
-ggf <- ggplot2::ggplot(data=plotwfd,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-plotly::ggplotly(ggf)
-```
-]
-]
-
----
-
 ### Effisienslinjen med risikofritt alternativ
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
@@ -304,7 +256,7 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 - Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
   -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
   -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
-  -  $Std(r_p)=\sqrt{.00004}  =0.06$
+  -  $Std(r_p)=\sqrt{0.00004}  =0.006$
 - Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
   -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
