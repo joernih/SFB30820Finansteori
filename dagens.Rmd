@@ -165,6 +165,8 @@ knitr::include_graphics("pensum/figurer-15.png")
 
 ---
 
+---
+
 ### Effisienslinjen med risikofritt alternativ
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
