@@ -34,110 +34,38 @@ library(plotly)
 
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
-servr::daemon_stop()
-```
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-source("timeplan.R")
-```
-
-## Timeplan
-
-```{r echo=F}
-timep_i
-```
-
----
-
-```{r echo=F}
-timep_ii
-```
-
-## Timeplan
-
-```{r echo=F}
-timep_i
-```
-
----
-
-```{r echo=F}
-timep_ii
 ```
 
 ---
 
 
-# Anbefalte oppgaver
-
-```{r, echo=F}
-oppgaveplan
+```{r include=FALSE}
+library("magrittr")  
+toc <- readLines("dagens.Rmd")
+tocc <- character()
+ 
+for (i in 1:length(toc)) {
+  if(substr(toc[i][1], 1, 2) == "# ") {
+    toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
+                 gsub("#", "", ., fixed = TRUE) %>%
+                 paste0("     ", .)
+     tocc <- append(tocc, toc[i])
+   }
+}
+ 
+text <- paste(tocc[-1], "\n")[c(-1)]
+yy <- seq(.9, 0, length = length(text))
+```
+ 
+ # Outline Testing
+ 
+```{r echo=FALSE}
+plot(x = rep(0.2, length(text)), y = yy * 1.035, 
+     xlim = c(0, 1), ylim = c(-0.1, 1), xlab = "", ylab = "", axes = FALSE, 
+     col = "#056EA7", type = "p", pch = 16)
+text(x = 0.2, y = yy, labels = text, adj = 0, col = "black")
 ```
 
----
-
-# Pensumliste
-
-.pull-left[
-
-## Hovedbok
-
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-01.png")
-```
-
-[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
-
-]
-
-.pull-right[
-
-## Supplerende
-```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("pensum/falitt.jpg")
-```
-
-[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
-
-]
-
----
-
-
-# Anbefalte oppgaver
-
-```{r, echo=F}
-oppgaveplan
-```
-
----
-
-# Pensumliste
-
-.pull-left[
-
-## Hovedbok
-
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-01.png")
-```
-
-[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
-
-]
-
-.pull-right[
-
-## Supplerende
-```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("pensum/falitt.jpg")
-```
-
-[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
-
-]
 
 ---
 
@@ -158,6 +86,26 @@ class: inverse, center, middle
 
 ## Kapitalverdimodellen
 
+Porteføljemodellen som vi har studert til nå bygger på eksplisitte forutsetninger om
+- A
+- B
+- C
+
+Legger vi i tillegg til forutsetning
+- Kapitalmarkedet er i likevekt
+
+---
+
+Eksempel xx.xx
+
+
+
+---
+
+### Grafisk framstilling av kapitalverdimodellen
+
+
+
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-18.png")
@@ -165,6 +113,7 @@ knitr::include_graphics("pensum/figurer-18.png")
 ---
 
 ### Kapitalkostnad for egenkapital og gjeld.
+
 
 \begin{equation}
 E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
@@ -189,23 +138,33 @@ k_T= k_Ew_E + k_G(1-s)w_G
 
 ---
 
-### Kapitalkostnad for nye prosjekter
+### Empiri
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-19.png")
 ```
+
 ---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-20.png")
 ```
----
-
-### Risiko og kapitalkostnader
 
 ---
 
-### Risiko og kapitalkostnader
+## Kapitalkostnad for nye prosjekter
+
+---
+
+
+## Diversifisering bedrift vs. eier
+
+Kongomerat
+
+Nåverdi 
+
+teller vs. nevner
+
 
 ---
 
@@ -228,7 +187,13 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ---
 
-## Oppsummering diskusjon I
+
+## Svake og sterk sider
+
+1. Følsomhetsanalsye
+1. Scenarioanalyse
+1. Simulering
+1. Beslutningstre
 
 ---
 
@@ -238,26 +203,11 @@ knitr::include_graphics("pensum/figurer-23.png")
 
 ---
 
+## Alternativer
+
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-24.png")
 ```
 
 ---
 
-## Oppsummering diskusjon II
-
-1. Følsomhetsanalsye
-1. Scenarioanalyse
-1. Simulering
-1. Beslutningstre
-
----
-
-# Huskeliste:
-1. Datoer
-1. Oljefondet strategi
-
-cor(gensh_df_2$BTC,gensh_df_2$ETH)
-
-
-De aller fleste eksamener arrangeres i eksamensperiodene – uke 48-51 i høst- og uke 18-24 i vårsemesteret. Alle høstens eksamensdatoer vil være publisert i Studentweb senest 15.september. Datoer for nye og utsatte eksamener på campus Halden høsten 2021 vil være klare i løpet av oktober. Datoer for nye og utsatte eksamener på campus Fredrikstad: sjekk med ditt studium.
