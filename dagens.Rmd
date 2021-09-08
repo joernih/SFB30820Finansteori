@@ -44,7 +44,7 @@ library("magrittr")
 toc <- readLines("dagens.Rmd")
 tocc <- character()
  
-for (i in 1:length(toc)) {
+for (i in 1:3) {
   if(substr(toc[i][1], 1, 2) == "# ") {
     toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
                  gsub("#", "", ., fixed = TRUE) %>%
@@ -190,11 +190,6 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ## Svake og sterk sider
 
-1. Følsomhetsanalsye
-1. Scenarioanalyse
-1. Simulering
-1. Beslutningstre
-
 ---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
@@ -204,6 +199,11 @@ knitr::include_graphics("pensum/figurer-23.png")
 ---
 
 ## Alternativer
+
+1. Følsomhetsanalsye
+1. Scenarioanalyse
+1. Simulering
+1. Beslutningstre
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-24.png")
