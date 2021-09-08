@@ -140,18 +140,42 @@ df_prosj_kontantstrøm <- data.frame(radnr_i,tils1,radnr_ii,tils2)
 htmlTable(df_prosj_kontantstrøm, header=c("","","",""))
 ```
 
-Case 2 gir oss den *Markedsporteføljen* (verdiveide)
+
+Case 2 gir oss den *markedsporteføljen* (dvs. verdiveide)
 
 ---
 
 ### Risiko og kapitalkostnad i likevekt
 
+
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-18.png")
 ```
+
+#### Enkeltaksjer
+
 \begin{equation}
 E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
 \end{equation}
+
+---
+
+### Empiri - markedsporteføljen (verdiveide)
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-19.png")
+```
+
+Som gir oss i real makrosørrelsene (realisert)
+
+- Markedets risikofri realrente: $0.032$
+- Markedets risikopremie: $0.064$
+
+---
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-20.png")
+```
 
 ---
 
@@ -183,27 +207,9 @@ k_T= k_Ew_E + k_G(1-s)w_G
 
 Fra **eksempel 3.3l** i læreboka 
 
----
 
-### Empiri
 
-#### Markedsporteføljen (verdiveide)
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-19.png")
-```
-
----
-
-#### Enkeltaksjer
-
----
-
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-20.png")
-```
-
----
 
 ## Kapitalkostnad for nye prosjekter
 
@@ -230,7 +236,7 @@ knitr::include_graphics("pensum/figurer-21.png")
 - *Svak effisiens:*
 - *Halvsterk effisiens:*
 - *Sterk effisiens:*
-
+- i1+i2
 
 ---
 
@@ -241,7 +247,7 @@ knitr::include_graphics("pensum/figurer-22.png")
 ---
 
 
-## Svake og sterk sider
+## Svake og sterk sider ved KVM
 
 ---
 
