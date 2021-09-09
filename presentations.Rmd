@@ -260,8 +260,8 @@ tils1 <- c(1350,500,200,50,300,550,440,160,0.42)
 tils2 <- c(900,500,200,50,300,100,80,70,0.28)
 tils3 <- c(1350,400,200,50,300,650,520,180,0.18)
 tils4 <- c(900,400,200,50,300,200,160,90,0.12)
-df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2,tils3,tils4,tils5)
-?htmlTable(df_prosj_kontantstrøm, header=c("Tilstand:","1","2","3","4"))
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2,tils3,tils4)
+htmlTable(df_prosj_kontantstrøm, header=c("Tilstand:","1","2","3","4"))
 ```
 
 
@@ -1307,6 +1307,38 @@ class: inverse, center, middle
 
 ---
 
+## Kapitalmarkedet
+
+
+### Omsetning av gjeld
+
+### Omsetning av egenkapital
+
+---
+
+## Gjeld
+
+### Ordinære lån
+
+### Obligasjonslån
+
+### Terminstruktur
+
+### Konvertible obligasjoner
+
+---
+
+## Egenkapital
+
+### Tegningsrettigheter
+
+### Tilbakekjøp av egne aksjer
+
+### Aksjesplitt og fondsemisjon
+
+
+---
+
 class: inverse, center, middle
 
 # Forelesning 7: `r tema[7]`
@@ -1321,6 +1353,8 @@ class: inverse, center, middle
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
 
 `r paste("Oppdatert:",Sys.Date())`
+
+---
 
 ---
 
