@@ -29,9 +29,6 @@ xaringanExtra::use_panelset()
 library(htmlTable)
 library(magrittr)
 library(xaringan)
-library(plotly)
-```
-
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
 ```

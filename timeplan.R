@@ -94,7 +94,7 @@ df1 <- data.frame(
 		  undervform,
 		  Timer=timer
 )
-timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer") 
+timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer")
 
 timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
