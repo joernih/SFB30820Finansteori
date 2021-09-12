@@ -273,11 +273,19 @@ $$
 ```
 ---
 
-## Kapitalkostnad for nye prosjekter
+## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
+
+Som vi omtalte i forelesning 3: `r tema[3]`
+
+\begin{equation}
+\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\end{equation}
 
 Beslutningsfeil
 
 Det vi skal fram til
+
+Tomra
 
 ---
 
