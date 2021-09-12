@@ -29,6 +29,7 @@ xaringanExtra::use_panelset()
 library(htmlTable)
 library(magrittr)
 library(xaringan)
+
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
 ```
@@ -234,7 +235,6 @@ Totalt sett har Tomra 148 020 078 akjser utestående (pålydende 1,- per aksje) 
 
 Fra årsapporten har vi videre at:
 
-
 ```{r, echo=F}
 radnr_i <- c("Innskutt egenkapital",
 	   "Opptjent egenkapital",
@@ -275,29 +275,42 @@ $$
 
 ## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
 
-Som vi omtalte i forelesning 3: `r tema[3]`
-
+Som ble omtalt under forelesning 3 (`r tema[3]`), ville denne relevante risikoen (systematiske risikoen) kunne knyttes både opp til en enkelt aksje eller et prosjekt, hvor risikoen ble beregnet ved bruk av
 \begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
-Beslutningsfeil
+Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), mens vi sa under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden fordi den skulle inngå som en komponent i justertnåverdiuttrykket.
 
-Det vi skal fram til
+Skal nåverdibeslutning bli korrekt er det det siste vi trenger å beregne for å kunne fatte riktig beslutnign om justern nåverdi.
 
-Tomra
+Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil Være
+1. Lav $\beta$ ikke blir realiset
+1. Høy $\beta$ blir realisert3
 
 ---
 
+**Eksempel på korrekt nåverdiberegning risikojusert rente0**
+
+Tilknyttet Tomra-eksemplet som vi har sett på tidligere er det opplyst at selskapet vurderer oppkjøp av en bokseprodusent i Tyskland. 
+Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av verdikjene for gjennvinning av drikkeembalasje. Dette prosjektets totalkapitalkostnad er beregnet til å være 3.4 prosent. Investeringsbeløpet er 1.3 mrd. kroner og forventes i 10 år framover å gi en årlig total kapitalstrøm etter skatt på 160 milll. Nåverdien vil hær være gitt ved
+
+\begin{equation*}
+NV = - 1300 + \frac{160}{(1+034)} + \frac{160}{(1+034)^2} + ... + \frac{160}{(1+034)^10} = 37
+\end{equation*}
+
+---
 
 ## Diversifisering bedrift vs. eier
 
-Kongomerat
+1. Porteføljeteorien investorene spre sine investeringer over flest mulig selskaper (kvitter seg med usystematisk risiko)
+1. Diversifisert konglemorat også fornuftig når det gjelder selskapet? 
+	- Dersom det kun påvirker nevneren, nei
+	- Dersom det kun påvirker nevneren i justert nåverdi, ja
 
-Nåverdi 
+**Øvelse**
 
-teller vs. nevner
-
+Finn eksempler på teller og nevner
 
 ---
 
