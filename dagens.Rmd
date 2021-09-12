@@ -336,6 +336,8 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ## Svake og sterk sider ved KVM
 
+
+
 ---
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
