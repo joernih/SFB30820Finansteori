@@ -154,24 +154,32 @@ htmlTable(df_prosj_kontantstrom_ver, header=c("","w_1=1/6","w_2=3/6","w_3=2/6"))
 	- Forenlig med likevekt
 Situasjon 2 gir oss *markedsporteføljen (M)* (dvs. den verdiveide)
 
+
+
 ---
 
 ### Risiko og kapitalkostnad i likevekt
 
-
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-18.png")
-```
-
-#### Enkeltaksjer
+Samlet sett gir .. + .. prising av aksjer i likevekt (forholdet mellom risiko og forventet avkastning). 
+Prising av enkeltakjser (formelt) er gitt ved.
 
 \begin{equation}
 E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
 \end{equation}
 
+Grafisk lar seg illustrere ved den grønne *verdipapirmarkedslinjen)*
+
+```{r, echo=FALSE, out.width="45%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-18.png")
+```
+
+KVM forteller oss hva en investor kan regne med av forventet avkastning i aksjemarkedet dersom vedkommende bære en bestemt mengde systematisk risiko
+
 ---
 
-### Empiri - markedsporteføljen (verdiveide)
+### Litt empiri 
+
+**Markedsporteføljen (verdiveide)**
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-19.png")
@@ -184,11 +192,15 @@ Som gir oss i real makrosørrelsene (realisert)
 
 ---
 
+**enkeltaksjer**
+
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-20.png")
 ```
 
 ---
+
+### Kapitalkostnad for egenkapital og gjeld
 
 - Kapitalkostnad for egenkapital 
 
