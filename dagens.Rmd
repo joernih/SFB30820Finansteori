@@ -192,7 +192,7 @@ Som gir oss i real makrosørrelsene (realisert)
 
 ---
 
-**enkeltaksjer**
+**Enkeltaksjer**
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-20.png")
@@ -228,13 +228,56 @@ k_T= k_Ew_E + k_G(1-s)w_G
 
 ---
 
-Fra **eksempel 3.3l** i læreboka 
+Fra **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at $\beta_E=0.83$, mens gjeldsbetaen er beregnet slik at $\beta_G=0.1$. Den nominelle risikofrie renten er på $3$ prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
+
+Totalt sett har Tomra 148 020 078 akjser utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markesverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill.
+
+Fra årsapporten har vi videre at:
 
 
+```{r, echo=F}
+radnr_i <- c("Innskutt egenkapital",
+	   "Opptjent egenkapital",
+	   "Minoritetsinteresser",
+	   "Gjeld",
+	   "Totalt")
+w1 <- c(1066,2879,160,3212,7317)
+df_aarsrapport <- data.frame(radnr_i,w1)
+htmlTable(df_aarsrapport, header=c("",""))
+```
 
 ---
 
+1. Beregne vektene (markedsverdi) for egenkapital og gjeld
+\begin{equation*}
+w_E=\frac{E}{E+G}=\frac{12654}{12654+3212}=0.80 \\ 
+w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
+\end{equation*}
+1. Kapitalkostnad for egenkapital
+$$
+k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
+$$
+1. Kapitalkostnad for gjeld
+$$
+k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
+$$
+1. Totalkapitalkostnad for selskapet
+$$
+k_T= k_Ew_E + k_G(1-s)w_G = 0.0715\cdot0.8 + 0.035\cdot(1-0.05)0.2 = 0.063
+$$
+
+```{r, eval=F, echo=F}
+0.03+0.83*(0.08 - 0.03)
+0.03+0.1*(0.05) 
+0.0715*0.8 + 0.035*(1-0.05)*0.2
+```
+---
+
 ## Kapitalkostnad for nye prosjekter
+
+Beslutningsfeil
+
+Det vi skal fram til
 
 ---
 

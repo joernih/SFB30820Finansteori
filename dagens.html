@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xcf94b7d6dbb485f9d9b1801b8c3fb99","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7f28748a7ad4b708a5d6191e095b6d2","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -268,7 +268,7 @@ Som gir oss i real makrosørrelsene (realisert)
 
 ---
 
-**enkeltaksjer**
+**Enkeltaksjer**
 
 &lt;img src="pensum/figurer-20.png" width="55%" /&gt;
 
@@ -302,13 +302,77 @@ k_T= k_Ew_E + k_G(1-s)w_G
 
 ---
 
-Fra **eksempel 3.3l** i læreboka 
+Fra **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at `\(\beta_E=0.83\)`, mens gjeldsbetaen er beregnet slik at `\(\beta_G=0.1\)`. Den nominelle risikofrie renten er på `\(3\)` prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
 
+Totalt sett har Tomra 148 020 078 akjser utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markesverdi på egenkapital lik `\(=148020078\cdot 85.50=\)` 12 654 mill.
+
+Fra årsapporten har vi videre at:
+
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Innskutt egenkapital&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1066&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opptjent egenkapital&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2879&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Minoritetsinteresser&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeld&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3212&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Totalt&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7317&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+1. Beregne vektene (markedsverdi) for egenkapital og gjeld
+`\begin{equation*}
+w_E=\frac{E}{E+G}=\frac{12654}{12654+3212}=0.80 \\ 
+w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
+\end{equation*}`
+1. Kapitalkostnad for egenkapital
+$$
+k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
+$$
+1. Kapitalkostnad for gjeld
+$$
+k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
+$$
+1. Totalkapitalkostnad for selskapet
+$$
+k_T= k_Ew_E + k_G(1-s)w_G = 0.0715\cdot0.8 + 0.035\cdot(1-0.05)0.2 = 0.063
+$$
 
 
 ---
 
 ## Kapitalkostnad for nye prosjekter
+
+Beslutningsfeil
+
+Det vi skal fram til
 
 ---
 
