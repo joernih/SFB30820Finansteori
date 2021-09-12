@@ -211,7 +211,6 @@ k_E=r_f+\beta_E[E(r_m) - rf]
 
 - Kapitalkostnad for gjeld
 
-
 \begin{equation}
 k_G=r_f+\beta_G[E(r_m) - rf] 
 \end{equation}
@@ -337,6 +336,12 @@ knitr::include_graphics("pensum/figurer-22.png")
 ## Svake og sterk sider ved KVM
 
 
++ Teoretisk fundament (Porteføljeteorien + antagelse om markedslikevekt)
++ Skille mellom systematisk og ikke systematisk risiko 
++
+
+- Forenklet antagelse om informasjonseffisiens (spetalen) 
+- markedsporteføljen = aksjemarkedet?
 
 ---
 
