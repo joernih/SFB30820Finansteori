@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9ce75c8fc29444687f1172c2a50ddbc","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ff08a31953704bf980ae17a49951d245","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,10 +42,9 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-08)
+### 2021/08/12 (updated: 2021-09-12)
 
 ---
-
 
 
 
@@ -74,13 +73,13 @@ class: inverse, center, middle
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
-Oppdatert: 2021-09-08
+Oppdatert: 2021-09-12
 
 ---
 
 ## Kapitalverdimodellen (KVM)
 
-Porteføljeteorien som vi har studert til nå bygger på eksplisitte forutsetninger om
+Porteføljeteorien som vi har analysert til nå bygger på eksplisitte forutsetninger om:
 
 - Investorene
  - Risikoaversjon (forventning-varians/standardavvik-kriteriet)
@@ -90,20 +89,20 @@ Porteføljeteorien som vi har studert til nå bygger på eksplisitte forutsetnin
  - Informasjonen er fritt tilgjengelig for alle
  - Tilbudet av alle eiendeler er gitt
 
-Kapitalverdimodellen (KVM) er basert på porteføljeteorien, men inneholder i tillegg forutsetningen om at 
+*Kapitalverdimodellen* (KVM) er basert på porteføljeteorien, men inneholder i tillegg forutsetningen om at: 
 - Kapitalmarkedet er i likevekt
 
 ---
 
-Fra **eksempel 3.3l** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Verdien på selskapene og etterspørselen i aksjemarkedet er gitt ved
+Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Investor A ønsker å plassere 3000,- mens B plasserer 9000,-. Verdien på de tre selskapene er gitt ved 
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Markedsplassen&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Verdi EK&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -124,7 +123,7 @@ Fra **eksempel 3.3l** i læreboka har vi at markedet består tre selskaper(1,2 o
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;12000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9000&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Selskap 3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
 &lt;/tr&gt;
@@ -138,56 +137,102 @@ Fra **eksempel 3.3l** i læreboka har vi at markedet består tre selskaper(1,2 o
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-- Case 1: Investorene setter like stort beløp hvert selskap
-	- `\(w=(12000/3,12000/3,12000/3)=(1/3,1/3,1/3)\)`
-- Case 2: Investorene setter det *verdiverte* beløp i hvert selskap
-	- `\(w=(12000/12000,12000/3,12000/3)=(1/3,1/3,1/3)\)`
+---
 
-Det gir oss
+Med hensyn til fordelingen av investeringsbeløpene kan vi se for oss to forskjellige situasjoner
+
+- Situasjon 1 (likeveid): Investorene setter like stort beløp hvert selskap
+	- `\(w=(4000/12000,4000/12000,4000/12000)=(1/3,1/3,1/3)\)`
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_1=1/6&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_2=1/6&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_3=1/6&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Etterspørsel A&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;2&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Etterspørsel B&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;6000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;12000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tilbud&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;2000&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6000&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;4000&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+	- Ikke forenlig med likevekt
 
+---
 
-Case 2 gir oss den *markedsporteføljen* (dvs. verdiveide)
+- Situasjon 2 (verdiveid): Investorene setter det *verdiveide* beløp i hvert selskap
+	- `\(w=(2000/12000,6000/12000,4000/12000)=(1/6,3/6,2/6)\)`
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_1=1/6&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_2=3/6&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_3=2/6&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Etterspørsel A&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Etterspørsel B&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tilbud&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;2000&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6000&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;4000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+	- Forenlig med likevekt
+Situasjon 2 gir oss *markedsporteføljen (M)* (dvs. den verdiveide)
 
 ---
 
@@ -249,7 +294,7 @@ Fra **eksempel 3.3l** i læreboka
 
 
 
-
+---
 
 ## Kapitalkostnad for nye prosjekter
 
