@@ -345,12 +345,6 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ---
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-23.png")
-```
-
----
-
 ## Alternativer
 
 1. Følsomhetsanalsye
@@ -359,8 +353,15 @@ knitr::include_graphics("pensum/figurer-23.png")
 1. Beslutningstre
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-23.png")
+```
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-24.png")
 ```
 
----
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-25.png")
+```
+
 
