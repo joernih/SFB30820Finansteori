@@ -29,39 +29,10 @@ xaringanExtra::use_panelset()
 library(htmlTable)
 library(magrittr)
 library(xaringan)
+```
 
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
-```
-
----
-
-
-```{r include=FALSE}
-#library("magrittr")  
-#toc <- readLines("dagens.Rmd")
-#tocc <- character()
-# 
-#for (i in 1:3) {
-#  if(substr(toc[i][1], 1, 2) == "# ") {
-#    toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
-#                 gsub("#", "", ., fixed = TRUE) %>%
-#                 paste0("     ", .)
-#     tocc <- append(tocc, toc[i])
-#   }
-#}
-# 
-#text <- paste(tocc[-1], "\n")[c(-1)]
-#yy <- seq(.9, 0, length = length(text))
-```
- 
- # Outline Testing
- 
-```{r echo=FALSE}
-#plot(x = rep(0.2, length(text)), y = yy * 1.035, 
-#     xlim = c(0, 1), ylim = c(-0.1, 1), xlab = "", ylab = "", axes = FALSE, 
-#     col = "#056EA7", type = "p", pch = 16)
-#text(x = 0.2, y = yy, labels = text, adj = 0, col = "black")
 ```
 
 
@@ -305,7 +276,7 @@ Skal nåverdi beslutning bli korrekt er det det siste vi trenger å beregne for 
 
 Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil Være
 1. Ved for lav $\beta$, gjennomgående for *få* investeringsprosjekter vil bli satt i gang
-1. Ved for høy$\beta$, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
+1. Ved for høy $\beta$, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
 
 ---
 
@@ -326,6 +297,10 @@ NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}
 1. Diversifisert konglomerat også fornuftig når det gjelder selskapet? 
 	- Dersom det kun påvirker nevneren, nei
 	- Dersom det kun påvirker nevneren i justert nåverdi, ja
+	
+	
+Markedsmakt vs. Kontantstrøm
+
 
 **Øvelse**
 
@@ -333,18 +308,29 @@ Finn eksempler på teller og nevner
 
 ---
 
+
+
 ## Informasjonseffisiens
+
+Informasjonseffisiens er en *Markedsegenskap*
+
+---
+
+### Effisienstyper
+
+- *Svak effisiens:*
+- *Halvsterk effisiens:*
+- *Sterk effisiens:*
+
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-21.png")
 ```
 
-- *Svak effisiens:*
-- *Halvsterk effisiens:*
-- *Sterk effisiens:*
-- i1+i2
-
 ---
+
+### Effisiensmekanismen
+
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-22.png")
@@ -352,41 +338,87 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ---
 
-
 ## Svake og sterk sider ved KVM
-
 
 + Teoretisk fundament (Porteføljeteorien + antagelse om markedslikevekt)
 + Skille mellom systematisk og ikke systematisk risiko 
-+
++ Evne til å forklare de observerbare prisene på usikre kontantstrømmer
 
 - Forenklet antagelse om informasjonsoffiserens (spetalen) 
-- markedsporteføljen = aksjemarkedet?
+- Antar at markedsporteføljen er lik aksjemarkedet
+- Modellen er en-periodisk
 
 ---
 
-## Alternativer
+## Alternativer til kVM
 
-1. Følsomhetsanalyse
-1. Scenarioanalyse
-1. Simulering
-1. Beslutningstre
+- Motsatt av de sterke sidene til KVM
 
 ---
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-23.png")
-```
+### Følsomhetsanalyse
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-24.png")
 ```
 
+Fordeler:
+
++ 
++ 
++ 
+
+
+---
+
+### Scenarioanalyse
+
+```{r, echo=F}
+radnr_i <- c("1", "2")
+w1 <- c(1,2)
+df_scenario <- data.frame(radnr_i,w1)
+htmlTable(df_scenario, header=c("Scenario","Faktorverdier (endring fra basis)"))
+```
+
+Fordeler:
+
++ 
++ 
++ 
+
+---
+
+### Simulering
+
+
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-25.png")
 ```
 
+Fordeler:
+
++ 
++ 
++ 
 
 
-https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786
-https://resett.no/2021/09/11/spetalen-mener-gronne-aksjer-er-overpriset-det-kommer-til-a-bli-helt-katastrofe/
+---
+
+### Beslutningstre
+
+
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-26.png")
+```
+
+Fordeler:
+
++ 
++ 
++ 
+
+---
+
+
+<!-- https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786 -->
+<!-- https://resett.no/2021/09/11/spetalen-mener-gronne-aksjer-er-overpriset-det-kommer-til-a-bli-helt-katastrofe/ -->

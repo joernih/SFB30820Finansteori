@@ -1466,37 +1466,59 @@ knitr::include_graphics("pensum/figurer-22.png")
 
 ## Svake og sterk sider ved KVM
 
-
 + Teoretisk fundament (Porteføljeteorien + antagelse om markedslikevekt)
 + Skille mellom systematisk og ikke systematisk risiko 
-+
++ Evne til å forklare de observerbare prisene på usikre kontantstrømmer
 
 - Forenklet antagelse om informasjonsoffiserens (spetalen) 
-- markedsporteføljen = aksjemarkedet?
+- Antar at markedsporteføljen er lik aksjemarkedet
+- Modellen en-periodisk
 
 ---
 
-## Alternativer
+## Alternativer til kVM
 
-1. Følsomhetsanalyse
-1. Scenarioanalyse
-1. Simulering
-1. Beslutningstre
+- Motsatt av de sterke sidene til KVM
 
 ---
+
+### Følsomhetsanalyse
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-23.png")
 ```
 
++
+
+---
+
+### Scenarioanalyse
+
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-24.png")
 ```
+
++
+
+---
+
+### Simulering
+
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-25.png")
 ```
 
+
++
+
+---
+
+### Beslutningstre
+
++
+
+---
 
 class: inverse, center, middle
 
