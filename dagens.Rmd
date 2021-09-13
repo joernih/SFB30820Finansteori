@@ -260,18 +260,18 @@ $$
 
 ## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
 
-Som allerede omtalt under forelesning 3 (`r tema[3]`), ville denn relevante risikoen (systematiske risikoen) kunne knytte opp mot både en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
+Som allerede omtalt under forelesning 3 (`r tema[3]`), ville den relevante risikoen (systematiske risikoen) kunne knytte opp mot både en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
 \begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
-Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden (risikojusert rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
+Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden (risikojusert-rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
 
 Merk: Skal nåverdibeslutningen bli helt korrekt, er det denne kapitalkostnaden som vi må bruke i bergegningen av nåverdier med usikre kontantstrømmer
 
 ---
 
-Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil bli:
+Likefullt blir i praksis bedriftens totalkapitalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil bli:
 1. Ved for lav $\beta$, gjennomgående for *få* investeringsprosjekter vil bli satt i gang
 1. Ved for høy $\beta$, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
 
@@ -295,12 +295,11 @@ Porteføljeteorien innebærer at investorene (for å kvitte seg med usystematisk
 Er det slik at samme resultat *også* vil holde for en enkeltstående bedrift (dvs. bør de søke seg mot å bli et diversifisert konglomerat)? 
 
 Svar: 
-1. Generelt vil diversifiseringsstratgi kunne påvirke både nevneren og tellern i bedriftens framtidige kontantstrøm  
-1. For nevneren, er det klart diversifiseringsstratgi enklere kan nås ved at eierene selv holder en diversifisert portefølje (billigere å kjøpe nye akskjer enn å starte opp produksjonen av helt nye produkter)
-1. For tellern, kan effekten av en diversifiseringsstratgi en del tilfeller bli at bedriften oppnår høyere profitt som følge av økt 
-markedsmakt (eks. økt forhandlingsstyrke, bedre distribusjonskanaler, kjernekompetansen på tvers av produkter)
+1. Generelt vil diversifiseringsstratgi kunne påvirke både nevneren og telleren i bedriftens framtidige kontantstrøm  
+1. For nevneren er det klart at diversifiseringsgevinst enklere kan oppnås ved at eieren selv holder en diversifisert portefølje: det er billigere for eierne å spre sine investeringer i aksjemarkedet framfor at bedriften gjør det i produktmarkedet
+1. For telleren kan effekten av en diversifiseringsstratgi kom i form av en *kontantstrømssynergi* i form av økt markedsmakt: eks. økt forhandlingsstyrke, bedre distribusjonskanaler, kjernekompetansen på tvers av produkter
+1. Konklusjon: For bedriften vil det derfor *isolert* kun være kontantstrømssynergieffekten som bør trekke i retning av bedrifts eller selskapsdiversifisering.
 
-Merk: Svaret på spørsmålet blir av bedriftsdiversifisering hvorvidt effekten fra økt markedsmakt dominerer kontanstrømseffekten.
 
 ---
 
@@ -310,11 +309,11 @@ Merk: Svaret på spørsmålet blir av bedriftsdiversifisering hvorvidt effekten 
 
 - Med dette forstå at all eksisterende relevant informasjon er reflektert (tatt hensyn til) i dagens aksjekurser
 
-- Det byre at gjennbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
+- Det betyr at gjenbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
 
 Merk: Det er antagelsen om Informasjonseffisiens som ligger til grunn for at markedsporteføljen (M) (den verdiveide) skulle inngå som en komponent i den effisiente porteføljestrategien 
 
-**Spørsmål:** Ligger en antagelse om Informasjonseffisiens til grunn for Statens Pensjonsfond (Oljefondets) investeringsstrategi?
+**Spørsmål:** Ligger en antagelse om Informasjonseffisiens til grunn for Statens Pensjonsfond (Oljefondets) investeringstrategi?
 
 ---
 
