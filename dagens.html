@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x2d6957f2acb452c865ff0a5c8e82daf","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"aa16e747526749a385485d5866537818","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -86,7 +86,7 @@ Porteføljeteorien som vi analysert forut bygger på eksplisitte forutsetninger 
 
 ---
 
-Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Selskap 1 har en egenkapitalverdi på 2000 kr, selskap 2 6000 kr og selskap 3 4000 kr. Investor A ønsker å plassere 3000 kr, mens B plasserer 9000 kr.  
+Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Selskap 1 har en egenkapitalverdi på 2000 kr, selskap 2: 6000 kr og selskap 3: 4000 kr. Investor A ønsker å plassere 3000 kr, mens B plasserer 9000 kr.  
 
 
 <table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
@@ -131,10 +131,13 @@ Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og
 </table>
 
 
-Knyttet til fordelingen av de to investeringsbeløpene, kan vi se for oss to forskjellige situasjoner
-
+Knyttet til fordelingen av de to investeringsbeløpene, kan vi se for oss to forskjellige situasjoner:
 - Situasjon 1 (likeveid): Investorene setter like stort beløp hvert selskap
-	- `\(w=(4000/12000,4000/12000,4000/12000)=(1/3,1/3,1/3)\)`
+  - `\(w=(4000/12000,4000/12000,4000/12000)=(1/3,1/3,1/3)\)`
+- Situasjon 2 (verdiveid): Investorene setter det *verdiveide* beløp i hvert selskap
+	- `\(w=(2000/12000,6000/12000,4000/12000)=(1/6,3/6,2/6)\)`
+
+---
 
 <table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
 <thead>
@@ -178,11 +181,6 @@ Knyttet til fordelingen av de to investeringsbeløpene, kan vi se for oss to for
 </table>
 	- Ikke forenlig med likevekt
 
----
-
-- Situasjon 2 (verdiveid): Investorene setter det *verdiveide* beløp i hvert selskap
-	- `\(w=(2000/12000,6000/12000,4000/12000)=(1/6,3/6,2/6)\)`
-
 <table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
 <thead>
 <tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
@@ -224,27 +222,26 @@ Knyttet til fordelingen av de to investeringsbeløpene, kan vi se for oss to for
 </tbody>
 </table>
 	- Forenlig med likevekt
-Situasjon 2 gir oss *markedsporteføljen (M)* (dvs. den verdiveide)
 
+**Resultat: Situasjon 2 gir oss den maksimalt diversifiserte *markedsporteføljen (M)* (dvs. den verdiveide)**
 
 ---
 
 ### Risiko og kapitalkostnad i likevekt
 
 Samlet sett gir porteføljeteorien pluss forutsetningen om markedslikevekt oss mulighet til å finne prisen (forholdet mellom risiko og forventet avkastning)
-av samtlige aksjer som inngår i markedsparteføljen (M). Formelt kan vi uttrykke dette som 
+av samtlige aksjer som inngår i markedsporteføljen (M). Formelt kan vi uttrykke dette som 
 
 `\begin{equation}
 E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
 \end{equation}`
 
----
-
-Videre kan vi grafisk representere denne sammenhengen ved den grønne *verdipapirmarkedslinjen)* i figuren nedenfor
+Videre kan vi grafisk representere denne sammenhengen ved den grønne *verdipapirmarkedslinjen* i figuren nedenfor
 
 
 &lt;img src="pensum/figurer-18.png" width="40%" /&gt;
 
+---
 
 Kapitalverdimodellen (KVM) forteller oss hva en investor kan regne med av forventet avkastning i aksjemarkedet dersom vedkommende bære en bestemt mengde systematisk risiko
 
@@ -320,7 +317,7 @@ k_E=r_f+\beta_E[E(r_m) - r_f]
 k_G=r_f+\beta_G[E(r_m) - r_f] 
 \end{equation}`
 
-- Totalkapitalkostnadnen (gjennomsnittskostnaden) for egenkapital og gjeld
+- Totalkapitalkostnaden (gjennomsnittskostnaden) for egenkapital og gjeld
 
 `\begin{equation}
 k_T= k_E\underset{=w_E}{\frac{E}{E+G}} + 
@@ -402,14 +399,14 @@ $$
 
 ## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
 
-Som ble omtalt under forelesning 3 (Relevant risiko: Porteføljeteori 3-n objekter), ville denne relevante risikoen (systematiske risikoen) kunne knyttes både opp til en enkelt aksje eller et prosjekt, hvor risikoen ble beregnet ved bruk av
+Som allerede omtalt under forelesning 3 (Relevant risiko: Porteføljeteori 3-n objekter), ville denn relevante risikoen (systematiske risikoen) kunne knytte opp mot både en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
 `\begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}`
 
-Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), mens vi sa under forelesning 1 (Introduksjon og overblikk) at vi ønsket å komme fram til kapitalkostnaden fordi den skulle inngå som en komponent i justertnåverdiuttrykket.
+Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (Introduksjon og overblikk) at vi ønsket å komme fram til kapitalkostnaden (risikojusert rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
 
-Skal nåverdi beslutning bli korrekt er det det siste vi trenger å beregne for å kunne fatte riktig beslutnign om justern nåverdi.
+Skal nåverdibeslutningen bli korrekt, er det denne kapitalkostnaden som vi må bruke i bergegningen av nåverdier med usikre kontantstrømmer
 
 ---
 
@@ -419,30 +416,31 @@ Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapita
 
 ---
 
-**Eksempel på korrekt nåverdiberegning risikojusert rente0**
+**Eksempel på korrekt nåverdiberegning risikojuster-rente-metoden**
 
 Tilknyttet Tomra-eksemplet som vi har sett på tidligere er det opplyst at selskapet vurderer oppkjøp av en bokseprodusent i Tyskland. 
 Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av verdikjede for gjenvinning av drikkeembalasje. Dette prosjektets totalkapitalkostnad er beregnet til å være 3.4 prosent. Investeringsbeløpet er 1.3 mrd. kroner og forventes i 10 år framover å gi en årlig total kapitalstrøm etter skatt på 160 milll. Nåverdien vil hær være gitt ved
 
 `\begin{equation*}
 NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}{(1+0.034)^{10}} = 37
+
 \end{equation*}`
 
 ---
 
 ## Bedriftsdiversifisering kontra eierdiversifisering
 
-1. Porteføljeteorien innebærer at investorene (for å kvitte seg med usystemetisk risiko) sprer sine investeringer over flest mulig selskaper 
-1. Er det slik at samme resultat også vil holde for en enkeltstående bedrift (dvs. de bør søke seg mot å bli et diversifisert konglomerat)? 
-1. Dersom det kun påvirker nevneren, nei
-1. Dersom det kun påvirker nevneren i justert nåverdi, ja
-	
-	
-Markedsmakt vs. Kontantstrøm
+Porteføljeteorien innebærer at investorene (for å kvitte seg med usystematisk risiko) sprer sine investeringer over flest mulig selskaper 
 
-**Øvelse**
+Er det slik at samme resultat *også* vil holde for en enkeltstående bedrift (dvs. bør de søke seg mot å bli et diversifisert konglomerat)? 
 
-Finn eksempler på teller og nevner
+Svar: 
+1. Generelt vil diversifiseringsstratgi kunne påvirke både nevneren og tellern i bedriftens framtidige kontantstrøm  
+1. For nevneren, er det klart diversifiseringsstratgi enklere kan nås ved at eierene selv holder en diversifisert portefølje (billigere å kjøpe nye akskjer enn å starte opp produksjonen av helt nye produkter)
+1. For tellern, kan effekten av en diversifiseringsstratgi en del tilfeller bli at bedriften oppnår høyere profitt som følge av økt 
+markedsmakt (eks. økt forhandlingsstyrke, bedre distribusjonskanaler, kjernekompetansen på tvers av produkter)
+
+Merk: Svaret på spørsmålet blir av bedriftsdiversifisering hvorvidt effekten fra økt markedsmakt dominerer kontanstrømseffekten.
 
 ---
 
@@ -454,9 +452,9 @@ Finn eksempler på teller og nevner
 
 - Det byre at gjennbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
 
-Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at markedsporteføljen (M) (den verdiveide) skulle inngå som en komponent i den effisiente porteføljestrategien 
+Merk: Det er antagelsen om Informasjonseffisiens som ligger til grunn for at markedsporteføljen (M) (den verdiveide) skulle inngå som en komponent i den effisiente porteføljestrategien 
 
-**Spørsmål:** Ligger en antagelse om informasjonseffisiens til grunn for Statens Pensjonsfond (Oljefondet) investeringsstregi?
+**Spørsmål:** Ligger en antagelse om Informasjonseffisiens til grunn for Statens Pensjonsfond (Oljefondets) investeringsstrategi?
 
 ---
 
@@ -464,7 +462,7 @@ Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at mar
 
 - *Svak effisiens:* Aksjeprisen reflekterer all informasjon som ligger i aksjens tidligere prisutvikling
 - *Halvsterk effisiens:* Svak effisiens + all offentlig tilgjengelig informasjon 
-- *Sterk effisiens:* Halvsterk effisieint + *all* relevant informasjon (også innsideinformasjon)
+- *Sterk effisiens:* Halvsterk effisiens + *all* relevant informasjon (også innsideinformasjon)
 
 
 &lt;img src="pensum/figurer-21.png" width="55%" /&gt;
@@ -477,7 +475,7 @@ Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at mar
 &lt;img src="pensum/figurer-22.png" width="55%" /&gt;
 
 - Informasjonseffisiens skapes av (1) konkurransen investorene imellom og (2) profittmuligheter for den som oppdager og raskt utnytter effisiens
-- For at markedet skal være våre effisient må det *alltid* finnes investorer som tror at markedet ikke er effisient. Forsvinner den troen vil nemlig markedet bli inneffisient.
+- For at markedet skal være våre effisient må det *alltid* finnes investorer som tror at markedet ikke er effisient. Forsvinner den troen vil nemlig markedet bli ineffisient.
 
 ---
 
@@ -487,7 +485,7 @@ Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at mar
 Pluss (+)
 
 + Sterk teoretisk matematisk fundament (porteføljeteorien + antagelse om likevekt i kapitalmarkedet)
-+ Evenen til å skille mellom systematisk og ikke systematisk risiko 
++ Evnen til å skille mellom systematisk og ikke systematisk risiko 
 + Mulig til å forklare de observerbare priser på usikre kontantstrømmer
 
 
@@ -497,7 +495,7 @@ Pluss (+)
 
 Minus (-)
 
-- I stor grad bygd på antagelsen om informasjonsoffisens  
+- I stor grad bygd på antagelsen om Informasjonseffisiens  
 - Empirisk settes man vanligvis likhet mellom markedsporteføljen og aksjemarkedet
 - Modellen er en-periodisk (men det er mulig å bygge ut modellen til å gjelde flere)
 
@@ -514,7 +512,7 @@ Skal være berørt i tidligere kurs i investering- og finansieringsanalyse. Best
 1. Simulering.
 1. Beslutningstre
 
-Et kjennetegn ved alle disse metodene er at de ikke tilfredstiller *noen* av de tre egenskapene som tidligere ble ramset opp som styrken til KVM.
+Et kjennetegn ved alle disse metodene er at de ikke tilfredsstiller *noen* av de tre egenskapene som tidligere ble ramset opp som styrken til KVM.
 
 ---
 
@@ -556,7 +554,7 @@ Fordeler:
 
 Fordeler:
 
-+ Nyttig risikoinformasjon siden en kan fokusere på usikkerhet i kontantstrømmen framfor en vansklig tolkbar nåverdi
++ Nyttig risikoinformasjon siden en kan fokusere på usikkerhet i kontantstrømmen framfor en vanskelig tolkbar nåverdi
 + ... 
 + ...
 
