@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x612880218164303b4a1f1573aad612f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ca2076dc54ba43bdb473b6c0ef84c542","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -440,6 +440,7 @@ NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}
 	
 Markedsmakt vs. Kontantstrøm
 
+Konglomerat (flere uavhengig ben å stå på)
 
 **Øvelse**
 
@@ -447,19 +448,25 @@ Finn eksempler på teller og nevner
 
 ---
 
-
-
 ## Informasjonseffisiens
 
-Informasjonseffisiens er en *Markedsegenskap*
+- Under forutsetning om likevekt i kapitalmarkedet ligger implisitt en antagelse om at kapitalmarkedet er *informasjonseffisient*
+
+- Med dette forstå at all eksisterende relevant informasjon er reflektert (tatt hensyn til) i dagens aksjekurser
+
+- Gjennbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
+
+Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at markedsporteføljen (M) (den verdiveide) skulle inngå som en komponent i den effisiente porteføljestrategien 
+
+**Spørsmål:** Ligger en antagelse om informasjonseffisiens til grunn for Statens Pensjonsfond (Oljefondet) investeringsstregi?
 
 ---
 
 ### Effisienstyper
 
-- *Svak effisiens:*
-- *Halvsterk effisiens:*
-- *Sterk effisiens:*
+- *Svak effisiens:* Aksjeprisen reflekterer all informasjon som ligger i aksjens tidligere prisutvikling
+- *Halvsterk effisiens:* Svak effisiens + all offentlig tilgjengelig informasjon 
+- *Sterk effisiens:* Halvsterk effisieint + *all* relevant informasjon (også innsideinformasjon)
 
 
 &lt;img src="pensum/figurer-21.png" width="55%" /&gt;
@@ -471,23 +478,45 @@ Informasjonseffisiens er en *Markedsegenskap*
 
 &lt;img src="pensum/figurer-22.png" width="55%" /&gt;
 
+- Informasjonseffisiens skapes av (1) konkurransen investorene imellom og (2) profittmuligheter for den som oppdager og raskt utnytter effisiens
+- For at markedet skal være våre effisient må det *alltid* finnes investorer som tror at markedet ikke er effisient. Forsvinner den troen vil nemlig markedet bli inneffisient.
+
 ---
 
 ## Svake og sterk sider ved KVM
 
-+ Teoretisk fundament (Porteføljeteorien + antagelse om markedslikevekt)
-+ Skille mellom systematisk og ikke systematisk risiko 
-+ Evne til å forklare de observerbare prisene på usikre kontantstrømmer
+.pull-left[
+Pluss (+)
 
-- Forenklet antagelse om informasjonsoffiserens (spetalen) 
-- Antar at markedsporteføljen er lik aksjemarkedet
-- Modellen er en-periodisk
++ Sterk teoretisk matematisk fundament (porteføljeteorien + antagelse om likevekt i kapitalmarkedet)
++ Evenen til å skille mellom systematisk og ikke systematisk risiko 
++ Mulig til å forklare de observerbare priser på usikre kontantstrømmer
+
+
+]
+
+.pull-right[
+
+Minus (-)
+
+- I stor grad bygd på antagelsen om informasjonsoffisens  
+- Empirisk settes man vanligvis likhet mellom markedsporteføljen og aksjemarkedet
+- Modellen er en-periodisk (men det er mulig å bygge ut modellen til å gjelde flere)
+
+]
 
 ---
 
-## Alternativer til kVM
+## Tradisjonell metode, eller alternativer til kVM
 
-- Motsatt av de sterke sidene til KVM
+Skal være berørt i tidligere kurs i investering- og finansieringsanalyse. Består av
+
+1. Følsomhetsanalyse
+1. Scenarioanalyse
+1. Simulering.
+1. Beslutningstre
+
+Et kjennetegn ved alle disse metodene er at de ikke tilfredstiller *noen* av de tre egenskapene som tidligere ble ramset opp som styrken til KVM.
 
 ---
 
@@ -497,9 +526,9 @@ Informasjonseffisiens er en *Markedsegenskap*
 
 Fordeler:
 
-+ 
-+ 
-+ 
++ Enkelt å forstå siden den enkelt kan belyse usikkerheten i selve kontantstrømmen 
++ ...
++ ...
 
 
 ---
@@ -517,21 +546,21 @@ Fordeler:
 <tr>
 <td style='text-align: left;'>1</td>
 <td style='text-align: center;'>1</td>
-<td style='text-align: center;'>1</td>
+<td style='text-align: center;'>Pris og produksjon opp 10%</td>
 </tr>
 <tr>
 <td style='border-bottom: 2px solid grey; text-align: left;'>2</td>
 <td style='border-bottom: 2px solid grey; text-align: center;'>2</td>
-<td style='border-bottom: 2px solid grey; text-align: center;'>2</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Pris og produksjon ned 20%</td>
 </tr>
 </tbody>
 </table>
 
 Fordeler:
 
-+ 
-+ 
-+ 
++ Nyttig risikoinformasjon siden en kan fokusere på usikkerhet i kontantstrømmen framfor en vansklig tolkbar nåverdi
++ ... 
++ ...
 
 ---
 
@@ -542,9 +571,9 @@ Fordeler:
 
 Fordeler:
 
-+ 
-+ 
-+ 
++ Kan ta hensyn sannsynligheter for alle kategorier inngangsdata
++ ...
++ ...
 
 
 ---
@@ -556,9 +585,9 @@ Fordeler:
 
 Fordeler:
 
-+ 
-+ 
-+ 
++ Velegnet når prosjektet inneholder fleksibilitet
++ ...
++ ...
 
 ---
 
