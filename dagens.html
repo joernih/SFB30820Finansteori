@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd9f9e24819741a6adb9382cc9f8ddfd","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d4462fc3844a46ccb5c5fa44c92d946c","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-12)
+### 2021/08/12 (updated: 2021-09-13)
 
 ---
 
@@ -73,13 +73,13 @@ class: inverse, center, middle
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
-Oppdatert: 2021-09-12
+Oppdatert: 2021-09-13
 
 ---
 
 ## Kapitalverdimodellen (KVM)
 
-Porteføljeteorien som vi har analysert til nå bygger på eksplisitte forutsetninger om:
+Porteføljeteorien som vi analysert forut bygger på eksplisitte forutsetninger om:
 
 - Investorene
  - Risikoaversjon (forventning-varians/standardavvik-kriteriet)
@@ -94,96 +94,96 @@ Porteføljeteorien som vi har analysert til nå bygger på eksplisitte forutsetn
 
 ---
 
-Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Investor A ønsker å plassere 3000,- mens B plasserer 9000,-. Verdien på de tre selskapene er gitt ved 
+Fra **eksempel 3.3** i læreboka har vi at markedet består tre selskaper(1,2 og 3) og to investorer (A og B). Selskap 1 har en egenkapitalverdi på 2000 kr, selskap 2 6000 kr og selskap 3 4000 kr. Investor A ønsker å plassere 3000 kr, mens B plasserer 9000 kr.  
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Markedsplassen&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Verdi EK&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel A&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel B&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;6000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;9000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Selskap 3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tilbud&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
----
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Børsen</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Verdi EK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Etterspørsel A</td>
+<td style='text-align: center;'>3000</td>
+<td style='text-align: center;'>Selskap 1</td>
+<td style='text-align: center;'>2000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Etterspørsel B</td>
+<td style='text-align: center;'>9000</td>
+<td style='text-align: center;'>Selskap 2</td>
+<td style='text-align: center;'>6000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Samlet etterspørsel</td>
+<td style='text-align: center;'>9000</td>
+<td style='text-align: center;'>Selskap 3</td>
+<td style='text-align: center;'>4000</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>4</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Tilbud</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>12000</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'></td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+</tr>
+</tbody>
+</table>
 
-Med hensyn til fordelingen av investeringsbeløpene kan vi se for oss to forskjellige situasjoner
+
+Knyttet til fordelingen av de to investeringsbeløpene, kan vi se for oss to forskjellige situasjoner
 
 - Situasjon 1 (likeveid): Investorene setter like stort beløp hvert selskap
 	- `\(w=(4000/12000,4000/12000,4000/12000)=(1/3,1/3,1/3)\)`
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_1=1/6&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_2=1/6&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_3=1/6&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel A&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel B&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tilbud&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;2000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;4000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_1=1/6</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_2=1/6</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_3=1/6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Etterspørsel A</td>
+<td style='text-align: center;'>1000</td>
+<td style='text-align: center;'>1000</td>
+<td style='text-align: center;'>1000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Etterspørsel B</td>
+<td style='text-align: center;'>3000</td>
+<td style='text-align: center;'>3000</td>
+<td style='text-align: center;'>3000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Samlet etterspørsel</td>
+<td style='text-align: center;'>4000</td>
+<td style='text-align: center;'>4000</td>
+<td style='text-align: center;'>4000</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>4</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Tilbud</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>2000</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>6000</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>4000</td>
+</tr>
+</tbody>
+</table>
 	- Ikke forenlig med likevekt
 
 ---
@@ -191,73 +191,76 @@ Med hensyn til fordelingen av investeringsbeløpene kan vi se for oss to forskje
 - Situasjon 2 (verdiveid): Investorene setter det *verdiveide* beløp i hvert selskap
 	- `\(w=(2000/12000,6000/12000,4000/12000)=(1/6,3/6,2/6)\)`
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_1=1/6&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_2=3/6&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_3=2/6&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel A&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Etterspørsel B&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4500&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Samlet etterspørsel&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;6000&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tilbud&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;2000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6000&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;4000&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_1=1/6</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_2=3/6</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>w_3=2/6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Etterspørsel A</td>
+<td style='text-align: center;'>500</td>
+<td style='text-align: center;'>1500</td>
+<td style='text-align: center;'>1000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Etterspørsel B</td>
+<td style='text-align: center;'>1500</td>
+<td style='text-align: center;'>4500</td>
+<td style='text-align: center;'>3000</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Samlet etterspørsel</td>
+<td style='text-align: center;'>2000</td>
+<td style='text-align: center;'>6000</td>
+<td style='text-align: center;'>4000</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>4</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Tilbud</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>2000</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>6000</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>4000</td>
+</tr>
+</tbody>
+</table>
 	- Forenlig med likevekt
 Situasjon 2 gir oss *markedsporteføljen (M)* (dvs. den verdiveide)
-
 
 
 ---
 
 ### Risiko og kapitalkostnad i likevekt
 
-Samlet sett gir .. + .. prising av aksjer i likevekt (forholdet mellom risiko og forventet avkastning). 
-Prising av enkeltakjser (formelt) er gitt ved.
+Samlet sett gir porteføljeteorien pluss forutsetningen om markedslikevekt oss mulighet til å finne prisen (forholdet mellom risiko og forventet avkastning)
+av samtlige aksjer som inngår i markedsparteføljen (M). Formelt kan vi uttrykke dette som 
 
 `\begin{equation}
 E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
 \end{equation}`
 
-Grafisk lar seg illustrere ved den grønne *verdipapirmarkedslinjen)*
+---
 
-&lt;img src="pensum/figurer-18.png" width="45%" /&gt;
+Videre kan vi grafisk representere denne sammenhengen ved den grønne *verdipapirmarkedslinjen)* i figuren nedenfor
 
-KVM forteller oss hva en investor kan regne med av forventet avkastning i aksjemarkedet dersom vedkommende bære en bestemt mengde systematisk risiko
+
+&lt;img src="pensum/figurer-18.png" width="40%" /&gt;
+
+
+Kapitalverdimodellen (KVM) forteller oss hva en investor kan regne med av forventet avkastning i aksjemarkedet dersom vedkommende bære en bestemt mengde systematisk risiko
 
 ---
 
 ### Litt empiri 
 
-**Markedsporteføljen (verdiveide)**
+**Markedsporteføljen (den verdiveide)**
 
 &lt;img src="pensum/figurer-19.png" width="55%" /&gt;
 
@@ -272,6 +275,43 @@ Som gir oss i real makrosørrelsene (realisert)
 
 &lt;img src="pensum/figurer-20.png" width="55%" /&gt;
 
+
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Selskap</th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Beta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Frontline</td>
+<td style='text-align: center;'>1.69</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Norsk Hydro</td>
+<td style='text-align: center;'>0.92</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Telenor</td>
+<td style='text-align: center;'>0.71</td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'>DNO</td>
+<td style='text-align: center;'>1.53</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Subsea 7</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>1.43</td>
+</tr>
+</tbody>
+</table>
+
 ---
 
 ### Kapitalkostnad for egenkapital og gjeld
@@ -279,14 +319,13 @@ Som gir oss i real makrosørrelsene (realisert)
 - Kapitalkostnad for egenkapital 
 
 `\begin{equation}
-k_E=r_f+\beta_E[E(r_m) - rf] 
+k_E=r_f+\beta_E[E(r_m) - r_f] 
 \end{equation}`
 
 - Kapitalkostnad for gjeld
 
-
 `\begin{equation}
-k_G=r_f+\beta_G[E(r_m) - rf] 
+k_G=r_f+\beta_G[E(r_m) - r_f] 
 \end{equation}`
 
 - Totalkapitalkostnadnen (gjennomsnittskostnaden) for egenkapital og gjeld
@@ -304,47 +343,49 @@ k_T= k_Ew_E + k_G(1-s)w_G
 
 Fra **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at `\(\beta_E=0.83\)`, mens gjeldsbetaen er beregnet slik at `\(\beta_G=0.1\)`. Den nominelle risikofrie renten er på `\(3\)` prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
 
-Totalt sett har Tomra 148 020 078 akjser utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markesverdi på egenkapital lik `\(=148020078\cdot 85.50=\)` 12 654 mill.
+Totalt sett har Tomra 148 020 078 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik `\(=148020078\cdot 85.50=\)` 12 654 mill.
 
 Fra årsapporten har vi videre at:
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Innskutt egenkapital&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1066&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Opptjent egenkapital&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2879&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Minoritetsinteresser&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Gjeld&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3212&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Totalt&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7317&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+<table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+<thead>
+<tr><th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+<th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>1</td>
+<td style='text-align: center;'>Innskutt egenkapital</td>
+<td style='text-align: center;'>1066</td>
+</tr>
+<tr>
+<td style='text-align: left;'>2</td>
+<td style='text-align: center;'>Opptjent egenkapital</td>
+<td style='text-align: center;'>2879</td>
+</tr>
+<tr>
+<td style='text-align: left;'>3</td>
+<td style='text-align: center;'>Minoritetsinteresser</td>
+<td style='text-align: center;'>160</td>
+</tr>
+<tr>
+<td style='text-align: left;'>4</td>
+<td style='text-align: center;'>Gjeld</td>
+<td style='text-align: center;'>3212</td>
+</tr>
+<tr>
+<td style='border-bottom: 2px solid grey; text-align: left;'>5</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>Totalt</td>
+<td style='border-bottom: 2px solid grey; text-align: center;'>7317</td>
+</tr>
+</tbody>
+</table>
 
 ---
+
+Framgangsmåte for å bestemme totalkapialkostnaden til et selskap
 
 1. Beregne vektene (markedsverdi) for egenkapital og gjeld
 `\begin{equation*}
@@ -376,7 +417,9 @@ Som ble omtalt under forelesning 3 (Relevant risiko: Porteføljeteori 3-n objekt
 
 Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), mens vi sa under forelesning 1 (Introduksjon og overblikk) at vi ønsket å komme fram til kapitalkostnaden fordi den skulle inngå som en komponent i justertnåverdiuttrykket.
 
-Skal nåverdibeslutning bli korrekt er det det siste vi trenger å beregne for å kunne fatte riktig beslutnign om justern nåverdi.
+Skal nåverdi beslutning bli korrekt er det det siste vi trenger å beregne for å kunne fatte riktig beslutnign om justern nåverdi.
+
+---
 
 Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil Være
 1. Lav `\(\beta\)` ikke blir realiset
@@ -387,7 +430,7 @@ Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapita
 **Eksempel på korrekt nåverdiberegning risikojusert rente0**
 
 Tilknyttet Tomra-eksemplet som vi har sett på tidligere er det opplyst at selskapet vurderer oppkjøp av en bokseprodusent i Tyskland. 
-Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av verdikjene for gjennvinning av drikkeembalasje. Dette prosjektets totalkapitalkostnad er beregnet til å være 3.4 prosent. Investeringsbeløpet er 1.3 mrd. kroner og forventes i 10 år framover å gi en årlig total kapitalstrøm etter skatt på 160 milll. Nåverdien vil hær være gitt ved
+Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av verdikjede for gjenvinning av drikkeembalasje. Dette prosjektets totalkapitalkostnad er beregnet til å være 3.4 prosent. Investeringsbeløpet er 1.3 mrd. kroner og forventes i 10 år framover å gi en årlig total kapitalstrøm etter skatt på 160 milll. Nåverdien vil hær være gitt ved
 
 `\begin{equation*}
 NV = - 1300 + \frac{160}{(1+034)} + \frac{160}{(1+034)^2} + ... + \frac{160}{(1+034)^10} = 37
@@ -398,7 +441,7 @@ NV = - 1300 + \frac{160}{(1+034)} + \frac{160}{(1+034)^2} + ... + \frac{160}{(1+
 ## Diversifisering bedrift vs. eier
 
 1. Porteføljeteorien investorene spre sine investeringer over flest mulig selskaper (kvitter seg med usystematisk risiko)
-1. Diversifisert konglemorat også fornuftig når det gjelder selskapet? 
+1. Diversifisert konglomerat også fornuftig når det gjelder selskapet? 
 	- Dersom det kun påvirker nevneren, nei
 	- Dersom det kun påvirker nevneren i justert nåverdi, ja
 
@@ -427,24 +470,34 @@ Finn eksempler på teller og nevner
 ## Svake og sterk sider ved KVM
 
 
++ Teoretisk fundament (Porteføljeteorien + antagelse om markedslikevekt)
++ Skille mellom systematisk og ikke systematisk risiko 
++
 
----
-
-&lt;img src="pensum/figurer-23.png" width="55%" /&gt;
+- Forenklet antagelse om informasjonsoffiserens (spetalen) 
+- markedsporteføljen = aksjemarkedet?
 
 ---
 
 ## Alternativer
 
-1. Følsomhetsanalsye
+1. Følsomhetsanalyse
 1. Scenarioanalyse
 1. Simulering
 1. Beslutningstre
 
-&lt;img src="pensum/figurer-24.png" width="55%" /&gt;
-
 ---
 
+&lt;img src="pensum/figurer-23.png" width="55%" /&gt;
+
+&lt;img src="pensum/figurer-24.png" width="55%" /&gt;
+
+&lt;img src="pensum/figurer-25.png" width="55%" /&gt;
+
+
+
+https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786
+https://resett.no/2021/09/11/spetalen-mener-gronne-aksjer-er-overpriset-det-kommer-til-a-bli-helt-katastrofe/
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
