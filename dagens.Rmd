@@ -315,7 +315,7 @@ Finn eksempler på teller og nevner
 
 - Med dette forstå at all eksisterende relevant informasjon er reflektert (tatt hensyn til) i dagens aksjekurser
 
-- Gjennbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
+- Det byre at gjennbruk av informasjon til å finne feilprisede aksjer vil ikke være mulig
 
 Merk: Det er antagelsen om informasjonseffisiens som ligger til grunn for at markedsporteføljen (M) (den verdiveide) skulle inngå som en komponent i den effisiente porteføljestrategien 
 
