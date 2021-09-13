@@ -267,11 +267,11 @@ Som allerede omtalt under forelesning 3 (`r tema[3]`), ville denn relevante risi
 
 Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden (risikojusert rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
 
-Skal nåverdibeslutningen bli korrekt, er det denne kapitalkostnaden som vi må bruke i bergegningen av nåverdier med usikre kontantstrømmer
+Merk: Skal nåverdibeslutningen bli helt korrekt, er det denne kapitalkostnaden som vi må bruke i bergegningen av nåverdier med usikre kontantstrømmer
 
 ---
 
-Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil Være
+Likefullt blir i praksis bedriftens totalkapalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil bli:
 1. Ved for lav $\beta$, gjennomgående for *få* investeringsprosjekter vil bli satt i gang
 1. Ved for høy $\beta$, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
 
@@ -284,7 +284,6 @@ Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av 
 
 \begin{equation*}
 NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}{(1+0.034)^{10}} = 37
-
 \end{equation*}
 
 ---
