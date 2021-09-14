@@ -82,7 +82,7 @@ radnr_ii <- c("Selskap 1",
 	   "Selskap 2",
 	   "Selskap 3",
 	   "")
-tils1 <- c(3000,9000,9000,12000)
+tils1 <- c(3000,9000,12000,12000)
 tils2 <- c(2000,6000,4000,0)
 df_prosj_kontantstrøm <- data.frame(radnr_i,tils1,radnr_ii,tils2)
 htmlTable(df_prosj_kontantstrøm, header=c("","Børsen","","Verdi EK"))
@@ -133,7 +133,7 @@ Samlet sett gir porteføljeteorien pluss forutsetningen om markedslikevekt oss m
 av samtlige aksjer som inngår i markedsporteføljen (M). Formelt kan vi uttrykke dette som 
 
 \begin{equation}
-E(r_p)=r_f+\beta_j[E(r_m) - rf] \\
+E(r_j)=r_f+\beta_j[E(r_m) - r_f] \\
 \end{equation}
 
 Videre kan vi grafisk representere denne sammenhengen ved den grønne *verdipapirmarkedslinjen* i figuren nedenfor
