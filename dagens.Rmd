@@ -69,9 +69,13 @@ class: inverse, center, middle
 
 ### Obligasjonslån
 
+### Konvertible obligasjoner
+
 ### Terminstruktur
 
-### Konvertible obligasjoner
+---
+
+## Bokverdier kontra markedsverdier
 
 ---
 
@@ -83,4 +87,55 @@ class: inverse, center, middle
 
 ### Aksjesplitt og fondsemisjon
 
+---
 
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-29.png")
+```
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-30.png")
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-31.png")
+```
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-32.png")
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-33.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-34.png")
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-35.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-36.png")
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-37.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-38.png")
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-39.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-40.png")
+```
