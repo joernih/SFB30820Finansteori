@@ -35,7 +35,6 @@ library(xaringan)
 xaringan::inf_mr("dagens.Rmd")
 ```
 
-
 ---
 
 class: inverse, center, middle
