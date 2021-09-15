@@ -1190,6 +1190,9 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
+<!-- https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786 -->
+<!-- https://resett.no/2021/09/11/spetalen-mener-gronne-aksjer-er-overpriset-det-kommer-til-a-bli-helt-katastrofe/ -->
+
 ---
 
 ## Kapitalverdimodellen (KVM)
