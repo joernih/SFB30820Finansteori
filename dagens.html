@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x12c651cf9dd4b6d84f58a4c49a30661","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e3c0c2860c364b2ab88bbc111e491990","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-15)
+### 2021/08/12 (updated: 2021-09-16)
 
 ---
 
@@ -67,7 +67,7 @@ class: inverse, center, middle
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
 
-Oppdatert: 2021-09-15
+Oppdatert: 2021-09-16
 
 ---
 
@@ -128,7 +128,7 @@ P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\
 **Null-kupong obligasjoner** 
 
 `\begin{equation}
-P_0=\frac{M}{(1+r/n)^T} 
+P_0=\frac{M}{(1+r)^T} 
 \end{equation}`
 
 **Beregning av effektiv rente**
@@ -152,17 +152,48 @@ Løse uttrykkene ovenfor mhp. r.
 ### Terminstruktur
 
 **Beregning av spotrente og implisitte renter**
-A=B
+
+Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er gitt ved
+
+`\begin{equation}
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
+\end{equation}`
+
+Løser mhp. `\(f\)` 
+`\begin{equation}
+(1+_{n-1}f_{n})=\frac{(1+_{o}r_{T})^T}{1}
+\end{equation}`
+Setter inn for 
+
+Som gir oss
+`\begin{equation}
+_{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
+\end{equation}`
+
+
+---
 
 **Beregning av inflasjonsforventningene**
+Vi started med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
+`\begin{equation}
+1+r=\frac{1+i}{1+j} \Leftrightarrow
+1+j+r+rj=i+1 \\
+r(1+j)=i-j \\
+r=\frac{i-j}{i+j}
+\end{equation}`
 
+Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 
+`\begin{equation}
+_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
+\end{equation}`
 ---
 
 &lt;img src="pensum/figurer-36.png" width="50%" /&gt;
 
 &lt;img src="pensum/figurer-37.png" width="50%" /&gt;
 
+#### Forventningsteorien
 
 ---
 
@@ -203,16 +234,26 @@ D=1+2+3+...+T
 #### Beregning av tegningsrettigheter
 
 `\begin{equation}
-\Delta P_x=
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}`
+Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer `\(N=n/m\)`.
 `\begin{equation}
-\Delta P_x=
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
 \end{equation}`
+Tegningsretten er gitt ved
 `\begin{equation}
-\Delta T_n=
+T_n=\left( P_x-P_e \right)\frac{1}{1/N}
+\end{equation}`
+Som ved innsetting for `\(P_x\)`
+`\begin{equation}
+T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}`
 
+---
+
 **Eksempel 5.12**
+eller
+**Eksempel 5.13**
 
 ### Tilbakekjøp av egne aksjer
 

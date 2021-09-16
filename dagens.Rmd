@@ -132,7 +132,7 @@ P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\
 **Null-kupong obligasjoner** 
 
 \begin{equation}
-P_0=\frac{M}{(1+r/n)^T} 
+P_0=\frac{M}{(1+r)^T} 
 \end{equation}
 
 **Beregning av effektiv rente**
@@ -158,11 +158,41 @@ knitr::include_graphics("pensum/figurer-35.png")
 ### Terminstruktur
 
 **Beregning av spotrente og implisitte renter**
-A=B
+
+Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er gitt ved
+
+\begin{equation}
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
+\end{equation}
+
+Løser mhp. $f$ 
+\begin{equation}
+(1+_{n-1}f_{n})=\frac{(1+_{o}r_{T})^T}{1}
+\end{equation}
+Setter inn for 
+
+Som gir oss
+\begin{equation}
+_{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
+\end{equation}
+
+
+---
 
 **Beregning av inflasjonsforventningene**
+Vi started med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
+\begin{equation}
+1+r=\frac{1+i}{1+j} \Leftrightarrow
+1+j+r+rj=i+1 \\
+r(1+j)=i-j \\
+r=\frac{i-j}{i+j}
+\end{equation}
 
+Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 
+\begin{equation}
+_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
+\end{equation}
 ---
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
@@ -173,6 +203,7 @@ knitr::include_graphics("pensum/figurer-36.png")
 knitr::include_graphics("pensum/figurer-37.png")
 ```
 
+#### Forventningsteorien
 
 ---
 
@@ -217,16 +248,26 @@ knitr::include_graphics("pensum/figurer-40.png")
 #### Beregning av tegningsrettigheter
 
 \begin{equation}
-\Delta P_x=
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}
+Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer $N=n/m$.
 \begin{equation}
-\Delta P_x=
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
 \end{equation}
+Tegningsretten er gitt ved
 \begin{equation}
-\Delta T_n=
+T_n=\left( P_x-P_e \right)\frac{1}{1/N}
+\end{equation}
+Som ved innsetting for $P_x$
+\begin{equation}
+T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}
 
+---
+
 **Eksempel 5.12**
+eller
+**Eksempel 5.13**
 
 ### Tilbakekjøp av egne aksjer
 
