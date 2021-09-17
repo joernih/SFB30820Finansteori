@@ -97,7 +97,7 @@ class: inverse, center, middle
 
 ---
 
-### Abc
+### Illustrasjon av finanssektoren
 
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
@@ -131,7 +131,7 @@ Kjennetegn
 
 ---
 
-#### Tegning
+#### Omsetning?
 
 ```{r, echo=FALSE, out.width="35%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-31.png", "pensum/figurer-32.png"))
@@ -173,7 +173,7 @@ knitr::include_graphics(c("pensum/figurer-35.png"))
 ```
 ---
 
-### Terminstruktur
+#### Terminstruktur
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
@@ -259,7 +259,7 @@ knitr::include_graphics(c("pensum/figurer-40.png"))
 
 ## Egenkapital
 
-### Omsetnign av egenkapital
+### Omsetning av egenkapital
 
 #### Emisjons
 
