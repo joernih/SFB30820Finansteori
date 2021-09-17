@@ -55,39 +55,28 @@ class: inverse, center, middle
 
 ---
 
-## Kapitalmarkedet
+## Finansielle instrumenter og kapitalmarkedet
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-29.png")
-```
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-30.png")
-```
-
----
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-31.png")
-```
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-32.png")
-```
+- Finansielle instrumenter
+	- Er en kontrakt som består av to parter
+	- Part 1: Mottar kapital fra den andre parten 
+	- Part 2: Tilfører kapital samtidig med at vedkommende oppnår visse rettigheter ovenfor den andre parten
+- Kapitalmarkedets hovedoppgaver
+	- Kanalisere og samle kapital
+	- Omfordele og spre risiko
+	- Verdsette økonomisk virksomhet
 
 ---
 
-### Omsetning av gjeld
+### Abc
+
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-33.png")
+knitr::include_graphics("drawio/finansiering.png")
 ```
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-34.png")
-```
-
-### Omsetning av egenkapital
+Selv om, opplever *imperfeksjoner* i kapitalmarkedet
 
 ---
 
@@ -99,27 +88,18 @@ knitr::include_graphics("pensum/figurer-34.png")
 
 ### Obligasjonslån
 
-Figurpakke 1
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-31.png")
-```
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-32.png")
-```
-
 ---
 
-Figurpakke 2
-
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-33.png")
+knitr::include_graphics(c("pensum/figurer-31.png",
+			"pensum/figurer-32.png"))
 ```
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-34.png")
+knitr::include_graphics(c("pensum/figurer-33.png",
+			"pensum/figurer-34.png"))
 ```
+
 ---
 
 **Beregning av obligasjonspris** 
@@ -145,10 +125,10 @@ Løse uttrykkene ovenfor mhp. r.
 
 ---
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-35.png")
-```
 
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
 ---
 
 ### Konvertible obligasjoner
@@ -193,7 +173,6 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 \begin{equation}
 _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
 \end{equation}
----
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-36.png")
@@ -215,16 +194,12 @@ knitr::include_graphics("pensum/figurer-37.png")
 $$\frac{\Delta P_0}{\Delta r}=$$
 
 \begin{equation}
-\Delta P_o=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} =  
+\frac{\Delta P_o}{P_o}=-\frac{\Delta(1+r)}{(1+r)}D
 \end{equation}
 
+Hvor Maculay-durasjonen, D, er gitt ved
 \begin{equation}
-\frac{\Delta P_o}{P_o}=\frac{1}{2}D
-\end{equation}
-
-Hvor
-\begin{equation}
-D=1+2+3+...+T
+D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]...\left[\frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
 ---
