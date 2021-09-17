@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"dfadfb6882ad442e83c87605438e930d","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a91917ec67544c81845e21f68f0b2745","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -50,6 +50,12 @@ class: center, middle, inverse, title-slide
 
 
 
+
+
+
+# Outline Testing
+
+![](dagens_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -119,9 +125,9 @@ Kjennetegn
 
 #### Tegning
 
-&lt;img src="pensum/figurer-31.png" width="50%" /&gt;&lt;img src="pensum/figurer-32.png" width="50%" /&gt;
+&lt;img src="pensum/figurer-31.png" width="35%" /&gt;&lt;img src="pensum/figurer-32.png" width="35%" /&gt;
 
-&lt;img src="pensum/figurer-33.png" width="50%" /&gt;&lt;img src="pensum/figurer-34.png" width="50%" /&gt;
+&lt;img src="pensum/figurer-33.png" width="35%" /&gt;&lt;img src="pensum/figurer-34.png" width="35%" /&gt;
 
 ---
 
@@ -217,6 +223,7 @@ Hvor Maculay-durasjonen, D, er gitt ved
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]...\left[\frac{NV(X_1)}{P_0}\right]
 \end{equation}`
 
+---
 
 ### Konvertible obligasjoner
 
@@ -226,6 +233,44 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 ## Bokverdier kontra markedsverdier
 
 &lt;img src="pensum/figurer-40.png" width="50%" /&gt;
+---
+
+## Egenkapital
+
+### Omsetnign av egenkapital
+
+#### Emisjons
+
+---
+
+
+### Tegningsrettigheter
+
+**Beregning av tegningsrettigheter**
+
+`\begin{equation}
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
+\end{equation}`
+Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer `\(N=n/m\)`.
+`\begin{equation}
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
+\end{equation}`
+Tegningsretten er gitt ved
+`\begin{equation}
+T_n=\left( P_x-P_e \right)\frac{1}{1/N}
+\end{equation}`
+Som ved innsetting for `\(P_x\)`
+`\begin{equation}
+T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
+\end{equation}`
+
+---
+
+### Tilbakekjøp av egne aksjer
+
+---
+
+### Aksjesplitt og fondsemisjon
 
 
 
