@@ -193,19 +193,12 @@ _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
 
 ---
 
-#### Forventningsteorien
-
 #### Renterisiko og durasjon
-
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-38.png"))
 ```
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::knit_exit()
-```
-
+---
 
 **Beregning av durasjon**
 
@@ -220,27 +213,29 @@ Hvor Maculay-durasjonen, D, er gitt ved
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]...\left[\frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
----
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-38.png")
-```
-
----
 
 ### Konvertible obligasjoner
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-39.png")
+```
+---
 
 ## Bokverdier kontra markedsverdier
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-40.png")
+knitr::include_graphics("c(pensum/figurer-40.png)")
 ```
-
----
 
 ## Egenkapital
 
-#### Beregning av tegningsrettigheter
+### Omsetnign av egenkapital
+
+#### Emisjons
+
+### Tegningsrettigheter
+
+**Beregning av tegningsrettigheter**
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
@@ -260,13 +255,20 @@ T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 
 ---
 
+### Tilbakekjøp av egne aksjer
+
+---
+
+### Aksjesplitt og fondsemisjon
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
+
 **Eksempel 5.12**
 eller
 **Eksempel 5.13**
 
-### Tilbakekjøp av egne aksjer
-
-### Aksjesplitt og fondsemisjon
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-39.png")
