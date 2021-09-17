@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xa7966187a174f0d880ad9cd4cc250aa","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x945f253d8d14beca69e7c687ffced19","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -98,11 +98,26 @@ Selv om, opplever *imperfeksjoner* i kapitalmarkedet
 
 ### Ordinære lån
 
+Kjennetegn
+
+- Løpetid
+- Stilling av sikkerhet
+- Avdragsplan
+- Effektiv rente
+
 ---
 
 ### Obligasjonslån
 
+Kjennetegn
+
+- Et obliasjonslån innebærer at en investor kjøper en andel av et større lån
+- Til forskjell fra et banklån, får dermed lånetaker mange kreditorer
+- Ved kjøp av en obligasjon mottar investor et verdipapir som gir rett til en forhåndsbestemt kontantstrøm som består av renter (kupong) og tilbakebetalt pålydende 
+
 ---
+
+#### Tegning
 
 &lt;img src="pensum/figurer-31.png" width="50%" /&gt;&lt;img src="pensum/figurer-32.png" width="50%" /&gt;
 
@@ -110,33 +125,87 @@ Selv om, opplever *imperfeksjoner* i kapitalmarkedet
 
 ---
 
-**Beregning av obligasjonspris** 
+#### Beregning av obligasjonspris
+
+- Vanlig obligasjon
 
 `\begin{equation}
 P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\ 
 \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + ... + \frac{Mr_k/n}{(1+r/n)^{T}}+\frac{M}{(1+r/n)^T} 
 \end{equation}`
 
-**Null-kupong obligasjoner** 
+- Null-kupong obligasjoner
 
 `\begin{equation}
 P_0=\frac{M}{(1+r)^T} 
 \end{equation}`
-
-**Beregning av effektiv rente**
-
-Løse uttrykkene ovenfor mhp. r.
-
 ---
 
 **Eksempel 5.1**
 
 ---
 
+**Beregning av effektiv rente**
 
 
+Løse uttrykkene ovenfor mhp. r.
 
+&lt;img src="pensum/figurer-35.png" width="50%" /&gt;
+---
 
+### Terminstruktur
+
+&lt;img src="pensum/figurer-36.png" width="50%" /&gt;&lt;img src="pensum/figurer-37.png" width="50%" /&gt;
+---
+
+#### Forventningshypotesen
+
+**Beregning av spotrente og implisitte renter**
+
+Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er gitt ved
+
+`\begin{equation}
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
+\end{equation}`
+
+Løser mhp. `\(f\)` 
+`\begin{equation}
+(1+_{n-1}f_{n})=\frac{(1+_{o}r_{T})^T}{1}
+\end{equation}`
+Setter inn for 
+
+Som gir oss
+`\begin{equation}
+_{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
+\end{equation}`
+
+---
+
+**Beregning av inflasjonsforventningene**
+
+Vi starter med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
+`\begin{equation}
+1+r=\frac{1+i}{1+j} \Leftrightarrow
+1+j+r+rj=i+1 \\
+r(1+j)=i-j \\
+r=\frac{i-j}{i+j}
+\end{equation}`
+
+Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
+
+`\begin{equation}
+_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
+\end{equation}`
+
+---
+
+### Konvertible obligasjoner
+
+#### Forventningsteorien
+
+#### Renterisiko og durasjon
+
+&lt;img src="pensum/figurer-38.png" width="50%" /&gt;
 
 
 

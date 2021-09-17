@@ -84,58 +84,75 @@ Selv om, opplever *imperfeksjoner* i kapitalmarkedet
 
 ### Ordinære lån
 
+Kjennetegn
+
+- Løpetid
+- Stilling av sikkerhet
+- Avdragsplan
+- Effektiv rente
+
 ---
 
 ### Obligasjonslån
 
----
+Kjennetegn
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-31.png",
-			"pensum/figurer-32.png"))
-```
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-33.png",
-			"pensum/figurer-34.png"))
-```
+- Et obliasjonslån innebærer at en investor kjøper en andel av et større lån
+- Til forskjell fra et banklån, får dermed lånetaker mange kreditorer
+- Ved kjøp av en obligasjon mottar investor et verdipapir som gir rett til en forhåndsbestemt kontantstrøm som består av renter (kupong) og tilbakebetalt pålydende 
 
 ---
 
-**Beregning av obligasjonspris** 
+#### Tegning
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-31.png", "pensum/figurer-32.png"))
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-33.png", "pensum/figurer-34.png"))
+```
+
+---
+
+#### Beregning av obligasjonspris
+
+- Vanlig obligasjon
 
 \begin{equation}
 P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\ 
 \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + ... + \frac{Mr_k/n}{(1+r/n)^{T}}+\frac{M}{(1+r/n)^T} 
 \end{equation}
 
-**Null-kupong obligasjoner** 
+- Null-kupong obligasjoner
 
 \begin{equation}
 P_0=\frac{M}{(1+r)^T} 
 \end{equation}
-
-**Beregning av effektiv rente**
-
-Løse uttrykkene ovenfor mhp. r.
-
 ---
 
 **Eksempel 5.1**
 
 ---
 
+**Beregning av effektiv rente**
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::knit_exit()
+
+Løse uttrykkene ovenfor mhp. r.
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-35.png"))
 ```
 ---
 
-### Konvertible obligasjoner
+### Terminstruktur
 
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
+```
 ---
 
-### Terminstruktur
+#### Forventningshypotesen
 
 **Beregning av spotrente og implisitte renter**
 
@@ -156,11 +173,11 @@ Som gir oss
 _{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
 \end{equation}
 
-
 ---
 
 **Beregning av inflasjonsforventningene**
-Vi started med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
+
+Vi starter med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
 \begin{equation}
 1+r=\frac{1+i}{1+j} \Leftrightarrow
 1+j+r+rj=i+1 \\
@@ -174,20 +191,21 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
 \end{equation}
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-36.png")
-```
-
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-37.png")
-```
+---
 
 #### Forventningsteorien
 
----
+#### Renterisiko og durasjon
 
 
-### Renterisiko og durasjon
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-38.png"))
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
+
 
 **Beregning av durasjon**
 
@@ -209,6 +227,8 @@ knitr::include_graphics("pensum/figurer-38.png")
 ```
 
 ---
+
+### Konvertible obligasjoner
 
 ## Bokverdier kontra markedsverdier
 
