@@ -274,7 +274,3 @@ eller
 knitr::include_graphics("pensum/figurer-39.png")
 ```
 
-
-
-
-
