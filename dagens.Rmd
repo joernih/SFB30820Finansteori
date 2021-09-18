@@ -29,6 +29,7 @@ xaringanExtra::use_panelset()
 library(htmlTable)
 library(magrittr)
 library(xaringan)
+library(FinancialMath)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -42,6 +43,7 @@ toc <- readLines("dagens.Rmd")
 tocc <- character()
 
 for (i in 1:length(toc)) {
+# For every line
   if(substr(toc[i][1], 1, 2) == "# ") {
     toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
                 gsub("#", "", ., fixed = TRUE) %>%
@@ -68,7 +70,6 @@ text(x = 0.2, y = yy, labels = text, adj = 0, col = "black")
 class: inverse, center, middle
 
 # Forelesning 6: `r tema[6]` 
-
 
 **Læringsmål:**
 
@@ -99,7 +100,6 @@ class: inverse, center, middle
 
 ### Illustrasjon av finanssektoren
 
-
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("drawio/finansiering.png")
 ```
@@ -112,9 +112,9 @@ Selv om, opplever *imperfeksjoner* i kapitalmarkedet
 
 ### Ordinære lån
 
-Kjennetegn
+Hovedkjennetegn:
 
-- Løpetid
+- Besemt løpetid
 - Stilling av sikkerhet
 - Avdragsplan
 - Effektiv rente
@@ -123,15 +123,15 @@ Kjennetegn
 
 ### Obligasjonslån
 
-Kjennetegn
+Hovedkjennetegn:
 
-- Et obliasjonslån innebærer at en investor kjøper en andel av et større lån
-- Til forskjell fra et banklån, får dermed lånetaker mange kreditorer
-- Ved kjøp av en obligasjon mottar investor et verdipapir som gir rett til en forhåndsbestemt kontantstrøm som består av renter (kupong) og tilbakebetalt pålydende 
+- En investor kjøper en andel av et større lån
+- Til forskjell fra et banklån, lånetaker må forholde seg mange kreditorer
+- Investor mottar et verdipapir som gir rett til en forhåndsbestemt kontantstrøm som består av renter (kupong) og tilbakebetalt pålydende 
 
 ---
 
-#### Omsetning?
+#### Omsetning av obligasjonslån i Norge
 
 ```{r, echo=FALSE, out.width="35%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-31.png", "pensum/figurer-32.png"))
@@ -159,14 +159,41 @@ P_0=\frac{M}{(1+r)^T}
 \end{equation}
 ---
 
-**Eksempel 5.1**
+**Eksempel 5.1:** En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
+
+\begin{equation}
+P_0=\sum_{t=1}^{5\cdot 2}\frac{10000\cdot 0.05/2}{(1+0.06/2)^{5\cdot 2}} + \frac{10000}{(1+0.03)^{5 \cdot 2}} = 2132.55+7440.94 = 9573.49
+\end{equation}
+
+```{r} 
+(0.05*10000)*
+((1-(1/(0.03))^(10+1))/
+(1-(1/(0.03))))
+# [1] 7440.939
+10000/(1-(1/0.03))^10
+# [1] 8.007468e-12
+```
+
 
 ---
 
 **Beregning av effektiv rente**
 
+Tar utgangspunkt i **eksempel 5.1:**, men antar at prisen i utgangspunktet er 9650,-. Formelen for prising av obligasjoner kan da skrives som
+
+$$
+9500=\sum_{t=1}^{2\cdot 5}\frac{10000\cdot 0.05/2}{(1+r/2)^{t}} + \frac{10000}{(1+r/2)^T} =  
+$$
+
 
 Løse uttrykkene ovenfor mhp. r.
+
+$$
+r=0.0291
+$$
+
+---
+
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-35.png"))
@@ -175,6 +202,8 @@ knitr::include_graphics(c("pensum/figurer-35.png"))
 
 #### Terminstruktur
 
+Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
+
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 ```
@@ -182,9 +211,11 @@ knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 
 #### Forventningshypotesen
 
-**Beregning av spotrente og implisitte renter**
+Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
 
-Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er gitt ved
+**Beregning av spotrente og implisitte renter:**
+
+Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
 
 \begin{equation}
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
