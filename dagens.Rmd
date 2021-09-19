@@ -378,3 +378,30 @@ eller
 knitr::include_graphics("pensum/figurer-39.png")
 ```
 
+
+---
+
+.pull-left[
+
+## Hovedbok
+
+
+```{r, echo=FALSE, out.width="75%", fig.cap=""}
+knitr::include_graphics("pensum/figurer-01.png")
+```
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+]
+
+.pull-right[
+
+## Supplerende
+```{r, echo=FALSE, out.width="25%", fig.cap=""}
+knitr::include_graphics("pensum/falitt.jpg")
+```
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+]
+
