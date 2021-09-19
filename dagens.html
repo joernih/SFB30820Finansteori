@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xeb1518cccd94247861aac308ce219d2","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d90a85757ea54a5685e090a0e03d961e","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -180,12 +180,13 @@ $$
 r=0.0291
 $$
 
+---
+
 #### Terminstruktur
 
 Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
 
 &lt;img src="pensum/figurer-36.png" width="50%" /&gt;&lt;img src="pensum/figurer-37.png" width="50%" /&gt;
----
 
 #### Forventningshypotesen
 
@@ -257,27 +258,54 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 ---
 
-### Konvertible obligasjoner
+### Konvertible obligasjoner (KO) og warrants
+
+*Konvertible obligasjoner* en hybrid mellom egenkapital og gjeld
+
+Hovedkjennetegn:
+
+- Innehaver av en KO har rett, men ikke plikt, til å omgjøre sitt krav fra gjeld til egenkapital
+- Dersom innehaveren benytter denne rettigheten, lever vedkommende inn sine obligasjoner til selskapet og får det antall aksjer i bytte som ble avtalt i KO-emisjonen
+- Likviditetseffekt vs. ingen likvidietseffekt
+- Split here
 
 &lt;img src="pensum/figurer-39.png" width="50%" /&gt;
 ---
 
 ## Bokverdier kontra markedsverdier
 
+- Bokverdi (historisk inntjening)
+Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
+
+- Markedsverdi (framtidig inntjening)
+	- akjserkursen er Nåverdi av framtidig inntjening per aksje.
+
+---
+
 &lt;img src="pensum/figurer-40.png" width="50%" /&gt;
+
 ---
 
 ## Egenkapital
 
 ### Omsetning av egenkapital
 
-#### Emisjons
+#### Emisjon
+
+- Ved *egenkapitalemisjon* selger de eksisterende (gamle) eierne deler av sin eiendomsrett til selskapets framtidige inntjening ved enten 
+1. Rettet emisjonen
+2. Offentlig emisjon
+
+---
+
+#### Annenhåndsomsetning
+
+Figurer her
 
 ---
 
 
 ### Tegningsrettigheter
-
 **Beregning av tegningsrettigheter**
 
 `\begin{equation}
@@ -300,9 +328,15 @@ T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 
 ### Tilbakekjøp av egne aksjer
 
+Kjøpe tilbake egne aksjer i annenhåndsmarkedet
+
 ---
 
 ### Aksjesplitt og fondsemisjon
+
+Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelinge3n av aksjekapital eierne imellom er den samme før og etter splitten.
+
+En *fondsemisjon* skjer ved bokføringsmessig fra kontoen opptjent egenkapital på de eksisterende aksjene
 
 
 

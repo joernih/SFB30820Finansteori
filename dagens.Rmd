@@ -199,6 +199,8 @@ $$
 r=0.0291
 $$
 
+---
+
 #### Terminstruktur
 
 Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
@@ -206,7 +208,6 @@ Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 ```
----
 
 #### Forventningshypotesen
 
@@ -280,7 +281,16 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 ---
 
-### Konvertible obligasjoner
+### Konvertible obligasjoner (KO) og warrants
+
+*Konvertible obligasjoner* en hybrid mellom egenkapital og gjeld
+
+Hovedkjennetegn:
+
+- Innehaver av en KO har rett, men ikke plikt, til å omgjøre sitt krav fra gjeld til egenkapital
+- Dersom innehaveren benytter denne rettigheten, lever vedkommende inn sine obligasjoner til selskapet og får det antall aksjer i bytte som ble avtalt i KO-emisjonen
+- Likviditetseffekt vs. ingen likvidietseffekt
+- Split here
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-39.png")
@@ -289,22 +299,40 @@ knitr::include_graphics("pensum/figurer-39.png")
 
 ## Bokverdier kontra markedsverdier
 
+- Bokverdi (historisk inntjening)
+Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
+
+- Markedsverdi (framtidig inntjening)
+	- akjserkursen er Nåverdi av framtidig inntjening per aksje.
+
+---
+
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-40.png"))
 ```
+
 ---
 
 ## Egenkapital
 
 ### Omsetning av egenkapital
 
-#### Emisjons
+#### Emisjon
+
+- Ved *egenkapitalemisjon* selger de eksisterende (gamle) eierne deler av sin eiendomsrett til selskapets framtidige inntjening ved enten 
+1. Rettet emisjonen
+2. Offentlig emisjon
+
+---
+
+#### Annenhåndsomsetning
+
+Figurer her
 
 ---
 
 
 ### Tegningsrettigheter
-
 **Beregning av tegningsrettigheter**
 
 \begin{equation}
@@ -327,9 +355,15 @@ T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 
 ### Tilbakekjøp av egne aksjer
 
+Kjøpe tilbake egne aksjer i annenhåndsmarkedet
+
 ---
 
 ### Aksjesplitt og fondsemisjon
+
+Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelinge3n av aksjekapital eierne imellom er den samme før og etter splitten.
+
+En *fondsemisjon* skjer ved bokføringsmessig fra kontoen opptjent egenkapital på de eksisterende aksjene
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::knit_exit()
