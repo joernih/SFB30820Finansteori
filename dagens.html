@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xcb923f03066477cbb61404adcb05486","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xaa49c77cc4c4d2ab67111574a6dbea7","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -179,6 +179,38 @@ Løse uttrykkene ovenfor mhp. r.
 $$
 r=0.0291
 $$
+
+#### Terminstruktur
+
+Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
+
+&lt;img src="pensum/figurer-36.png" width="50%" /&gt;&lt;img src="pensum/figurer-37.png" width="50%" /&gt;
+---
+
+#### Forventningshypotesen
+
+Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
+
+**Beregning av spotrente og implisitte renter:**
+
+Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
+
+`\begin{equation}
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
+\end{equation}`
+
+Løser mhp. `\(f\)` 
+`\begin{equation}
+(1+_{n-1}f_{n})=\frac{(1+_{o}r_{T})^T}{1}
+\end{equation}`
+Setter inn for 
+
+Som gir oss
+`\begin{equation}
+_{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
+\end{equation}`
+
+---
 
 ---
 
