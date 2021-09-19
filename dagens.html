@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ad7588984ad549e0be2c4119843dbf81","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9f466207374471a914f747c54ce961c","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-18)
+### 2021/08/12 (updated: 2021-09-19)
 
 ---
 
@@ -72,7 +72,7 @@ class: inverse, center, middle
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
 
-Oppdatert: 2021-09-18
+Oppdatert: 2021-09-19
 
 ---
 
@@ -83,7 +83,7 @@ Oppdatert: 2021-09-18
 	- Er en kontrakt som består av to parter
 	- Part 1: Mottar kapital fra den andre parten 
 	- Part 2: Tilfører kapital samtidig med at vedkommende oppnår visse rettigheter ovenfor den andre parten
-- Kapitalmarkedets hovedoppgaver
+- Kapitalmarkedets *tre* hovedoppgaver
 	- Kanalisere og samle kapital
 	- Omfordele og spre risiko
 	- Verdsette økonomisk virksomhet
@@ -93,8 +93,21 @@ Oppdatert: 2021-09-18
 ### Illustrasjon av finanssektoren
 
 &lt;img src="drawio/finansiering.png" width="50%" /&gt;
+---
 
-Selv om, opplever *imperfeksjoner* i kapitalmarkedet
+- Under idealiserte betingelser om fullkommen konkurranse (jmf. mikroøkonimeins 1. velferdsteorem) vil kapitalmarkedets tre hovedoppgaver kunne bli iveratt uten noen form for offentlige reguleringer.
+
+- I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
+  - a
+  - b
+  - c
+  - d
+
+- Det offentlig forsøker å redusere disse imperfeksjonene i form av institusjoner som finanstilsynet og lover og regler
+  - a
+  - b
+  - c
+  - d
 
 ---
 
@@ -123,7 +136,7 @@ Hovedkjennetegn:
 
 #### Omsetning av obligasjonslån i Norge
 
-&lt;img src="pensum/figurer-31.png" width="35%" /&gt;&lt;img src="pensum/figurer-32.png" width="35%" /&gt;
+&lt;img src="pensum/figurer-32.png" width="35%" /&gt;&lt;img src="pensum/figurer-31.png" width="35%" /&gt;
 
 &lt;img src="pensum/figurer-33.png" width="35%" /&gt;&lt;img src="pensum/figurer-34.png" width="35%" /&gt;
 
@@ -131,7 +144,7 @@ Hovedkjennetegn:
 
 #### Beregning av obligasjonspris
 
-- Vanlig obligasjon
+-  Obligasjon med periodevise utebetalinger
 
 `\begin{equation}
 P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\ 
@@ -152,31 +165,6 @@ P_0=\sum_{t=1}^{5\cdot 2}\frac{10000\cdot 0.05/2}{(1+0.06/2)^{5\cdot 2}} + \frac
 \end{equation}`
 
 
-```r
-(0.05*10000)*
-((1-(1/(0.03))^(10+1))/
-(1-(1/(0.03))))
-```
-
-```
-## [1] 8.729427e+17
-```
-
-```r
-# [1] 7440.939
-10000/(1-(1/0.03))^10
-```
-
-```
-## [1] 8.007468e-12
-```
-
-```r
-# [1] 8.007468e-12
-```
-
-
----
 
 **Beregning av effektiv rente**
 
@@ -186,48 +174,11 @@ $$
 9500=\sum_{t=1}^{2\cdot 5}\frac{10000\cdot 0.05/2}{(1+r/2)^{t}} + \frac{10000}{(1+r/2)^T} =  
 $$
 
-
 Løse uttrykkene ovenfor mhp. r.
 
 $$
 r=0.0291
 $$
-
----
-
-
-&lt;img src="pensum/figurer-35.png" width="50%" /&gt;
----
-
-#### Terminstruktur
-
-Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
-
-&lt;img src="pensum/figurer-36.png" width="50%" /&gt;&lt;img src="pensum/figurer-37.png" width="50%" /&gt;
----
-
-#### Forventningshypotesen
-
-Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
-
-**Beregning av spotrente og implisitte renter:**
-
-Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
-
-`\begin{equation}
-(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{n-1}f_{n})...(1+_{T}f_{T})
-\end{equation}`
-
-Løser mhp. `\(f\)` 
-`\begin{equation}
-(1+_{n-1}f_{n})=\frac{(1+_{o}r_{T})^T}{1}
-\end{equation}`
-Setter inn for 
-
-Som gir oss
-`\begin{equation}
-_{n-1}f_{n}=\frac{(1+r)}{(1+r)} - 1
-\end{equation}`
 
 ---
 
