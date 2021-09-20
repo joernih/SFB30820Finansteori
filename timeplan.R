@@ -12,7 +12,7 @@ tema <- c(
 	  "Relevant risiko: Porteføljeteori 3-n objekter",
 	  "Effisiens",
 	  "Kapitalverdimodellen",
-	  "Finansielle instrumenter for finansiering",
+	  "Langsiktige finansieringsformer",
 	  "Gjeld, total risiko og systematisk risiko",
 	  "",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",

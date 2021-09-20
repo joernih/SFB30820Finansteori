@@ -644,22 +644,22 @@ knitr::include_graphics("pensum/figurer-06.png")
 
 ---
 
-**Øvelse:** Forsøk å repliker følgende resultater i Excel
+**øvelse:** forsøk å repliker følgende resultater i excel
 
 .panelset[
-.panel[.panel-name[Tabell]
-```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
+.panel[.panel-name[tabell]
+```{r, echo=f}
+htmltable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkastning b"))
 ```
 ]
-.panel[.panel-name[R-kode (ikke pensum)]
+.panel[.panel-name[r-kode (ikke pensum)]
 ```{r}
 r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
 plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 	w <- seq(0,1,0.01)
 	v <- as.vector(df[,(2)])
 	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
+	covall <- cov.wt(m,v,method='ml')
 	avk <- as.vector(covall$center)
 	kov <- covall$cov[lower.tri(covall$cov)] 
 	var <- as.vector(diag(as.matrix(covall$cov)))
@@ -671,8 +671,8 @@ plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 )
 ```
 ]
-.panel[.panel-name[Figur]
-```{r, echo=F}
+.panel[.panel-name[figur]
+```{r, echo=f}
 gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 plotly::ggplotly(gg)
 ```

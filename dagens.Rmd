@@ -364,12 +364,6 @@ knitr::include_graphics(c("pensum/figurer-40.png"))
 ```
 ---
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::knit_exit()
-```
-
----
-
 ## Egenkapital
 
 ### Omsetning av egenkapital
@@ -408,6 +402,42 @@ Som ved innsetting for $P_x$
 T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}
 
+---
+
+**Eksempel 5.11** EDB Ergogroup har aksjekapital på 301 834 333.50 med pålydende på 1.75. Det betyr at antall aksjer n=172476762.
+Dagens kurs $P_0=13.20$ Selskapet planlegger nå en emisjon på m=94862219 akskjer til kurs $P_e$=9.45. Det gir
+$$
+P_x=\frac{172476762\cdot 13.20+94862219\cdot 9.45}{172476762+94862219}=11.86935
+$$
+
+Eller, dersom vi har at $N=n/m=1.82$
+
+Aksjen vil derfor falle med $11.86935$
+
+Verdien av tegningsretten $T_x$ vil derfor være
+
+$$
+T_x=\frac{13.20-9.45}{1.82+1}=1.33
+$$
+
+Mens kursfallet vil være på
+$$
+P_x-P_e=13.20-11.86935
+$$
+
+Verdien av tegnignsretten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
+
+```{r, eval=F, echo=F}
+301834333.50/1.75
+# [1] 172476762
+(172476762*13.20+94862219*9.45)/(172476762+94862219)
+# [1] 11.86935
+N <- 172476762/94862219
+# [1] 1.818182
+(13.20-9.45)/(N+1)
+# [1] 1.330645
+13.20-11.86935
+```
 ---
 
 ### Tilbakekjøp av egne aksjer
