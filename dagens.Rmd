@@ -209,6 +209,8 @@ Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 ```
 
+---
+
 #### Forventningshypotesen
 
 Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
@@ -285,6 +287,8 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 *Konvertible obligasjoner* en hybrid mellom egenkapital og gjeld
 
+.pull-left[
+
 Hovedkjennetegn:
 
 - Innehaver av en KO har rett, men ikke plikt, til å omgjøre sitt krav fra gjeld til egenkapital
@@ -292,12 +296,24 @@ Hovedkjennetegn:
 - Likviditetseffekt vs. ingen likvidietseffekt
 - Split here
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, out.width="100%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-39.png")
 ```
+
+]
+
+
 ---
 
 ## Bokverdier kontra markedsverdier
+
+
+.pull-left[
 
 - Bokverdi (historisk inntjening)
 Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
@@ -305,11 +321,17 @@ Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke
 - Markedsverdi (framtidig inntjening)
 	- akjserkursen er Nåverdi av framtidig inntjening per aksje.
 
----
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, out.width="100%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-40.png"))
 ```
+
+]
 
 ---
 
