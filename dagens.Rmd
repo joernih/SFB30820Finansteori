@@ -175,14 +175,14 @@ knitr::include_graphics(c("pensum/figurer-33.png", "pensum/figurer-34.png"))
 
 #### Beregning av obligasjonspris
 
--  Obligasjon med periodevise utbetalinger
+-  Ordinær obligasjon (dvs. med periodevise utbetalinger)
 
 \begin{equation}
 P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\ 
 \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + ... + \frac{Mr_k/n}{(1+r/n)^{T}}+\frac{M}{(1+r/n)^T} 
 \end{equation}
 
-- Null-kupong obligasjoner
+- Null-kupong obligasjoner (dvs. uten periodevise utbetalinger)
 
 \begin{equation}
 P_0=\frac{M}{(1+r)^T} 
@@ -246,12 +246,13 @@ Vi har som utgangspunkt at investor er indifferent mellom to alternative lån me
 
 Løser mhp. $_{n-1}f_{n}$ 
 \begin{equation}
-(1+_{t-1}f_{t})=\frac{(1+_{o}r_{T})^T}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
+(1+_{t-1}f_{t})=\frac{(1+_{o}r_{T})^T}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})
 }
 \end{equation}
-Setter inn for 
 
-Som gir oss
+Setter inn for $(1+_{o}r_{t})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})$
+
+Som forteller oss at termin-/forwardrenten for periode $t$ er bestemt ved 
 \begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}
@@ -332,9 +333,6 @@ Hovedkjennetegn OA:
 - Tilsvarende egenskap som KO gitt at rettigheten ikke benyttes
 - Benyttes rettighetene, aksjeutvidelse
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::knit_exit()
-```
 
 ---
 
@@ -345,22 +343,25 @@ knitr::knit_exit()
 .pull-left[
 
 - Bokverdi (historisk inntjening)
-Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
-
-- Markedsverdi (framtidig inntjening)
-	- aksjekursen er Nåverdi av framtidig inntjening per aksje.
-
-
+	- Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
 
 ]
 
 .pull-right[
 
-```{r, echo=FALSE, out.width="100%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-40.png"))
-```
+- Markedsverdi (framtidig inntjening)
+	- Aksjekursen er Nåverdi av framtidig inntjening per aksje.
 
 ]
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-40.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
 
 ---
 
