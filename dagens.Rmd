@@ -32,6 +32,12 @@ library(xaringan)
 library(FinancialMath)
 ```
 
+```{r eval=FALSE, include=FALSE}
+xaringan::inf_mr("dagens.Rmd")
+#xaringan::inf_mr("presentations.Rmd")
+servr::daemon_stop()
+```
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
 ```
@@ -69,14 +75,16 @@ knitr::include_graphics("drawio/finansiering.png")
 ---
 
 - Aktørene
-	- Husholdningene
+	- Husholdningen (enkeltinvestorer)
 	- Ikke finansielle foretak
 	- Finansielle foretak
-	- Offentlige myndigheter
+	- Offentlige myndigheter (sentralbanken, finanstilsynet, statsbanker, lovgivning)
+
 - Kapitalmarkedets *tre* hovedoppgaver
 	- Kanalisere og samle kapital
 	- Omfordele og spre risiko
 	- Verdsette økonomisk virksomhet
+
 - Finansielle instrumenter
 	- Er en kontrakt som består av to parter
 	- Part A: Mottar kapital fra den andre parten 
@@ -84,7 +92,7 @@ knitr::include_graphics("drawio/finansiering.png")
 
 ---
 
-- Under idealiserte betingelser om fullkommen konkurranse (jmf. mikroøkonimeins 1. velferdsteorem) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
+- Under idealiserte betingelser om fullkommen konkurranse (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
 
 - I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
   - Letter å skaffe finansiering for store bedrifter enn små bedrifter
@@ -202,19 +210,16 @@ $$
 
 Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+```{r, echo=FALSE, out.width="40%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 ```
-
 ---
 
 #### Forventningshypotesen
 
 Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
 
----
-
-**Beregning av spotrente og implisitte renter:**
+- **Beregning av spotrente og implisitte renter:**
 
 Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
 
@@ -222,7 +227,7 @@ Vi har som utgangspunkt at investor er indifferent mellom to alternative lån me
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
 \end{equation}
 
-Løser mhp. $_{n-1}f_{n}$ 
+Løser mhp. $(1+_{n-1}f_{n})$ 
 \begin{equation}
 (1+_{t-1}f_{t})=\frac{(1+_{o}r_{T})^T}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})
 }
@@ -230,14 +235,43 @@ Løser mhp. $_{n-1}f_{n}$
 
 Setter inn for $(1+_{o}r_{t})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})$
 
+
+---
+
 Som forteller oss at termin-/forwardrenten for periode $t$ er bestemt ved 
 \begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}
 
+
+**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+```{r, echo=F}
+stats_df <- data.frame(lopetid=c(1,2,3),
+		       M=c(1000,1000,1000),
+		       p=c(1019.23,1018.59,1013.49),
+		       rente=c(4,5,5.5)
+		       )
+##htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+#htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Prosjekt Y","Prosjekt Z"))
+#til obligasjonene er gitt ved $P_{0,1}=1019.23$, $P_{0,1}=1018.59$, og P_{0,1}=1013.49$.
+htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv rente"))
+```
+
+*Terminrente periode 2*
+\begin{equation}
+_{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
+\frac{(1+0.05)^2}{(1+0.04)^1}-1=0.0601
+\end{equation}
+
+*Terminrente periode 3*
+\begin{equation}
+_{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
+=\frac{(1+0.055)^2}{(1+0.05)^2}-1=0.0651
+\end{equation}
+
 ---
 
-**Beregning av inflasjonsforventningene**
+- **Beregning av inflasjonsforventningene**
 
 Vi starter med definisjonen mellom realrenten, nominal rente og inflasjon som er gitt ved
 \begin{equation}
@@ -252,6 +286,8 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 \begin{equation}
 _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
 \end{equation}
+
+**Eksempel 5.3:**
 
 ---
 
@@ -269,7 +305,7 @@ Rentefølsomheten til en obligasjon påvirkes av
 
 ---
 
-**Beregning av durasjon**
+- **Beregning av durasjon**
 
 Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 

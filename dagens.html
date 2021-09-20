@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x07b08ce1dbf45b7b7f4fa4c97eefdbe","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ba67136efd6b4e2c995594d7835a37eb","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -52,6 +52,8 @@ class: center, middle, inverse, title-slide
 
 
 
+
+
 ---
 
 class: inverse, center, middle
@@ -82,14 +84,16 @@ Oppdatert: 2021-09-20
 ---
 
 - Aktørene
-	- Husholdningene
+	- Husholdningen (enkeltinvestorer)
 	- Ikke finansielle foretak
 	- Finansielle foretak
-	- Offentlige myndigheter
+	- Offentlige myndigheter (sentralbanken, finanstilsynet, statsbanker, lovgivning)
+
 - Kapitalmarkedets *tre* hovedoppgaver
 	- Kanalisere og samle kapital
 	- Omfordele og spre risiko
 	- Verdsette økonomisk virksomhet
+
 - Finansielle instrumenter
 	- Er en kontrakt som består av to parter
 	- Part A: Mottar kapital fra den andre parten 
@@ -97,7 +101,7 @@ Oppdatert: 2021-09-20
 
 ---
 
-- Under idealiserte betingelser om fullkommen konkurranse (jmf. mikroøkonimeins 1. velferdsteorem) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
+- Under idealiserte betingelser om fullkommen konkurranse (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
 
 - I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
   - Letter å skaffe finansiering for store bedrifter enn små bedrifter
@@ -202,17 +206,14 @@ $$
 
 Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) og rente for obligasjoner som er lik på alle andre områder. I figurer fremstilles denne sammenhengen i form av *yield-kurver*
 
-&lt;img src="pensum/figurer-36.png" width="50%" /&gt;&lt;img src="pensum/figurer-37.png" width="50%" /&gt;
-
+&lt;img src="pensum/figurer-36.png" width="40%" /&gt;&lt;img src="pensum/figurer-37.png" width="40%" /&gt;
 ---
 
 #### Forventningshypotesen
 
 Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
 
----
-
-**Beregning av spotrente og implisitte renter:**
+- **Beregning av spotrente og implisitte renter:**
 
 Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
 
@@ -220,7 +221,7 @@ Vi har som utgangspunkt at investor er indifferent mellom to alternative lån me
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
 \end{equation}`
 
-Løser mhp. `\(_{n-1}f_{n}\)` 
+Løser mhp. `\((1+_{n-1}f_{n})\)` 
 `\begin{equation}
 (1+_{t-1}f_{t})=\frac{(1+_{o}r_{T})^T}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})
 }
@@ -228,14 +229,65 @@ Løser mhp. `\(_{n-1}f_{n}\)`
 
 Setter inn for `\((1+_{o}r_{t})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})\)`
 
+
+---
+
 Som forteller oss at termin-/forwardrenten for periode `\(t\)` er bestemt ved 
 `\begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}`
 
+
+**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Løpetid&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Pålydende&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Markedspris&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Effektiv rente&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1019.23&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1000&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1018.59&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1000&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1013.49&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+*Terminrente periode 2*
+`\begin{equation}
+_{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
+\frac{(1+0.05)^2}{(1+0.04)^1}-1=0.0601
+\end{equation}`
+
+*Terminrente periode 3*
+`\begin{equation}
+_{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
+=\frac{(1+0.055)^2}{(1+0.05)^2}-1=0.0651
+\end{equation}`
+
 ---
 
-**Beregning av inflasjonsforventningene**
+- **Beregning av inflasjonsforventningene**
 
 Vi starter med definisjonen mellom realrenten, nominal rente og inflasjon som er gitt ved
 `\begin{equation}
@@ -251,6 +303,8 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
 \end{equation}`
 
+**Eksempel 5.3:**
+
 ---
 
 #### Renterisiko og durasjon
@@ -265,7 +319,7 @@ Rentefølsomheten til en obligasjon påvirkes av
 
 ---
 
-**Beregning av durasjon**
+- **Beregning av durasjon**
 
 Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 
