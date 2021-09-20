@@ -312,10 +312,8 @@ Hovedkjennetegn KO:
 
 - Innehaver av en KO har rett, men ikke plikt, til å omgjøre sitt krav fra gjeld til egenkapital
 - Dersom innehaveren benytter denne rettigheten, lever vedkommende inn sine obligasjoner til selskapet og får det antall aksjer i bytte som ble avtalt i KO-emisjonen
-- Hvis ikke,  
-- Split here
-
-
+- Hvis ikke, enten selge KO i annenhåndsmarkedet eller beholde den til forfall
+- Verdien til KO = Verdien av obligasjone + Verdien av konverteringsrettigheten ( $\geqslant0$ )
 ]
 
 .pull-right[
@@ -328,9 +326,11 @@ knitr::include_graphics("pensum/figurer-39.png")
 
 ---
 
+*Obligasjoner med aksjekjøpsrett (warrants)* (OA) utgjør en annen hybrid mellom egenkapital og gjeld
+
 Hovedkjennetegn OA:
-- Hvis ikke,  
-- Split here
+- Tilsvarende egenskap som KO gitt at rettigheten ikke benyttes
+- Benyttes rettighetene, aksjeutvidelse
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::knit_exit()
