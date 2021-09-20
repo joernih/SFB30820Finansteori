@@ -239,18 +239,18 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 
 **Beregning av inflasjonsforventningene**
 
-Vi starter med sammenhengen mellom realrenten, nominal rente og inflasjon som er gitt ved
+Vi starter med definisjonen mellom realrenten, nominal rente og inflasjon som er gitt ved
 \begin{equation}
 1+r=\frac{1+i}{1+j} \Leftrightarrow
 1+j+r+rj=i+1 \\
 r(1+j)=i-j \\
-r=\frac{i-j}{i+j}
+r=\frac{i-j}{1+j}
 \end{equation}
 
 Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 
 \begin{equation}
-_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
+_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
 \end{equation}
 
 ---
@@ -260,24 +260,51 @@ _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{i+_{t-i}f^R_t}
 ```{r, echo=FALSE, out.width="50%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-38.png"))
 ```
+
+Rentefølsomheten til en obligasjon påvirkes av
+- Dens løpetid
+- Kupongrenten
+- Kontantstrømselementenes tidsfasing
+- Ikke symetrisk ved lik renteoppgang som nedgang
+
 ---
 
 **Beregning av durasjon**
 
-$$\frac{\Delta P_0}{\Delta r}=$$
+Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 
 \begin{equation}
 \frac{\Delta P_o}{P_o}=-\frac{\Delta(1+r)}{(1+r)}D
 \end{equation}
 
-Hvor Maculay-durasjonen (mål på prisfølsomhet), D, er gitt ved
+Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er gitt ved
 \begin{equation}
-D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]+\left[\frac{NV(X_1)}{P_0}\right]...\left[\frac{NV(X_1)}{P_0}\right]
+D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
 - Durasjonen *D* er korteren enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
+---
+
+
+.panelset[
+.panel[.panel-name[tabell]
+
+```{r}
+durasjon_df <- function(r=0.10,T=10,M=100){
+	dur <- head(iris)
+}
+```
+]
+.panel[.panel-name[r-kode (ikke pensum)]
+```{r, eval=T}
+a <- durasjon_df()
+a
+```
+]
+]
+
 
 ---
 
