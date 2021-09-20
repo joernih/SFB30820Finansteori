@@ -82,40 +82,45 @@ class: inverse, center, middle
 
 ---
 
-## Finansielle instrumenter og kapitalmarkedet
-
-
-- Finansielle instrumenter
-	- Er en kontrakt som består av to parter
-	- Part 1: Mottar kapital fra den andre parten 
-	- Part 2: Tilfører kapital samtidig med at vedkommende oppnår visse rettigheter ovenfor den andre parten
-- Kapitalmarkedets *tre* hovedoppgaver
-	- Kanalisere og samle kapital
-	- Omfordele og spre risiko
-	- Verdsette økonomisk virksomhet
-
----
+## Kapitalmarkedet, aktørene og finansielle instrumenter
 
 ### Illustrasjon av finanssektoren
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("drawio/finansiering.png")
 ```
+
 ---
 
-- Under idealiserte betingelser om fullkommen konkurranse (jmf. mikroøkonimeins 1. velferdsteorem) vil kapitalmarkedets tre hovedoppgaver kunne bli iveratt uten noen form for offentlige reguleringer.
+- Aktørene
+	- Husholdningene
+	- Ikke finansielle foretak
+	- Finansielle foretak
+	- Offentlige myndigheter
+- Kapitalmarkedets *tre* hovedoppgaver
+	- Kanalisere og samle kapital
+	- Omfordele og spre risiko
+	- Verdsette økonomisk virksomhet
+- Finansielle instrumenter
+	- Er en kontrakt som består av to parter
+	- Part A: Mottar kapital fra den andre parten 
+	- Part B: Tilfører kapital samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
+
+---
+
+- Under idealiserte betingelser om fullkommen konkurranse (jmf. mikroøkonimeins 1. velferdsteorem) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
 
 - I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
-  - a
-  - b
-  - c
-  - d
+  - Letter å skaffe finansiering for store bedrifter enn små bedrifter
+  - Informasjonsineffisiens
+  - Avvik mellom Bedriftsøkonomisk og samfunnsøkonomisk lønnsomhet
+  - ...
 
 - Det offentlig forsøker å redusere disse imperfeksjonene i form av institusjoner som finanstilsynet og lover og regler
-  - a
-  - b
-  - c
-  - d
+  - Minimumskrav om informasjonsinnhold i emisjonsprosjekter
+  - Egenkapitalkrav
+  - Støtteordninger for spesielle prosjekter
+  - ...
 
 ---
 
@@ -125,7 +130,7 @@ knitr::include_graphics("drawio/finansiering.png")
 
 Hovedkjennetegn:
 
-- Besemt løpetid
+- Bestemt løpetid
 - Stilling av sikkerhet
 - Avdragsplan
 - Effektiv rente
@@ -134,19 +139,33 @@ Hovedkjennetegn:
 
 ### Obligasjonslån
 
+.pull-left[
+
 Hovedkjennetegn:
 
 - En investor kjøper en andel av et større lån
 - Til forskjell fra et banklån, lånetaker må forholde seg mange kreditorer
 - Investor mottar et verdipapir som gir rett til en forhåndsbestemt kontantstrøm som består av renter (kupong) og tilbakebetalt pålydende 
 
+]
+
+.pull-right[
+
+```{r, echo=FALSE, out.width="100%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-32.png"))
+```
+
+]
+
+
 ---
 
 #### Omsetning av obligasjonslån i Norge
 
-```{r, echo=FALSE, out.width="35%", fig.cap=""} 
-knitr::include_graphics(c("pensum/figurer-32.png", "pensum/figurer-31.png"))
+```{r, echo=FALSE, out.width="50%", fig.cap=""} 
+knitr::include_graphics(c("pensum/figurer-31.png"))
 ```
+
 
 ```{r, echo=FALSE, out.width="35%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-33.png", "pensum/figurer-34.png"))
@@ -156,7 +175,7 @@ knitr::include_graphics(c("pensum/figurer-33.png", "pensum/figurer-34.png"))
 
 #### Beregning av obligasjonspris
 
--  Obligasjon med periodevise utebetalinger
+-  Obligasjon med periodevise utbetalinger
 
 \begin{equation}
 P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\ 
@@ -283,17 +302,17 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 ---
 
-### Konvertible obligasjoner (KO) og warrants
+### Konvertible obligasjoner (KO) og warrants (OA)
 
 *Konvertible obligasjoner* en hybrid mellom egenkapital og gjeld
 
 .pull-left[
 
-Hovedkjennetegn:
+Hovedkjennetegn KO:
 
 - Innehaver av en KO har rett, men ikke plikt, til å omgjøre sitt krav fra gjeld til egenkapital
 - Dersom innehaveren benytter denne rettigheten, lever vedkommende inn sine obligasjoner til selskapet og får det antall aksjer i bytte som ble avtalt i KO-emisjonen
-- Likviditetseffekt vs. ingen likvidietseffekt
+- Hvis ikke,  
 - Split here
 
 
@@ -307,8 +326,18 @@ knitr::include_graphics("pensum/figurer-39.png")
 
 ]
 
+---
+
+Hovedkjennetegn OA:
+- Hvis ikke,  
+- Split here
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
 
 ---
+
 
 ## Bokverdier kontra markedsverdier
 
@@ -319,7 +348,7 @@ knitr::include_graphics("pensum/figurer-39.png")
 Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
 
 - Markedsverdi (framtidig inntjening)
-	- akjserkursen er Nåverdi av framtidig inntjening per aksje.
+	- aksjekursen er Nåverdi av framtidig inntjening per aksje.
 
 
 
@@ -400,30 +429,5 @@ eller
 knitr::include_graphics("pensum/figurer-39.png")
 ```
 
-
 ---
-
-.pull-left[
-
-## Hovedbok
-
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-01.png")
-```
-
-[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
-
-]
-
-.pull-right[
-
-## Supplerende
-```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("pensum/falitt.jpg")
-```
-
-[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
-
-]
 
