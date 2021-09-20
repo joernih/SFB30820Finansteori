@@ -221,7 +221,7 @@ Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens re
 
 - **Beregning av spotrente og implisitte renter:**
 
-Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
+Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i periode T og de implisitte terminrenten er da gitt ved
 
 \begin{equation}
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
@@ -339,7 +339,7 @@ Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er git
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
-- Durasjonen *D* er korteren enn obligasjonens løpetid $T$
+- Durasjonen *D* er kortere enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
 ---
@@ -361,7 +361,9 @@ durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
 .panel[.panel-name[Tabell]
 
 ```{r}
-dur <- durasjon_df()
+po <- 1019.50
+M <- 1000
+dur <- durasjon_df(r=0.0153,r_m=0.0175,n=2,T=10,M=M)
 htmlTable(head(dur), header=
 	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
 ```
@@ -369,8 +371,8 @@ htmlTable(head(dur), header=
 .panel[.panel-name[Durasjon]
 
 ```{r}
-durasjon <- (sum(dur$wNV[1:18])+16582.60)/1019.50
-durasjon
+durasjon <- (sum(dur$wNV[1:18])+16582.60)/po
+c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 ]
 ]
@@ -406,13 +408,13 @@ knitr::include_graphics("pensum/figurer-39.png")
 
 Hovedkjennetegn OA:
 - Tilsvarende egenskap som KO gitt at rettigheten ikke benyttes
-- Benyttes rettighetene, selskapet utsteder *nye* aksjer i bytte for innebetalt kontraktspris og får med det tilført kapital
+- Benyttes rettighetene, selskapet utsteder *nye* aksjer i bytte for innbetalt kontraktspris og får med det tilført kapital
 
 ---
 
 ## Egenkapital
 
-### Bokbasert kontra markedsbasert egenkapitial
+### Bokbasert kontra markedsbasert egenkapital
 
 .pull-left[
 
@@ -517,7 +519,7 @@ T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 ---
 
 **Eksempel 5.11** EDB Ergogroup har aksjekapital på 301 834 333.50 med pålydende på 1.75. Det betyr at antall aksjer n=172476762.
-Dagens kurs $P_0=13.20$ Selskapet planlegger nå en emisjon på m=94862219 akskjer til kurs $P_e$=9.45. Det gir
+Dagens kurs $P_0=13.20$ Selskapet planlegger nå en emisjon på m=94862219 aksjer til kurs $P_e$=9.45. Det gir
 $$
 P_x=\frac{172476762\cdot 13.20+94862219\cdot 9.45}{172476762+94862219}=11.86935
 $$
@@ -537,7 +539,7 @@ $$
 P_x-P_e=13.20-11.86935
 $$
 
-Verdien av tegnignsretten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
+Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
 
 ```{r, eval=F, echo=F}
 301834333.50/1.75
@@ -567,7 +569,5 @@ En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egen
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::knit_exit()
 ```
-
 # https://thediplomat.com/2021/09/is-chinas-evergrande-group-too-big-to-fail/
 # oppgavene 3.4 og 3.6 i læreboka har jeg vansker med
-

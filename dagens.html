@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"dc937ebf89cb467cacef7d466bd7dd1f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e342036883f84415ac8a84795e5a030c","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -215,7 +215,7 @@ Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens re
 
 - **Beregning av spotrente og implisitte renter:**
 
-Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
+Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i periode T og de implisitte terminrenten er da gitt ved
 
 `\begin{equation}
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
@@ -353,7 +353,7 @@ Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er git
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}`
 
-- Durasjonen *D* er korteren enn obligasjonens løpetid `\(T\)`
+- Durasjonen *D* er kortere enn obligasjonens løpetid `\(T\)`
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
 ---
@@ -368,7 +368,9 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 
 ```r
-dur &lt;- durasjon_df()
+po &lt;- 1019.50
+M &lt;- 1000
+dur &lt;- durasjon_df(r=0.0153,r_m=0.0175,n=2,T=10,M=M)
 htmlTable(head(dur), header=
 	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
 ```
@@ -439,12 +441,13 @@ htmlTable(head(dur), header=
 
 
 ```r
-durasjon &lt;- (sum(dur$wNV[1:18])+16582.60)/1019.50
-durasjon
+durasjon &lt;- (sum(dur$wNV[1:18])+16582.60)/po
+c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 
 ```
-## [1] 17.60213
+## halvårlig     årlig 
+## 17.602133  8.801067
 ```
 ]
 ]
@@ -478,13 +481,13 @@ Hovedkjennetegn KO:
 
 Hovedkjennetegn OA:
 - Tilsvarende egenskap som KO gitt at rettigheten ikke benyttes
-- Benyttes rettighetene, selskapet utsteder *nye* aksjer i bytte for innebetalt kontraktspris og får med det tilført kapital
+- Benyttes rettighetene, selskapet utsteder *nye* aksjer i bytte for innbetalt kontraktspris og får med det tilført kapital
 
 ---
 
 ## Egenkapital
 
-### Bokbasert kontra markedsbasert egenkapitial
+### Bokbasert kontra markedsbasert egenkapital
 
 .pull-left[
 
@@ -581,7 +584,7 @@ T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 ---
 
 **Eksempel 5.11** EDB Ergogroup har aksjekapital på 301 834 333.50 med pålydende på 1.75. Det betyr at antall aksjer n=172476762.
-Dagens kurs `\(P_0=13.20\)` Selskapet planlegger nå en emisjon på m=94862219 akskjer til kurs `\(P_e\)`=9.45. Det gir
+Dagens kurs `\(P_0=13.20\)` Selskapet planlegger nå en emisjon på m=94862219 aksjer til kurs `\(P_e\)`=9.45. Det gir
 $$
 P_x=\frac{172476762\cdot 13.20+94862219\cdot 9.45}{172476762+94862219}=11.86935
 $$
@@ -601,7 +604,7 @@ $$
 P_x-P_e=13.20-11.86935
 $$
 
-Verdien av tegnignsretten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
+Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
 
 
 ---
