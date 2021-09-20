@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xa5a71b5c72347e58ed21c84b2ec8b2c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd3593e5b5364569803fa6e207cb2de4","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -353,37 +353,86 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 
 .panelset[
-.panel[.panel-name[tabell]
+.panel[.panel-name[R-kode (ikke pensum)]
 
 
-```r
-durasjon_df &lt;- function(r=0.10,T=10,M=100){
-	dur &lt;- head(iris)
-}
-```
 ]
-.panel[.panel-name[r-kode (ikke pensum)]
+.panel[.panel-name[Tabell]
+
 
 ```r
-a &lt;- durasjon_df()
-a
+dur &lt;- durasjon_df()
+htmlTable(head(dur), header=
+	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
 ```
 
-```
-##   Sepal.Length Sepal.Width Petal.Length
-## 1          5.1         3.5          1.4
-## 2          4.9         3.0          1.4
-## 3          4.7         3.2          1.3
-## 4          4.6         3.1          1.5
-## 5          5.0         3.6          1.4
-## 6          5.4         3.9          1.7
-##   Petal.Width Species
-## 1         0.2  setosa
-## 2         0.2  setosa
-## 3         0.2  setosa
-## 4         0.2  setosa
-## 5         0.2  setosa
-## 6         0.4  setosa
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Periode&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Diskontering&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Kontantstrømselement&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;NV&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;veid NV&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.00765&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.68357068426537&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.68357068426537&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.0153585225&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.61764569470091&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;17.2352913894018&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.02312601519712&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.55222120250177&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25.6566636075053&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.03095292921338&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.4872934079311&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33.9491736317244&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.03883971912187&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.42285854009934&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42.1142927004967&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;8.75&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.04678684297315&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;8.35891285674524&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50.1534771404714&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+.panel[.panel-name[Durasjon]
+
+
+```r
+durasjon &lt;- (sum(dur$wNV[1:18])+16582.60)/1019.50
 ```
 ]
 ]
@@ -422,61 +471,96 @@ Hovedkjennetegn OA:
 
 ---
 
+## Egenkapital
 
-## Bokverdier kontra markedsverdier
-
+### Bokbasert kontra markedsbasert egenkapitial
 
 .pull-left[
 
-- Bokverdi (historisk inntjening)
-	- Bokverdi Egenkapital = Innskutt Egenkapital+ Opptjent egenkapital(overskudd ikke utbetalt som dividende eller disponert på annen måte)
-
+- Bokverdi (historisk inntjening av alle finansieringsressurser utenom gjeld)
+	- Bokverdi Egenkapital = Innskutt Egenkapital + Opptjent egenkapital (dvs. overskudd ikke utbetalt som dividende eller disponert på annen måte)
+ 
 ]
 
 .pull-right[
 
 - Markedsverdi (framtidig inntjening)
-	- Aksjekursen er Nåverdi av framtidig inntjening per aksje.
-
+	- Aksjekursen gir uttrykk for nåverdien av framtidig inntjening per aksje
+	- Markedsverdi EK = Aksjekurs `\(\cdot\)` Antall utestående aksjer
 ]
+
+---
 
 &lt;img src="pensum/figurer-40.png" width="50%" /&gt;
 ---
 
-## Egenkapital
 
 ### Omsetning av egenkapital
 
-#### Emisjon
+
+.pull-left[
+#### Emisjon (førstehåndsomsetning)
 
 - Ved *egenkapitalemisjon* selger de eksisterende (gamle) eierne deler av sin eiendomsrett til selskapets framtidige inntjening ved enten 
-1. Rettet emisjonen
-2. Offentlig emisjon
+	1. Rettet emisjonen
+	2. Offentlig emisjon
+
+
+]
+
+.pull-right[
+
+&lt;img src="pensum/figurer-41.png" width="90%" /&gt;
+
+]
+
+&lt;img src="pensum/figurer-42.png" width="90%" /&gt;
 
 ---
 
 #### Annenhåndsomsetning
 
-Figurer her
+For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 
+- Markedsverdien må være på mins 300 mill
+- Minimum 500 aksjonærer med aksjer verdt minst 10 000,-
+- Offentlig årsregnskap og årsberetning i henhold til regnskapslovgivningen i de tre siste årene før børsnotering
+
+
+&lt;img src="pensum/figurer-44.png" width="90%" /&gt;
 ---
 
 
 ### Tegningsrettigheter
-**Beregning av tegningsrettigheter**
+
+- Emisjon med forkjøpsrett for gamle aksjonærer er hjemlet i aksjeloven. Forkjøpsretten sikres ved at selskapet utsteder *tegningsrettigheter* (rights) til alle som er i aksjonærregisteret.
+- Antall tegningsrettigheter tilsvarer antall utestående aksjer
+- Hvor antall aksjer per tegningsrettighet bestemmes av forholdet mellom antall gamle og nye aksjer
+
+---
+
+- **Beregning av tegningsrettigheter:**
+
+*Ex-rights-kursen* ( `\(P_x\)` ) er bestemt som et veid gjennomsnitt av
+*Rights-on-kursen* ( `\(P_0\)` ) og emisjonskursen ( `\(P_e\)` )
 
 `\begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}`
+
 Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer `\(N=n/m\)`.
+
 `\begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
 \end{equation}`
+
 Tegningsretten er gitt ved
 `\begin{equation}
-T_n=\left( P_x-P_e \right)\frac{1}{1/N}
+T_n=\left( P_x-P_e \right)\frac{1}{N}
 \end{equation}`
-Som ved innsetting for `\(P_x\)`
+
+Som ved innsetting for `\(P_x\)` gir
+
 `\begin{equation}
 T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}`
@@ -511,7 +595,7 @@ Verdien av tegnignsretten nøyaktig tilsvarer kursfallet. Gamle aksjonærers for
 
 ### Tilbakekjøp av egne aksjer
 
-Kjøpe tilbake egne aksjer i annenhåndsmarkedet
+Kjøpe tilbake egne aksjer i annenhåndsmarkedet. Dette *reduserer* antallet utestående aksjer i markedet, inkludert beholdningene til eventuelle innsideeiere.
 
 ---
 
@@ -520,8 +604,6 @@ Kjøpe tilbake egne aksjer i annenhåndsmarkedet
 Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelinge3n av aksjekapital eierne imellom er den samme før og etter splitten.
 
 En *fondsemisjon* skjer ved bokføringsmessig fra kontoen opptjent egenkapital på de eksisterende aksjene
-
-
 
 
 
