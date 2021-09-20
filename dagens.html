@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ba67136efd6b4e2c995594d7835a37eb","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xa5a71b5c72347e58ed21c84b2ec8b2c","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -274,16 +274,18 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 &lt;/table&gt;
 
 *Terminrente periode 2*
-`\begin{equation}
+
+`\begin{equation*}
 _{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
 \frac{(1+0.05)^2}{(1+0.04)^1}-1=0.0601
-\end{equation}`
+\end{equation*}`
 
 *Terminrente periode 3*
-`\begin{equation}
+
+`\begin{equation*}
 _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
 =\frac{(1+0.055)^2}{(1+0.05)^2}-1=0.0651
-\end{equation}`
+\end{equation*}`
 
 ---
 
@@ -303,7 +305,19 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
 \end{equation}`
 
+---
+
 **Eksempel 5.3:**
+
+*Forventet inflasjon periode 2*
+`\begin{equation*}
+_{1}f^R_2=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}=\frac{0.0601-0.0317}{1+0.0317}=0.0275
+\end{equation*}`
+
+*Forventet inflasjon periode 3*
+`\begin{equation*}
+_{2}f^R_3=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}=\frac{0.0651-0.0317}{1+0.0317}=0.0324
+\end{equation*}`
 
 ---
 
