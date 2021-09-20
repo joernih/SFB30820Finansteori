@@ -334,14 +334,17 @@ Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å deri
 \frac{\Delta P_o}{P_o}=-\frac{\Delta(1+r)}{(1+r)}D
 \end{equation}
 
-Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er gitt ved
+Komponenten D omtales som Maculay-durasjonen (mål på rentefølsomhet) og er gitt ved
 \begin{equation}
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
+Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert Kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?=
+
 - Durasjonen *D* er kortere enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
+
 ---
 
 
@@ -350,20 +353,25 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 ```{r, echo=F}
 durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
-	dur <- data.frame(per=seq(1,T*n)) %>% 
+	dur <- data.frame(per=seq(1,T*n-1)) %>% 
 		dplyr::mutate(kont=(M*r_m)/n) %>%
-		dplyr::mutate(disk=(1+r/n)^per) %>%
-		dplyr::mutate(NV=kont/disk) %>%
+		dplyr::mutate(disk=(1/(1+r/n))^per) %>%
+		dplyr::mutate(NV=kont*disk) %>%
 		dplyr::mutate(wNV=per*NV)
+
 }
 ```
 ]
 .panel[.panel-name[Tabell]
 
 ```{r}
+r <- 0.0153
+r_m <- 0.0175
 po <- 1019.50
+n <- 2
+T <-  10
 M <- 1000
-dur <- durasjon_df(r=0.0153,r_m=0.0175,n=2,T=10,M=M)
+dur <- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
 htmlTable(head(dur), header=
 	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
 ```
@@ -371,7 +379,8 @@ htmlTable(head(dur), header=
 .panel[.panel-name[Durasjon]
 
 ```{r}
-durasjon <- (sum(dur$wNV[1:18])+16582.60)/po
+term <- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
+durasjon <- (sum(dur$wNV[1:18])+term)/po
 c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 ]
