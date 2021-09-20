@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd3593e5b5364569803fa6e207cb2de4","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"dc937ebf89cb467cacef7d466bd7dd1f","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -85,9 +85,9 @@ Oppdatert: 2021-09-20
 
 - Aktørene
 	- Husholdningen (enkeltinvestorer)
-	- Ikke finansielle foretak
-	- Finansielle foretak
-	- Offentlige myndigheter (sentralbanken, finanstilsynet, statsbanker, lovgivning)
+	- Ikke finansielle foretak (bedrifter)
+	- Finansielle foretak (fungerer som mellommann)
+	- Offentlige myndigheter (sentralbanken, finanstilsynet, statsbanker, m.m)
 
 - Kapitalmarkedets *tre* hovedoppgaver
 	- Kanalisere og samle kapital
@@ -193,7 +193,7 @@ $$
 9500=\sum_{t=1}^{2\cdot 5}\frac{10000\cdot 0.05/2}{(1+r/2)^{t}} + \frac{10000}{(1+r/2)^T} =  
 $$
 
-Løse uttrykkene ovenfor mhp. r.
+Løse uttrykkene ovenfor mhp. r. (ved bruk av tabell, programvare eller kalkulator)
 
 $$
 r=0.0291
@@ -215,28 +215,33 @@ Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens re
 
 - **Beregning av spotrente og implisitte renter:**
 
-Vi har som utgangspunkt at investor er indifferent mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
+Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i period T og de implisitte terminrenten er da gitt ved
 
 `\begin{equation}
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
 \end{equation}`
 
-Løser mhp. `\((1+_{n-1}f_{n})\)` 
-`\begin{equation}
-(1+_{t-1}f_{t})=\frac{(1+_{o}r_{T})^T}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})
+Løser mhp. `\((1+_{t-1}f_{t})\)` 
+`\begin{equation*}
+(1+_{t-1}f_{t})=\frac{(1+_{o}r_{t})^t}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})
 }
-\end{equation}`
+\end{equation*}`
 
-Setter inn for `\((1+_{o}r_{t})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t-1})\)`
+Setter inn for `\((1+_{o}r_{t-1})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})\)`
 
+`\begin{equation*}
+_{t-1}f_{t}+1=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}}
+\end{equation*}`
 
 ---
 
 Som forteller oss at termin-/forwardrenten for periode `\(t\)` er bestemt ved 
+
 `\begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}`
 
+---
 
 **Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
@@ -284,7 +289,7 @@ _{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 =
 
 `\begin{equation*}
 _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
-=\frac{(1+0.055)^2}{(1+0.05)^2}-1=0.0651
+=\frac{(1+0.055)^3}{(1+0.05)^2}-1=0.0651
 \end{equation*}`
 
 ---
@@ -302,7 +307,7 @@ r=\frac{i-j}{1+j}
 Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 
 `\begin{equation}
-_{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
+_{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 \end{equation}`
 
 ---
@@ -311,12 +316,14 @@ _{t-i}f^R_t=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}
 
 *Forventet inflasjon periode 2*
 `\begin{equation*}
-_{1}f^R_2=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}=\frac{0.0601-0.0317}{1+0.0317}=0.0275
+_{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
+=\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}`
 
 *Forventet inflasjon periode 3*
 `\begin{equation*}
-_{2}f^R_3=\frac{i-_{t-i}f^R_t}{1+_{t-i}f^R_t}=\frac{0.0651-0.0317}{1+0.0317}=0.0324
+_{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
+=\frac{0.0651-0.0317}{1+0.0317}=0.0324
 \end{equation*}`
 
 ---
@@ -433,6 +440,11 @@ htmlTable(head(dur), header=
 
 ```r
 durasjon &lt;- (sum(dur$wNV[1:18])+16582.60)/1019.50
+durasjon
+```
+
+```
+## [1] 17.60213
 ```
 ]
 ]
@@ -466,8 +478,7 @@ Hovedkjennetegn KO:
 
 Hovedkjennetegn OA:
 - Tilsvarende egenskap som KO gitt at rettigheten ikke benyttes
-- Benyttes rettighetene, aksjeutvidelse
-
+- Benyttes rettighetene, selskapet utsteder *nye* aksjer i bytte for innebetalt kontraktspris og får med det tilført kapital
 
 ---
 
@@ -514,6 +525,8 @@ Hovedkjennetegn OA:
 
 ]
 
+---
+
 &lt;img src="pensum/figurer-42.png" width="90%" /&gt;
 
 ---
@@ -535,7 +548,7 @@ For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 
 - Emisjon med forkjøpsrett for gamle aksjonærer er hjemlet i aksjeloven. Forkjøpsretten sikres ved at selskapet utsteder *tegningsrettigheter* (rights) til alle som er i aksjonærregisteret.
 - Antall tegningsrettigheter tilsvarer antall utestående aksjer
-- Hvor antall aksjer per tegningsrettighet bestemmes av forholdet mellom antall gamle og nye aksjer
+- Hvor mange aksjer som gis per tegningsrettighet bestemmes av forholdet mellom antall gamle og nye aksjer
 
 ---
 
@@ -601,9 +614,9 @@ Kjøpe tilbake egne aksjer i annenhåndsmarkedet. Dette *reduserer* antallet ute
 
 ### Aksjesplitt og fondsemisjon
 
-Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelinge3n av aksjekapital eierne imellom er den samme før og etter splitten.
+Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelingen av aksjekapital eierne imellom er den samme før og etter splitten.
 
-En *fondsemisjon* skjer ved bokføringsmessig fra kontoen opptjent egenkapital på de eksisterende aksjene
+En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
 
 
 
