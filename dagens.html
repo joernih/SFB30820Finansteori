@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e342036883f84415ac8a84795e5a030c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e12642fe5d8d46f498ed9eaa4afb4a9e","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-20)
+### 2021/08/12 (updated: 2021-09-21)
 
 ---
 
@@ -64,19 +64,19 @@ class: inverse, center, middle
 
 - Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
 - Beregne markedsverdi og effektiv rente for en obligasjon.
-- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
+- Finne terminrenter fra spotrenter (samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.)
 - Lage en balanseoppstilling basert på bokverdier og markedsverdier.
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
 
-Oppdatert: 2021-09-20
+Oppdatert: 2021-09-21
 
 ---
 
 
 ## Kapitalmarkedet, aktørene og finansielle instrumenter
 
-### Illustrasjon av finanssektoren
+### Illustrasjon av finanssektoren sin plass i realøkonomien
 
 &lt;img src="drawio/finansiering.png" width="50%" /&gt;
 
@@ -314,13 +314,13 @@ _{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 
 **Eksempel 5.3:**
 
-*Forventet inflasjon periode 2*
+*Forventet realrente periode 2*
 `\begin{equation*}
 _{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
 =\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}`
 
-*Forventet inflasjon periode 3*
+*Forventet realrente periode 3*
 `\begin{equation*}
 _{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
 =\frac{0.0651-0.0317}{1+0.0317}=0.0324
@@ -340,7 +340,7 @@ Rentefølsomheten til en obligasjon påvirkes av
 
 ---
 
-- **Beregning av durasjon**
+- **Beregning av durasjon (for spesielt interesserte)**
 
 Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 
@@ -353,9 +353,12 @@ Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er git
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}`
 
+Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?).
+
 - Durasjonen *D* er kortere enn obligasjonens løpetid `\(T\)`
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
+
 ---
 
 
@@ -368,19 +371,23 @@ D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \le
 
 
 ```r
+r &lt;- 0.0153
+r_m &lt;- 0.0175
 po &lt;- 1019.50
+n &lt;- 2
+T &lt;-  10
 M &lt;- 1000
-dur &lt;- durasjon_df(r=0.0153,r_m=0.0175,n=2,T=10,M=M)
+dur &lt;- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
 htmlTable(head(dur), header=
-	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
+	  c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
 ```
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Periode&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Diskontering&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Kontantstrømselement&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Diskontering&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;NV&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;veid NV&lt;/th&gt;
 &lt;/tr&gt;
@@ -390,49 +397,49 @@ htmlTable(head(dur), header=
 &lt;td style='text-align: left;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.00765&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.68357068426537&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.68357068426537&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.992408&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.68357&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.68357&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;2&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;2&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.0153585225&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.61764569470091&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;17.2352913894018&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.984874&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.617648&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;17.235296&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;3&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.02312601519712&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.55222120250177&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;25.6566636075053&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.977397&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.552224&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25.656672&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;4&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;4&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.03095292921338&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.4872934079311&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;33.9491736317244&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.969976&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.48729&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33.94916&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='text-align: left;'&gt;5&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;5&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.03883971912187&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8.42285854009934&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;42.1142927004967&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.962612&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8.422855&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42.114275&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;6&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;6&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;8.75&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.04678684297315&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;8.35891285674524&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50.1534771404714&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.955304&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;8.35891&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50.15346&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -441,13 +448,14 @@ htmlTable(head(dur), header=
 
 
 ```r
-durasjon &lt;- (sum(dur$wNV[1:18])+16582.60)/po
+term &lt;- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
+durasjon &lt;- (sum(dur$wNV[1:18])+term)/po
 c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 
 ```
 ## halvårlig     årlig 
-## 17.602133  8.801067
+## 17.602135  8.801067
 ```
 ]
 ]
@@ -557,7 +565,7 @@ For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 
 - **Beregning av tegningsrettigheter:**
 
-*Ex-rights-kursen* ( `\(P_x\)` ) er bestemt som et veid gjennomsnitt av
+
 *Rights-on-kursen* ( `\(P_0\)` ) og emisjonskursen ( `\(P_e\)` )
 
 `\begin{equation}
@@ -601,7 +609,7 @@ $$
 
 Mens kursfallet vil være på
 $$
-P_x-P_e=13.20-11.86935
+P_x-P_e=13.20-11.86935=1.33
 $$
 
 Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.

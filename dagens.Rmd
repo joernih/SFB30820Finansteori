@@ -53,7 +53,7 @@ class: inverse, center, middle
 
 - Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
 - Beregne markedsverdi og effektiv rente for en obligasjon.
-- Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
+- Finne terminrenter fra spotrenter (samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.)
 - Lage en balanseoppstilling basert på bokverdier og markedsverdier.
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
@@ -65,7 +65,7 @@ class: inverse, center, middle
 
 ## Kapitalmarkedet, aktørene og finansielle instrumenter
 
-### Illustrasjon av finanssektoren
+### Illustrasjon av finanssektoren sin plass i realøkonomien
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics("drawio/finansiering.png")
@@ -298,13 +298,13 @@ _{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 
 **Eksempel 5.3:**
 
-*Forventet inflasjon periode 2*
+*Forventet realrente periode 2*
 \begin{equation*}
 _{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
 =\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}
 
-*Forventet inflasjon periode 3*
+*Forventet realrente periode 3*
 \begin{equation*}
 _{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
 =\frac{0.0651-0.0317}{1+0.0317}=0.0324
@@ -326,7 +326,7 @@ Rentefølsomheten til en obligasjon påvirkes av
 
 ---
 
-- **Beregning av durasjon**
+- **Beregning av durasjon (for spesielt interesserte)**
 
 Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 
@@ -334,12 +334,12 @@ Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å deri
 \frac{\Delta P_o}{P_o}=-\frac{\Delta(1+r)}{(1+r)}D
 \end{equation}
 
-Komponenten D omtales som Maculay-durasjonen (mål på rentefølsomhet) og er gitt ved
+Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er gitt ved
 \begin{equation}
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
-Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert Kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?=
+Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?).
 
 - Durasjonen *D* er kortere enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
@@ -355,9 +355,9 @@ Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid 
 durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
 	dur <- data.frame(per=seq(1,T*n-1)) %>% 
 		dplyr::mutate(kont=(M*r_m)/n) %>%
-		dplyr::mutate(disk=(1/(1+r/n))^per) %>%
-		dplyr::mutate(NV=kont*disk) %>%
-		dplyr::mutate(wNV=per*NV)
+		dplyr::mutate(disk=round((1/(1+r/n))^per,digits=6)) %>%
+		dplyr::mutate(NV=round(kont*disk,digits=6)) %>%
+		dplyr::mutate(wNV=round(per*NV,digits=6))
 
 }
 ```
@@ -373,7 +373,7 @@ T <-  10
 M <- 1000
 dur <- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
 htmlTable(head(dur), header=
-	  c("Periode","Diskontering","Kontantstrømselement","NV","veid NV"))
+	  c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
 ```
 ]
 .panel[.panel-name[Durasjon]
@@ -501,7 +501,7 @@ knitr::include_graphics(c("pensum/figurer-44.png"))
 
 - **Beregning av tegningsrettigheter:**
 
-*Ex-rights-kursen* ( $P_x$ ) er bestemt som et veid gjennomsnitt av
+
 *Rights-on-kursen* ( $P_0$ ) og emisjonskursen ( $P_e$ )
 
 \begin{equation}
@@ -545,7 +545,7 @@ $$
 
 Mens kursfallet vil være på
 $$
-P_x-P_e=13.20-11.86935
+P_x-P_e=13.20-11.86935=1.33
 $$
 
 Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.

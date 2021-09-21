@@ -30,21 +30,51 @@ Sys.which('decktape')
 xaringan::inf_mr("tavlefil.Rmd")
 ```
 
-# Kovariansmatrisen
+# Investeringsbeslutninger (eiendelssiden på bedriftens balanse)
+RJ-metoden
 
-## 2 variabler
+- Nåverdi
+  - Teller: Forventet kontantstrøm
+  - Nevner: Kapitalkostnad (risikojusert rente)
+
+Beregne nevner
+  - Porteføljavasktning of risikso med 2-n variable - n-> uendlig: Aksjeporteføljen består kun av systematisk (relevant) risiko
+  - Aksjens eller prosjektets $\beta$
+  - Porteføljeteori
+  - KVM (forutsetningene fra porteføljeteorien + kapitalmarkedet var i likevekt
+  - Prissette (bestemme forholdet mellom relevant risiko og forventet avkastning) for alle akskjer/verdipapirer
+  - Kapitalkostnad: 
+
+---
+  
+# Finansieringsbeslutninger
+- Illuatrasjon over kapitalmarkedet og dets aktører
+- Gjeld
+  - Lån
+  - Obligasjoner
+  - Konvertible obligasjoner
+- Egenkapitalen
+  - Emisjon
+  - Tilbakkjøp av aksjer
+  - Aksjeplitt
+  
+Spørsmål: Kan vi skape verdi (for aksjonærene) ved å endre forholdet mellom 
+egenkapital og gjeld?
+
+
+
+
+  
+  
+
+---
+
+# Investeringsbeslutninger
 
 
 
 
 
-## 3 variabler
+---
 
-
-
-
-
-## N variabler
-
-
-
+# Finansieringsbeslutninger
