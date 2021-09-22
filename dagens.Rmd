@@ -61,30 +61,149 @@ class: inverse, center, middle
 
 ---
 
-# Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+
+### problemstilling(?) og definisjon av gjeld
+
+- Gjeldsandel (mellom 0 og 1) $G/(G+E)$
+
+- Gjeldsbeta (mellom 0 og $\infty$) $G/G$
 
 ---
 
-# Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+.pull-left[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+
+]
+
+.pull-right[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+]
+
+```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-46.png"))
+```
+---
+
+### Fem egenskaper
+
+1.
+1.
+1.
+1.
+1.
+
+---
+
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+### Formelt ###
+
+---
+
+**Eksempel xx**:
+	
+.pull-left[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+
+]
+
+.pull-right[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+]
+
+
+```{r, echo=FALSE, align='rights', out.width="50%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-47.png"))
+```
 
 ---
 
 # Arbitrasje
+
+.pull-left[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+
+]
+
+.pull-right[
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+til <- c(250,200,150,100,50)
+#df_opa <- data.frame(til)
+htmlTable(head(iris), header=c(seq(1,5)))
+```
+
+]
+
+**Resultat:** Likevekt, men hva skaper verdien
+
 ---
 
 # Miller & Modigliani
 
 ---
 
+Forutsetninger
+-
+-
+-
+-
+-
+
+---
+
+**Eksempel xx**:
+
+- **M&M.1**
+
+- **M&M.2**
+
+---
+
+
 ```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-46.png"))
+knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
 ---
 
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-47.png"))
-```
----
 
 ```{r, echo=FALSE, out.width="90%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-48.png"))
@@ -106,9 +225,6 @@ knitr::include_graphics(c("pensum/figurer-51.png"))
 ```
 ---
 
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-52.png"))
-```
 ---
 
 
