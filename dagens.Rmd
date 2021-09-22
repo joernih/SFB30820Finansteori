@@ -61,10 +61,11 @@ class: inverse, center, middle
 
 ---
 
+# Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
+---
 
-# Forventet Kontantstrøm
-
+# Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
 
 ---
 
@@ -89,6 +90,27 @@ knitr::include_graphics(c("pensum/figurer-47.png"))
 knitr::include_graphics(c("pensum/figurer-48.png"))
 ```
 ---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-49.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-50.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-51.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-52.png"))
+```
+---
+
 
 
 
