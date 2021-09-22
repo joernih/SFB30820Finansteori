@@ -61,3 +61,48 @@ class: inverse, center, middle
 
 ---
 
+
+
+# Forventet Kontantstrøm
+
+
+---
+
+# Arbitrasje
+---
+
+# Miller & Modigliani
+
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-46.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-47.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="90%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-48.png"))
+```
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
