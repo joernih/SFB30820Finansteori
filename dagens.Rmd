@@ -76,9 +76,11 @@ class: inverse, center, middle
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
+til <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*0.10) %>%
+	dplyr::mutate(oer=ofr-r) %>%
+	dplyr::mutate(opa=oer/10)
+htmlTable(t(til), header=c(seq(1,5)))
 ```
 
 
@@ -88,9 +90,11 @@ htmlTable(head(iris), header=c(seq(1,5)))
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
+til <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*0.10) %>%
+	dplyr::mutate(oer=ofr-r) %>%
+	dplyr::mutate(opa=oer/10)
+htmlTable(t(til), header=c(seq(1,5)))
 ```
 
 ]
@@ -100,13 +104,13 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 ---
 
-### Fem egenskaper
+### Fem effekter av økt gjeldsgrad
 
-1.
-1.
-1.
-1.
-1.
+1. OPA øker
+1. OPA blir mer usikkert
+1. OPA blir høyere i gode tider, men lavere i dårliger tider
+1. Variasjonskoeffisienten
+1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
 
 ---
 
@@ -129,7 +133,6 @@ htmlTable(head(iris), header=c(seq(1,5)))
 
 
 ]
-
 .pull-right[
 
 ```{r, echo=F}
@@ -141,6 +144,11 @@ htmlTable(head(iris), header=c(seq(1,5)))
 
 ]
 
+```{r}
+dfa <- tidyr::tibble(x = 1:3, y = 3:1)
+dfa
+```
+
 
 ```{r, echo=FALSE, align='rights', out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
@@ -148,7 +156,11 @@ knitr::include_graphics(c("pensum/figurer-47.png"))
 
 ---
 
-# Arbitrasje
+## Oppsplitting av kontantstrøm
+
+---
+
+## Arbitrasje
 
 .pull-left[
 
@@ -182,11 +194,12 @@ htmlTable(head(iris), header=c(seq(1,5)))
 ---
 
 Forutsetninger
--
--
--
--
--
+
+- Alle investorer har full informasjon om markedsmulighetene
+- For samme risiko, alle kan låne til samme rente
+- Ingen transaksjonskostnader
+- Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
+- Ingen betaler skatt
 
 ---
 
