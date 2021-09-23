@@ -72,15 +72,20 @@ class: inverse, center, middle
 ---
 
 
+**Eksempel x.x**
+
 .pull-left[
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-til <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=ofr*0.10) %>%
-	dplyr::mutate(oer=ofr-r) %>%
-	dplyr::mutate(opa=oer/10)
-htmlTable(t(til), header=c(seq(1,5)))
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+htmlTable(t(til_u), header=c(seq(1,5)))
 ```
 
 
@@ -90,11 +95,14 @@ htmlTable(t(til), header=c(seq(1,5)))
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-til <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=ofr*0.10) %>%
-	dplyr::mutate(oer=ofr-r) %>%
-	dplyr::mutate(opa=oer/10)
-htmlTable(t(til), header=c(seq(1,5)))
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+htmlTable(t(til_m), header=c(seq(1,5)))
 ```
 
 ]
