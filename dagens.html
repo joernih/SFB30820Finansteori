@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"dbfe33c41fb54c4d964509b7bf9fd68f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x917d944b0a84a798e1255a19ff311d9","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -243,7 +243,7 @@ Senere se på hvordan disse kan diversifiseres
 
 .pull-right[
 
-**Uten gjeld**
+**Med gjeldsgrad/andel på 50%*
 
 - Forventet avkastning: 15
 - Standardavvik: 7.9056942 
@@ -254,7 +254,229 @@ Senere se på hvordan disse kan diversifiseres
 
 ---
 
-Miller &amp; Modigliani
+### Fem effekter av økt gjeldsgrad
+
+1. OPA øker
+1. OPA blir mer usikkert
+1. OPA blir høyere i gode tider, men lavere i dårliger tider
+1. Variasjonskoeffisienten
+1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
+
+---
+
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+### Formelt ###
+
+`\begin{equation*}
+\beta_{I}=\beta_{E}w_E+\beta_{G}w_G
+\end{equation*}`
+
+Løst for
+`\begin{equation*}
+\beta_{E}=\beta_{I}+\beta_{G}\frac{G}{E}
+\end{equation*}`
+
+- Med konkursrisiko
+
+`\begin{equation*}
+\beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
+\end{equation*}`
+
+- Uten konkursrisiko
+
+`\begin{equation*}
+\beta_{E}=\beta_{I}(1+\frac{G}{E})
+\end{equation*}`
+
+---
+
+**Eksempel xx**:
+	
+.pull-left[
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;6&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;7&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;goe&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;invb&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;gjb&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;akb&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.0475&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.09&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+.pull-right[
+
+&lt;img src="pensum/figurer-46.png" width="60%" /&gt;
+
+]
+
+---
+
+## Oppsplitting av kontantstrøm
+
+---
+
+## Arbitrasje
+
+.pull-left[
+
+# 1
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+
+.pull-right[
+
+# 2
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+**Resultat:** Likevekt, men hva skaper verdien
+
+---
+
+## Miller &amp; Modigliani
 
 Forutsetninger
 
@@ -275,24 +497,13 @@ Forutsetninger
 
 - **M&amp;M.-2**
 
+---
+
+**Eksempel 7.5**:
+
+- M&amp;M og KVM
+
 &lt;img src="pensum/figurer-52.png" width="50%" /&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

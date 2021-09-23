@@ -159,7 +159,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 .pull-right[
 
-**Uten gjeld**
+**Med gjeldsgrad/andel på 50%*
 
 - Forventet avkastning: `r mu`
 - Standardavvik: `r su` 
@@ -170,7 +170,121 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 ---
 
-Miller & Modigliani
+### Fem effekter av økt gjeldsgrad
+
+1. OPA øker
+1. OPA blir mer usikkert
+1. OPA blir høyere i gode tider, men lavere i dårliger tider
+1. Variasjonskoeffisienten
+1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
+
+---
+
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+### Formelt ###
+
+\begin{equation*}
+\beta_{I}=\beta_{E}w_E+\beta_{G}w_G
+\end{equation*}
+
+Løst for
+\begin{equation*}
+\beta_{E}=\beta_{I}+\beta_{G}\frac{G}{E}
+\end{equation*}
+
+- Med konkursrisiko
+
+\begin{equation*}
+\beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
+\end{equation*}
+
+- Uten konkursrisiko
+
+\begin{equation*}
+\beta_{E}=\beta_{I}(1+\frac{G}{E})
+\end{equation*}
+
+---
+
+**Eksempel xx**:
+	
+.pull-left[
+
+```{r, echo=F}
+radnr_i <- c("Investeringsbeta","Gjeldsbeta","Aksjebeta")
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+goe_v <- c(0,0.2,0.5,1.0,1.5,2.0,3.0)
+inb_v <- seq(0.8)
+gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
+til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
+	dplyr::mutate(gjb=gjb_v) %>%
+	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
+htmlTable(t(til_b), header=c(seq(1,7)))
+```
+
+
+]
+.pull-right[
+
+```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-46.png"))
+```
+
+]
+
+---
+
+## Oppsplitting av kontantstrøm
+
+---
+
+## Arbitrasje
+
+.pull-left[
+
+# 1
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+htmlTable(t(til_u), header=c(seq(1,5)))
+```
+
+
+]
+
+.pull-right[
+
+# 2
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+htmlTable(t(til_u), header=c(seq(1,5)))
+```
+
+]
+
+**Resultat:** Likevekt, men hva skaper verdien
+
+---
+
+## Miller & Modigliani
 
 Forutsetninger
 
@@ -191,26 +305,15 @@ Forutsetninger
 
 - **M&M.-2**
 
+---
+
+**Eksempel 7.5**:
+
+- M&M og KVM
+
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
