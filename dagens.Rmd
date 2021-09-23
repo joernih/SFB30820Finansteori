@@ -61,25 +61,46 @@ class: inverse, center, middle
 
 ---
 
-## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
-
-### problemstilling(?) og definisjon av gjeld
+## Problemstilling(?) og definisjon av gjeld
 
 - Gjeldsandel (mellom 0 og 1) $G/(G+E)$
 
 - Gjeldsbeta (mellom 0 og $\infty$) $G/G$
 
+Vi skiller mellom disse to begrepene i formlene, men spiller ingen rolle i omtalen av kapitalstruktur.
+
 ---
 
+## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+
+- Investeringsrisiko, prosjektrisiko, driftsrisiko
+
+Skyldes:
+
+- Etterspørselsrisiko
+- Prisusikkerhet på produktprisene
+- Prisusikkerhet på råvarerisiko
+- Endret Markedsmakt
+- Høye faste utbetalinger
+
+Senere se på hvordan disse kan diversifiseres
 
 **Eksempel x.x**
+
+```{r, echo=F}
+radnr_i <- c("OFR")
+til_p <- data.frame(ofr=c(250,200,150,100,50)) 
+htmlTable(t(til_p), header=c(seq(1,5)))
+```
+
+---
 
 .pull-left[
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-rm <- 0.10
-M <- 1000
+rm <- 0.00
+M <- 0
 utaksjer <- 10
 til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(r=ofr*rm) %>%
@@ -95,12 +116,12 @@ htmlTable(t(til_u), header=c(seq(1,5)))
 
 ```{r, echo=F}
 radnr_i <- c("OFR","Renter","OER","OPA")
-rm <- 0.10
+rm <- 0.05
 M <- 1000
-utaksjer <- 10
+utaksjer <- 5
 til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=ofr*rm) %>%
-	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(r=M*rm) %>%
+	dplyr::mutate(oer=ofr-r) %>%
 	dplyr::mutate(opa=oer/utaksjer)
 htmlTable(t(til_m), header=c(seq(1,5)))
 ```
@@ -112,94 +133,44 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 ---
 
-### Fem effekter av økt gjeldsgrad
-
-1. OPA øker
-1. OPA blir mer usikkert
-1. OPA blir høyere i gode tider, men lavere i dårliger tider
-1. Variasjonskoeffisienten
-1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
-
----
-
-## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
-
-### Formelt ###
-
----
-
-**Eksempel xx**:
-	
-.pull-left[
-
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
-```
-
-
-]
-.pull-right[
-
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
-```
-
-]
-
-```{r}
-dfa <- tidyr::tibble(x = 1:3, y = 3:1)
-dfa
-```
-
-
-```{r, echo=FALSE, align='rights', out.width="50%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-47.png"))
-```
-
----
-
-## Oppsplitting av kontantstrøm
-
----
-
-## Arbitrasje
+### Forventet avkastning og total risiko
 
 .pull-left[
 
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
+```{r, eval=T, echo=F}
+mu <- mean(til_u$opa)
+mm <- mean(til_m$opa)
+su <- sd(til_u$opa)
+sm <- sd(til_m$opa)
+vu <- su/mu 
+vm <- sm/mm
+uu <- max(til_u$opa)-min(til_u$opa)
+um <- max(til_m$opa)-min(til_m$opa)
 ```
 
+**Ingen gjeld**
+
+- Forventet avkastning: `r mu`
+- Standardavvik: `r su` 
+- Variasjonskoeffisienten: `r vu`
+- Utfallsspekteret: `r uu`
 
 ]
 
 .pull-right[
 
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-til <- c(250,200,150,100,50)
-#df_opa <- data.frame(til)
-htmlTable(head(iris), header=c(seq(1,5)))
-```
+**Uten gjeld**
+
+- Forventet avkastning: `r mu`
+- Standardavvik: `r su` 
+- Variasjonskoeffisienten: `r vu`
+- Utfallsspekteret: `r uu`
 
 ]
 
-**Resultat:** Likevekt, men hva skaper verdien
-
 ---
 
-# Miller & Modigliani
-
----
+Miller & Modigliani
 
 Forutsetninger
 
@@ -213,40 +184,18 @@ Forutsetninger
 
 **Eksempel xx**:
 
-- **M&M.1**
-
-- **M&M.2**
 
 ---
 
+- **M&M.-1**
 
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
+- **M&M.-2**
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
----
 
 
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-48.png"))
-```
----
-
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-49.png"))
-```
----
-
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-50.png"))
-```
----
-
-```{r, echo=FALSE, out.width="90%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-51.png"))
-```
----
-
----
 
 
 
