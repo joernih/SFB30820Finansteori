@@ -57,6 +57,10 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
+```{r, eval=T, echo=T}
+sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+```
+
 ---
 
 # Gjeldsgrad og risiko
@@ -145,12 +149,12 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 .pull-left[
 
 ```{r, eval=T, echo=F}
-mu <- mean(c(til_u$opa,NA),na.rm=T)
+mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
-su <- round(sd(c(til_u$opa), na.rm=T),digits=2)
-sm <- round(sd(c(til_m$opa), na.rm=T),digits=2)
-vu <- round(su/mu,digits=2)
-vm <- round(sm/mm,digi=2)
+su <- round(sd.p(c(til_u$opa)),digits=0)
+sm <- round(sd.p(c(til_m$opa)),digits=0)
+vu <- round(su/mu,digits=1)
+vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
@@ -168,10 +172,10 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 **Med gjeldsgrad/andel på 50%**
 
-- Forventet avkastning: `r mu`
-- Standardavvik: `r su` 
-- Variasjonskoeffisienten: `r vu`
-- Utfallsspekteret: `r uu`
+- Forventet avkastning: `r mm`
+- Standardavvik: `r sm` 
+- Variasjonskoeffisienten: `r vm`
+- Utfallsspekteret: `r um`
 
 ]
 

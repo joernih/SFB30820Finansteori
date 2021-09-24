@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c25ffdfb888e4edeb958d7aa66fa1bf9","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xec5ce94cff6467d83a7f0dace4f0186","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -67,6 +67,11 @@ class: inverse, center, middle
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
 
 Oppdatert: 2021-09-24
+
+
+```r
+sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+```
 
 ---
 
@@ -250,8 +255,8 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 **Ingen gjeld**
 
 - Forventet avkastning: 15
-- Standardavvik: 7.91 
-- Variasjonskoeffisienten: 0.53
+- Standardavvik: 7 
+- Variasjonskoeffisienten: 0.5
 - Utfallsspekteret: 20
 
 ]
@@ -260,10 +265,10 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 **Med gjeldsgrad/andel på 50%**
 
-- Forventet avkastning: 15
-- Standardavvik: 7.91 
-- Variasjonskoeffisienten: 0.53
-- Utfallsspekteret: 20
+- Forventet avkastning: 20
+- Standardavvik: 14 
+- Variasjonskoeffisienten: 0.7
+- Utfallsspekteret: 40
 
 ]
 
