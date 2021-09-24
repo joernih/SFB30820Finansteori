@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x13fe0eaffe04fbca7893870137bdac5","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c25ffdfb888e4edeb958d7aa66fa1bf9","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -79,7 +79,7 @@ Formelt kan økt gjeld defineres på to litt ulike måter:
 `\begin{equation}
 G/(G+E)
 \end{equation}`
-1. Gjeldsbeta (mellom 0 og `\(\infty\)`) 
+1. Gjeldsgrad (mellom 0 og `\(\infty\)`) 
 `\begin{equation}
 G/E
 \end{equation}`
@@ -250,8 +250,8 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 **Ingen gjeld**
 
 - Forventet avkastning: 15
-- Standardavvik: 7.9056942 
-- Variasjonskoeffisienten: 0.5270463
+- Standardavvik: 7.91 
+- Variasjonskoeffisienten: 0.53
 - Utfallsspekteret: 20
 
 ]
@@ -261,8 +261,8 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 **Med gjeldsgrad/andel på 50%**
 
 - Forventet avkastning: 15
-- Standardavvik: 7.9056942 
-- Variasjonskoeffisienten: 0.5270463
+- Standardavvik: 7.91 
+- Variasjonskoeffisienten: 0.53
 - Utfallsspekteret: 20
 
 ]
@@ -270,10 +270,10 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 **Fem effekter av økt gjeldsgrad:**
 
 1. OPA øker
-1. OPA blir mer usikkert
+1. OPA blir mer usikkert (høyere total risiko)
 1. OPA blir høyere i gode tider, men lavere i dårliger tider
-1. Variasjonskoeffisienten
-1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
 ---
 
@@ -281,16 +281,12 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 ### Formelt (uten skatt) ###
 
+- *Systematisk investeringsrisiko*:
 `\begin{equation*}
 \beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}`
 
-Løst for
-`\begin{equation*}
-\beta_{E}=\beta_{I}+\beta_{G}\frac{G}{E}
-\end{equation*}`
-
-- Med konkursrisiko
+- Løst for egenkapitalbeta (med konkursrisiko)
 
 `\begin{equation*}
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
@@ -307,8 +303,8 @@ Løst for
 
 ---
 
-**Eksempel xx**:
-	
+**Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko `\(\beta_I=0.8\)`. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
+
 .pull-left[
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
@@ -371,7 +367,7 @@ Løst for
 ]
 .pull-right[
 
-&lt;img src="pensum/figurer-46.png" width="60%" /&gt;
+&lt;img src="pensum/figurer-46.png" width="140%" /&gt;
 
 ]
 ---

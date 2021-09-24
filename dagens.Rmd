@@ -68,7 +68,7 @@ Formelt kan økt gjeld defineres på to litt ulike måter:
 \begin{equation}
 G/(G+E)
 \end{equation}
-1. Gjeldsbeta (mellom 0 og $\infty$) 
+1. Gjeldsgrad (mellom 0 og $\infty$) 
 \begin{equation}
 G/E
 \end{equation}
@@ -147,10 +147,10 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ```{r, eval=T, echo=F}
 mu <- mean(c(til_u$opa,NA),na.rm=T)
 mm <- mean(til_m$opa)
-su <- sd(c(til_u$opa, NA), na.rm=T)
-sm <- sd(til_m$opa)
-vu <- su/mu 
-vm <- sm/mm
+su <- round(sd(c(til_u$opa), na.rm=T),digits=2)
+sm <- round(sd(c(til_m$opa), na.rm=T),digits=2)
+vu <- round(su/mu,digits=2)
+vm <- round(sm/mm,digi=2)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
@@ -178,10 +178,10 @@ um <- max(til_m$opa)-min(til_m$opa)
 **Fem effekter av økt gjeldsgrad:**
 
 1. OPA øker
-1. OPA blir mer usikkert
+1. OPA blir mer usikkert (høyere total risiko)
 1. OPA blir høyere i gode tider, men lavere i dårliger tider
-1. Variasjonskoeffisienten
-1. Positiv gjeldsgrad gir automatisk finansieringsrisiko
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
 ---
 
@@ -189,16 +189,12 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 ### Formelt (uten skatt) ###
 
+- *Systematisk investeringsrisiko*:
 \begin{equation*}
 \beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}
 
-Løst for
-\begin{equation*}
-\beta_{E}=\beta_{I}+\beta_{G}\frac{G}{E}
-\end{equation*}
-
-- Med konkursrisiko
+- Løst for egenkapitalbeta (med konkursrisiko)
 
 \begin{equation*}
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
@@ -219,8 +215,8 @@ bi=(E*be+G*bg)/(E+G)
 
 ---
 
-**Eksempel xx**:
-	
+**Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko $\beta_I=0.8$. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
+
 .pull-left[
 
 ```{r, echo=F}
@@ -242,7 +238,7 @@ htmlTable(t(til_b), header=c(seq(1,7)))
 ]
 .pull-right[
 
-```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
+```{r, echo=FALSE, align='rights', out.width="140%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 
