@@ -59,41 +59,40 @@ class: inverse, center, middle
 
 ---
 
-## Problemstilling(?) og definisjon av gjeld
+# Gjeldsgrad og risiko
 
-- Problemstilling
+- Problemstilling: Hvilken effekt endring i gjeld har på finansieringsrisikoen
 
-- Gjeldsandel: (mellom 0 og 1) 
-
+Formelt kan økt gjeld defineres på to litt ulike måter:
+1. Gjeldsandel: (mellom 0 og 1) 
 \begin{equation}
 G/(G+E)
 \end{equation}
-
-- Gjeldsbeta (mellom 0 og $\infty$) 
-
+1. Gjeldsbeta (mellom 0 og $\infty$) 
 \begin{equation}
 G/E
 \end{equation}
 
-Vi vil gjøre et skille mellom disse to begrepene i formlene som vi nå skal se på, men i selve omtalen av bedriftens kapitalstruktur kan vi benytte dem om hver andre.
+Vi gjør et skille mellom disse to begrepene i formlene som vi nå skal se på, men i selve omtalen av bedriftens kapitalstruktur benyttes begrepene om hver andre.
 
 ---
 
 ## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
-- Investeringsrisiko, prosjektrisiko, driftsrisiko
+Alternive navn på investeringsrisiko: eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.
 
-Skyldes:
-
+Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
 - Etterspørselsrisiko
 - Prisusikkerhet på produktprisene
 - Prisusikkerhet på råvarerisiko
 - Endret Markedsmakt
 - Høye faste utbetalinger
 
-Senere se på hvordan disse kan diversifiseres ved bruk av finansielle instrumenter:  swapper.
+I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. swapper, futures og opsjonner) kan benyttes til påvirke usikkerheten til disse kontantstrømmene.
 
-**Eksempel 6.1:** Overskudd fem tilstander 
+---
+
+**Eksempel 6.1:** Overskudd før renter (OFR) til Kapitalstruktur i fem alternative tilstander. 
 
 ```{r, echo=F}
 radnr_i <- c("OFR")
@@ -250,7 +249,7 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ]
 ---
 
-# Gjeldsgrad og verdi i perfekte markeder
+# Gjeldsgrad og verdi i perfekte kapitalmarkeder
 
 I kapittel 6 så vi at økt gjeldsgrad førte til
 1. Høyere forventet avkastning
