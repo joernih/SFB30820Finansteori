@@ -442,6 +442,9 @@ Den risikofrien renten i markedet $r_f=0.03$ mens markedsporteføljen forventede
 \begin{equation*}
 k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
 \end{equation*}
+
+
+**Konklusjon:**
 ]
 
 .pull-right[
