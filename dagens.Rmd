@@ -83,7 +83,7 @@ Vi gjør et skille mellom disse to begrepene i formlene som vi nå skal se på, 
 
 ## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
-Alternive navn på investeringsrisiko: eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.
+Alternative navn på investeringsrisiko: eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.
 
 Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
 - Etterspørselsrisiko
@@ -185,7 +185,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 1. OPA øker
 1. OPA blir mer usikkert (høyere total risiko)
-1. OPA blir høyere i gode tider, men lavere i dårliger tider
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
 1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
 1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
@@ -396,7 +396,7 @@ k_U + (k_U-k_G)\frac{G}{E}
 ---
 
 *Seperasjonsprinsippet*
-- M$M impliserer at det ikke er mulig å øke bedriftens eller enkeltståendes prosjekters verdi gjennom finansieringsformen
+- M$M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen
 - Når gjeldsandelen/gjeldsgraden øker
 - Lånerenten laver enn egenkapitalkostnaden
 - Oppveiet av høyere egenkapitalkostnad.
@@ -404,7 +404,7 @@ k_U + (k_U-k_G)\frac{G}{E}
 - Nettoeffekt lik null: 
 - Lønnsomheten av nye investeringsprosjekter kan beregnes på samme måte som uttrykk 7.4
 - Vi løsner nå på forutsetningen om samme risikoklasse: Vi definerer har risikoklasse som alle selskaper med samme systematiske risiko.
-- Dvs uten tanke på finansiring
+- Dvs uten tanke på finansiering
 - Omtales som seperasjonsprinsippet
 ---
 
@@ -432,11 +432,11 @@ knitr::include_graphics(c("pensum/figurer-52.png"))
 
 ---
 
-### Sammehengen mellom KVM og M&M
+### Sammenhengen mellom KVM og M&M
 
 
 **Eksempel 7.5**: For Demo ASA er $\beta_G=0.02$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
-Den risikofrien renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
+Den risikofrie renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
 .pull-left[
 **Alternativ 1: KVM**
 \begin{equation*}
