@@ -351,8 +351,9 @@ Men hvilken verdi blir fastsatt i markedet?
 
 ## Miller & Modigliani (M&M)
 
-Forutsetninger
+Forutsetninger for prissetting av selskaper
 
+**Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
 - For samme risiko, alle kan låne til samme rente
 - Ingen transaksjonskostnader
@@ -360,79 +361,112 @@ Forutsetninger
 - Ingen betaler skatt
 
 .pull-left[
-Investeringssiden
-- Samme risikoklasse
-- Samme sannsynlighets
+**Investeringssiden:**
+- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart lette på denne forutsetningen)
+- OFR er evigvarende
+- Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
 
 .pull-right[
-Finansieringsiden
+**Finansieringsiden:**
 - Fast evigvarende gjeld
-- Hele OER går til utbytte
+- OER går kun til utbytte
 ]
 
 ---
 
-Basert på disse forutsetningene vil vi ha følgende tre:
+Basert på disse forutsetningene kan vi sette opp tre uttrykk som viser forventet avkastning for gjeld ( $k_G$ ), egenkapital ( $k_E$ ) og totalkapital ( $k_T$ ):
 
 \begin{equation}
-k_E = r
+k_G = \frac{r\cdot PG}{G}
 \end{equation}
 
 \begin{equation}
-k_R = r
+k_E = \frac{E(OER)}{E}
 \end{equation}
 
 \begin{equation}
-k_T = r
+k_T = \frac{E(OFR)}{V}
 \end{equation}
 
 - **M&M-1**
 \begin{equation}
-V = \frac{E(ofr)}{k_t}=\frac{E(ofr)}{k_u}
+V = \frac{E(OFR)}{k_t}=\frac{E(OFR)}{k_u}
 \end{equation}
 
 - **M&M-2**
 
 \begin{equation}
-k_E = k_U + (k_U+k_T)\beta
+k_E = k_T + (k_T-k_G)\frac{G}{E}\\
+k_U + (k_U-k_G)\frac{G}{E}
 \end{equation}
 
 ---
 
-**Eksempel 7.5**:
+*Seperasjonsprinsippet*
+- M$M impliserer at det ikke er mulig å øke bedriftens eller enkeltståendes prosjekters verdi gjennom finansieringsformen
+- Når gjeldsandelen/gjeldsgraden øker
+- Lånerenten laver enn egenkapitalkostnaden
+- Oppveiet av høyere egenkapitalkostnad.
+- Mer gjeld øker finansieringsrisikoen og dermed eiernes avkastningskrav. 
+- Nettoeffekt lik null: 
+- Lønnsomheten av nye investeringsprosjekter kan beregnes på samme måte som uttrykk 7.4
+- Vi løsner nå på forutsetningen om samme risikoklasse: Vi definerer har risikoklasse som alle selskaper med samme systematiske risiko.
+- Dvs uten tanke på finansiring
+- Omtales som seperasjonsprinsippet
+---
 
+**Eksempel 7.5:** TV fabrikken Tittco budsert $OFR=2$ mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250 tusen i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har en investeringsrisiko $\beta_I=0.04$
+
+- Ifølge M&M-I vil verdien til Tittco være gitt ved
+\begin{equation}
+V = \frac{E(OFR)}{k_u} = \frac{2}{0.04}=50
+\end{equation}
+
+- Ifølge M&M-II
+.pull-left[
+\begin{equation}
+k_E = k_T + (k_T-k_G)\frac{G}{E}\\
+k_T + (k_T-k_G)\frac{G}{E}
+\end{equation}
+
+]
+.pull-right[
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
+]
+
 
 ---
 
 ### Sammehengen mellom KVM og M&M
 
-- Vi løsner nå på forutsetningen om samme risikoklasse
 
-**Eksempel 7.6**:
-
+**Eksempel 7.5**: For Demo ASA er $\beta_G=0.02$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
+Den risikofrien renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
 .pull-left[
-**KVM**
-$$
-k_EK=0.03 + 1.2(0.05)
-$$
+**Alternativ 1: KVM**
+\begin{equation*}
+k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
+\end{equation*}
 ]
 
 .pull-right[
-**M&M**
-$$
-\beta=123
-$$
-Vi har fra kapittel 6
+**Alternativ 2: M&M**
+
+Vi har fra kapittel 6 (uten skatt)
 \begin{equation*}
-\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}\\
+=0.5\cdot 1.4+0.5\cdot 0.20 = 0.80
 \end{equation*}
-Vi kan derfor benytte M&M-2 som gir oss
-$$
-\beta=0.11
-$$
+som fra KVM gir (sjekk ut!) $k_U=0.07$. Vider har vi 
+\begin{equation*}
+k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ =0.03 + 0.2[0.08-0.03]=0.04
+\end{equation*}
+Vi kan derfor benytte M&M-2:
+\begin{equation*}
+k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10 
+\end{equation*}
 ]
 
