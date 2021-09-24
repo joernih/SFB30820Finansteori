@@ -57,7 +57,7 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
-```{r, eval=T, echo=T}
+```{r, eval=T, echo=F}
 sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 ```
 
@@ -101,7 +101,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 ```{r, echo=F}
 radnr_i <- c("OFR")
 til_p <- data.frame(OFR=c(250,200,150,100,50),Sannsynlighet=c(1/5,1/5,1/5,1/5,1/5)) 
-htmlTable(t(til_p), header=c(seq(1,5)))
+htmlTable(t(til_p), header=c(seq(1,5)), rnames=c("OFR","Sannsynlighet"), rowlabel="Tilstand:")
 ```
 
 ---
@@ -117,7 +117,8 @@ til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(r=ofr*rm) %>%
 	dplyr::mutate(oer=ofr-M*rm) %>%
 	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_u), header=c(seq(1,5)))
+htmlTable(t(til_u), header=c(seq(1,5)),rnames=radnr_i,
+	  rowlabel="Tilstand:")
 ```
 
 
@@ -134,7 +135,8 @@ til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(r=M*rm) %>%
 	dplyr::mutate(oer=ofr-r) %>%
 	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_m), header=c(seq(1,5)))
+htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_i,
+	  rowlabel="Tilstand:")
 ```
 
 ]
@@ -170,7 +172,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 .pull-right[
 
-**Med gjeldsgrad/andel på 50%**
+**Med gjeldsandel på 50%**
 
 - Forventet avkastning: `r mm`
 - Standardavvik: `r sm` 
@@ -221,10 +223,9 @@ bi=(E*be+G*bg)/(E+G)
 
 **Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko $\beta_I=0.8$. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
 
-.pull-left[
 
 ```{r, echo=F}
-radnr_i <- c("Investeringsbeta","Gjeldsbeta","Aksjebeta")
+radnr_p <- c("G/E","Investeringsbeta","Gjeldsbeta","Aksjebeta")
 rm <- 0.10
 M <- 1000
 utaksjer <- 10
@@ -235,31 +236,26 @@ til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
 	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
 a <- data.frame(t(til_b))
-htmlTable(t(til_b), header=c(seq(1,7)))
+htmlTable(t(til_b),rnames=radnr_p)
 ```
 
 
-]
-.pull-right[
-
-```{r, echo=FALSE, align='rights', out.width="140%", fig.cap=""}
+```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 
-]
 ---
 
 # Gjeldsgrad og verdi i perfekte kapitalmarkeder
 
 I kapittel 6 så vi at økt gjeldsgrad førte til
 1. Høyere forventet avkastning
-1. Høyere risiko (både total risiko og systematisk risiko) 
+1. Høyere risiko (både for total risiko og systematisk risiko) 
 
+Spørsmålet vi stiller nå:
+- Er den positive effekten av (1) større, lik eller mindre av de negative effekten av (2)?
 
-Spørsmål vi stiller nå er hvorvidt den positive effekten av (1)
-er sterk nok til å motvirke den negative effekten av (2).
-
-Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gjeldsandal/gjeldsgrad)
+Merk: Gitt større eller lik, vil det være mulig å skape verdi fra finansieringssiden ved å endre bedriftens kapitalstruktur (dvs. forholdet mellom egenkapital og gjeld).
 
 ---
 
@@ -267,25 +263,24 @@ Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gj
 
 .pull-left[
 - Til kreditorene: $R=0$
-- Til aksjonærene: $OER_U=0$
-- Totalt: $OFR_U=1$
+- Til aksjonærene: $OER_U=OFR$
+- Totalt: $R+OER_U=OFR$
 ]
 .pull-right[
 - Til kreditorene: $R=r\cdot PG$
 - Til aksjonærene: $OER_M=OFR-r\cdot PG$
-- Totalt: $OER_M=OFR$
+- Totalt: $R+OER_M=\\ r\cdot PG-OFR-r\cdot PG= OFR$
 ]
 
 ```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-rm <- 0.10
-M <- 1000
-utaksjer <- 10
-til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=ofr*rm) %>%
-	dplyr::mutate(oer=ofr-M*rm) %>%
-	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_u), header=c(seq(1,5)))
+radm <- c("Pålydende gjeld", "Gjeldsrente","Til kreditorene","Til eierne","Totalt")
+ofr <- 100
+til_u <- data.frame(gjeld=c(100,200,400,600,700),
+		    gjeldr=c(0.04,0.04,0.05,0.06,0.08)) %>% 
+	dplyr::mutate(kredit=gjeld*gjeldr) %>%
+	dplyr::mutate(eierne=ofr-kredit) %>% 
+	dplyr::mutate(totalt=kredit+eierne) 
+htmlTable(t(til_u),rnames=radm)
 ```
 
 **Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere, men ikke den totale kontantstrømmen**
@@ -340,8 +335,6 @@ htmlTable(t(til_u), header=c(seq(1,5)))
 
 **Eksempel x.x:**
 
----
-
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
 
 Men hvilken verdi blir fastsatt i markedet?
@@ -350,7 +343,7 @@ Men hvilken verdi blir fastsatt i markedet?
 
 ## Miller & Modigliani (M&M)
 
-Forutsetninger for prissetting av selskaper
+Forutsetninger til grunn for verdsetting av selskaper
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene

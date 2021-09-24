@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xec5ce94cff6467d83a7f0dace4f0186","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a4cb111ab059406d95ed13db17de2201","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -69,9 +69,6 @@ class: inverse, center, middle
 Oppdatert: 2021-09-24
 
 
-```r
-sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-```
 
 ---
 
@@ -112,7 +109,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
@@ -146,7 +143,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
@@ -156,7 +153,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;250&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;150&lt;/td&gt;
@@ -164,7 +161,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
@@ -172,7 +169,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;250&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;150&lt;/td&gt;
@@ -180,7 +177,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;25&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
@@ -197,7 +194,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
 &lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
@@ -207,7 +204,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;250&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;150&lt;/td&gt;
@@ -215,7 +212,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
@@ -223,7 +220,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;50&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;200&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;150&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;100&lt;/td&gt;
@@ -231,7 +228,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;40&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;30&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
@@ -263,7 +260,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 .pull-right[
 
-**Med gjeldsgrad/andel på 50%**
+**Med gjeldsandel på 50%**
 
 - Forventet avkastning: 20
 - Standardavvik: 14 
@@ -310,33 +307,21 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 
 **Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko `\(\beta_I=0.8\)`. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
 
-.pull-left[
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;6&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;7&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;goe&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1.5&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;tr style='border-top: 2px solid grey;'&gt;
+&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;G/E&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;invb&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Investeringsbeta&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;1&lt;/td&gt;
@@ -346,7 +331,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;1&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;gjb&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Gjeldsbeta&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;0&lt;/td&gt;
@@ -356,7 +341,7 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;akb&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Aksjebeta&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
 &lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
@@ -369,25 +354,20 @@ I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. 
 &lt;/table&gt;
 
 
-]
-.pull-right[
+&lt;img src="pensum/figurer-46.png" width="60%" /&gt;
 
-&lt;img src="pensum/figurer-46.png" width="140%" /&gt;
-
-]
 ---
 
 # Gjeldsgrad og verdi i perfekte kapitalmarkeder
 
 I kapittel 6 så vi at økt gjeldsgrad førte til
 1. Høyere forventet avkastning
-1. Høyere risiko (både total risiko og systematisk risiko) 
+1. Høyere risiko (både for total risiko og systematisk risiko) 
 
+Spørsmålet vi stiller nå:
+- Er den positive effekten av (1) større, lik eller mindre av de negative effekten av (2)?
 
-Spørsmål vi stiller nå er hvorvidt den positive effekten av (1)
-er sterk nok til å motvirke den negative effekten av (2).
-
-Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gjeldsandal/gjeldsgrad)
+Merk: Gitt større eller lik, vil det være mulig å skape verdi fra finansieringssiden ved å endre bedriftens kapitalstruktur (dvs. forholdet mellom egenkapital og gjeld).
 
 ---
 
@@ -395,57 +375,56 @@ Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gj
 
 .pull-left[
 - Til kreditorene: `\(R=0\)`
-- Til aksjonærene: `\(OER_U=0\)`
-- Totalt: `\(OFR_U=1\)`
+- Til aksjonærene: `\(OER_U=OFR\)`
+- Totalt: `\(R+OER_U=OFR\)`
 ]
 .pull-right[
 - Til kreditorene: `\(R=r\cdot PG\)`
 - Til aksjonærene: `\(OER_M=OFR-r\cdot PG\)`
-- Totalt: `\(OER_M=OFR\)`
+- Totalt: `\(R+OER_M=\\ r\cdot PG-OFR-r\cdot PG= OFR\)`
 ]
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;tr style='border-top: 2px solid grey;'&gt;
+&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;Pålydende gjeld&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;400&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;600&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;700&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Gjeldsrente&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Til kreditorene&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
 &lt;td style='text-align: center;'&gt;20&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;56&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;Til eierne&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;96&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;92&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;64&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Totalt&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -570,8 +549,6 @@ Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gj
 
 **Eksempel x.x:**
 
----
-
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
 
 Men hvilken verdi blir fastsatt i markedet?
@@ -580,7 +557,7 @@ Men hvilken verdi blir fastsatt i markedet?
 
 ## Miller &amp; Modigliani (M&amp;M)
 
-Forutsetninger for prissetting av selskaper
+Forutsetninger til grunn for verdsetting av selskaper
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
