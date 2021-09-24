@@ -42,8 +42,6 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
----
-
 class: inverse, center, middle
 
 # Forelesning 7: `r tema[7]`
@@ -63,11 +61,21 @@ class: inverse, center, middle
 
 ## Problemstilling(?) og definisjon av gjeld
 
-- Gjeldsandel (mellom 0 og 1) $G/(G+E)$
+- Problemstilling
 
-- Gjeldsbeta (mellom 0 og $\infty$) $G/G$
+- Gjeldsandel: (mellom 0 og 1) 
 
-Vi skiller mellom disse to begrepene i formlene, men spiller ingen rolle i omtalen av kapitalstruktur.
+\begin{equation}
+G/(G+E)
+\end{equation}
+
+- Gjeldsbeta (mellom 0 og $\infty$) 
+
+\begin{equation}
+G/E
+\end{equation}
+
+Vi vil gjøre et skille mellom disse to begrepene i formlene som vi nå skal se på, men i selve omtalen av bedriftens kapitalstruktur kan vi benytte dem om hver andre.
 
 ---
 
@@ -83,13 +91,13 @@ Skyldes:
 - Endret Markedsmakt
 - Høye faste utbetalinger
 
-Senere se på hvordan disse kan diversifiseres
+Senere se på hvordan disse kan diversifiseres ved bruk av finansielle instrumenter:  swapper.
 
-**Eksempel x.x**
+**Eksempel 6.1:** Overskudd fem tilstander 
 
 ```{r, echo=F}
 radnr_i <- c("OFR")
-til_p <- data.frame(ofr=c(250,200,150,100,50)) 
+til_p <- data.frame(OFR=c(250,200,150,100,50),Sannsynlighet=c(1/5,1/5,1/5,1/5,1/5)) 
 htmlTable(t(til_p), header=c(seq(1,5)))
 ```
 
@@ -138,9 +146,9 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 .pull-left[
 
 ```{r, eval=T, echo=F}
-mu <- mean(til_u$opa)
+mu <- mean(c(til_u$opa,NA),na.rm=T)
 mm <- mean(til_m$opa)
-su <- sd(til_u$opa)
+su <- sd(c(til_u$opa, NA), na.rm=T)
 sm <- sd(til_m$opa)
 vu <- su/mu 
 vm <- sm/mm
@@ -159,7 +167,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 .pull-right[
 
-**Med gjeldsgrad/andel på 50%*
+**Med gjeldsgrad/andel på 50%**
 
 - Forventet avkastning: `r mu`
 - Standardavvik: `r su` 
@@ -168,9 +176,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 ]
 
----
-
-### Fem effekter av økt gjeldsgrad
+**Fem effekter av økt gjeldsgrad:**
 
 1. OPA øker
 1. OPA blir mer usikkert
@@ -182,10 +188,10 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 ## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
 
-### Formelt ###
+### Formelt (uten skatt) ###
 
 \begin{equation*}
-\beta_{I}=\beta_{E}w_E+\beta_{G}w_G
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}
 
 Løst for
@@ -199,11 +205,18 @@ Løst for
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
 \end{equation*}
 
-- Uten konkursrisiko
+- Uten konkursrisiko ( $\beta_G=0$ )
 
 \begin{equation*}
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}
+
+```{r, eval=F, echo=F}
+bi=we*be+wg*bg
+bi=(E*be+G*bg)/(E+G)
+(E+G)*bi=E*be+G*bg
+```
+
 
 ---
 
@@ -222,6 +235,7 @@ gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
 til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
 	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
+a <- data.frame(t(til_b))
 htmlTable(t(til_b), header=c(seq(1,7)))
 ```
 
@@ -234,10 +248,48 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 
 ]
+---
+
+# Gjeldsgrad og verdi i perfekte markeder
+
+I kapittel 6 så vi at økt gjeldsgrad førte til
+1. Høyere forventet avkastning
+1. Høyere risiko (både total risiko og systematisk risiko) 
+
+
+Spørsmål vi stiller nå er hvorvidt den positive effekten av (1)
+er sterk nok til å motvirke den negative effekten av (2).
+
+Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gjeldsandal/gjeldsgrad)
 
 ---
 
-## Oppsplitting av kontantstrøm
+## Oppsplitting av en kontantstrøm
+
+.pull-left[
+- Til kreditorene: $R=0$
+- Til aksjonærene: $OER_U=0$
+- Totalt: $OFR_U=1$
+]
+.pull-right[
+- Til kreditorene: $R=r\cdot PG$
+- Til aksjonærene: $OER_M=OFR-r\cdot PG$
+- Totalt: $OER_M=OFR$
+]
+
+```{r, echo=F}
+radnr_i <- c("OFR","Renter","OER","OPA")
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+htmlTable(t(til_u), header=c(seq(1,5)))
+```
+
+**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere, men ikke den totale kontantstrømmen**
 
 ---
 
@@ -258,8 +310,6 @@ til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(opa=oer/utaksjer)
 htmlTable(t(til_u), header=c(seq(1,5)))
 ```
-
-
 ]
 
 .pull-right[
@@ -280,11 +330,26 @@ htmlTable(t(til_u), header=c(seq(1,5)))
 
 ]
 
-**Resultat:** Likevekt, men hva skaper verdien
+---
+
+**Strategi:**
+1. Selg dine *aksjer* i det overprisede selskapet
+1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
+  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
+]
+
+**Eksempel x.x:**
 
 ---
 
-## Miller & Modigliani
+**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
+
+Men hvilken verdi blir fastsatt i markedet?
+
+---
+
+## Miller & Modigliani (M&M)
 
 Forutsetninger
 
@@ -294,26 +359,80 @@ Forutsetninger
 - Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
 - Ingen betaler skatt
 
+.pull-left[
+Investeringssiden
+- Samme risikoklasse
+- Samme sannsynlighets
+]
+
+.pull-right[
+Finansieringsiden
+- Fast evigvarende gjeld
+- Hele OER går til utbytte
+]
+
 ---
 
-**Eksempel xx**:
+Basert på disse forutsetningene vil vi ha følgende tre:
 
+\begin{equation}
+k_E = r
+\end{equation}
 
----
+\begin{equation}
+k_R = r
+\end{equation}
 
-- **M&M.-1**
+\begin{equation}
+k_T = r
+\end{equation}
 
-- **M&M.-2**
+- **M&M-1**
+\begin{equation}
+V = \frac{E(ofr)}{k_t}=\frac{E(ofr)}{k_u}
+\end{equation}
+
+- **M&M-2**
+
+\begin{equation}
+k_E = k_U + (k_U+k_T)\beta
+\end{equation}
 
 ---
 
 **Eksempel 7.5**:
 
-- M&M og KVM
-
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
 
+---
 
+### Sammehengen mellom KVM og M&M
+
+- Vi løsner nå på forutsetningen om samme risikoklasse
+
+**Eksempel 7.6**:
+
+.pull-left[
+**KVM**
+$$
+k_EK=0.03 + 1.2(0.05)
+$$
+]
+
+.pull-right[
+**M&M**
+$$
+\beta=123
+$$
+Vi har fra kapittel 6
+\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\end{equation*}
+Vi kan derfor benytte M&M-2 som gir oss
+$$
+\beta=0.11
+$$
+]
 

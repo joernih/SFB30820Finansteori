@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x917d944b0a84a798e1255a19ff311d9","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"cf29b934167e49c5be0b6f07d217d987","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-09-23)
+### 2021/08/12 (updated: 2021-09-24)
 
 ---
 
@@ -52,8 +52,6 @@ class: center, middle, inverse, title-slide
 
 
 
-
----
 
 class: inverse, center, middle
 
@@ -68,17 +66,27 @@ class: inverse, center, middle
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
 
-Oppdatert: 2021-09-23
+Oppdatert: 2021-09-24
 
 ---
 
 ## Problemstilling(?) og definisjon av gjeld
 
-- Gjeldsandel (mellom 0 og 1) `\(G/(G+E)\)`
+- Problemstilling
 
-- Gjeldsbeta (mellom 0 og `\(\infty\)`) `\(G/G\)`
+- Gjeldsandel: (mellom 0 og 1) 
 
-Vi skiller mellom disse to begrepene i formlene, men spiller ingen rolle i omtalen av kapitalstruktur.
+`\begin{equation}
+G/(G+E)
+\end{equation}`
+
+- Gjeldsbeta (mellom 0 og `\(\infty\)`) 
+
+`\begin{equation}
+G/E
+\end{equation}`
+
+Vi vil gjøre et skille mellom disse to begrepene i formlene som vi nå skal se på, men i selve omtalen av bedriftens kapitalstruktur kan vi benytte dem om hver andre.
 
 ---
 
@@ -94,9 +102,9 @@ Skyldes:
 - Endret Markedsmakt
 - Høye faste utbetalinger
 
-Senere se på hvordan disse kan diversifiseres
+Senere se på hvordan disse kan diversifiseres ved bruk av finansielle instrumenter:  swapper.
 
-**Eksempel x.x**
+**Eksempel 6.1:** Overskudd fem tilstander 
 
 &lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
 &lt;thead&gt;
@@ -110,12 +118,20 @@ Senere se på hvordan disse kan diversifiseres
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;ofr&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;250&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -243,7 +259,7 @@ Senere se på hvordan disse kan diversifiseres
 
 .pull-right[
 
-**Med gjeldsgrad/andel på 50%*
+**Med gjeldsgrad/andel på 50%**
 
 - Forventet avkastning: 15
 - Standardavvik: 7.9056942 
@@ -252,9 +268,7 @@ Senere se på hvordan disse kan diversifiseres
 
 ]
 
----
-
-### Fem effekter av økt gjeldsgrad
+**Fem effekter av økt gjeldsgrad:**
 
 1. OPA øker
 1. OPA blir mer usikkert
@@ -266,10 +280,10 @@ Senere se på hvordan disse kan diversifiseres
 
 ## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
 
-### Formelt ###
+### Formelt (uten skatt) ###
 
 `\begin{equation*}
-\beta_{I}=\beta_{E}w_E+\beta_{G}w_G
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}`
 
 Løst for
@@ -283,11 +297,14 @@ Løst for
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
 \end{equation*}`
 
-- Uten konkursrisiko
+- Uten konkursrisiko ( `\(\beta_G=0\)` )
 
 `\begin{equation*}
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}`
+
+
+
 
 ---
 
@@ -358,10 +375,82 @@ Løst for
 &lt;img src="pensum/figurer-46.png" width="60%" /&gt;
 
 ]
+---
+
+# Gjeldsgrad og verdi i perfekte markeder
+
+I kapittel 6 så vi at økt gjeldsgrad førte til
+1. Høyere forventet avkastning
+1. Høyere risiko (både total risiko og systematisk risiko) 
+
+
+Spørsmål vi stiller nå er hvorvidt den positive effekten av (1)
+er sterk nok til å motvirke den negative effekten av (2).
+
+Merk: Hvis ja, mulig å skape verdi  ved å endre bedriftens kapitalstruktur (gjeldsandal/gjeldsgrad)
 
 ---
 
-## Oppsplitting av kontantstrøm
+## Oppsplitting av en kontantstrøm
+
+.pull-left[
+- Til kreditorene: `\(R=0\)`
+- Til aksjonærene: `\(OER_U=0\)`
+- Totalt: `\(OFR_U=1\)`
+]
+.pull-right[
+- Til kreditorene: `\(R=r\cdot PG\)`
+- Til aksjonærene: `\(OER_M=OFR-r\cdot PG\)`
+- Totalt: `\(OER_M=OFR\)`
+]
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;ofr&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;r&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;oer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;opa&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere, men ikke den totale kontantstrømmen**
 
 ---
 
@@ -416,8 +505,6 @@ Løst for
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-
 ]
 
 .pull-right[
@@ -472,11 +559,26 @@ Løst for
 
 ]
 
-**Resultat:** Likevekt, men hva skaper verdien
+---
+
+**Strategi:**
+1. Selg dine *aksjer* i det overprisede selskapet
+1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
+  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
+]
+
+**Eksempel x.x:**
 
 ---
 
-## Miller &amp; Modigliani
+**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
+
+Men hvilken verdi blir fastsatt i markedet?
+
+---
+
+## Miller &amp; Modigliani (M&amp;M)
 
 Forutsetninger
 
@@ -486,26 +588,80 @@ Forutsetninger
 - Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
 - Ingen betaler skatt
 
+.pull-left[
+Investeringssiden
+- Samme risikoklasse
+- Samme sannsynlighets
+]
+
+.pull-right[
+Finansieringsiden
+- Fast evigvarende gjeld
+- Hele OER går til utbytte
+]
+
 ---
 
-**Eksempel xx**:
+Basert på disse forutsetningene vil vi ha følgende tre:
 
+`\begin{equation}
+k_E = r
+\end{equation}`
 
----
+`\begin{equation}
+k_R = r
+\end{equation}`
 
-- **M&amp;M.-1**
+`\begin{equation}
+k_T = r
+\end{equation}`
 
-- **M&amp;M.-2**
+- **M&amp;M-1**
+`\begin{equation}
+V = \frac{E(ofr)}{k_t}=\frac{E(ofr)}{k_u}
+\end{equation}`
+
+- **M&amp;M-2**
+
+`\begin{equation}
+k_E = k_U + (k_U+k_T)\beta
+\end{equation}`
 
 ---
 
 **Eksempel 7.5**:
 
-- M&amp;M og KVM
-
 &lt;img src="pensum/figurer-52.png" width="50%" /&gt;
 
+---
 
+### Sammehengen mellom KVM og M&amp;M
+
+- Vi løsner nå på forutsetningen om samme risikoklasse
+
+**Eksempel 7.6**:
+
+.pull-left[
+**KVM**
+$$
+k_EK=0.03 + 1.2(0.05)
+$$
+]
+
+.pull-right[
+**M&amp;M**
+$$
+\beta=123
+$$
+Vi har fra kapittel 6
+`\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\end{equation*}`
+Vi kan derfor benytte M&amp;M-2 som gir oss
+$$
+\beta=0.11
+$$
+]
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
