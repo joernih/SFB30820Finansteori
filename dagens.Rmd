@@ -434,6 +434,7 @@ knitr::include_graphics(c("pensum/figurer-52.png"))
 
 ### Sammenhengen mellom KVM og M&M
 
+Vi løsner nå på forutsetningen...
 
 **Eksempel 7.5**: For Demo ASA er $\beta_G=0.02$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
 Den risikofrie renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
