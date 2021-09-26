@@ -1036,6 +1036,7 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
+# Gjøres enklere til R-funkjson?=
 porttrekk <- 1:1000 
 plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
         # Trekker investeringsandelene
@@ -1501,7 +1502,7 @@ Minus (-)
 
 - I stor grad bygd på antagelsen om Informasjonseffisiens  
 - Empirisk settes man vanligvis likhet mellom markedsporteføljen og aksjemarkedet
-- Modellen er en-periodisk (men det er mulig å bygge ut modellen til å gjelde flere)
+- Modellen er en-periodisk (men det er mulig å bygge ut modellen til å gjelde flere perioder)
 
 ]
 
@@ -1860,7 +1861,7 @@ Rentefølsomheten til en obligasjon påvirkes av
 
 ---
 
-- **Beregning av durasjon (for spesielt interesserte)**
+- **Beregning av durasjon (for de spesielt interesserte)**
 
 Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å derivere uttrykket for prisen til en ordinær obligasjon mhp. endring i effektiv (markedsrente) rente og dele dette på obligasjonens markedspris
 

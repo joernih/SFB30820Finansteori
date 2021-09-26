@@ -473,6 +473,4 @@ knitr::knit_exit()
 
 - Sjekke ut eksamensdato
 - 06:01-07:45
-- Abc
-
-
+- Sjekk ut comments out
