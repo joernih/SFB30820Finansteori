@@ -635,148 +635,6 @@ htmlTable(udiportf, header=c("","Gjennomsnitt","Standardavvik"))
 
 ## Endring av porteføljevekter og samvariasjon
 
-### Porteføljevekter
-
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-06.png")
-```
-
----
-
-**øvelse:** forsøk å repliker følgende resultater i excel
-
-.panelset[
-.panel[.panel-name[tabell]
-
-```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkastning b"))
-```
-
-]
-.panel[.panel-name[r-kode (ikke pensum)]
-```{r}
-r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-	w <- seq(0,1,0.01)
-	v <- as.vector(df[,(2)])
-	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ml')
-	avk <- as.vector(covall$center)
-	kov <- covall$cov[lower.tri(covall$cov)] 
-	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
- 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
- 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
- 		dplyr::mutate(stdavk=sqrt(varians))
-			 }
-)
-```
-]
-.panel[.panel-name[figur]
-```{r, echo=f}
-gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-plotly::ggplotly(gg)
-```
-]
-]
-
----
-
-### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
-
-\begin{equation}
-Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
-\end{equation}
-
-- $Kor(r_a,r_b)=1$ (helt avhengige)
-- $Kor(r_a,r_b)=0$ (helt uavhengige)
-- $Kor(r_a,r_b)=-1$ (helt motsatt avhengige)
-
-Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
-
-Som gjør at vi kan skrive
-\begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
-\end{equation}
-
----
-
-Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
-\begin{equation*}
-Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
-\end{equation*}
-
-Mens variansen til porteføljen kan uttrykkes som
-\begin{equation*}
-Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 \\= 0.001975
-\end{equation*}
-
----
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-05.png")
-```
-
----
-
-
-```{r, echo=FALSE, out.width="75%", fig.cap=""}
-knitr::include_graphics("pensum/figurer-07.png")
-```
-
----
-
-**Øvelse:** Forsøk å replikere følgende tabell i Excel
-
-.panelset[
-.panel[.panel-name[Tabell]
-```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
-```
-]
-.panel[.panel-name[R-kode (ikke pensum)]
-```{r}
-plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-	w <- seq(0,1,0.01)
-	v <- as.vector(df[,(2)])
-	m <- as.matrix(df[,(3:4)])
-	covall <- cov.wt(m,v,method='ML')
-	avk <- as.vector(covall$center)
-	kov <- covall$cov[lower.tri(covall$cov)] 
-	var <- as.vector(diag(as.matrix(covall$cov)))
-	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
- 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
- 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
- 		dplyr::mutate(stdavk=sqrt(varians))
-			 }
-)
-```
-
-]
-.panel[.panel-name[Figur]
-```{r, echo=F}
-ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-#plotly::ggplotly(ggf)
-```
-]
-]
-Følgende tabell
-```{r, echo=FALSE, out.width="25%"}
-dfn12 <- data.frame(prob=c(0.20,0.30,0.50),
-		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
-		    tilstand=c(1,2,3),
-		    bedriften=c(-60,5,60),
-		    nyttprosj=c(30,2.5,-30),
-		    portefoljen_ikkediv=c(-60,5,60),
-		    portefoljen_div=c(10,5,-10))
-g1 <- ggplot(data=dfn12, aes(x=beskr, y=nyttprosj)) + geom_bar(stat="identity")
-g2 <- ggplot(data=dfn12, aes(x=beskr, y=bedriften)) + geom_bar(stat="identity")
-g3 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_ikkediv)) + geom_bar(stat="identity")
-g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="identity")
-htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
-```
-
 ---
 
 class: inverse, center, middle
@@ -2112,12 +1970,6 @@ Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig
 
 En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
 
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::knit_exit()
-```
-# https://thediplomat.com/2021/09/is-chinas-evergrande-group-too-big-to-fail/
-# oppgavene 3.4 og 3.6 i læreboka har jeg vansker med
-
 ---
 
 class: inverse, center, middle
@@ -2161,7 +2013,7 @@ Vi gjør et skille mellom disse to begrepene i formlene som vi nå skal se på, 
 
 ## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
-Alternive navn på investeringsrisiko: eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.
+Alternative navn på investeringsrisiko: eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.
 
 Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
 - Etterspørselsrisiko
@@ -2263,7 +2115,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 1. OPA øker
 1. OPA blir mer usikkert (høyere total risiko)
-1. OPA blir høyere i gode tider, men lavere i dårliger tider
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
 1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
 1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
@@ -2474,7 +2326,7 @@ k_U + (k_U-k_G)\frac{G}{E}
 ---
 
 *Seperasjonsprinsippet*
-- M$M impliserer at det ikke er mulig å øke bedriftens eller enkeltståendes prosjekters verdi gjennom finansieringsformen
+- M$M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen
 - Når gjeldsandelen/gjeldsgraden øker
 - Lånerenten laver enn egenkapitalkostnaden
 - Oppveiet av høyere egenkapitalkostnad.
@@ -2482,7 +2334,7 @@ k_U + (k_U-k_G)\frac{G}{E}
 - Nettoeffekt lik null: 
 - Lønnsomheten av nye investeringsprosjekter kan beregnes på samme måte som uttrykk 7.4
 - Vi løsner nå på forutsetningen om samme risikoklasse: Vi definerer har risikoklasse som alle selskaper med samme systematiske risiko.
-- Dvs uten tanke på finansiring
+- Dvs uten tanke på finansiering
 - Omtales som seperasjonsprinsippet
 ---
 
@@ -2510,11 +2362,12 @@ knitr::include_graphics(c("pensum/figurer-52.png"))
 
 ---
 
-### Sammehengen mellom KVM og M&M
+### Sammenhengen mellom KVM og M&M
 
+Vi løsner nå på forutsetningen...
 
 **Eksempel 7.5**: For Demo ASA er $\beta_G=0.02$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
-Den risikofrien renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
+Den risikofrie renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
 .pull-left[
 **Alternativ 1: KVM**
 \begin{equation*}
@@ -2542,7 +2395,6 @@ Vi kan derfor benytte M&M-2:
 k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10 
 \end{equation*}
 ]
-
 ---
 
 class: inverse, center, middle
@@ -2639,4 +2491,6 @@ knitr::knit_exit()
 .panel[.panel-name[Figur]
 ]
 ]
+
+
 

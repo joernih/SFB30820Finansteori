@@ -1,10 +1,30 @@
 ---
 output:
-#  html_document:
-  html_notebook:
-    css: AV.css
+  html_document:
+  #html_notebook:
+    css: PAA.css
 #rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
 ---
+
+# Mikroøkonomi (SFB10916), Våren 2021 
+## Obligatorisk arbeidskrav 
+- Leveres ut: 10.03.2021
+- Leveres inn: 28.03.2021
+  - HUSK: Skriv navn med kandidatnummer på innleveringen (fra 1-3 personer per besvarelse)
+  - Leveres inn i egen mappe på Canvas. 
+
+# Oppgave 1 Generell forståelse
+# Oppgave 2 Produsentteori
+# Oppgave 3 Konsumentteori
+# Oppgave 4 Markedsteori
+
+```{r}
+knitr::knit_exit()
+```
+
+
+
+
 
 # Mikroøkonomi (SFB10916), Våren 2021
 Versjon 1.0
