@@ -637,6 +637,7 @@ htmlTable(udiportf, header=c("","Gjennomsnitt","Standardavvik"))
 
 ### Porteføljevekter
 
+
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-06.png")
 ```
@@ -2109,10 +2110,125 @@ Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig
 
 En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
 
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::knit_exit()
+```
+# https://thediplomat.com/2021/09/is-chinas-evergrande-group-too-big-to-fail/
+# oppgavene 3.4 og 3.6 i læreboka har jeg vansker med
+
 ---
 
 class: inverse, center, middle
 
 # Forelesning 7: `r tema[7]`
 
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 8: `r tema[10]`
+
+**Læringsmål:**
+
+- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+- Definere et nøytralt skattesystem ved toleddsskatt.
+- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+- Fedegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+class: inverse, center, middle
+
+
+# Forelesning 9: `r tema[12]`
+
+**Læringsmål:**
+
+- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+- Redegjøre for teori og empiri om dividendens signalfunksjon.
+- Forklare hvorfor dividende kan påvirke agentkostnader.
+- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 10: `r tema[13]`
+
+**Læringsmål:**
+
+- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+- Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
+- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 11: `r tema[14]`
+
+- Begrunne hvorfor risikostyring kan være viktig.
+- Redegjøre for viktige risikokilder.
+- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
+- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
+- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
+- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+```{r include=FALSE}
+knitr::knit_exit()
+```
+
+1. forklare forskjellen mellom bokverdi og markedsverdi for bedrifter og prosjekter.
+1. redegjøre for begrepene investeringsrisiko og finansieringsrisiko.
+1. forklare hvordan finansieringsformen kan påvirke verdien av et investeringsprosjekt.
+1. beskrive tre imperfeksjoner som kan påvirke bedriftens dividendepolitikk.
+1. definere begrepet opsjon.
+1. nevne tre finansielle instrumenter som brukes i risikostyring.
+
+**Huskeliste til neste forelesning**
+- Eksamensdato
+- Studer øvelse nærmere for utvidelse
+- Anbefalte oppgaver
+
+[abc](https://docs.google.com/spreadsheets/d/1biPZnGBfnGlZGQsoygo-L2vX64XWnZRbjfiyyAEg5N8/edit#gid=0)
+
+
+
+
+.panelset[
+.panel[.panel-name[Tabell]
+]
+.panel[.panel-name[R-kode (ikke pensum)]
+]
+.panel[.panel-name[Figur]
+]
+]
 

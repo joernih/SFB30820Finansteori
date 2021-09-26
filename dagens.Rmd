@@ -150,7 +150,7 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 .pull-left[
 
-```{r, eval=T, echo=F}
+```{r, eval=T, echo=T}
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
 su <- round(sd.p(c(til_u$opa)),digits=0)
@@ -161,24 +161,25 @@ uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
 
-**Ingen gjeld**
+<!--**Ingen gjeld**
 
 - Forventet avkastning: `r mu`
 - Standardavvik: `r su` 
 - Variasjonskoeffisienten: `r vu`
 - Utfallsspekteret: `r uu`
-
+-->
 ]
 
 .pull-right[
 
 **Med gjeldsandel på 50%**
 
+<!--
 - Forventet avkastning: `r mm`
 - Standardavvik: `r sm` 
 - Variasjonskoeffisienten: `r vm`
 - Utfallsspekteret: `r um`
-
+-->
 ]
 
 **Fem effekter av økt gjeldsgrad:**
