@@ -31,12 +31,18 @@ gensh_df <-
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T))%>%
-	dplyr::mutate(stdp=varp^(1/2)) %>%
+	dplyr::mutate(stdp=sd(varp)) %>%
 	dplyr::ungroup() 
 
-#?
-gensh_df_1 <- gensh_df %>% dplyr::filter(typeindex=)
-ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=typeindex)) + geom_point()
+obj <- unique(gensh_df$typeindex)
+criptcoinsg <- obj %>% 
+	purrr::map(function(x,df=gensh_df)
+		   {
+	dfg <- dplyr::filter(gensh_df,typeindex==x)
+	ggplot2::ggplot(dfg, aes(x=date,y=rp, color=typeindex)) + geom_point()
+		   })
+gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],criptcoinsg[[4]], ncol=2)
+
 ## Porteføljeinvesteringer
 gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
 	dplyr::select(typeindex,date,rp) %>%
