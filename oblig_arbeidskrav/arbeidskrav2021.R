@@ -7,6 +7,45 @@ ls("package:SFB30820Finansteori")
 
 # Del I
 
+0.2*(0.16-0.11)*(0.05-0.23)+
+0.5*(0.12-0.11)*(0.20-0.23)+
+0.3*(0.06-0.11)*(0.40-0.23)
+#
+(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-2*(1/2)*(1/2)*0.0045
+cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
+	   (df_eks_2_1_w$avk_b-ex_b))%*%df_eks_2_1_w$prob)
+#m <- as.matrix(df_eks_2_1_w[,c(3,4)])
+#v <- as.vector(df_eks_2_1_w[,c(2)])
+#cov.wt(m,v)$cov
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.2,0.5,0.3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
+ex_a <- c(df_eks_2_1$avk_a%*%df_eks_2_1$prob)
+ex_b <- c(df_eks_2_1$avk_b%*%df_eks_2_1$prob)
+vx_a <- c((df_eks_2_1$avk_a-ex_a)^2%*%df_eks_2_1$prob)
+vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
+htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
+r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+# [1] -0.9994664
+plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w <- seq(0,1,0.01)
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method='ml')
+	avk <- as.vector(covall$center)
+	kov <- covall$cov[lower.tri(covall$cov)] 
+	var <- as.vector(diag(as.matrix(covall$cov)))
+	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
+
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
+plotly::ggplotly(gg)
 
 # Del II
 ## Reading the data
