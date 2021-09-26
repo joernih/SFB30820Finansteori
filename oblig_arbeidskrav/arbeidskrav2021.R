@@ -49,6 +49,8 @@ gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>%
 	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
 	tidyr::drop_na()
 
+View(gensh_df_2)
+
 cor(gensh_df_2$BTC,gensh_df_2$ETH)
 cor(gensh_df_2$BTC,gensh_df_2$NSE)
 cor(gensh_df_2$BTC,gensh_df_2$XRP)
@@ -58,8 +60,6 @@ ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()+geom_smooth(method=
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=XRP)) + geom_point()
 ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=ETH)) + geom_point()
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
-
-
 
 ### 1. Finn Kovarians
 
@@ -85,3 +85,5 @@ ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
 ### 4. Avkastning i prosent
 ### 5. Tidserieplot over utviklingen i avkastningen 
 #View(nyse)
+#library(zoo)
+#?rollapply
