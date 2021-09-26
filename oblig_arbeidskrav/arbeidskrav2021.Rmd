@@ -19,12 +19,28 @@ rmarkdown::render("arbeidskrav2021.Rmd")
   - Leveres inn i egen mappe på Canvas. 
 
 # Del I: 1-6
-## Oppgave 1 
-## Oppgave 2 
-## Oppgave 3 
-## Oppgave 4 
-# Del II:
+## Oppgave 1: Generell forståelse
+(1). Forklare forskjellen mellom nåverdi og justert-nåverdi
+(2). Forskjellen mellom forventet og realisert verdi
+(3). Portefølje M
+(4).
+(5). Oljefondet og aktiv forvaltning
+(6).
+(7).
+(8).
+## Oppgave 2: Portefølje
+## Oppgave 3: Porteføljemodellen
+## Oppgave 4: KVM og justert nåverdi
+## Oppgave 4: Gjeldsgrad og risiko
+# Del II: Regneark 
+1. Finn tidsintervall
+1. Finn forventet verdi
+1. Finn varians og standardavvik
+1. Avkastning i prosent
+1. Tidserieplot over utviklingen i avkastningen 
 
+Løses ved bruk av regneark (eks. Excel, Libreoffice, )
+  
 ```{r}
 knitr::knit_exit()
 ```

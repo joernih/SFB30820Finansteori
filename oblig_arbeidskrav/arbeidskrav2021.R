@@ -4,19 +4,22 @@ library(ggplot2)
 library(dplyr)
 library(SFB30820Finansteori)
 ls("package:SFB30820Finansteori")
-# Reading the data
+
+# Del I
+
+
+# Del II
+## Reading the data
 crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.)))
 names(crypto_df) <- c("typeindex","date","close","open","high","low") 
+
 stocko_df <- list.files(path="csv",pattern = "*.csv")[c(3)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::select(c(-6,-7)) %>% dplyr::mutate(typeindex='NSE') %>%
 	dplyr::relocate(typeindex,1)
 names(stocko_df) <- c("typeindex","date","open","high","low","close") 
-# [1] "currency" "date"     "close"    "open"    
-# [5] "high"     "low"     
-View(crypto_df)
-View(stocko_df)
-# Genereal transformation
-unique(crypto_df$currency)
-# [1] "BTC" "ETH" "XRP"
+#View(crypto_df)
+#View(stocko_df)
+
+## Data transformation
 gensh_df <- bind_rows(dplyr::select(crypto_df,date,typeindex,close), dplyr::select(stocko_df,date,typeindex,close)) %>% 
 	dplyr::group_by(typeindex) %>% 
 	dplyr::mutate(mdate=min(date)) %>%
@@ -26,13 +29,6 @@ gensh_df <- bind_rows(dplyr::select(crypto_df,date,typeindex,close), dplyr::sele
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::ungroup() 
 
-# Tasks
-## Sheet 1: Individuelt
-### 1. Finn tidsintervall
-### 2. Finn forventet verdi
-### 3. Finn varians og standardavvik
-### 4. Avkastning i prosent
-### 5. Tidserieplot over utviklingen i avkastningen 
 gensh_df_1 <- gensh_df %>% dplyr::filter(typeindex=)
 ggplot2::ggplot(gensh_df_1, aes(x=date,y=rp, color=typeindex)) + geom_point()
 
@@ -69,4 +65,11 @@ cor(gensh_df_2$XRP,gensh_df_2$ETH)
 #library(foreign)
 #ls("package:foreign")
 #nyse <- read.dta("https://query1.finance.yahoo.com/v7/finance/download/%5ENYA?period1=1472774400&period2=1630540800&interval=1d&events=history&includeAdjustedClose=true")
+# Tasks
+## Sheet 1: Individuelt
+### 1. Finn tidsintervall
+### 2. Finn forventet verdi
+### 3. Finn varians og standardavvik
+### 4. Avkastning i prosent
+### 5. Tidserieplot over utviklingen i avkastningen 
 #View(nyse)
