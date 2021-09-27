@@ -48,13 +48,18 @@ gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],
 			ncol=3)
 
 ## Porteføljeinvesteringer
-gensh_df_2 <- gensh_df %>%
-	dplyr::group_by(typeindex) %>% 
-	dplyr::mutate(mdate=min(date)) %>%
-	dplyr::ungroup(typeindex) %>% 
-	dplyr::mutate(earlyd=max(mdate)) %>%
-	dplyr::group_by(typeindex) %>% 
-	dplyr::filter(date>=earlyd) 
+gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>% 
+	dplyr::select(typeindex,date,rp) %>%
+	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
+	tidyr::drop_na()
+
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
+ggplot2::ggplot(gensh_df_2, aes(x=NSE,y=ETH)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
+cor(gensh_df_2$BTC,gensh_df_2$ETH)
+cor(gensh_df_2$BTC,gensh_df_2$NSE)
+cor(gensh_df_2$NSE,gensh_df_2$ETH)
+
 	#dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
 	#dplyr::mutate(mean=mean(rp,na.rm=T)) %>%
 	#dplyr::mutate(varp=var(rp,na.rm=T)) %>%
@@ -64,34 +69,6 @@ gensh_df_2 <- gensh_df %>%
 
 View(gensh_df_2)
 
-### Technical part (tabl)
-## 2-variablles
-w_be <- c(0.5,0.5)
-w_bn <- c(0.5,0.5)
-w_ne <- c(0.5,0.5)
-
-### Graphical part
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=ETH,y=BTC)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
-geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
-
-
-
-
-
-dplyr::mutate(c_btc_eth=cor())
-cor(gensh_df_2$BTC,gensh_df_2$ETH)
-cor(gensh_df_2$BTC,gensh_df_2$NSE)
-cor(gensh_df_2$ETH,gensh_df_2$NSE)
-#View(gensh_df_2)
-#unique(gensh_df_2$mdate)
-### Technical part
-## 2-variablles
-w <- c(0.3,0.4,0.3)
-erp <- 
-mean(gensh_df_2[,1,2,3])
-### Graphical part
 
 
 ### Works
@@ -118,3 +95,22 @@ cov.wt(xy, wt = w1, method = "ML", cor = TRUE)
 #library(foreign)
 #ls("package:foreign")
 #nyse <- read.dta("https://query1.finance.yahoo.com/v7/finance/download/%5ENYA?period1=1472774400&period2=1630540800&interval=1d&events=history&includeAdjustedClose=true")
+
+
+
+gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
+	dplyr::select(typeindex,date,rp) %>%
+	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
+	tidyr::drop_na()
+
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=XRP)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
+
+cor(gensh_df_2$BTC,gensh_df_2$ETH)
+cor(gensh_df_2$BTC,gensh_df_2$NSE)
+cor(gensh_df_2$BTC,gensh_df_2$XRP)
+cor(gensh_df_2$XRP,gensh_df_2$ETH)
+
+
