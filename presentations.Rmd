@@ -1062,7 +1062,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 	avkdf <- data.frame(pdraw=pd,w1=1-w[1], w2=w[2], w3=w[3],wc=sum(w)) %>%
  	dplyr::mutate(forvavk=port_returns) %>%
  	dplyr::mutate(varians=port_risk_v) %>%
-	 dplyr::mutate(stdavk=port_risk_s)
+	dplyr::mutate(stdavk=port_risk_s)
 })
 ```
 

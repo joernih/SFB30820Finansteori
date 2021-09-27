@@ -33,7 +33,7 @@ enkelt_df <-
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T))%>%
-	dplyr::mutate(stdp=sd(varp)) %>%
+	dplyr::mutate(stdp=sd(rp)) %>%
 	dplyr::ungroup() 
 
 obj <- unique(enkelt_df$typeindex)[-3]
@@ -48,11 +48,18 @@ gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],
 			ncol=3)
 
 ## Porteføljeinvesteringer
-gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
-	dplyr::select(typeindex,date,rp) %>%
-	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
-	tidyr::drop_na()
+gensh_df_2 <- gensh_df %>%
+	dplyr::group_by(typeindex) %>% 
+	dplyr::mutate(mdate=min(date)) %>%
+	dplyr::filter(date>=max(mdate)) %>%
+	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
+	dplyr::mutate(mean=mean(close)) %>%
+	dplyr::mutate(varp=var(rp,na.rm=T))%>%
+	dplyr::mutate(stdp=sd(rp,na.rm=T)) 
+	#dplyr::ungroup() %>%
+	#tidyr::pivot_wider(names_from=typeindex, values_from=rp)
 
+View(gensh_df_2)
 ### Technical part
 w <- c(0.3,0.4,0.3)
 erp <- 
@@ -69,11 +76,10 @@ geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 
 ### Works
 w <- c(0.3,0.4,0.3)
-df_eks_2_6 <- data.frame(aksje=c("A","B","C"),erp=c(0.12,0.15,0.25),std=c(0.10,0.20,0.40),korr=c("Mellom A og B: 0.8",
-												 "Mellom A og C: 0.5",
-												 "Mellom B og C: -0.10"))
-htmlTable::htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standardavvik","Korrelasjonskoeffisient"))
-port_returns <- (sum(w *df_eks_2_6$erp))
+erp <- c(0.12 0.15 0.25)
+??cov.w
+?stats::cov_mat 
+port_returns <- (sum(w *erp))
 port_risk_v <- t(w) %*% (cov_mat %*% w)
 port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
 avkdf <- data.frame(w1=1-w[1], w2=w[2], w3=w[3],wc=sum(w)) %>%
@@ -81,6 +87,10 @@ dplyr::mutate(forvavk=port_returns) %>%
 dplyr::mutate(varians=port_risk_v) %>%
 dplyr::mutate(stdavk=port_risk_s)
 
+xyz <- cbind(x = 1:10, y = c(1:3, 8:5, 8:10),z=c(1,2,3,4,5,5,4,3,2,1))
+w1 <- c(0,0,0,1,1,1,1,1,0,0)
+cov.wt(xy, wt = w1) # i.e. method = "unbiased"
+cov.wt(xy, wt = w1, method = "ML", cor = TRUE)
 
 ###
 ## Appendiks
