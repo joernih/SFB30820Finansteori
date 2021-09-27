@@ -14,7 +14,7 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 - Versjon 1.0
 - Leveres ut: 28.09.2021 (Canvas)
 - Leveres inn: 26.10.2021 (Canvas)
-  - Del I levers som dokument, Del II som regneark
+  - Del I lastes opp som dokument-fil, Del II som regneark
 
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
@@ -27,64 +27,76 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 
 (4). Hva menes med prosjektets eller aksjens beta?
 
-(5). Gi en forklaring om mekansimene som inngår i Tofondsresultatet.
+(5). Gi en forklaring om mekanismene som inngår i Tofondsresultatet.
 
 (6). Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
 
 (7). Dersom KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
 
-(8). Hva menes med et finansielt instrument, og  kan du gi noen eksampler på dette? 
+(8). Hva menes med et finansielt instrument, og  kan du gi noen eksemplar på dette? 
 
 (9). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
-## Oppgave 2: Porteføljeteori to objekter
+## oppgave 2-5 (vil bli publisert før fredag)
 
-## Oppgave 3: Porteføljeteori
-
-## Oppgave 4: KVM og justert nåverdi
-
-## Oppgave 5: Gjeldsgrad og risiko
 
 # Del II: Porteføljeutregninger ved bruk av regneark
 Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for tre ulike kryptovalutaer og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
 ## Enkeltinvesteringer
 
-**Formelberegninger**
+**Deskriptiv statistikk**
 
-1. Lag en tidserie som viser avkastningen for de tre kryptovalutaene og New York børsen
+1. Lag en tidsserie som viser avkastningen for de to kryptovalutaene og New York børsen
 1. For hver enkelt serie finn:
 	1. Gjennomsnittlig avkastning
-	2. Varians
-	3. Standardavvik
-	4. Høyeste og laveste verdi
-
+	1. Varians
+	1. Standardavvik
+	1. Høyeste og laveste verdi
 
 **Grafisk visning**
 
 1. For hver enkelt tidsserie lag et scatterplot (x-aksen dager, y-aksen avkastning i prosent)
 
-
 **Økonomisk tolkning (svaret kan skrives direkte inn i regnearket)**
 
 Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme observasjoner du finner i tidsserien?
 
-## Porteføljeinvesteringer
+## Porteføljesammensetninger
 
-1. Lag først
-1. Finn porteføljens standaravvik mellom ved varierende vekter
-   1. Mellom 2 objekter: bitcoin, x
-   1. Mellom 3 objekter: bitcoin, x, y og stocck
-1. De parvise kombinasjonene
+**Deskriptiv statistikk**
 
-## Systematisk og usystematisk risiko (svaret kan skrives direkte inn i regnearket)
-1. I forelesningen i dette kurset har du lært at porteføljerisikoen kan splittes opp i to ledd: et ledd for usystematisk-risiko et annet ledd for systematisk-risiko. Dessuten at man kan kvitte seg med førstnevnte ved å øke antall objekter som inngår i porteføljen.
+1. Lag en fane i regnearket som inneholder data hvor det er registrert observasjoner for *alle* de tre tidsseriene
+1. Basert på dette datasettet beregn:
+	1. Gjennomsnittlig avkastning
+	2. Varians
+	3. Standardavvik
+	4. Korrelasjonskoeffisienten mellom de tre investeringsobjektene
 
-- Hvilken grad skjer dette ved å gå fra strategi 1-x.
-- Har du forklaringer på hvilken faktorer som gjelder her (merk: foreleser vet i utgangspunktet lite om kryptovalutare, og ønsker å forstå mer)
+**Grafisk visning**
 
+1. Lag et scatterplot for hver ulike kombiversjonen av de tre investeringsobjektene (x-akse avkastning det ene objektet, y-aksen avkastning det andre objektet). Forsøk også få inn regresjonslinjen som oppsummerer graden av samvariasjon mellom de to objektene. 
+
+**Porteføljesammensetninger**
+
+1. Basert på at brukeren selv kan justere porteføljevektene, lag en tabell i regnearket som viser utregningene av
+```{r, echo=F}
+radm <- c("BTC","ETH","NSE","BTC og ETH", "BTC og NSE", "BTC, ETH og NSE")
+lr <- length(radm)
+fi <- rep("Beregn",lr)
+df_portf <- data.frame(var=fi, std=fi) 
+htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføljen",header=c("Porteføljens varians","Porteføljens standardavvik"))
+```
+
+1. Ved flere investeringsobjekter har du lært i dette kurset at porteføljerisikoen 
+kan splittes opp i to ledd: (1) usystematisk-risiko (2) for systematisk-risiko. Førstnevnte vil vanligvis reduseres når antall objekter som inngår i porteføljen øker.
+	1. Ser dette ut til å være i tråd med tabellen som du har kommet fram til?
+	1. Klarer du å knytte noen forklaringer til hvilke faktorer som spiller inn her?
 
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
+## oppgave 2: porteføljeteori to objekter ()
+## Oppgave 3: Porteføljeteori 
+## Oppgave 4: KVM og justert nåverdi
+## Oppgave 5: Gjeldsgrad og risiko
