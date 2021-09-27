@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4a5787c5f8a4191bfd089cad98a55a8","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e72cc2cd6f3846ae94db504eaac48c4d","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -441,127 +441,43 @@ Merk: Gitt større eller lik, vil det være mulig å skape verdi fra finansierin
 
 ## Arbitrasje
 
-.pull-left[
+Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
 
-# 1
-
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-]
-
-.pull-right[
-
-# 2
-
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;25&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-]
-
----
-
-**Strategi:**
+**Generell strategi:**
 1. Selg dine *aksjer* i det overprisede selskapet
 1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
   a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
   b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
 ]
 
-**Eksempel 7.2:**
-
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
 
-Men hvilken verdi blir fastsatt i markedet?
+---
+
+**Eksempel 7.2:** Bruk av strategi 2a.
+
+.pull-left[
+Selskap U (100 prosentet egenkapitalfinansiert)
+- Verdien av selskapet 1000. Hvor `\(V_U=E_U=1000\)` og `\(G_U=0\)`
+- Gir dividiende `\(=OFR\)`
+- Salg 10 prosent av aksjer: 1000*0.1=100,-
+]
+.pull-right[
+Selskap M 
+- Verdien av selskapet 900. Hvor `\(V_M=900\)`, `\(E_M=500\)` og `\(G_M=450\)` med en pålydende gjeld på 6 prosent
+- Gir dividiende `\(=OFR-0.06\cdot 500=OFR-30\)`
+- Kjøper for 90,-
+- Investering: Aksjer `\(0.1\cdot 500\)` og Obligasjoner `\(0.1\cdot 400\)` som totalt er lik 90
+- Utbetaling: `\(0.1\cdot OFR\)`
+]
+
+Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
 
 ---
 
 ## Miller &amp; Modigliani (M&amp;M)
+
+Som vist vil arbitrasje føre til lik verdifastsette, men hva blir verdien som blir fastsatt i markedet?
 
 Forutsetninger til grunn for verdsetting av selskaper
 
@@ -678,6 +594,10 @@ k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10
 ```r
 knitr::knit_exit()
 ```
+
+
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
