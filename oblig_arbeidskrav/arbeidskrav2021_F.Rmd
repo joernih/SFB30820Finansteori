@@ -18,15 +18,15 @@ rmarkdown::render("arbeidskrav2021.Rmd")
 
 # Del I: Generelle spørsmål
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
-(1). Forklare forskjellen mellom nåverdi og justert-nåverdi.
-(2). Forskjellen mellom forventet og realisert verdi
-(3). Målkonkonflikter mellom eiere/ledelse
-(4). Hva menes med prosjektets eller aksjens beta
-(5). Mekansimen bak Tofondsresultatet
-(6). Sammehengen mellom KVM og porteføljeteorein
-(8).Informasjonseffisiens skapes av (1) konkurransen investorene imellom og (2) profittmuligheter for den som oppdager og raskt utnytter effisiens
-(9) Hva menes med et finansielt instrument, og gi noen eksempler på dette?
-(10) Hvordan teknisk selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)
+(1). Forklare forskjellen mellom nåverdiutrykkene som benyttes med og uten usikkerhet.
+(2). Forskjellen mellom forventet og realisert verdi av en kontantstrøm.
+(3). Pek på hvorfor det kan oppstå målkonflikter mellom ledelsen og eierne av et selskap ved igangsetting av et nytt prosjekt.
+(4). Hva menes med prosjektets eller aksjens beta?
+(5). Gi en forklaring bak mekansimene i  *tofondsresultatet*.
+(6). Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
+(8). Dersom KVM skal virke i praksis, er det nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
+(9). Hva menes med et finansielt instrument, og gi noen eksempler på dette?
+(10). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
 ## Oppgave 2: Porteføljeteori to objekter
 
