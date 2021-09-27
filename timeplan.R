@@ -1,3 +1,4 @@
+#rm(list=ls())
 library(htmlTable)
 library(magrittr)
 library(xaringan)
@@ -13,14 +14,14 @@ tema <- c(
 	  "Effisiens",
 	  "Kapitalverdimodellen",
 	  "Langsiktige finansieringsformer",
-	  "Gjeld, total risiko og systematisk risiko",
+	  "Gjeldgrad og risiko",
 	  "",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
-	  "Skatt",
+	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
 	  "Opsjoner",
 	  "Finansielle instrumenter til påvirking av kontantstrømmer",
-	  "Repetisjon"
+	  "Oppgavegjennomgang"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -38,7 +39,7 @@ literatur <- c(
 	       "Kap. 13: Risikostyring",
 	       "Kap. 1,2-4,5-8,11,12,13"
 )
-undervform <- c(
+undervfor <- c(
 	  "Zoom",
 	  "Zoom",
 	  "Zoom",
@@ -61,8 +62,8 @@ oppgaver_bok <- c(
 	  "3.1,3.2,3.3,3.5,3.6",
 	  "3.3,3.4,3.7,3.8,3.9",
 	  "5.1,5.2,5.3,5.8,5.9",
-	  "6.1,6.6,6.7,6.8.7.1,7.2,7.8,7.8,7.9",
-	  "",
+	  "6.1,6.6,6.7,6.8",
+	  "7.1,7.2,7.8,7.8,7.9",
 	  "",
 	  "",
 	  "",
@@ -76,9 +77,8 @@ oppgaver_nett <- c(
 	  "N.3.3_1,N.3.4,N.3.5",
 	  "N.3.6,N.3.9,N.3.10,N.3.11",
 	  "N.5.1,N.5.2,N.5.3,N.5.5,N.5.5",
-	  "N.6.1,N.6.2,N.6.3,N.7.1,N.7.2,N.7.3",
-	  "",
-	  "",
+	  "N.6.1,N.6.2,N.6.3",
+	  "N.7.1,N.7.2,N.7.3",
 	  "",
 	  "",
 	  "",
@@ -92,7 +92,7 @@ df1 <- data.frame(
 		  Forelesning=forenr,
 		  Literatur=literatur,
 		  Temaer=tema,
-		  undervform,
+		  Undervisningsform=undervfor,
 		  Timer=timer
 )
 timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsform","Timer")

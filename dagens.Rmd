@@ -49,12 +49,11 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+1. Definere begrepene gjeldsgrad og gjeldsandel.
+1. Forklare hva som bestemmer selskapets investeringsrisiko.
+1. Redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
+1. Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
+1. Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
 
 `r paste("Oppdatert:",Sys.Date())`
 
@@ -93,7 +92,7 @@ Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *pr
 - Endret markedsmakt
 - Høyere faste utbetalinger
 
-I slutten av dette kurset skal vi se nærmer på finansielle instrumenter (eks. swapper, futures og opsjonner) kan benyttes til påvirke usikkerheten til disse kontantstrømmene.
+I slutten av dette kurset skal vi se nærmer på noen finansielle instrumenter (eks. swapper, futures og opsjonner) kan benyttes til påvirke usikkerheten til disse kontantstrømmene.
 
 ---
 
@@ -200,14 +199,14 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 
 ---
 
-### Formelt (uten skatt) ###
+### Formelt (uten skatt, men med konkursrisiko) ###
 
-- *Systematisk investeringsrisiko*:
+- Systematisk investeringsrisiko
 \begin{equation*}
 \beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}
 
-- Løst for egenkapitalbeta (med konkursrisiko)
+- Løst for egenkapitalbeta 
 
 \begin{equation*}
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
@@ -245,24 +244,36 @@ til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 a <- data.frame(t(til_b))
 htmlTable(t(til_b),rnames=radnr_p)
 ```
-
-
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
 ```
+---
+
+class: inverse, center, middle
+
+# Forelesning 8: `r tema[8]`
+
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+`r paste("Oppdatert:",Sys.Date())`
 
 ---
 
 # Gjeldsgrad og verdi i perfekte kapitalmarkeder
 
 I kapittel 6 så vi at økt gjeldsgrad førte til
-1. Høyere forventet avkastning
-1. Høyere risiko (både for total risiko og systematisk risiko) 
+1. Økt forventet avkastning
+1. Økt risiko (både for total risiko og systematisk risiko) 
 
 Spørsmålet vi stiller nå:
-- Er den positive effekten av (1) større, lik eller mindre av de negative effekten av (2)?
-
-Merk: Gitt større eller lik, vil det være mulig å skape verdi fra finansieringssiden ved å endre bedriftens kapitalstruktur (dvs. forholdet mellom egenkapital og gjeld).
+- Er den positive effekten av 1. større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre av de negative effekten av 2.?
 
 ---
 
@@ -298,18 +309,7 @@ htmlTable(t(til_u),rnames=radm)
 
 Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
 
-**Generell strategi:**
-1. Selg dine *aksjer* i det overprisede selskapet
-1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
-  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
-  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
-]
-
-**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
-
----
-
-**Eksempel 7.2:** Bruk av strategi 2a.
+**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm, ulik finansfor og verdifastsettelse
 
 .pull-left[
 Selskap U (100 prosentet egenkapitalfinansiert)
@@ -328,6 +328,18 @@ Selskap M
 
 Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
 
+
+---
+
+**Generell strategi:**
+1. Selg dine *aksjer* i det overprisede selskapet
+1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
+  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
+]
+
+**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
+
 ---
 
 ## Miller & Modigliani (M&M)
@@ -345,7 +357,7 @@ Forutsetninger til grunn for verdsetting av selskaper
 
 .pull-left[
 **Investeringssiden:**
-- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart lette på denne forutsetningen)
+- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
@@ -380,8 +392,8 @@ V = \frac{E(OFR)}{k_t}=\frac{E(OFR)}{k_u}
 - **M&M-2**
 
 \begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E}\\
-k_U + (k_U-k_G)\frac{G}{E}
+k_E = k_T + (k_T-k_G)\frac{G}{E} =
+=k_U + (k_U-k_G)\frac{G}{E}
 \end{equation}
 
 ---
@@ -389,9 +401,8 @@ k_U + (k_U-k_G)\frac{G}{E}
 *Seperasjonsprinsippet*
 - M&M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
 	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed økning i eiernes avkastningskrav
-	1. Nettoeffekt av (1) ...  + (2)... = 0
-	1. Totalkapitalkostnaden påvirkes ikke av gjeldsgraden.
-
+	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
+	1. Dette resultatet ofte som *seperasjonsprinsippet*
 
 ---
 
