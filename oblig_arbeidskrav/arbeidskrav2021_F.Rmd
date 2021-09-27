@@ -16,6 +16,26 @@ rmarkdown::render("arbeidskrav2021.Rmd")
   - HUSK: 
   - Leveres inn i egen mappe på Canvas. 
 
+# Del I: Generelle spørsmål
+## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
+(1). Forklare forskjellen mellom nåverdi og justert-nåverdi.
+(2). Forskjellen mellom forventet og realisert verdi
+(3). Målkonkonflikter mellom eiere/ledelse
+(4). Hva menes med prosjektets eller aksjens beta
+(5). Mekansimen bak Tofondsresultatet
+(6). Sammehengen mellom KVM og porteføljeteorein
+(8).Informasjonseffisiens skapes av (1) konkurransen investorene imellom og (2) profittmuligheter for den som oppdager og raskt utnytter effisiens
+(9) Hva menes med et finansielt instrument, og gi noen eksempler på dette?
+(10) Hvordan teknisk selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)
+
+## Oppgave 2: Porteføljeteori to objekter
+
+## Oppgave 3: Porteføljeteori
+
+## Oppgave 4: KVM og justert nåverdi
+
+## Oppgave 5: Gjeldsgrad og risiko
+
 # Del II: Regneark-oppgaven 
 ## Mothersheet
 Løses ved bruk av regneark (eks. Excel, Libreoffice, )
@@ -35,3 +55,4 @@ Løses ved bruk av regneark (eks. Excel, Libreoffice, )
 ```{r}
 knitr::knit_exit()
 ```
+

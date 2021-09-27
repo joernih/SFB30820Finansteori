@@ -7,10 +7,10 @@ library(SFB30820Finansteori)
 ls("package:SFB30820Finansteori")
 
 # Del I
-
+View(crypto_df)
 # Del II
 ## Reading the data
-crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.)))
+crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::filter(Currency==c("BTC","ETH"))
 names(crypto_df) <- c("typeindex","date","close","open","high","low") 
 
 stocko_df <- list.files(path="csv",pattern = "*.csv")[c(3)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::select(c(-6,-7)) %>% dplyr::mutate(typeindex='NSE') %>%
@@ -19,7 +19,7 @@ names(stocko_df) <- c("typeindex","date","open","high","low","close")
 #View(crypto_df)
 #View(stocko_df)
 msheets <- list(krypto=crypto_df,boers=stocko_df)
-openxlsx::write.xlsx(msheets,file='mothersheet.xlsx',overwrite=T)
+openxlsx::write.xlsx(msheets,file='cryptos_nyse.xlsx',overwrite=T)
 
 ## Mothersheet
 gensh_df <- bind_rows(dplyr::select(crypto_df,date,typeindex,close), 
@@ -36,12 +36,13 @@ enkelt_df <-
 	dplyr::mutate(stdp=sd(rp)) %>%
 	dplyr::ungroup() 
 
-obj <- unique(enkelt_df$typeindex)[-3]
+obj <- unique(enkelt_df$typeindex)
 criptcoinsg <- obj %>% 
 	purrr::map(function(x,df=enkelt_df)
 		   {
 	dfg <- dplyr::filter(df,typeindex==x)
-	ggplot2::ggplot(dfg, aes(x=date,y=rp, color=typeindex)) + geom_point()
+	color <- c('blue','green','red')
+	ggplot2::ggplot(dfg, aes(x=date,y=rp)) + geom_point()
 		   })
 
 gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]], 
@@ -51,16 +52,21 @@ gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],
 gensh_df_2 <- gensh_df %>%
 	dplyr::group_by(typeindex) %>% 
 	dplyr::mutate(mdate=min(date)) %>%
-	dplyr::filter(date>=max(mdate)) %>%
+	dplyr::ungroup(typeindex) %>% 
+	dplyr::mutate(earlyd=max(mdate)) %>%
+	dplyr::group_by(typeindex) %>% 
+	dplyr::filter(date>=earlyd)  %>%
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
-	dplyr::mutate(mean=mean(close)) %>%
-	dplyr::mutate(varp=var(rp,na.rm=T))%>%
+	dplyr::mutate(mean=mean(rp,na.rm=T)) %>%
+	dplyr::mutate(varp=var(rp,na.rm=T)) %>%
 	dplyr::mutate(stdp=sd(rp,na.rm=T)) 
 	#dplyr::ungroup() %>%
 	#tidyr::pivot_wider(names_from=typeindex, values_from=rp)
 
-View(gensh_df_2)
+#View(gensh_df_2)
+#unique(gensh_df_2$mdate)
 ### Technical part
+## 2-variablles
 w <- c(0.3,0.4,0.3)
 erp <- 
 mean(gensh_df_2[,1,2,3])
