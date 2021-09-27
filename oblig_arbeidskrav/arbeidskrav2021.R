@@ -54,15 +54,32 @@ gensh_df_2 <- gensh_df %>%
 	dplyr::ungroup(typeindex) %>% 
 	dplyr::mutate(earlyd=max(mdate)) %>%
 	dplyr::group_by(typeindex) %>% 
-	dplyr::filter(date>=earlyd)  %>%
-	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
-	dplyr::mutate(mean=mean(rp,na.rm=T)) %>%
-	dplyr::mutate(varp=var(rp,na.rm=T)) %>%
-	dplyr::mutate(stdp=sd(rp,na.rm=T)) 
-	#dplyr::select(1,2,6) %>%
-	#tidyr::pivot_wider(names_from=typeindex, values_from=rp)
+	dplyr::filter(date>=earlyd) 
+	#dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
+	#dplyr::mutate(mean=mean(rp,na.rm=T)) %>%
+	#dplyr::mutate(varp=var(rp,na.rm=T)) %>%
+	#dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
+	#dplyr::select(date, typeindex, close) %>%
+	tidyr::pivot_wider(names_from=typeindex, values_from=close)
 
 View(gensh_df_2)
+
+### Technical part (tabl)
+## 2-variablles
+w_be <- c(0.5,0.5)
+w_bn <- c(0.5,0.5)
+w_ne <- c(0.5,0.5)
+
+### Graphical part
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=ETH,y=BTC)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
+geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
+
+
+
+
+
 dplyr::mutate(c_btc_eth=cor())
 cor(gensh_df_2$BTC,gensh_df_2$ETH)
 cor(gensh_df_2$BTC,gensh_df_2$NSE)
@@ -76,10 +93,6 @@ erp <-
 mean(gensh_df_2[,1,2,3])
 ### Graphical part
 
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=ETH,y=BTC)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
-geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 
 ### Works
 w <- c(0.3,0.4,0.3)

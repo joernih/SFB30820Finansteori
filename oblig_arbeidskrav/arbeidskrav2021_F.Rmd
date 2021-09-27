@@ -7,26 +7,35 @@ output:
 ---
 
 ```{r eval=FALSE, include=FALSE}
-rmarkdown::render("arbeidskrav2021.Rmd")
+rmarkdown::render("arbeidskrav2021_F.Rmd")
 ```
-# Mikroøkonomi (SFB10916), Våren 2021 
+# Mikroøkonomi (SFB30820), Høsten 2021 
 ## Obligatorisk arbeidskrav 
-- Leveres ut: 28.09.2021
-- Leveres inn: 26.10.2021
-  - HUSK: 
-  - Leveres inn i egen mappe på Canvas. 
+- Versjon 1.0
+- Leveres ut: 28.09.2021 (Canvas)
+- Leveres inn: 26.10.2021 (Canvas)
+  - Del I levers som dokument, Del II som regneark
 
-# Del I: Generelle spørsmål
+# Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
+
 (1). Forklare forskjellen mellom nåverdiutrykkene som benyttes med og uten usikkerhet.
+
 (2). Forskjellen mellom forventet og realisert verdi av en kontantstrøm.
+
 (3). Pek på hvorfor det kan oppstå målkonflikter mellom ledelsen og eierne av et selskap ved igangsetting av et nytt prosjekt.
+
 (4). Hva menes med prosjektets eller aksjens beta?
-(5). Gi en forklaring bak mekansimene i  *tofondsresultatet*.
+
+(5). Gi en forklaring om mekansimene som inngår i Tofondsresultatet.
+
 (6). Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
-(8). Dersom KVM skal virke i praksis, er det nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
-(9). Hva menes med et finansielt instrument, og gi noen eksempler på dette?
-(10). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
+
+(7). Dersom KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
+
+(8). Hva menes med et finansielt instrument, og  kan du gi noen eksampler på dette? 
+
+(9). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
 ## Oppgave 2: Porteføljeteori to objekter
 
@@ -36,23 +45,46 @@ rmarkdown::render("arbeidskrav2021.Rmd")
 
 ## Oppgave 5: Gjeldsgrad og risiko
 
-# Del II: Regneark-oppgaven 
-## Mothersheet
-Løses ved bruk av regneark (eks. Excel, Libreoffice, )
-1. Finn tidsintervall
+# Del II: Porteføljeutregninger ved bruk av regneark
+Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for tre ulike kryptovalutaer og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
+
 ## Enkeltinvesteringer
-1. Finn gjennomsnittet for hver enkelt serie.
-1. Finn variansen og tilhørende standardavvik for hver enkelt serie.
-1. Lag et scatterplot i samme plot for hver enkelt serie (x-aksen tid, y-aksen avkastning i prosent)
+
+**Formelberegninger**
+
+1. Lag en tidserie som viser avkastningen for de tre kryptovalutaene og New York børsen
+1. For hver enkelt serie finn:
+	1. Gjennomsnittlig avkastning
+	2. Varians
+	3. Standardavvik
+	4. Høyeste og laveste verdi
+
+
+**Grafisk visning**
+
+1. For hver enkelt tidsserie lag et scatterplot (x-aksen dager, y-aksen avkastning i prosent)
+
+
+**Økonomisk tolkning (svaret kan skrives direkte inn i regnearket)**
+
+Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme observasjoner du finner i tidsserien?
+
 ## Porteføljeinvesteringer
+
+1. Lag først
 1. Finn porteføljens standaravvik mellom ved varierende vekter
    1. Mellom 2 objekter: bitcoin, x
    1. Mellom 3 objekter: bitcoin, x, y og stocck
 1. De parvise kombinasjonene
-## Tolkning av systemtatis og usystematisk risiko i porteføljen (åpen oppgave, foreleser vet i utgangspunktet lite om dette temaet)
-1. Lært i kurset består av systematisk og usystematisk risiko, kvitte seg med sistnevnte ved å øke antall objekter. Hvilken grad skjere dette ved å gå fra strategi 1-3.
 
-```{r}
+## Systematisk og usystematisk risiko (svaret kan skrives direkte inn i regnearket)
+1. I forelesningen i dette kurset har du lært at porteføljerisikoen kan splittes opp i to ledd: et ledd for usystematisk-risiko et annet ledd for systematisk-risiko. Dessuten at man kan kvitte seg med førstnevnte ved å øke antall objekter som inngår i porteføljen.
+
+- Hvilken grad skjer dette ved å gå fra strategi 1-x.
+- Har du forklaringer på hvilken faktorer som gjelder her (merk: foreleser vet i utgangspunktet lite om kryptovalutare, og ønsker å forstå mer)
+
+
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
