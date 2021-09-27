@@ -309,7 +309,7 @@ til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(r=ofr*rm) %>%
 	dplyr::mutate(oer=ofr-M*rm) %>%
 	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_u), header=c(seq(1,5)))
+htmlTable(t(til_u), header=c(seq(1,5)), rnames=radnr_i)
 ```
 ]
 
@@ -322,11 +322,11 @@ radnr_i <- c("OFR","Renter","OER","OPA")
 rm <- 0.10
 M <- 1000
 utaksjer <- 10
-til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
 	dplyr::mutate(r=ofr*rm) %>%
 	dplyr::mutate(oer=ofr-M*rm) %>%
 	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_u), header=c(seq(1,5)))
+htmlTable(t(til_m), header=c(seq(1,5)), rnames=radnr_i)
 ```
 
 ]
@@ -403,16 +403,11 @@ k_U + (k_U-k_G)\frac{G}{E}
 ---
 
 *Seperasjonsprinsippet*
-- M&M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen
-- Når gjeldsandelen/gjeldsgraden øker
-- Lånerenten laver enn egenkapitalkostnaden
-- Oppveiet av høyere egenkapitalkostnad.
-- Mer gjeld øker finansieringsrisikoen og dermed eiernes avkastningskrav. 
-- Nettoeffekt lik null: 
-- Lønnsomheten av nye investeringsprosjekter kan beregnes på samme måte som uttrykk 7.4
-- Vi løsner nå på forutsetningen om samme risikoklasse: Vi definerer har risikoklasse som alle selskaper med samme systematiske risiko.
-- Dvs uten tanke på finansiering
-- Omtales som seperasjonsprinsippet
+- M&M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
+	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed økning i eiernes avkastningskrav
+	1. Nettoeffekt av (1) ...  + (2)... = 0
+	1. Totalkapitalkostnaden påvirkes ikke av gjeldsgraden.
+
 
 ---
 
@@ -424,25 +419,20 @@ V = \frac{E(OFR)}{k_u} = \frac{2}{0.04}=50
 \end{equation}
 
 - Ifølge M&M-II
-.pull-left[
 \begin{equation}
 k_E = k_T + (k_T-k_G)\frac{G}{E}\\
 k_T + (k_T-k_G)\frac{G}{E}
 \end{equation}
 
-]
-.pull-right[
-```{r, echo=FALSE, out.width="50%", fig.cap=""}
+```{r, echo=FALSE, out.width="40%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
-]
-
 
 ---
 
 ### Sammenhengen mellom KVM og M&M
 
-Vi løsner nå på forutsetningen...
+Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta. Eksemplet nedenfor viser at KVM,  under de nå mindre restriktive forutsetningen, impliserer både M&M-1 og M&M-2.
 
 **Eksempel 7.5**: For Demo ASA er $\beta_G=0.02$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
 Den risikofrie renten i markedet $r_f=0.03$ mens markedsporteføljen forventede avkastning $E(rp)=1.4$.
@@ -452,8 +442,7 @@ Den risikofrie renten i markedet $r_f=0.03$ mens markedsporteføljen forventede 
 k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
 \end{equation*}
 
-
-**Konklusjon:**
+**Konklusjon:M&Ms konklusjonder holder også under mer robuste og velkjente forutsetninger.**
 ]
 
 .pull-right[
@@ -481,8 +470,8 @@ knitr::knit_exit()
 - Sjekke ut eksamensdato
 - 06:01-07:45
 - Sjekk ut comments output
-- Løsner på forutsetningen om
-- Seperasjonsprinsippet
-- Konklusjon M&M og KVM
+1. Nettoeffekt av (1) ...  + (2)... = 0
+Arbitrasjeeksempelet
+
 
 
