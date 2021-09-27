@@ -6,11 +6,9 @@ output:
 #rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
 ---
 
-
 ```{r eval=FALSE, include=FALSE}
 rmarkdown::render("arbeidskrav2021.Rmd")
 ```
-
 # Mikroøkonomi (SFB10916), Våren 2021 
 ## Obligatorisk arbeidskrav 
 - Leveres ut: 28.09.2021
@@ -29,8 +27,7 @@ Løses ved bruk av regneark (eks. Excel, Libreoffice, )
 ## Porteføljeinvesteringer
 1. Finn porteføljens standaravvik mellom ved varierende vekter
    1. Mellom 2 objekter: bitcoin, x
-   1. Mellom 3 objekter: bitcoin, x, y
-   1. Mellom 4 objekter: bitcoin, x, y og stocck
+   1. Mellom 3 objekter: bitcoin, x, y og stocck
 1. De parvise kombinasjonene
 ## Tolkning av systemtatis og usystematisk risiko i porteføljen (åpen oppgave, foreleser vet i utgangspunktet lite om dette temaet)
 1. Lært i kurset består av systematisk og usystematisk risiko, kvitte seg med sistnevnte ved å øke antall objekter. Hvilken grad skjere dette ved å gå fra strategi 1-3.
