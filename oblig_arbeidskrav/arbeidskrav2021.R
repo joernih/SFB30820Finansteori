@@ -34,14 +34,14 @@ gensh_df <-
 	dplyr::mutate(stdp=sd(varp)) %>%
 	dplyr::ungroup() 
 
-obj <- unique(gensh_df$typeindex)
+obj <- unique(gensh_df$typeindex)[-3]
 criptcoinsg <- obj %>% 
 	purrr::map(function(x,df=gensh_df)
 		   {
 	dfg <- dplyr::filter(gensh_df,typeindex==x)
 	ggplot2::ggplot(dfg, aes(x=date,y=rp, color=typeindex)) + geom_point()
 		   })
-gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],criptcoinsg[[4]], ncol=2)
+gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]], ncol=3)
 
 ## Porteføljeinvesteringer
 gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
@@ -51,37 +51,15 @@ gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>%
 
 cor(gensh_df_2$BTC,gensh_df_2$ETH)
 cor(gensh_df_2$BTC,gensh_df_2$NSE)
-cor(gensh_df_2$BTC,gensh_df_2$XRP)
-cor(gensh_df_2$XRP,gensh_df_2$ETH)
+cor(gensh_df_2$ETH,gensh_df_2$NSE)
 
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
-ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=XRP)) + geom_point()
-ggplot2::ggplot(gensh_df_2, aes(x=XRP,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
+ggplot2::ggplot(gensh_df_2, aes(x=ETH,y=BTC)) + geom_point()
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point()
-
-
-
-### 1. Finn Kovarians
-
-## Sheet 3: Enkelt porteføljer 
-
-## Sheet 4: Samlet porteføljer
-
-## Sheet 5: Med markedsindeks (New York)
+geom_point()+geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 
 ## Appendiks
 #https://www.quantshare.com/sa-620-10-new-ways-to-download-historical-stock-quotes-for-free
-#
-## Explain differences between expected and realised values
-#install.packages("foreign")
 #library(foreign)
 #ls("package:foreign")
 #nyse <- read.dta("https://query1.finance.yahoo.com/v7/finance/download/%5ENYA?period1=1472774400&period2=1630540800&interval=1d&events=history&includeAdjustedClose=true")
-# Tasks
-## Sheet 1: Individuelt
-### 1. Finn tidsintervall
-### 2. Finn forventet verdi
-### 3. Finn varians og standardavvik
-### 4. Avkastning i prosent
-### 5. Tidserieplot over utviklingen i avkastningen 
-#View(nyse)
