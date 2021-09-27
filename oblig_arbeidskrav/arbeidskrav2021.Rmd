@@ -42,7 +42,9 @@ Hva er kontantstrømmen verd i dag?
 \begin{equation}
 NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
 \end{equation}
+
 ## Oppgave 2: Portefølje
+
 **Eksempel 2.1**
 ```{r, echo=F}
 # Data input
@@ -116,6 +118,7 @@ cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
 ]
 ]
 ## Oppgave 3: Porteføljemodellen
+
 Fra eksempel 3.1-3.2 har vi følgende opplysninger
 
 ```{r, echo=F}
@@ -141,6 +144,7 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 ---
 
 ## Oppgave 4: KVM og justert nåverdi
+
 Fra **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at $\beta_E=0.83$, mens gjeldsbetaen er beregnet slik at $\beta_G=0.1$. Den nominelle risikofrie renten er på $3$ prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
 
 Totalt sett har Tomra 148 020 078 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill.
@@ -166,6 +170,7 @@ NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}
 \end{equation*}
 
 ## Oppgave 4: Gjeldsgrad og risiko
+
 **Eksempel 5.1:** En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
 
 \begin{equation}
