@@ -7,7 +7,6 @@ library(SFB30820Finansteori)
 ls("package:SFB30820Finansteori")
 
 # Del I
-View(crypto_df)
 # Del II
 ## Reading the data
 crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::filter(Currency==c("BTC","ETH"))
@@ -60,9 +59,14 @@ gensh_df_2 <- gensh_df %>%
 	dplyr::mutate(mean=mean(rp,na.rm=T)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T)) %>%
 	dplyr::mutate(stdp=sd(rp,na.rm=T)) 
-	#dplyr::ungroup() %>%
+	#dplyr::select(1,2,6) %>%
 	#tidyr::pivot_wider(names_from=typeindex, values_from=rp)
 
+View(gensh_df_2)
+dplyr::mutate(c_btc_eth=cor())
+cor(gensh_df_2$BTC,gensh_df_2$ETH)
+cor(gensh_df_2$BTC,gensh_df_2$NSE)
+cor(gensh_df_2$ETH,gensh_df_2$NSE)
 #View(gensh_df_2)
 #unique(gensh_df_2$mdate)
 ### Technical part
@@ -71,9 +75,6 @@ w <- c(0.3,0.4,0.3)
 erp <- 
 mean(gensh_df_2[,1,2,3])
 ### Graphical part
-cor(gensh_df_2$BTC,gensh_df_2$ETH)
-cor(gensh_df_2$BTC,gensh_df_2$NSE)
-cor(gensh_df_2$ETH,gensh_df_2$NSE)
 
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point()
 ggplot2::ggplot(gensh_df_2, aes(x=ETH,y=BTC)) + geom_point()
