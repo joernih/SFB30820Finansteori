@@ -21,33 +21,33 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 
 (1). Forklare forskjellen mellom nåverdiutrykkene som benyttes med og uten usikkerhet.
 
-(2). Forskjellen mellom forventet og realisert verdi av en kontantstrøm.
+(2). Hva er forskjellen mellom forventet og realiserte verdi av en kontantstrøm?
 
-(3). Pek på hvorfor det kan oppstå målkonflikter mellom ledelsen og eierne av et selskap ved igangsetting av et nytt prosjekt.
+(3). Ved vurdering av nye investeringprosjekter, forklar hvorfor det lett kan oppstå konflikt mellom forskjellige eiere i et selskap.
 
 (4). Hva menes med prosjektets eller aksjens beta?
 
-(5). Gi en forklaring om mekanismene som inngår i Tofondsresultatet.
+(5). Gi en forklaring om mekanismene som ligger til grunn for Tofondsresultatet.
 
 (6). Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
 
-(7). Dersom KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
+(7). Gitt at KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
 
-(8). Hva menes med et finansielt instrument, og  kan du gi noen eksemplar på dette? 
+(8). Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? 
 
 (9). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
-## oppgave 2-5 (vil bli publisert før fredag)
+## Oppgave 2-5 (vil bli publisert før fredag)
 
 
 # Del II: Porteføljeutregninger ved bruk av regneark
-Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for tre ulike kryptovalutaer og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
+Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
 ## Enkeltinvesteringer
 
 **Deskriptiv statistikk**
 
-1. Lag en tidsserie som viser avkastningen for de to kryptovalutaene og New York børsen
+1. Lag en tidsserie som viser avkastningen for de to kryptovalutaene og New York børsen (NYSE). 
 1. For hver enkelt serie finn:
 	1. Gjennomsnittlig avkastning
 	1. Varians
@@ -66,7 +66,7 @@ Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme 
 
 **Deskriptiv statistikk**
 
-1. Lag en fane i regnearket som inneholder data hvor det er registrert observasjoner for *alle* de tre tidsseriene
+1. Opprett et datasett som inneholder data kun over de tidsperiodene  hvor det er registrert observasjoner for *alle* de tre tidsseriene
 1. Basert på dette datasettet beregn:
 	1. Gjennomsnittlig avkastning
 	2. Varians

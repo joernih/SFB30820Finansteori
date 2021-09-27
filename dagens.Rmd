@@ -236,7 +236,7 @@ rm <- 0.10
 M <- 1000
 utaksjer <- 10
 goe_v <- c(0,0.2,0.5,1.0,1.5,2.0,3.0)
-inb_v <- seq(0.8)
+inb_v <- rep(c(0.8),7)
 gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
 til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
@@ -503,3 +503,22 @@ htmlTable(t(til_m), header=c(seq(1,5)), rnames=radnr_i)
 ```
 
 ]
+
+
+
+"
+
+bi = we*be+wg*bg
+bi = we*be+wg*bg
+(E+G)bi=E*bg+G*be
+E*bg=(E+G)bi-G*be
+bg=(E+G)/Ebi-G/E*be
+bg=(E+G)/Ebi-G/E*be
+bg=bi+(bi-bg)G/E
+bg=bi+(bi)G/E
+bg=bi(1+G/E)
+
+
+
+
+
