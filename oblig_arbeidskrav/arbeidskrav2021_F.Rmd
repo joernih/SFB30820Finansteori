@@ -9,33 +9,35 @@ output:
 ```{r eval=FALSE, include=FALSE}
 rmarkdown::render("arbeidskrav2021_F.Rmd")
 ```
-# Mikroøkonomi (SFB30820), Høsten 2021 
+
+# Finansteori (SFB30820), Høsten 2021 
 ## Obligatorisk arbeidskrav 
 - Versjon 1.0
 - Leveres ut: 28.09.2021 (Canvas)
 - Leveres inn: 26.10.2021 (Canvas)
-  - Del I lastes opp som dokument-fil, Del II som regneark
+  - Del I: kan lastes opp som dokument-fil eller pdf.
+  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
 
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
 
-(1). Forklare forskjellen mellom nåverdiutrykkene som benyttes med og uten usikkerhet.
+(1) Forklare forskjellen mellom nåverdiutrykkene som benyttes for med og uten usikkerhet.
 
-(2). Hva er forskjellen mellom forventet og realiserte verdi av en kontantstrøm?
+(2) Hva er forskjellen mellom forventet og realiserte verdi av en kontantstrøm?
 
-(3). Ved vurdering av nye investeringprosjekter, forklar hvorfor det lett kan oppstå konflikt mellom forskjellige eiere i et selskap.
+(3) Ved vurdering av nye investeringprosjekter, forklar hvorfor det lett kan oppstå konflikt mellom forskjellige eiere i et selskap.
 
-(4). Hva menes med prosjektets eller aksjens beta?
+(4) Hva menes med prosjektets eller aksjens beta?
 
-(5). Gi en forklaring om mekanismene som ligger til grunn for Tofondsresultatet.
+(5) Gi en forklaring om mekanismene som ligger til grunn for Tofondsresultatet.
 
-(6). Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
+(6) Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
 
-(7). Gitt at KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
+(7) Gitt at KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
 
-(8). Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? 
+(8) Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? 
 
-(9). Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
+(9) Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
 ## Oppgave 2-5 (vil bli publisert før fredag)
 
@@ -47,7 +49,7 @@ Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for to 
 **Deskriptiv statistikk**
 
 1. Lag en tidsserie som viser avkastningen for de to kryptovalutaene og New York børsen (NYSE). 
-1. For hver enkelt serie finn:
+1. For hver enkelt tidsserie beregn:
 	1. Gjennomsnittlig avkastning
 	1. Varians
 	1. Standardavvik
@@ -76,7 +78,7 @@ Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme 
 
 1. Lag et scatterplot for hver ulike kombiversjonen av de tre investeringsobjektene (x-akse avkastning det ene objektet, y-aksen avkastning det andre objektet). Forsøk også få inn regresjonslinjen som oppsummerer graden av samvariasjon mellom de to objektene. 
 
-**Porteføljesammensetninger og økonomiske tolkninger**
+**Porteføljeanalyse**
 
 1. Basert på at brukeren selv kan justere porteføljevektene, lag en tabell i regnearket som viser utregningene av
 ```{r, echo=F}
@@ -94,7 +96,6 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
 ## oppgave 2: porteføljeteori to objekter ()
 ## Oppgave 3: Porteføljeteori 
 ## Oppgave 4: KVM og justert nåverdi

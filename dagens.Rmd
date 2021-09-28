@@ -206,6 +206,8 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 \beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}
 
+Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
+
 - Løst for egenkapitalbeta 
 
 \begin{equation*}
@@ -219,11 +221,16 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 \end{equation*}
 
 ```{r, eval=F, echo=F}
-bi=we*be+wg*bg
-bi=(E*be+G*bg)/(E+G)
-(E+G)*bi=E*be+G*bg
+bi = we*be+wg*bg
+bi = we*be+wg*bg
+(E+G)bi=E*bg+G*be
+E*bg=(E+G)bi-G*be
+bg=(E+G)/Ebi-G/E*be
+bg=(E+G)/Ebi-G/E*be
+bg=bi+(bi-bg)G/E
+bg=bi+(bi)G/E
+bg=bi(1+G/E)
 ```
-
 
 ---
 
@@ -392,7 +399,7 @@ V = \frac{E(OFR)}{k_t}=\frac{E(OFR)}{k_u}
 - **M&M-2**
 
 \begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E} =
+k_E = k_T + (k_T-k_G)\frac{G}{E} 
 =k_U + (k_U-k_G)\frac{G}{E}
 \end{equation}
 
