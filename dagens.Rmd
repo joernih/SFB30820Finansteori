@@ -208,9 +208,12 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 
 Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
 
-- Løst for egenkapitalbeta 
+- Dersom vi løser uttrykket ovenfor for $\beta_I$ får vi
 
 \begin{equation*}
+(E+G)\beta_{I}=E\beta_{E}+G\beta_{G} \\
+E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
+\beta_{E}=\frac{E+G}{E}\beta_{I}-\beta_{G}\frac{G}{E}\\
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
 \end{equation*}
 
