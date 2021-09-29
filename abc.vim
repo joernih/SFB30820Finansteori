@@ -110,7 +110,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit dagens.Rmd
+edit oblig_arbeidskrav/arbeidskrav2021_F.Rmd
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -131,7 +131,7 @@ exe 'vert 1resize ' . ((&columns * 170 + 114) / 228)
 exe 'vert 2resize ' . ((&columns * 57 + 114) / 228)
 tcd ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori
 argglobal
-balt ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/dagens.Rmd
+balt ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/oblig_arbeidskrav/arbeidskrav2021.Rmd
 vnoremap <buffer> <silent> ,kn :call RKnit()
 vnoremap <buffer> <silent> ,rd :call RSetWD()
 vnoremap <buffer> <silent> ,ko :call RMakeRmd("odt_document")
@@ -571,11 +571,11 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 488 - ((48 * winheight(0) + 25) / 51)
+let s:l = 41 - ((32 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 488
+keepjumps 41
 normal! 0
 wincmd w
 argglobal
@@ -717,7 +717,9 @@ wincmd w
 exe 'vert 1resize ' . ((&columns * 170 + 114) / 228)
 exe 'vert 2resize ' . ((&columns * 57 + 114) / 228)
 tabnext 1
-badd +0 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/dagens.Rmd
+badd +1 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/dagens.Rmd
+badd +48 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/oblig_arbeidskrav/arbeidskrav2021.Rmd
+badd +0 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/oblig_arbeidskrav/arbeidskrav2021_F.Rmd
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -730,6 +732,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
