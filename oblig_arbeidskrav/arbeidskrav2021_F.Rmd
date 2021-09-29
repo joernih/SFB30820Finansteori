@@ -75,14 +75,6 @@ port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
 ## Oppgave 3: Porteføljeteori 
 
 ```{r, echo=F}
-#- Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
-#  -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
-#  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
-#  -  $Std(r_p)=\sqrt{0.00004}  =0.006$
-#- Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
-#  -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
-#  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
-#  -  $Std(r_p)=\sqrt{.02}  =0.045$
 library(reticulate)
 reticulate::repl_python()
 import json
@@ -99,44 +91,21 @@ Varp = w1**2*var1+w2**2*var2+2*rho*var1**2*var2**2
 Varp.subs([(w1,1),(w2,1),(var1,1),(var2,1),(rho,1)])
 Stdp = Varp.subs([(w1,1),(w2,1),(var1,1),(var2,1),(rho,1)])**(1/2)
 ```
-- Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
-  -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
-  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
-  -  $Std(r_p)=\sqrt{0.00004}  =0.006$
-- Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
-  -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
-  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
-  -  $Std(r_p)=\sqrt{.02}  =0.045$
-
 ## Oppgave 4: KVM og justert nåverdi
 
 ```{r, echo=F}
 reticulate::repl_python()
 from sympy import solve, Eq, symbols, latex, simplify
-Erp, Erm, r_f, beta_E, beta_G, rp, E, G, k_E, k_G, k_T, w_E, w_G = 
-	sympy.symbols('Erp Erm r_f beta_E beta_G rp E G k_E k_G k_T w_E w_G')
+Er_p, Er_m, r_f, beta_E, beta_G, rp, E, G, k_E, k_G, k_T, w_E, w_G = sympy.symbols('Er_p Er_m r_f beta_E beta_G rp E G k_E k_G k_T w_E w_G')
 #1. Beregne vektene (markedsverdi) for egenkapital og gjeld
-#\begin{equation*}
 w_E=E/(E+G)
 w_G=G/(E+G)
-#w_E=\frac{E}{E+G}=\frac{12654}{12654+3212}=0.80 \\ 
-#w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
-#\end{equation*}
-#1. Kapitalkostnad for egenkapital
-#$$
+#2. Kapitalkostnad for egenkapital
 k_E=r_f+beta_E*(Er_m-r_f)
-#k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
-#$$
-#1. Kapitalkostnad for gjeld
-#$$
+#3
 k_G=r_f+beta_G*(Er_m-r_f)
-#k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
-#$$
-#1. Totalkapitalkostnad for selskapet
-#$$
+#4. totalkapitalkostnad for selskapet
 k_T=w_E*k_E+w_G*k_G
-#k_T= k_Ew_E + k_G(1-s)w_G = 0.0715\cdot0.8 + 0.035\cdot(1-0.05)0.2 = 0.063
-#$$
 ```
 
 1. Beregne vektene (markedsverdi) for egenkapital og gjeld
