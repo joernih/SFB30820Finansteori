@@ -1,0 +1,42 @@
+---
+output:
+  html_document:
+  #html_notebook:
+    css: PAA.css
+#rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
+---
+
+```{r eval=T}
+library(htmlTable)
+```
+
+```{r eval=FALSE, include=FALSE}
+rmarkdown::render("abc.Rmd")
+servr::httw()
+```
+
+# Finansteori (SFB30820), Høsten 2021 
+## Obligatorisk arbeidskrav 
+- Versjon 1.1
+- Leveres ut: 28.09.2021 (Canvas)
+- Leveres inn: 26.10.2021 (Canvas)
+  - Del I: kan lastes opp som dokument-fil eller pdf.
+  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
+
+
+## Oppgave 3: Porteføljeteori 
+
+```{r, echo=F, eval=T}
+library(reticulate)
+reticulate::repl_python()
+import sympy
+import numpy
+# import matplotlib.pyplot as plt
+from sympy import solve, Eq, symbols, latex, simplify
+Erp, Erm, rf, beta, rp = sympy.symbols('Erp Erm rf beta rp')
+Erp = rf + beta*(Erm-rf)
+Erp.subs(rf,1)
+exit
+## Risikoavers investor
+2+2
+```
