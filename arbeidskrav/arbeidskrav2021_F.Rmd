@@ -3,7 +3,6 @@ output:
   #html_document:
   html_notebook:
     css: PAA.css
-#rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
 ---
 
 ```{r eval=T, echo=F}
@@ -15,7 +14,6 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 system("brave arbeidskrav2021_F.html")
 #servr::httw()
 ```
-
 
 # Finansteori (SFB30820), Høsten 2021 
 ## Obligatorisk arbeidskrav 
@@ -67,9 +65,9 @@ vx_b <- c((df_eks_gen$avk_b-ex_b)^2%*%df_eks_gen$prob)
 ## Forventet avkasting, kovarians, standardavvik og korr 
 w <- c(1/2,1/2)
 port_returns <- (sum(w *c(ex_a,ex_b)))
-cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T)$cov
-#port_risk_v <- t(w) %*% (cov_mat %*% w)
-#port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T, method='ML')$cov
+port_risk_v <- t(w) %*% (cov_mat %*% w)
+port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
 htmlTable::htmlTable(df_eks_gen, header=c("Tilstand","Sannsynlighet","Avkastning A","Avkastning B"))
 ```
 
@@ -101,7 +99,7 @@ library(reticulate)
 #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 ```
 
-## Oppgave 4: KVM og justert nåverdi
+## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
 ```{r, echo=F}
 #1. Beregne vektene (markedsverdi) for egenkapital og gjeld
@@ -119,12 +117,11 @@ k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 
-
-## Oppgave 5: statsobligasjoner og rentens terminstruktur
+## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
 
 ### Obligasjoner
 
-1. Beregn prisen for ordinær obligasjon
+1. Beregn prisen for en ordinær obligasjon
 1. Beregn prisen for null-kupong rente obligasjonen 
 
 ### Renten terminstruktur
@@ -201,19 +198,11 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 	1. Hvilke sentrale faktorer tror du kan være utslagsgivende for de resultatene du har kommet fram til?
 
 
-
-
-```{r, echo=F}
-knitr::knit_exit()
+```{r eval=F, include=FALSE}
+knitr_knit_exit()
 ```
 
+- Oppdater forelesningsnotater 0
 
 
 
-
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-- Tasks
-Fix lecture note 00..00
