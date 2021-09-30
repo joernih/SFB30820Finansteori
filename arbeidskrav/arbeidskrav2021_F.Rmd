@@ -185,14 +185,21 @@ M_o/(1+r)^10
 
 ### Renten terminstruktur
 
-Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
-
+Den kortsiktige spotrenten $0_p_r$ for ett år fram i tid er ved 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2, 3 og 4 år framover følgende opplysninger
 ```{r, echo=F}
-stats_df <- data.frame(lopetid=c(1,2,3),
-		       M=c(1000,1000,1000),
-		       p=c(1019.23,1018.59,1013.49),
-		       rente=c(4,5,5.5)
+stats_df <- data.frame(lopetid=c(2,3),
+		       M=c(500,500),
+		       p=c(495,495),
 		       )
+
+M <- 500
+P2 <- 495
+P3 <- 495
+one <- 1.015
+two <- (M/P2)^2
+thr <-  (M/P3)^3
+two/one-1
+thr/two-1
 htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris ","Effektiv rente "))
 ```
 
@@ -203,7 +210,7 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}
 
 1. Hvilken sentral forutsetning ligger til grunn for at dette uttrykket holder ved likhet?
-1. Beregn terminpremien for 2,3
+1. Beregn terminpremien for 2 og 3 år framover i tid.
 1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven)
 1. Kan du gi en kortfattet tolkning av hva denne kurven forteller oss?
 
