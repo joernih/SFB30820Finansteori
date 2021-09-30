@@ -1583,6 +1583,8 @@ Fordeler:
 + ...
 + ...
 
+---
+
 class: inverse, center, middle
 
 # Forelesning 6: `r tema[6]`

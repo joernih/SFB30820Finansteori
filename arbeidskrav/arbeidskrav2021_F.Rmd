@@ -73,31 +73,9 @@ htmlTable::htmlTable(df_eks_gen, header=c("Tilstand","Sannsynlighet","Avkastning
 ```
 
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
-1. Med utgangspunkt i at 4000,- av investeringsbeløpet investeres i selsap B, finn forventet avkastning, varians og standardavvik til porteføljen for de to selskapene.
+1. Ta utgangspunkt i at 4000,- av investeringsbeløpet investeres i selskap B, mens det resterende går til selskap B. Finn forventet avkastning, varians og standardavvik til porteføljen av de to selskapene.
 
 ## Oppgave 3: Porteføljeteorien
-
-```{r, echo=F}
-library(reticulate)
-#reticulate::repl_python()
-#import json
-#import sympy
-#import numpy
-## import matplotlib.pyplot as plt
-### Risikoavers investor
-#from sympy import solve, Eq, symbols, latex, simplify
-#Er_p, w_1, w_2, rf, rm, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, rf, rm, var1, var2, rho')
-#ERP = Eq(Er_p,w_1*rf + (1-w_1)*rm)
-#solve(ERP.subs([(w_1,0.80),(rf,0.04),(rm,0.07)]),Er_p)[0]
-#Varpe = w_1**2*var1+(1-w_1)**2*var2+2*rho*var1**2*var2**2
-#Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-#Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-### Risk-lover investorene
-#w1 = sympy.solve(ERP,w_1)[0].subs([(rf,0.04),(rm,0.07),(Er_p,0.085)])
-#w2 = 1-w1
-#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-```
 
 I utgangspunktet har vi følgende opplysninger fra markedet som vi har analysert
 
@@ -109,10 +87,39 @@ tils2 <- c(0.02,0.00)
 df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
 htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
 ```
-1. Ole Spetalen er en risikosøkende investor som ønsker at forventet avkastning på sin portefølje skal være på 40 prosent. Ifølge porteføljeterien hvordan vil han 
-   fordele sin investeringer?
+
+```{r, echo=F}
+library(reticulate)
+reticulate::repl_python()
+import json
+import sympy
+import numpy
+# import matplotlib.pyplot as plt
+from sympy import solve, Eq, symbols, latex, simplify
+Er_p, w_1, w_2, r_f, r_m, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, r_f, r_m, var1, var2, rho')
+ERP = Eq(Er_p,w_1*r_f + (1-w_1)*r_m)
+## Risk-lover investorene
+Er_pn = 0.42
+r_mn = 0.02
+r_fm = 0.06
+w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
+w2 = 1-w1
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+## Risikoavers investor
+Er_pn = 0.02
+r_mn = 0.02
+r_fm = 0.06
+w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
+w2 = 1-w1
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+```
+
+1. Ole Spetalen er en risikosøkende investor som ønsker at forventet avkastning på sin portefølje skal være på 42 prosent. Gitt at vi legger til grunn porteføljeterien, hvordan vil han fordele sin investeringer?
 1. Lise Sparegris ønsker med god margin å sikre pensjonen sin. Ved bruk av samme modell som Spetalen, hvordan vil hun fordele sine investeringer som forventet avkastning skal være på 2 prosent?
-1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjenomføre sin strategi, og er det helt sikkert at han vil oppnå sitt mål dersom han får mulighet til å gjennomføre sin strategi?
+1. Både får Ole og lise finn varians og tilhørende standardavvik for deres respektive portefølje.
+1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjenomføre sin strategi? Og er det helt sikkert at han vil oppnå sitt mål dersom denne forutsetningen er oppfylt?   
 
 ## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
