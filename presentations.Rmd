@@ -1171,7 +1171,7 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
   -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
   -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
   -  $Std(r_p)=\sqrt{0.00004}  =0.006$
-- Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
+- Vi har at investor B (liten grad av risikoaversjon) ønsker at forventet avkastning i porteføljen skal være på 8.5%
   -  $0.085=w\cdot 0.04 +(1-w)\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$

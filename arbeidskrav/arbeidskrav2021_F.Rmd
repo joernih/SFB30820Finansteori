@@ -75,7 +75,7 @@ htmlTable::htmlTable(df_eks_gen, header=c("Tilstand","Sannsynlighet","Avkastning
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
 1. Med utgangspunkt i at 4000,- av investeringsbeløpet investeres i selsap B, finn forventet avkastning, varians og standardavvik til porteføljen for de to selskapene.
 
-## Oppgave 3: Porteføljeteorimodellen
+## Oppgave 3: Porteføljeteorien
 
 ```{r, echo=F}
 library(reticulate)
@@ -99,9 +99,20 @@ library(reticulate)
 #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 ```
 
-1. Risikolovwer
-1. Risikoaversjo
-1. Hvilken forutsetning må være oppfylt for at risklower kan gjenomføre sin strategi
+I utgangspunktet har vi følgende opplysninger fra markedet som vi har analysert
+
+```{r, echo=F}
+radnr <- c("Markedsporteføljen",
+	   "Risikofri rente")
+tils1 <- c(0.06,0.04)
+tils2 <- c(0.02,0.00)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+```
+1. Ole Spetalen er en risikosøkende investor som ønsker at forventet avkastning på sin portefølje skal være på 40 prosent. Ifølge porteføljeterien hvordan vil han 
+   fordele sin investeringer?
+1. Lise Sparegris ønsker med god margin å sikre pensjonen sin. Ved bruk av samme modell som Spetalen, hvordan vil hun fordele sine investeringer som forventet avkastning skal være på 2 prosent?
+1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjenomføre sin strategi, og er det helt sikkert at han vil oppnå sitt mål dersom han får mulighet til å gjennomføre sin strategi?
 
 ## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
@@ -121,22 +132,24 @@ k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 
-Frøken Bryn  **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at $\beta_E=0.83$, mens gjeldsbetaen er beregnet slik at $\beta_G=0.1$. Den nominelle risikofrie renten er på $3$ prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
-
-Totalt sett har Tomra 200 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill.
-
-Fra årsapporten har vi videre at:
+Frøken Bryn er et selskap som har som  spesialitet microblading  permanent makeup av bryn. 
+- $\beta_E=0.83$
+- $\beta_G=0.1$
+- Den nominelle risikofrie renten er på $3$ prosent
+- Mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
+- Frøken Bryn har en skattesats er lik 5 prosent.
+- Totalt sett har Bryn  200 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill. Fra årsrapporten har vi videre
 
 ```{r, echo=F}
 radnr_i <- c("Innskutt egenkapital",
 	   "Opptjent egenkapital",
-	   "Minoritetsinteresser",
 	   "Gjeld",
 	   "Totalt")
-w1 <- c(1066,2879,160,3212,7317)
+w1 <- c(1066,2879,3212,7317)
 df_aarsrapport <- data.frame(radnr_i,w1)
 htmlTable(df_aarsrapport, header=c("",""))
 ```
+
 1. Basert på disse opplysningene, finn totalkapitalkostnaden til selskapet
 1. Nåverdi 
 1. Dagens markedsverdi på aksjen
@@ -145,12 +158,30 @@ htmlTable(df_aarsrapport, header=c("",""))
 
 ### Obligasjoner
 
+En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. 
 1. Beregn prisen for en ordinær obligasjon
+```{r, eval=F, echo=F} 
+(0.05*10000)*
+((1-(1/(0.03))^(10+1))/
+(1-(1/(0.03))))
+# [1] 7440.939
+10000/(1-(1/0.03))^10
+# [1] 8.007468e-12
+```
+
 1. Beregn prisen for null-kupong rente obligasjonen 
+```{r, eval=F, echo=F} 
+(0.05*10000)*
+((1-(1/(0.03))^(10+1))/
+(1-(1/(0.03))))
+# [1] 7440.939
+10000/(1-(1/0.03))^10
+# [1] 8.007468e-12
+```
 
 ### Renten terminstruktur
 
-**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
 ```{r, echo=F}
 stats_df <- data.frame(lopetid=c(1,2,3),
 		       M=c(1000,1000,1000),
@@ -163,10 +194,16 @@ stats_df <- data.frame(lopetid=c(1,2,3),
 htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv rente"))
 ```
 
-1. Hvilken forutsetninger ligger til grunn for denne likevektsbetingelsej Hvilken forutsetninger ligger til grunn for denne likevektsbetingelsej
+Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved 
+
+\begin{equation}
+_{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
+\end{equation}
+
+1. Hvilken sentral forusetning ligger til grunn for at dette uttrykket holder ved likhet?
 1. Beregn terminpremien for 2,3
-1. Vis i figur rentens terminstruktur (yield-kurven)
-1. Gi en tolkning av denne
+1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven)
+1. Kan du gi en kortfattet tolkning av hva denne kurven forteller oss?
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
 
@@ -227,6 +264,6 @@ knitr_knit_exit()
 ```
 
 - Oppdater forelesningsnotater 0
-
-
+- Kill row-indeks
+- Oppdatert notater
 
