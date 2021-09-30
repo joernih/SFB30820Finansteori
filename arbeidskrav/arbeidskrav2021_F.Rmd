@@ -139,7 +139,7 @@ k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 
-Frøken Bryn er et selskap som har som  spesialitet microblading  permanent makeup av bryn. 
+Frøken Brynabc er et selskap som har som  spesialitet microblading  permanent makeup av bryn. 
 - $\beta_E=0.83$
 - $\beta_G=0.1$
 - Den nominelle risikofrie renten er på $3$ prosent
