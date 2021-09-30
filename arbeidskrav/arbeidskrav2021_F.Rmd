@@ -1,9 +1,18 @@
 ---
+title: "Finansteori (SFB30820), Høsten 2021"
 output:
-  #html_document:
-  html_notebook:
+  html_document:
+  #html_notebook:
     css: PAA.css
 ---
+
+## Obligatorisk arbeidskrav 
+- Versjon 1.1
+- Leveres ut: 28.09.2021 (Canvas)
+- Leveres inn: 26.10.2021 (Canvas)
+  - Del I: kan lastes opp som dokument-fil eller pdf.
+  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
+
 
 ```{r eval=T, echo=F}
 library(htmlTable)
@@ -14,14 +23,6 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 system("brave arbeidskrav2021_F.html")
 #servr::httw()
 ```
-
-# Finansteori (SFB30820), Høsten 2021 
-## Obligatorisk arbeidskrav 
-- Versjon 1.1
-- Leveres ut: 28.09.2021 (Canvas)
-- Leveres inn: 26.10.2021 (Canvas)
-  - Del I: kan lastes opp som dokument-fil eller pdf.
-  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
 
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
@@ -90,30 +91,30 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 
 ```{r, echo=F}
 library(reticulate)
-reticulate::repl_python()
-import json
-import sympy
-import numpy
-# import matplotlib.pyplot as plt
-from sympy import solve, Eq, symbols, latex, simplify
-Er_p, w_1, w_2, r_f, r_m, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, r_f, r_m, var1, var2, rho')
-ERP = Eq(Er_p,w_1*r_f + (1-w_1)*r_m)
-## Risk-lover investorene
-Er_pn = 0.42
-r_mn = 0.02
-r_fm = 0.06
-w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
-w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
-## Risikoavers investor
-Er_pn = 0.02
-r_mn = 0.02
-r_fm = 0.06
-w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
-w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+#reticulate::repl_python()
+#import json
+#import sympy
+#import numpy
+### import matplotlib.pyplot as plt
+#from sympy import solve, Eq, symbols, latex, simplify
+#Er_p, w_1, w_2, r_f, r_m, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, r_f, r_m, var1, var2, rho')
+#ERP = Eq(Er_p,w_1*r_f + (1-w_1)*r_m)
+### Risk-lover investorene
+#Er_pn = 0.42
+#r_mn = 0.02
+#r_fm = 0.06
+#w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+### Risikoavers investor
+#Er_pn = 0.02
+#r_mn = 0.02
+#r_fm = 0.06
+#w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
 ```
 
 1. Ole Spetalen er en risikosøkende investor som ønsker at forventet avkastning på sin portefølje skal være på 42 prosent. Gitt at vi legger til grunn porteføljeterien, hvordan vil han fordele sin investeringer?
@@ -139,23 +140,8 @@ k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 
-Frøken Brynabc er et selskap som har som  spesialitet microblading  permanent makeup av bryn. 
-- $\beta_E=0.83$
-- $\beta_G=0.1$
-- Den nominelle risikofrie renten er på $3$ prosent
-- Mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
-- Frøken Bryn har en skattesats er lik 5 prosent.
-- Totalt sett har Bryn  200 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill. Fra årsrapporten har vi videre
-
-```{r, echo=F}
-radnr_i <- c("Innskutt egenkapital",
-	   "Opptjent egenkapital",
-	   "Gjeld",
-	   "Totalt")
-w1 <- c(1066,2879,3212,7317)
-df_aarsrapport <- data.frame(radnr_i,w1)
-htmlTable(df_aarsrapport, header=c("",""))
-```
+Frøken Bryn er et lite AS som holder til på Jessheim Storsenter. Selskapet har som har som spesialitet microblading permanent makeup av bryn.
+I forbindelse med et oppkjøp er det estimert at selskapets egenkapitalbeta $\beta_E=0.83$ og gjeldsbeta lik \beta_G=0.1$. Den nominelle risikofrie renten i markedet på $2.5$ prosent, mens markedets risikopremie anslås til 5 prosent og Bryns skattesats er lik 15 prosent. Totalt sett har Bryn  200 aksjer utestående (pålydende 1,- per aksje) med beregnet markedspris lik 100.
 
 1. Basert på disse opplysningene, finn totalkapitalkostnaden til selskapet
 1. Nåverdi 
