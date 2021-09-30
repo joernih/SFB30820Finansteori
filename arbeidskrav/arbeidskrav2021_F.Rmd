@@ -158,9 +158,10 @@ k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
 ### Obligasjoner
 
 En obligasjon med 3 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.07$ som utbetales n=1 ganger i året og årlige effektiv rente $r=0.06$. 
-1. Beregn prisen for en ordinær obligasjon
+1. Beregn prisen for en ordinær obligasjon.
 
-```{r, eval=F, echo=F} 
+
+```{r include=FALSE}
 y <- 3
 n <- 1
 T <- y*n
@@ -168,9 +169,9 @@ M <- 5000
 r_k <- 0.07
 r <- 0.06
 # [1] 7440.939
-one <- M*r_k(1+r)
-two <- M*r_k(1+r)^2
-thr <- M*r_k(1+r)^3
+one <- M*r_k/(1+r)^1
+two <- M*r_k/(1+r)^2
+thr <- M*r_k/(1+r)^3
 P_o <- M/(1+0.06)^T
 one+two+thr+P_o
 # [1] 8396.193
@@ -179,34 +180,31 @@ En null-kupong-obligasjon med 4 år til forfall har pålydende 5.000,- med årli
 
 1. Beregn prisen for null-kupong rente obligasjonen 
 
-```{r, eval=F, echo=F} 
+```{r, eval=T, echo=F} 
 T <- 4
 M_o <- 5000
 r <- 0.025
 M_o/(1+r)^T
 ```
 
-### Renten terminstruktur
+### Rentens terminstruktur
 
 Den kortsiktige spotrenten $_0r_1$ for ett år fram i tid er ved 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger
 
-```{r, echo=F, eval=F}
-stats_df <- data.frame(lopetid=c(2,3),
-		       M=c(500,500),
-		       p=c(495,495)
-		       )
-
-500/(1+0.015)
+```{r, eval=T, echo=F} 
+Mv <- c(500,500,500)
 P1 <-500/(1+0.015)
 P2 <-500/(1+0.015)^2
 P3 <-500/(1+0.015)^3
-
-M <- stats_df$M
-one <- 1.015
+stats_df <- data.frame(lopetid=c(2,3),
+		       M=Mv[2:3],
+		       p=c(495,495)
+		       )
+one <- 1.015/1
 two <- (M[1]/P2)^2
 thr <- (M[2]/P3)^3
-two/one-1
-thr/two-1
+r_1_2 <- two/one-1
+r_2_3 <- thr/two-1
 htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris"))
 ```
 
@@ -217,8 +215,8 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}
 
 1. Hvilken sentral forutsetning ligger til grunn for at dette uttrykket holder ved likhet?
-1. Beregn terminpremien for 2 og 3 år framover i tid.
-1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven)
+1. Beregn terminrenten (forwardrenten) for 2 og 3 år framover i tid.
+1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven).
 1. Kan du gi en kortfattet tolkning av hva denne kurven forteller oss?
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
@@ -275,20 +273,9 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 	1. Hvilke sentrale faktorer tror du kan være utslagsgivende for de resultatene du har kommet fram til?
 
 
-```{r eval=T, include=FALSE}
+```{r include=FALSE}
 knitr::knit_exit()
 ```
 
-- Oppdater forelesningsnotater 0
-- Kill row-indeks
-- Oppdatert notater
 
-```{r}
-idf <- head(iris)
-str(t(idf))
-names(idf) <- c("","","","")
-mat <- as.matrix(idf)
-
-htmlTable::htmlTable(t(idf, header=c(1,2,3,4,5))
-?htmlTable
-```
+# Test
