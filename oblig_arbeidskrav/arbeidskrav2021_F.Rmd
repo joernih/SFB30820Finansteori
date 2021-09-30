@@ -113,11 +113,16 @@ k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
 k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
+
 ## Oppgave 5: statsobligasjoner og rentens terminstruktur
 
-```{r, echo=F}
-Vi har en tabell
-```
+### Obligasjoner
+
+1. Beregn prisen for ordinær obligasjon
+1. Beregn prisen for null-kupong rente obligasjonen 
+
+### Renten terminstruktur
+
 **Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
 ```{r, echo=F}
 stats_df <- data.frame(lopetid=c(1,2,3),
@@ -131,28 +136,12 @@ stats_df <- data.frame(lopetid=c(1,2,3),
 htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv rente"))
 ```
 
-*Terminrente periode 1*
-
-1. Gi en tolkning av hva terminrenten forteller oss gitt at forutsetningen holder
-
-*Terminrente periode 2*
-
-\begin{equation*}
-_{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
-\frac{(1+0.05)^2}{(1+0.04)^1}-1=0.0601
-\end{equation*}
-
-*Terminrente periode 3*
-
-\begin{equation*}
-_{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
-=\frac{(1+0.055)^3}{(1+0.05)^2}-1=0.0651
-\end{equation*}
-
-1. Gi en tolkning av hva terminrenten forteller oss gitt at forutsetningen holder
+1. Hvilken forutsetninger ligger til grunn for denne likevektsbetingelsej Hvilken forutsetninger ligger til grunn for denne likevektsbetingelsej
+1. Beregn terminpremien for 2,3
+1. Vis i figur rentens terminstruktur (yield-kurven)
+1. Gi en tolkning av denne
 
 ---
-
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
 
