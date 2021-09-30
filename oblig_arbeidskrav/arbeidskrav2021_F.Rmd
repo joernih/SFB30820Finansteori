@@ -100,16 +100,17 @@ Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 
 ```{r, echo=F}
 #1. Beregne vektene (markedsverdi) for egenkapital og gjeld
-E <- 10
-G <- 10
-r_f <- 0.05
-Er_m <- 0.05
-beta_E <- 1
-beta_K <- 1
-w_E <- eval(parse(text='E/(E+G)'),list(E=E))
+beta_E <- 0.83
+beta_G <- 0.16
+r_f <- 0.03
+Er_m <- 0.08
+E <- 12654
+G <- 3212
+vec_var <- list(E=E,G=G,r_f=r_f,Er_m=Er_m,beta_E=beta_E,beta_G=beta_G)
+w_E <- eval(parse(text='E/(E+G)'),vec_var)
 w_G <- eval(parse(text='G/(E+G)'),list(E=E))
 k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
-k_G <- eval(parse(text='r_f+beta_K*(Er_m-r_f)'),list(E=E))
+k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 ## Oppgave 5: statsobligasjoner og rentens terminstruktur
