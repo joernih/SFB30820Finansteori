@@ -1,19 +1,21 @@
 ---
 output:
-  html_document:
-  #html_notebook:
+  #html_document:
+  html_notebook:
     css: PAA.css
 #rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
 ---
 
-```{r eval=T}
+```{r eval=T, echo=F}
 library(htmlTable)
 ```
 
 ```{r eval=FALSE, include=FALSE}
 rmarkdown::render("arbeidskrav2021_F.Rmd")
-servr::httw()
+system("brave arbeidskrav2021_F.html")
+#servr::httw()
 ```
+
 
 # Finansteori (SFB30820), Høsten 2021 
 ## Obligatorisk arbeidskrav 
@@ -44,11 +46,9 @@ servr::httw()
 
 (9) Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 
-## Oppgave 2: Porteføljeteori to objekter 
+## Oppgave 2: Porteføljeteori to selskaper
 
-```{r, echo=F}
-Vi har en tabell
-```
+Vi ser for oss to selskaper A og B med
 
 ```{r, echo=F}
 df_eks_gen <- data.frame(tilstand=c(1,2,3),
@@ -70,30 +70,35 @@ port_returns <- (sum(w *c(ex_a,ex_b)))
 cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T)$cov
 #port_risk_v <- t(w) %*% (cov_mat %*% w)
 #port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+htmlTable::htmlTable(df_eks_gen, header=c("Tilstand","Sannsynlighet","Avkastning A","Avkastning B"))
 ```
+
+1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
+1. Med utgangspunkt i at 1/3 av investeringsbeløpet investeres i selsap A, finn forventet avkastning, varians og standardavvik til porteføljen av to selskaper.
+
 
 ## Oppgave 3: Porteføljeteorimodellen
 
 ```{r, echo=F}
 library(reticulate)
-reticulate::repl_python()
-import json
-import sympy
-import numpy
-# import matplotlib.pyplot as plt
-## Risikoavers investor
-from sympy import solve, Eq, symbols, latex, simplify
-Er_p, w_1, w_2, rf, rm, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, rf, rm, var1, var2, rho')
-ERP = Eq(Er_p,w_1*rf + (1-w_1)*rm)
-solve(ERP.subs([(w_1,0.80),(rf,0.04),(rm,0.07)]),Er_p)[0]
-Varpe = w_1**2*var1+(1-w_1)**2*var2+2*rho*var1**2*var2**2
-Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-## Risk-lover investorene
-w1 = sympy.solve(ERP,w_1)[0].subs([(rf,0.04),(rm,0.07),(Er_p,0.085)])
-w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#reticulate::repl_python()
+#import json
+#import sympy
+#import numpy
+## import matplotlib.pyplot as plt
+### Risikoavers investor
+#from sympy import solve, Eq, symbols, latex, simplify
+#Er_p, w_1, w_2, rf, rm, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, rf, rm, var1, var2, rho')
+#ERP = Eq(Er_p,w_1*rf + (1-w_1)*rm)
+#solve(ERP.subs([(w_1,0.80),(rf,0.04),(rm,0.07)]),Er_p)[0]
+#Varpe = w_1**2*var1+(1-w_1)**2*var2+2*rho*var1**2*var2**2
+#Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+### Risk-lover investorene
+#w1 = sympy.solve(ERP,w_1)[0].subs([(rf,0.04),(rm,0.07),(Er_p,0.085)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 ```
 
 ## Oppgave 4: KVM og justert nåverdi
@@ -113,6 +118,7 @@ k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
 k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
+
 
 ## Oppgave 5: statsobligasjoner og rentens terminstruktur
 
@@ -140,8 +146,6 @@ htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv ren
 1. Beregn terminpremien for 2,3
 1. Vis i figur rentens terminstruktur (yield-kurven)
 1. Gi en tolkning av denne
-
----
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
 
@@ -195,6 +199,17 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 1. Ved flere investeringsobjekter har du lært i dette kurset at porteføljerisikoen kan forklares av to komponenter: (1) usystematisk-risiko (2) for systematisk-risiko. Førstnevnte vil vanligvis reduseres når antall objekter som inngår i porteføljen øker.
 	1. Hvordan stemmer dette resultat overens med de beregningene som du har utført her?
 	1. Hvilke sentrale faktorer tror du kan være utslagsgivende for de resultatene du har kommet fram til?
+
+
+
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
+
+
+
 
 ```{r, echo=F}
 knitr::knit_exit()
