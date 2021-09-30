@@ -84,31 +84,33 @@ import numpy
 ## Risikoavers investor
 from sympy import solve, Eq, symbols, latex, simplify
 Er_p, w_1, w_2, rf, rm, var1, var2, rho = sympy.symbols('Er_p, w_1, w_2, rf, rm, var1, var2, rho')
-ERP = Eq(Er_p,w1*rf + (1-w1)*rm)
-solve(ERP.subs([(w1,0.80),(rf,0.04),(rm,0.07)]),Er_p)[0]
-Varp = w1**2*var1+w2**2*var2+2*rho*var1**2*var2**2
-Varp.subs([(w1,0.80),(w2,0.20),(var1,0),(var2,0.03**2),(rho,0)])
-Stdp = Varp.subs([(w1,0.80),(w2,0.20),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+ERP = Eq(Er_p,w_1*rf + (1-w_1)*rm)
+solve(ERP.subs([(w_1,0.80),(rf,0.04),(rm,0.07)]),Er_p)[0]
+Varpe = w_1**2*var1+(1-w_1)**2*var2+2*rho*var1**2*var2**2
+Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,0.80),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 ## Risk-lover investorene
-w1 = sympy.solve(ERP,w1)[0].subs([(rf,0.04),(rm,0.07),(Er_p,0.085)])
+w1 = sympy.solve(ERP,w_1)[0].subs([(rf,0.04),(rm,0.07),(Er_p,0.085)])
 w2 = 1-w1
-Varp.subs([(w1,-0.5),(w2,1.5),(var1,0),(var2,0.03**2),(rho,0)])
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 ```
+
 ## Oppgave 4: KVM og justert nåverdi
 
 ```{r, echo=F}
-reticulate::repl_python()
-from sympy import solve, Eq, symbols, latex, simplify
-Er_p, Er_m, r_f, beta_E, beta_G, rp, E, G, k_E, k_G, k_T, w_E, w_G = sympy.symbols('Er_p Er_m r_f beta_E beta_G rp E G k_E k_G k_T w_E w_G')
 #1. Beregne vektene (markedsverdi) for egenkapital og gjeld
-w_E=E/(E+G)
-w_G=G/(E+G)
-#2. Kapitalkostnad for egenkapital
-k_E=r_f+beta_E*(Er_m-r_f)
-#3
-k_G=r_f+beta_G*(Er_m-r_f)
-#4. totalkapitalkostnad for selskapet
-k_T=w_E*k_E+w_G*k_G
+E <- 10
+G <- 10
+r_f <- 0.05
+Er_m <- 0.05
+beta_E <- 1
+beta_K <- 1
+w_E <- eval(parse(text='E/(E+G)'),list(E=E))
+w_G <- eval(parse(text='G/(E+G)'),list(E=E))
+k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
+k_G <- eval(parse(text='r_f+beta_K*(Er_m-r_f)'),list(E=E))
+k_T <- eval(parse(text='w_E*k_E+w_G*k_G'),list(E=E))
 ```
 ## Oppgave 5: statsobligasjoner og rentens terminstruktur
 
@@ -128,6 +130,10 @@ stats_df <- data.frame(lopetid=c(1,2,3),
 htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv rente"))
 ```
 
+*Terminrente periode 1*
+
+1. Gi en tolkning av hva terminrenten forteller oss gitt at forutsetningen holder
+
 *Terminrente periode 2*
 
 \begin{equation*}
@@ -142,39 +148,10 @@ _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
 =\frac{(1+0.055)^3}{(1+0.05)^2}-1=0.0651
 \end{equation*}
 
----
-
-- **Beregning av inflasjonsforventningene**
-
-Vi starter med definisjonen mellom realrenten, nominal rente og inflasjon som er gitt ved
-\begin{equation}
-1+r=\frac{1+i}{1+j} \Leftrightarrow
-1+j+r+rj=i+1 \\
-r(1+j)=i-j \\
-r=\frac{i-j}{1+j}
-\end{equation}
-
-Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
-
-\begin{equation}
-_{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
-\end{equation}
+1. Gi en tolkning av hva terminrenten forteller oss gitt at forutsetningen holder
 
 ---
 
-**Eksempel 5.3:**
-
-*Forventet realrente periode 2*
-\begin{equation*}
-_{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
-=\frac{0.0601-0.0317}{1+0.0317}=0.0275
-\end{equation*}
-
-*Forventet realrente periode 3*
-\begin{equation*}
-_{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
-=\frac{0.0651-0.0317}{1+0.0317}=0.0324
-\end{equation*}
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
 
