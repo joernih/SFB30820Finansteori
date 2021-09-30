@@ -1712,7 +1712,7 @@ P_0=\frac{M}{(1+r)^T}
 \end{equation}
 ---
 
-**Eksempel 5.1:** En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
+**Eksempel 5.1:** En obligasjon med 5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
 
 \begin{equation}
 P_0=\sum_{t=1}^{5\cdot 2}\frac{10000\cdot 0.05/2}{(1+0.06/2)^{5\cdot 2}} + \frac{10000}{(1+0.03)^{5 \cdot 2}} = 2132.55+7440.94 = 9573.49

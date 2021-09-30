@@ -70,8 +70,7 @@ port_returns <- (sum(w *c(ex_a,ex_b)))
 cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T, method='ML')$cov
 port_risk_v <- t(w) %*% (cov_mat %*% w)
 port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
-htmlTable::htmlTable(df_eks_gen, header=c("tilstand","sannsynlighet","avkastning a","avkastning b"))
-htmlTable::htmlTable(t((t(iris))))
+htmlTable::htmlTable(df_eks_gen, header=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B"))
 ```
 
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
@@ -84,7 +83,7 @@ I utgangspunktet har vi følgende opplysninger fra markedet som vi har analysert
 ```{r, echo=F}
 radnr <- c("Markedsporteføljen",
 	   "Risikofri rente")
-tils1 <- c(0.06,0.04)
+tils1 <- c(0.04,0.02)
 tils2 <- c(0.02,0.00)
 df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
 htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
@@ -92,30 +91,30 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 
 ```{r, echo=F}
 library(reticulate)
-reticulate::repl_python()
-import json
-import sympy
-import numpy
-## import matplotlib.pyplot as plt
-from sympy import solve, Eq, symbols, latex, simplify
-Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
-ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
-## Risk-lover investorene
-Er_pn = 0.44
-Er_mn = 0.04
-r_fn = 0.02
-w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
-w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
-## Risikoavers investor
-Er_pn = 0.02
-r_mn = 0.02
-r_fm = 0.06
-w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
-w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+#reticulate::repl_python()
+#import json
+#import sympy
+#import numpy
+### import matplotlib.pyplot as plt
+#from sympy import solve, Eq, symbols, latex, simplify
+#Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
+#ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
+### Risk-lover investorene
+#Er_pn = 0.44
+#Er_mn = 0.04
+#r_fn = 0.02
+#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+### Risikoavers investor
+#Er_pn = 0.02
+#r_mn = 0.02
+#r_fm = 0.06
+#w1 = sympy.solve(ERP,w_1)[0].subs([(r_f,r_fn),(r_m,r_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
 ```
 
 Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.000,- som de ønsker å investere.
@@ -151,46 +150,50 @@ k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
 ```
 
 1. Basert på disse opplysningene, klarer du å finne totalkapitalkostnaden til selskapet?
-1. Dersom selskapet framover anslås å ha en evigvarende driftsresultat (OFR) på 100.000,-, hva er verdien på egenkapitalen og markedsprisen pr. aksje?
+1. Dersom selskapet framover anslås å ha en evigvarende driftsresultat (OFR) på 100.000,-, hva er verdien til selskapet?
 
 ## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
 
 ### Obligasjoner
 
-En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. 
+En obligasjon med 3 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.07$ som utbetales n=1 ganger i året og årlige effektiv rente $r=0.06$. 
 1. Beregn prisen for en ordinær obligasjon
+
 ```{r, eval=F, echo=F} 
-(0.05*10000)*
-((1-(1/(0.03))^(10+1))/
-(1-(1/(0.03))))
+y <- 3
+n <- 1
+T <- y*n
+M <- 5000
+r_k <- 0.07
+r <- 0.06
 # [1] 7440.939
-10000/(1-(1/0.03))^10
-# [1] 8.007468e-12
+one <- M*r_k(1+r)
+two <- M*r_k(1+r)^2
+thr <- M*r_k(1+r)^3
+P_o <- M/(1+0.06)^T
+one+two+thr+P_o
+# [1] 8396.193
 ```
+En null-kupong-obligasjon med 10 år til forfall har pålydende 5.000,- med årlig effektiv rente $r=0.06$. 
 
 1. Beregn prisen for null-kupong rente obligasjonen 
 ```{r, eval=F, echo=F} 
-(0.05*10000)*
-((1-(1/(0.03))^(10+1))/
-(1-(1/(0.03))))
-# [1] 7440.939
-10000/(1-(1/0.03))^10
-# [1] 8.007468e-12
+M_o <- 5000
+r <- 0.06
+M_o/(1+r)^10
 ```
 
 ### Renten terminstruktur
 
 Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+
 ```{r, echo=F}
 stats_df <- data.frame(lopetid=c(1,2,3),
 		       M=c(1000,1000,1000),
 		       p=c(1019.23,1018.59,1013.49),
 		       rente=c(4,5,5.5)
 		       )
-##htmlTable(df1,header=c("Sannsynlighet","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-#htmlTable(dfn12,header=c("Sannsynlighet","Tilstandbeskrivelse","Prosjekt X","Prosjekt Y","Prosjekt Z"))
-#til obligasjonene er gitt ved $P_{0,1}=1019.23$, $P_{0,1}=1018.59$, og P_{0,1}=1013.49$.
-htmlTable(stats_df, header=c("Løpetid","Pålydende","Markedspris","Effektiv rente"))
+htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris ","Effektiv rente "))
 ```
 
 Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved 
@@ -258,8 +261,8 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 	1. Hvilke sentrale faktorer tror du kan være utslagsgivende for de resultatene du har kommet fram til?
 
 
-```{r eval=F, include=FALSE}
-knitr_knit_exit()
+```{r eval=T, include=FALSE}
+knitr::knit_exit()
 ```
 
 - Oppdater forelesningsnotater 0
@@ -267,8 +270,11 @@ knitr_knit_exit()
 - Oppdatert notater
 
 ```{r}
-htmlTable::htmlTable(df_eks_gen, header=c("Tilstand","Sannsynlighet","Avkastning A","Avkastning B"))
+idf <- head(iris)
+str(t(idf))
+names(idf) <- c("","","","")
+mat <- as.matrix(idf)
+
+htmlTable::htmlTable(t(idf, header=c(1,2,3,4,5))
+?htmlTable
 ```
-
-
-
