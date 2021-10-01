@@ -48,12 +48,12 @@ undervfor <- c(
 	  "Zoom/Campus",
 	  "Zoom/Campus",
 	  "",
-	  "Campus",
-	  "Campus",
-	  "Campus",
-	  "Campus",
-	  "Campus",
-	  "Campus"
+	  "Campus Sone E E1-062/Zoom",
+	  "Campus Sone E E1-062/Zoom",
+	  "Campus Sone E E1-062/Zoom",
+	  "Campus Sone E E1-062/Zoom",
+	  "Campus Sone E E1-062/Zoom",
+	  "Campus Sone E E1-062/Zoom",
 )
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
