@@ -1,0 +1,30 @@
+---
+output:
+#  html_document:
+  html_notebook:
+#rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
+---
+
+```{r eval=T}
+library(htmlTable)
+```
+
+```{r eval=FALSE, include=FALSE}
+rmarkdown::render("kunngjøring.Rmd")
+servr::httw()
+```
+
+# Undervisning framover
+Initialt Satser på Campus etter høstferien
+Refleks
+Men gis også mulighet til å følge på Zoom
+Blir igjen etter forelesning time0
+
+# Arbeidskrav 
+Hele arbeidskravet for kurset er nå publisert på Canvas-siden for kurset.
+
+# Eksamen
+Bestemt (men kan avvikes dersom situasjonen tillater det) at eksamen skal være på samme form som beskrevet i emneplane. Dvs.
+Individuell, skriftlig firetimers eksamen.
+Karakterregel: A-F.
+Hjelpemidler: godkjent kalkulator.
