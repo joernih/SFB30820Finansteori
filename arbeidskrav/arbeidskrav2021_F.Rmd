@@ -6,7 +6,7 @@ output:
     css: PAA.css
 ---
 
-## Obligatorisk arbeidskrav 
+## Obligatorisk arbeidskrav
 - Versjon 1.1
 - Leveres ut: 28.09.2021 (Canvas)
 - Leveres inn: 26.10.2021 (Canvas)
@@ -70,11 +70,12 @@ port_returns <- (sum(w *c(ex_a,ex_b)))
 cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T, method='ML')$cov
 port_risk_v <- t(w) %*% (cov_mat %*% w)
 port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+rownames(df_eks_gen) <- c(" ","   ","     ")
 htmlTable::htmlTable(df_eks_gen, header=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B"))
 ```
 
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
-1. Ta utgangspunkt i at 4000,- av investeringsbeløpet investeres i selskap B, mens det resterende går til selskap A. Finn forventet avkastning, varians og standardavvik til porteføljen av de to selskapene.
+1. Ta utgangspunkt i at 4.000,- av investeringsbeløpet investeres i selskap B, mens det resterende går til selskap A. Finn forventet avkastning, varians og standardavvik til porteføljen av de to selskapene.
 
 ## Oppgave 3: Porteføljeteorien
 
@@ -85,8 +86,10 @@ radnr <- c("Markedsporteføljen",
 	   "Risikofri rente")
 tils1 <- c(0.04,0.02)
 tils2 <- c(0.02,0.00)
+
 df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
-htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+rownames(df_prosj_kontantstrøm) <- c(" ","   ")
+htmlTable::htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
 ```
 
 ```{r, echo=F}
@@ -128,7 +131,7 @@ Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.00
 ## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
 Frøken Permanent er et lite AS som holder til på Halden Storsenter. Selskapet har som har som spesialitet microblading permanent makeup av bryn.
-I forbindelse med et oppkjøp er det estimert at selskapets egenkapitalbeta $\beta_E=0.90$ og gjeldsbeta lik \beta_G=0.20$. Den risikofrie renten i markedet på $2.5$ prosent, mens markedets risikopremie anslås til 5 prosent og Bryns skattesats er lik 15 prosent. Totalt sett har Bryn AS 200 aksjer utestående med beregnet markedspris lik 1500,-. Utestående gjeld er på 200.000,-
+I forbindelse med et oppkjøp er det estimert at selskapets egenkapitalbeta $\beta_E=0.90$ og gjeldsbeta lik $\beta_G=0.20$. Den risikofrie renten i markedet på $2.5$ prosent, mens markedets risikopremie anslås til 5 prosent og Bryns skattesats er lik 15 prosent. Totalt sett har Bryn AS 200 aksjer utestående med beregnet markedspris lik 1.500,-. Utestående gjeld er på 200.000,-
 
 ```{r, echo=F, eval=F}
 #1. Beregne vektene (markedsverdi) for egenkapital og gjeld
@@ -191,7 +194,7 @@ M_o/(1+r)^T
 
 Den kortsiktige spotrenten $_0r_1$ for ett år fram i tid er ved 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger
 
-```{r, eval=T, echo=F} 
+```{r echo=FALSE}
 Mv <- c(500,500,500)
 P1 <-500/(1+0.015)
 P2 <-500/(1+0.015)^2
@@ -205,7 +208,8 @@ two <- (M[1]/P2)^2
 thr <- (M[2]/P3)^3
 r_1_2 <- two/one-1
 r_2_3 <- thr/two-1
-htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris"))
+rownames(stats_df) <- c(" ","  ") 
+htmlTable::htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris"))
 ```
 
 Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved 
@@ -279,3 +283,11 @@ knitr::knit_exit()
 
 
 # Test
+
+```{r}
+hiris <- as.matrix(head(iris))
+colnames(hiris) <- c("","","","","")
+rownames(hiris) <- c(" ","","","","","")
+htmlTable::htmlTable(hiris)
+```
+
