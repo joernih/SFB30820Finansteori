@@ -1,0 +1,58 @@
+---
+title: "Finansteori (SFB30820)"
+subtitle: "Forelesningsnotater"
+author: "Jørn I.Halvorsen"
+date: "2021/08/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#bibliography: pensum.bib
+#output: 
+#  html_notebook:
+#  toc: false
+---
+
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, warning=FALSE}
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_tile_view()
+#xaringanExtra::use_share_again()
+xaringanExtra::use_scribble()
+xaringanExtra::use_webcam()
+#xaringanExtra::use_slide_tone()
+xaringanExtra::use_panelset()
+library(htmlTable)
+library(magrittr)
+library(xaringan)
+library(FinancialMath)
+```
+
+```{r eval=FALSE, include=FALSE}
+xaringan::inf_mr("dagens.Rmd")
+rmarkdown::render("dagens.Rmd")
+#xaringan::inf_mr("presentations.Rmd")
+servr::daemon_stop()
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source("timeplan.R")
+```
+
+class: inverse, center, middle
+
+# Læringsmål kapittel 11
+1. Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+1. Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+1. Redegjøre for teori og empiri om dividendens signalfunksjon.
+1. Forklare hvorfor dividende kan påvirke agentkostnader.
+1. Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+---
+
+
+

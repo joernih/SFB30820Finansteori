@@ -1,0 +1,56 @@
+---
+title: "Finansteori (SFB30820)"
+subtitle: "Forelesningsnotater"
+author: "Jørn I.Halvorsen"
+date: "2021/08/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#bibliography: pensum.bib
+#output: 
+#  html_notebook:
+#  toc: false
+---
+
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, warning=FALSE}
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_tile_view()
+#xaringanExtra::use_share_again()
+xaringanExtra::use_scribble()
+xaringanExtra::use_webcam()
+#xaringanExtra::use_slide_tone()
+xaringanExtra::use_panelset()
+library(htmlTable)
+library(magrittr)
+library(xaringan)
+library(FinancialMath)
+```
+
+```{r eval=FALSE, include=FALSE}
+xaringan::inf_mr("dagens.Rmd")
+rmarkdown::render("dagens.Rmd")
+#xaringan::inf_mr("presentations.Rmd")
+servr::daemon_stop()
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source("timeplan.R")
+```
+
+class: inverse, center, middle
+
+# Læringsmål kapittel 12
+1. Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+1. Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+1. Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+1. Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+1. Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
+1. Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+
+---
