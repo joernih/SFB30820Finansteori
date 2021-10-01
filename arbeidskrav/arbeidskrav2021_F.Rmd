@@ -280,10 +280,7 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 ```{r include=FALSE}
 knitr::knit_exit()
 ```
-
-
 # Test
-
 ```{r}
 hiris <- as.matrix(head(iris))
 colnames(hiris) <- c("","","","","")
