@@ -12,18 +12,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
-
-
 
 ```{r, eval=F, echo=F}
+# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
 rmarkdown::render("index.Rmd")
 pkgdown::build_site()
-```
+pkgdown::build_articles()
+pkgdown::build_home()
+``
 
-# Abc123
+# Om kurset
 
-# Def456
-
-# Ghi789
 

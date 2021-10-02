@@ -1,0 +1,21 @@
+---
+title: "SFB30820Finansteori"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SFB30820Finansteori}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(SFB30820Finansteori)
+```
+
+# ABC
