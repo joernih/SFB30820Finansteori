@@ -33,8 +33,8 @@ library(FinancialMath)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr("dagens.Rmd")
-rmarkdown::render("dagens.Rmd")
+xaringan::inf_mr("neste1.Rmd")
+rmarkdown::render("neste1.Rmd")
 #xaringan::inf_mr("presentations.Rmd")
 servr::daemon_stop()
 ```
