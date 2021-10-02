@@ -1,0 +1,17 @@
+---
+output: github_document
+---
+
+
+
+```{r, eval=F, echo=F}
+rmarkdown::render("index.Rmd")
+pkgdown::build_site()
+```
+
+# Abc
+
+# Def
+
+# Ghi
+

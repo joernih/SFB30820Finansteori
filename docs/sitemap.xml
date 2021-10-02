@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://lbusett.github.io/MODIStsp/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>http://lbusett.github.io/MODIStsp/authors.html</loc>
+    <loc>/articles/SFB30820Finansteori.html</loc>
   </url>
   <url>
-    <loc>http://lbusett.github.io/MODIStsp/index.html</loc>
+    <loc>/articles/index.html</loc>
   </url>
   <url>
-    <loc>http://lbusett.github.io/MODIStsp/reference/index.html</loc>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
+    <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/index.html</loc>
   </url>
 </urlset>

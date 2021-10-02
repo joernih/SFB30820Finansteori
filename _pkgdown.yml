@@ -1,12 +1,14 @@
 title: SFB30820Finansteori
-url: http://lbusett.github.io/MODIStsp
-template:
-  params:
-    bootswatch: flatly
-    ganalytics: UA-12345678-0
+  #url: http://lbusett.github.io/MODIStsp
+  #template:
+  #  params:
+  #    bootswatch: flatly
+  #    ganalytics: UA-12345678-0
 navbar:
- left:
+  type: inverse
+  left:
     - icon: fa-home
+      href: index.html
     - text: "Forelesningsnotater"
       menu: 
       -  text: Forelesning 1
@@ -17,5 +19,5 @@ navbar:
       -  href: articles/arbeidskrav.html
     - text: "Timeplan"
     - text: "Anbefalte oppgaver"
- right:
+  right:
     - icon: fa-home
