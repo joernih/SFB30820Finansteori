@@ -2,6 +2,18 @@
 output: github_document
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/"
+)
+```
+
+# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
+
 
 
 ```{r, eval=F, echo=F}
@@ -9,9 +21,9 @@ rmarkdown::render("index.Rmd")
 pkgdown::build_site()
 ```
 
-# Abc
+# Abc123
 
-# Def
+# Def456
 
-# Ghi
+# Ghi789
 
