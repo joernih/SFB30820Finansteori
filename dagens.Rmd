@@ -35,6 +35,7 @@ library(FinancialMath)
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
 rmarkdown::render("dagens.Rmd")
+system("brave dagens.Rmd")
 #xaringan::inf_mr("presentations.Rmd")
 servr::daemon_stop()
 ```
