@@ -165,3 +165,5 @@ setosa
 # Plot 3
 
 ![](man/figures/logo.png)
+
+Pakke

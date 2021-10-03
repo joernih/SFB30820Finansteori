@@ -46,4 +46,4 @@ htmlTable::htmlTable(head(iris))
 
 ![](man/figures/logo.png)
 
-
+Pakke
