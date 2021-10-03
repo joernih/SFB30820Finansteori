@@ -44,3 +44,6 @@ htmlTable::htmlTable(head(iris))
 
 # Plot 3
 
+![](man/figures/logo.png)
+
+
