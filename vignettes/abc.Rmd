@@ -10,3 +10,4 @@ output: github_document
 2+2
 ```
 
+![](anbefalteoppgaver.png)
