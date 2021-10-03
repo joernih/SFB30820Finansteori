@@ -27,6 +27,7 @@ pkgdown::build_site_github_pages()
 pkgdown::build_home()
 pkgdown::build_site()
 pkgdown::build_articles()
+pkgdown::deploy_site_github()
 system("brave index.html")
 rmarkdown::render("index.Rmd")
 ```
