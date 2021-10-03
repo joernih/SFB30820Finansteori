@@ -1,12 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<<<<<<< HEAD
-# Abc123
+# Plot A
 
-# Def456
+![](man/figures/abc.png)
 
-# Ghi789
-=======
-# Om kurset
->>>>>>> 5d6ee5f6bf7de8086b8b9a9df64042cdcdc762b0
+# Plot 2
+
+![](man/figures/abc.png)
+
+# Plot 3
+
+![](man/figures/abc.png)

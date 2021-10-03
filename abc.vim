@@ -122,10 +122,6 @@ vsplit
 1wincmd h
 wincmd w
 wincmd w
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -136,13 +132,10 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 1resize ' . ((&columns * 158 + 159) / 318)
+exe 'vert 1resize ' . ((&columns * 159 + 159) / 318)
 exe '2resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 2resize ' . ((&columns * 159 + 159) / 318)
+exe 'vert 2resize ' . ((&columns * 158 + 159) / 318)
 exe '3resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 3resize ' . ((&columns * 101 + 159) / 318)
-exe '4resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 4resize ' . ((&columns * 216 + 159) / 318)
 argglobal
 balt abc.R
 setlocal keymap=
@@ -272,16 +265,16 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 21 - ((20 * winheight(0) + 19) / 39)
+let s:l = 10 - ((9 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 21
-normal! 0
+keepjumps 10
+normal! 05|
 wincmd w
 argglobal
-terminal ++curwin ++cols=159 ++rows=39 
-let s:term_buf_12 = bufnr()
+terminal ++curwin ++cols=158 ++rows=39 
+let s:term_buf_3 = bufnr()
 balt _pkgdown.yml
 setlocal keymap=
 setlocal noarabic
@@ -853,154 +846,15 @@ normal! zt
 keepjumps 2
 normal! 0
 wincmd w
-argglobal
-terminal ++curwin ++cols=216 ++rows=39 R
-let s:term_buf_10 = bufnr()
-balt abc.R
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal nobuflisted
-setlocal buftype=terminal
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal cursorlineopt=both
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != ''
-setlocal filetype=
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal listchars=
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal nomodifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal showbreak=
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal spelloptions=
-setlocal statusline=
-setlocal suffixesadd=
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
-endif
-setlocal tabstop=8
-setlocal tagcase=
-setlocal tagfunc=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal virtualedit=
-setlocal wincolor=
-setlocal nowinfixheight
-setlocal winfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
 3wincmd w
 exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 1resize ' . ((&columns * 158 + 159) / 318)
+exe 'vert 1resize ' . ((&columns * 159 + 159) / 318)
 exe '2resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 2resize ' . ((&columns * 159 + 159) / 318)
+exe 'vert 2resize ' . ((&columns * 158 + 159) / 318)
 exe '3resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 3resize ' . ((&columns * 101 + 159) / 318)
-exe '4resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 4resize ' . ((&columns * 216 + 159) / 318)
 tabnext 1
+badd +1 _pkgdown.yml
 badd +1 abc.R
-badd +7 _pkgdown.yml
 badd +1 DESCRIPTION
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf

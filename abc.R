@@ -1,6 +1,0 @@
-usethis::use_readme_rmd()
-usethis::use_news_md()
-usethis::use_github_links()
-usethis::use_vignette("SFB30820Finansteori")
-pkgdown::build_site()
-pkgdown::build_site_github_pages()

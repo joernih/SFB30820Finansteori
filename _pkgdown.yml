@@ -7,8 +7,6 @@ title: SFB30820Finansteori
 navbar:
   type: inverse
   left:
-    - icon: fa-home
-      href: index.html
     - text: "Forelesningsnotater"
       menu: 
       -  text: Forelesning

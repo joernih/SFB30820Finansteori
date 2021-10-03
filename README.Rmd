@@ -11,4 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ABC
+```{r, eval=F, echo=F}
+system("brave index.html")
+rmarkdown::render("README.Rmd")
+```
