@@ -14,10 +14,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Abc
+```{r, eval=F, echo=F}
+# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
+rmarkdown::render("index.Rmd")
+pkgdown::build_site()
+pkgdown::build_articles()
+pkgdown::build_home()
+```
 
-# Def
-
-# Ghi
 
 ![](man/figures/abc.png)
+
