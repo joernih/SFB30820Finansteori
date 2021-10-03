@@ -15,8 +15,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
 ```{r, eval=F, echo=F}
 rmarkdown::render("index.Rmd")
+pkgdown::build_home()
 pkgdown::build_site()
 # pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
 usethis::use_readme_rmd()
@@ -25,15 +28,19 @@ usethis::use_github_links()
 usethis::use_vignette("SFB30820Finansteori")
 pkgdown::build_home()
 pkgdown::build_articles()
-pkgdown::build_home()
 pkgdown::build_articles()
 system("brave index.html")
 ```
 
 # Plot 1
+```{r}
+2+2
+```
 
 # Plot 2
+```{r}
+htmlTable::htmlTable(head(iris))
+```
 
 # Plot 3
-
 
