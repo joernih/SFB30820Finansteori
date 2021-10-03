@@ -27,8 +27,8 @@ pkgdown::build_site_github_pages()
 pkgdown::build_home()
 pkgdown::build_site()
 pkgdown::build_articles()
-rmarkdown::render("index.Rmd")
 system("brave index.html")
+rmarkdown::render("index.Rmd")
 ```
 
 # Plot A

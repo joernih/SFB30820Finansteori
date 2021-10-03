@@ -14,7 +14,6 @@ navbar:
     - text: "Arbeidskrav"
       menu: 
       -  text: Forelesning
-      -  href: articles/abc.html
     - text: "Timeplan"
     - text: "Anbefalte oppgaver"
   right:
