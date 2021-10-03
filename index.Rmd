@@ -1,5 +1,7 @@
 ---
 output: github_document
+#output: html_document
+#output: html_notebook
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -12,18 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# Abc
 
+# Def
 
+# Ghi
 
-```{r, eval=F, echo=F}
-rmarkdown::render("index.Rmd")
-pkgdown::build_site()
-```
-
-# Abc123
-
-# Def456
-
-# Ghi789
-
+![](man/figures/abc.png)
