@@ -1,4 +1,5 @@
 ---
+title: "Start page"
 output: github_document
 #output: html_document
 #output: html_notebook
@@ -15,7 +16,8 @@ knitr::opts_chunk$set(
 ```
 
 ```{r, eval=F, echo=F}
-
+rmarkdown::render("index.Rmd")
+pkgdown::build_site()
 # pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
 usethis::use_readme_rmd()
 usethis::use_news_md()
@@ -23,23 +25,15 @@ usethis::use_github_links()
 usethis::use_vignette("SFB30820Finansteori")
 pkgdown::build_home()
 pkgdown::build_articles()
-pkgdown::build_site()
-pkgdown::build_site_github_pages()
 pkgdown::build_home()
-pkgdown::build_site()
 pkgdown::build_articles()
-pkgdown::deploy_site_github()
 system("brave index.html")
-rmarkdown::render("index.Rmd")
 ```
 
-# Plot A
-![](man/figures/abc.png)
+# Plot 1
 
 # Plot 2
-![](man/figures/abc.png)
 
 # Plot 3
-![](man/figures/abc.png)
 
 
