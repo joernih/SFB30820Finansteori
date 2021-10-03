@@ -4,5 +4,10 @@ pkgdown_sha: ce9781a15c7ea07df9fb17a11295ba4abec0b54b
 articles:
   SFB30820Finansteori: SFB30820Finansteori.html
   abc: abc.html
+<<<<<<< HEAD
 last_built: 2021-10-03T19:49Z
+=======
+  dagens: dagens.html
+last_built: 2021-10-03T18:05Z
+>>>>>>> d5849e8e762015b5997ad48a54b3ce696c2c872a
 
