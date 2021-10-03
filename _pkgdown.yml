@@ -10,7 +10,7 @@ navbar:
     - text: "Forelesningsnotater"
       menu: 
       -  text: Forelesning
-      -  href: articles/abc.html
+      -  href: articles/dagens.html
     - text: "Arbeidskrav"
       menu: 
       -  text: Forelesning
@@ -18,5 +18,4 @@ navbar:
     - text: "Anbefalte oppgaver"
   right:
     - icon: fa-home
-
 

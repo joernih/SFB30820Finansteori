@@ -27,17 +27,77 @@ pkgdown::build_site_github_pages()
 pkgdown::build_home()
 pkgdown::build_site()
 pkgdown::build_articles()
+pkgdown::preview_site()
 system("brave index.html")
 rmarkdown::render("index.Rmd")
 ```
 
-# Plot A
-![](man/figures/abc.png)
+# Abc
 
-# Plot 2
-![](man/figures/abc.png)
 
-# Plot 3
-![](man/figures/abc.png)
+```{r include=FALSE}
+library(COVID19)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(gridExtra)
+library(ggplot2)
+library(lubridate)
+library(zoo)
 
+# Data transformation
+all_data <- COVID19::covid19(verbose = F)
+# Available countries
+#unique(all_data$id)
+#names(all_data)
+
+sel_cou <- c('NOR','ITA','SWE','GBR','ISR','FIN','CZE','ESP','USA','CAN','SVK','RUS')
+covid_sel_df <- all_data %>% dplyr::filter(id%in%sel_cou) %>%
+        # Datering	
+	dplyr::mutate(year=as.factor(lubridate::year(date))) %>% 
+	dplyr::mutate(dayofyear=lubridate::yday(date)) %>% 
+	dplyr::select(id,date,confirmed,deaths,hosp,dayofyear,year,population)  %>%
+	dplyr::mutate(c_deaths=deaths-dplyr::lag(deaths)) %>%
+	dplyr::mutate(ma_deaths=round(rollmean(c_deaths,k=7, fill=NA)),digits=4) %>%
+	dplyr::mutate(ma_deaths_perc=(ma_deaths/population)*100000) %>%
+	{. ->> b }    #here is save
+#View(b)
+h_cdf <- sel_cou %>% purrr::map(function(x,df=covid_sel_df)(
+				   {
+					out <- df %>% dplyr::filter(id==x)
+				       gout <- ggplot(out, aes(x=dayofyear,y=hosp, color=year)) + geom_point() + geom_line() + labs(title=x,"Day during the year", y="Hospitlalized") 
+				   }))
+
+
+d_cdf <- sel_cou %>% purrr::map(function(x,df=covid_sel_df)(
+				   {
+					out <- df %>% dplyr::filter(id==x)
+				       gout <- ggplot(out, aes(x=dayofyear,y=ma_deaths, color=year)) + geom_point() + geom_line() + labs(title=x,"Day during the year", y="Covid-deaths (7-days rolling average)") 
+				   }))
+
+
+
+
+###
+e_cdf <- sel_cou %>% purrr::map(function(x,df=covid_sel_df)(
+				   {
+					out <- df %>% dplyr::filter(id==x)
+				       gout <- ggplot(out, aes(x=dayofyear,y=ma_deaths_perc, color=year)) + geom_point() + geom_line() + labs(title=x,"Covid-deaths during the year", y="Deaths (7-days rolling average) per 1000k") + ylim(0,0.75)
+				   }))
+
+###################################################################
+```
+
+```{r echo=FALSE}
+all_cou <- grid.arrange(grobs=h_cdf)
+```
+
+```{r echo=FALSE}
+all_cou <- grid.arrange(grobs=d_cdf)
+
+```
+
+```{r echo=FALSE}
+all_cou <- grid.arrange(grobs=e_cdf)
+```
 
