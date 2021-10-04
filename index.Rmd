@@ -28,7 +28,6 @@ usethis::use_news_md()
 usethis::use_github_links()
 ```
 
-
 ![](man/figures/01_finans.jpg)
 
 ## Om kurset
@@ -37,7 +36,4 @@ Bla. bla. bla.
 **Sist gang oppdatert:** 
 <br>
 `r date()`
-
-
-
 

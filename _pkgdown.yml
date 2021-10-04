@@ -13,6 +13,10 @@ navbar:
       href: "articles/arbeidskrav2021_F.html"
     - text: "Anbefalte oppgaver"
       href: "articles/anbefalte_oppgaver.html"
+    - text: "Test"
+      href: "articles/abc.pdf"
+    - text: "Test2"
+      href: "articles/dagens.html"
   left:
     - icon: fa-home
       href: index.html
