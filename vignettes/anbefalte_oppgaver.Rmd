@@ -5,8 +5,8 @@ output: github_document
 
 
 ```{r, echo=F}
-source('rscript/timeplan.R')
-oppgaveplan
+#source('rscript/timeplan.R')
+#oppgaveplan
 ```
 
 
