@@ -6,3 +6,5 @@
 ## Om kurset
 
 Bla. bla. bla.
+
+**Sist gang oppdatert:** <br> Mon Oct 4 15:40:45 2021

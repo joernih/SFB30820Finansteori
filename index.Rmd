@@ -34,3 +34,10 @@ usethis::use_github_links()
 ## Om kurset
 Bla. bla. bla.
 
+**Sist gang oppdatert:** 
+<br>
+`r date()`
+
+
+
+

@@ -1,20 +1,18 @@
 title: Finansteori (SFB30820)
-  #url: http://lbusett.github.io/MODIStsp
-  #template:
-  #  params:
-  #    bootswatch: flatly
-  #    ganalytics: UA-12345678-0
+template:
+  params:
+    bootswatch: flatly
 navbar:
   type: inverse
   right:
     - text: "Forelesningsnotater"
       href: "articles/forelesninger.html"
-    - text: "Arbeidskrav"
-      href: "articles/arbeidskrav.html"
-    - text: "Anbefalte oppgaver"
-      href: "articles/anbefalte_oppgaver.html"
     - text: "Timeplan"
       href: "articles/timeplan.html"
+    - text: "Arbeidskrav"
+      href: "articles/arbeidskrav2021_F.html"
+    - text: "Anbefalte oppgaver"
+      href: "articles/anbefalte_oppgaver.html"
   left:
     - icon: fa-home
       href: index.html

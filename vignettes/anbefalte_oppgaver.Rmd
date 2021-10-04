@@ -4,8 +4,10 @@ output: github_document
 ---
 
 
-```{r}
+```{r, echo=F}
 source('rscript/timeplan.R')
-htmlTable(oppgaveplan,header=oppgnavn)
+oppgaveplan
 ```
+
+
 

@@ -3,8 +3,8 @@ title: ""
 output: github_document
 ---
 
-```{r}
+```{r, echo=F}
 source('rscript/timeplan.R')
-htmlTable(timep,header=oppgnavn)
+timep
 ```
 
