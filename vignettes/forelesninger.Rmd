@@ -6,8 +6,6 @@ output: github_document
 
 ## Introduksjon og overblikk
 
-![](pngs/figurer-01.png)
-
 ## Relevant risiko: Porteføljeteori to objekter
 
 ## Relevant risiko: Porteføljeteori 3-n objekter

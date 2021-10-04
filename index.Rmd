@@ -1,5 +1,5 @@
 ---
-title: "Start page"
+#title: "Finansteori (SFB30820)"
 output: github_document
 #output: html_document
 #output: html_notebook
@@ -28,8 +28,9 @@ usethis::use_news_md()
 usethis::use_github_links()
 ```
 
-```{r}
-source('forelesningsnotater/timeplan.R')
-oppgaveplan
-```
+
+![](man/figures/01_finans.jpg)
+
+## Om kurset
+Bla. bla. bla.
 

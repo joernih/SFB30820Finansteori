@@ -1,0 +1,11 @@
+---
+title: ""
+output: github_document
+---
+
+
+```{r}
+source('rscript/timeplan.R')
+htmlTable(oppgaveplan,header=oppgnavn)
+```
+

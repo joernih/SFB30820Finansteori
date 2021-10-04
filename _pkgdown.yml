@@ -1,4 +1,4 @@
-title: SFB30820Finansteori
+title: Finansteori (SFB30820)
   #url: http://lbusett.github.io/MODIStsp
   #template:
   #  params:
@@ -8,10 +8,13 @@ navbar:
   type: inverse
   right:
     - text: "Forelesningsnotater"
-      href: "articles/abc.html"
+      href: "articles/forelesninger.html"
     - text: "Arbeidskrav"
+      href: "articles/arbeidskrav.html"
     - text: "Anbefalte oppgaver"
+      href: "articles/anbefalte_oppgaver.html"
     - text: "Timeplan"
+      href: "articles/timeplan.html"
   left:
     - icon: fa-home
       href: index.html
