@@ -2217,14 +2217,14 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ---
 
 ```{r, eval=T, echo=F}
-mu <- mean(til_u$opa)
-mm <- mean(til_m$opa)
-su <- round(sd.p(c(til_u$opa)),digits=0)
-sm <- round(sd.p(c(til_m$opa)),digits=0)
-vu <- round(su/mu,digits=1)
-vm <- round(sm/mm,digi=1)
-uu <- max(til_u$opa)-min(til_u$opa)
-um <- max(til_m$opa)-min(til_m$opa)
+#mu <- mean(til_u$opa)
+#mm <- mean(til_m$opa)
+#su <- round(sd.p(c(til_u$opa)),digits=0)
+#sm <- round(sd.p(c(til_m$opa)),digits=0)
+#vu <- round(su/mu,digits=1)
+#vm <- round(sm/mm,digi=1)
+#uu <- max(til_u$opa)-min(til_u$opa)
+#um <- max(til_m$opa)-min(til_m$opa)
 ```
 
 ### Forventet avkastning og total risiko
@@ -2232,14 +2232,14 @@ um <- max(til_m$opa)-min(til_m$opa)
 .pull-left[
 
 ```{r, eval=T, echo=F}
-mu <- mean(til_u$opa)
-mm <- mean(til_m$opa)
-su <- round(sd.p(c(til_u$opa)),digits=0)
-sm <- round(sd.p(c(til_m$opa)),digits=0)
-vu <- round(su/mu,digits=1)
-vm <- round(sm/mm,digi=1)
-uu <- max(til_u$opa)-min(til_u$opa)
-um <- max(til_m$opa)-min(til_m$opa)
+#mu <- mean(til_u$opa)
+#mm <- mean(til_m$opa)
+#su <- round(sd.p(c(til_u$opa)),digits=0)
+#sm <- round(sd.p(c(til_m$opa)),digits=0)
+#vu <- round(su/mu,digits=1)
+#vm <- round(sm/mm,digi=1)
+#uu <- max(til_u$opa)-min(til_u$opa)
+#um <- max(til_m$opa)-min(til_m$opa)
 ```
 
 <!-- **Ingen gjeld** -->
