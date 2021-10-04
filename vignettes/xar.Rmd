@@ -1,0 +1,33 @@
+---
+title: "Finansteori (SFB30820)"
+subtitle: "Forelesningsnotater"
+author: "Jørn I.Halvorsen"
+date: "2021/08/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#bibliography: pensum.bib
+#output: 
+#  html_notebook:
+#  toc: false
+---
+
+
+class: inverse, center, middle
+
+# Læringsmål kapittel 11
+1. Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+1. Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+1. Redegjøre for teori og empiri om dividendens signalfunksjon.
+1. Forklare hvorfor dividende kan påvirke agentkostnader.
+1. Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+---
+
+Next slide
