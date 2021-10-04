@@ -8,14 +8,9 @@ navbar:
   type: inverse
   left:
     - text: "Forelesningsnotater"
-      menu: 
-      -  text: Forelesning
-      -  href: articles/dagens.html
     - text: "Arbeidskrav"
-      menu: 
-      -  text: Forelesning
-    - text: "Timeplan"
     - text: "Anbefalte oppgaver"
+    - text: "Timeplan"
   right:
     - icon: fa-home
 
