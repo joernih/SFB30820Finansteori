@@ -7,4 +7,4 @@
 
 Bla. bla. bla.
 
-**Sist gang oppdatert:** <br> Mon Oct 4 16:12:00 2021
+**Sist gang oppdatert:** <br> Tue Oct 5 01:02:18 2021
