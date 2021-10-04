@@ -1,13 +1,33 @@
 ---
+title: ""
 output: github_document
 ---
 
-# ABC
-# DEF
-# GHI
 
-```{r}
-2+2
-```
+## Introduksjon og overblikk
 
-![](anbefalteoppgaver.png)
+![](pngs/figurer-01.png)
+
+## Relevant risiko: Porteføljeteori to objekter
+
+## Relevant risiko: Porteføljeteori 3-n objekter
+
+## Effisiens
+
+## Kapitalverdimodellen
+
+## Langsiktige finansieringsformer
+
+## Gjeldgrad og risiko
+
+## Gjeldgrad og verdi i perfekte kapitalmarkeder
+
+## Gjeldgrad og verdi med imperfeksjoner
+
+## Dividende
+
+## Opsjoner
+
+## Finansielle instrumenter til påvirking av kontantstrømmer
+
+## Oppgavegjennomgan

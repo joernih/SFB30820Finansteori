@@ -6,11 +6,12 @@ title: SFB30820Finansteori
   #    ganalytics: UA-12345678-0
 navbar:
   type: inverse
-  left:
+  right:
     - text: "Forelesningsnotater"
+      href: "articles/abc.html"
     - text: "Arbeidskrav"
     - text: "Anbefalte oppgaver"
     - text: "Timeplan"
-  right:
+  left:
     - icon: fa-home
-
+      href: index.html
