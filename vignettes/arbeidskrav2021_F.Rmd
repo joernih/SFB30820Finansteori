@@ -15,7 +15,7 @@ output:
 
 
 ```{r eval=T, echo=F}
-library(htmlTable)
+#library(htmlTable)
 ```
 
 ```{r eval=FALSE, include=FALSE}
