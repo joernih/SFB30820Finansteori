@@ -5,6 +5,32 @@
 
 ## Om kurset
 
-Bla. bla. bla.
+Dette emnet bygger videre på temaer vi allerede har begynt å sett på i
+emnet Finansiering og Investering, men denne gangen skal vi gå litt
+dypere inn i teknikkene og metodene vi har for å analysere og
+gjennomføre effektiv kapitalforvaltning. Jeg håper at dere i løpet av
+semesteret vil få en solid forståelse for teoretisk verdsetting og
+kvantitativ porteføljekonstruksjon, men også en forståelse for hvordan
+markedene fungerer i den virkelige verden.
 
-**Sist gang oppdatert:** <br> Tue Oct 5 01:02:18 2021
+Forventninger:
+
+Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
+temaer. Personlige spørsmål rettes i canvas meldingsfunksjon til
+emneansvarlig.
+
+Viktige datoer:
+
+-   17.08.2021: Første forelesning 08:15-11:00 (på Zoom)
+
+-   28.9: Obligatorisk arbeidskrav publiseres
+
+-   26.10: Obligatorisk arbeidskrav innlevering
+
+-   10.12: Eksamen
+
+Undervisnings og emneansvarlig (<jornih@hiof.no>)
+
+Jørn Inge Halvorsen
+
+**Sist gang oppdatert:** <br>Tue Oct 5 09:03:56 2021
