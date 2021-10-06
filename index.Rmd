@@ -14,6 +14,10 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/"
 )
 ```
+```{r, eval=F, echo=F}
+devtools::document()
+devtools::install()
+```
 
 ```{r, eval=F, echo=F}
 rmarkdown::render("index.Rmd")
@@ -21,6 +25,7 @@ pkgdown::build_site()
 #
 pkgdown::build_home()
 pkgdown::build_articles()
+#pkgdown::build_articles("timeplan.Rmd")
 system("brave index.html")
 # pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
 usethis::use_readme_rmd()

@@ -1,9 +1,4 @@
 #' @export
-hello <- function() {
-  print("Hello, world!")
-}
-
-
 #' @export
 k <- function(){
     df <-  clipr::write_last_clip()
@@ -23,6 +18,4 @@ l <- function(){
     invisible(system(paste(open_command, temp_file),
                      ignore.stdout = TRUE, ignore.stderr = TRUE))
 }
-
-
 

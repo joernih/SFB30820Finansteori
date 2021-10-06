@@ -16,7 +16,7 @@ navbar:
       href: "articles/arbeidskrav2021_F.html"
     - text: "Anbefalte oppgaver"
       href: "articles/anbefalte_oppgaver.html"
-    - text: "Presentasjon"
+    - text: "Presentasjoner"
       href: "articles/presentations.html"
   right:
     - icon: fa-github fa-lg

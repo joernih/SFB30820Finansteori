@@ -29,3 +29,9 @@ output: github_document
 ## Finansielle instrumenter til påvirking av kontantstrømmer
 
 ## Oppgavegjennomgan
+
+```{r}
+a <- system.file('forelesningsnotater/neste1.html',package='SFB30820Finansteori')
+```
+
+![abc](`r a`)
