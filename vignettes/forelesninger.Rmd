@@ -4,7 +4,7 @@ output: github_document
 ---
 
 
-## Introduksjon og overblikk
+## [Introduksjon og overblikk](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf) 
 
 ## Relevant risiko: Porteføljeteori to objekter
 
@@ -32,6 +32,13 @@ output: github_document
 
 ```{r}
 a <- system.file('forelesningsnotater/neste1.html',package='SFB30820Finansteori')
+a
+"/home/joernih/R/x86_64-pc-linux-gnu-library/4.1/SFB30820Finansteori/forelesningsnotater/neste1.html"
 ```
-
 ![abc](`r a`)
+
+
+```{r}
+b <- system.file('forelesningsnotater/Finansteori (SFB30820)_#9_abc.pdf',package='SFB30820Finansteori')
+```
+![abc](`r b`)
