@@ -3,42 +3,22 @@ title: ""
 output: github_document
 ---
 
-
-## [Introduksjon og overblikk](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf) 
-
-## Relevant risiko: Porteføljeteori to objekter
-
-## Relevant risiko: Porteføljeteori 3-n objekter
-
-## Effisiens
-
-## Kapitalverdimodellen
-
-## Langsiktige finansieringsformer
-
-## Gjeldgrad og risiko
-
-## Gjeldgrad og verdi i perfekte kapitalmarkeder
-
-## Gjeldgrad og verdi med imperfeksjoner
-
-## Dividende
-
-## Opsjoner
-
-## Finansielle instrumenter til påvirking av kontantstrømmer
-
-## Oppgavegjennomgan
-
-```{r}
-a <- system.file('forelesningsnotater/neste1.html',package='SFB30820Finansteori')
-a
-"/home/joernih/R/x86_64-pc-linux-gnu-library/4.1/SFB30820Finansteori/forelesningsnotater/neste1.html"
+```{r, eval=T, echo=F}
+source('rscript/timeplan.R')
 ```
-![abc](`r a`)
+
+[# Forelesning 1: `r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 2: `r tema[2]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 3: `r tema[3]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 4: `r tema[4]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 5: `r tema[5]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 6: `r tema[6]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
+
+[# Forelesning 7: `r tema[7]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
 
 
-```{r}
-b <- system.file('forelesningsnotater/Finansteori (SFB30820)_#9_abc.pdf',package='SFB30820Finansteori')
-```
-![abc](`r b`)
