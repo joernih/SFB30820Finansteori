@@ -38,6 +38,7 @@ map cl :buffers 
 map ce :tabedit 
 map cb :bel terminal
 map ca :qall!
+map c+ :bel terminal
 map c0 :bel vertical terminal
 map c1 :split
 map cc :call RClearAll()
@@ -115,11 +116,11 @@ let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
-split
-1wincmd k
-wincmd _ | wincmd |
 vsplit
 1wincmd h
+wincmd _ | wincmd |
+split
+1wincmd k
 wincmd w
 wincmd w
 let &splitbelow = s:save_splitbelow
@@ -131,13 +132,14 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 1resize ' . ((&columns * 159 + 159) / 318)
-exe '2resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 2resize ' . ((&columns * 158 + 159) / 318)
-exe '3resize ' . ((&lines * 39 + 40) / 81)
+exe '1resize ' . ((&lines * 25 + 26) / 52)
+exe 'vert 1resize ' . ((&columns * 114 + 114) / 228)
+exe '2resize ' . ((&lines * 24 + 26) / 52)
+exe 'vert 2resize ' . ((&columns * 114 + 114) / 228)
+exe 'vert 3resize ' . ((&columns * 113 + 114) / 228)
+tcd ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori
 argglobal
-balt abc.R
+balt ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/abc.R
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -265,17 +267,16 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 19) / 39)
+let s:l = 11 - ((10 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 05|
+keepjumps 11
+normal! 0
 wincmd w
 argglobal
-terminal ++curwin ++cols=158 ++rows=39 
-let s:term_buf_3 = bufnr()
-balt _pkgdown.yml
+if bufexists("~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/_pkgdown.yml") | buffer ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/_pkgdown.yml | else | edit ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/_pkgdown.yml | endif
+balt ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/abc.R
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -286,14 +287,14 @@ setlocal nobreakindent
 setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
-setlocal buftype=terminal
+setlocal buftype=
 setlocal nocindent
 setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=:#
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -309,9 +310,9 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal noexpandtab
-if &filetype != ''
-setlocal filetype=
+setlocal expandtab
+if &filetype != 'yaml'
+setlocal filetype=yaml
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -325,7 +326,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -333,8 +334,8 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal indentexpr=GetYAMLIndent(v:lnum)
+setlocal indentkeys=!^F,o,O,0#,0},0],<:>,0-
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -347,7 +348,7 @@ setlocal makeencoding=
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
-setlocal nomodifiable
+setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
@@ -363,13 +364,13 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=8
+setlocal shiftwidth=2
 setlocal noshortname
 setlocal showbreak=
 setlocal sidescrolloff=-1
 setlocal signcolumn=auto
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=2
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
@@ -379,8 +380,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
+if &syntax != 'yaml'
+setlocal syntax=yaml
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -401,16 +402,18 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 19) / 39)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 22 - ((21 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 22
 normal! 0
 wincmd w
 argglobal
-if bufexists("abc.R") | buffer abc.R | else | edit abc.R | endif
-balt _pkgdown.yml
+if bufexists("~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/forelesningsnotater/dagens.Rmd") | buffer ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/forelesningsnotater/dagens.Rmd | else | edit ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/forelesningsnotater/dagens.Rmd | endif
+vnoremap <buffer> <silent> ,kn :call RKnit()
 vnoremap <buffer> <silent> ,rd :call RSetWD()
 vnoremap <buffer> <silent> ,ko :call RMakeRmd("odt_document")
 vnoremap <buffer> <silent> ,kh :call RMakeRmd("html_document")
@@ -454,6 +457,8 @@ vnoremap <buffer> <silent> ,rw :call RQuit('save')
 vnoremap <buffer> <silent> ,rq :call RQuit('nosave')
 vnoremap <buffer> <silent> ,rc :call StartR("custom")
 vnoremap <buffer> <silent> ,rf :call StartR("R")
+nnoremap <buffer> <silent> ,kn :call RKnit()
+onoremap <buffer> <silent> ,kn :call RKnit()
 nnoremap <buffer> <silent> ,rd :call RSetWD()
 onoremap <buffer> <silent> ,rd :call RSetWD()
 nnoremap <buffer> <silent> ,ko :call RMakeRmd("odt_document")
@@ -540,9 +545,14 @@ nnoremap <buffer> <silent> ,rc :call StartR("custom")
 onoremap <buffer> <silent> ,rc :call StartR("custom")
 nnoremap <buffer> <silent> ,rf :call StartR("R")
 onoremap <buffer> <silent> ,rf :call StartR("R")
+noremap <buffer> <silent> ,gN :call b:PreviousRChunk()
+noremap <buffer> <silent> ,gn :call b:NextRChunk()
+noremap <buffer> <silent> ,ca :call b:SendChunkToR("echo", "down")
+noremap <buffer> <silent> ,cd :call b:SendChunkToR("silent", "down")
+noremap <buffer> <silent> ,ce :call b:SendChunkToR("echo", "stay")
+noremap <buffer> <silent> ,cc :call b:SendChunkToR("silent", "stay")
 noremap <buffer> <silent> ,ud :call RAction("undebug")
 noremap <buffer> <silent> ,bg :call RAction("debug")
-noremap <buffer> <silent> ,su :call SendAboveLinesToR()
 let s:cpo_save=&cpo
 set cpo&vim
 noremap <buffer> <silent> ,r<Right> :call RSendPartOfLine("right", 0)
@@ -550,6 +560,7 @@ noremap <buffer> <silent> ,r<Left> :call RSendPartOfLine("left", 0)
 noremap <buffer> <silent> ,m :set opfunc=SendMotionToRg@
 noremap <buffer> <silent> ,d :call SendLineToR("down")0
 noremap <buffer> <silent> ,l :call SendLineToR("stay")
+noremap <buffer> <silent> ,ch :call SendFHChunkToR()
 noremap <buffer> <silent> ,pa :call SendParagraphToR("echo", "down")
 noremap <buffer> <silent> ,pd :call SendParagraphToR("silent", "down")
 noremap <buffer> <silent> ,pe :call SendParagraphToR("echo", "stay")
@@ -559,10 +570,7 @@ noremap <buffer> <silent> ,ba :call SendMBlockToR("echo", "down")
 noremap <buffer> <silent> ,bd :call SendMBlockToR("silent", "down")
 noremap <buffer> <silent> ,be :call SendMBlockToR("echo", "stay")
 noremap <buffer> <silent> ,bb :call SendMBlockToR("silent", "stay")
-noremap <buffer> <silent> ,ks :call RSpin()
-noremap <buffer> <silent> ,ao :call ShowRout()
-noremap <buffer> <silent> ,ae :call SendFileToR("echo")
-noremap <buffer> <silent> ,aa :call SendFileToR("silent")
+vnoremap <buffer> <silent> <Plug>RKnit :call RKnit()
 vnoremap <buffer> <silent> <Plug>RSetwd :call RSetWD()
 vnoremap <buffer> <silent> <Plug>RMakeODT :call RMakeRmd("odt_document")
 vnoremap <buffer> <silent> <Plug>RMakeHTML :call RMakeRmd("html_document")
@@ -607,6 +615,8 @@ vnoremap <buffer> <silent> <Plug>RSaveClose :call RQuit('save')
 vnoremap <buffer> <silent> <Plug>RClose :call RQuit('nosave')
 vnoremap <buffer> <silent> <Plug>RCustomStart :call StartR("custom")
 vnoremap <buffer> <silent> <Plug>RStart :call StartR("R")
+nnoremap <buffer> <silent> <Plug>RKnit :call RKnit()
+onoremap <buffer> <silent> <Plug>RKnit :call RKnit()
 nnoremap <buffer> <silent> <Plug>RSetwd :call RSetWD()
 onoremap <buffer> <silent> <Plug>RSetwd :call RSetWD()
 nnoremap <buffer> <silent> <Plug>RMakeODT :call RMakeRmd("odt_document")
@@ -689,14 +699,20 @@ nnoremap <buffer> <silent> <Plug>RCustomStart :call StartR("custom")
 onoremap <buffer> <silent> <Plug>RCustomStart :call StartR("custom")
 nnoremap <buffer> <silent> <Plug>RStart :call StartR("R")
 onoremap <buffer> <silent> <Plug>RStart :call StartR("R")
+noremap <buffer> <silent> <Plug>RPreviousRChunk :call b:PreviousRChunk()
+noremap <buffer> <silent> <Plug>RNextRChunk :call b:NextRChunk()
+noremap <buffer> <silent> <Plug>REDSendChunk :call b:SendChunkToR("echo", "down")
+noremap <buffer> <silent> <Plug>RDSendChunk :call b:SendChunkToR("silent", "down")
+noremap <buffer> <silent> <Plug>RESendChunk :call b:SendChunkToR("echo", "stay")
+noremap <buffer> <silent> <Plug>RSendChunk :call b:SendChunkToR("silent", "stay")
 noremap <buffer> <silent> <Plug>RUndebug :call RAction("undebug")
 noremap <buffer> <silent> <Plug>RDebug :call RAction("debug")
-noremap <buffer> <silent> <Plug>RSendAboveLines :call SendAboveLinesToR()
 noremap <buffer> <silent> <Plug>RNRightPart :call RSendPartOfLine("right", 0)
 noremap <buffer> <silent> <Plug>RNLeftPart :call RSendPartOfLine("left", 0)
 noremap <buffer> <silent> <Plug>RSendMotion :set opfunc=SendMotionToRg@
 noremap <buffer> <silent> <Plug>RDSendLine :call SendLineToR("down")0
 noremap <buffer> <silent> <Plug>RSendLine :call SendLineToR("stay")
+noremap <buffer> <silent> <Plug>RSendChunkFH :call SendFHChunkToR()
 noremap <buffer> <silent> <Plug>REDSendParagraph :call SendParagraphToR("echo", "down")
 noremap <buffer> <silent> <Plug>RDSendParagraph :call SendParagraphToR("silent", "down")
 noremap <buffer> <silent> <Plug>RESendParagraph :call SendParagraphToR("echo", "stay")
@@ -706,10 +722,7 @@ noremap <buffer> <silent> <Plug>REDSendMBlock :call SendMBlockToR("echo", "down"
 noremap <buffer> <silent> <Plug>RDSendMBlock :call SendMBlockToR("silent", "down")
 noremap <buffer> <silent> <Plug>RESendMBlock :call SendMBlockToR("echo", "stay")
 noremap <buffer> <silent> <Plug>RSendMBlock :call SendMBlockToR("silent", "stay")
-noremap <buffer> <silent> <Plug>RSpinFile :call RSpin()
-noremap <buffer> <silent> <Plug>RShowRout :call ShowRout()
-noremap <buffer> <silent> <Plug>RESendFile :call SendFileToR("echo")
-noremap <buffer> <silent> <Plug>RSendFile :call SendFileToR("silent")
+inoremap <buffer> <silent> ` :call RWriteRmdChunk()a
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
@@ -728,7 +741,7 @@ setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#',:###,:##,:#
+setlocal comments=fb:*,fb:-,fb:+,n:>
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
@@ -746,8 +759,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'r'
-setlocal filetype=r
+if &filetype != 'rmd'
+setlocal filetype=rmd
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -760,17 +773,17 @@ setlocal foldmethod=manual
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatexpr=FormatRmd()
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^\\s*[-*+]\\s\\+
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetRIndent()
-setlocal indentkeys=0{,0},:,!^F,o,O,e
+setlocal indentexpr=GetRmdIndent()
+setlocal indentkeys=0{,0},<:>,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,.
 setlocal keywordprg=
@@ -815,8 +828,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'r'
-setlocal syntax=r
+if &syntax != 'rmd'
+setlocal syntax=rmd
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -839,23 +852,24 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 2 - ((1 * winheight(0) + 19) / 39)
+let s:l = 1 - ((0 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 1
 normal! 0
+lcd ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori
 wincmd w
-3wincmd w
-exe '1resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 1resize ' . ((&columns * 159 + 159) / 318)
-exe '2resize ' . ((&lines * 39 + 40) / 81)
-exe 'vert 2resize ' . ((&columns * 158 + 159) / 318)
-exe '3resize ' . ((&lines * 39 + 40) / 81)
+exe '1resize ' . ((&lines * 25 + 26) / 52)
+exe 'vert 1resize ' . ((&columns * 114 + 114) / 228)
+exe '2resize ' . ((&lines * 24 + 26) / 52)
+exe 'vert 2resize ' . ((&columns * 114 + 114) / 228)
+exe 'vert 3resize ' . ((&columns * 113 + 114) / 228)
 tabnext 1
-badd +1 _pkgdown.yml
-badd +1 abc.R
-badd +1 DESCRIPTION
+badd +24 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/_pkgdown.yml
+badd +1 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/abc.R
+badd +1 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/DESCRIPTION
+badd +0 ~/gitclones/homepageJIH/rprojects/teaching/SFB30820Finansteori/forelesningsnotater/dagens.Rmd
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

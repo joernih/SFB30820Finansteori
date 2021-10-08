@@ -16,8 +16,8 @@ navbar:
       href: "articles/arbeidskrav2021_F.html"
     - text: "Anbefalte oppgaver"
       href: "articles/anbefalte_oppgaver.html"
-    - text: "Presentasjon"
-      href: "articles/presentations.html"
+    - text: "Presentasjoner (alle)"
+      href: "/home/joernih/R/x86_64-pc-linux-gnu-library/4.1/SFB30820Finansteori/forelesningsnotater/presentations.html"
   right:
     - icon: fa-github fa-lg
       text: "github"
