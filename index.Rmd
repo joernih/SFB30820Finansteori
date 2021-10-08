@@ -21,6 +21,9 @@ devtools::install()
 ```
 
 ```{r, eval=F, echo=F}
+rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/neste1.Rmd', 'xaringan::moon_reader')
 rmarkdown::render("index.Rmd")
 pkgdown::build_site()
 #
