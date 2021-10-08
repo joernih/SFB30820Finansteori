@@ -42,7 +42,7 @@ Dette emnet bygger videre på temaer vi allerede har begynt å sett på i emnet 
 
 Forventninger:
 
-Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i canvas meldingsfunksjon til emneansvarlig. 
+Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til emneansvarlig. 
 
 Viktige datoer: 
 

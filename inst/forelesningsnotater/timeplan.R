@@ -16,7 +16,7 @@ tema <- c(
 	  "Langsiktige finansieringsformer",
 	  "Gjeldgrad og risiko",
 	  "",
-	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
+	  "**Gjeldgrad og verdi i perfekte kapitalmarkeder**",
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
 	  "Opsjoner",
@@ -32,7 +32,7 @@ literatur <- c(
 	       "Kap. 5: Langsiktige finansieringsformer",
 	       "Kap. 6: Gjeldsgrad og risiko",
 	       "**Høstferie**",
-	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
+	       "**Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder**",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
 	       "Kap. 11: Dividende",
 	       "Kap. 12: Opsjoner",
@@ -48,7 +48,7 @@ undervfor <- c(
 	  "Zoom/Campus",
 	  "Zoom/Campus",
 	  "",
-	  "Campus Sone E E1-062/Zoom",
+	  "**Campus Sone E E1-062/Zoom**",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
@@ -107,5 +107,5 @@ df2 <- data.frame(Forelesning=seq(1,13),
 
 oppgnavn <- c("Forelesning","Pensumbok","Nettside (ressurs)")
 
+timeeplan <- htmlTable(df1,header=timenavn)
 oppgaveplan <- htmlTable(df2,header=oppgnavn)
-

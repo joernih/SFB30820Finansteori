@@ -3,9 +3,8 @@ title: ""
 output: github_document
 ---
 
-
 ```{r, echo=F}
-source('rscript/timeplan.R')
-timep`
+source('../inst/forelesningsnotater/timeplan.R')
+oppgaveplan
 ```
 
