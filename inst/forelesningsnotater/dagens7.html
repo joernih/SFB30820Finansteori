@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Finansteori (SFB30820)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jørn I.Halvorsen" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e5a4a276dd7d4c95ba3a6044ff2613da","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Finansteori (SFB30820)
+## Forelesningsnotater
+### Jørn I.Halvorsen
+### 2021/08/12 (updated: 2021-10-11)
+
+---
+
+
+
+
+
+
+
+
+class: inverse, center, middle
+
+# Forelesning 7: Gjeldgrad og risiko
+
+**Læringsmål:**
+
+1. Definere begrepene gjeldsgrad og gjeldsandel.
+1. Forklare hva som bestemmer selskapets investeringsrisiko.
+1. Redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
+1. Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
+1. Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
+
+Oppdatert: 2021-10-11
+
+
+
+---
+
+# Gjeldsgrad og risiko
+
+- Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
+
+Formelt kan vi definere dette forholdet på to litt ulike måter:
+1. Gjeldsandel: (mellom 0 og 1) 
+`\begin{equation}
+G/(G+E)
+\end{equation}`
+1. Gjeldsgrad (mellom 0 og `\(\infty\)`) 
+`\begin{equation}
+G/E
+\end{equation}`
+
+I selve omtalen av bedriftens kapitalstruktur benyttes disse begrepene gjerne om hverandre, men i de formlene som vi nå skal se på vil det være nødvendig å gjøre et skille mellom de.
+
+---
+
+## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+
+Alternative navn på investeringsrisiko: *eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.*
+
+Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
+- Etterspørselsrisiko
+- Prisusikkerhet på produktprisene
+- Prisusikkerhet på råvarerisiko
+- Endret markedsmakt
+- Høyere faste utbetalinger
+
+I slutten av dette kurset skal vi se nærmer på noen finansielle instrumenter (eks. swapper, futures og opsjonner) kan benyttes til påvirke usikkerheten til disse kontantstrømmene.
+
+---
+
+**Eksempel 6.1:** Overskudd før renter (OFR) til Kapitalstruktur i fem alternative tilstander. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+.pull-left[
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+
+.pull-right[
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+&lt;img src="pensum/figurer-46.png" width="60%" /&gt;
+---
+
+### Forventet avkastning og total risiko
+
+.pull-left[
+
+
+
+**Ingen gjeld**
+
+- Forventet avkastning: 15
+- Standardavvik: 7 
+- Variasjonskoeffisienten: 0.5
+- Utfallsspekteret: 20
+
+]
+
+.pull-right[
+
+**Med gjeldsandel på 50%**
+
+- Forventet avkastning: 20
+- Standardavvik: 14 
+- Variasjonskoeffisienten: 0.7
+- Utfallsspekteret: 40
+
+]
+
+**Fem effekter av økt gjeldsgrad:**
+
+1. OPA øker
+1. OPA blir mer usikkert (høyere total risiko)
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
+
+---
+
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+Benytter `\(\beta_{I}\)` for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert).
+
+Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller driftsbeta*.
+
+---
+
+### Formelt (uten skatt, men med konkursrisiko) ###
+
+- Systematisk investeringsrisiko
+`\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\end{equation*}`
+
+Hvor `\(w_E=\frac{E}{E+G}\)` og `\(w_G=\frac{G}{E+G}\)`.
+
+- Dersom vi løser uttrykket ovenfor for `\(\beta_I\)` får vi
+
+`\begin{equation*}
+(E+G)\beta_{I}=E\beta_{E}+G\beta_{G} \\
+E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
+\beta_{E}=\frac{E+G}{E}\beta_{I}-\beta_{G}\frac{G}{E}\\
+\beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
+\end{equation*}`
+
+- Uten konkursrisiko ( `\(\beta_G=0\)` )
+
+`\begin{equation*}
+\beta_{E}=\beta_{I}(1+\frac{G}{E})
+\end{equation*}`
+
+
+
+---
+
+**Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko `\(\beta_I=0.8\)`. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
+
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;tbody&gt;
+&lt;tr style='border-top: 2px solid grey;'&gt;
+&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;G/E&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Investeringsbeta&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Gjeldsbeta&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Aksjebeta&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.8375&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.87&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.92&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;img src="pensum/figurer-47.png" width="60%" /&gt;
+---
+
+class: inverse, center, middle
+
+# Forelesning 8: 
+
+**Læringsmål:**
+
+- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Forklare hva en arbitrasjemulighet er.
+- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
+- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
+
+Oppdatert: 2021-10-11
+
+---
+
+# Gjeldsgrad og verdi i perfekte kapitalmarkeder
+
+I kapittel 6 så vi at økt gjeldsgrad førte til
+1. Økt forventet avkastning
+1. Økt risiko (både for total risiko og systematisk risiko) 
+
+Spørsmålet vi stiller nå:
+- Er den positive effekten av 1. større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre av de negative effekten av 2.?
+
+---
+
+## Oppsplitting av en kontantstrøm
+
+.pull-left[
+- Til kreditorene: `\(R=0\)`
+- Til aksjonærene: `\(OER_U=OFR\)`
+- Totalt: `\(R+OER_U=OFR\)`
+]
+.pull-right[
+- Til kreditorene: `\(R=r\cdot PG\)`
+- Til aksjonærene: `\(OER_M=OFR-r\cdot PG\)`
+- Totalt: `\(R+OER_M=\\ r\cdot PG-OFR-r\cdot PG= OFR\)`
+]
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;tbody&gt;
+&lt;tr style='border-top: 2px solid grey;'&gt;
+&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;Pålydende gjeld&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;400&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;600&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;700&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Gjeldsrente&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Til kreditorene&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;56&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Til eierne&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;96&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;92&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;64&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Totalt&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere, men ikke den totale kontantstrømmen**
+
+---
+
+## Arbitrasje
+
+Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
+
+**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm, ulik finansfor og verdifastsettelse
+
+.pull-left[
+Selskap U (100 prosentet egenkapitalfinansiert)
+- Verdien av selskapet 1000. Hvor `\(V_U=E_U=1000\)` og `\(G_U=0\)`
+- Gir dividiende `\(=OFR\)`
+- Salg 10 prosent av aksjer: 1000*0.1=100,-
+]
+.pull-right[
+Selskap M 
+- Verdien av selskapet 900. Hvor `\(V_M=900\)`, `\(E_M=500\)` og `\(G_M=450\)` med en pålydende gjeld på 6 prosent
+- Gir dividiende `\(=OFR-0.06\cdot 500=OFR-30\)`
+- Kjøper for 90,-
+- Investering: Aksjer `\(0.1\cdot 500\)` og Obligasjoner `\(0.1\cdot 400\)` som totalt er lik 90
+- Utbetaling: `\(0.1\cdot OFR\)`
+]
+
+Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
+
+
+---
+
+**Generell strategi:**
+1. Selg dine *aksjer* i det overprisede selskapet
+1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
+  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
+]
+
+**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
+
+---
+
+## Miller &amp; Modigliani (M&amp;M)
+
+Som vist vil arbitrasje føre til lik verdifastsette, men hva blir verdien som blir fastsatt i markedet?
+
+Forutsetninger til grunn for verdsetting av selskaper
+
+**Markedet:**
+- Alle investorer har full informasjon om markedsmulighetene
+- For samme risiko, alle kan låne til samme rente
+- Ingen transaksjonskostnader
+- Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
+- Ingen betaler skatt
+
+.pull-left[
+**Investeringssiden:**
+- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
+- OFR er evigvarende
+- Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
+]
+
+.pull-right[
+**Finansieringsiden:**
+- Fast evigvarende gjeld
+- OER går kun til utbytte
+]
+
+---
+
+Basert på disse forutsetningene kan vi sette opp tre uttrykk som viser forventet avkastning for gjeld ( `\(k_G\)` ), egenkapital ( `\(k_E\)` ) og totalkapital ( `\(k_T\)` ):
+
+`\begin{equation}
+k_G = \frac{r\cdot PG}{G}
+\end{equation}`
+
+`\begin{equation}
+k_E = \frac{E(OER)}{E}
+\end{equation}`
+
+`\begin{equation}
+k_T = \frac{E(OFR)}{V}
+\end{equation}`
+
+- **M&amp;M-1**
+`\begin{equation}
+V = \frac{E(OFR)}{k_t}=\frac{E(OFR)}{k_u}
+\end{equation}`
+
+- **M&amp;M-2**
+
+`\begin{equation}
+k_E = k_T + (k_T-k_G)\frac{G}{E} 
+=k_U + (k_U-k_G)\frac{G}{E}
+\end{equation}`
+
+---
+
+*Seperasjonsprinsippet*
+- M&amp;M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
+	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed økning i eiernes avkastningskrav
+	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
+	1. Dette resultatet ofte som *seperasjonsprinsippet*
+
+---
+
+**Eksempel 7.5:** TV fabrikken Tittco budsert `\(OFR=2\)` mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250 tusen i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har en investeringsrisiko `\(\beta_I=0.04\)`
+
+- Ifølge M&amp;M-I vil verdien til Tittco være gitt ved
+`\begin{equation}
+V = \frac{E(OFR)}{k_u} = \frac{2}{0.04}=50
+\end{equation}`
+
+- Ifølge M&amp;M-II
+`\begin{equation}
+k_E = k_T + (k_T-k_G)\frac{G}{E}\\
+k_T + (k_T-k_G)\frac{G}{E}
+\end{equation}`
+
+&lt;img src="pensum/figurer-52.png" width="40%" /&gt;
+
+---
+
+### Sammenhengen mellom KVM og M&amp;M
+
+Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta. Eksemplet nedenfor viser at KVM,  under de nå mindre restriktive forutsetningen, impliserer både M&amp;M-1 og M&amp;M-2.
+
+**Eksempel 7.5**: For Demo ASA er `\(\beta_G=0.02\)` og `\(\beta_E=1.4\)`. Selskapet er finansiert med like mye gjeld som egenkapital, `\(w_G=w_E=0.05\)`.
+Den risikofrie renten i markedet `\(r_f=0.03\)` mens markedsporteføljen forventede avkastning `\(E(rp)=1.4\)`.
+.pull-left[
+**Alternativ 1: KVM**
+`\begin{equation*}
+k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
+\end{equation*}`
+
+**Konklusjon:M&amp;Ms konklusjonder holder også under mer robuste og velkjente forutsetninger.**
+]
+
+.pull-right[
+**Alternativ 2: M&amp;M**
+
+Vi har fra kapittel 6 (uten skatt)
+`\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}\\
+=0.5\cdot 1.4+0.5\cdot 0.20 = 0.80
+\end{equation*}`
+som fra KVM gir (sjekk ut!) `\(k_U=0.07\)`. Vider har vi 
+`\begin{equation*}
+k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ =0.03 + 0.2[0.08-0.03]=0.04
+\end{equation*}`
+Vi kan derfor benytte M&amp;M-2:
+`\begin{equation*}
+k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10 
+\end{equation*}`
+]
+
+
+```r
+knitr::knit_exit()
+```
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

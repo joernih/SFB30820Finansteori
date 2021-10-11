@@ -2211,45 +2211,17 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_i,
 
 ]
 
-**Eksempel 6.1:** Overskudd før renter (OFR) til Kapitalstruktur i fem alternative tilstander. 
-
-```{r, echo=F}
-radnr_i <- c("OFR")
-til_p <- data.frame(OFR=c(250,200,150,100,50),Sannsynlighet=c(1/5,1/5,1/5,1/5,1/5)) 
-htmlTable(t(til_p), header=c(seq(1,5)), rnames=c("OFR","Sannsynlighet"), rowlabel="Tilstand:")
-```
-
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-rm <- 0.00
-M <- 0
-utaksjer <- 10
-til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=ofr*rm) %>%
-	dplyr::mutate(oer=ofr-M*rm) %>%
-	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_u), header=c(seq(1,5)),rnames=radnr_i,
-	  rowlabel="Tilstand:")
+```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 ---
 
-```{r, echo=F}
-radnr_i <- c("OFR","Renter","OER","OPA")
-rm <- 0.05
-M <- 1000
-utaksjer <- 5
-til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
-	dplyr::mutate(r=M*rm) %>%
-	dplyr::mutate(oer=ofr-r) %>%
-	dplyr::mutate(opa=oer/utaksjer)
-htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_i,
-	  rowlabel="Tilstand:")
-```
----
+### Forventet avkastning og total risiko
+
+.pull-left[
 
 ```{r, eval=T, echo=F}
 mu <- mean(til_u$opa)
-print(mu)
 mm <- mean(til_m$opa)
 su <- round(sd.p(c(til_u$opa)),digits=0)
 sm <- round(sd.p(c(til_m$opa)),digits=0)
@@ -2259,15 +2231,25 @@ uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
 
+**Ingen gjeld**
 
-```{r}
-til_u
-```
+- Forventet avkastning: `r mu`
+- Standardavvik: `r su` 
+- Variasjonskoeffisienten: `r vu`
+- Utfallsspekteret: `r uu`
 
+]
 
-```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-46.png"))
-```
+.pull-right[
+
+**Med gjeldsandel på 50%**
+
+- Forventet avkastning: `r mm`
+- Standardavvik: `r sm` 
+- Variasjonskoeffisienten: `r vm`
+- Utfallsspekteret: `r um`
+
+]
 
 **Fem effekter av økt gjeldsgrad:**
 
@@ -2294,9 +2276,14 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 \beta_{I}=w_E\beta_{E}+w_G\beta_{G}
 \end{equation*}
 
-- Løst for egenkapitalbeta
+Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
+
+- Dersom vi løser uttrykket ovenfor for $\beta_I$ får vi
 
 \begin{equation*}
+(E+G)\beta_{I}=E\beta_{E}+G\beta_{G} \\
+E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
+\beta_{E}=\frac{E+G}{E}\beta_{I}-\beta_{G}\frac{G}{E}\\
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
 \end{equation*}
 
@@ -2307,11 +2294,16 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 \end{equation*}
 
 ```{r, eval=F, echo=F}
-bi=we*be+wg*bg
-bi=(E*be+G*bg)/(E+G)
-(E+G)*bi=E*be+G*bg
+bi = we*be+wg*bg
+bi = we*be+wg*bg
+(E+G)bi=E*bg+G*be
+E*bg=(E+G)bi-G*be
+bg=(E+G)/Ebi-G/E*be
+bg=(E+G)/Ebi-G/E*be
+bg=bi+(bi-bg)G/E
+bg=bi+(bi)G/E
+bg=bi(1+G/E)
 ```
-
 
 ---
 
@@ -2324,18 +2316,16 @@ rm <- 0.10
 M <- 1000
 utaksjer <- 10
 goe_v <- c(0,0.2,0.5,1.0,1.5,2.0,3.0)
-inb_v <- seq(0.8)
+inb_v <- rep(c(0.8),7)
 gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
 til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
-	dplyr::mutate(akb=invb+(invb-gjb)*gjb)
+	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
 a <- data.frame(t(til_b))
 htmlTable(t(til_b),rnames=radnr_p)
 ```
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
 ```
----
 
-class: inverse, center, middle
 
