@@ -61,7 +61,7 @@ abstract: ''
 
 # Læringsmål kapittel 7
 1. beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-1. vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+1. vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (se kapittel 6).
 1. forklare hva en arbitrasjemulighet er.
 1. konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
 1. gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.

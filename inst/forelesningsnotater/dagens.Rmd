@@ -119,16 +119,18 @@ Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette 
 
 - Verdien av selskapet 1000. Hvor $V_U=E_U=1000$ og $G_U=0$
 - Gir dividiende $=OFR$
-- Salg 10 prosent av aksjer: $1000\cdot 0.1=100,-$
+- Arbitrasjestrategi (selger overvurdert):
+	- Salg 10 prosent av aksjer: $1000\cdot 0.1=100,-$
+	- Mister: $0.10\cdot OFR$
 ]
 .pull-right[
 ** Selskap M (med gjeldsfinansiering)**
 
 - Verdien av selskapet 900. Hvor $V_M=900$, $E_M=400$ og $G_M=500$ med en pålydende gjeld på 6 prosent
 - Gir dividiende $=OFR-0.06\cdot 500=OFR-30$
-- Kjøper for 90,-
-- Investering: Aksjer $0.1\cdot 500$ og Obligasjoner $0.1\cdot 400$ som totalt er lik 90
-- Utbetaling: $0.1\cdot OFR$
+- Arbitrasjestrage (kjøp undervurdert for samme risikoprofil):
+	- Investering: Aksjer $0.1\cdot 500$ og Obligasjoner $0.1\cdot 400$ som totalt koster 90
+	- Mottar: $0.1\cdot OFR$
 ]
 
 ---

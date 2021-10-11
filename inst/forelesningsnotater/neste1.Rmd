@@ -58,52 +58,104 @@ class: inverse, center, middle
 
 # Intro
 
+Interessentene
+
+- Investorer
+	- Aksjonærer
+	- Kreditorer
+- Myndighetene
+
+---
+
+- Ettleddsbeskatning
+- Toleddsbeskatning
+
+---
+
+- Imperfeksjoner
+	- Emisjonskostnader
+	- Vekst kontra kontroll
+	- Assymetrisk informasjon
+	- Interessekonflikt mellom eierne og ledelsen
+	- Interessekonflikt mellom eierne og kreditorene
+	- Finansielle krisekostnader
+
 ---
 
 # Skatt, kontantstrøm og verdi
+
+## Markedsverdi vs. regnskapsverdi
+
+---
+
+## Ettledsbeskatning
+
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-56.png"))
+```
+
+---
+
+## Toledsbeskatning
+
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-57.png"))
+```
+
+---
+
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-58.png"))
+```
 
 ---
 
 # Kapitalverdimodellen med beskatning
 
+```{r, echo=F}
+library(magrittr)
+library(htmlTable)
+a <- c("abc", "Site", "$\\beta_0$", "$\\beta_A$")
+radm <- c("1. Pålydende gjeld", "2. Gjeldsrente","3. Til kreditorene", "4.")
+til_u <- data.frame(A=c(100,200,400,200),B=seq(1,4,),C=seq(1,4))
+header <- c("A Ingen skatt","B Ettleddsskatt","Toleddskatt med Miller likevekt")
+htmlTable(til_u,header=header, rnames=radm)
+```
 ---
 
 # Andre imperfeksjoner
 
-## Abc
+---
+
+## Emisjonskostnader 
 
 ---
 
-## Def
+## Vekst kontra kontroll 
 
 ---
 
-## Ghi
+## Assymetrisk informasjon 
 
 ---
 
-## Jkl
+## Interessekonflikt mellom eierne og ledelsen
+
 ---
 
+## Interessekonflikt mellom eierne og kreditorene
 
+---
 
+## Finansielle krisekostnader
 
+---
 
+## Oppsummering
 
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-59.png"))
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
