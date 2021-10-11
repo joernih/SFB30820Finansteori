@@ -2211,124 +2211,79 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_i,
 
 ]
 
+### Insert here
+
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
+
+**Fem effekter av økt gjeldsgrad:**
+
+1. OPA øker
+1. OPA blir mer usikkert (høyere total risiko)
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
+
 ---
 
-```{r, eval=T, echo=F}
-#mu <- mean(til_u$opa)
-#mm <- mean(til_m$opa)
-#su <- round(sd.p(c(til_u$opa)),digits=0)
-#sm <- round(sd.p(c(til_m$opa)),digits=0)
-#vu <- round(su/mu,digits=1)
-#vm <- round(sm/mm,digi=1)
-#uu <- max(til_u$opa)-min(til_u$opa)
-#um <- max(til_m$opa)-min(til_m$opa)
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+Benytter $\beta_{I}$ for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert).
+
+Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller driftsbeta*.
+
+---
+
+### Formelt (uten skatt, men med konkursrisiko) ###
+
+- Systematisk investeringsrisiko
+\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\end{equation*}
+
+- Løst for egenkapitalbeta
+
+\begin{equation*}
+\beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
+\end{equation*}
+
+- Uten konkursrisiko ( $\beta_G=0$ )
+
+\begin{equation*}
+\beta_{E}=\beta_{I}(1+\frac{G}{E})
+\end{equation*}
+
+```{r, eval=F, echo=F}
+bi=we*be+wg*bg
+bi=(E*be+G*bg)/(E+G)
+(E+G)*bi=E*be+G*bg
 ```
 
-### Forventet avkastning og total risiko
 
-.pull-left[
+---
 
-```{r, eval=T, echo=F}
-#mu <- mean(til_u$opa)
-#mm <- mean(til_m$opa)
-#su <- round(sd.p(c(til_u$opa)),digits=0)
-#sm <- round(sd.p(c(til_m$opa)),digits=0)
-#vu <- round(su/mu,digits=1)
-#vm <- round(sm/mm,digi=1)
-#uu <- max(til_u$opa)-min(til_u$opa)
-#um <- max(til_m$opa)-min(til_m$opa)
+**Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko $\beta_I=0.8$. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
+
+
+```{r, echo=F}
+radnr_p <- c("G/E","Investeringsbeta","Gjeldsbeta","Aksjebeta")
+rm <- 0.10
+M <- 1000
+utaksjer <- 10
+goe_v <- c(0,0.2,0.5,1.0,1.5,2.0,3.0)
+inb_v <- seq(0.8)
+gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
+til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
+	dplyr::mutate(gjb=gjb_v) %>%
+	dplyr::mutate(akb=invb+(invb-gjb)*gjb)
+a <- data.frame(t(til_b))
+htmlTable(t(til_b),rnames=radnr_p)
 ```
+```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-47.png"))
+```
+---
 
-<!-- **Ingen gjeld** -->
-
-<!-- - Forventet avkastning: `r mu` -->
-<!-- - Standardavvik: `r su`  -->
-<!-- - Variasjonskoeffisienten: `r vu` -->
-<!-- - Utfallsspekteret: `r uu` -->
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-
-<!-- **Med gjeldsandel på 50%** -->
-
-<!-- - Forventet avkastning: `r mm` -->
-<!-- - Standardavvik: `r sm`  -->
-<!-- - Variasjonskoeffisienten: `r vm` -->
-<!-- - Utfallsspekteret: `r um` -->
-
-<!-- ] -->
-
-<!-- **Fem effekter av økt gjeldsgrad:** -->
-
-<!-- 1. OPA øker -->
-<!-- 1. OPA blir mer usikkert (høyere total risiko) -->
-<!-- 1. OPA blir høyere i gode tider, men lavere i dårlige tider -->
-<!-- 1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko* -->
-<!-- 1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko* -->
-
-<!-- --- -->
-
-<!-- ## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt -->
-
-<!-- Benytter $\beta_{I}$ for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert). -->
-
-<!-- Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller driftsbeta*. -->
-
-<!-- --- -->
-
-<!-- ### Formelt (uten skatt, men med konkursrisiko) ### -->
-
-<!-- - Systematisk investeringsrisiko -->
-<!-- \begin{equation*} -->
-<!-- \beta_{I}=w_E\beta_{E}+w_G\beta_{G} -->
-<!-- \end{equation*} -->
-
-<!-- - Løst for egenkapitalbeta  -->
-
-<!-- \begin{equation*} -->
-<!-- \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E}) -->
-<!-- \end{equation*} -->
-
-<!-- - Uten konkursrisiko ( $\beta_G=0$ ) -->
-
-<!-- \begin{equation*} -->
-<!-- \beta_{E}=\beta_{I}(1+\frac{G}{E}) -->
-<!-- \end{equation*} -->
-
-<!-- ```{r, eval=F, echo=F} -->
-<!-- bi=we*be+wg*bg -->
-<!-- bi=(E*be+G*bg)/(E+G) -->
-<!-- (E+G)*bi=E*be+G*bg -->
-<!-- ``` -->
-
-
-<!-- --- -->
-
-<!-- **Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko $\beta_I=0.8$. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E. -->
-
-
-<!-- ```{r, echo=F} -->
-<!-- radnr_p <- c("G/E","Investeringsbeta","Gjeldsbeta","Aksjebeta") -->
-<!-- rm <- 0.10 -->
-<!-- M <- 1000 -->
-<!-- utaksjer <- 10 -->
-<!-- goe_v <- c(0,0.2,0.5,1.0,1.5,2.0,3.0) -->
-<!-- inb_v <- seq(0.8) -->
-<!-- gjb_v <- c(0,0,0,0,0.05,0.10,0.2) -->
-<!-- til_b <- data.frame(goe=goe_v, invb=inb_v) %>% -->
-<!-- 	dplyr::mutate(gjb=gjb_v) %>% -->
-<!-- 	dplyr::mutate(akb=invb+(invb-gjb)*gjb)  -->
-<!-- a <- data.frame(t(til_b)) -->
-<!-- htmlTable(t(til_b),rnames=radnr_p) -->
-<!-- ``` -->
-<!-- ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""} -->
-<!-- knitr::include_graphics(c("pensum/figurer-47.png")) -->
-<!-- ``` -->
-<!-- --- -->
-
-<!-- class: inverse, center, middle -->
+class: inverse, center, middle
 
