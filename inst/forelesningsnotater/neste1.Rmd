@@ -52,15 +52,38 @@ class: inverse, center, middle
 1. Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 1. Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
+`r paste("Oppdatert:",Sys.Date())`
+
 ---
 
-## Intro
-## Kontantrøm, skatt og veri
-## Kapitalverdimodellen og beskatning
-## Andre imperfeksjoner
+# Intro
 
-1. Assymetrisk informasjon
-1. Vekst
+---
+
+# Skatt, kontantstrøm og verdi
+
+---
+
+# Kapitalverdimodellen med beskatning
+
+---
+
+# Andre imperfeksjoner
+
+## Abc
+
+---
+
+## Def
+
+---
+
+## Ghi
+
+---
+
+## Jkl
+---
 
 
 

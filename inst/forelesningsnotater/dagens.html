@@ -4,10 +4,10 @@
     <title>Finansteori (SFB30820)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jørn I.Halvorsen" />
-    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e40c8d0cdf3e42679f5304ca594acf26","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4c73c4da18c4437aa5fc34c2103c1fe","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-04)
+### 2021/08/12 (updated: 2021-10-11)
 
 ---
 
@@ -52,8 +52,6 @@ class: center, middle, inverse, title-slide
 
 
 
-
-class: inverse, center, middle
 
 ---
 
@@ -70,7 +68,7 @@ class: inverse, center, middle
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
 
-Oppdatert: 2021-10-04
+Oppdatert: 2021-10-11
 
 ---
 
@@ -81,18 +79,24 @@ I kapittel 6 så vi at økt gjeldsgrad førte til
 1. Økt risiko (både for total risiko og systematisk risiko) 
 
 Spørsmålet vi stiller nå:
-- Er den positive effekten av 1. større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre av de negative effekten av 2.?
+- Er den positive effekten av *økt forventet avkastning* (1.) større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre en den negative effekten av *økt risiko* (2.)?
 
 ---
 
 ## Oppsplitting av en kontantstrøm
 
 .pull-left[
+
+**Selskap uten gjeld**
+
 - Til kreditorene: `\(R=0\)`
 - Til aksjonærene: `\(OER_U=OFR\)`
 - Totalt: `\(R+OER_U=OFR\)`
 ]
 .pull-right[
+
+**Selskap med gjeld**
+
 - Til kreditorene: `\(R=r\cdot PG\)`
 - Til aksjonærene: `\(OER_M=OFR-r\cdot PG\)`
 - Totalt: `\(R+OER_M=\\ r\cdot PG-OFR-r\cdot PG= OFR\)`
@@ -151,34 +155,34 @@ Spørsmålet vi stiller nå:
 
 Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
 
-**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm, ulik finansfor og verdifastsettelse
+**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm, ulik finansieringsform og verdifastsettelse
 
 .pull-left[
-Selskap U (100 prosentet egenkapitalfinansiert)
+**Selskap U (fullstendig egenkapitalfinansiert)**
+
 - Verdien av selskapet 1000. Hvor `\(V_U=E_U=1000\)` og `\(G_U=0\)`
 - Gir dividiende `\(=OFR\)`
-- Salg 10 prosent av aksjer: 1000*0.1=100,-
+- Salg 10 prosent av aksjer: `\(1000\cdot 0.1=100,-\)`
 ]
 .pull-right[
-Selskap M 
-- Verdien av selskapet 900. Hvor `\(V_M=900\)`, `\(E_M=500\)` og `\(G_M=450\)` med en pålydende gjeld på 6 prosent
+** Selskap M (med gjeldsfinansiering)**
+
+- Verdien av selskapet 900. Hvor `\(V_M=900\)`, `\(E_M=400\)` og `\(G_M=500\)` med en pålydende gjeld på 6 prosent
 - Gir dividiende `\(=OFR-0.06\cdot 500=OFR-30\)`
 - Kjøper for 90,-
 - Investering: Aksjer `\(0.1\cdot 500\)` og Obligasjoner `\(0.1\cdot 400\)` som totalt er lik 90
 - Utbetaling: `\(0.1\cdot OFR\)`
 ]
 
-Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
-
-
 ---
+
+Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
 
 **Generell strategi:**
 1. Selg dine *aksjer* i det overprisede selskapet
 1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
-  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
-  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
-]
+	- Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+	- Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
 
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
 
@@ -186,9 +190,9 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 
 ## Miller &amp; Modigliani (M&amp;M)
 
-Som vist vil arbitrasje føre til lik verdifastsette, men hva blir verdien som blir fastsatt i markedet?
+Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir fastsatt i markedet?
 
-Forutsetninger til grunn for verdsetting av selskaper
+Forutsetninger for verdsetting av selskaper i Miller &amp; Modigliani: 
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
@@ -199,7 +203,7 @@ Forutsetninger til grunn for verdsetting av selskaper
 
 .pull-left[
 **Investeringssiden:**
-- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
+- Selskap U og M sin OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
@@ -244,11 +248,11 @@ k_E = k_T + (k_T-k_G)\frac{G}{E}
 - M&amp;M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
 	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed økning i eiernes avkastningskrav
 	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
-	1. Dette resultatet ofte som *seperasjonsprinsippet*
+	1. Dette resultatet blir ofte omtalt som *seperasjonsprinsippet*
 
 ---
 
-**Eksempel 7.5:** TV fabrikken Tittco budsert `\(OFR=2\)` mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250 tusen i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har en investeringsrisiko `\(\beta_I=0.04\)`
+**Eksempel 7.5:** TV fabrikken Tittco budsert `\(OFR=2\)` mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250.000,- i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har en investeringsrisiko `\(\beta_I=0.04\)`
 
 - Ifølge M&amp;M-I vil verdien til Tittco være gitt ved
 `\begin{equation}
@@ -267,18 +271,21 @@ k_T + (k_T-k_G)\frac{G}{E}
 
 ### Sammenhengen mellom KVM og M&amp;M
 
-Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta. Eksemplet nedenfor viser at KVM,  under de nå mindre restriktive forutsetningen, impliserer både M&amp;M-1 og M&amp;M-2.
+Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta.
 
 **Eksempel 7.5**: For Demo ASA er `\(\beta_G=0.02\)` og `\(\beta_E=1.4\)`. Selskapet er finansiert med like mye gjeld som egenkapital, `\(w_G=w_E=0.05\)`.
 Den risikofrie renten i markedet `\(r_f=0.03\)` mens markedsporteføljen forventede avkastning `\(E(rp)=1.4\)`.
+
+---
+
 .pull-left[
 **Alternativ 1: KVM**
 `\begin{equation*}
 k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
 \end{equation*}`
 
-**Konklusjon:M&amp;Ms konklusjonder holder også under mer robuste og velkjente forutsetninger.**
 ]
+
 
 .pull-right[
 **Alternativ 2: M&amp;M**
@@ -298,10 +305,9 @@ k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10
 \end{equation*}`
 ]
 
+**Konklusjon:M&amp;Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
-```r
-knitr::knit_exit()
-```
+
 
 
 
