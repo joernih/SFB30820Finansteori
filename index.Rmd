@@ -21,6 +21,9 @@ devtools::install()
 ```
 
 ```{r, eval=F, echo=F}
+rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/neste1.Rmd', 'xaringan::moon_reader')
 rmarkdown::render("index.Rmd")
 pkgdown::build_site()
 #
@@ -42,7 +45,7 @@ Dette emnet bygger videre på temaer vi allerede har begynt å sett på i emnet 
 
 Forventninger:
 
-Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i canvas meldingsfunksjon til emneansvarlig. 
+Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til emneansvarlig. 
 
 Viktige datoer: 
 

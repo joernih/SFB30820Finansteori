@@ -5,7 +5,7 @@ output: github_document
 
 
 ```{r, echo=F}
-source('rscript/timeplan.R')
+source('../inst/forelesningsnotater/timeplan.R')
 oppgaveplan
 ```
 
