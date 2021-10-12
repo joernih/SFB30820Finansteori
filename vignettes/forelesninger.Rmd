@@ -7,34 +7,12 @@ output: github_document
 source('../inst/forelesningsnotater/timeplan.R')
 ```
 
-<<<<<<< HEAD
-# [Forelesning 1: `r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 2: `r tema[2]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 3: `r tema[3]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 4: `r tema[4]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 5: `r tema[5]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 6: `r tema[6]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 7: `r tema[7]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-# [Forelesning 8: `r tema[9]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)_%231_introduksjon_og_overblikk.pdf)
-
-# [Forelesning 1: 'r tema[1]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)1_introduksjon_og_overblikk.pdf)
-# [Forelesning 2: 'r tema[2]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)2_relevant_risiko_2_obj.pdf)
-# [Forelesning 3: 'r tema[3]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)3_relevant_risiko_3_N_obj.pdf)
-# [Forelesning 4: 'r tema[4]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)4_Effisiens.pdf)
-# [Forelesning 5: 'r tema[5]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)5_Kapitalverdimodellen.pdf)
-# [Forelesning 6: 'r tema[6]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)6_Langsiktige_finansieringsformer.pdf)
-# [Forelesning 7: 'r tema[7]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)7_Gjeldsgrad_og_risiko.pdf)
-# [Forelesning 8: 'r tema[8]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
-# [Forelesning 9: 'r tema[9]'](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/Finansteori%20(SFB30820)9_abc.pdf)
-
-
-=======
-# [Forelesning 1: `r tema[1]`](Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf)
-# [Forelesning 2: `r tema[2]`](Finansteori (SFB30820)_#2_relevant_risiko_2_obj.pdf)
-# [Forelesning 3: `r tema[3]`](Finansteori (SFB30820)_#3_relevant_risiko_3_N_obj.pdf)
-# [Forelesning 4: `r tema[4]`](Finansteori (SFB30820)_#4_Effisiens.pdf)
-# [Forelesning 5: `r tema[5]`](Finansteori (SFB30820)_#5_Kapitalverdimodellen.pdf)
-# [Forelesning 6: `r tema[6]`](Finansteori (SFB30820)_#6_Langsiktige_finansieringsformer.pdf)
-# [Forelesning 7: `r tema[7]`](Finansteori (SFB30820)_#7_Gjeldsgrad_og_risiko.pdf)
-# [Forelesning 9: `r tema[9]`](Finansteori (SFB30820)_#8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
->>>>>>> ff4f3ade4b80c33a528b337e8e479878a90ebfaa
+## [`r tema[1]`](kvasir.no)
+## [`r tema[2]`](kvasir.no)
+## [`r tema[3]`](kvasir.no)
+## [`r tema[4]`](kvasir.no)
+## [`r tema[5]`](kvasir.no)
+## [`r tema[6]`](kvasir.no)
+## [`r tema[7]`](kvasir.no)
+## [`r tema[8]`](kvasir.no)
+## [`r tema[9]`](kvasir.no)
