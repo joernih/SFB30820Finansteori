@@ -2506,6 +2506,8 @@ k_E = k_T + (k_T-k_G)\frac{G}{E}
 V = \frac{E(OFR)}{k_U} = \frac{2}{0.04}=50
 \end{equation}
 
+---
+
 - Ifølge M&M-II
 \begin{equation}
 k_E = k_T + (k_T-k_G)\frac{G}{E}\\
@@ -2514,7 +2516,7 @@ k_U + (k_U-k_G)\frac{G}{E}
 
 Som gir oss denne figuren (gitt at vi ser bort fra konkursrisiko)
 
-```{r, echo=FALSE, out.width="30%", fig.cap=""}
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-52.png"))
 ```
 
