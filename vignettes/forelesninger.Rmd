@@ -8,7 +8,7 @@ source('../inst/forelesningsnotater/timeplan.R')
 ```
 
 ## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf)
-## [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[2r`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
@@ -17,6 +17,7 @@ source('../inst/forelesningsnotater/timeplan.R')
 ## [`r tema[8]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 
+# abc
 /Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf
 /Finansteori (SFB30820)_#2_relevant_risiko_2_obj.pdf
 /Finansteori (SFB30820)_#3_relevant_risiko_3_N_obj.pdf
