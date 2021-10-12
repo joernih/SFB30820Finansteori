@@ -18,6 +18,8 @@ navbar:
       href: "articles/anbefalte_oppgaver.html"
     - text: "Presentasjoner (alle)"
       href: "articles/presentations.html" 
+    - text: "News"
+      href: "news/index.html" 
   right:
     - icon: fa-github fa-lg
       text: "github"

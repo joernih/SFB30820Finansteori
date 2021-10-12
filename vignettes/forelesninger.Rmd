@@ -8,7 +8,6 @@ source('../inst/forelesningsnotater/timeplan.R')
 ```
 
 ## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf)
-## [`r tema[2r`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
 ## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
