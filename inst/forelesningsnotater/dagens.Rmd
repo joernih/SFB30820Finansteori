@@ -48,12 +48,12 @@ source("timeplan.R")
 
 class: inverse, center, middle
 
-# Forelesning 8: `r tema[8]`
+# Forelesning 8: `r tema[9]`
 
 **Læringsmål:**
 
 - Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (mer om dette i kapittel 7)
 - Forklare hva en arbitrasjemulighet er.
 - Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
@@ -128,9 +128,10 @@ Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette 
 
 - Verdien av selskapet 900. Hvor $V_M=900$, $E_M=400$ og $G_M=500$ med en pålydende gjeld på 6 prosent
 - Gir dividiende $=OFR-0.06\cdot 500=OFR-30$
-- Arbitrasjestrage (kjøp undervurdert for samme risikoprofil):
-	- Investering: Aksjer $0.1\cdot 500$ og Obligasjoner $0.1\cdot 400$ som totalt koster 90
+- Arbitrasjestrategi (kjøp undervurdert for samme risikoprofil):
+	- Investering: Aksjer $0.1\cdot 400$ og Obligasjoner $0.1\cdot 500$ som totalt koster 90
 	- Mottar: $0.1\cdot OFR$
+	- Som gir arbitrasjegevinst 10,-
 ]
 
 ---
@@ -139,8 +140,8 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 
 **Generell strategi:**
 1. Selg dine *aksjer* i det overprisede selskapet
-1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
-	- Gitt uten  gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
+1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at *risikoprofilen* er den samme
+	- Gitt uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
 	- Gitt med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
 
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
@@ -161,8 +162,8 @@ Forutsetninger for verdsetting av selskaper i Miller & Modigliani:
 - Ingen betaler skatt
 
 .pull-left[
-**Investeringssiden:**
-- Selskap U og M sin OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
+**Investeringssiden:(vi skal snart se at vi har mulighet til å lette på disse strenge forutsetningene)**
+- Selskap U og M sin OFR er perfekt korrelerte 
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
@@ -260,7 +261,7 @@ Vi har fra kapittel 6 (uten skatt)
 \end{equation*}
 Hvor vi ved bruk av KVM kan finne både $k_U$ og $k_G$
 \begin{equation*}
-k_U=0.05 + 0.80(0.08-0.03)=0.074
+k_U=0.03 + 0.80(0.08-0.03)=0.074
 \end{equation*}
 \begin{equation*}
 k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ = 0.03 + 0.2(0.08-0.03)=0.04
