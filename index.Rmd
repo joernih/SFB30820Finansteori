@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 devtools::document()
 devtools::install()
 ## Set user name and email.
-config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
+git2r::config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
 ```
 
 ```{r, eval=F, echo=F}
