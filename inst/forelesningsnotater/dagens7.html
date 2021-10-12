@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e5a4a276dd7d4c95ba3a6044ff2613da","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"bc82ba500c264d5dbeae9b3e77efdefc","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,11 +42,9 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-11)
+### 2021/08/12 (updated: 2021-10-12)
 
 ---
-
-
 
 
 
@@ -65,7 +63,7 @@ class: inverse, center, middle
 1. Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
 1. Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
 
-Oppdatert: 2021-10-11
+Oppdatert: 2021-10-12
 
 
 
@@ -361,258 +359,8 @@ E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
 &lt;img src="pensum/figurer-47.png" width="60%" /&gt;
----
-
-class: inverse, center, middle
-
-# Forelesning 8: 
-
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad.
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&amp;M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&amp;M ikke er i samme risikoklasse.
-
-Oppdatert: 2021-10-11
-
----
-
-# Gjeldsgrad og verdi i perfekte kapitalmarkeder
-
-I kapittel 6 så vi at økt gjeldsgrad førte til
-1. Økt forventet avkastning
-1. Økt risiko (både for total risiko og systematisk risiko) 
-
-Spørsmålet vi stiller nå:
-- Er den positive effekten av 1. større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre av de negative effekten av 2.?
-
----
-
-## Oppsplitting av en kontantstrøm
-
-.pull-left[
-- Til kreditorene: `\(R=0\)`
-- Til aksjonærene: `\(OER_U=OFR\)`
-- Totalt: `\(R+OER_U=OFR\)`
-]
-.pull-right[
-- Til kreditorene: `\(R=r\cdot PG\)`
-- Til aksjonærene: `\(OER_M=OFR-r\cdot PG\)`
-- Totalt: `\(R+OER_M=\\ r\cdot PG-OFR-r\cdot PG= OFR\)`
-]
-
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;tbody&gt;
-&lt;tr style='border-top: 2px solid grey;'&gt;
-&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;Pålydende gjeld&lt;/td&gt;
-&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;400&lt;/td&gt;
-&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;600&lt;/td&gt;
-&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;700&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;Gjeldsrente&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.04&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.06&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;Til kreditorene&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;20&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;56&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;Til eierne&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;96&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;92&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;64&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Totalt&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;100&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere, men ikke den totale kontantstrømmen**
-
----
-
-## Arbitrasje
-
-Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
-
-**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm, ulik finansfor og verdifastsettelse
-
-.pull-left[
-Selskap U (100 prosentet egenkapitalfinansiert)
-- Verdien av selskapet 1000. Hvor `\(V_U=E_U=1000\)` og `\(G_U=0\)`
-- Gir dividiende `\(=OFR\)`
-- Salg 10 prosent av aksjer: 1000*0.1=100,-
-]
-.pull-right[
-Selskap M 
-- Verdien av selskapet 900. Hvor `\(V_M=900\)`, `\(E_M=500\)` og `\(G_M=450\)` med en pålydende gjeld på 6 prosent
-- Gir dividiende `\(=OFR-0.06\cdot 500=OFR-30\)`
-- Kjøper for 90,-
-- Investering: Aksjer `\(0.1\cdot 500\)` og Obligasjoner `\(0.1\cdot 400\)` som totalt er lik 90
-- Utbetaling: `\(0.1\cdot OFR\)`
-]
-
-Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
-
-
----
-
-**Generell strategi:**
-1. Selg dine *aksjer* i det overprisede selskapet
-1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
-  a. Uten gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
-  b. Med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
-]
-
-**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
-
----
-
-## Miller &amp; Modigliani (M&amp;M)
-
-Som vist vil arbitrasje føre til lik verdifastsette, men hva blir verdien som blir fastsatt i markedet?
-
-Forutsetninger til grunn for verdsetting av selskaper
-
-**Markedet:**
-- Alle investorer har full informasjon om markedsmulighetene
-- For samme risiko, alle kan låne til samme rente
-- Ingen transaksjonskostnader
-- Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
-- Ingen betaler skatt
-
-.pull-left[
-**Investeringssiden:**
-- Selskapenes M og U OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
-- OFR er evigvarende
-- Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
-]
-
-.pull-right[
-**Finansieringsiden:**
-- Fast evigvarende gjeld
-- OER går kun til utbytte
-]
-
----
-
-Basert på disse forutsetningene kan vi sette opp tre uttrykk som viser forventet avkastning for gjeld ( `\(k_G\)` ), egenkapital ( `\(k_E\)` ) og totalkapital ( `\(k_T\)` ):
-
-`\begin{equation}
-k_G = \frac{r\cdot PG}{G}
-\end{equation}`
-
-`\begin{equation}
-k_E = \frac{E(OER)}{E}
-\end{equation}`
-
-`\begin{equation}
-k_T = \frac{E(OFR)}{V}
-\end{equation}`
-
-- **M&amp;M-1**
-`\begin{equation}
-V = \frac{E(OFR)}{k_t}=\frac{E(OFR)}{k_u}
-\end{equation}`
-
-- **M&amp;M-2**
-
-`\begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E} 
-=k_U + (k_U-k_G)\frac{G}{E}
-\end{equation}`
-
----
-
-*Seperasjonsprinsippet*
-- M&amp;M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
-	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed økning i eiernes avkastningskrav
-	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
-	1. Dette resultatet ofte som *seperasjonsprinsippet*
-
----
-
-**Eksempel 7.5:** TV fabrikken Tittco budsert `\(OFR=2\)` mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250 tusen i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har en investeringsrisiko `\(\beta_I=0.04\)`
-
-- Ifølge M&amp;M-I vil verdien til Tittco være gitt ved
-`\begin{equation}
-V = \frac{E(OFR)}{k_u} = \frac{2}{0.04}=50
-\end{equation}`
-
-- Ifølge M&amp;M-II
-`\begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E}\\
-k_T + (k_T-k_G)\frac{G}{E}
-\end{equation}`
-
-&lt;img src="pensum/figurer-52.png" width="40%" /&gt;
-
----
-
-### Sammenhengen mellom KVM og M&amp;M
-
-Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta. Eksemplet nedenfor viser at KVM,  under de nå mindre restriktive forutsetningen, impliserer både M&amp;M-1 og M&amp;M-2.
-
-**Eksempel 7.5**: For Demo ASA er `\(\beta_G=0.02\)` og `\(\beta_E=1.4\)`. Selskapet er finansiert med like mye gjeld som egenkapital, `\(w_G=w_E=0.05\)`.
-Den risikofrie renten i markedet `\(r_f=0.03\)` mens markedsporteføljen forventede avkastning `\(E(rp)=1.4\)`.
-.pull-left[
-**Alternativ 1: KVM**
-`\begin{equation*}
-k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
-\end{equation*}`
-
-**Konklusjon:M&amp;Ms konklusjonder holder også under mer robuste og velkjente forutsetninger.**
-]
-
-.pull-right[
-**Alternativ 2: M&amp;M**
-
-Vi har fra kapittel 6 (uten skatt)
-`\begin{equation*}
-\beta_{I}=w_E\beta_{E}+w_G\beta_{G}\\
-=0.5\cdot 1.4+0.5\cdot 0.20 = 0.80
-\end{equation*}`
-som fra KVM gir (sjekk ut!) `\(k_U=0.07\)`. Vider har vi 
-`\begin{equation*}
-k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ =0.03 + 0.2[0.08-0.03]=0.04
-\end{equation*}`
-Vi kan derfor benytte M&amp;M-2:
-`\begin{equation*}
-k_E = 0.07+0.2\cdot (0.08-0.03) = 0.10 
-\end{equation*}`
-]
-
-
-```r
-knitr::knit_exit()
-```
-
-
-
-
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
