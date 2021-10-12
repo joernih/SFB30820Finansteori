@@ -7,12 +7,14 @@ output: github_document
 source('../inst/forelesningsnotater/timeplan.R')
 ```
 
-## [`r tema[1]`](kvasir.no)
-## [`r tema[2]`](kvasir.no)
-## [`r tema[3]`](kvasir.no)
-## [`r tema[4]`](kvasir.no)
-## [`r tema[5]`](kvasir.no)
-## [`r tema[6]`](kvasir.no)
-## [`r tema[7]`](kvasir.no)
-## [`r tema[8]`](kvasir.no)
-## [`r tema[9]`](kvasir.no)
+## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[6]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[8]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+
+https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater
