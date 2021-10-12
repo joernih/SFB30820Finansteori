@@ -1,0 +1,125 @@
+---
+title: "Læringsmål"
+output:
+  html_notebook:
+    toc: no
+abstract: ''
+---
+
+# Emnebeskrivelse
+[emnebeskrivesle](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+[Fagbokforlaget](https://eportal.fagbokforlaget.no/Pages/programs.aspx)
+[Ressurs](https://finans2.portfolio.no/read_container/b7293def-6aa3-4f4b-81c7-f62972d97d5a)|
+# Læringsmål kapittel 1
+
+1. Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
+1. Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
+1. konstruere en kontantstrøm fra prosjektdata.
+1. forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
+1. beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
+1. gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+# Læringsmål kapittel 2
+1. tallfeste risiko i en portefølje ved å beregne standardavvik.
+1. forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+1. forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+1. beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
+1. beregne betaverdien til et prosjekt og forklare hva den fanger opp.
+1. gi eksempler på kilder for systematisk og usystematisk risiko.
+
+# Læringsmål kapittel 3
+1. forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
+1. skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+1. bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
+1. forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
+1. beskrive kapitalverdimodellens sterke og svake sider.
+1. forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+# Læringsmål kapittel 4
+1. forklare forskjellen mellom bokverdi og markedsverdi for bedrifter og prosjekter.
+1. redegjøre for begrepene investeringsrisiko og finansieringsrisiko.
+1. forklare hvordan finansieringsformen kan påvirke verdien av et investeringsprosjekt.
+1. beskrive tre imperfeksjoner som kan påvirke bedriftens dividendepolitikk.
+1. definere begrepet opsjon.
+1. nevne tre finansielle instrumenter som brukes i risikostyring.
+
+# Læringsmål kapittel 5
+1. redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
+1. beregne markedsverdi og effektiv rente for en obligasjon.
+1. finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
+1. lage en balanseoppstilling basert på bokverdier og markedsverdier.
+1. redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
+1. forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
+
+# Læringsmål kapittel 6
+1. definere begrepene gjeldsgrad og gjeldsandel.
+1. forklare hva som bestemmer selskapets investeringsrisiko.
+1. redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
+1. forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
+1. skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
+1. tegne sammenhengen mellom gjeldsgrad og aksjekurs i en situasjon der selskapsverdien er uavhengig av gjeldsgraden.
+
+# Læringsmål kapittel 7
+1. beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
+1. vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (se kapittel 6).
+1. forklare hva en arbitrasjemulighet er.
+1. konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
+1. gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
+1. forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+# Læringsmål kapittel 8
+1. forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+1. definere et nøytralt skattesystem ved toleddsskatt.
+1. redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+1. forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+1. redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+
+# Læringsmål kapittel 9
+1. redegjøre for begrepet gjeldskapasitet og i hvilke situasjoner dette begrepet er relevant i en prosjektanalyse.
+1. forklare begrepet målsatt gjeldsgrad og hvordan det brukes i verdsettelsen av enkeltprosjekter.
+1. skrive opp uttrykket for justert nåverdi og forklare hva hver komponent uttrykker.
+1. beregne verdien av et gjeldfritt selskap basert på data fra et selskap med gjeld.
+1. forklare hvorfor det trengs en gjeldsgradsteori for å beregne kapitalkostnad for et selskap uten gjeld ved hjelp av data fra selskaper som har gjeld.
+1. beregne verdien av et selskap med egenkapitalmetoden og totalkapitalmetoden og forklare i hvilke situasjoner de gir samme resultat.
+
+# Læringsmål 10
+1. estimere kapitalkostnaden for egenkapital og for gjeld.
+1. fastsette risikofri rente og markedets risikopremie.
+1. estimere beta for et selskap med utgangspunkt i beta for sammenlignbare selskaper.
+1. beregne totalkapitalkostnaden for et selskap.
+1. beregne fri kontantstrøm fra historiske regnskapstall.
+1. predikere fremtidig fri kontantstrøm for et selskap.
+1. verdsette et selskap basert på fri kontantstrøm.
+1. verdsette et selskap med multiplikatorer.
+
+# Læringsmål kapittel 11
+1. forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+1. forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+1. redegjøre for teori og empiri om dividendens signalfunksjon.
+1. forklare hvorfor dividende kan påvirke agentkostnader.
+1. forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+# Læringsmål kapittel 12
+1. redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+1. konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+1. redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+1. beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+1. beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
+1. redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+
+# Læringsmål kapittel 13
+1. begrunne hvorfor risikostyring kan være viktig.
+1. redegjøre for viktige risikokilder.
+1. redegjøre for forwardkontrakter, samt beregne FRA-betaling.
+1. vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
+1. vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
+1. vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+
+# Læringsmål kapittel 14
+1. forklare hvorfor det er et positivt forhold mellom kapitalkostnad og systematisk risiko, men ikke nødvendigvis mellom kapitalkostnad og total risiko.
+1. begrunne hvorfor eierne av en familiebedrift bør være skeptiske til et avkastningskrav fra kapitalverdimodellen.
+1. forklare hvorfor en investor kan være villig til å betale mer for et selskap desto mer diversifisert investoren er.
+1. redegjøre for hvorfor risikoaversjon ikke impliserer at risikominimering er beste strategi.
+1. forklare hvorfor informasjonseffisiens beskytter uinformerte investorer.
+1. begrunne at verdipotensialet er større i investeringsprosjekter enn i finansieringsprosjekter.
+

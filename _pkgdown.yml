@@ -1,0 +1,26 @@
+url: https://pkgdown.r-lib.org
+title: Finansteori (SFB30820)
+template:
+  params:
+    bootswatch: flatly
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home 
+      href: "index.html"
+    - text: "Forelesningsnotater"
+      href: "articles/forelesninger.html"
+    - text: "Timeplan"
+      href: "articles/timeplan.html"
+    - text: "Arbeidskrav"
+      href: "articles/arbeidskrav2021_F.html"
+    - text: "Anbefalte oppgaver"
+      href: "articles/anbefalte_oppgaver.html"
+    - text: "Presentasjoner (alle)"
+      href: "articles/presentations.html" 
+    - text: "News"
+      href: "news/index.html" 
+  right:
+    - icon: fa-github fa-lg
+      text: "github"
+      href: https://github.com/joernih/SFB30820Finansteori

@@ -1,0 +1,29 @@
+---
+title: ""
+output: github_document
+---
+
+```{r, eval=T, echo=F}
+source('../inst/forelesningsnotater/timeplan.R')
+```
+
+## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf)
+## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[6]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[8]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater)
+
+# abc
+/Finansteori (SFB30820)_#1_introduksjon_og_overblikk.pdf
+/Finansteori (SFB30820)_#2_relevant_risiko_2_obj.pdf
+/Finansteori (SFB30820)_#3_relevant_risiko_3_N_obj.pdf
+/Finansteori (SFB30820)_#4_Effisiens.pdf
+/Finansteori (SFB30820)_#5_Kapitalverdimodellen.pdf
+/Finansteori (SFB30820)_#6_Langsiktige_finansieringsformer.pdf
+/Finansteori (SFB30820)_#7_Gjeldsgrad_og_risiko.pdf
+/Finansteori (SFB30820)_#8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf
+/Finansteori (SFB30820)_#9_abc.pdf
+/Finansteori (SFB30820)_praktisk_info.pdf

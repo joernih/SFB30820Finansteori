@@ -1,0 +1,18 @@
+Package: SFB30820Finansteori
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.1
+Author: Jorn I. Halvorsen
+Maintainer: Jørn I. Halvorsen <jornih@hvl.no>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://github.com/joernih/SFB30820Finansteori
+BugReports: https://github.com/joernih/SFB30820Finansteori/issues
+RoxygenNote: 7.1.2

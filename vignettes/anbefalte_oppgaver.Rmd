@@ -1,0 +1,14 @@
+---
+title: ""
+output: github_document
+---
+
+
+```{r, echo=F}
+library(htmlTable)
+source('../inst/forelesningsnotater/timeplan.R')
+oppgaveplan
+```
+
+
+

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Finansteori (SFB30820)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jørn I.Halvorsen" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f6c5e0c61a754078a4f935516b8b5734","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Finansteori (SFB30820)
+## Forelesningsnotater
+### Jørn I.Halvorsen
+### 2021/08/12 (updated: 2021-10-11)
+
+---
+
+
+
+
+
+
+
+
+
+## Timeplan
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;33&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 1: Introduksjon&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Introduksjon og overblikk&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori to objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;35&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 2: Relevant risiko&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Relevant risiko: Porteføljeteori 3-n objekter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;36&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Effisiens&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;37&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 3: Relevant risiko og kapitalkostnad&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kapitalverdimodellen&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom/Campus&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;38&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 5: Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Langsiktige finansieringsformer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Zoom/Campus&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;39&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 6: Gjeldsgrad og risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjeldgrad og risiko&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Zoom/Campus&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Uke&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Literatur&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sentrale temaer&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Undervisningsform&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Timer&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Høstferie**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Gjeldgrad og verdi i perfekte kapitalmarkeder**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;**Campus Sone E E1-062/Zoom**&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;42&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 8: Gjeldsgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Gjeldgrad og verdi med imperfeksjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Campus Sone E E1-062/Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;43&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 11: Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Dividende&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Campus Sone E E1-062/Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 12: Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Opsjoner&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Campus Sone E E1-062/Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;45&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kap. 13: Risikostyring&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finansielle instrumenter til påvirking av kontantstrømmer&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Campus Sone E E1-062/Zoom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;14&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Kap. 1,2-4,5-8,11,12,13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgavegjennomgang&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Campus Sone G G1-064-Naturfag/Zoom&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+# Anbefalte oppgaver
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Forelesning&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Pensumbok&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nettside (ressurs)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1.1,1.2,1.4,1.5,1.7.1.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.1.1,N.1.2,N.1.3,N.1.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.1,2.2,2.3,2.6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.2.1,N.2.2,N.2.3,N.2.4,&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.7,2.8,2.9,2.10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.2.5,N.5.6,N.2.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3.1,3.2,3.3,3.5,3.6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.3.3_1,N.3.4,N.3.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3.3,3.4,3.7,3.8,3.9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.3.6,N.3.9,N.3.10,N.3.11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5.1,5.2,5.3,5.8,5.9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.5.1,N.5.2,N.5.3,N.5.5,N.5.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;6.1,6.6,6.7,6.8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.6.1,N.6.2,N.6.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;7.1,7.2,7.8,7.8,7.9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;N.7.1,N.7.2,N.7.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;11&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;13&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Pensumliste
+
+.pull-left[
+
+## Hovedbok
+
+
+&lt;img src="pensum/figurer-01.png" width="75%" /&gt;
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+]
+
+.pull-right[
+
+## Supplerende
+&lt;img src="pensum/falitt.jpg" width="25%" /&gt;
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+]
+
+
+
+---
+
+# Forelesning 7: Gjeldgrad og risiko
+
+**Læringsmål:**
+
+1. Definere begrepene gjeldsgrad og gjeldsandel.
+1. Forklare hva som bestemmer selskapets investeringsrisiko.
+1. Redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
+1. Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
+1. Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
+
+Oppdatert: 2021-10-11
+
+
+
+---
+
+# Gjeldsgrad og risiko
+
+- Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
+
+Formelt kan vi definere dette forholdet på to litt ulike måter:
+1. Gjeldsandel: (mellom 0 og 1) 
+`\begin{equation}
+G/(G+E)
+\end{equation}`
+1. Gjeldsgrad (mellom 0 og `\(\infty\)`) 
+`\begin{equation}
+G/E
+\end{equation}`
+
+I selve omtalen av bedriftens kapitalstruktur benyttes disse begrepene gjerne om hverandre, men i de formlene som vi nå skal se på vil det være nødvendig å gjøre et skille mellom de.
+
+---
+
+## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+
+Alternative navn på investeringsrisiko: *eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.*
+
+Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
+- Etterspørselsrisiko
+- Prisusikkerhet på produktprisene
+- Prisusikkerhet på råvarerisiko
+- Endret markedsmakt
+- Høyere faste utbetalinger
+
+I slutten av dette kurset skal vi se nærmer på noen finansielle instrumenter (eks. swapper, futures og opsjonner) kan benyttes til påvirke usikkerheten til disse kontantstrømmene.
+
+---
+
+**Eksempel 6.1:** Overskudd før renter (OFR) til Kapitalstruktur i fem alternative tilstander. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+.pull-left[
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+
+.pull-right[
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+**Eksempel 6.1:** Overskudd før renter (OFR) til Kapitalstruktur i fem alternative tilstander. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;25&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;15&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;5&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OFR&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;250&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Renter&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;OER&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;OPA&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;10&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+
+```
+## [1] 15
+```
+
+
+
+```r
+til_u
+```
+
+```
+##   ofr r oer opa
+## 1 250 0 250  25
+## 2 200 0 200  20
+## 3 150 0 150  15
+## 4 100 0 100  10
+## 5  50 0  50   5
+```
+
+
+```r
+mu
+```
+
+```
+## [1] 15
+```
+
+
+15
+
+&lt;img src="pensum/figurer-46.png" width="60%" /&gt;
+
+**Fem effekter av økt gjeldsgrad:**
+
+1. OPA øker
+1. OPA blir mer usikkert (høyere total risiko)
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
+
+---
+
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+
+Benytter `\(\beta_{I}\)` for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert).
+
+Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller driftsbeta*.
+
+---
+
+### Formelt (uten skatt, men med konkursrisiko) ###
+
+- Systematisk investeringsrisiko
+`\begin{equation*}
+\beta_{I}=w_E\beta_{E}+w_G\beta_{G}
+\end{equation*}`
+
+- Løst for egenkapitalbeta
+
+`\begin{equation*}
+\beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
+\end{equation*}`
+
+- Uten konkursrisiko ( `\(\beta_G=0\)` )
+
+`\begin{equation*}
+\beta_{E}=\beta_{I}(1+\frac{G}{E})
+\end{equation*}`
+
+
+
+
+---
+
+**Eksempel 6.4:** Kapitalstruktur er 100 prosent egenkapitalfinansiert og aksjens systematiske risiko `\(\beta_I=0.8\)`. Ledelsen tror at (1) en økning i gjeldsgraden (G/E) opp til 1 ikke medfører noen konkursrisiko, men (2) gjeldsbeta etter det stiger med 0.1 pr enhets økning i G/E.
+
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;tbody&gt;
+&lt;tr style='border-top: 2px solid grey;'&gt;
+&lt;td style='border-top: 2px solid grey; text-align: left;'&gt;G/E&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;1.5&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='border-top: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Investeringsbeta&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;Gjeldsbeta&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;Aksjebeta&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.0475&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.09&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;1.16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;img src="pensum/figurer-47.png" width="60%" /&gt;
+---
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

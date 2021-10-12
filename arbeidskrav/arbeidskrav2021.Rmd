@@ -1,0 +1,213 @@
+---
+output:
+  html_document:
+  #html_notebook:
+    css: PAA.css
+#rnotb2 8900 $PWD arbeidskrav_losningsforslag.Rmd
+---
+
+
+```{r eval=FALSE, include=FALSE}
+rmarkdown::render("arbeidskrav2021.Rmd")
+```
+
+# Mikroøkonomi (SFB10916), Våren 2021 
+## Obligatorisk arbeidskrav 
+- Leveres ut: 28.09.2021
+- Leveres inn: 26.10.2021
+  - HUSK: Skriv navn med kandidatnummer på innleveringen (fra 1-3 personer per besvarelse)
+  - Leveres inn i egen mappe på Canvas. 
+
+# Del I: 1-6
+## Oppgave 0: Generell forståelse
+(1). Forklare forskjellen mellom nåverdi og justert-nåverdi
+(2). Forskjellen mellom forventet og realisert verdi
+(3). Portefølje M
+(4). Risikokompensasjon litt empiri
+(5). Oljefondet og aktiv forvaltning
+(6). Hva menes med prosjektets eller aksjens beta
+(7). Målkonkonflikter mellom eiere/ledelse
+(8). Mekansimen bak Tofondsresultatet
+(9). Sammehengen mellom KVM og porteføljeteorein
+(10).Informasjonseffisiens skapes av (1) konkurransen investorene imellom og (2) profittmuligheter for den som oppdager og raskt utnytter effisiens
+- For at markedet skal være våre effisient må det *alltid* finnes investorer som tror at markedet ikke er effisient. Forsvinner den troen vil nemlig markedet bli ineffisient.
+(11) Hva menes med et finansielt instrument?
+(12) Hvordan teknisk selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)
+
+## Oppgave 1: Risikojustert nåverdi
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+<br>**Svar:**<br>
+\begin{equation}
+NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
+\end{equation}
+
+## Oppgave 2: Portefølje
+
+**Eksempel 2.1**
+```{r, echo=F}
+# Data input
+df_eks_2_1 <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.2,0.5,0.3),
+                         avk_a=c(0.16,0.12,0.06),
+                         avk_b=c(0.05,0.20,0.40)
+                         )
+ex_a <- c(df_eks_2_1$avk_a%*%df_eks_2_1$prob)
+ex_b <- c(df_eks_2_1$avk_b%*%df_eks_2_1$prob)
+vx_a <- c((df_eks_2_1$avk_a-ex_a)^2%*%df_eks_2_1$prob)
+vx_b <- c((df_eks_2_1$avk_b-ex_b)^2%*%df_eks_2_1$prob)
+htmlTable(df_eks_2_1, header=c("Tilstand","Sansynlighet","A","B"))
+```
+
+---
+
+Fra Metode 1 oppgitt under første forelesning har vi at 
+
+$$E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$$ 
+$$E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$$
+
+Fond **A**
+\begin{equation*}
+Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013 \\
+Std(r_a)=\sqrt{0.0013}=0.03605551
+\end{equation*}
+
+Fond **B**
+\begin{equation*}
+Var(r_b) =0.2[0.05-0.23]^2+0.5[0.20-0.23]^2+0.3[0.40-0.23]^2=0.0156 \\
+Std(r_b)=\sqrt{0.0156}=0.1249
+\end{equation*}
+
+```{r, echo=F, eval=F}
+0.2*(0.16-0.11)*(0.05-0.23)+
+0.5*(0.12-0.11)*(0.20-0.23)+
+0.3*(0.06-0.11)*(0.40-0.23)
+#
+(1/2)^2*(0.0013)+(1/2)^2*(0.0156)-2*(1/2)*(1/2)*0.0045
+cx_c <- c(((df_eks_2_1_w$avk_a-ex_a)*
+	   (df_eks_2_1_w$avk_b-ex_b))%*%df_eks_2_1_w$prob)
+#m <- as.matrix(df_eks_2_1_w[,c(3,4)])
+#v <- as.vector(df_eks_2_1_w[,c(2)])
+#cov.wt(m,v)$cov
+```
+
+```{r}
+#r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+#plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+#	w <- seq(0,1,0.01)
+#	v <- as.vector(df[,(2)])
+#	m <- as.matrix(df[,(3:4)])
+#	covall <- cov.wt(m,v,method='ml')
+#	avk <- as.vector(covall$center)
+#	kov <- covall$cov[lower.tri(covall$cov)] 
+#	var <- as.vector(diag(as.matrix(covall$cov)))
+#	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
+# 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+# 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+# 		dplyr::mutate(stdavk=sqrt(varians))
+#			 }
+#)
+```
+]
+.panel[.panel-name[figur]
+```{r, echo=F}
+#gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
+#plotly::ggplotly(gg)
+```
+]
+]
+## Oppgave 3: Porteføljeteori
+
+Fra eksempel 3.1-3.2 har vi følgende opplysninger
+
+```{r, echo=F}
+radnr <- c("Markedsporteføljen",
+	   "Portefølje I",
+	   "Portefølje I",
+	   "Risikofri rente")
+tils1 <- c(0.07,0.05,0.08,0.04)
+tils2 <- c(0.03,0.02,0.06,0.00)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+```
+
+- Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
+  -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
+  -  $Std(r_p)=\sqrt{0.00004}  =0.006$
+- Vi har at investor B (liten grad av risikoaversjon) ønsker at risikoen i porteføljen skal være på 8.5%
+  -  $0.085=w\cdot 0.04 +(1-w)0.2\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
+  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
+  -  $Std(r_p)=\sqrt{.02}  =0.045$
+
+---
+
+## Oppgave 4: KVM og justert nåverdi
+
+Fra **eksempel 3.4** i læreboka om Tomra (eksempel fra virkeligheten) er aksjens beta, basert på tre år med data, estimert slik at $\beta_E=0.83$, mens gjeldsbetaen er beregnet slik at $\beta_G=0.1$. Den nominelle risikofrie renten er på $3$ prosent, mens markedets risikopremie anslås til 5 prosent og Tomras skattesats er lik 5 prosent. 
+
+Totalt sett har Tomra 148 020 078 aksjer utestående (pålydende 1,- per aksje) med markedspris lik 85,50 den 02.02.2016. Det gir en markedsverdi på egenkapital lik $=148020078\cdot 85.50=$ 12 654 mill.
+
+Fra årsapporten har vi videre at:
+
+```{r, echo=F}
+radnr_i <- c("Innskutt egenkapital",
+	   "Opptjent egenkapital",
+	   "Minoritetsinteresser",
+	   "Gjeld",
+	   "Totalt")
+w1 <- c(1066,2879,160,3212,7317)
+df_aarsrapport <- data.frame(radnr_i,w1)
+htmlTable(df_aarsrapport, header=c("",""))
+```
+
+Tilknyttet Tomra-eksemplet som vi har sett på tidligere er det opplyst at selskapet vurderer oppkjøp av en bokseprodusent i Tyskland. 
+Dette oppkjøpet er i tråd selskapets strategi om operere langs store deler av verdikjede for gjenvinning av drikkeembalasje. Dette prosjektets totalkapitalkostnad er beregnet til å være 3.4 prosent. Investeringsbeløpet er 1.3 mrd. kroner og forventes i 10 år framover å gi en årlig total kapitalstrøm etter skatt på 160 milll. Nåverdien vil hær være gitt ved
+
+\begin{equation*}
+NV = - 1300 + \frac{160}{(1+0.034)} + \frac{160}{(1+0.034)^2} + ... + \frac{160}{(1+0.034)^{10}} = 37
+\end{equation*}
+
+## Oppgave 4: Gjeldsgrad og risiko
+
+**Eksempel 5.1:** En obligasjon med n=5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
+
+\begin{equation}
+P_0=\sum_{t=1}^{5\cdot 2}\frac{10000\cdot 0.05/2}{(1+0.06/2)^{5\cdot 2}} + \frac{10000}{(1+0.03)^{5 \cdot 2}} = 2132.55+7440.94 = 9573.49
+\end{equation}
+
+```{r, eval=F, echo=F} 
+(0.05*10000)*
+((1-(1/(0.03))^(10+1))/
+(1-(1/(0.03))))
+# [1] 7440.939
+10000/(1-(1/0.03))^10
+# [1] 8.007468e-12
+```
+
+# Del II: Regneark 
+## Mothersheet
+Løses ved bruk av regneark (eks. Excel, Libreoffice, )
+1. Finn tidsintervall
+## Enkeltinvesteringer
+1. Finn gjennomsnittet for hver enkelt serie.
+1. Finn variansen og tilhørende standardavvik for hver enkelt serie.
+1. Lag et scatterplot i samme plot for hver enkelt serie (x-aksen tid, y-aksen avkastning i prosent)
+## Porteføljeinvesteringer
+1. Finn porteføljens standaravvik mellom ved varierende vekter
+   1. Mellom 2 objekter: bitcoin, x
+   1. Mellom 3 objekter: bitcoin, x, y
+   1. Mellom 4 objekter: bitcoin, x, y og stocck
+1. De parvise kombinasjonene
+## Tolkning av systemtatis og usystematisk risiko i porteføljen (åpen oppgave, foreleser vet i utgangspunktet lite om dette temaet)
+1. Lært i kurset består av systematisk og usystematisk risiko, kvitte seg med sistnevnte ved å øke antall objekter. Hvilken grad skjere dette ved å gå fra strategi 1-3.
+
+```{r}
+knitr::knit_exit()
+```
+
+
+
+
+

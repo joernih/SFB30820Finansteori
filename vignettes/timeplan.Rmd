@@ -1,0 +1,10 @@
+---
+title: ""
+output: github_document
+---
+
+```{r, echo=F}
+source('../inst/forelesningsnotater/timeplan.R')
+timeplan
+```
+

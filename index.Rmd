@@ -1,0 +1,70 @@
+---
+#title: "Finansteori (SFB30820)"
+#output: github_document
+output: html_document
+#output: html_notebook
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/"
+)
+```
+
+```{r, eval=F, echo=F}
+devtools::document()
+devtools::install()
+## Set user name and email.
+git2r::config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
+```
+
+```{r, eval=F, echo=F}
+rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/neste1.Rmd', 'xaringan::moon_reader')
+rmarkdown::render("index.Rmd")
+pkgdown::build_site()
+#
+pkgdown::build_home()
+pkgdown::build_articles()
+pkgdown::build_news()
+#pkgdown::build_articles("timeplan.Rmd")
+system("brave index.html")
+# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
+usethis::use_readme_rmd()
+usethis::use_news_md()
+usethis::use_github_links()
+```
+
+![](man/figures/01_finans.jpg)
+
+## Om kurset
+
+Dette emnet bygger videre på temaer vi allerede har begynt å sett på i emnet Finansiering og Investering, men denne gangen skal vi gå litt dypere inn i teknikkene og metodene vi har for å analysere og gjennomføre effektiv kapitalforvaltning. Jeg håper at dere i løpet av semesteret vil få en solid forståelse for teoretisk verdsetting og kvantitativ porteføljekonstruksjon, men også en forståelse for hvordan markedene fungerer i den virkelige verden.
+
+Forventninger:
+
+Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til emneansvarlig. 
+
+Viktige datoer: 
+
+- 17.08.2021: Første forelesning 08:15-11:00 (på Zoom)
+
+- 28.9: Obligatorisk arbeidskrav publiseres
+
+- 26.10: Obligatorisk arbeidskrav innlevering
+
+- 10.12: Eksamen
+
+Undervisnings og emneansvarlig (jornih@hiof.no)
+
+Jørn I. Halvorsen
+
+**Sist gang oppdatert:** 
+
+<br>`r date()`
+

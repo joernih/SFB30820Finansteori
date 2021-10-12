@@ -1,0 +1,9 @@
+.pagebreak { page-break-before: always; }
+
+
+.losning {
+  font-weight: bold;
+  color: red;
+  zoom: 0%;
+  font-size: 0% ;
+}
