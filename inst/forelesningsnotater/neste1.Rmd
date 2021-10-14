@@ -84,21 +84,78 @@ Interessentene
 
 # Skatt, kontantstrøm og verdi
 
+```{r, echo=FALSE}
+hiris <- head(iris)
+```
+
+Tabell her
+
 ---
+
 ## Overskudd og kontantstrøm
+
+Koblinengen mellom to forskjelige begreper
+
+- Abc
+\begin{equation}
+OFR=OFRS(1-s) \\
+OFR=(SI-FK-VK-A)(1-s) 
+\end{equation}
+- Def
+\begin{equation}
+OFR
+\end{equation}
+- Kobl
+\begin{equation}
+123
+\end{equation}
+
+---
+
+Talleksempel
+
+
+
 ---
 
 ## Ettledsbeskatning
 
 ### Selskapsskatt og kontantstrøm
 
+\begin{equation}
+KK+KR = O + PG \\
+KK+KR = O + PG
+\end{equation}
+
+
 ---
 
-### Selskapsskatt og verdi
+Talleksempel
 
 ```{r, echo=FALSE, out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-56.png"))
 ```
+
+---
+
+### Selskapsskatt og verdi
+
+\begin{equation}
+A = \frac{A}{B}
+\end{equation}
+
+M&M-revidiert
+
+---
+
+*Talleksempel*
+
+
+
+---
+
+
+## Toleddsbeskatning
 
 ```{r, echo=FALSE, out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-57.png"))
@@ -106,11 +163,20 @@ knitr::include_graphics(c("pensum/figurer-57.png"))
 
 ---
 
-## Toleddsbeskatning
+\begin{equation}
+n = ()-()
+\end{equation}
 
-*Miller-likevekt*
+1. gitt at *skattenøytralt*
+1. b
+1. c
+
+---
+
 
 ### Gjeldsfavorisering og Gjeldsrente
+
+*Miller-likevekt*
 
 Oppsummering
 
@@ -118,8 +184,6 @@ Oppsummering
 1.
 1.
 1.
-
-### Oppsummerende figur
 
 
 ```{r, echo=FALSE, out.width="60%", fig.cap=""}
@@ -143,9 +207,9 @@ htmlTable(til_u,header=header, rnames=radm)
 
 # Andre imperfeksjoner
 
----
-
 ## Emisjonskostnader 
+
+Hakkespetteori
 
 ---
 
@@ -166,6 +230,8 @@ htmlTable(til_u,header=header, rnames=radm)
 ---
 
 ## Finansielle krisekostnader
+
+Norwegian link
 
 ---
 
