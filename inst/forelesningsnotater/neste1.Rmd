@@ -268,7 +268,6 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 # Kapitalverdimodellen med beskatning
 
-.pull-left[
 **Ingen skatt**
 
 1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
@@ -276,23 +275,20 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 1. $k_T=w_Ek_E + w_Gk_G$
 1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
 
-]
-.pull-right[
 **Ettledsskatt**
 
 1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
 1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
-1. $k_T=w_Ek_E + w_Gk_G$
-1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
+1. $k_T=w_Ek_E + w_Gk_G(1-s)$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
 
 **Toleddsskatt med Miller-likevekt**
 
-1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
-1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
-1. $k_T=w_Ek_E + w_Gk_G$
-1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
+1. $k_E=r_f(1-s) + \beta_E[E(r_m)-r_f(1-s)]$
+1. $k_G=r_f(1-s) + \beta_G[E(r_m)-r_f(1-s)]$
+1. $k_T=w_Ek_E + w_Gk_G(1-s)$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
 
-]
 
 ---
 
