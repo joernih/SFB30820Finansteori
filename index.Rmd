@@ -66,26 +66,3 @@ Jørn I. Halvorsen
 
 **Sist gang oppdatert:** 
 
-<br>`r date()`
-
-
-```{r}
-library(knitr)
-
-mathy.df <- data.frame(site = c("A", "B"), 
-                       b0 = c("$\\beta_0$", 4), 
-                       BA = c(1, 2))
-
-colnames(mathy.df) <- c("Site", "$$", "$\\beta_A$")
-
-kable(mathy.df, escape=FALSE)
-htmlTable::htmlTable(mathy.df)
-```
-
-### Addded here
-
-| Parameter             |
-|:----------------------|
-| *β*<sub>0</sub> + *θ* |
-| *θ*                   |
-| *β*<sub>2</sub>       |

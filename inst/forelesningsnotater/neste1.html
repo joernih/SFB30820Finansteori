@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ddd419abb12643e196039d45977d9f4e","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbae1ae993d04069b8f3a61878c1bf60","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -89,6 +89,10 @@ Toleddsbeskatning
 `\(s_K\)`
 
 **Øvelse:** Hva er disse tallene for Norge?
+Løsning: 
+`\(s_S==0.25\)`
+`\(s_E=0.14\)`
+`\(s_K=0-0.02875\)`
 
 ---
 
@@ -239,11 +243,6 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
 
----
-
-
-### Gjeldsfavorisering og Gjeldsrente
-
 Oppsummering
 
 1. ingen rolle hvis beskatningen er rolle
@@ -252,6 +251,9 @@ Oppsummering
 1. mindre bed toleddskatt enn ved ettledsskatt
 
 ---
+
+### Gjeldsfavorisering og Gjeldsrente
+
 
 *Miller-likevekt:* Gott gjeldsfavorisering, presse realrente oppp
 
@@ -271,27 +273,26 @@ I en miller likevekt er verdien av selskapet uavhengig av gjeldsgraden
 .pull-left[
 **Ingen skatt**
 
-1. `\(k_E=\)`
-1. `\(k_G=\)`
-1. `\(k_T=\)`
-1. `\(\beta_E=\)`
+1. `\(k_E=r_f + \beta_E[E(r_m)-r_f]\)`
+1. `\(k_G=r_f + \beta_G[E(r_m)-r_f]\)`
+1. `\(k_T=w_Ek_E + w_Gk_G\)`
+1. `\(\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}\)`
 
 ]
 .pull-right[
 **Ettledsskatt**
 
-1. `\(k_E=\)`
-1. `\(k_G=\)`
-1. `\(k_T=\)`
-1. `\(\beta_E=\)`
-
+1. `\(k_E=r_f + \beta_E[E(r_m)-r_f]\)`
+1. `\(k_G=r_f + \beta_G[E(r_m)-r_f]\)`
+1. `\(k_T=w_Ek_E + w_Gk_G\)`
+1. `\(\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}\)`
 
 **Toleddsskatt med Miller-likevekt**
 
-1. `\(k_E=\)`
-1. `\(k_G=\)`
-1. `\(k_T=\)`
-1. `\(\beta_E=\)`
+1. `\(k_E=r_f + \beta_E[E(r_m)-r_f]\)`
+1. `\(k_G=r_f + \beta_G[E(r_m)-r_f]\)`
+1. `\(k_T=w_Ek_E + w_Gk_G\)`
+1. `\(\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}\)`
 
 ]
 
@@ -341,18 +342,21 @@ Norwegian link
 
 ---
 
-## Oppsummering
+## Oppsummering med sammenfattende figur
 
 `\begin{equation}
-NV=+123 \\
-1\\
-2\\
-3\\
+V_M = +V_U \\
++NV(\text{netto skattebesparelse ved gjeld})\\
+-NV(\text{emisjonskostnader})\\
+-NV(\text{agentkostnader ved egenkapital})\\
+-NV(\text{agentkostnader ved gjeld})\\
+-NV(\text{produktmarkedskostnader ved gjeld})\\
+-NV(\text{finansielle krisekostnader})\\
+-NV(\text{underprisingskostnader ved ny egenkapital})\\
 \end{equation}`
 
----
+&lt;img src="pensum/figurer-59.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="pensum/figurer-59.png" width="60%" /&gt;
 
 
     </textarea>

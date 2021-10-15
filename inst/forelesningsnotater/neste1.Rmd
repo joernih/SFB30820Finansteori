@@ -79,6 +79,10 @@ $s_E$
 $s_K$
 
 **Øvelse:** Hva er disse tallene for Norge?
+Løsning: 
+$s_S==0.25$
+$s_E=0.14$
+$s_K=0-0.02875$
 
 ---
 
@@ -235,11 +239,6 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
 
----
-
-
-### Gjeldsfavorisering og Gjeldsrente
-
 Oppsummering
 
 1. ingen rolle hvis beskatningen er rolle
@@ -248,6 +247,9 @@ Oppsummering
 1. mindre bed toleddskatt enn ved ettledsskatt
 
 ---
+
+### Gjeldsfavorisering og Gjeldsrente
+
 
 *Miller-likevekt:* Gott gjeldsfavorisering, presse realrente oppp
 
@@ -269,27 +271,26 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 .pull-left[
 **Ingen skatt**
 
-1. $k_E=$
-1. $k_G=$
-1. $k_T=$
-1. $\beta_E=$
+1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
+1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
+1. $k_T=w_Ek_E + w_Gk_G$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
 
 ]
 .pull-right[
 **Ettledsskatt**
 
-1. $k_E=$
-1. $k_G=$
-1. $k_T=$
-1. $\beta_E=$
-
+1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
+1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
+1. $k_T=w_Ek_E + w_Gk_G$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
 
 **Toleddsskatt med Miller-likevekt**
 
-1. $k_E=$
-1. $k_G=$
-1. $k_T=$
-1. $\beta_E=$
+1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
+1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
+1. $k_T=w_Ek_E + w_Gk_G$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
 
 ]
 
@@ -339,19 +340,22 @@ Norwegian link
 
 ---
 
-## Oppsummering
+## Oppsummering med sammenfattende figur
 
 \begin{equation}
-NV=+123 \\
-1\\
-2\\
-3\\
+V_M = +V_U \\
++NV(\text{netto skattebesparelse ved gjeld})\\
+-NV(\text{emisjonskostnader})\\
+-NV(\text{agentkostnader ved egenkapital})\\
+-NV(\text{agentkostnader ved gjeld})\\
+-NV(\text{produktmarkedskostnader ved gjeld})\\
+-NV(\text{finansielle krisekostnader})\\
+-NV(\text{underprisingskostnader ved ny egenkapital})\\
 \end{equation}
 
----
-
-```{r, echo=FALSE, out.width="60%", fig.cap=""}
+```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
+
 
 
