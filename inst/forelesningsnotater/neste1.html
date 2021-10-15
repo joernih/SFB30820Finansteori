@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1c69d6bc7d444029f4b732f46f12362","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ddd419abb12643e196039d45977d9f4e","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -92,7 +92,7 @@ Toleddsbeskatning
 
 ---
 
-### Imperfeksjoner
+### Imperfeksjoner som vi ser på i dette kurset
 - Skatt
  - Ettleddsbeskatningbeskatning
  - Toleddsbeskatning
@@ -108,6 +108,9 @@ Toleddsbeskatning
 # Skatt, kontantstrøm og verdi
 
 
+**Tabell 8.1**
+
+
 |rn     |    n|
 |:------|----:|
 |+ SI   | 2000|
@@ -117,35 +120,34 @@ Toleddsbeskatning
 |= OFRS |  800|
 |- R    |  100|
 |= OFS  |  700|
-|+ OFSs |  175|
-|+ O    |  525|
+|- OFSs |  175|
+|= O    |  525|
 
 ---
 
 ## Overskudd og kontantstrøm
 
-Koblinengen mellom to forskjelige begreper
-
-- Regnskapssammenheng
+- Driftsresultatet etter skatt (overskuddet før renter) er gitt ved
 `\begin{equation}
 OFR=OFRS(1-s) \\
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}`
-- Kontantstrøm
+- Kontantsgrøm fra driften er gitt ved
 `\begin{equation}
 OFR-A+I=(SI-FK-VK-A)(1-s) - A + I
 \end{equation}`
-- Antar
-  - evigvarende
-- Koblingen
+- Dersom vi (som hos M&amp;M) antar at selskapet holder *evig, konstant kapasitet (ingen vekst)* vil vi ha at
+`\begin{equation}
+I=A
+\end{equation}`
+- Kontantsgrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
 `\begin{equation}
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}`
 
 ---
 
-Talleksempel
-
+**Talleksempel ved bruk av tabell 8.1**
 
 
 ---
@@ -155,47 +157,65 @@ Talleksempel
 ### Selskapsskatt og kontantstrøm
 
 `\begin{equation}
-KK+KR = O(1-s) + PG \\
-KK+KR = (SI-VK-FK+A-rPG)(1-s) + rPG \\
-KK+KR = (SI-VK-FK+A)(1-s) + srPG
+KE+KK = O + rPG \\
+KE+KK = (OFRS-rPG)(1-s) + rPG \\
+KE+KK = (OFRS)(1-s) + rPGs
 \end{equation}`
 
+**Talleksempel ved bruk av tabell 8.1**
 
 ---
 
-Talleksempel
+
+### Selskapsskatt og verdi
+
+`\begin{equation}
+KE+KK = (OFRS)(1-s) + rPGs
+\end{equation}`
+
+`\begin{equation}
+V_{U} = \frac{(OFRS)(1-s)}{r}
+\end{equation}`
+
+`\begin{equation}
+V(\text{Renteskattegevinst}) = \frac{srPG}{r}=sPG
+\end{equation}`
+
+`\begin{equation}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= V_{U} + sPG \\ 
+= \frac{(OFRS)(1-s)}{r} + sPG
+\end{equation}`
+
+---
+
+**Talleksempel ved bruk av tabell 8.1**
 
 &lt;img src="pensum/figurer-56.png" width="60%" /&gt;
 
 ---
 
-### Selskapsskatt og verdi
-
+**M&amp;MSkatt-1**
 `\begin{equation}
-V_{U} = \frac{(a+b)(1-s)}{r}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= \frac{(OFRS)(1-s)}{k_U} + sPG \\ 
+= V_u + sPG \\ 
 \end{equation}`
 
+**M&amp;MSkatt-2**
 `\begin{equation}
-V_{M} = \frac{srPG}{r}=sPG
+k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
 \end{equation}`
 
-
-M&amp;M-revidiert
-
-`\begin{equation}
-V_{M} = V_{U} + sPG
-\end{equation}`
-
----
-
-*Talleksempel*
-
-
+**Konklusjon:** Når selskapet betaler skatt, bør eierne finansiere bedriften med mest mulig gjeld og minst mulig egenkapital (dvs. maksimal gjeldsgrad).
 
 ---
 
 
 ## Toleddsbeskatning
+
+Med toleddsbeskatnig er det summen av samtlige skattebetalinger for selskap og investorer som spiller noen rolle for selskapets verdi
+
 
 &lt;img src="pensum/figurer-57.png" width="70%" /&gt;
 
@@ -205,23 +225,41 @@ V_{M} = V_{U} + sPG
 n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}`
 
-1. gitt at *skattenøytralt*
-1. b
-1. c
+- `\(n^*=1\)`
+- `\(n^*&gt;1\)`
+- `\(n^*&lt;0\)`
+
+
+- Gitt at både selskapet og kreditor i full skatteposisjon - eir er et selskap
+	- Eks. 
+	- `\(Skattenøytralitet\)`
+- Gitt at både selskapet og kreditor i full skatteposisjon - eier en person
+	- Eks. 
+	- `\(Gjeldsfavorieserende\)`
+
+Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
 
 ---
 
 
 ### Gjeldsfavorisering og Gjeldsrente
 
-*Miller-likevekt*
-
 Oppsummering
 
-1.
-1.
-1.
-1.
+1. ingen rolle hvis beskatningen er rolle
+1. mest mulig gjeld
+1. minst mulig gjeld
+1. mindre bed toleddskatt enn ved ettledsskatt
+
+---
+
+*Miller-likevekt:* Gott gjeldsfavorisering, presse realrente oppp
+
+
+I en miller likevekt er verdien av selskapet uavhengig av gjeldsgraden
+
+
+---
 
 
 &lt;img src="pensum/figurer-58.png" width="60%" /&gt;
@@ -231,19 +269,30 @@ Oppsummering
 # Kapitalverdimodellen med beskatning
 
 .pull-left[
+**Ingen skatt**
 
-- abc
-- abc
-- abc
-- abc
+1. `\(k_E=\)`
+1. `\(k_G=\)`
+1. `\(k_T=\)`
+1. `\(\beta_E=\)`
 
 ]
 .pull-right[
+**Ettledsskatt**
 
-- abc
-- abc
-- abc
-- abc
+1. `\(k_E=\)`
+1. `\(k_G=\)`
+1. `\(k_T=\)`
+1. `\(\beta_E=\)`
+
+
+**Toleddsskatt med Miller-likevekt**
+
+1. `\(k_E=\)`
+1. `\(k_G=\)`
+1. `\(k_T=\)`
+1. `\(\beta_E=\)`
+
 ]
 
 ---
@@ -252,27 +301,41 @@ Oppsummering
 
 ## Emisjonskostnader 
 
-Hakkespetteori
+*intern egenkapital*
+
+*ekstern egenkapital*
+
 
 ---
 
 ## Vekst kontra kontroll 
 
+
+*styringsrett*
+
 ---
 
 ## Assymetrisk informasjon 
+
+*Pecking-order-theory*
 
 ---
 
 ## Interessekonflikt mellom eierne og ledelsen
 
+*agentteorien*
+
 ---
 
 ## Interessekonflikt mellom eierne og kreditorene
 
+*agentteorien*
+
 ---
 
 ## Finansielle krisekostnader
+
+*begrenset ansvar*
 
 Norwegian link
 
