@@ -239,30 +239,29 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
 
-Oppsummering
+---
 
+.pull-left[
+**Oppsummering**
 1. ingen rolle hvis beskatningen er rolle
 1. mest mulig gjeld
 1. minst mulig gjeld
 1. mindre bed toleddskatt enn ved ettledsskatt
+]
+.pull-right[
+```{r, echo=FALSE, out.width="100%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-58.png"))
+```
+]
 
 ---
 
 ### Gjeldsfavorisering og Gjeldsrente
 
-
 *Miller-likevekt:* Gott gjeldsfavorisering, presse realrente oppp
 
 
 I en miller likevekt er verdien av selskapet uavhengig av gjeldsgraden
-
-
----
-
-
-```{r, echo=FALSE, out.width="60%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-58.png"))
-```
 
 ---
 
