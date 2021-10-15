@@ -65,30 +65,52 @@ Interessentene
 	- Kreditorer
 - Myndighetene
 
+Ettleddsbeskatning
+- Selskapsskatt
+Toleddsbeskatning
+- Selskapsskatt
+- Investorskatt (kreditorer og aksjonærer)
+
+
+$s_S$
+
+$s_E$
+
+$s_K$
+
+**Øvelse:** Hva er disse tallene for Norge?
+
 ---
 
-- Ettleddsbeskatning
-- Toleddsbeskatning
-
----
-
-- Imperfeksjoner
-	- Emisjonskostnader
-	- Vekst kontra kontroll
-	- Assymetrisk informasjon
-	- Interessekonflikt mellom eierne og ledelsen
-	- Interessekonflikt mellom eierne og kreditorene
-	- Finansielle krisekostnader
+### Imperfeksjoner
+- Skatt
+ - Ettleddsbeskatningbeskatning
+ - Toleddsbeskatning
+- Emisjonskostnader
+- Vekst kontra kontroll
+- Assymetrisk informasjon
+- Interessekonflikt mellom eierne og ledelsen
+- Interessekonflikt mellom eierne og kreditorene
+- Finansielle krisekostnader
 
 ---
 
 # Skatt, kontantstrøm og verdi
 
 ```{r, echo=FALSE}
-hiris <- head(iris)
+rowname <- c("+ SI",
+	     "- VK",
+	     "- FK",
+	     "- A",
+	     "= OFRS",
+	     "- R",
+	     "= OFS",
+	     "+ OFSs",
+	     "+ O")
+tall <- c(2000,300,400,500,800,100,700,175,525)
+df <- data.frame(rn=rowname,n=tall)
+knitr::kable(df)
 ```
-
-Tabell her
 
 ---
 
@@ -96,18 +118,20 @@ Tabell her
 
 Koblinengen mellom to forskjelige begreper
 
-- Abc
+- Regnskapssammenheng
 \begin{equation}
 OFR=OFRS(1-s) \\
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
-- Def
+- Kontantstrøm
 \begin{equation}
-OFR
+OFR-A+I=(SI-FK-VK-A)(1-s) - A + I
 \end{equation}
-- Kobl
+- Antar
+  - evigvarende
+- Koblingen
 \begin{equation}
-123
+OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
 
 ---
@@ -123,8 +147,9 @@ Talleksempel
 ### Selskapsskatt og kontantstrøm
 
 \begin{equation}
-KK+KR = O + PG \\
-KK+KR = O + PG
+KK+KR = O(1-s) + PG \\
+KK+KR = (SI-VK-FK+A-rPG)(1-s) + rPG \\
+KK+KR = (SI-VK-FK+A)(1-s) + srPG
 \end{equation}
 
 
@@ -141,10 +166,19 @@ knitr::include_graphics(c("pensum/figurer-56.png"))
 ### Selskapsskatt og verdi
 
 \begin{equation}
-A = \frac{A}{B}
+V_{U} = \frac{(a+b)(1-s)}{r}
 \end{equation}
 
+\begin{equation}
+V_{M} = \frac{srPG}{r}=sPG
+\end{equation}
+
+
 M&M-revidiert
+
+\begin{equation}
+V_{M} = V_{U} + sPG
+\end{equation}
 
 ---
 
@@ -157,14 +191,14 @@ M&M-revidiert
 
 ## Toleddsbeskatning
 
-```{r, echo=FALSE, out.width="60%", fig.cap=""}
+```{r, echo=FALSE, out.width="70%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-57.png"))
 ```
 
 ---
 
 \begin{equation}
-n = ()-()
+n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}
 
 1. gitt at *skattenøytralt*
@@ -194,15 +228,22 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 # Kapitalverdimodellen med beskatning
 
-```{r, echo=F}
-library(magrittr)
-library(htmlTable)
-a <- c("abc", "Site", "$\\beta_0$", "$\\beta_A$")
-radm <- c("1. Pålydende gjeld", "2. Gjeldsrente","3. Til kreditorene", "4.")
-til_u <- data.frame(A=c(100,200,400,200),B=seq(1,4,),C=a)
-header <- c("A Ingen skatt","B Ettleddsskatt","Toleddskatt med Miller likevekt")
-htmlTable(til_u,header=header, rnames=radm)
-```
+.pull-left[
+
+- abc
+- abc
+- abc
+- abc
+
+]
+.pull-right[
+
+- abc
+- abc
+- abc
+- abc
+]
+
 ---
 
 # Andre imperfeksjoner
@@ -236,6 +277,15 @@ Norwegian link
 ---
 
 ## Oppsummering
+
+\begin{equation}
+NV=+123 \\
+1\\
+2\\
+3\\
+\end{equation}
+
+---
 
 ```{r, echo=FALSE, out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-59.png"))

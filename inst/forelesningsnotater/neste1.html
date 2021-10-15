@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x08ae3a7b9124859992c97ff44002b99","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1c69d6bc7d444029f4b732f46f12362","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-14)
+### 2021/08/12 (updated: 2021-10-15)
 
 ---
 
@@ -62,7 +62,7 @@ class: inverse, center, middle
 1. Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 1. Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
-Oppdatert: 2021-10-14
+Oppdatert: 2021-10-15
 
 ---
 
@@ -75,28 +75,50 @@ Interessentene
 	- Kreditorer
 - Myndighetene
 
+Ettleddsbeskatning
+- Selskapsskatt
+Toleddsbeskatning
+- Selskapsskatt
+- Investorskatt (kreditorer og aksjonærer)
+
+
+`\(s_S\)`
+
+`\(s_E\)`
+
+`\(s_K\)`
+
+**Øvelse:** Hva er disse tallene for Norge?
+
 ---
 
-- Ettleddsbeskatning
-- Toleddsbeskatning
-
----
-
-- Imperfeksjoner
-	- Emisjonskostnader
-	- Vekst kontra kontroll
-	- Assymetrisk informasjon
-	- Interessekonflikt mellom eierne og ledelsen
-	- Interessekonflikt mellom eierne og kreditorene
-	- Finansielle krisekostnader
+### Imperfeksjoner
+- Skatt
+ - Ettleddsbeskatningbeskatning
+ - Toleddsbeskatning
+- Emisjonskostnader
+- Vekst kontra kontroll
+- Assymetrisk informasjon
+- Interessekonflikt mellom eierne og ledelsen
+- Interessekonflikt mellom eierne og kreditorene
+- Finansielle krisekostnader
 
 ---
 
 # Skatt, kontantstrøm og verdi
 
 
-
-Tabell her
+|rn     |    n|
+|:------|----:|
+|+ SI   | 2000|
+|- VK   |  300|
+|- FK   |  400|
+|- A    |  500|
+|= OFRS |  800|
+|- R    |  100|
+|= OFS  |  700|
+|+ OFSs |  175|
+|+ O    |  525|
 
 ---
 
@@ -104,18 +126,20 @@ Tabell her
 
 Koblinengen mellom to forskjelige begreper
 
-- Abc
+- Regnskapssammenheng
 `\begin{equation}
 OFR=OFRS(1-s) \\
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}`
-- Def
+- Kontantstrøm
 `\begin{equation}
-OFR
+OFR-A+I=(SI-FK-VK-A)(1-s) - A + I
 \end{equation}`
-- Kobl
+- Antar
+  - evigvarende
+- Koblingen
 `\begin{equation}
-123
+OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}`
 
 ---
@@ -131,8 +155,9 @@ Talleksempel
 ### Selskapsskatt og kontantstrøm
 
 `\begin{equation}
-KK+KR = O + PG \\
-KK+KR = O + PG
+KK+KR = O(1-s) + PG \\
+KK+KR = (SI-VK-FK+A-rPG)(1-s) + rPG \\
+KK+KR = (SI-VK-FK+A)(1-s) + srPG
 \end{equation}`
 
 
@@ -147,10 +172,19 @@ Talleksempel
 ### Selskapsskatt og verdi
 
 `\begin{equation}
-A = \frac{A}{B}
+V_{U} = \frac{(a+b)(1-s)}{r}
 \end{equation}`
 
+`\begin{equation}
+V_{M} = \frac{srPG}{r}=sPG
+\end{equation}`
+
+
 M&amp;M-revidiert
+
+`\begin{equation}
+V_{M} = V_{U} + sPG
+\end{equation}`
 
 ---
 
@@ -163,12 +197,12 @@ M&amp;M-revidiert
 
 ## Toleddsbeskatning
 
-&lt;img src="pensum/figurer-57.png" width="60%" /&gt;
+&lt;img src="pensum/figurer-57.png" width="70%" /&gt;
 
 ---
 
 `\begin{equation}
-n = ()-()
+n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}`
 
 1. gitt at *skattenøytralt*
@@ -196,41 +230,22 @@ Oppsummering
 
 # Kapitalverdimodellen med beskatning
 
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;A Ingen skatt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;B Ettleddsskatt&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Toleddskatt med Miller likevekt&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1. Pålydende gjeld&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;abc&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2. Gjeldsrente&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Site&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3. Til kreditorene&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;$\beta_0$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4.&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;200&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;4&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;$\beta_A$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+.pull-left[
+
+- abc
+- abc
+- abc
+- abc
+
+]
+.pull-right[
+
+- abc
+- abc
+- abc
+- abc
+]
+
 ---
 
 # Andre imperfeksjoner
@@ -264,6 +279,15 @@ Norwegian link
 ---
 
 ## Oppsummering
+
+`\begin{equation}
+NV=+123 \\
+1\\
+2\\
+3\\
+\end{equation}`
+
+---
 
 &lt;img src="pensum/figurer-59.png" width="60%" /&gt;
 
