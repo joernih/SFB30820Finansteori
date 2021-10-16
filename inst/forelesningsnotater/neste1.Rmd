@@ -86,6 +86,21 @@ Interessentene
 
 ---
 ## Overskudd og kontantstrøm
+
+\begin{equation}
+OFR=OFRS(1-s)
+\end{equation}
+
+\begin{equation}
+OFR=(SI-VK-FK-A)(1-s)
+\end{equation}
+
+\begin{equation}
+OFR=(SI-VK-FK-A)(1-s)
+\end{equation}
+
+Identisk mellom abc def
+
 ---
 
 ## Ettledsbeskatning
