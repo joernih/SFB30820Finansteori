@@ -64,5 +64,5 @@ Undervisnings og emneansvarlig (jornih@hiof.no)
 
 Jørn I. Halvorsen
 
-**Sist gang oppdatert:** 
+**Siste gang oppdatert: `r Sys.Date()`**
 
