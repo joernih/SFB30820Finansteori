@@ -1,6 +1,6 @@
 ---
 title: "Finansteori (SFB30820)"
-subtitle: "Forelesningsnotater"
+subtitle: "Forelesningsnotater (trykk shift+o for oversikt over alle slides)"
 author: "Jørn I.Halvorsen"
 date: "2021/08/12 (updated: `r Sys.Date()`)"
 output:

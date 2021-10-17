@@ -45,7 +45,8 @@ source("timeplan.R")
 
 class: inverse, center, middle
 
-# Læringsmål kapittel 9
+# Forelesning 9: `r tema[10]`
+
 1. Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
 1. Definere et nøytralt skattesystem ved toleddsskatt.
 1. Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
