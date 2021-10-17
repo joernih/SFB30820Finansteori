@@ -102,8 +102,7 @@ $s_K=0-0.02875$
 # Skatt, kontantstrøm og verdi
 
 
-**Tabell 8.1**
-
+**Tabell 8.1:** Forenklet resultat for eksempelselskapet AS Resultat.
 ```{r, echo=FALSE}
 rowname <- c("+ SI",
 	     "- VK",
@@ -115,9 +114,12 @@ rowname <- c("+ SI",
 	     "- OFSs",
 	     "= O")
 tall <- c(2000,300,400,500,800,100,700,175,525)
-df <- data.frame(rn=rowname,n=tall)
-knitr::kable(df)
+df <- data.frame(Poster=rowname,Beløp=tall)
+knitr::kable(df, colnames=c("Poster","Beløp"))
 ```
+
+Selskapet har 2500 i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 prosent.
+
 
 ---
 
@@ -145,6 +147,12 @@ OFR=(SI-FK-VK-A)(1-s)
 
 **Talleksempel ved bruk av tabell 8.1**
 
+- Årlig avskrivning 500.-
+- M&M impliserer investerer 500,-
+- Kontantsgrøm fra driften er derfor:
+$$
+800(1-0.25)+500-500 = 600
+$$
 
 ---
 
@@ -159,6 +167,19 @@ KE+KK = (OFRS)(1-s) + rPGs
 \end{equation}
 
 **Talleksempel ved bruk av tabell 8.1**
+
+Som ved bruk av formelen ovenfor oss gir
+
+$$
+525+0.04\cdot2500\\
+=625
+$$
+Eller
+$$
+800\cdot(1-0.25)+0.04\cdot2500\cdot 0.25 \\
+=600+25\\
+=625
+$$
 
 ---
 
@@ -187,6 +208,14 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 
 **Talleksempel ved bruk av tabell 8.1**
 
+$$
+V_U = \frac{800\cdot(1-0.25)}{0.05}
+$$
+$$
+V_M = \frac{800\cdot(1-0.25)}{0.05} + PG\cdot s
+$$
+
+
 ```{r, echo=FALSE, out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-56.png"))
 ```
@@ -197,7 +226,7 @@ knitr::include_graphics(c("pensum/figurer-56.png"))
 \begin{equation}
 V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = \frac{(OFRS)(1-s)}{k_U} + sPG \\ 
-= V_u + sPG \\ 
+= V_u + sPG \\ ?
 \end{equation}
 
 **M&MSkatt-2**
@@ -225,16 +254,16 @@ knitr::include_graphics(c("pensum/figurer-57.png"))
 n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}
 
-- $n^*=1$
-- $n^*>1$
+- $n^*=0$
+- $n^*>0$
 - $n^*<0$
 
 
 - Gitt at både selskapet og kreditor i full skatteposisjon - eir er et selskap
-	- Eks. 
-	- $Skattenøytralitet$
+	- **Talleksempel:** $s_S=s_K=0.25$ og $s_E=0$
+	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0)$ = 0
 - Gitt at både selskapet og kreditor i full skatteposisjon - eier en person
-	- Eks. 
+	- **Talleksempel:** 	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)$ = 0.105
 	- $Gjeldsfavorieserende$
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
@@ -348,7 +377,7 @@ V_M = +V_U \\
 -NV(\text{underprisingskostnader ved ny egenkapital})\\
 \end{equation}
 
-```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
 

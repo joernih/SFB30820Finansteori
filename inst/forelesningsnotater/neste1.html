@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e9183c3464b342a3b42e683b632c69e6","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x929df9a40f74e7e94d7814538b43476","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-15)
+### 2021/08/12 (updated: 2021-10-17)
 
 ---
 
@@ -62,7 +62,7 @@ class: inverse, center, middle
 1. Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 1. Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
-Oppdatert: 2021-10-15
+Oppdatert: 2021-10-17
 
 ---
 
@@ -112,20 +112,22 @@ Løsning:
 # Skatt, kontantstrøm og verdi
 
 
-**Tabell 8.1**
+**Tabell 8.1:** Forenklet resultat for eksempelselskapet AS Resultat.
 
+|Poster | Beløp|
+|:------|-----:|
+|+ SI   |  2000|
+|- VK   |   300|
+|- FK   |   400|
+|- A    |   500|
+|= OFRS |   800|
+|- R    |   100|
+|= OFS  |   700|
+|- OFSs |   175|
+|= O    |   525|
 
-|rn     |    n|
-|:------|----:|
-|+ SI   | 2000|
-|- VK   |  300|
-|- FK   |  400|
-|- A    |  500|
-|= OFRS |  800|
-|- R    |  100|
-|= OFS  |  700|
-|- OFSs |  175|
-|= O    |  525|
+Selskapet har 2500 i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 prosent.
+
 
 ---
 
@@ -153,6 +155,12 @@ OFR=(SI-FK-VK-A)(1-s)
 
 **Talleksempel ved bruk av tabell 8.1**
 
+- Årlig avskrivning 500.-
+- M&amp;M impliserer investerer 500,-
+- Kontantsgrøm fra driften er derfor:
+$$
+800(1-0.25)+500-500 = 600
+$$
 
 ---
 
@@ -167,6 +175,19 @@ KE+KK = (OFRS)(1-s) + rPGs
 \end{equation}`
 
 **Talleksempel ved bruk av tabell 8.1**
+
+Som ved bruk av formelen ovenfor oss gir
+
+$$
+525+0.04\cdot2500\\
+=625
+$$
+Eller
+$$
+800\cdot(1-0.25)+0.04\cdot2500\cdot 0.25 \\
+=600+25\\
+=625
+$$
 
 ---
 
@@ -195,6 +216,14 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 
 **Talleksempel ved bruk av tabell 8.1**
 
+$$
+V_U = \frac{800\cdot(1-0.25)}{0.05}
+$$
+$$
+V_M = \frac{800\cdot(1-0.25)}{0.05} + PG\cdot s
+$$
+
+
 &lt;img src="pensum/figurer-56.png" width="60%" /&gt;
 
 ---
@@ -203,7 +232,7 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 `\begin{equation}
 V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = \frac{(OFRS)(1-s)}{k_U} + sPG \\ 
-= V_u + sPG \\ 
+= V_u + sPG \\ ?
 \end{equation}`
 
 **M&amp;MSkatt-2**
@@ -229,16 +258,16 @@ Med toleddsbeskatnig er det summen av samtlige skattebetalinger for selskap og i
 n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}`
 
-- `\(n^*=1\)`
-- `\(n^*&gt;1\)`
+- `\(n^*=0\)`
+- `\(n^*&gt;0\)`
 - `\(n^*&lt;0\)`
 
 
 - Gitt at både selskapet og kreditor i full skatteposisjon - eir er et selskap
-	- Eks. 
-	- `\(Skattenøytralitet\)`
+	- **Talleksempel:** `\(s_S=s_K=0.25\)` og `\(s_E=0\)`
+	- `\(Skattenøytralitet:\)` `\(n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0)\)` = 0
 - Gitt at både selskapet og kreditor i full skatteposisjon - eier en person
-	- Eks. 
+	- **Talleksempel:** 	- `\(Skattenøytralitet:\)` `\(n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)\)` = 0.105
 	- `\(Gjeldsfavorieserende\)`
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
@@ -350,7 +379,7 @@ V_M = +V_U \\
 -NV(\text{underprisingskostnader ved ny egenkapital})\\
 \end{equation}`
 
-&lt;img src="pensum/figurer-59.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pensum/figurer-59.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 
 
