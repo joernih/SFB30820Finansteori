@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pkgdown.r-lib.org/404.html</loc>
+    <loc>https://pkgdown.r-lib.org/index.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/articles/anbefalte_oppgaver.html</loc>
@@ -13,30 +13,6 @@
     <loc>https://pkgdown.r-lib.org/articles/forelesninger.html</loc>
   </url>
   <url>
-    <loc>https://pkgdown.r-lib.org/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/articles/mathjax-equation-numbers.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/articles/presentations.html</loc>
-  </url>
-  <url>
     <loc>https://pkgdown.r-lib.org/articles/timeplan.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/news.html</loc>
-  </url>
-  <url>
-    <loc>https://pkgdown.r-lib.org/reference/index.html</loc>
   </url>
 </urlset>

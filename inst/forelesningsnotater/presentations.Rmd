@@ -2173,7 +2173,7 @@ I slutten av dette kurset skal vi se nærmer på noen finansielle instrumenter (
 ```{r, echo=F}
 radnr_i <- c("OFR")
 til_p <- data.frame(OFR=c(250,200,150,100,50),Sannsynlighet=c(1/5,1/5,1/5,1/5,1/5)) 
-htmlTable(t(til_p), header=c(seq(1,5)), rnames=c("OFR","Sannsynlighet"), rowlabel="Tilstand:")
+htmlTable::htmlTable(t(til_p), header=c(seq(1,5)), rnames=c("OFR","Sannsynlighet"), rowlabel="Tilstand:")
 ```
 
 ---
@@ -2235,10 +2235,10 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 **Ingen gjeld**
 
-- Forventet avkastning: `r mu`
-- Standardavvik: `r su` 
-- Variasjonskoeffisienten: `r vu`
-- Utfallsspekteret: `r uu`
+- Forventet avkastning: `r mu` 
+- Standardavvik: `r su`  
+- Variasjonskoeffisienten: `r vu` 
+- Utfallsspekteret: `r uu` 
 
 ]
 
@@ -2246,10 +2246,10 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 **Med gjeldsandel på 50%**
 
-- Forventet avkastning: `r mm`
-- Standardavvik: `r sm` 
-- Variasjonskoeffisienten: `r vm`
-- Utfallsspekteret: `r um`
+- Forventet avkastning: `r mm` 
+- Standardavvik: `r sm`  
+- Variasjonskoeffisienten: `r vm` 
+- Utfallsspekteret: `r um` 
 
 ]
 
@@ -2324,7 +2324,7 @@ til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
 	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
 a <- data.frame(t(til_b))
-htmlTable(t(til_b),rnames=radnr_p)
+htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 ```
 
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
@@ -2389,7 +2389,7 @@ til_u <- data.frame(gjeld=c(100,200,400,600,700),
 	dplyr::mutate(kredit=gjeld*gjeldr) %>%
 	dplyr::mutate(eierne=ofr-kredit) %>% 
 	dplyr::mutate(totalt=kredit+eierne) 
-htmlTable(t(til_u),rnames=radm)
+htmlTable::htmlTable(t(til_u),rnames=radm)
 ```
 
 **Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere (interesentene), men ikke den totale kontantstrømmen**
