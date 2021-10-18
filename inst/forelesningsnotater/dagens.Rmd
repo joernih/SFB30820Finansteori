@@ -35,7 +35,6 @@ library(FinancialMath)
 ```{r eval=FALSE, include=FALSE}
 xaringan::inf_mr("dagens.Rmd")
 rmarkdown::render("dagens.Rmd")
-system("brave dagens.html")
 #xaringan::inf_mr("presentations.Rmd")
 servr::daemon_stop()
 ```
@@ -44,236 +43,381 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
----
-
 class: inverse, center, middle
 
-# Forelesning 8: `r tema[9]`
+# Forelesning 9: `r tema[10]`
 
-**Læringsmål:**
-
-- Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (mer om dette i kapittel 7)
-- Forklare hva en arbitrasjemulighet er.
-- Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
-- Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
-- Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+# Læringsmål kapittel 9
+- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+- Definere et nøytralt skattesystem ved toleddsskatt.
+- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+- Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
 `r paste("Oppdatert:",Sys.Date())`
 
 ---
 
-# Gjeldsgrad og verdi i perfekte kapitalmarkeder
+# Intro
 
-I kapittel 6 så vi at økt gjeldsgrad førte til
-1. Økt forventet avkastning
-1. Økt risiko (både for total risiko og systematisk risiko) 
+Interessentene
 
-Spørsmålet vi stiller nå:
-- Er den positive effekten av *økt forventet avkastning* større, lik (dette omtales som *seperasjonsprinsippet*) eller mindre en den negative effekten av *økt risiko*?
+- Investorer
+	- Aksjonærer
+	- Kreditorer
+- Myndighetene
+
+Ettleddsbeskatning
+- Selskapsskatt ( $s_S$ )
+Toleddsbeskatning
+- Selskapsskatt ( $s_S$ )
+- Investorskatt, dvs. kreditorer ( $s_E$ ) og aksjonærer ( $s_E$ )
+
+**Øvelse:** Hva er disse tallene for Norge?
+Løsning: 
+<!-- $s_S==0.25$ -->
+<!-- $s_E=0.14$ -->
+<!-- $s_K=0-0.02875$ -->
 
 ---
 
-## Oppsplitting av en kontantstrøm
+### Imperfeksjoner som vi ser på i dette kurset
+- Skatt
+ - Ettleddsbeskatningbeskatning
+ - Toleddsbeskatning
+- Emisjonskostnader
+- Vekst kontra kontroll
+- Asymmetrisk informasjon
+- Interessekonflikt mellom eierne og ledelsen
+- Interessekonflikt mellom eierne og kreditorene
+- Finansielle krisekostnader
 
-.pull-left[
+---
 
-**Selskap uten gjeld (U)**
+# Skatt, kontantstrøm og verdi
 
-- Til kreditorene: $R=0$
-- Til aksjonærene: $OER_U=OFR$
-- Totalt: $R+OER_U=OFR$
-]
-.pull-right[
 
-**Selskap med gjeld (M)**
-
-- Til kreditorene: $R=r\cdot PG$
-- Til aksjonærene: $OER_M=OFR-r\cdot PG$
-- Totalt: $R+OER_M=\\ r\cdot PG+OFR-r\cdot PG= OFR$
-]
-
-```{r, echo=F}
-radm <- c("Pålydende gjeld", "Gjeldsrente","Til kreditorene","Til eierne","Totalt")
-ofr <- 100
-til_u <- data.frame(gjeld=c(100,200,400,600,700),
-		    gjeldr=c(0.04,0.04,0.05,0.06,0.08)) %>% 
-	dplyr::mutate(kredit=gjeld*gjeldr) %>%
-	dplyr::mutate(eierne=ofr-kredit) %>% 
-	dplyr::mutate(totalt=kredit+eierne) 
-htmlTable(t(til_u),rnames=radm)
+**Tabell 8.1:** Forenklet resultat for eksempelselskapet AS Resultat.
+```{r, echo=FALSE}
+rowname <- c("+ SI",
+	     "- VK",
+	     "- FK",
+	     "- A",
+	     "= OFRS",
+	     "- R",
+	     "= OFS",
+	     "- OFSs",
+	     "= O")
+tall <- c(2000,300,400,500,800,100,700,175,525)
+df <- data.frame(Poster=rowname,Beløp=tall)
+knitr::kable(df, colnames=c("Poster","Beløp"))
 ```
 
-**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere (interesentene), men ikke den totale kontantstrømmen**
+Selskapet har 2 500,- i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 prosent.
+
 
 ---
 
-## Arbitrasje
+## Overskudd og kontantstrøm
 
-Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette for verdien av to selskaper som *kun* utskiller seg i finansieringsform?
-
-**Eksempel 7.2:** Tar utgangspunkt i to selskaper med lik total kontantstrøm (OFR), men ulik finansieringsform og verdifastsettelse
-
-.pull-left[
-**Selskap U (fullstendig egenkapitalfinansiert)**
-
-- Verdien av selskapet 1000. Hvor $V_U=E_U=1000$ og $G_U=0$
-- Gir dividiende $=OFR$
-- Arbitrasjestrategi (selger overvurdert):
-	- Salg 10 prosent av aksjer: $1000\cdot 0.1=100,-$
-	- Mister: $0.10\cdot OFR$
-]
-.pull-right[
-** Selskap M (med gjeldsfinansiering)**
-
-- Verdien av selskapet 900. Hvor $V_M=900$, $E_M=400$ og $G_M=500$ med en pålydende gjeld på 6 prosent
-- Gir dividiende $=OFR-0.06\cdot 500=OFR-30$
-- Arbitrasjestrage (kjøp undervurdert for samme risikoprofil):
-	- Investering: Aksjer $0.1\cdot 500$ og Obligasjoner $0.1\cdot 400$ som totalt koster 90
-	- Mottar: $0.1\cdot OFR$
-]
-
----
-
-Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til å oppnå samme kontantstrøm.
-
-**Generell strategi:**
-1. Selg dine *aksjer* i det overprisede selskapet
-1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
-	- Gitt uten  gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
-	- Gitt med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
-
-**Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
-
----
-
-## Miller & Modigliani (M&M)
-
-Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir fastsatt i markedet?
-
-Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
-
-**Markedet:**
-- Alle investorer har full informasjon om markedsmulighetene
-- For samme risiko, alle kan låne til samme rente
-- Ingen transaksjonskostnader
-- Alle selskapers egenkapital og gjeld er fritt omsettelige via aksjer og obligasjoner
-- Ingen betaler skatt
-
-.pull-left[
-**Investeringssiden:**
-- Selskap U og M sin OFR er perfekt korrelerte (vi skal snart se at vi har mulighet til å lette på denne forutsetningen)
-- OFR er evigvarende
-- Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
-]
-
-.pull-right[
-**Finansieringsiden:**
-- Fast evigvarende gjeld
-- OER går kun til utbytte
-]
-
----
-
-Basert på disse forutsetningene kan vi sette opp tre uttrykk som viser forventet avkastning for gjeld ( $k_G$ ), egenkapital ( $k_E$ ) og totalkapital ( $k_T$ ):
-
+- Driftsresultatet etter skatt (overskuddet før renter) er gitt ved
 \begin{equation}
-k_G = \frac{r\cdot PG}{G}
+OFR=OFRS(1-s) \\
+OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
-
+- Kontantstrøm fra driften er gitt ved
 \begin{equation}
-k_E = \frac{E(OER)}{E}
+OFR+A-I=(SI-FK-VK-A)(1-s) + A - I
 \end{equation}
-
+- Dersom vi (som hos M&M) antar at selskapet holder *evig, konstant kapasitet (ingen vekst)* vil vi ha at
 \begin{equation}
-k_T = \frac{E(OFR)}{V}
+I=A
 \end{equation}
-
-- **M&M-1:**
+- Kontantsgrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
 \begin{equation}
-V = \frac{E(OFR)}{k_T}=\frac{E(OFR)}{k_U}
-\end{equation}
-
-- **M&M-2:**
-
-\begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E} 
-=k_U + (k_U-k_G)\frac{G}{E}
+OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
 
 ---
 
-*Seperasjonsprinsippet*
-- M&M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
-	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed en økning i eiernes avkastningskrav
-	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
-	1. Dette resultatet blir ofte omtalt som *seperasjonsprinsippet*
+**Talleksempel ved bruk av tabell 8.1**
+
+- Årlig avskrivning 500.-
+- M&M impliserer investerer 500,-
+- Kontantstrøm fra driften er derfor:
+$$
+800(1-0.25)+500-500 = 600
+$$
 
 ---
 
-**Eksempel 7.5:** TV fabrikken Tittco budsert $OFR=2$ mill for neste år og alle perioder framover. Selskapet disponerer avdragsfri gjeld med 250.000,- i utestående renter. En bedrift i samme risikoklasse, men som er gjeldfri, har et akvastningskrav $k_{U}=0.04$
+## Ettledsbeskatning
 
-- Ifølge M&M-I vil verdien til Tittco være gitt ved
+### Selskapsskatt og kontantstrøm
+
 \begin{equation}
-V = \frac{E(OFR)}{k_U} = \frac{2}{0.04}=50
+KE+KK = O + rPG \\
+KE+KK = (OFRS-rPG)(1-s) + rPG \\
+KE+KK = (OFRS)(1-s) + rPGs
 \end{equation}
 
-- Ifølge M&M-II
+**Talleksempel ved bruk av tabell 8.1**
+
+Som ved bruk av formelen ovenfor oss gir
+
+$$
+525+0.04\cdot2500\\
+=625
+$$
+Eller
+$$
+800\cdot(1-0.25)+0.04\cdot2500\cdot 0.25 \\
+=600+25\\
+=625
+$$
+
+---
+
+
+### Selskapsskatt og verdi
+
 \begin{equation}
-k_E = k_T + (k_T-k_G)\frac{G}{E}\\
-k_U + (k_U-k_G)\frac{G}{E}
+KE+KK = OFRS(1-s) + rPGs
 \end{equation}
 
-Som gir oss denne figuren (gitt at vi ser bort fra konkursrisiko)
+\begin{equation}
+V_{U} = \frac{E(OFRS)(1-s)}{k_U}
+\end{equation}
 
-```{r, echo=FALSE, out.width="30%", fig.cap=""}
-knitr::include_graphics(c("pensum/figurer-52.png"))
+\begin{equation}
+V(\text{Renteskattegevinst}) = \frac{srPG}{r}=sPG
+\end{equation}
+
+\begin{equation}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= V_{U} + sPG \\ 
+=\frac{E(OFRS)(1-s)}{r} + sPG
+\end{equation}
+
+---
+
+**Talleksempel ved bruk av tabell 8.1**
+I tillegg antar vi konstant evigvarende kontantstrøm, skattesats lik 25 prosent og at et selskap med samme investeringsrisiko forventet 5 prosent avkastning ( $k_U$ ).
+$$
+V_U = \frac{800(1-0.25)}{0.05}
+$$
+$$
+V_M = \frac{800(1-0.25)}{0.05} + PG\cdot s
+$$
+
+
+```{r, echo=FALSE, out.width="60%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-56.png"))
 ```
 
 ---
 
-### Sammenhengen mellom KVM og M&M
+### Miller og Modigliani med skatt
 
-Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta.
+.pull-left[
 
-**Eksempel 7.5**: For Demo ASA er $\beta_G=0.20$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
-Den risikofrie renten i markedet $r_f=0.03$, mens markedsporteføljen forventede avkastning $E(rp)=0.08$.
+- **M&M-1**
+\begin{equation*}
+V_{M} = \frac{(OFRS)(1-s)}{k_U} + PGs 
+\end{equation*}
+
+- **M&MSkatt-1**
+\begin{equation*}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= \frac{(OFRS)(1-s)}{k_U} + PGs \\ 
+= V_u + PGs \\ 
+\end{equation*}
+]
+.pull-right[
+
+- **M&M-2**
+\begin{equation*}
+k_E = k_U + (k_U-k_G)\frac{G}{E}
+\end{equation*}
+
+- **M&MSkatt-2**
+
+\begin{equation*}
+k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
+\end{equation*}
+
+]
+
+**Konklusjon:** Når selskapet betaler skatt, bør eierne finansiere bedriften med mest mulig gjeld og minst mulig egenkapital (dvs. maksimal gjeldsgrad).
 
 ---
 
+
+## Toleddsbeskatning
+
+Med toleddsbeskatnig er det summen av samtlige skattebetalinger for selskap og investorer som spiller noen rolle for selskapets verdi
+
+
+```{r, echo=FALSE, out.width="70%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-57.png"))
+```
+
+---
+
+\begin{equation}
+n^*= (1-s_K)-(1-s_S)(1-s_E)
+\end{equation}
+
+- $n^*=0$ (*skattenøytralt*)
+- $n^*>0$ (*gjeldsfavoriserende*)
+- $n^*<0$ (*egenkapitalfavoriserende*)
+
+
+- Gitt at både selskapet og kreditor i full skatteposisjon - eir er et selskap
+	- **Talleksempel:** $s_S=s_K=0.25$ og $s_E=0$
+	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0)$ = 0
+	- $dvs. skattenøytralt$
+
+- Gitt at både selskapet og kreditor i full skatteposisjon - eier en person
+	- **Talleksempel:** 	
+	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)$ = 0.105
+	- $dvs. gjeldsfavorieserende$
+
+Det norske skattesystemet gir moderate incentiver til å finansiere med gjeld
+---
+
 .pull-left[
-**Alternativ 1: KVM**
-\begin{equation*}
-k_E=r_f+\beta_E \left[E(r_m)-r_f \right] \\ =0.03 + 1.4[0.08-0.03]=0.10
-\end{equation*}
-
+**Oppsummering**
+1. Gjeldsgraden spiller ingen rolle hvis beskatningen er nøytral
+1. Hvis kreditorene beskattes lite (mye) i forhold til eierne, selskapet bør ha (minst) mest mulig gjeld
+1. Uansett er det mindre å tjene på gjeldsfinansiering ved toleddskatt enn ved ettledsskatt
 ]
-
-
 .pull-right[
-**Alternativ 2: M&M**
-
-Vi har fra kapittel 6 (uten skatt)
-\begin{equation*}
-\beta_{I}=w_E\beta_{E}+w_G\beta_{G}\\
-=0.5\cdot 1.4+0.5\cdot 0.20 = 0.80
-\end{equation*}
-Hvor vi ved bruk av KVM kan finne både $k_U$ og $k_G$
-\begin{equation*}
-k_U=0.03 + 0.80(0.08-0.03)=0.074
-\end{equation*}
-\begin{equation*}
-k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ = 0.03 + 0.2(0.08-0.03)=0.04
-\end{equation*}
-Vi kan derfor benytte M&M-2:
-\begin{equation*}
-k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10 
-\end{equation*}
+```{r, echo=FALSE, out.width="100%", fig.cap=""}
+knitr::include_graphics(c("pensum/figurer-58.png"))
+```
 ]
 
-**Konklusjon:M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
+---
+
+### Gjeldsfavorisering og Gjeldsrente
+
+*Miller-likevekt:* 
+
+- Gitt skattesystem med gjeldsfavorisering, så vil dette stimulere etterspørselen etter gjeldsfinansiering. 
+- Dermed drives lånerenten (gjeldsrenten) opplev følge Miller så mye at skattefordelen ved gjeld vil bli spist opp av tilsvarende høyere lånerente.
+- I en Miller-likevekt er verdien av selskapet uavhengig av gjeldsgraden
+
+---
+
+# Kapitalverdimodellen med beskatning
+
+**Ingen skatt**
+
+1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
+1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
+1. $k_T=w_Ek_E + w_Gk_G$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}$
+
+**Ettledsskatt**
+
+1. $k_E=r_f + \beta_E[E(r_m)-r_f]$
+1. $k_G=r_f + \beta_G[E(r_m)-r_f]$
+1. $k_T=w_Ek_E + w_Gk_G(1-s)$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
+
+**Toleddsskatt med Miller-likevekt**
+
+1. $k_E=r_f(1-s) + \beta_E[E(r_m)-r_f(1-s)]$
+1. $k_G=r_f(1-s) + \beta_G[E(r_m)-r_f(1-s)]$
+1. $k_T=w_Ek_E + w_Gk_G(1-s)$
+1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
+
+
+---
+
+# Andre imperfeksjoner
+
+## Emisjonskostnader 
+
+- I kapitalmarkeder med imperfeksjoner kan emisjonskostnadene for egenkapital avvike fra gjeld (lån).
+- Gitt at egenkapitalen kommer i form av tilbakeholdt overskudd (intern egenkapital), er i praksis emisjonskostnadene lavest for egenkapital
+- Gitt at egenkapitalen kommer utenfra (ekstern finansiering), er i praksis emisjonskostnadene lavere for gjeld (særlig ved lån i bank) enn for egenkapital
+
+---
+
+## Vekst kontra kontroll 
+
+- Små selskaper med rask investeringsvekst vil typisk oppleve at de får et større kapitalbehov enn det som kan finansierer fra driften og ny egenkapital
+- De betyr at selskapene enten må låne fra helt nye aksjonærer eller ta opp gjeld
+- For å beholde styringsretten vil typisk mange eierer ønske at (opp til et vist nivå) skjer i form av gjeld framfor egenkapital. 
+
+---
+
+## Assymetrisk informasjon 
+
+*Informasjonsøkonomiske modeller* bygger på antagelsen om at det er **Asymmetrisk** informasjon mellom selskapets interessenter (eier, ledelsen, kreditorer etc.)
+
+Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)*, og sier følgende
+
+- Finansier nyinvesteringer i størst mulig grad med tilbakehold overskudd
+- Bruk deretter gjeld med lavest mulig risiko
+- Som siste utvei, finansier med ny egenkapital
+
+---
+
+## Interessekonflikt mellom eierne og ledelsen
+
+- *Agentteorien* bygger på forutsetning om asymmetrisk informasjon og antar målkonflikter mellom selskapets interessenter
+- Eierne ønsker at selskapets verdi blir maksimert, mens ledelsen ønsker å gjøre primært det som er best for dem selv
+- Fri kontantstrøm = Selskapets drift - Investeringer + Likvide eiendeler på balansen
+- Økt gjeldsgrad er fordelaktig fordi det reduserer den fri kontantstrømmen som ledelsen har tilgjengelig 
+
+[Equinors USA fiasko](https://e24.no/olje-og-energi/i/nap8kb/han-ledet-equinors-usa-fiasko-og-knuste-bonustaket)
+
+---
+
+## Interessekonflikt mellom eierne og kreditorene
+
+- Agentkostnader ved høy gjeld skyldes at eierne av et aksjeselskap vet at de har *begrense ansvar* når investeringsbeslutninger tas
+- Det gjør at overinvesteringer i risikable prosjekter er en fare for kreditorene når gjeldsgraden er høy
+- Kreditorene kan beskytte seg mot dette ved å forlange høyere rente, noe som innebærer at dette er agentkostnader som eierne må betale
+
+---
+
+## Finansielle krisekostnader
+
+- Ved høy gjeldsgrad kan lånerenten komme til å stige mer enn hva ordinær risikokompensasjon skulle tilsi
+- Det skyldes at kreditorene i en potensiell krisesituasjon må bære en uforholdsmessige stor del av kostnadene 
+	- Konkurskostnader. Eks. administrasjon, dårlig prise på selskapets eiendeler.
+	- Unngå konkurs. Eks. Reforhandle avtaler, berolige kunder, neglisjere daglig drift
+
+[Flyekspert om Norwegians krisegrep](https://e24.no/boers-og-finans/i/6z4WLQ/flyekspert-om-norwegians-krisegrep-de-var-noedt-til-aa-gjoere-noe-slikt)
+
+---
+
+## Oppsummering med sammenfattende figur
+
+\begin{equation}
+V_M = V_U \\
++NV(\text{netto skattebesparelse ved gjeld})\\
+-NV(\text{emisjonskostnader})\\
+-NV(\text{agentkostnader ved egenkapital})\\
+-NV(\text{agentkostnader ved gjeld})\\
+-NV(\text{produktmarkedskostnader ved gjeld})\\
+-NV(\text{finansielle krisekostnader})\\
+-NV(\text{underprisingskostnader ved ny egenkapital})\\
+\end{equation}
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-59.png"))
+```
 
 ```{r, echo=F}
 knitr::knit_exit()
 ```
 
+
+- Gjemmløsning Norge
+- 2500,-
+- Miller likevekt
