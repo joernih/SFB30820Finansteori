@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x929df9a40f74e7e94d7814538b43476","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x51712afa8a146598362430793cc9215","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-17)
+### 2021/08/12 (updated: 2021-10-18)
 
 ---
 
@@ -55,14 +55,16 @@ class: center, middle, inverse, title-slide
 
 class: inverse, center, middle
 
-# Læringsmål kapittel 9
-1. Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
-1. Definere et nøytralt skattesystem ved toleddsskatt.
-1. Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
-1. Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
-1. Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+# Forelesning 9: **Gjeldgrad og verdi med imperfeksjoner**
 
-Oppdatert: 2021-10-17
+# Læringsmål kapittel 9
+- Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
+- Definere et nøytralt skattesystem ved toleddsskatt.
+- Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
+- Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
+- Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+
+Oppdatert: 2021-10-18
 
 ---
 
@@ -76,23 +78,16 @@ Interessentene
 - Myndighetene
 
 Ettleddsbeskatning
-- Selskapsskatt
+- Selskapsskatt ( `\(s_S\)` )
 Toleddsbeskatning
-- Selskapsskatt
-- Investorskatt (kreditorer og aksjonærer)
-
-
-`\(s_S\)`
-
-`\(s_E\)`
-
-`\(s_K\)`
+- Selskapsskatt ( `\(s_S\)` )
+- Investorskatt, dvs. kreditorer ( `\(s_E\)` ) og aksjonærer ( `\(s_E\)` )
 
 **Øvelse:** Hva er disse tallene for Norge?
 Løsning: 
-`\(s_S==0.25\)`
-`\(s_E=0.14\)`
-`\(s_K=0-0.02875\)`
+&lt;!-- `\(s_S==0.25\)` --&gt;
+&lt;!-- `\(s_E=0.14\)` --&gt;
+&lt;!-- `\(s_K=0-0.02875\)` --&gt;
 
 ---
 
@@ -126,7 +121,7 @@ Løsning:
 |- OFSs |   175|
 |= O    |   525|
 
-Selskapet har 2500 i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 prosent.
+Selskapet har 2 500,- i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 prosent.
 
 
 ---
@@ -138,9 +133,9 @@ Selskapet har 2500 i pålydende gjeld til 4 prosent rente. Skattesatsen er 25 pr
 OFR=OFRS(1-s) \\
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}`
-- Kontantsgrøm fra driften er gitt ved
+- Kontantstrøm fra driften er gitt ved
 `\begin{equation}
-OFR-A+I=(SI-FK-VK-A)(1-s) - A + I
+OFR+A-I=(SI-FK-VK-A)(1-s) + A - I
 \end{equation}`
 - Dersom vi (som hos M&amp;M) antar at selskapet holder *evig, konstant kapasitet (ingen vekst)* vil vi ha at
 `\begin{equation}
@@ -195,11 +190,11 @@ $$
 ### Selskapsskatt og verdi
 
 `\begin{equation}
-KE+KK = (OFRS)(1-s) + rPGs
+KE+KK = OFRS(1-s) + rPGs
 \end{equation}`
 
 `\begin{equation}
-V_{U} = \frac{(OFRS)(1-s)}{r}
+V_{U} = \frac{E(OFRS)(1-s)}{k_U}
 \end{equation}`
 
 `\begin{equation}
@@ -209,18 +204,18 @@ V(\text{Renteskattegevinst}) = \frac{srPG}{r}=sPG
 `\begin{equation}
 V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = V_{U} + sPG \\ 
-= \frac{(OFRS)(1-s)}{r} + sPG
+=\frac{E(OFRS)(1-s)}{r} + sPG
 \end{equation}`
 
 ---
 
 **Talleksempel ved bruk av tabell 8.1**
-
+I tillegg antar vi konstant evigvarende kontantstrøm, skattesats lik 25 prosent og at et selskap med samme investeringsrisiko forventet 5 prosent avkastning ( `\(k_U\)` ).
 $$
-V_U = \frac{800\cdot(1-0.25)}{0.05}
+V_U = \frac{800(1-0.25)}{0.05}
 $$
 $$
-V_M = \frac{800\cdot(1-0.25)}{0.05} + PG\cdot s
+V_M = \frac{800(1-0.25)}{0.05} + PG\cdot s
 $$
 
 
@@ -228,17 +223,36 @@ $$
 
 ---
 
-**M&amp;MSkatt-1**
-`\begin{equation}
-V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
-= \frac{(OFRS)(1-s)}{k_U} + sPG \\ 
-= V_u + sPG \\ ?
-\end{equation}`
+### Miller og Modigliani med skatt
 
-**M&amp;MSkatt-2**
-`\begin{equation}
+.pull-left[
+
+- **M&amp;M-1**
+`\begin{equation*}
+V_{M} = \frac{(OFRS)(1-s)}{k_U} + PGs 
+\end{equation*}`
+
+- **M&amp;MSkatt-1**
+`\begin{equation*}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= \frac{(OFRS)(1-s)}{k_U} + PGs \\ 
+= V_u + PGs \\ 
+\end{equation*}`
+]
+.pull-right[
+
+- **M&amp;M-2**
+`\begin{equation*}
+k_E = k_U + (k_U-k_G)\frac{G}{E}
+\end{equation*}`
+
+- **M&amp;MSkatt-2**
+
+`\begin{equation*}
 k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
-\end{equation}`
+\end{equation*}`
+
+]
 
 **Konklusjon:** Når selskapet betaler skatt, bør eierne finansiere bedriften med mest mulig gjeld og minst mulig egenkapital (dvs. maksimal gjeldsgrad).
 
@@ -258,28 +272,29 @@ Med toleddsbeskatnig er det summen av samtlige skattebetalinger for selskap og i
 n^*= (1-s_K)-(1-s_S)(1-s_E)
 \end{equation}`
 
-- `\(n^*=0\)`
-- `\(n^*&gt;0\)`
-- `\(n^*&lt;0\)`
+- `\(n^*=0\)` (*skattenøytralt*)
+- `\(n^*&gt;0\)` (*gjeldsfavoriserende*)
+- `\(n^*&lt;0\)` (*egenkapitalfavoriserende*)
 
 
 - Gitt at både selskapet og kreditor i full skatteposisjon - eir er et selskap
 	- **Talleksempel:** `\(s_S=s_K=0.25\)` og `\(s_E=0\)`
 	- `\(Skattenøytralitet:\)` `\(n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0)\)` = 0
+	- `\(dvs. skattenøytralt\)`
+
 - Gitt at både selskapet og kreditor i full skatteposisjon - eier en person
-	- **Talleksempel:** 	- `\(Skattenøytralitet:\)` `\(n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)\)` = 0.105
-	- `\(Gjeldsfavorieserende\)`
+	- **Talleksempel:** 	
+	- `\(Skattenøytralitet:\)` `\(n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)\)` = 0.105
+	- `\(dvs. gjeldsfavorieserende\)`
 
 Det norske skattesystemet gir moderate insentiver til å finansiere med gjeld
-
 ---
 
 .pull-left[
 **Oppsummering**
-1. ingen rolle hvis beskatningen er rolle
-1. mest mulig gjeld
-1. minst mulig gjeld
-1. mindre bed toleddskatt enn ved ettledsskatt
+1. Gjeldsgraden spiller ingen rolle hvis beskatningen er nøytral
+1. Hvis kreditorene beskattes lite (mye) i forhold til eierne, selskapet bør ha (minst) mest mulig gjeld
+1. Uansett er det mindre å tjene på gjeldsfinansiering ved toleddskatt enn ved ettledsskatt
 ]
 .pull-right[
 &lt;img src="pensum/figurer-58.png" width="100%" /&gt;
@@ -369,7 +384,7 @@ Norwegian link
 ## Oppsummering med sammenfattende figur
 
 `\begin{equation}
-V_M = +V_U \\
+V_M = V_U \\
 +NV(\text{netto skattebesparelse ved gjeld})\\
 -NV(\text{emisjonskostnader})\\
 -NV(\text{agentkostnader ved egenkapital})\\
@@ -381,8 +396,9 @@ V_M = +V_U \\
 
 &lt;img src="pensum/figurer-59.png" width="40%" style="display: block; margin: auto;" /&gt;
 
-
-
+- Gjemmløsning Norge
+- 2500,-
+- Miller likevekt
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
