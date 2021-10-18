@@ -302,10 +302,11 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 ### Gjeldsfavorisering og Gjeldsrente
 
-*Miller-likevekt:* Gott gjeldsfavorisering, presse realrente oppp
+*Miller-likevekt:* 
 
-
-I en miller likevekt er verdien av selskapet uavhengig av gjeldsgraden
+- Gitt skattesystem med gjeldsfavorisering, så vil dette stimulere etterspørselen etter gjeldsfinansiering. 
+- Dermed drives lånerenten (gjeldsrenten) opplev følge Miller så mye at skattefordelen ved gjeld vil bli spist opp av tilsvarende høyere lånerente.
+- I en Miller-likevekt er verdien av selskapet uavhengig av gjeldsgraden
 
 ---
 
@@ -342,6 +343,8 @@ I en miller likevekt er verdien av selskapet uavhengig av gjeldsgraden
 - I kapitalmarkeder med imperfeksjoner kan emisjonskostnadene for egenkapital avvike fra gjeld (lån).
 - Gitt at egenkapitalen kommer i form av tilbakeholdt overskudd (intern egenkapital), er i praksis emisjonskostnadene lavest for egenkapital
 - Gitt at egenkapitalen kommer utenifra (ekstern finansiering), er i praksis emisjonskostnadene lavere for gjeld (særlig ved lån i bank) enn for egenkapital
+
+---
 
 ## Vekst kontra kontroll 
 
@@ -380,6 +383,8 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 - Det gjør at overinvesteringer i risikable prosjekter er en fare for kreditorene når gjeldsgraden er høy
 - Kreditorene kan beskytte seg mot dette ved å forlange høyere rente, noe som innebærer at dette er agenkostnader som eierne må betale
 
+---
+
 ## Finansielle krisekostnader
 
 - Ved høy gjeldsgrad kan lånerenten komme til å stige mer enn hva ordinær risikokompensasjon skulle tilsi
@@ -407,6 +412,11 @@ V_M = V_U \\
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 
 - Gjemmløsning Norge
 - 2500,-
