@@ -1,3 +1,5 @@
+Finansteori (SFB30820)
+================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -16,21 +18,21 @@ markedene fungerer i den virkelige verden.
 Forventninger:
 
 Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
-temaer. Personlige spørsmål rettes i canvas meldingsfunksjon til
+temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til
 emneansvarlig.
 
 Viktige datoer:
 
--   17.08.2021: Første forelesning 08:15-11:00 (på Zoom)
+-   17.08: Første forelesning 08:15-11:00 (på Zoom)
 
 -   28.9: Obligatorisk arbeidskrav publiseres
 
--   26.10: Obligatorisk arbeidskrav innlevering
+-   ~~26.10~~ 28.10: Obligatorisk arbeidskrav innlevering
 
 -   10.12: Eksamen
 
 Undervisnings og emneansvarlig (<jornih@hiof.no>)
 
-Jørn Inge Halvorsen
+Jørn I. Halvorsen
 
-**Sist gang oppdatert:** <br>Tue Oct 5 09:03:56 2021
+**Siste gang oppdatert: 2021-10-19**

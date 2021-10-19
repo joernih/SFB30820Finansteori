@@ -6,11 +6,7 @@ articles:
   arbeidskrav2021_F: arbeidskrav2021_F.html
   forelesninger: forelesninger.html
   timeplan: timeplan.html
-<<<<<<< HEAD
-last_built: 2021-10-19T09:56Z
-=======
-last_built: 2021-10-18T18:37Z
->>>>>>> 692dbedc118d377828228a5ae16ddc0297cc8b2e
+last_built: 2021-10-19T10:35Z
 urls:
   reference: https://pkgdown.r-lib.org/reference
   article: https://pkgdown.r-lib.org/articles
