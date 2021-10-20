@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/"
 )
 ```
-
+/home/joernih/teaching/SFB30820Finansteori
 ```{r, eval=F, echo=F}
 devtools::document()
 devtools::install()

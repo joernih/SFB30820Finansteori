@@ -48,6 +48,7 @@ source("timeplan.R")
 
 class: inverse, center, middle
 
+
 # Forelesning 11: `r tema[11]`
 
 - Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
@@ -59,6 +60,67 @@ class: inverse, center, middle
 `r paste("Oppdatert:",Sys.Date())`
 
 ---
+
+# Intro
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-63.png"))
+```
+
+# Virkemidler
+
+---
+
+# Empiri
+
+##
+## Lindtner-modellen
+## Norsk politikk 
+## Utenlands politikk
+##
+##
+##
+
+---
+
+# Irrelevans
+
+---
+
+# Likvider
+
+---
+
+# Signalfunksjon
+
+---
+
+# Interessekonflikter
+
+---
+
+# Skatt
+
+---
+
+---
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-64.png"))
+```
+
+---
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-65.png"))
+```
+---
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-66.png"))
+```
+
+
 
 
 

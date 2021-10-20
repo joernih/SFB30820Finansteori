@@ -2939,6 +2939,15 @@ V_M = V_U \\
 knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
 
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-65.png"))
+```
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-66.png"))
+```
+
+
 ```{r, echo=F}
 knitr::knit_exit()
 ```

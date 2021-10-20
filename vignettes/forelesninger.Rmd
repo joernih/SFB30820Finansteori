@@ -7,7 +7,6 @@ output: github_document
 source('../inst/forelesningsnotater/timeplan.R')
 ```
 
-<<<<<<< HEAD
 ## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/master/inst/forelesningsnotater/1_introduksjon_og_overblikk.pdf)
 ## [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/2_relevant_risiko_2_obj.pdf)
 ## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/3_relevant_risiko_3_N_obj.pdf)
@@ -18,15 +17,3 @@ source('../inst/forelesningsnotater/timeplan.R')
 ## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
 ## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/master/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
 ## `r tema[11]`
-=======
-## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/1_introduksjon_og_overblikk.pdf)
-## [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/2_relevant_risiko_2_obj.pdf)
-## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/3_relevant_risiko_3_N_obj.pdf)
-## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/4_Effisiens.pdf)
-## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/5_Kapitalverdimodellen.pdf)
-## [`r tema[6]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/6_Langsiktige_finansieringsformer.pdf)
-## [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/7_Gjeldsgrad_og_risiko.pdf)
-## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
-## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
-
->>>>>>> 6ea31198d1bdf95a44f0dc34f8aee6289a9d00ab
