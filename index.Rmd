@@ -12,30 +12,30 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/"
 )
 ```
-/home/joernih/teaching/SFB30820Finansteori
+
 ```{r, eval=F, echo=F}
-devtools::document()
-devtools::install()
-## Set user name and email.
+# Git relatert
 git2r::config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
 ```
 
 ```{r, eval=F, echo=F}
-rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
-rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
-rmarkdown::render('inst/forelesningsnotater/neste1.Rmd', 'xaringan::moon_reader')
-rmarkdown::render("index.Rmd")
+# R-pakker
+devtools::document()
+devtools::install()
+```
+
+```{r, eval=F, echo=F}
+## Simple build
 pkgdown::build_site()
-#
+
+## Specific build
 pkgdown::build_home()
 pkgdown::build_articles()
 pkgdown::build_news()
-#pkgdown::build_articles("timeplan.Rmd")
-system("brave index.html")
-# pkgdown <img src="man/figures/logo.png" align="right" alt="" width="120" />
-usethis::use_readme_rmd()
-usethis::use_news_md()
-usethis::use_github_links()
+## Fine build
+rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
+rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
+rmarkdown::render("index.Rmd")
 ```
 
 ![](man/figures/01_finans.jpg)

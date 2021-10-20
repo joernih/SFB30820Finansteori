@@ -2922,7 +2922,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ---
 
-## Oppsummering (kan droppes) med sammenfattende figur
+## (Oppsummering) med sammenfattende figur
 
 \begin{equation}
 V_M = V_U \\
