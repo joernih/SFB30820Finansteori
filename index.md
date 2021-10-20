@@ -31,8 +31,8 @@ Viktige datoer:
 
 -   10.12: Eksamen
 
-Undervisnings og emneansvarlig (<jornih@hiof.no>)
+Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-20 13:18:52**
+**Siste gang oppdatert: 2021-10-20 13:38:22**

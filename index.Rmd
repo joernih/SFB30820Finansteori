@@ -36,6 +36,8 @@ pkgdown::build_news()
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 rmarkdown::render("index.Rmd")
+## Tasks
+#- Sjekke timeplanenummer
 ```
 
 ![](man/figures/01_finans.jpg)
@@ -43,8 +45,6 @@ rmarkdown::render("index.Rmd")
 ## Om kurset
 
 Dette emnet bygger videre på temaer vi allerede har begynt å sett på i emnet Finansiering og Investering, men denne gangen skal vi gå litt dypere inn i teknikkene og metodene vi har for å analysere og gjennomføre effektiv kapitalforvaltning. Jeg håper at dere i løpet av semesteret vil få en solid forståelse for teoretisk verdsetting og kvantitativ porteføljekonstruksjon, men også en forståelse for hvordan markedene fungerer i den virkelige verden.
-
-Forventninger:
 
 Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til emneansvarlig. 
 
@@ -58,7 +58,7 @@ Viktige datoer:
 
 - 10.12: Eksamen
 
-Undervisnings og emneansvarlig (jornih@hiof.no)
+Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
