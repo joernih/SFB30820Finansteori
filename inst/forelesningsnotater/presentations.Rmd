@@ -2566,11 +2566,14 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 
 ---
 
+
+
+---
+
 class: inverse, center, middle
 
 # Forelesning 9: `r tema[10]`
 
-# Læringsmål kapittel 9
 - Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
 - Definere et nøytralt skattesystem ved toleddsskatt.
 - Redegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
@@ -2598,9 +2601,9 @@ Toleddsbeskatning
 
 **Øvelse:** Hva er disse tallene for Norge?
 Løsning: 
-<!-- $s_S==0.25$ -->
-<!-- $s_E=0.14$ -->
-<!-- $s_K=0-0.02875$ -->
+- $s_S==0.25$ 
+- $s_E=0.14$ 
+- $s_K=0$ (for bedrifter) og $s_E=(0.02875)$ (for privatpersoner)
 
 ---
 
@@ -2656,7 +2659,7 @@ OFR+A-I=(SI-FK-VK-A)(1-s) + A - I
 \begin{equation}
 I=A
 \end{equation}
-- Kontantsgrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
+-Kontantsrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
 \begin{equation}
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
@@ -2730,7 +2733,7 @@ $$
 V_U = \frac{800(1-0.25)}{0.05}
 $$
 $$
-V_M = \frac{800(1-0.25)}{0.05} + PG\cdot s
+V_M = \frac{800(1-0.25)}{0.05} + PGs
 $$
 
 
@@ -2896,7 +2899,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 - Fri kontantstrøm = Selskapets drift - Investeringer + Likvide eiendeler på balansen
 - Økt gjeldsgrad er fordelaktig fordi det reduserer den fri kontantstrømmen som ledelsen har tilgjengelig 
 
-[Equinors USA fiasko](https://e24.no/olje-og-energi/i/nap8kb/han-ledet-equinors-usa-fiasko-og-knuste-bonustaket)
+[Equinors USA fiasko](https://e24.no/olje-og-energi/i/nap8kB/han-ledet-equinors-usa-fiasko-og-knuste-bonustaket)
 
 ---
 
@@ -2919,7 +2922,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ---
 
-## Oppsummering med sammenfattende figur
+## Oppsummering (kan droppes) med sammenfattende figur
 
 \begin{equation}
 V_M = V_U \\

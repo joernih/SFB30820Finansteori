@@ -1,4 +1,4 @@
-pandoc: 2.14.0.2
+pandoc: 2.14.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
@@ -6,7 +6,11 @@ articles:
   arbeidskrav2021_F: arbeidskrav2021_F.html
   forelesninger: forelesninger.html
   timeplan: timeplan.html
+<<<<<<< HEAD
 last_built: 2021-10-20T08:20Z
+=======
+last_built: 2021-10-19T11:09Z
+>>>>>>> 6ea31198d1bdf95a44f0dc34f8aee6289a9d00ab
 urls:
   reference: https://pkgdown.r-lib.org/reference
   article: https://pkgdown.r-lib.org/articles

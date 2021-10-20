@@ -1,8 +1,6 @@
 ---
-#title: "Finansteori (SFB30820)"
-#output: github_document
-output: html_document
-#output: html_notebook
+title: "Finansteori (SFB30820)"
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -56,7 +54,7 @@ Viktige datoer:
 
 - 28.9: Obligatorisk arbeidskrav publiseres
 
-- 26.10: Obligatorisk arbeidskrav innlevering
+- ~~26.10~~ 28.10: Obligatorisk arbeidskrav innlevering
 
 - 10.12: Eksamen
 
@@ -64,5 +62,5 @@ Undervisnings og emneansvarlig (jornih@hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: `r Sys.Date()`**
+**Siste gang oppdatert: `r Sys.time()`**
 
