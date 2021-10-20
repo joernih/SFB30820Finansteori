@@ -63,23 +63,69 @@ class: inverse, center, middle
 
 # Intro
 
+- *Dividende:*
+- *Dividendepolitikk:*
+
+---
+
+# Varianter
+
+## Kontantdividende
+
+---
+
+## Tilbakekjøp av egne aksjer
+
+---
+
+## Opphørsdividende, fondsemisjon og aksjesplitt
+
+---
+
+## Utbytteaksjer og naturalier
+
+---
+
+# Praksis
+
+## Bransjemønstre i dividendepolitikken
+
+---
+
+## Lintner-modellen
+
+---
+
+## Tilbakekjøp
+
+---
+
+## Norsk dividentpoltikk over tid
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-63.png"))
 ```
 
-# Virkemidler
+---
+
+## Norsk kontra andre land
+
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-64.png"))
+```
 
 ---
 
-# Empiri
+## Dividende kontra nettodividende
 
-##
-## Lindtner-modellen
-## Norsk politikk 
-## Utenlands politikk
-##
-##
-##
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-65.png"))
+```
+
+---
+
+## Dividende og avkastningskrav
 
 ---
 
@@ -87,11 +133,15 @@ knitr::include_graphics(c("pensum/figurer-63.png"))
 
 ---
 
-# Likvider
+# Likviditet
 
 ---
 
-# Signalfunksjon
+# Signalfunksjonen
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-66.png"))
+```
 
 ---
 
@@ -103,31 +153,7 @@ knitr::include_graphics(c("pensum/figurer-63.png"))
 
 ---
 
----
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-64.png"))
-```
-
----
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-65.png"))
-```
----
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-66.png"))
-```
-
-
-
-
-
-
-
-
-
+# Oppsumering
 
 
 
