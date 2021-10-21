@@ -44,8 +44,6 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
----
-
 class: inverse, center, middle
 
 
@@ -63,8 +61,12 @@ class: inverse, center, middle
 
 # Intro
 
-- *Dividende:*
-- *Dividendepolitikk:*
+- *Dividende:* Utbytte fra selskapet til eierne av midler
+- *Dividendepolitikk:* Hvordan dividenden blir bestemt:
+	- Start og stopp
+	- Hvilke midler
+	- Størrelsen på utbytte
+	- Stabiliteten
 
 ---
 
@@ -72,31 +74,81 @@ class: inverse, center, middle
 
 ## Kontantdividende
 
+Dette er den vanligste varianten
+
+- Selskapet betaler ut et visst antall kroner pr. utestående aksje
+- Beløpet foreslås av styret
+- Vedtas på generalforsamling (simpelt flertall)
+- Utbetales i løpet av første halvår etter regnskapsårets slutt til alle aksjonærer som er registrert aksjonærer på en bestemt dato
+- Dagen etter denne datoen kalles *ex-dividende-*dagen, hvor aksjen da omsettes uten rett til årets dividende
+
 ---
 
 ## Tilbakekjøp av egne aksjer
 
+Dette innebærer at kun som velger å selge sine aksjer mottat likvider.
+
+- Disse aksjene blir så slettet og ny fullmakt utstedt
+- Selskapet kan maksimalt kjøpe tilbake 10 prosent av sine egne aksjer
+
 ---
 
-## Opphørsdividende, fondsemisjon og aksjesplitt
+## Opphørsdividende, fondsemisjon og aksjesplitter
+
+I det eierne velger å nedlegge bedriften får de utbetalt opphørsdividiende:$\text{salg av eiendeler} - \text{avviklingskostander} + \text{gjeld})$. Desinvestering.
+
+Som vist under forelesning 6 `r tema[6]`,  innebærer hverken fondsemisjon og aksjesplitter noen utbetaling fra selskapet til eierne. Lærboka velger derfor, selv o
+m noen velger å gjøre det, ikke betrakte dette som en dividendevariant.
 
 ---
 
 ## Utbytteaksjer og naturalier
 
+*Utbytteaksjer* innebærer at eierne kan velge å måtta dividenden som kontantdividende eller som nyutstede aksjer (rettet egenkapitalemisjon uten tegningsrettigheter).
+
+*Naturalier* innebærer at man får midler i form av varer eller tjenester
++ Gir skattefridrag
+- Ikke likvid
+
 ---
 
 # Praksis
 
+- Ansvaret for utformingen av dividendepolitikken ligger hos styret og ledelsen.
+- Beslutningen tas formelt på generealforsamlingen (men de kan ikke vedta et høyere dividende enn hva styret foreslår)
+
+Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består av
+	 - Dividenderamme ()
+	 - Skjønn 
+
+---
+
 ## Bransjemønstre i dividendepolitikken
+
+Tabell ?
 
 ---
 
 ## Lintner-modellen
 
+Undersøkelser tyder på at fastsatt dividende er basert på følgende kjennetegn
+
+1. Målsatt dividende...
+1. Stabilitet...
+1. Avvik
+
+\begin{equation}
+DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
+\end{equation}
+---
+
+**Eksempel 11.4:**
+
 ---
 
 ## Tilbakekjøp
+
+Fleksibelt supplement?
 
 ---
 
@@ -119,6 +171,10 @@ knitr::include_graphics(c("pensum/figurer-64.png"))
 
 ## Dividende kontra nettodividende
 
+\begin{equation}
+ND_t = D_t + TB_t - EM_t
+\end{equation}
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-65.png"))
 ```
@@ -130,6 +186,22 @@ knitr::include_graphics(c("pensum/figurer-65.png"))
 ---
 
 # Irrelevans
+
+
+- Kapitalmarkedet er perfekt
+- Egenkapitalbeskatninge er nøytral
+- Alt annet enn dividendepolitikk holdes konstant
+
+---
+
+*kontantstrømbalanse* (pengetilgang lik pengebruk)
+\begin{equation}
+Kontantstrøm fra driften + Ny gjeld + Ny egenkapital= Renter + Avdrag + Investeringer + Dividende
+\end{equation}
+
+\begin{equation}
+\Delta Nytegnet egenkapital = \Delta Dividende
+\end{equation}
 
 ---
 
