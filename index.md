@@ -15,8 +15,6 @@ semesteret vil få en solid forståelse for teoretisk verdsetting og
 kvantitativ porteføljekonstruksjon, men også en forståelse for hvordan
 markedene fungerer i den virkelige verden.
 
-Forventninger:
-
 Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
 temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til
 emneansvarlig.
@@ -35,4 +33,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-20 13:38:22**
+**Siste gang oppdatert: 2021-10-21 08:25:04**
