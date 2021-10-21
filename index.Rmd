@@ -54,8 +54,7 @@ Viktige datoer:
 
 - 28.9: Obligatorisk arbeidskrav publiseres
 
-- ~~26.10~~ 28.10: Obligatorisk arbeidskrav innlevering
-
+- ~~26.10~~ 28.10: Obligatorisk arbeidskrav innlevering (setter opp innleveringlenke til Canvas i løpet av dagen)
 - 10.12: Eksamen
 
 Undervisnings og emneansvarlig (jornih at hiof.no)

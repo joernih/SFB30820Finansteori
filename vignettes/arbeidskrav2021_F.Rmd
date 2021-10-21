@@ -6,6 +6,9 @@ output:
     css: PAA.css
 ---
 
+[Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
+[Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
+
 ## Obligatorisk arbeidskrav
 - Versjon 1.1
 - Leveres ut: 28.09.2021 (Canvas)
