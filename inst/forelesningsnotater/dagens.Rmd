@@ -223,6 +223,10 @@ knitr::include_graphics(c("pensum/figurer-66.png"))
 
 # Skatt
 
+\begin{equation}
+n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
+\end{equation}
+
 ---
 
 # Oppsumering
