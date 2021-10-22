@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x50ad42e355a491d8b532764a3bc3593","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x83993bd48504bf3a93ab6292340bd5b","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-21)
+### 2021/08/12 (updated: 2021-10-22)
 
 ---
 
@@ -64,7 +64,7 @@ class: inverse, center, middle
 - Forklare hvorfor dividende kan påvirke agentkostnader.
 - Forklare hvorfor det norske skattesystemet er dividendenøytralt.
 
-Oppdatert: 2021-10-21
+Oppdatert: 2021-10-22
 
 ---
 
@@ -149,6 +149,7 @@ Undersøkelser tyder på at fastsatt dividende er basert på følgende kjenneteg
 `\begin{equation}
 DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 \end{equation}`
+
 ---
 
 **Eksempel 11.4:**
@@ -160,6 +161,7 @@ DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 Fleksibelt supplement?
 
 ---
+
 
 ## Norsk dividentpoltikk over tid
 
@@ -188,51 +190,125 @@ ND_t = D_t + TB_t - EM_t
 
 ---
 
-# Irrelevans
 
-abc
+# Irrelevans (#0)
 
+Endring av eiernes verdi kan knyttes til to komponenter:
+- Kursendringer
+- Endret dividende
 
-- Kapitalmarkedet er perfekt
-- Egenkapitalbeskatninge er nøytral
-- Alt annet enn dividendepolitikk holdes konstant
+Irrelevansresultatet innebærer at effekten av endringen i den ene komponenten motsvares av tilsvarende motsatt endring i den andre komponenten.
+
+Dette resultatet bygger på følgende tre forutsetninger:
+1. Kapitalmarkedet er perfekt
+1. Egenkapitalbeskatningen er nøytral
+1. Alt annet enn dividendepolitikk holdes konstant
 
 ---
+
+Uavhengig av disse tre forutsetningene, vil for alle perioder følgende *kontantstrømbalanse* (dvs. pengetilgang lik pengebruk) måtte være oppfylt
 
 `\begin{equation}
-Kontantstrøm 
+Kontantstrøm fra driften + Ny gjeld + Ny egenkapital =
+\\ Renter + Avdrag + Investeringer + Dividende
 \end{equation}`
+
+Basert på antagelsen om gitt investerings- og gjeldsgradsbeslutninger vil vi ha hat
 
 `\begin{equation}
-\Delta =
+\Delta \text{Nytegnet egenkapital} = \Delta \text{Dividende}
 \end{equation}`
 
-formueseffekt
+- Dvs. enhver forandring av dividenden ( `\(\Delta \text{Dividende}\)` ) kreve en aksjeemisjon (fra enten nye eller tidligere aksjonærer) tilsvarende dividendøkningen.
+- Formueseffekten null for de gamle aksjonærene...?
 
 ---
 
-# Likviditet
+## Empiri fra USA
+
+En undersøkelse  fra 1972-1999 avdekker følgende mønstre
+
+1. Andelen dividendebetaler synker fra
+1. Tilbakekjøp stadig mer vanlig
+1. Selskapene som ikke betaler dividende, er kjennetegnet ved sterk veskt og investeringstakt
+1. Selskapene som betaler dividende, er kjennetegnet ved høyt overskudd og vekstpotensiale 
 
 ---
 
-# Signalfunksjonen
+# Likviditet (#1) 
+
+- Med *hjemmelaget dividendepoltikk* forstås at enkeltinvestorer aktivt går inn for å fjerne den uønskede likviditetseffekten av selskapets dividendepolitikk.
+- Synes investoren at selskapets gir ham for liten (stor) kontantbeholdning, kan denne økt (reduseres) ved å selge (kjøpe) noen av aksjene i selskapet.
+- Likviditetsargumentet for høy dividende må derfor implisitt forutsette at det 
+
+#### Børsnoterte selskaper
+- Lave transaksjonskostnader. Eiernes likviditetsbehov ikke noe argument for høyt utbytte
+
+#### Unoterte selskaper
+- Høye transaksjonskostnader: Eiernes likviditetsbehov argument for høyt utbytte
+
+---
+
+# Signalfunksjonen (#2)
+
+Dillema . positivt budskap men ikke dele hemmelighten
+
+Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
+
+
+Signalteorien predikerer at
+
+1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
+2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
 
 &lt;img src="pensum/figurer-66.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-# Interessekonflikter
+# Interessekonflikter (#3)
+
+**Agenkostnader** tap i selskapsverdi som følge av 
+
+### Dividende og fri kontantstrøm
+
+- Diagnose:
+	-
+	-
+	-
+- Medesin:
+	- 1. Betal høy dividende
+	- 2. Gå ofte til kapitalmarkedet for å hente ny egenkapital
+	- 3. 1. og 2. blir desto viktigere ved (a) høyre fri kontantstrøm,  (b), mer spredt eierskap og (c) mindre ledelsens lønn avhenger av selskapets resultater
 
 ---
 
-# Skatt
+Virker igjennom mekansimene
+
+1. Endret dividende vil her påvirker selskapets fremtidige kontantstrøm.
+   1. a
+   1. b
+1. Gjennomlysning
+   1. c
+   1. d
+1. Insentiver for eier og leder
+   1. e 
+   1. f
 
 ---
 
-# Oppsumering
+#  Skatt (#4)
 
+*Dividendefaktoren* `\(n^{*}_d\)` som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
 
+`\begin{equation}
+n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
+\end{equation}`
 
+- `\(n^{*}_d&gt;0\)` Dividende skattefavoriseres
+- `\(n^{*}_d=0\)` Dividendenøytralt skattesystem
+- `\(n^{*}_d&lt;0\)` Tilbakepløying skattefavoriseres 
+
+Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
