@@ -61,12 +61,13 @@ class: inverse, center, middle
 
 # Intro
 
-- *Dividende:* Utbytte fra selskapet til eierne av midler
-- *Dividendepolitikk:* Hvordan dividenden blir bestemt:
-	- Start og stopp
-	- Hvilke midler
-	- Størrelsen på utbytte
-	- Stabiliteten
+- *Dividende:* Utbytte av midler fra selskapet til dens eiere
+- *Dividendepolitikk:* Hvordan dette utbyttet bestemmes
+- Dividendepolitikken avklarer vanligvis følgende spørsmål:
+	- Start og stopp: Når skal dividenden betales, og når skal den sløyfes
+	- Hvilke midler: Hva slags type dividende skal eierne velge?
+	- Størrelsen på utbytte: Hvor stort skal utbytte være sett i forhold til overskuddet?
+	- Stabiliteten: Hvor mye skal årets utbytte avvike fra fjorårets?
 
 ---
 
@@ -95,7 +96,10 @@ Dette innebærer at kun som velger å selge sine aksjer mottat likvider.
 
 ## Opphørsdividende, fondsemisjon og aksjesplitter
 
-I det eierne velger å nedlegge bedriften får de utbetalt opphørsdividiende:$\text{salg av eiendeler} - \text{avviklingskostander} + \text{gjeld})$. Desinvestering.
+I det eierne velger å nedlegge bedriften får de utbetalt opphørsdividiende:
+$$\text{salg av eiendeler} - (\text{avviklingskostander} + \text{gjeld})$$
+
+Desinvstering
 
 Som vist under forelesning 6 `r tema[6]`,  innebærer hverken fondsemisjon og aksjesplitter noen utbetaling fra selskapet til eierne. Lærboka velger derfor, selv o
 m noen velger å gjøre det, ikke betrakte dette som en dividendevariant.
@@ -118,8 +122,8 @@ m noen velger å gjøre det, ikke betrakte dette som en dividendevariant.
 - Beslutningen tas formelt på generealforsamlingen (men de kan ikke vedta et høyere dividende enn hva styret foreslår)
 
 Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består av
-	 - Dividenderamme ()
-	 - Skjønn 
+- Dividenderamme ()
+- Skjønn 
 
 ---
 
@@ -162,7 +166,7 @@ knitr::include_graphics(c("pensum/figurer-63.png"))
 
 ---
 
-## Norsk kontra andre land
+## Norge kontra andre land
 
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
@@ -206,8 +210,9 @@ Dette resultatet bygger på følgende tre forutsetninger:
 Uavhengig av disse tre forutsetningene, vil for alle perioder følgende *kontantstrømbalanse* (dvs. pengetilgang lik pengebruk) måtte være oppfylt
 
 \begin{equation}
-Kontantstrøm fra driften + Ny gjeld + Ny egenkapital =
-\\ Renter + Avdrag + Investeringer + Dividende
+\text{Kontantstrøm fra driften} +\text{Ny gjeld} + \text{Ny egenkapital}\\
+= 
+\text{Renter} + \text{Avdrag} + \text{Investeringer} + \text{Dividende}
 \end{equation}
 
 Basert på antagelsen om gitt investerings- og gjeldsgradsbeslutninger vil vi ha hat
@@ -308,4 +313,3 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 - $n^{*}_d<0$ Tilbakepløying skattefavoriseres 
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
-
