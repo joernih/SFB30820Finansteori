@@ -108,16 +108,16 @@ Er_mn = 0.04
 r_fn = 0.02
 w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
 w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
 # Risikoavers investor
 Er_pn = 0.02
 Er_mn = 0.04
 r_fn = 0.02
 w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
 w2 = 1-w1
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
 exit
 ```
 
@@ -150,7 +150,7 @@ k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
 k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
 100000/(k_T)
-(100000/(k_E))/ant_aksj
+#(100000/(k_E))/ant_aksj
 ```
 
 1. Basert på disse opplysningene, klarer du å finne totalkapitalkostnaden til selskapet?
@@ -203,12 +203,15 @@ stats_df <- data.frame(lopetid=c(2,3),
 		       M=Mv[2:3],
 		       p=c(495,495)
 		       )
-one <- 1.015/1
-two <- (M[1]/P2)^2
-thr <- (M[2]/P3)^3
-r_1_2 <- two/one-1
-r_2_3 <- thr/two-1
-rownames(stats_df) <- c(" ","  ") 
+
+one <- 500/492.61
+two <- (500/495)^(1/2)
+thr <- (500/495)^(1/3)
+P1 <-500/(one)
+P2 <-500/(two)^2
+P3 <-500/(thr)^3
+one/two
+two/thr
 htmlTable::htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris"))
 ```
 
