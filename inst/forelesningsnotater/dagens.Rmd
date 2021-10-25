@@ -221,7 +221,6 @@ ND_t = D_t + TB_t - EM_t
 - $EM_t$ (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne *tilfører* selskapet
 - Kontantstrømmen må sees i sammeheng med finansieringstrømmen for hele økonomien
 
----
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-65.png"))
