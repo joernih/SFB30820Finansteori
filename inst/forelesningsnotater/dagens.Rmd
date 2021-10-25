@@ -43,6 +43,7 @@ servr::daemon_stop()
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source("timeplan.R")
 ```
+---
 
 class: inverse, center, middle
 
