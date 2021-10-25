@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x75d098f3d8147cf9f18d0f259c28355","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9ea92f9ce6f4d0d9b48c359d7163330","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -137,9 +137,69 @@ Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består
 
 ## Bransjemønstre i dividendepolitikken
 
-&lt;img src="11_2.jpeg" width="50%" /&gt;
+**Tabell 11.1:** Dividendepraksis for selskaper notert på Oslo Børs i perioden 1995-2015
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Næring&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Dividendebetalere, %&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Utdelingsforhold&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Transport&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;51&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finans&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.56&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Detaljhandel&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Industri&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.65&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Fast eiendom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;IT og Media&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Petroleum&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;21&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.73&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.66&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-
+- Merk: Utdelingsforholdet reflekterer kun dividendeutbetalerne
+- Inkluderes alle selskapene på Børsen, faller dette forholdet fra `\(0.66\)` til `\(0.27\)`
 
 ---
 
@@ -147,21 +207,16 @@ Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består
 
 Undersøkelser tyder på at fastsatt dividende er basert på følgende kjennetegn
 
-1. Målsatt dividende...
-1. Stabilitet...
-1. Avvik
-
-Lintner omformulerte dette til
-
+1. Først bestemmes målsatt dividende per aksje direkte fra overskuddet (årsresultatet)
+1. Selskapet ønsker også et stabilt utdelingsforhold over tid
+1. Hensyn til disse to punktene kan beskrives formelt gjennom den såkale Lintner-modellen
 `\begin{equation}
 DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 \end{equation}`
 
----
+Hvor både `\(a\)` (justeringsfaktor) og `\(b\)` (målsatt utdelingsforhold) kan variere mellom 0 og 1.
 
-**Eksempel 11.4:**
-
-&lt;img src="11_1.jpeg" width="50%" /&gt;
+Empiri for Norge (1980-1995) for 25 selskaper gav b=0.20 og a=0.50.
 
 
 
@@ -169,44 +224,55 @@ DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 
 ## Tilbakekjøp
 
-Fleksibelt supplement?
+Tilbakejøp kan benyttes som et fleksibelt supplement til den langt mer stabile kontantdividenden
+- Svinger sterkere i takt med overskuddet enn hva dividenden gjør:
+ - Høyt når overskuddet er høyt
+ - Null når overskuddet er lavt
 
 ---
-
 
 ## Norsk dividentpoltikk over tid
 
 &lt;img src="pensum/figurer-63.png" width="40%" style="display: block; margin: auto;" /&gt;
-- Nedadgående
+
+- Under halvparten betaler dividende
+- De som betaler ut, de betaler gjennomsnitt 2/3 av overskuddet
+- Lovgivningen begrenser ikke dividenden
+- Tilbakekjøp av aksjer falt markant de senere årene
 
 ---
 
 ## Norge kontra andre land
 
-
 &lt;img src="pensum/figurer-64.png" width="40%" style="display: block; margin: auto;" /&gt;
-
-- Nedadgående
 
 ---
 
 ## Dividende kontra nettodividende
 
+For å vite hvordan kontantstrømmen fordeler seg mellom selskapet og eierne, må man studere *nettodividenden*:
 `\begin{equation}
 ND_t = D_t + TB_t - EM_t
 \end{equation}`
 
-&lt;img src="pensum/figurer-65.png" width="40%" style="display: block; margin: auto;" /&gt;
+- `\(D_t + TB_t\)` (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne tar *ut* av selskapet
+- EM_t (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne *tilfører* selskapet
+- Kontantstrømmen må sees i sammeheng med finansieringstrømmen for hele økonomien
 
-- To første utbetalinger
-- Siste innbetalinger
-- Må sees i sammenheng med resten av økonomien
+---
+
+&lt;img src="pensum/figurer-65.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Dividende og avkastningskrav
 
-To komponenter
+- Kan nærliggende å betrake eier på linje med kreditor
+  - Dividendeinntekten er paralell med renteinntekten for kreditorene
+- Men dette blander sammen likviditetseffekten for selskapet med avkastningskravet for eiernes
+- Eiernes avkastningskrav består
+  - Summen av dividende
+  - Kursstigning
 
 ---
 
@@ -388,35 +454,43 @@ En undersøkelse  fra 1972-1999 avdekker følgende mønstre
 
 # Signalfunksjonen (#2)
 
-Dillema . positivt budskap men ikke dele hemmelighten
 
-Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
+- Ledelsen kan bli stillt ovenfor et dillemma dersom kun de får tilgang til positiv informasjon om selskapets 
+framtidige kontantstrøm.
+- På den ene siden,  ønsker man ikke konkret å dele med markedet årsaken til den positive nyheten (eks. pga 
+av at konkurrenter ikke skal få kjennskap til den)
+- På den andre siden, ønske å signalisere til markedet om at en positiv utvikling er på gang.
 
+I denne situajonen: Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
+
+---
 
 Signalteorien predikerer at
 
 1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
-2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
-
 &lt;img src="pensum/figurer-66.png" width="40%" style="display: block; margin: auto;" /&gt;
+	- Stemmer godt med empiri
+2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
+	- Stemmer dårlig med empiri
 
 ---
 
 # Interessekonflikter (#3)
 
-**Agenkostnader** tap i selskapsverdi som følge av 
+- **Agenkostnader:** tap i selskapsverdi som følge av interessekonflikter mellom selskapets interesenter (prinsipal vs. agent).
+Eks. 
+- Finansieringskildene til de prosjektene som skaper agenkostnader er selskapets *fri kontantstrøm* (dvs. ressursene i selskapet som lett kan 
+  omsettes til likvider)
 
 ### Dividende og fri kontantstrøm
 
 - Diagnose:
-	-
-	-
-	-
-- Medesin:
-	- 1. Betal høy dividende
-	- 2. Gå ofte til kapitalmarkedet for å hente ny egenkapital
-	- 3. 1. og 2. blir desto viktigere ved (a) høyre fri kontantstrøm,  (b), mer spredt eierskap og (c) mindre ledelsens lønn avhenger av selskapets resultater
-
+	- Desto større fri kontantstrøm, desto mer fristende for ledelsen å benytte dette til prosjekter som eierne ikke er tjent med
+- Medesinen:
+	- Betal høy dividende
+	- Gå ofte til kapitalmarkedet for å hente ny egenkapital
+	- Denne medesinen  blir viktigere for selskapet desto (a) Høyere fri kontantstrøm,  (b), Mer spredt eierskap,  og (c) Mindre ledelsens lønn avhenger av selskapets resultater
+                            
 ---
 
 Virker igjennom mekansimene
@@ -447,80 +521,6 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
-# Likviditet (#1) 
-
-- Med *hjemmelaget dividendepoltikk* forstås at enkeltinvestorer aktivt går inn for å fjerne den uønskede likviditetseffekten av selskapets dividendepolitikk.
-- Synes investoren at selskapets gir ham for liten (stor) kontantbeholdning, kan denne økt (reduseres) ved å selge (kjøpe) noen av aksjene i selskapet.
-- Likviditetsargumentet for høy dividende må derfor implisitt forutsette at det 
-
-#### Børsnoterte selskaper
-- Lave transaksjonskostnader. Eiernes likviditetsbehov ikke noe argument for høyt utbytte
-
-#### Unoterte selskaper
-- Høye transaksjonskostnader: Eiernes likviditetsbehov argument for høyt utbytte
-
----
-
-# Signalfunksjonen (#2)
-
-Dillema . positivt budskap men ikke dele hemmelighten
-
-Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
-
-
-Signalteorien predikerer at
-
-1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
-2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
-
-&lt;img src="pensum/figurer-66.png" width="40%" style="display: block; margin: auto;" /&gt;
-
----
-
-# Interessekonflikter (#3)
-
-**Agenkostnader** tap i selskapsverdi som følge av 
-
-### Dividende og fri kontantstrøm
-
-- Diagnose:
-	-
-	-
-	-
-- Medesin:
-	- 1. Betal høy dividende
-	- 2. Gå ofte til kapitalmarkedet for å hente ny egenkapital
-	- 3. 1. og 2. blir desto viktigere ved (a) høyre fri kontantstrøm,  (b), mer spredt eierskap og (c) mindre ledelsens lønn avhenger av selskapets resultater
-
----
-
-Virker igjennom mekansimene
-
-1. Endret dividende vil her påvirker selskapets fremtidige kontantstrøm.
-   1. a
-   1. b
-1. Gjennomlysning
-   1. c
-   1. d
-1. Insentiver for eier og leder
-   1. e 
-   1. f
-
----
-
-#  Skatt (#4)
-
-*Dividendefaktoren* `\(n^{*}_d\)` som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
-
-`\begin{equation}
-n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
-\end{equation}`
-
-- `\(n^{*}_d&gt;0\)` Dividende skattefavoriseres
-- `\(n^{*}_d=0\)` Dividendenøytralt skattesystem
-- `\(n^{*}_d&lt;0\)` Tilbakepløying skattefavoriseres 
-
-Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
