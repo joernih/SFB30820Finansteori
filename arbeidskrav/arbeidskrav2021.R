@@ -1,13 +1,12 @@
 # Installing libraries
-rm(list=ls())
 library(ggplot2)
 library(dplyr)
 library(htmlTable)
 library(SFB30820Finansteori)
-ls("package:SFB30820Finansteori")
+#ls("package:SFB30820Finansteori")
 
+####################################################################################################################################################################
 # Del I
-# Del II
 ## Reading the data
 crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::filter(Currency==c("BTC","ETH"))
 names(crypto_df) <- c("typeindex","date","close","open","high","low") 
@@ -32,8 +31,12 @@ enkelt_df <-
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
 	dplyr::mutate(mean=mean(close)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T))%>%
-	dplyr::mutate(stdp=sd(rp)) %>%
+	dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
 	dplyr::ungroup() 
+## Descriptive
+unique(enkelt_df$mean)
+unique(enkelt_df$varp)
+unique(enkelt_df$stdp)
 
 obj <- unique(enkelt_df$typeindex)
 criptcoinsg <- obj %>% 
@@ -43,10 +46,11 @@ criptcoinsg <- obj %>%
 	color <- c('blue','green','red')
 	ggplot2::ggplot(dfg, aes(x=date,y=rp)) + geom_point()
 		   })
-
+## Graphical
 gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]], 
 			ncol=3)
-
+####################################################################################################################################################################
+# Del II
 ## Porteføljeinvesteringer
 gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>% 
 	dplyr::select(typeindex,date,rp) %>%
@@ -69,7 +73,7 @@ cor(gensh_df_2$NSE,gensh_df_2$ETH)
 
 View(gensh_df_2)
 
-
+# Stopped here
 
 ### Works
 w <- c(0.3,0.4,0.3)
@@ -112,5 +116,4 @@ cor(gensh_df_2$BTC,gensh_df_2$ETH)
 cor(gensh_df_2$BTC,gensh_df_2$NSE)
 cor(gensh_df_2$BTC,gensh_df_2$XRP)
 cor(gensh_df_2$XRP,gensh_df_2$ETH)
-
 
