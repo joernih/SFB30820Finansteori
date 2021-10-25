@@ -27,7 +27,6 @@ devtools::install()
 ```{r, eval=F, echo=F}
 ## Simple build
 pkgdown::build_site()
-
 ## Specific build
 pkgdown::build_home()
 pkgdown::build_articles()

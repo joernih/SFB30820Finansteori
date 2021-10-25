@@ -34,4 +34,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-22 17:43:57**
+**Siste gang oppdatert: 2021-10-25 18:18:01**
