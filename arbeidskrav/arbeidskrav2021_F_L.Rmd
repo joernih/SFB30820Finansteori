@@ -93,32 +93,32 @@ htmlTable::htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning",
 ```
 
 ```{r, echo=F}
-#library(reticulate)
-#reticulate::repl_python()
-#import json
-#import sympy
-#import numpy
-### import matplotlib.pyplot as plt
-#from sympy import solve, Eq, symbols, latex, simplify
-#Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
-#ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
-### Risk-lover investorene
-#Er_pn = 0.44
-#Er_mn = 0.04
-#r_fn = 0.02
-#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
-#w2 = 1-w1
-##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
-### Risikoavers investor
-#Er_pn = 0.02
-#Er_mn = 0.04
-#r_fn = 0.02
-#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
-#w2 = 1-w1
-##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
-#exit
+library(reticulate)
+reticulate::repl_python()
+import json
+import sympy
+import numpy
+## import matplotlib.pyplot as plt
+from sympy import solve, Eq, symbols, latex, simplify
+Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
+ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
+## Risk-lover investorene
+Er_pn = 0.44
+Er_mn = 0.04
+r_fn = 0.02
+w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+w2 = 1-w1
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+# Risikoavers investor
+Er_pn = 0.02
+Er_mn = 0.04
+r_fn = 0.02
+w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+w2 = 1-w1
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+exit
 ```
 
 Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.000,- som de ønsker å investere.
@@ -150,7 +150,7 @@ k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
 k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
 100000/(k_T)
-#(100000/(k_E))/ant_aksj
+(100000/(k_E))/ant_aksj
 ```
 
 1. Basert på disse opplysningene, klarer du å finne totalkapitalkostnaden til selskapet?
