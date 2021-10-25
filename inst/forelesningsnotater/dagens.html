@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1cb54a9d62d40e287d959b43bb76286","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x75d098f3d8147cf9f18d0f259c28355","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-22)
+### 2021/08/12 (updated: 2021-10-25)
 
 ---
 
@@ -64,16 +64,16 @@ class: inverse, center, middle
 - Forklare hvorfor dividende kan påvirke agentkostnader.
 - Forklare hvorfor det norske skattesystemet er dividendenøytralt.
 
-Oppdatert: 2021-10-22
+Oppdatert: 2021-10-25
 
 ---
 
 # Intro
 
 - *Dividende:* Utbytte av midler fra selskapet til dens eiere
-- *Dividendepolitikk:* Hvordan dette utbyttet bestemmes
+- *Dividendepolitikk:* Hvordan dette utbyttet skal bestemmes
 - Dividendepolitikken avklarer vanligvis følgende spørsmål:
-	- Start og stopp: Når skal dividenden betales, og når skal den sløyfes
+	- Start og stopp: Når skal dividenden betales, og når skal den sløyfes?
 	- Hvilke midler: Hva slags type dividende skal eierne velge?
 	- Størrelsen på utbytte: Hvor stort skal utbytte være sett i forhold til overskuddet?
 	- Stabiliteten: Hvor mye skal årets utbytte avvike fra fjorårets?
@@ -88,16 +88,16 @@ Dette er den vanligste varianten
 
 - Selskapet betaler ut et visst antall kroner pr. utestående aksje
 - Beløpet foreslås av styret
-- Vedtas på generalforsamling (simpelt flertall)
-- Utbetales i løpet av første halvår etter regnskapsårets slutt til alle aksjonærer som er registrert aksjonærer på en bestemt dato
-- Dagen etter denne datoen kalles *ex-dividende-*dagen, hvor aksjen da omsettes uten rett til årets dividende
+- Vedtas på generalforsamling (ved simpelt flertall)
+- Utbetales i løpet av første halvår etter regnskapsårets slutt, dette til alle som er registrert aksjonærer på en bestemt dato
+- Dagen etter dette registreringstidspunktet kalles *ex-dividende-*dagen, hvor aksjen omsettes uten rett til årets dividende
 
 ---
 
 ## Tilbakekjøp av egne aksjer
 
-Dette innebærer at kun som velger å selge sine aksjer mottat likvider.
-
+- Istedenfor direkte utbytte, mottat aksjonærene her kun et tilbud om å selge sine aksjer
+- Det innebærer at kun de som velger å selge sine aksjer mottat likvider
 - Disse aksjene blir så slettet og ny fullmakt utstedt
 - Selskapet kan maksimalt kjøpe tilbake 10 prosent av sine egne aksjer
 
@@ -105,23 +105,22 @@ Dette innebærer at kun som velger å selge sine aksjer mottat likvider.
 
 ## Opphørsdividende, fondsemisjon og aksjesplitter
 
-I det eierne velger å nedlegge bedriften får de utbetalt opphørsdividiende:
-`$$\text{salg av eiendeler} - (\text{avviklingskostander} + \text{gjeld})$$`
-
-Desinvstering
-
-Som vist under forelesning 6 Langsiktige finansieringsformer,  innebærer hverken fondsemisjon og aksjesplitter noen utbetaling fra selskapet til eierne. Lærboka velger derfor, selv o
-m noen velger å gjøre det, ikke betrakte dette som en dividendevariant.
+- Opphørsdividene kommer som et resultat av en beslutning fra selskapet om å nedlegge driften. 
+	- Beløpet `$$\text{salg av eiendeler} - (\text{avviklingskostander} + \text{gjeld})$$`
+	- Siden dette er en investering (desinvestering) om avvikling framfor fortsatt drift, behandles ikke videre i dette kapitlet
+- Hverken fondsemisjon og aksjesplitter noen utbetaling fra selskapet til eierne (se forelesning 6 Langsiktige finansieringsformer)
+	- Det er derfor i følge læreboka ikke å betrakte dette som en dividendevariant
 
 ---
 
 ## Utbytteaksjer og naturalier
 
-*Utbytteaksjer* innebærer at eierne kan velge å måtta dividenden som kontantdividende eller som nyutstede aksjer (rettet egenkapitalemisjon uten tegningsrettigheter).
+- *Utbytteaksjer* innebærer at eierne kan velge mellom å motta dividende som kontantdividende eller som nyutstede aksjer. 
+  - Den kan derfor betraktes som en rettet egenkapitalemisjon uten tegningsrettigheter
 
-*Naturalier* innebærer at man får midler i form av varer eller tjenester
-+ Gir skattefridrag
-- Ikke likvid
+- *Naturalier* innebærer at man får midler i form av varer eller tjenester
+  - `\(+\)` Gir skattefridrag
+  - `\(-\)` Ikke likvid
 
 ---
 
@@ -131,14 +130,16 @@ m noen velger å gjøre det, ikke betrakte dette som en dividendevariant.
 - Beslutningen tas formelt på generealforsamlingen (men de kan ikke vedta et høyere dividende enn hva styret foreslår)
 
 Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består av
-- Dividenderamme ()
-- Skjønn 
+- `\(\text{Dividenderamme}=\text{egenkapital}-(\text{aksjekapital}+\text{bunden egenkapital)0}\)` 
+- Samt skjønn (dvs. i tillegg til dividenderammen, må også ta hensyn til hva som er forsvarlig drift)
 
 ---
 
 ## Bransjemønstre i dividendepolitikken
 
-Tabell ?
+&lt;img src="11_2.jpeg" width="50%" /&gt;
+
+
 
 ---
 
@@ -150,6 +151,8 @@ Undersøkelser tyder på at fastsatt dividende er basert på følgende kjenneteg
 1. Stabilitet...
 1. Avvik
 
+Lintner omformulerte dette til
+
 `\begin{equation}
 DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 \end{equation}`
@@ -157,6 +160,10 @@ DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
 ---
 
 **Eksempel 11.4:**
+
+&lt;img src="11_1.jpeg" width="50%" /&gt;
+
+
 
 ---
 
@@ -170,6 +177,7 @@ Fleksibelt supplement?
 ## Norsk dividentpoltikk over tid
 
 &lt;img src="pensum/figurer-63.png" width="40%" style="display: block; margin: auto;" /&gt;
+- Nedadgående
 
 ---
 
@@ -177,6 +185,8 @@ Fleksibelt supplement?
 
 
 &lt;img src="pensum/figurer-64.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- Nedadgående
 
 ---
 
@@ -188,9 +198,15 @@ ND_t = D_t + TB_t - EM_t
 
 &lt;img src="pensum/figurer-65.png" width="40%" style="display: block; margin: auto;" /&gt;
 
+- To første utbetalinger
+- Siste innbetalinger
+- Må sees i sammenheng med resten av økonomien
+
 ---
 
 ## Dividende og avkastningskrav
+
+To komponenter
 
 ---
 
@@ -239,6 +255,197 @@ En undersøkelse  fra 1972-1999 avdekker følgende mønstre
 1. Selskapene som betaler dividende, er kjennetegnet ved høyt overskudd og vekstpotensiale 
 
 ---
+## Lintner-modellen
+
+Undersøkelser tyder på at fastsatt dividende er basert på følgende kjennetegn
+
+1. Målsatt dividende...
+1. Stabilitet...
+1. Avvik
+
+Lintner omformulerte dette til
+
+`\begin{equation}
+DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
+\end{equation}`
+
+---
+
+**Eksempel 11.4:**
+
+&lt;img src="11_1.jpeg" width="50%" /&gt;
+
+
+
+---
+
+## Tilbakekjøp
+
+Fleksibelt supplement?
+
+---
+
+
+## Norsk dividentpoltikk over tid
+
+&lt;img src="pensum/figurer-63.png" width="40%" style="display: block; margin: auto;" /&gt;
+- Nedadgående
+
+---
+
+## Norge kontra andre land
+
+
+&lt;img src="pensum/figurer-64.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- Nedadgående
+
+---
+
+## Dividende kontra nettodividende
+
+`\begin{equation}
+ND_t = D_t + TB_t - EM_t
+\end{equation}`
+
+&lt;img src="pensum/figurer-65.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- To første utbetalinger
+- Siste innbetalinger
+- Må sees i sammenheng med resten av økonomien
+
+---
+
+## Dividende og avkastningskrav
+
+To komponenter
+
+---
+
+
+# Irrelevans (#0)
+
+Endring av eiernes verdi kan knyttes til to komponenter:
+- Kursendringer
+- Endret dividende
+
+Irrelevansresultatet innebærer at effekten av endringen i den ene komponenten alltid vil motsvares av tilsvarende motsatt endring i den andre komponenten.
+
+Dette resultatet bygger på følgende tre forutsetninger:
+1. Kapitalmarkedet er perfekt
+1. Egenkapitalbeskatningen er nøytral
+1. Alt annet enn dividendepolitikk holdes konstant
+
+---
+
+Uavhengig av disse tre forutsetningene, vil for alle perioder følgende *kontantstrømbalanse* (dvs. pengetilgang lik pengebruk) være oppfylt
+
+`\begin{equation}
+\text{Kontantstrøm fra driften} +\text{Ny gjeld} + \text{Ny egenkapital}\\
+= 
+\text{Renter} + \text{Avdrag} + \text{Investeringer} + \text{Dividende}
+\end{equation}`
+
+Basert på antagelsen om gitt investerings- og gjeldsgradsbeslutninger, vil vi ha at
+
+`\begin{equation}
+\Delta \text{Nytegnet egenkapital} = \Delta \text{Dividende}
+\end{equation}`
+
+- Dvs. enhver forandring av dividenden ( `\(\Delta \text{Dividende}\)` ) kreve en aksjeemisjon (fra enten nye eller tidligere aksjonærer) tilsvarende dividendøkningen.
+- Formueseffekten blir derfor null for de gamle aksjonærene: Det som selskapet betaler ut med den ene hånden (dividenden), tar de tilbake ved den andre (emisjonen)
+
+---
+
+## Empiri fra USA
+
+En undersøkelse  fra 1972-1999 avdekker følgende mønstre
+
+1. Andelen dividendebetaler har i stor grad en synkende trend
+1. Tilbakekjøp av aksjer blir stadig mer vanlig, særlig blant de som betaler kontantdividende
+1. Selskapene som ikke betaler dividende, er kjennetegnet ved sterk veskt og investeringstakt
+1. Selskapene som betaler dividende, er kjennetegnet ved høyt overskudd og lavere vekstpotensiale 
+
+---
+
+# Likviditet (#1) 
+
+- Med *hjemmelaget dividendepoltikk* forstås at enkeltinvestorer aktivt går inn for å fjerne den uønskede likviditetseffekten av selskapets dividendepolitikk
+- Synes investoren at selskapets gir ham for liten (stor) kontantbeholdning, kan denne økes (reduseres) ved å selge (kjøpe) noen av aksjene i selskapet
+- Likviditetsargumentet for høy dividende må derfor implisitt forutsette at det eksisterer *transaksjonskostnader* ved omsetning av aksjer
+
+#### Børsnoterte selskaper
+
+- Lave transaksjonskostnader
+- Som gjør at eiernes likviditetsbehov ikke er noe argument for å endre utbytte
+
+#### Unoterte selskaper
+
+- Høye transaksjonskostnader 
+- Som gjør at eiernes likviditetsbehov kan være et argument for å endre utbytte
+
+---
+
+# Signalfunksjonen (#2)
+
+Dillema . positivt budskap men ikke dele hemmelighten
+
+Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
+
+
+Signalteorien predikerer at
+
+1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
+2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
+
+&lt;img src="pensum/figurer-66.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Interessekonflikter (#3)
+
+**Agenkostnader** tap i selskapsverdi som følge av 
+
+### Dividende og fri kontantstrøm
+
+- Diagnose:
+	-
+	-
+	-
+- Medesin:
+	- 1. Betal høy dividende
+	- 2. Gå ofte til kapitalmarkedet for å hente ny egenkapital
+	- 3. 1. og 2. blir desto viktigere ved (a) høyre fri kontantstrøm,  (b), mer spredt eierskap og (c) mindre ledelsens lønn avhenger av selskapets resultater
+
+---
+
+Virker igjennom mekansimene
+
+1. Endret dividende vil her påvirker selskapets fremtidige kontantstrøm.
+   1. a
+   1. b
+1. Gjennomlysning
+   1. c
+   1. d
+1. Insentiver for eier og leder
+   1. e 
+   1. f
+
+---
+
+#  Skatt (#4)
+
+*Dividendefaktoren* `\(n^{*}_d\)` som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
+
+`\begin{equation}
+n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
+\end{equation}`
+
+- `\(n^{*}_d&gt;0\)` Dividende skattefavoriseres
+- `\(n^{*}_d=0\)` Dividendenøytralt skattesystem
+- `\(n^{*}_d&lt;0\)` Tilbakepløying skattefavoriseres 
+
+Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
 # Likviditet (#1) 
 
