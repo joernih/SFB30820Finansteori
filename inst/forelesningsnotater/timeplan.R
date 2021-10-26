@@ -18,8 +18,8 @@ tema <- c(
 	  "",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Gjeldgrad og verdi med imperfeksjoner",
-	  "**Dividende**",
-	  "Opsjoner",
+	  "Dividende",
+	  "**Opsjoner**",
 	  "Finansielle instrumenter til påvirking av kontantstrømmer",
 	  "Oppgavegjennomgang"
 )
@@ -34,8 +34,8 @@ literatur <- c(
 	       "**Høstferie**",
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
-	       "**Kap. 11: Dividende**",
-	       "Kap. 12: Opsjoner",
+	       "Kap. 11: Dividende",
+	       "**Kap. 12: Opsjoner**",
 	       "Kap. 13: Risikostyring",
 	       "Kap. 1,2-4,5-8,11,12,13"
 )
@@ -50,8 +50,8 @@ undervfor <- c(
 	  "",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
-	  "**Campus Sone E E1-062/Zoom**",
 	  "Campus Sone E E1-062/Zoom",
+	  "**Campus Sone E E1-062/Zoom**",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone G G1-062-Naturfag/Zoom"
 )

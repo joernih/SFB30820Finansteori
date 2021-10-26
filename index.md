@@ -19,7 +19,18 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
 temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til
 emneansvarlig.
 
-Viktige datoer:
+## Arbeidskrav
+
+-   [Lenke til oppdatert
+    regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
+-   Som avtalt i dagens forelesning
+    -   Tredje fane i arket inneholder et datasett kun over de
+        tidsperiodene hvor det er registrert observasjoner for *alle* de
+        tre tidsseriene
+    -   Vil etterhvert oppdatere regnearket med mitt løsningsforslag,
+        men forsøk selv å se om du klarer å bli ferdig før meg
+
+## Viktige datoer
 
 -   17.08: Første forelesning 08:15-11:00 (på Zoom)
 
@@ -34,4 +45,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-26 12:07:26**
+**Siste gang oppdatert: 2021-10-26 12:57:33**

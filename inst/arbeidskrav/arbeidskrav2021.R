@@ -44,8 +44,7 @@ enkelt_df <-
 	dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
 	dplyr::ungroup()
 
-View(enkelt_df)
-l()
+#View(enkelt_df)
 ## Descriptive
 unique(enkelt_df$mean)
 unique(enkelt_df$varp)
@@ -70,8 +69,9 @@ gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>%
 	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
 	tidyr::drop_na()
 
-
-View(gensh_df_2)
+sheets <- list(portfinvest=gensh_df_2)
+masheets <- list(krypto=crypto_df,boers=stocko_df,portfinvest=gensh_df_2)
+openxlsx::write.xlsx(masheets,file='cryptos2_nyse.xlsx',overwrite=T)
 
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
