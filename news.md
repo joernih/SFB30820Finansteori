@@ -1,5 +1,4 @@
 # Endringer i forelesningsnotatene
 
-- A
-- B
-- C
+
+- Endret notasjon på Lintner-modellen (DIV med OPA)

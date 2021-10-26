@@ -47,6 +47,8 @@ Dette emnet bygger videre på temaer vi allerede har begynt å sett på i emnet 
 
 Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til emneansvarlig. 
 
+## Arbeidskravet
+
 Viktige datoer: 
 
 - 17.08: Første forelesning 08:15-11:00 (på Zoom)
