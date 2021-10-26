@@ -19,8 +19,6 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
 temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til
 emneansvarlig.
 
-## Arbeidskravet
-
 Viktige datoer:
 
 -   17.08: Første forelesning 08:15-11:00 (på Zoom)
@@ -36,4 +34,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-26 11:43:23**
+**Siste gang oppdatert: 2021-10-26 12:07:26**
