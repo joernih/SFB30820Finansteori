@@ -33,8 +33,8 @@ library(FinancialMath)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr("dagens.Rmd")
-rmarkdown::render("dagens.Rmd")
+xaringan::inf_mr("neste2.Rmd")
+rmarkdown::render("neste2.Rmd")
 #xaringan::inf_mr("presentations.Rmd")
 servr::daemon_stop()
 ```
@@ -43,14 +43,38 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
+# Forelesning 13: `r tema[13]`
+
 class: inverse, center, middle
 
-# Læringsmål kapittel 12
-1. Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
-1. Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
-1. Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
-1. Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
-1. Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
-1. Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+# Læringsmål kapittel 13
+
+1. Begrunne hvorfor risikostyring kan være viktig.
+1. Redegjøre for viktige risikokilder.
+1. Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
+1. Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
+1. Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
+1. Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
 
 ---
+
+# Hvorfor risikostyring
+
+# Risikokilder
+
+# Forwardkontrakter
+
+# Futureskontrakter
+
+# Opsjoner
+
+# Swaps
+
+# Empiri om risikostyring
+
+---
+
+
+
+
+

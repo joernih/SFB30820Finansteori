@@ -28,7 +28,7 @@ emneansvarlig.
         tidsperiodene hvor det er registrert observasjoner for *alle* de
         tre tidsseriene
     -   Vil etterhvert oppdatere regnearket med mitt løsningsforslag,
-        men forsøk selv å se om du klarer å bli ferdig før meg
+        men forsøk selv først og sjekk om du klarer å bli ferdig før meg
 
 ## Viktige datoer
 
@@ -45,4 +45,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-10-26 12:57:33**
+**Siste gang oppdatert: 2021-10-26 13:08:53**

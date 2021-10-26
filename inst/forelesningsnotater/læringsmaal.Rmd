@@ -74,24 +74,6 @@ abstract: ''
 1. forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 1. redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
-# Læringsmål kapittel 9
-1. redegjøre for begrepet gjeldskapasitet og i hvilke situasjoner dette begrepet er relevant i en prosjektanalyse.
-1. forklare begrepet målsatt gjeldsgrad og hvordan det brukes i verdsettelsen av enkeltprosjekter.
-1. skrive opp uttrykket for justert nåverdi og forklare hva hver komponent uttrykker.
-1. beregne verdien av et gjeldfritt selskap basert på data fra et selskap med gjeld.
-1. forklare hvorfor det trengs en gjeldsgradsteori for å beregne kapitalkostnad for et selskap uten gjeld ved hjelp av data fra selskaper som har gjeld.
-1. beregne verdien av et selskap med egenkapitalmetoden og totalkapitalmetoden og forklare i hvilke situasjoner de gir samme resultat.
-
-# Læringsmål 10
-1. estimere kapitalkostnaden for egenkapital og for gjeld.
-1. fastsette risikofri rente og markedets risikopremie.
-1. estimere beta for et selskap med utgangspunkt i beta for sammenlignbare selskaper.
-1. beregne totalkapitalkostnaden for et selskap.
-1. beregne fri kontantstrøm fra historiske regnskapstall.
-1. predikere fremtidig fri kontantstrøm for et selskap.
-1. verdsette et selskap basert på fri kontantstrøm.
-1. verdsette et selskap med multiplikatorer.
-
 # Læringsmål kapittel 11
 1. forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
 1. forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
