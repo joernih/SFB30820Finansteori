@@ -31,7 +31,7 @@ pkgdown::build_site()
 pkgdown::build_home()
 pkgdown::build_articles()
 pkgdown::build_news()
-## Fine build
+,# Fine build
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 rmarkdown::render("index.Rmd")
