@@ -1,3 +1,13 @@
+# Del I
+## Snakke
+# Del II
+## Enkelinvsteringer
+- Sjekk Canvas/Nettisde på onsdag (mitt forslag)
+## Porteføljeinvesteringer
+- NA-observasjoner som ønkser å bli kvitt (p)
+
+
+
 # Installing libraries
 library(ggplot2)
 library(dplyr)
@@ -9,37 +19,40 @@ library(SFB30820Finansteori)
 # Del I
 ## Reading the data
 crypto_df <- list.files(path="csv",pattern = "*.csv")[c(1,2,4)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::filter(Currency==c("BTC","ETH"))
-names(crypto_df) <- c("typeindex","date","close","open","high","low") 
+names(crypto_df) <- c("typeindex","date","close","open","high","low")
 
 stocko_df <- list.files(path="csv",pattern = "*.csv")[c(3)] %>% purrr::map_df(~readr::read_delim(paste0("csv/",.))) %>% dplyr::select(c(-6,-7)) %>% dplyr::mutate(typeindex='NSE') %>%
 	dplyr::relocate(typeindex,1)
-names(stocko_df) <- c("typeindex","date","open","high","low","close") 
+names(stocko_df) <- c("typeindex","date","open","high","low","close")
 #View(crypto_df)
 #View(stocko_df)
 msheets <- list(krypto=crypto_df,boers=stocko_df)
 openxlsx::write.xlsx(msheets,file='cryptos_nyse.xlsx',overwrite=T)
 
 ## Mothersheet
-gensh_df <- bind_rows(dplyr::select(crypto_df,date,typeindex,close), 
-		  dplyr::select(stocko_df,date,typeindex,close)) 
+gensh_df <- bind_rows(dplyr::select(crypto_df,date,typeindex,close),
+		  dplyr::select(stocko_df,date,typeindex,close))
 ## Enkeltinvesteringer
-enkelt_df <- 
+enkelt_df <-
  	gensh_df %>%
-	# Enkeltobjekter	
-	dplyr::group_by(typeindex) %>% 
+	# Enkeltobjekter
+	dplyr::group_by(typeindex) %>%
 	dplyr::mutate(mdate=min(date)) %>%
 	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
-	dplyr::mutate(mean=mean(close)) %>%
+	dplyr::mutate(mean=mean(rp, na.rm=T)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T))%>%
 	dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
-	dplyr::ungroup() 
+	dplyr::ungroup()
+
+View(enkelt_df)
+l()
 ## Descriptive
 unique(enkelt_df$mean)
 unique(enkelt_df$varp)
 unique(enkelt_df$stdp)
 
 obj <- unique(enkelt_df$typeindex)
-criptcoinsg <- obj %>% 
+criptcoinsg <- obj %>%
 	purrr::map(function(x,df=enkelt_df)
 		   {
 	dfg <- dplyr::filter(df,typeindex==x)
@@ -47,12 +60,12 @@ criptcoinsg <- obj %>%
 	ggplot2::ggplot(dfg, aes(x=date,y=rp)) + geom_point()
 		   })
 ## Graphical
-gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]], 
+gridExtra::grid.arrange(criptcoinsg[[1]],criptcoinsg[[2]],criptcoinsg[[3]],
 			ncol=3)
 ####################################################################################################################################################################
 # Del II
 ## Porteføljeinvesteringer
-gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>% 
+gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>%
 	dplyr::select(typeindex,date,rp) %>%
 	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
 	tidyr::drop_na()
@@ -72,7 +85,7 @@ cor(gensh_df_2$NSE,gensh_df_2$ETH)
 #dplyr::mutate(varp=var(rp,na.rm=T)) %>%
 #dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
 #dplyr::select(date, typeindex, close) %>%
-	tidyr::pivot_wider(names_from=typeindex, values_from=close)
+tidyr::pivot_wider(names_from=typeindex, values_from=close)
 
 View(gensh_df_2)
 
@@ -82,7 +95,7 @@ View(gensh_df_2)
 w <- c(0.3,0.4,0.3)
 erp <- c(0.12 0.15 0.25)
 ??cov.w
-?stats::cov_mat 
+?stats::cov_mat
 port_returns <- (sum(w *erp))
 port_risk_v <- t(w) %*% (cov_mat %*% w)
 port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
@@ -103,7 +116,7 @@ cov.wt(xy, wt = w1, method = "ML", cor = TRUE)
 #ls("package:foreign")
 #nyse <- read.dta("https://query1.finance.yahoo.com/v7/finance/download/%5ENYA?period1=1472774400&period2=1630540800&interval=1d&events=history&includeAdjustedClose=true")
 #
-#gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>% 
+#gensh_df_2 <- dplyr::filter(gensh_df, date>=max(mdate)) %>%
 #	dplyr::select(typeindex,date,rp) %>%
 #	tidyr::pivot_wider(names_from=typeindex, values_from=rp) %>%
 #	tidyr::drop_na()
@@ -117,4 +130,4 @@ cov.wt(xy, wt = w1, method = "ML", cor = TRUE)
 #cor(gensh_df_2$BTC,gensh_df_2$NSE)
 #cor(gensh_df_2$BTC,gensh_df_2$XRP)
 #cor(gensh_df_2$XRP,gensh_df_2$ETH)
-#
+

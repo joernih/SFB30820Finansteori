@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Finansteori (SFB30820)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jørn I.Halvorsen" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0cddc31b334494994adae88edd59a5b","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Finansteori (SFB30820)
+## Forelesningsnotater
+### Jørn I.Halvorsen
+### 2021/08/12 (updated: 2021-10-26)
+
+---
+
+
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+
+# Forelesning 11: **Dividende**
+
+- Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
+- Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
+- Redegjøre for teori og empiri om dividendens signalfunksjon.
+- Forklare hvorfor dividende kan påvirke agentkostnader.
+- Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+Oppdatert: 2021-10-26
+
+---
+
+# Intro
+
+- *Dividende:* Utbytte av midler fra selskapet til dens eiere
+- *Dividendepolitikk:* Hvordan dette utbyttet skal bestemmes
+- Dividendepolitikken avklarer vanligvis følgende spørsmål:
+	- Start og stopp: Når skal dividenden betales, og når skal den sløyfes?
+	- Hvilke midler: Hva slags type dividende skal eierne velge?
+	- Størrelsen på utbytte: Hvor stort skal utbytte være sett i forhold til overskuddet?
+	- Stabiliteten: Hvor mye skal årets utbytte avvike fra fjorårets?
+
+---
+
+# Varianter
+
+## Kontantdividende
+
+Dette er den vanligste varianten
+
+- Selskapet betaler ut et visst antall kroner pr. utestående aksje
+- Beløpet foreslås av styret
+- Vedtas på generalforsamling (ved simpelt flertall)
+- Utbetales i løpet av første halvår etter regnskapsårets slutt, dette til alle som er registrert aksjonærer på en bestemt dato
+- Dagen etter dette registreringstidspunktet kalles *ex-dividende-*dagen, hvor aksjen omsettes uten rett til årets dividende
+
+---
+
+## Tilbakekjøp av egne aksjer
+
+- Istedenfor direkte utbytte, mottat aksjonærene her kun et tilbud om å selge sine aksjer
+- Det innebærer at kun de som velger å selge sine aksjer mottat likvider
+- Disse aksjene blir så slettet og ny fullmakt utstedt
+- Selskapet kan maksimalt kjøpe tilbake 10 prosent av sine egne aksjer
+
+---
+
+## Opphørsdividende, fondsemisjon og aksjesplitter
+
+- Opphørsdividene kommer som et resultat av en beslutning fra selskapet om å nedlegge driften 
+	- Beløpet `$$\text{salg av eiendeler} - (\text{avviklingskostander} + \text{gjeld})$$`
+	- Siden dette er en investering (desinvestering) om avvikling framfor fortsatt drift, behandles ikke videre i dette kapitlet
+- Hverken fondsemisjon eller aksjesplitter innebærer noen utbetaling fra selskapet til eierne (se forelesning 6 Langsiktige finansieringsformer)
+	- Vi betrakter derfor ikke i dette kurest dette som en dividendevariant
+
+---
+
+## Utbytteaksjer og naturalier
+
+- *Utbytteaksjer* innebærer at eierne kan velge mellom å motta dividende som kontantdividende eller som nyutstede aksjer
+  - Den kan derfor betraktes som en rettet egenkapitalemisjon uten tegningsrettigheter
+
+- *Naturalier* innebærer at man får midler i form av varer eller tjenester
+  - `\(+\)` Gir skattefridrag
+  - `\(-\)` Ikke likvid
+
+---
+
+# Praksis
+
+- Ansvaret for utformingen av dividendepolitikken ligger hos styret og ledelsen.
+- Beslutningen tas formelt på generealforsamlingen (men de kan ikke vedta et høyere dividende enn hva styret foreslår)
+
+Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består av
+- `\(\text{Dividenderamme}=\text{egenkapital}-(\text{aksjekapital}+\text{bunden egenkapital)}\)` 
+- Skjønn (kommer som tillegg i dividenderammen, og tar hensyn til forsvarlig drift)
+
+---
+
+## Bransjemønstre i dividendepolitikken
+
+**Tabell 11.1:** Dividendepraksis for selskaper notert på Oslo Børs i perioden 1995-2015
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Næring&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Dividendebetalere, %&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Utdelingsforhold&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Transport&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;51&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Finans&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.56&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Detaljhandel&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;46&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.63&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Industri&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;44&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.65&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Fast eiendom&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;IT og Media&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Petroleum&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;21&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.73&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;41&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.66&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+- Merk: Utdelingsforholdet reflekterer kun dividendeutbetalerne
+- Inkluderes alle selskapene på Børsen, faller dette forholdet fra `\(0.66\)` til `\(0.27\)`
+
+---
+
+## Lintner-modellen
+
+Undersøkelser tyder på at fastsatt dividende er basert på følgende kjennetegn
+
+1. Først bestemmes målsatt dividende per aksje direkte fra overskuddet (årsresultatet)
+1. Selskapet ønsker også et stabilt utdelingsforhold over tid
+1. Hensyn til disse to punktene kan beskrives formelt gjennom den såkale Lintner-modellen
+`\begin{equation}
+DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
+\end{equation}`
+
+Hvor både `\(a\)` (justeringsfaktor) og `\(b\)` (målsatt utdelingsforhold) kan variere mellom 0 og 1.
+
+Empiri for Norge (1980-1995) for 25 selskaper gav b=0.20 og a=0.50.
+
+---
+
+**Eksempel 11.4:** Et selskap som startet i 2013 har som mål å betale ut 30 prosent som dividende. For å unngå ustabile dividender, ønsker man samtidig at dividenden skal justeres med 60 prosent av hva overskuddsendringen tilsier. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Salgsinntekt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;120&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;150&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Driftsutgift&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;20%&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;25%&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-47%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Investering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;34&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;40&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12%&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;20%&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-24%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+**Øvelse:** Ved bruk av Lintner-modellen, se om du klarer å replikere tallene som er oppgitt i tabellen.
+
+---
+
+## Tilbakekjøp
+
+Tilbakejøp kan benyttes som et fleksibelt supplement til den langt mer stabile kontantdividenden
+- Svinger sterkere i takt med overskuddet enn hva dividenden gjør:
+ - Høyt når overskuddet er høyt
+ - Null når overskuddet er lavt
+
+---
+
+## Norsk dividentpoltikk over tid
+
+&lt;img src="pensum/figurer-63.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+- Under halvparten betaler dividende
+- De som betaler, betaler gjennomsnitt 2/3 av overskuddet
+- Lovgivningen begrenser ikke dividenden
+- Tilbakekjøp av aksjer falt markant de senere årene
+
+---
+
+## Norge kontra andre land
+
+&lt;img src="pensum/figurer-64.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Dividende kontra nettodividende
+
+For å vite hvordan kontantstrømmen fordeler seg mellom selskapet og eierne, må man studere *nettodividenden*:
+`\begin{equation}
+ND_t = D_t + TB_t - EM_t
+\end{equation}`
+
+- `\(D_t + TB_t\)` (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne tar *ut* av selskapet
+- `\(EM_t\)` (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne *tilfører* selskapet
+- Viktig: Kontantstrømmen må sees i sammeheng med finansieringstrømmen for hele økonomien
+
+&lt;img src="pensum/figurer-65.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Dividende og avkastningskrav
+
+- Nærliggende å betrake eier på linje med kreditor. Dvs. dividendeinntekten er paralell med renteinntekten for kreditorene
+- Men dette blander sammen likviditetseffekten for selskapet med avkastningskravet for eiernes
+- Eiernes avkastningskrav består (a) summen av dividende og (b) kursendring
+
+---
+
+# Irrelevans (#0)
+
+Endring av eiernes verdi kan knyttes til to komponenter:
+1. Kursendringer
+1. Endret dividende
+
+*Irrelevansresultatet* innebærer at effekten av endringen i den ene komponenten *motsvares* av tilsvarende motsatt endring i den andre komponenten.
+
+Dette resultatet bygger på følgende tre forutsetninger:
+1. Kapitalmarkedet er perfekt
+1. Egenkapitalbeskatningen er nøytral
+1. Alt annet enn dividendepolitikk holdes konstant
+
+---
+
+Uavhengig av disse tre forutsetningene, vil for alle perioder følgende *kontantstrømbalanse* (dvs. pengetilgang lik pengebruk) være oppfylt
+
+`\begin{equation}
+\text{Kontantstrøm fra driften} +\text{Ny gjeld} + \text{Nytegnet egenkapital}\\
+= 
+\text{Renter} + \text{Avdrag} + \text{Investeringer} + \text{Dividende}
+\end{equation}`
+
+Basert på antagelsen om gitt investerings- og gjeldsgradsbeslutninger, vil vi ha at
+
+`\begin{equation}
+\Delta \text{Nytegnet egenkapital} = \Delta \text{Dividende}
+\end{equation}`
+
+- Dvs. enhver forandring av dividenden ( `\(\Delta \text{Dividende}\)` ) kreve en aksjeemisjon (fra enten nye eller tidligere aksjonærer) tilsvarende dividendøkningen.
+- Formueseffekten blir derfor null for de gamle aksjonærene: Det som selskapet betaler ut med den ene hånden (dividenden), tar de tilbake ved den andre (emisjonen)
+
+---
+
+## Empiri fra USA
+
+En undersøkelse  fra 1972-1999 avdekker følgende mønstre
+
+1. Andelen dividendebetaler har i stor grad en synkende trend
+1. Tilbakekjøp av aksjer blir stadig mer vanlig, særlig blant de som betaler kontantdividende
+1. Selskapene som ikke betaler dividende, er kjennetegnet ved sterk veskt og investeringstakt
+1. Selskapene som betaler dividende, er kjennetegnet ved høyt overskudd og lavere vekstpotensiale 
+
+---
+
+# Likviditet (#1) 
+
+- Med *hjemmelaget dividendepoltikk* forstås at enkeltinvestorer aktivt går inn for å fjerne den uønskede likviditetseffekten av selskapets dividendepolitikk
+- Synes investoren at selskapets gir ham for liten (stor) kontantbeholdning, kan denne økes (reduseres) ved å selge (kjøpe) noen av aksjene i selskapet
+- Likviditetsargumentet for høy dividende må derfor implisitt forutsette at det eksisterer *transaksjonskostnader* ved omsetning av aksjer
+
+#### Børsnoterte selskaper
+
+- Lave transaksjonskostnader
+- Som gjør at eiernes likviditetsbehov ikke er noe argument for å endre utbytte
+
+#### Unoterte selskaper
+
+- Høye transaksjonskostnader 
+- Som gjør at eiernes likviditetsbehov kan være et argument for å endre utbytte
+
+---
+
+# Signalfunksjonen (#2)
+
+- Ledelsen kan bli stillt ovenfor et dillemma dersom kun de får tilgang til positiv informasjon om selskapets 
+framtidige kontantstrøm.
+- På den ene siden,  ønsker man ikke konkret å dele med markedet årsaken til den positive nyheten (eks. pga 
+av at konkurrenter ikke skal få kjennskap til den)
+- På den andre siden, ønske å signalisere til markedet om at en positiv utvikling er på gang.
+
+I denne situajonen: Dividenden er budbringeren, mens budskapet er endredet forventning om inntjening hos selskapets innsidere
+
+---
+
+Signalteorien predikerer at
+
+1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
+&lt;img src="pensum/figurer-66.png" width="40%" style="display: block; margin: auto;" /&gt;
+	- Stemmer godt med empiri
+2. Dette burde etterfølges av gjennomsnittlig forbedret (forverret) framtidig inntjening 
+	- Stemmer dårlig med empiri
+
+---
+
+# Interessekonflikter (#3)
+
+- **Agenkostnader:** tap i selskapsverdi som følge av interessekonflikter mellom selskapets interesenter (prinsipal vs. agent).
+Eks. 
+- Finansieringskildene til de prosjektene som skaper agenkostnader er selskapets *fri kontantstrøm* (dvs. ressursene i selskapet som lett kan 
+  omsettes til likvider)
+
+---
+
+### Dividende og fri kontantstrøm
+
+- Diagnose:
+	- Desto større fri kontantstrøm, desto mer fristende for ledelsen å benytte dette til prosjekter som eierne ikke er tjent med
+- Medisinen:
+	- Betal høy dividende
+	- Gå ofte til kapitalmarkedet for å hente ny egenkapital
+	- Denne medesinen  blir viktigere for selskapet desto (a) Høyere fri kontantstrøm,  (b), Mer spredt eierskap,  og (c) Mindre ledelsens lønn avhenger av selskapets resultater
+                            
+Skaper **verdier** igjennom:
+
+1. Økt lønnsomhet
+   1. Påvirker selskapets fremtidige kontantstrøm gjennom færre ulønnsomme investeringsprosjekter
+1. Gjennomlysning
+   1. Emisjoner gjør at selskapene blir tvunget til å eksponere seg i kapitalmarkedet
+1. Forbedret insentiver for ledelsen i selskapet
+   1. Skal selskaper med høy kontantstrøm, spredt eierskap og lav vekst hente inn egenkapital, vil det være viktig for nye aksjonærer at ledelsen har mye å passe på
+
+---
+
+#  Skatt (#4)
+
+*Dividendefaktoren* `\(n^{*}_d\)` som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
+
+`\begin{equation}
+n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
+\end{equation}`
+
+- `\(n^{*}_d&gt;0\)` Dividende skattefavoriseres
+- `\(n^{*}_d=0\)` Dividendenøytralt skattesystem
+- `\(n^{*}_d&lt;0\)` Tilbakepløying skattefavoriseres 
+
+Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

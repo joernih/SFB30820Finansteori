@@ -158,7 +158,7 @@ Undersøkelser tyder på at fastsatt dividende er basert på følgende kjenneteg
 1. Selskapet ønsker også et stabilt utdelingsforhold over tid
 1. Hensyn til disse to punktene kan beskrives formelt gjennom den såkale Lintner-modellen
 \begin{equation}
-DIV_t = DIV_{t-1} + a[b(OPA)-DIV_{t_1}]
+DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
 \end{equation}
 
 Hvor både $a$ (justeringsfaktor) og $b$ (målsatt utdelingsforhold) kan variere mellom 0 og 1.
