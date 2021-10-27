@@ -46,7 +46,7 @@ source("timeplan.R")
 
 class: inverse, center, middle
 
-# Forelesning 12: `r tema[13]`
+# Forelesning 12: `r tema[12]`
 
 - Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
 - Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
@@ -75,25 +75,23 @@ Fire grunner:
 
 En *opsjon* gir eieren en rett men ikke en plikt til å kjøpe/selge en eiendel til en bestemt pris (**innløsningskursen**) på et forhåndsbetalt framtidig tidspunkt
 
-# Binomisk opsjonsprismodell
-
-# Black-Scholes-modellen
-
-# Opsjonstankegang i finansfaget
-
-
 ---
 
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+## Abc 
+
+```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-67.png"))
 ```
-
 ---
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+
+## Likevekt
+
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-68.png"))
 ```
-
 ---
+
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-69.png"))
 ```
@@ -102,8 +100,6 @@ knitr::include_graphics(c("pensum/figurer-69.png"))
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
-
----
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-71.png"))
 ```
@@ -112,24 +108,30 @@ knitr::include_graphics(c("pensum/figurer-71.png"))
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-72.png"))
 ```
----
-
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-73.png"))
 ```
 ---
+
+# Binomisk opsjonsprismodell
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-74.png"))
 ```
 ---
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-75.png"))
 ```
 ---
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-76.png"))
 ```
 ---
+
+# Black-Scholes-modellen
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-77.png"))
 ```
@@ -144,3 +146,9 @@ knitr::include_graphics(c("pensum/figurer-79.png"))
 ---
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-80.png"))
+---
+
+# Opsjonstankegang i finansfaget
+
+
+
