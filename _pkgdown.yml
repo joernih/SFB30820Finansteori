@@ -16,10 +16,10 @@ navbar:
       href: "articles/arbeidskrav2021_F.html"
     - text: "Anbefalte oppgaver"
       href: "articles/anbefalte_oppgaver.html"
-    - text: "Presentasjoner (alle)"
-      href: "articles/presentations.html" 
     - text: "Læringsmålene"
       href: "articles/læringsmaal.html"
+    - text: "Presentasjoner (alle)"
+      href: "articles/presentations.html" 
     - text: "News"
       href: "news/index.html" 
   right:
