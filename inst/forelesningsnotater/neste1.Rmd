@@ -60,7 +60,19 @@ class: inverse, center, middle
 
 # Innledning
 
+En *opsjon* gir eieren en rett men ikke en plikt til å kjøpe/selge en eiendel til en bestemt pris (**innløsningskursen**) på et forhåndsbetalt framtidig tidspunkt
+
+Fire grunner:
+1. Benyttes i bedriftenes risikostyring 
+1. Øke din avkastning i kapitalmarkedet
+1. Utbredt finansielt instrument
+1. Besvare spørsmål som tidligere ikke hadde noen presise svar.
+
+---
+
 # Grunnetrekk ved opsjoner
+
+En *opsjon* gir eieren en rett men ikke en plikt til å kjøpe/selge en eiendel til en bestemt pris (**innløsningskursen**) på et forhåndsbetalt framtidig tidspunkt
 
 # Binomisk opsjonsprismodell
 

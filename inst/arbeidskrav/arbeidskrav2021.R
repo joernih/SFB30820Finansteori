@@ -1,13 +1,3 @@
-# Del I
-## Snakke
-# Del II
-## Enkelinvsteringer
-- Sjekk Canvas/Nettisde på onsdag (mitt forslag)
-## Porteføljeinvesteringer
-- NA-observasjoner som ønkser å bli kvitt (p)
-
-
-
 # Installing libraries
 library(ggplot2)
 library(dplyr)
@@ -37,14 +27,16 @@ enkelt_df <-
  	gensh_df %>%
 	# Enkeltobjekter
 	dplyr::group_by(typeindex) %>%
+	dplyr::mutate(teller=dplyr::row_number(date)) %>%
+#	dplyr::filter(teller<=10) %>%
 	dplyr::mutate(mdate=min(date)) %>%
-	dplyr::mutate(rp=(close-dplyr::lag(close))/close) %>%
+	dplyr::mutate(rp=(close-dplyr::lag(close))/dplyr::lag(close)) %>%
 	dplyr::mutate(mean=mean(rp, na.rm=T)) %>%
 	dplyr::mutate(varp=var(rp,na.rm=T))%>%
 	dplyr::mutate(stdp=sd(rp,na.rm=T)) %>%
 	dplyr::ungroup()
 
-#View(enkelt_df)
+View(enkelt_df)
 ## Descriptive
 unique(enkelt_df$mean)
 unique(enkelt_df$varp)
@@ -72,6 +64,8 @@ gensh_df_2 <- dplyr::filter(enkelt_df, date>=max(mdate)) %>%
 sheets <- list(portfinvest=gensh_df_2)
 masheets <- list(krypto=crypto_df,boers=stocko_df,portfinvest=gensh_df_2)
 openxlsx::write.xlsx(masheets,file='cryptos2_nyse.xlsx',overwrite=T)
+gensh_df_2
+View()
 
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=ETH)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
 ggplot2::ggplot(gensh_df_2, aes(x=BTC,y=NSE)) + geom_point() +geom_smooth(method="lm", se=TRUE, fullrange=FALSE, level=0.95)
