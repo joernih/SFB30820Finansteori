@@ -257,9 +257,42 @@ Oppsummering tabell
 
 # Binomisk opsjonsprismodell
 
+**Eksempel 12.5**
+
+
+---
+
+
+### Kontantstrømfordelingen av en akjse
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-74.png"))
+```
+### Kontantstrømfordelingen av en kjøpsopsjon
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-75.png"))
+```
+---
+
+### Kontantstrømfordelingen av en sikringsportefølje
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-76.png"))
+```
+
+
 ---
 
 # Black-Scholes-modellen
+
+---
+
+# Sammenligning Binomisk modell og Black-Scholes modellen
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-7/.png"))
+```
 
 ---
 
