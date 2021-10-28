@@ -109,24 +109,27 @@ Merk: I dette kapitlet studerer vi nå framover kun europeiske opsjoner hvor det
 ## Opsjonens kontantstrøm ved forfall (t=T)
 
 \begin{equation}
-K_T = \text{max}[0,(A-I)]
+K_T = \text{max}[0,(A_T-I)]
 \end{equation}
 
 \begin{equation}
-S_T = \text{max}[0,(I-A)]
+S_T = \text{max}[0,(I-A_T)]
 \end{equation}
 
 **Talleksempel 12.2**:
+
+16 .  november kjøpe du både en kjøps- og salgsopsjon på Telenor-aksjen med innløsningskurs 170,-. Aksjekursen var da 149.50,-, mens opsjonskursen var hhhv. 0.35,- og 21,-. På forfallsdagoen var høyeste aksjekurs kr 151,50,-. Deg gir oss
 \begin{equation*}
-K_T = \text{max}[0,(A-I)]
+K_T = \text{max}[0,(151.50-170)] = 0
 \end{equation*}
 
 \begin{equation*}
-S_T = \text{max}[0,(I-A)]
+S_T = \text{max}[0,(170-151.50)] = 18.50
 \end{equation*}
 
 ---
 
+**Kontantstrømdiagram for kjøps- og salgsopsjoner**
 
 ```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-67.png"))
@@ -138,71 +141,96 @@ knitr::include_graphics(c("pensum/figurer-67.png"))
 
 ## Opsjon, aksje og risikofritt prosjekt
 
+Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at de blir gitt samme kontantstrøm.
 
 \begin{equation*}
 A_T+S_T=B_T+K_T
 \end{equation*}
 
----
 
 
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-68.png"))
 ```
 
+*Kontantstrøm for aksje og salgsopsjon (par 1) og risikofri obligasjon og kjøpsobligasjon (par 2)*
+
+---
+
+Den parvise porteføljekombinasjonen løst for $B_T$ (risikofri kontantstrøm)
+
+\begin{equation*}
+B_T=A_T+S_T-K_T
+\end{equation*}
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-69.png"))
 ```
 
-Løses for
+*Kontantstrømmmen ved forfall for en portefølje med en aksje, salgsopsjon, og en solgt kjøpsopsjon*
 
 ---
 
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-70.png"))
-```
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-71.png"))
-```
+## Salg-kjøp-paritet (SKP)
+
+Portefølj
+\begin{equation*}
+A_0+S_0-K_0 = \frac{I}{1+r_f}
+\end{equation*}
+
+Omskrevet gir dette salg-kjøp-paritet (SKP)
+
+\begin{equation*}
+K_0-S_0=A_0-\frac{I}{1+r_f}
+\end{equation*}
+
 ---
-
-## Salg og kjøp paritet
-
----
-
 
 ## Kontinuerlig forrentning
 
----
+I opsjonssammenheng er det vanlig å operer med *kontinuerlig tid*. For eks. kan en tre-måneders periode deles inn i uendelige mange underperioder. Den kontinuerlige diskonteringsrenten vil da være gitt ved $e^{-i_f\cdot T}$
+\begin{equation*}
+K_0-S_0=A_0-Ie^{-i_f\cdot T}
+\end{equation*}
 
 ## Arbitrasje og salg-kjøp-paritet
 
+SPK innebærer at arbitrasje vil tvinge en underpriset salgsopsjonen tilbake til den likevekten som SKP tilsier.
+
+short-salg?
+
 ---
 
-# Bestemmelse av opsjonsverdi
+# Bestemmelse av opsjonsverdi før forfall
 
-## Opsjonsverdi før forfall (# 1)
+Tabell her
+
+---
+
+## Opsjonsverdi og aksjekurs (# 1)
+
+Tre betingelser
+1. Nedre betingelse
+1. Øvre betingelse
+1. Verdibetingelse
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-72.png"))
 ```
 
----
-
-## Opsjonsverdi og aksjekurs (# 2)
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-73.png"))
-```
 
 ---
 
-## Opsjonsverdi, innløsningskurs og kontraktstid (# 3)
+## Opsjonsverdi, innløsningskurs og kontraktstid (# 2-3)
+
 
 ---
 
 ## Opsjonsverdi og aksjens volatilitet (# 4)
 
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-70.png"))
+```
 
 ---
 
@@ -212,48 +240,15 @@ knitr::include_graphics(c("pensum/figurer-73.png"))
 
 ## Opsjonens fem verdibestemmende faktorer 
 
--
--
--
+Oppsummering tabell
 
 ---
 
 # Binomisk opsjonsprismodell
 
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-74.png"))
-```
-
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-75.png"))
-```
----
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-76.png"))
-```
 ---
 
 # Black-Scholes-modellen
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-77.png"))
-```
----
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-78.png"))
-```
----
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-79.png"))
-```
----
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-80.png"))
-```
 
 ---
 
