@@ -215,7 +215,7 @@ Tre betingelser
 1. Verdibetingelse
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-72.png"))
+knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
 
 
@@ -223,18 +223,29 @@ knitr::include_graphics(c("pensum/figurer-72.png"))
 
 ## Opsjonsverdi, innløsningskurs og kontraktstid (# 2-3)
 
-
----
-
-## Opsjonsverdi og aksjens volatilitet (# 4)
-
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
 
 ---
 
+## Opsjonsverdi og aksjens volatilitet (# 4)
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-71.png"))
+```
+
+---
+
 ## Opsjonsverdi og rente (# 5)
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-72.png"))
+```
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-73.png"))
+```
 
 ---
 
