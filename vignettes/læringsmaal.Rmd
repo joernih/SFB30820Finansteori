@@ -7,6 +7,12 @@ abstract: ''
 ---
 
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#source("timeplan.R")
+#`r tema[12]`
+
+```
+
 # Læringsmål kapittel 1
 - Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
 - Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
