@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b0b173e1d99c4fc78977eb4dad22e8cd","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c033e589563a49879b2f8dabf6e709c7","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -208,58 +208,6 @@ short-salg?
 
 
 
-```
-## [1] FALSE FALSE FALSE FALSE FALSE
-```
-
-```
-## [1] FALSE FALSE FALSE FALSE FALSE
-```
-
-&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Faktor&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Kjøpsopsjon&lt;/th&gt;
-&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Salgsopsjon&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Verdi av underliggende aksje&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Innløsningskurs&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;-&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Tid til forfall (løpetid)&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;Underliggende eiendels volatilitet&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Risikofri rente&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;+&lt;/td&gt;
-&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
 ## Opsjonsverdi og aksjekurs (# 1)
 
 Tre betingelser
@@ -268,6 +216,7 @@ Tre betingelser
 1. Øvre betingelse
 1. Verdibetingelse
 ```
+
 &lt;img src="pensum/figurer-70.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 
@@ -277,11 +226,13 @@ Tre betingelser
 
 &lt;img src="pensum/figurer-70.png" width="40%" style="display: block; margin: auto;" /&gt;
 
+
 ---
 
 ## Opsjonsverdi og aksjens volatilitet (# 4)
 
 &lt;img src="pensum/figurer-71.png" width="40%" style="display: block; margin: auto;" /&gt;
+
 
 ---
 
@@ -291,6 +242,7 @@ Tre betingelser
 
 &lt;img src="pensum/figurer-73.png" width="40%" style="display: block; margin: auto;" /&gt;
 
+
 ---
 
 
@@ -299,21 +251,14 @@ Tre betingelser
 Oppsummering
 
 
-```r
-2+2
-```
-
-```
-## [1] 4
-```
-
 ---
+
 
 # Binomisk opsjonsprismodell
 
 Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
-**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 20 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet).
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 20 prosent økning som har 75 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er git ved 0.01.
 
 ### Kontantstrømfordelingen av en akjse
 
@@ -325,38 +270,11 @@ Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomis
 
 &lt;img src="pensum/figurer-75.png" width="40%" style="display: block; margin: auto;" /&gt;
 
----
-
-### Kontantstrømfordelingen av en sikringsportefølje
-
-&lt;img src="pensum/figurer-76.png" width="40%" style="display: block; margin: auto;" /&gt;
-
-Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske.
-
-
-$$
-\theta A  + K_\theta = n A  + K_n
-$$
 
 
 
----
 
 
-
----
-
-# Black-Scholes-modellen
-
----
-
-# Sammenligning Binomisk modell og Black-Scholes modellen
-
-&lt;img src="pensum/figurer-77.png" width="40%" style="display: block; margin: auto;" /&gt;
-
----
-
-# Opsjonstankegang i finansfaget
 
 
 

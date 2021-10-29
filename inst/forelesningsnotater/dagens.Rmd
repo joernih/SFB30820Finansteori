@@ -204,19 +204,6 @@ short-salg?
 # Bestemmelse av opsjonsverdi før forfall
 
 
-```{r, echo=F}
-radnr <- c("Verdi av underliggende aksje",
-	   "Innløsningskurs",
-   "Tid til forfall (løpetid)",
-   "Underliggende eiendels volatilitet",
-   "Risikofri rente")
-tils1 < c(" "," "," "," "," ")
-tils2 < c(" "," "," "," "," ")
-df_prosj_kont <- data.frame(radnr,tils1,tils2)
-htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
-```
-
----
 
 ## Opsjonsverdi og aksjekurs (# 1)
 
@@ -226,6 +213,7 @@ Tre betingelser
 1. Øvre betingelse
 1. Verdibetingelse
 ```
+
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
@@ -239,6 +227,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
 
+
 ---
 
 ## Opsjonsverdi og aksjens volatilitet (# 4)
@@ -246,6 +235,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-71.png"))
 ```
+
 
 ---
 
@@ -259,6 +249,7 @@ knitr::include_graphics(c("pensum/figurer-72.png"))
 knitr::include_graphics(c("pensum/figurer-73.png"))
 ```
 
+
 ---
 
 
@@ -266,17 +257,15 @@ knitr::include_graphics(c("pensum/figurer-73.png"))
 
 Oppsummering
 
-```{r}
-2+2
-```
 
 ---
+
 
 # Binomisk opsjonsprismodell
 
 Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
-**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 20 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet).
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 20 prosent økning som har 75 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er git ved 0.01.
 
 ### Kontantstrømfordelingen av en akjse
 
@@ -292,6 +281,11 @@ knitr::include_graphics(c("pensum/figurer-74.png"))
 knitr::include_graphics(c("pensum/figurer-75.png"))
 ```
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
+
 ---
 
 ### Kontantstrømfordelingen av en sikringsportefølje
@@ -302,20 +296,85 @@ knitr::include_graphics(c("pensum/figurer-76.png"))
 
 Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske.
 
-
 $$
 \theta A  + K_\theta = n A  + K_n
 $$
 
+Løser vi denne for $m$ får vi *sikringsforholdet* (det antall kjøpsopsjoner som må skrives/selges pr. aksje for at porteføljen av aksjer og opsjoner skal være risikofri:
+
+$$
+m = \frac{A(\theta-n)}{K_\theta-K_n}
+$$
+**Eksempel 12.5:** gir oss
+$$
+m = \frac{620(1.25-0.85)}{95}=2.61 \text{ kjøpsopsjoner per kjøpte aksje}
+$$
+
+---
+
+Kravet om null arbitrasjegevinst betyr derfor at følgende sammenheng må gjelde mellom investeringen ( $t=0$ ) og kontantstrømmen ( $t=2$ ).
+
+\begin{equation}
+A_0 - mK_0 = \frac{nA_0-mK_n}{1+r_f}
+\end{equation}
+
+Løser vi dette for $K_o$ ved først å sette inn for $m$ får vi
+
+\begin{equation}
+K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]
+\end{equation}
+Hvor de to sikringssannsynlighetene $q$ og $(1-q)$ er definert som
+\begin{equation*}
+q=\frac{1+r_f-n}{\theta-n} \\
+(1-q)=\frac{\theta-1-r_f}{\theta-n} 
+\end{equation*}
+
+Verdien til kjøpsopsjonen er derfor bestemt som den nedisikonterte verdien av 
+*sikringssannsynligheten* (hakeparantesen omdanner en usikker kontantstrøm til dens sikkerhetskivalente kontantstrømmen, jmf. forelesning 1)
 
 
 ---
 
+**Eksempel 12.5:** gir oss her
 
+\begin{equation*}
+q=\frac{1+0.01-0.85}{1.25-0.85}=0.4 \\
+(1-q)=\frac{1.25-1-0.01}{1.25-0.85} =0.6
+\end{equation*}
+
+\begin{equation*}
+K_0 = \frac{1}{1+0.01}[0.4\cdot 95+0.6\cdot 0] = 521.80
+\end{equation*}
+
+**Øvelse:** Kontrollregninger
+
+---
+
+- Opsjonsverdien er uavhenig av investors risikoholdning
+- Opsjonsverdien er uavhenig av investors risikoholdning
+- Opsjonsverdien er uavhenig av investors risikoholdning
+- Opsjonsverdien er uavhenig av investors risikoholdning
+- Opsjonsverdien er uavhenig av investors risikoholdning
 
 ---
 
 # Black-Scholes-modellen
+
+- Kontinuerlig tid
+- Short-salg er mulig
+- Det er ingen skatt eller transaksjonskostnader
+- Aksjen betaler ikke dividende
+- Risikofri rent er konstant
+
+
+\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
+\end{equation}
+
+---
+
+
+
 
 ---
 
@@ -330,4 +389,20 @@ knitr::include_graphics(c("pensum/figurer-77.png"))
 # Opsjonstankegang i finansfaget
 
 
+```{r, echo=F}
+knitr::knit_exit()
+```
 
+$$
+m=A_0(\theta-n)/(K_\theta-K_n)
+$$
+
+radnr <- c("Verdi av underliggende aksje",
+	   "Innløsningskurs",
+   "Tid til forfall (løpetid)",
+   "Underliggende eiendels volatilitet",
+   "Risikofri rente")
+tils1 < c(" "," "," "," "," ")
+tils2 < c(" "," "," "," "," ")
+df_prosj_kont <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
