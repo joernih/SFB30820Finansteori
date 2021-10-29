@@ -276,19 +276,22 @@ Oppsummering
 
 Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
----
-
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 20 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet).
 
 ### Kontantstrømfordelingen av en akjse
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-74.png"))
 ```
+
+---
+
 ### Kontantstrømfordelingen av en kjøpsopsjon
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-75.png"))
 ```
+
 ---
 
 ### Kontantstrømfordelingen av en sikringsportefølje
@@ -296,6 +299,18 @@ knitr::include_graphics(c("pensum/figurer-75.png"))
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-76.png"))
 ```
+
+Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske.
+
+
+$$
+\theta A  + K_\theta = n A  + K_n
+$$
+
+
+
+---
+
 
 
 ---
