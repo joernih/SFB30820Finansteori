@@ -203,17 +203,29 @@ short-salg?
 
 # Bestemmelse av opsjonsverdi før forfall
 
-Tabell her
+
+```{r, echo=F}
+radnr <- c("Verdi av underliggende aksje",
+	   "Innløsningskurs",
+   "Tid til forfall (løpetid)",
+   "Underliggende eiendels volatilitet",
+   "Risikofri rente")
+tils1 < c(" "," "," "," "," ")
+tils2 < c(" "," "," "," "," ")
+df_prosj_kont <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
+```
 
 ---
 
 ## Opsjonsverdi og aksjekurs (# 1)
 
 Tre betingelser
+
 1. Nedre betingelse
 1. Øvre betingelse
 1. Verdibetingelse
-
+```
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-70.png"))
 ```
@@ -249,16 +261,20 @@ knitr::include_graphics(c("pensum/figurer-73.png"))
 
 ---
 
+
 ## Opsjonens fem verdibestemmende faktorer 
 
-Oppsummering tabell
+Oppsummering
+
+```{r}
+2+2
+```
 
 ---
 
 # Binomisk opsjonsprismodell
 
-**Eksempel 12.5**
-
+Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
 ---
 
@@ -291,7 +307,7 @@ knitr::include_graphics(c("pensum/figurer-76.png"))
 # Sammenligning Binomisk modell og Black-Scholes modellen
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-7/.png"))
+knitr::include_graphics(c("pensum/figurer-77.png"))
 ```
 
 ---

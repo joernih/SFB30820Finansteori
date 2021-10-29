@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd6afb4d3fc844af81a4d344c455c8dd","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x449a8925f6d4b1c8aa3b6f49ee19ce6","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-28)
+### 2021/08/12 (updated: 2021-10-29)
 
 ---
 
@@ -64,7 +64,7 @@ class: inverse, center, middle
 - Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
-Oppdatert: 2021-10-28
+Oppdatert: 2021-10-29
 
 ---
 
@@ -206,17 +206,68 @@ short-salg?
 
 # Bestemmelse av opsjonsverdi før forfall
 
-Tabell her
+
+
+```
+## [1] FALSE FALSE FALSE FALSE FALSE
+```
+
+```
+## [1] FALSE FALSE FALSE FALSE FALSE
+```
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Faktor&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Kjøpsopsjon&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Salgsopsjon&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Verdi av underliggende aksje&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Innløsningskurs&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Tid til forfall (løpetid)&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Underliggende eiendels volatilitet&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Risikofri rente&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;+&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
 ## Opsjonsverdi og aksjekurs (# 1)
 
 Tre betingelser
+
 1. Nedre betingelse
 1. Øvre betingelse
 1. Verdibetingelse
-
+```
 &lt;img src="pensum/figurer-70.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 
@@ -242,16 +293,25 @@ Tre betingelser
 
 ---
 
+
 ## Opsjonens fem verdibestemmende faktorer 
 
-Oppsummering tabell
+Oppsummering
+
+
+```r
+2+2
+```
+
+```
+## [1] 4
+```
 
 ---
 
 # Binomisk opsjonsprismodell
 
-**Eksempel 12.5**
-
+Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
 ---
 
@@ -276,6 +336,8 @@ Oppsummering tabell
 ---
 
 # Sammenligning Binomisk modell og Black-Scholes modellen
+
+&lt;img src="pensum/figurer-77.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
 
