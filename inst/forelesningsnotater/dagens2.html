@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x714ce05c7b74b429ca772b353275202","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"cb989d6bf50f48f89bd01eab0b82e263","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -148,10 +148,10 @@ K_0 = \frac{1}{1+0.01}[0.4\cdot 95+0.6\cdot 0] = 521.80
 ---
 
 - Opsjonsverdien er uavhenig av investors risikoholdning
-- Opsjonsverdien er uavhenig av investors risikoholdning
-- Opsjonsverdien er uavhenig av investors risikoholdning
-- Opsjonsverdien er uavhenig av investors risikoholdning
-- Opsjonsverdien er uavhenig av investors risikoholdning
+- Opsjonsverdien er uavhenig av sannsynligheten for aksjekursendring
+- Forventet aksjekurs er irrelevant for opsjonsverdien
+- Kjøpsopsjonens verdi kan uttrykkes som den sikkerhetsekvivalente verdien verdien av kjøpsopsjonen ved forfall diskontert med risikofri rente
+- Opsjonsverdien avhanger kun av de fem variablen: `\(A_o,\theta,n,r_f,I\)` 
 
 ---
 
@@ -176,6 +176,12 @@ d_1=\frac{ln(\frac{A_0}{I})+i_fT}{\sigma\sqrt{T}}+\frac{1}{2}\sigma\sqrt{T} \\
 d_2=d_1 -\sigma\sqrt{T}
 \end{equation}`
 
+mens sikgringsforholdet blir bestemt ved
+
+
+`\begin{equation}
+m = \frac{1}{N(d_1)}
+\end{equation}`
 
 ---
 
