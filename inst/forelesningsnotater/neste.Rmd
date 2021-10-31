@@ -43,6 +43,8 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
+---
+
 # Forelesning 13: `r tema[13]`
 
 class: inverse, center, middle
@@ -59,6 +61,27 @@ class: inverse, center, middle
 ---
 
 # Hvorfor risikostyring?
+
+Risikostyring
+- Identifikasjon
+- Diagnose
+
+
+Finansielle derivater
+
+Finansielle instrumenter 
+
+knyttet til
+
+
+- Opsjoner
+- Forwardkontrakter
+- Futures
+- Swapper
+
+*financial-management*
+
+---
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-82.png"))
