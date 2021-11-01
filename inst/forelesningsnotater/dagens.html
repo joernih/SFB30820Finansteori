@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"bacbb535a9994e899d809ba57ca4ae39","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x29a4279566147aca95aee41b0278332","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -359,11 +359,12 @@ Den figuren viser det typiske forholdet mellom opsjonskurs og aksjekurs før for
 For den binomiske opsjonsprismodellen (OPM-modellen) vil det gjelde at:
 - Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
-**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 25 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er gitt ved 1 prosent. Innløsningskursen på en opsjon med forfall om 3 måneder er 680,-
-
 ### Kontantstrømfordelingen av en aksje
 
-&lt;img src="pensum/figurer-74.png" width="50%" style="display: block; margin: auto;" /&gt;
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursen stiger 775,- (dvs. 25 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er gitt ved 1 prosent. Innløsningskursen på en opsjon med forfall om 3 måneder er 680,-
+
+
+&lt;img src="pensum/figurer-74.png" width="45%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -374,6 +375,8 @@ For den binomiske opsjonsprismodellen (OPM-modellen) vil det gjelde at:
 
 &lt;img src="pensum/figurer-76.png" width="60%" style="display: block; margin: auto;" /&gt;
 ---
+
+### Sikringsporteføljen
 
 Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske. Vi må derfor kunne kreve at:
 
@@ -397,6 +400,7 @@ $$
 
 ---
 
+### Opsjonsprisen
 Kravet om null arbitrasjegevinst betyr derfor at følgende sammenheng må gjelde mellom investeringen ( `\(t=0\)` ) og kontantstrømmen ( `\(t=1\)` ) 
 
 `\begin{equation}
@@ -410,11 +414,11 @@ K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]
 
 Hvor de to *sikringssannsynlighetene* (risikojusert sannsynligheter) for `\(q\)` og `\(1-q\)` er definert som
 `\begin{equation*}
-q=\frac{1+r_f-n}{\theta-n} \\
-(1-q)=\frac{\theta-1-r_f}{\theta-n} 
+q=\frac{1+r_f-n}{\theta-n} \text{ og } (1-q)=\frac{\theta-1-r_f}{\theta-n} 
 \end{equation*}`
 
 Verdien til kjøpsopsjonen er derfor bestemt som den nedisikonterte verdien av den sikkerhetsekvivalente kontantstrømmen i periode T (hakeparantesen omdanner en usikker kontantstrøm til dens sikkerhetskivalente kontantstrømmen, jmf. forelesning 1)
+
 
 ---
 

@@ -306,11 +306,12 @@ htmlTable(df_prosj_kont2, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
 For den binomiske opsjonsprismodellen (OPM-modellen) vil det gjelde at:
 - Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
 
-**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursn stiger 775,- (dvs. 25 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er gitt ved 1 prosent. Innløsningskursen på en opsjon med forfall om 3 måneder er 680,-
-
 ### Kontantstrømfordelingen av en aksje
 
-```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursen stiger 775,- (dvs. 25 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er gitt ved 1 prosent. Innløsningskursen på en opsjon med forfall om 3 måneder er 680,-
+
+
+```{r, echo=FALSE, out.width="45%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-74.png"))
 ```
 
@@ -327,6 +328,8 @@ knitr::include_graphics(c("pensum/figurer-75.png"))
 knitr::include_graphics(c("pensum/figurer-76.png"))
 ```
 ---
+
+### Sikringsporteføljen
 
 Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske. Vi må derfor kunne kreve at:
 
@@ -350,6 +353,7 @@ $$
 
 ---
 
+### Opsjonsprisen
 Kravet om null arbitrasjegevinst betyr derfor at følgende sammenheng må gjelde mellom investeringen ( $t=0$ ) og kontantstrømmen ( $t=1$ ) 
 
 \begin{equation}
@@ -363,11 +367,11 @@ K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]
 
 Hvor de to *sikringssannsynlighetene* (risikojusert sannsynligheter) for $q$ og $1-q$ er definert som
 \begin{equation*}
-q=\frac{1+r_f-n}{\theta-n} \\
-(1-q)=\frac{\theta-1-r_f}{\theta-n} 
+q=\frac{1+r_f-n}{\theta-n} \text{ og } (1-q)=\frac{\theta-1-r_f}{\theta-n} 
 \end{equation*}
 
 Verdien til kjøpsopsjonen er derfor bestemt som den nedisikonterte verdien av den sikkerhetsekvivalente kontantstrømmen i periode T (hakeparantesen omdanner en usikker kontantstrøm til dens sikkerhetskivalente kontantstrømmen, jmf. forelesning 1)
+
 
 ---
 
