@@ -223,8 +223,7 @@ df_prosj_kont <- data.frame(radnr,tils1,tils2)
 htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
 ```
 
-**Øvelse:** Hva er dine a-priori oppfatninger om oppsjonsverdien ved en isolert økning i disse fem faktorene?
-
+**Øvelse:** Hva er dine a-priori oppfatninger om oppsjonsverdien ved en isolert økning i disse fem faktorene, og har du en ide om hvorfor?
 ---
 
 ## Opsjonsverdi og aksjekurs (#1)
@@ -247,7 +246,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 Fra Tabell 12.1 i lærebok finner vi at 
 
 - Verdien av kjøpsopsjon avtar med økende innløsningskurs (motsatt for salgsopsjoner)
-- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi
+- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi [(lenke her for egenksaper ved Random walk modeller)](https://people.duke.edu/~rnau/411rand.htm)
 
 ---
 
@@ -268,7 +267,7 @@ knitr::include_graphics(c("pensum/figurer-71.png"))
 Vi kan få øye på dette ved å tilbakedatere verdien av kjøpsopsjon til investeringstidspunktet (t=0)
 
 \begin{equation}
-K_0 \geq \text{max}[0,(A_T-\frac{I}{1+r_f})]
+K_0 \geq \text{max}[0,(A_0-\frac{I}{1+r_f})]
 \end{equation}
 
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
@@ -280,6 +279,9 @@ knitr::include_graphics(c("pensum/figurer-72.png"))
 ```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-73.png"))
 ```
+
+Den figuren viser det typiske forholdet mellom opsjonskurs og aksjekurs før forfall med utgangspunktet i en modell (Black-Scholes)  for prising av kjøpsopsjoner.
+
 
 ---
 
@@ -343,7 +345,6 @@ $$
 $$
 m = \frac{620(1.25-0.85)}{95}=2.61 \text{ kjøpsopsjoner per kjøpte aksje}
 $$
-
 
 ---
 
@@ -630,3 +631,4 @@ knitr::knit_exit()
 En opsjon gir rett tile
 Oppdater timeplan, dele forelesningen
 figure 12.5
+ide

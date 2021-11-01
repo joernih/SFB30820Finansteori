@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c674b182627344078b850d6787a5e56f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x52026499bca419c9827de3ff7613e9a","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -256,8 +256,7 @@ K_0-S_0=A_0-Ie^{-i_f\cdot T}
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-**Øvelse:** Hva er dine a-priori oppfatninger om oppsjonsverdien ved en isolert økning i disse fem faktorene?
-
+**Øvelse:** Hva er dine a-priori oppfatninger om oppsjonsverdien ved en isolert økning i disse fem faktorene, og har du en ide om hvorfor?
 ---
 
 ## Opsjonsverdi og aksjekurs (#1)
@@ -278,7 +277,7 @@ Tre betingelser
 Fra Tabell 12.1 i lærebok finner vi at 
 
 - Verdien av kjøpsopsjon avtar med økende innløsningskurs (motsatt for salgsopsjoner)
-- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi
+- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi [(lenke her for egenksaper ved Random walk modeller)](https://people.duke.edu/~rnau/411rand.htm)
 
 ---
 
@@ -297,7 +296,7 @@ Fra Tabell 12.1 i lærebok finner vi at
 Vi kan få øye på dette ved å tilbakedatere verdien av kjøpsopsjon til investeringstidspunktet (t=0)
 
 `\begin{equation}
-K_0 \geq \text{max}[0,(A_T-\frac{I}{1+r_f})]
+K_0 \geq \text{max}[0,(A_0-\frac{I}{1+r_f})]
 \end{equation}`
 
 &lt;img src="pensum/figurer-72.png" width="60%" style="display: block; margin: auto;" /&gt;
@@ -305,6 +304,9 @@ K_0 \geq \text{max}[0,(A_T-\frac{I}{1+r_f})]
 ---
 
 &lt;img src="pensum/figurer-73.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+Den figuren viser det typiske forholdet mellom opsjonskurs og aksjekurs før forfall med utgangspunktet i en modell (Black-Scholes)  for prising av kjøpsopsjoner.
+
 
 ---
 
@@ -390,7 +392,6 @@ $$
 $$
 m = \frac{620(1.25-0.85)}{95}=2.61 \text{ kjøpsopsjoner per kjøpte aksje}
 $$
-
 
 ---
 
