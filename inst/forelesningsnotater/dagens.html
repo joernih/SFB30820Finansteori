@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"afadcedabbcf44e789818bc97967f4b4","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x041c85bef174b60aaf3127c81b23488","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -55,7 +55,7 @@ class: center, middle, inverse, title-slide
 
 class: inverse, center, middle
 
-# Forelesning 12: **Opsjoner**
+# Forelesning 12: **Opsjoner (start)**
 
 - Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
 - Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
@@ -79,7 +79,7 @@ en avtalt pris i løpet av en avtalt periode.
 1. Utbredt finansielt instrument
 1. Besvare spørsmål som tidligere ikke hadde noen presise svar.
 
-Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprisingsmodeller, samt ha noe vekt på teori.
+Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprisingsmodeller, samt vise egenskapene til enkle opsjonsprisingsmodeller.
 
 ---
 
@@ -114,7 +114,7 @@ Aksjeopsjoner på Oslø børs er standardisert ved at
 - Kontraktstørrelse: *En opsjon gir rett til 100 aksjer*
 - Minimumskrav til handel: *10 kontrakter*
 
-For å forenkle den modelltekniske framstillingen, ser vi framover kun på europeiske opsjoner hvor det ikke er satt noe minimumskrav til handel. I tillegg ser vi også bort *beskatning*, *transaksjonskostnader* og *vanlig meglerkurtasje*.
+For å forenkle den modelltekniske framstillingen, ser vi framover kun på *europeiske opsjoner* hvor det ikke er satt noe minimumskrav til handel. I tillegg ser vi også bort *beskatning*, *transaksjonskostnader* og *vanlig meglerkurtasje*.
 
 ---
 
@@ -182,10 +182,10 @@ Viser oss at en risikofri kontantstrøm på innløsningstidspunktet kan skapes a
 
 ## Salg-kjøp-paritet (SKP)
 
-- Parvise porteføljekombinasjonen kan benyttes til å forklare såkalt salg-kjøp-paritet (SKP) ("put-cal-parity").
-- En slik sammenheng er nyttig siden en har mulighet til å verdsette en salgsopsjon dersom en kjenner verdien på en tilsvarende kjøpsopsjon.
-- Ved feilprising vil arbitrasjehandel sørge for at denne likevekten vil bli opprettholdt
-- Sistnevnte gjør at vi kun trenger å kunne å konstruere modeller for kjøpsopsjoner.
+- Parvise porteføljekombinasjonen kan benyttes til å forklare såkalt salg-kjøp-paritet (SKP) ("put-call-parity").
+- Dette fordi ved feilprising vil arbitrasjehandel sørge for at denne likevekten vil bli opprettholdt
+- Vi har derfor mulighet til å verdsette en salgsopsjon dersom en kjenner verdien på en tilsvarende kjøpsopsjon.
+- Det gjør at vi kun trenger å kunne å konstruere modeller for kjøpsopsjoner.
 
 ---
 
@@ -199,8 +199,6 @@ Omskrevet gir dette oss salg-kjøp-paritet (SKP)
 K_0-S_0=A_0-\frac{I}{1+r_f}
 \end{equation*}`
 Forskjellen mellom kjøps og salgsopsjonens verdi er lik differansen mellom aksjens verdi og nåverdi av innløsningskursen.
-
----
 
 ## Kontinuerlig forrentning
 
