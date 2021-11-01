@@ -61,15 +61,16 @@ class: inverse, center, middle
 
 # Innledning
 
-En *opsjon* er en kontrakt som gir opsjonseieren en rett, men ikke plikt, til å kjøpe eller selge en eiendel.
+En *opsjon* er en kontrakt som gir opsjonseieren en rett, men ikke en plikt, til å kjøpe eller selge en eiendel til 
+en avtalt pris i løpet av en avtalt periode.
 
-Opsjonsmodeller forsøker å prissette verdien av en opsjon. Det mange grunner til at dette er nyttig. Her er noen::
+*Opsjonsmodeller* forsøker å prissette verdien av en slik kontrakt. Det mange grunner til at dette er nyttig, her er noen:
 1. Benyttes i bedriftenes risikostyring.  
 1. Øke din avkastning i kapitalmarkedet
 1. Utbredt finansielt instrument
 1. Besvare spørsmål som tidligere ikke hadde noen presise svar.
 
-Hovedvekten i dette kapitlet er å forklare intuisjonen i slike opsjonsprisingmodeller, samt ha noe vekt på teori.
+Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprisingmodeller, samt ha noe vekt på teori.
 
 ---
 
@@ -77,15 +78,15 @@ Hovedvekten i dette kapitlet er å forklare intuisjonen i slike opsjonsprisingmo
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
-- Rett til å kjøpe eller selge en eiendel
-- For en bestemt pris (*innløsningskursen*)
-- På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
+1. Rett til å kjøpe eller selge en bestemt eiendel
+1. For en bestemt pris (*innløsningskursen*)
+1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
 
 ---
 
-## Opsjoner på ulike eiendeler
-
-- **Akseopsjoner** (vi skal først se på verdsettingen av disse)
+## Eksempler på opsjoner på forskjellige eiendeler
+              -
+- **Aksjeopsjoner** (vi skal først se på verdsettingen av disse)
 - Konvertible obligasjoner
 - Valutakursopsjoner
 - Kassakreditt har opsjonstrekk
@@ -96,15 +97,15 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ## Standardisert opsjonskontrakt
 
-Børsnotering og standardisering av opsjonskontrakter fordelaktig fordi det øker den underliggenes aksjen *likviditet*
+Standardisering og børsnotering av opsjonskontrakter fordelaktig fordi det øker den underliggende aksjens *likviditet*.
 
 Aksjeopsjoner på Oslø børs er standardisert ved at
 
-- Består av: *Akseopsjoner (amerikanske) og indeksopsjoner (euroeiske)*
+- Består av: *Aksjeopsjoner (amerikanske) og indeksopsjoner (euroeiske)*
 - Kontraktstørrelse: *En opsjon gir rett til 100 aksjer*
 - Minimumskrav til handel: *10 kontrakter*
 
-Merk: For å forenkle fremstillinge, studerer ser vi nå framover på kun europeiske opsjoner hvor det ikke er satt noe minumumskrav til handel.
+For å forenkle den modelltekniske framstillingen, ser vi framover kun på europeiske opsjoner hvor det ikke er satt noe minumumskrav til handel. I tillegg ser vi også bort *beskatning*, *transaksjonskostnader* og *vanlig meglerkurtasje*.
 
 ---
 
@@ -122,7 +123,7 @@ S_T = \text{max}[0,(I-A_T)]
 
 **Talleksempel 12.2**:
 
-16 .  november kjøpe du både en kjøps- og salgsopsjon på Telenor-aksjen med innløsningskurs 170,-. Aksjekursen var da 149.50,-, mens opsjonskursen var hhhv. 0.35,- og 21,-. På forfallsdagoen var høyeste aksjekurs kr 151,50,-. Deg gir oss
+16 .  november kjøpe du både en kjøps- og salgsopsjon på Telenor-aksjen med innløsningskurs 170,-. Aksjekursen var da 149.50,-, mens opsjonskursen var hhhv. 0.35,- og 21,-. På forfallsdagoen var høyeste aksjekurs kr 151,50,-. Det gir oss
 \begin{equation*}
 K_T = \text{max}[0,(151.50-170)] = 0
 \end{equation*}
@@ -145,7 +146,7 @@ knitr::include_graphics(c("pensum/figurer-67.png"))
 
 ## Opsjon, aksje og risikofritt prosjekt
 
-Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at den blir gitt den samme kontantstrømmen
+Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at den blir gitt den samme kontantstrømmen på innløsningstidspunktet.
 
 \begin{equation*}
 A_T+S_T=B_T+K_T
@@ -167,33 +168,35 @@ Den parvise porteføljekombinasjonen løst for $B_T$ (risikofri kontantstrøm)
 B_T=A_T+S_T-K_T
 \end{equation*}
 
+Viser oss at en risikofri kontantstrøm på innløsningstidspunktet kan skapes av en portefølje bestående av en aksje, salgsopsjon, og en solgt kjøpsopsjon.
+
 ```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-69.png"))
 ```
 
-*Kontantstrømmmen ved forfall for en portefølje med en aksje, salgsopsjon, og en solgt kjøpsopsjon*
 
 ---
 
 ## Salg-kjøp-paritet (SKP)
 
 - Parvise porteføljekombinasjonen kan benyttes til å forklare såkalt salg-kjøp-paritet (SKP) ("put-cal-parity").
-- En slik sammenheng er nyttig siden en har mulighet til å verdsette en salgsopsjon dersom en kjenner verdien til en tilsvarende kjøpsopsjon.
+- En slik sammenheng er nyttig siden en har mulighet til å verdsette en salgsopsjon dersom en kjenner verdien på en tilsvarende kjøpsopsjon.
 - Ved feilprising vil arbitrasjehandel sørge for at denne likevekten vil bli opprettholdt
 - Sistnevnte gjør at vi kun trenger å kunne å konstruere modeller for kjøpsopsjoner.
 
 
-Investeringsutlegget på $t=0$ er kjøp av en aksje, kjøp av salgsopsjon, og salg av en kjøpsopsjoner 
-må tilsvare den neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall
-
+Vi har at investeringsutlegget på $t=0$ er en kjøp av en aksje, kjøp av salgsopsjon, og salg av en kjøpsopsjon. Dette må tilsvare den neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall
 \begin{equation*}
 A_0+S_0-K_0 = \frac{I}{1+r_f}
 \end{equation*}
 
-Omskrevet gir dette salg-kjøp-paritet (SKP)
+---
+
+Omskrevet gir dette oss salg-kjøp-paritet (SKP)
 \begin{equation*}
 K_0-S_0=A_0-\frac{I}{1+r_f}
 \end{equation*}
+Forskjellen mellom kjøps og salgsopsjenens verdi er lik differansen mellom aksjens verdi og nåverdi av innløsningskursen.
 
 ---
 
@@ -623,3 +626,7 @@ Verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsm
 knitr::knit_exit()
 ```
 
+- libreoffice
+En opsjon gir rett tile
+Oppdater timeplan, dele forelesningen
+figure 12.5
