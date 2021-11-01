@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ac4839ed285744aa930cd1b1c68adaa7","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xf43f16922da442c927c432c2f550b2f","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-30)
+### 2021/08/12 (updated: 2021-11-01)
 
 ---
 
@@ -64,7 +64,7 @@ class: inverse, center, middle
 - Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
-Oppdatert: 2021-10-30
+Oppdatert: 2021-11-01
 
 ---
 
@@ -587,16 +587,101 @@ B_T-S_T = \text{min}[V_T,B_T]
 ---
 
 ## Endret investeringsrisiko (**F**)
+
+Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
+
+- Egenkapitalen vurdert som kjøpsopsjon vil øke
+- Siden KVM forteller oss at dette ikke vil øke selskapsverdien, vil gjeldsverdien måtte avta
+
+I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha strenge betingelser om selskapets investeringsadferd.
+
 ---
 
 ## Realopsjoner (**I**)
 
+- Mange realinvsteringsprosjekt innehar opsjonstrekk, slike prosjektegenskaper kan kalles *realopsjoner*
+- Det sentrale her er at det dreier seg om en rett, uten samtidig en plikt, til å gjennomføre en realinvstering
+- Disse opsjonene gir *fleksibilitiet* som kan være verdifull (selskapet trenger ikke å bestemme i dag om produksjonskapasiteten skal øke, men på et senere tidspunkt når usikkerheten er redusert)
+- Denne verdien av fleksbilitet tas ikke hensyn til når forventet kontantstrøm skal diskonteres med risikojustert rente
+- Beslutningstre (se forelesning nr. 5) gir en nyttig oversikt gjennom en grafisk fremstilling av tidsfordelte beslutningspunkter
+
+**Øvelser:** Kan du komme på noen realinvesteringsprosjekter med opsjonstrekk?
+
+---
+
 ### Verdidriverne
+
+1. Dagens aksjekurs
+1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
+1. Standardavviket til kontantstrømmen som gir opsjonens verdi
+1. Tid til forfall (lang tid for realopsjoner)
+1. Risikofri rente
+
+Tre betingelser må være oppfylt for at realopsjonsmodell vil avvike fra diskontering av forventet kontantstrøm
+
+1. Usikkerhet om fremtidig kontantstrøm
+2. Rett, men ikke en plikt, til å gjennomføre framtidige investeringer
+3. Investeringene er irreversible
+
+---
 
 ### Typer
 
-### Verdien av flekisbilitet
+Vi kan skille mellom tre typer realopsjoner
+1. *Utsettelsesopsjon*
+1. *Læringsopsjon*
+1. *Vekstopsjon*
 
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Egenskap&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Oljeselskapet Gasse&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Farmasi&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Mobiltelefonlisens&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kontantstrøm&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Innhenting fra salgs av gass&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Inntjening fra salg av medikament&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Inntjening fra mobiltelefonbrukere&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Innløsningspris&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kostnaden ved å klargjørefor utvinning&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Forskning og utvikling for å bringe medikamentet til markedet&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Utviklingskostnader for programvare og utbygging&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Usikkerhet&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Markespris for gass&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Suksess/fiasko i kliniske prøver&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Etterspørsel etter mobile tjenester, spesielt internettbaserte&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tid til forfall&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Tid til forfall&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Patentets levetid&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Lisensens varighet&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+### Verdien av fleksibilitet
+
+`\begin{equation}
+\text{NV} = \text{Tradisjonell NV} + \text{Opsjonsverdi}
+\end{equation}`
+
+
+Verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsmodeller som går langt utover det som blir undervist i dette kurset.
 
 
 

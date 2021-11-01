@@ -552,28 +552,74 @@ knitr::include_graphics(c("pensum/figurer-78.png"))
 ---
 
 ## Endret investeringsrisiko (**F**)
+
+Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
+
+- Egenkapitalen vurdert som kjøpsopsjon vil øke
+- Siden KVM forteller oss at dette ikke vil øke selskapsverdien, vil gjeldsverdien måtte avta
+
+I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha strenge betingelser om selskapets investeringsadferd.
+
 ---
 
 ## Realopsjoner (**I**)
 
+- Mange realinvsteringsprosjekt innehar opsjonstrekk, slike prosjektegenskaper kan kalles *realopsjoner*
+- Det sentrale her er at det dreier seg om en rett, uten samtidig en plikt, til å gjennomføre en realinvstering
+- Disse opsjonene gir *fleksibilitiet* som kan være verdifull (selskapet trenger ikke å bestemme i dag om produksjonskapasiteten skal øke, men på et senere tidspunkt når usikkerheten er redusert)
+- Denne verdien av fleksbilitet tas ikke hensyn til når forventet kontantstrøm skal diskonteres med risikojustert rente
+- Beslutningstre (se forelesning nr. 5) gir en nyttig oversikt gjennom en grafisk fremstilling av tidsfordelte beslutningspunkter
+
+**Øvelser:** Kan du komme på noen realinvesteringsprosjekter med opsjonstrekk?
+
+---
+
 ### Verdidriverne
+
+1. Dagens aksjekurs
+1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
+1. Standardavviket til kontantstrømmen som gir opsjonens verdi
+1. Tid til forfall (lang tid for realopsjoner)
+1. Risikofri rente
+
+Tre betingelser må være oppfylt for at realopsjonsmodell vil avvike fra diskontering av forventet kontantstrøm
+
+1. Usikkerhet om fremtidig kontantstrøm
+2. Rett, men ikke en plikt, til å gjennomføre framtidige investeringer
+3. Investeringene er irreversible
+
+---
 
 ### Typer
 
-### Verdien av flekisbilitet
+Vi kan skille mellom tre typer realopsjoner
+1. *Utsettelsesopsjon*
+1. *Læringsopsjon*
+1. *Vekstopsjon*
 
+```{r, echo=F}
+dradnr <- c("Kontantstrøm",
+	   "Innløsningspris",
+	   "Usikkerhet",
+	   "Tid til forfall")
+dtils1 <- c("Innhenting fra salgs av gass","Kostnaden ved å klargjørefor utvinning","Markespris for gass","Tid til forfall")
+dtils2 <- c("Inntjening fra salg av medikament","Forskning og utvikling for å bringe medikamentet til markedet","Suksess/fiasko i kliniske prøver","Patentets levetid")
+dtils3 <- c("Inntjening fra mobiltelefonbrukere","Utviklingskostnader for programvare og utbygging","Etterspørsel etter mobile tjenester, spesielt internettbaserte","Lisensens varighet")
+df_prosj <- data.frame(dradnr,dtils1,dtils2,dtils3)
+htmlTable(df_prosj, header=c("Egenskap","Oljeselskapet Gasse","Farmasi","Mobiltelefonlisens"))
+```
+---
+
+### Verdien av fleksibilitet
+
+\begin{equation}
+\text{NV} = \text{Tradisjonell NV} + \text{Opsjonsverdi}
+\end{equation}
+
+
+Verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsmodeller som går langt utover det som blir undervist i dette kurset.
 
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
-
-
-
-
-
-
-
-
-
 
