@@ -370,8 +370,7 @@ Hvor de to *sikringssannsynlighetene* (risikojusert sannsynligheter) for $q$ og 
 q=\frac{1+r_f-n}{\theta-n} \text{ og } (1-q)=\frac{\theta-1-r_f}{\theta-n} 
 \end{equation*}
 
-Verdien til kjøpsopsjonen er derfor bestemt som den nedisikonterte verdien av den sikkerhetsekvivalente kontantstrømmen i periode T (hakeparantesen omdanner en usikker kontantstrøm til dens sikkerhetskivalente kontantstrømmen, jmf. forelesning 1)
-
+Verdien til kjøpsopsjonen er derfor bestemt som den nedisikonterte verdien av den sikkerhetsekvivalente kontantstrømmen i periode T (hakeparantesen omdanner en usikker kontantstrøm til dens *sikkerhetskivalente kontantstrømmen*, jmf. forelesning 1)
 
 ---
 
@@ -413,42 +412,43 @@ Til tross for dens enkle struktur, viser OPM-modellen å vise viktig innikt som 
 
 Sentrale forutsetninger:
 - Kontinuerlig tid
+- Aksjekursen kan endres 
 - Short-salg er mulig
 - Det er ingen skatt eller transaksjonskostnader
-- Aksjen betaler ikke dividende (footnote)
-- Risikofri rent er konstant
+- Aksjen betaler ikke dividende (men det er enkelt å endre modellen slik at dette blir tatt hensyn til)
+- Risikofri rente er konstant i løpet av kontraktsperioden
 
 \begin{equation}
 K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
 \end{equation}
 
-hvor
+- $N(d_1)$ har tolkning som antall kroner opsjonsverdien endrer seg med når aksjeprisen endres med en krone
+- $N(d_2)$ har tolkning som sannsynligheten for at opsjonen er "in-the-money" ved forfall (dvs. $A_T \geq I$ )
 
+
+---
+
+Vi har videre at 
 
 \begin{equation}
 d_1=\frac{ln(\frac{A_0}{I})+i_fT}{\sigma\sqrt{T}}+\frac{1}{2}\sigma\sqrt{T} \\
 d_2=d_1 -\sigma\sqrt{T}
 \end{equation}
 
-mens sikringsforholdet blir bestemt ved
-
-\begin{equation}
-m = \frac{1}{N(d_1)}
-\end{equation}
+mens sikringsforholdet  er bestemt av $m = \frac{1}{N(d_1)}$
 
 ---
 
-**Eksempel 12.7** OBX-indeksen ble 31.08.2015 notert til 532.26-. Samme dag kontinuerlig risikofri årsrente beregnes til 1.2 prosent. Kjøpsopsjoner med Innløsningskurs
+**Eksempel 12.7** 
+
+OBX-indeksen ble 31.08.2015 notert til 532.26-. Samme dag kontinuerlig risikofri årsrente beregnes til 1.2 prosent. Kjøpsopsjoner med innløsningskurs
 530,- og forfall 17.09.2015 ble omsatt til 15,25,-. OBX-indeksen årlige standardavvik er estimert til 30.4%.
 
-Starter med 
+Starter med å regne ut de to d-verdiene:
+- $d_1=\frac{ln(\frac{532.26}{530})+0.01217/365}{\sigma\sqrt{17/365}}+\frac{1}{2}\sigma\sqrt{17/365} =0.10618$
+- $d_2=d_1 -\sigma\sqrt{17/365}=0.04057$
 
-\begin{equation}
-d_1=\frac{ln(\frac{532.26}{530})+0.01217/365}{\sigma\sqrt{17/365}}+\frac{1}{2}\sigma\sqrt{17/365} =0.10618\\
-d_2=d_1 -\sigma\sqrt{17/365}=0.04057
-\end{equation}
-
-Som ved bruk av standardnormalfordelingstabellen (interpolering) gir oss
+Som ved bruk av standardnormalfordelingstabellen (interpolering) gir oss de to sannsynlighetene:
 \begin{equation}
 N(d_1)=1-0.45772=0.542280\\
 N(d_2)=1-0.483818=0.516182
@@ -468,6 +468,19 @@ Vi kan nå finne opsjonsprisen som er gitt ved
 \begin{equation}
 K_0 =532.26\cdot 0.542280 -530e^{-0.012(17/365)}0.516182=15.21
 \end{equation}
+
+---
+
+På bakgrunn av SPK kan salgsopsjonen beregnes som
+\begin{equation}
+S_0 = K_0 -A_0 + Ie^{-r_FT} = \\ 15.212-532.26+530^{-0.012(17li365/)} = 12.65
+\end{equation}
+
+mens sikringsforholdet er gitt ved
+\begin{equation}
+m=\frac{1}{0.54228}=1.84
+\end{equation}
+
 
 ---
 
@@ -494,7 +507,7 @@ Som nevnt innledningsvis finnes det både direkte og indirekte (implisitte) opsj
 - Finansieringsprosjekter (**F**)
 - Investeringsprosjekter (**I**)
 
-Vi ser nærmere på disse nå
+Vi skal se nærmere på prinsippet for verdsettingen av disse nå
 
 ---
 
