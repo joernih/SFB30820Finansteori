@@ -17,7 +17,6 @@ source('../inst/forelesningsnotater/timeplan.R')
 ## [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
 ## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
 ## [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/11_Dividende.pdf)
-## `r tema[12]`
-## `r tema[13]`
+## [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/12_Opsjoner.pdf)
 
 
