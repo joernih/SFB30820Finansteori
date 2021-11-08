@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd115946767344b59200a97e8304748b","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f4a7bd606bfd4430b298f19ab0aae5d7","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -55,7 +55,7 @@ class: center, middle, inverse, title-slide
 
 class: inverse, center, middle
 
-# Forelesning 13: **Finansielle instrumenter til påvirking av kontantstrømmer**
+# Forelesning 13: **Risikostyring**
 
 
 # Læringsmål kapittel 13
@@ -92,7 +92,7 @@ Med *finansielle derivater* menes finansielle instrumenter som er knyttet til et
 Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 - Opsjoner
-- Forwardkontrakter
+- Forwardkontrakter (terminkontrakter)
 - Futures
 - Swapper
 
@@ -100,7 +100,7 @@ Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 # Hvorfor risikostyring?
 
-Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markkeder vil typisk medføre:
+Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markeder vil typisk medføre:
 - Forventet kontantstrøm blir den samme, men variansen øker 
 - Gitt at konkurrsansynligheten ikke endres, vil kun egenkapitalkostnaden endres
 - Dersom investorene er veldiversifiserte, vil dette kun øke selskapets verdi kun dersom risikostyring påvirker den systematiske risikoen
@@ -117,21 +117,21 @@ risikoen. Gitt at dette er tilfelle, hvordan kan så risikostyring bidra til ver
 Disse utgjør 99 prosent av norske selskaper
 
 - Her er typisk aksjen illikvid og eierne oftest udiversifiserte. Videre har ikke verdimaksimering nødvendigvis førsteprioritet.
-- Derfor blir i tillegg total og ikke systematisk risiko riktig
-- Risikostyringen vil derfor være relevant for verdiskapningen
+- Derfor blir, i tillegg til systematisk risiko, også total og ikke systematisk risiko riktig
+- Risikostyring vil derfor kunne påvirke verdisettingen til eierne
 
 
 ---
 
 ### Børsnoterte selskaper
 
-For børsnoterte selskaper med veldiversifiserte eiere vil risikostyring kunne skape verdier dersom vi har ulike brudd med markedsperfeksjoner. Sentrale imperfeksjoner er:
+For børsnoterte selskaper med veldiversifiserte eiere vil risikostyring kunne skape verdier gitt at vi har ulike brudd med markedsperfeksjoner. Sentrale imperfeksjoner består her av:
 
-1. *Gjeldskapasitet:* Redusert volatilitet til kontantstrømmen gjør det mulig å ta opp mer gjeld som kan gi økt verdi (eks. skattefordel av gjeld)
-1. *Internfinansiering:* Lettere å få til dersom kontantstrømmen jevnes over tid jevnes ut.
-1. *Finansielle krisekostnader:* Blir redusert til kontantstrømmen jevnes ut*
-1. *Komparative fordel ved sikring:* sikringskostnadene kan være spesielt store for små eiere.
-1. *Assymetrisk informasjon:* Ledelsen bedre i stand til å fortea målrettet risikostyring enn eieren fordi det har bedre kunnskap om bedriften.
+1. *Gjeldskapasitet:* Redusert volatilitet til kontantstrømmen gjør det mulig å ta opp mer gjeld som kan gi økt verdi (eks. skattefordel av gjeld).
+1. *Internfinansiering:* Lettere å få til dersom kontantstrømmen over tid jevnes ut.
+1. *Finansielle krisekostnader:* Blir redusert i det kontantstrømmen jevnes ut.
+1. *Komparative fordel ved sikring:* Sikringskostnadene kan være spesielt store for små eiere.
+1. *Assymetrisk informasjon:* Ledelsen bedre i stand til å fortea målrettet risikostyring enn eierne fordi det har bedre kunnskap om bedriften.
 1. *Gjeldskostnad:* Swaps kan redusere lånekostnadene og dermed redusere kapitalkostnaden for gjeld, noe som vil øke verdien av egenkapitalen.
 1. *Skatt:* Kravet om framføring av skattbart underskudd gjør at risikostyring øker nåverdi av skatteutbetalingene.
 
@@ -152,10 +152,10 @@ Valutakursrisiko er usikkerhet om endringer i resultat, kontantstrøm og verdi s
 
 Renterisiko gjelder effekten av uventede endringer på resultat, kontantstrøm og verdi.  
 
-&lt;img src="pensum/figurer-82.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pensum/figurer-82.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 
-&lt;img src="pensum/figurer-84.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pensum/figurer-84.png" width="40%" style="display: block; margin: auto;" /&gt;
 ---
 
 ## Prisrisiko (#3)
@@ -169,7 +169,7 @@ Stor prisrisiko er i mange tilfeller knyttet til råvaremarkedene som kan gi sto
 
 # Forwardkontrakter
 
-Forwardkontrakter (terminkontrakter) dreier seg om en uridisk bindende avtale mellom to parter som gir kjøperen
+Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale mellom to parter som gir kjøperen
 
 1. Plikt til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
 1. For en bestemt pris 
@@ -183,13 +183,19 @@ Forwardkontrakter (terminkontrakter) dreier seg om en uridisk bindende avtale me
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
-1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel (standardisert)
+1. Rett til å kjøpe eller selge en bestemt (standardisert) eiendel 
 1. For en bestemt pris (*innløsningskursen*)
-1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør skjer i løpet av hele kontraktsperioden.
+1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør (merk: clearingsselskapet gjør denne jobben) skjer i løpet av hele kontraktsperioden.
 
-&lt;img src="pensum/figurer-86.png" width="40%" style="display: block; margin: auto;" /&gt;
+[Kraftinvestor Einar Aas I](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
 
-&lt;img src="pensum/figurer-87.png" width="40%" style="display: block; margin: auto;" /&gt;
+[Kraftinvestor Einar Aas II](https://e24.no/olje-og-energi/i/8wdL61/nasdaq-kredittsjekket-ikke-aas-paa-11-maaneder)
+
+---
+
+&lt;img src="pensum/figurer-86.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="pensum/figurer-87.png" width="50%" style="display: block; margin: auto;" /&gt;
 ```
 ---
 
@@ -207,7 +213,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 Swap, finansiell transaksjon der to aktører avtaler å bytte kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
 
-&lt;img src="pensum/figurer-88.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pensum/figurer-88.png" width="80%" style="display: block; margin: auto;" /&gt;
 ---
 
 # Empiri om risikostyring

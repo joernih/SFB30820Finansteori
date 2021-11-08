@@ -140,7 +140,6 @@ S_T = \text{max}[0,(170-151.50)] = 18.50
 knitr::include_graphics(c("pensum/figurer-67.png"))
 ```
 
-[Kraftinvestor Einar Aas](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
 
 ---
 
@@ -493,7 +492,7 @@ K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
 \end{equation}
 
 
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-77.png"))
 ```
 
@@ -502,15 +501,14 @@ knitr::include_graphics(c("pensum/figurer-77.png"))
 # Opsjonstankegang i finansfaget
 
 Som nevnt innledningsvis finnes det både direkte og indirekte (implisitte) opsjonstrekk i en rekke:
-- Finansieringsprosjekter (**F**)
-- Investeringsprosjekter (**I**)
+- Finansieringsprosjekter 
+- Realinvesteringsprosjekter
 
 Vi skal se nærmere på prinsippet for verdsettingen av disse nå
 
 ---
 
-
-## Kapitalstruktur og opsjonsverdi (**F**)
+## Kapitalstruktur og opsjonsverdi 
 
 **Eksempel 12.10** Mopsjon ASA er et lite selskap med en enkel kapitalstruktur Selskapet er finansiert med egenkapital og et lån. Lån er på 500.000,- (inklusive renter) og skal tilbakebetales om ett år. Vi antar også at selskapet skal avvikles om ett år, og at kontantstrømmen inkluderer salgsverdien av selskapet. Kontantstrømmen til eierne er vist i figuren nedenfor.
 
@@ -547,10 +545,10 @@ G_T = B_T-S_T
 B_T-S_T = \text{min}[V_T,B_T]
 \end{equation}
 
-```{r, echo=FALSE, out.width="30%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-78.png"))
-```
 
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-79.png"))
+```
 ---
 
 .pull-left[
@@ -579,9 +577,9 @@ knitr::include_graphics(c("pensum/figurer-78.png"))
 
 ---
 
-## Endret investeringsrisiko (**F**)
+## Endret investeringsrisiko 
 
-Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
+Anta at selskapet gjennomfører investeringer som har nåverdi lik null,  men som øker selskapets investeringsrisiko (kun usystematisk)
 
 - Egenkapitalen vurdert som kjøpsopsjon vil øke
 - Siden KVM forteller oss at dette ikke vil øke selskapsverdien, vil gjeldsverdien måtte avta
@@ -590,8 +588,9 @@ I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha str
 
 ---
 
-## Realopsjoner (**I**)
+## Realopsjoner 
 
+### Kjennetegn
 - Mange realinvsteringsprosjekt innehar opsjonstrekk, slike prosjektegenskaper kan kalles *realopsjoner*
 - Det sentrale her er at det dreier seg om en rett, uten samtidig en plikt, til å gjennomføre en realinvestering
 - Disse opsjonene gir *fleksibilitet* som kan være verdifull (selskapet trenger ikke å bestemme i dag om produksjonskapasiteten skal øke, men på et senere tidspunkt når usikkerheten er redusert)
@@ -682,4 +681,39 @@ Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere
 knitr::knit_exit()
 ```
 
+#1 Repetisjon av Opsjoner
+- Opsjon: Finansielt instrument, selger/utsteder/skriver mottar penger i bytte mot forpliktelser: Kjøp har en rett til å kjøpe en forhåndsbetalt pris en bestemt eiendel 
+- Max-funksjoner for kjøps- og salgsopsjoner med kontantstrømsdiagrammer 
+- Salgs-kjøps-paritet ("put-call-parity")
+- Intuisjon fem punker: A,I,F,S,R
+- Kjøpsopsjoner
+	- Binomisk opsjonsprismodell, aksjekursen m, , sikringsporteføljen
+	- Black-Scholes modellen
+#2 Opsjonstankegangen i finansfaget
+- Kapitalstruktur vs. opsjonsverdi 
+- Økt investeringsusikkerhet
+- Realopsjoner
+- Realopsjonernes verdidrivere
+- Realopsjonstyper
+- Verdien av fleksibilitet
+- Risiko i KVM vs. OPM
+- Opsjonens systematiske risiko
 
+#3 Risikostyring.
+- Innledning
+- Hvorfor risikostyring?
+  - Dillemma uten imperfeksjoner
+  - Ikke børsnoterte
+  - Børsnoterte
+- Risikokilder
+  - Valutakursusikkerhet
+  - Renteusikkerhet
+  - Pris(råvare) usikkerheten
+- Finansielle derivater mot risikokilder
+  - Forward(termin) kontrakter
+  - Futures
+  - Opsjoner
+  - Swaps
+- Empiri
+  - Undersøkelse I: +
+  - Undersøkelse II: v
