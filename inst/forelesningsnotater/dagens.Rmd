@@ -644,8 +644,39 @@ htmlTable(df_prosj, header=c("Egenskap","Oljeselskapet Gasse","Farmasi","Mobilte
 \text{NV} = \text{Tradisjonell NV} + \text{Opsjonsverdi}
 \end{equation}
 
+Tradisjonell NV er verdien av den kontantstrømmen som ikke tar hensyn til prosjektets fleksibilitet.  Opsjonsverdien kan bli bestemt av opsjonsprismodellene i dette kapitlet, men i praksis krever 
+verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsmodeller som går langt utover det som blir undervist i dette kurset.
 
-Verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsmodeller som går langt utover det som blir undervist i dette kurset.
+**Øvelse:** Se nærmere på eksempel 12.13 dersom du ønsker en tallfasting av disse sammenhengende.
+
+---
+
+### Risiko i KVM kontral OPM
+
+- For investorer med risikoaversjon, har vi tidligere vist under KVM at økt risiko har vært til ulempe
+- Det motsatt viser seg i være tilfelle i OPM
+- Dettte betyr allikevel ikke investorene skifter fra risikoaverse til risikosøkenede
+- I KVM baserer risikomålet $\beta$ seg på hele sannsynlighetsfordelingens
+- I OPM baserer opsjonsprisen seg kun på sannsynlighetsfordelingens haler:
+  - På kjøpsopsjoner høyrehalen
+  - På salgsopsjoner venstrehalen
+
+---
+
+### Opsjonens systematiske risiko
+
+Selv om vi har vist til nå at det er kun sannsynlighetsfordelingens haler som betyr noe, er det viktig å være klar over at opsjoner er risikofylte og vanligvis består av både usystematisk og systematisk risiko. For aksjeopsjoner det mulig å vise at sammenhengen mellom opsjonsbeta og en (europeisk) kjøpsopsjon er gitt ved:
+
+\begin{equation}
+\beta_K = N(d_1)\frac{A_0}{K_0}\beta_E
+\end{equation}
+
+**Eksempel: 12.14** Fra DN finner du at aksjebeta for OBX var 1.04. OBX-indeksen er notert til 532.26. Kjøpsopsjonen 15.25, mens $N(d_1)$ er beregnet til 0.54227.
+
+\begin{equation}
+\beta_K = 0.54227\frac{532.26}{15.25}1.04=19.68
+\end{equation}
+Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere enn den systematiske aksjerisikoen.
 
 ```{r, echo=F}
 knitr::knit_exit()

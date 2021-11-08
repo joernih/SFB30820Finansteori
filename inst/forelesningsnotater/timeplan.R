@@ -4,9 +4,9 @@ library(magrittr)
 library(xaringan)
 # Timeplan
 ## Input
-ukenr <- c(seq(33,45),47)
-forenr <- c(seq(1,7),"",seq(8,13))
-timer <- rep(3,14)
+ukenr <- c(seq(33,45),47,48)
+forenr <- c(seq(1,7),"",seq(8,14))
+timer <- rep(3,15)
 tema <- c(
 	  "Introduksjon og overblikk",
 	  "Relevant risiko: Porteføljeteori to objekter",
@@ -19,9 +19,10 @@ tema <- c(
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
-	  "**Opsjoner (start)**",
-	  "Opsjoner (forts), og Finansielle instrumenter til påvirking av kontantstrømmer",
-	  "Oppgavegjennomgang"
+	  "Opsjoner (forst)",
+	  "**Finansielle instrumenter til påvirking av kontantstrømmer**",
+	  "Erstatter forelesning med rask gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
+	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -35,8 +36,9 @@ literatur <- c(
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
 	       "Kap. 11: Dividende",
-	       "**Kap. 12: Opsjoner**",
-	       "Kap. 13: Risikostyring",
+	       "Kap. 12: Opsjoner",
+	       "**Kap. 13: Risikostyring**",
+	       "",
 	       "Kap. 1,2-4,5-8,11,12,13"
 )
 undervfor <- c(
@@ -51,9 +53,10 @@ undervfor <- c(
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
-	  "**Campus Sone E E1-062/Zoom**",
 	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone G G1-062-Naturfag/Zoom"
+	  "**Campus Sone E E1-062/Zoom**",
+	  "Campus Sone G G1-062-Naturfag/Zoom",
+	  "Campus Sone E E1-062/Zoom"
 )
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
@@ -65,6 +68,7 @@ oppgaver_bok <- c(
 	  "6.1,6.6,6.7,6.8",
 	  "7.1,7.2,7.8,7.8,7.9",
 	  "8.1,8.3,8.4,8.5,8.7,8.8,8.10",
+	  "",
 	  "",
 	  "",
 	  "",
@@ -83,10 +87,11 @@ oppgaver_nett <- c(
 	  "N.11.1,N.11.2,N.11.3",
 	  "",
 	  "",
+	  "",
 	  ""
 )
 
-## Output
+## output
 df1 <- data.frame(
 		  Uke=ukenr,
 		  Forelesning=forenr,
@@ -99,9 +104,9 @@ timenavn <- c("Uke","Forelesning","Literatur","Sentrale temaer","Undervisningsfo
 
 timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
-timep_ii <- htmlTable(df1[8:14,],header=timenavn)
+timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 
-df2 <- data.frame(Forelesning=seq(1,13),
+df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
 		 OppgaverN=oppgaver_nett)
 
