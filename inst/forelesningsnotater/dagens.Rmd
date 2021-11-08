@@ -615,6 +615,8 @@ Tre betingelser må være oppfylt for at realopsjonsmodell vil avvike fra diskon
 2. Rett, men ikke en plikt, til å gjennomføre framtidige investeringer
 3. Investeringene er irreversible
 
+[Frykter-konkursras-i-usas-skiferolje](https://e24.no/olje-og-energi/i/naxGan/frykter-konkursras-i-usas-skiferolje)
+
 ---
 
 ### Typer
@@ -629,7 +631,7 @@ dradnr <- c("Kontantstrøm",
 	   "Innløsningspris",
 	   "Usikkerhet",
 	   "Tid til forfall")
-dtils1 <- c("Innhenting fra salgs av gass","Kostnaden ved å klargjøre for utvinning","Markedspris for gass","Tid til forfall")
+dtils1 <- c("Innhenting fra salgs av gass","Kostnaden ved å klargjøre for utvinning","Markedspris for gass","I praksis uendelig")
 dtils2 <- c("Inntjening fra salg av medikament","Forskning og utvikling for å bringe medikamentet til markedet","Suksess/fiasko i kliniske prøver","Patentets levetid")
 dtils3 <- c("Inntjening fra mobiltelefonbrukere","Utviklingskostnader for programvare og utbygging","Etterspørsel etter mobile tjenester, spesielt internettbaserte","Lisensens varighet")
 df_prosj <- data.frame(dradnr,dtils1,dtils2,dtils3)
@@ -688,14 +690,14 @@ knitr::knit_exit()
 - Intuisjon fem punker: A,I,F,S,R
 - Kjøpsopsjoner
 	- Binomisk opsjonsprismodell, aksjekursen m, , sikringsporteføljen
-	- Black-Scholes modellen
+	- Black-Scholes modellen, K_0 = A - e^-rftI = N(d1) N(d_2), tegning
 #2 Opsjonstankegangen i finansfaget
-- Kapitalstruktur vs. opsjonsverdi 
-- Økt investeringsusikkerhet
-- Realopsjoner
-- Realopsjonernes verdidrivere
-- Realopsjonstyper
-- Verdien av fleksibilitet
+- Kapitalstruktur vs. opsjonsverdi , se bok
+- Økt investeringsusikkerhet, se bok
+- Realopsjoner, bilde. s Skiferolje
+- Realopsjonens verdidrivere, , inl/inv, std til kts, tid til for, ris rente, inv rett, usikk om kontstrr, inv er irrevrise
+- Realopsjonstyper: utsettelses, læringsopsjoner, vekstopsjon
+- Verdien av fleksibilitet. NV = TkS + OV, sist K0, vanligivs komppilser
 - Risiko i KVM vs. OPM
 - Opsjonens systematiske risiko
 
