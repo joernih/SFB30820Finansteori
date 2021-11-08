@@ -655,7 +655,7 @@ verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsm
 
 - For investorer med risikoaversjon, har vi tidligere vist under KVM at økt risiko har vært til ulempe
 - Det motsatt viser seg i være tilfelle i OPM
-- Dettte betyr allikevel ikke investorene skifter fra risikoaverse til risikosøkenede
+- Dette betyr allikevel ikke investorene skifter fra risikoaverse til risikosøkende
 - I KVM baserer risikomålet $\beta$ seg på hele sannsynlighetsfordelingens
 - I OPM baserer opsjonsprisen seg kun på sannsynlighetsfordelingens haler:
   - På kjøpsopsjoner høyrehalen
@@ -682,8 +682,4 @@ Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere
 knitr::knit_exit()
 ```
 
-figure 12.5
-ide
-En opsjon gir rett tile
-laste opp video
 

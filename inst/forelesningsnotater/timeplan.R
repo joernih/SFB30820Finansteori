@@ -19,7 +19,7 @@ tema <- c(
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
-	  "Opsjoner (forst)",
+	  "Opsjoner",
 	  "**Finansielle instrumenter til påvirking av kontantstrømmer**",
 	  "Erstatter forelesning med rask gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
 	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"

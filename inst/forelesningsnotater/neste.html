@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e3493553ab3e487b8f1ded17460cbc2b","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xd115946767344b59200a97e8304748b","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-10-29)
+### 2021/08/12 (updated: 2021-11-08)
 
 ---
 
@@ -52,37 +52,44 @@ class: center, middle, inverse, title-slide
 
 
 
-
----
-
-# Forelesning 13: Finansielle instrumenter til påvirking av kontantstrømmer
 
 class: inverse, center, middle
 
+# Forelesning 13: **Finansielle instrumenter til påvirking av kontantstrømmer**
+
+
 # Læringsmål kapittel 13
 
-1. Begrunne hvorfor risikostyring kan være viktig.
-1. Redegjøre for viktige risikokilder.
-1. Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
-1. Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
-1. Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
-1. Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
+- Begrunne hvorfor risikostyring kan være viktig.
+- Redgjøre for viktige risikokilder.
+- Redgjøre for egenskapene til forwardkontrakter
+- Redegjør for egenskapene til futureskontrakter.
+- Redgjøre for egenskapene til opsjoner.
+- Redgjøre for egenskapen til swaps.  
 
 ---
 
-# Hvorfor risikostyring?
+# Innledning 
 
-Risikostyring
-- Identifikasjon
-- Diagnose
+Risikostyring (*financial-management*) er basert på
+1. *Identifisere* økonomisk usikkerhet som kan få store negative økonomiske konsekvenser
+1. Ta *forholdsregler* som enten eliminerer eller reduserer skadeomfanger av slike hendelser
+
+Fokuset her er styring av en bedrifts kontantstrøm framfor en verdipapirportefølje
 
 
-Finansielle derivater
+I risikostyring benyttes *finansielle derivater* til *sikring* av en slik kontantstrøm
 
-Finansielle instrumenter 
+Til forksjell fra forsikring (som dreier seg om eliminering av tapsrisiko), innebærer *sikring* at man redusere tapsrisikoen på bekostning av 
+gevinstmuligheten.
 
-knyttet til
 
+---
+
+Med *finansielle derivater* menes finansielle instrumenter som er knyttet til et underliggende verdipapir. 
+
+
+Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 - Opsjoner
 - Forwardkontrakter
@@ -91,50 +98,130 @@ knyttet til
 
 ---
 
-&lt;img src="pensum/figurer-82.png" width="40%" style="display: block; margin: auto;" /&gt;
+# Hvorfor risikostyring?
 
-# Risikokilder
+Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markkeder vil typisk medføre:
+- Forventet kontantstrøm blir den samme, men variansen øker 
+- Gitt at konkurrsansynligheten ikke endres, vil kun egenkapitalkostnaden endres
+- Dersom investorene er veldiversifiserte, vil dette kun øke selskapets verdi kun dersom risikostyring påvirker den systematiske risikoen
+
+Her oppstår det imidlertid et dillemma: Akjsonærene kan på egen hånd benytte finansielle derivater til å lage porteføljer som endrer den systematiske
+risikoen. Gitt at dette er tilfelle, hvordan kan så risikostyring bidra til verdiskapning?
+
+**Svar:** Nøkkelorder er igjen *imperfeksjoner*.
 
 ---
 
-## Valutakursrisikio
+### Ikke børsnoterte selskaper 
+
+Disse utgjør 99 prosent av norske selskaper
+
+- Her er typisk aksjen illikvid og eierne oftest udiversifiserte. Videre har ikke verdimaksimering nødvendigvis førsteprioritet.
+- Derfor blir i tillegg total og ikke systematisk risiko riktig
+- Risikostyringen vil derfor være relevant for verdiskapningen
+
+
+---
+
+### Børsnoterte selskaper
+
+For børsnoterte selskaper med veldiversifiserte eiere vil risikostyring kunne skape verdier dersom vi har ulike brudd med markedsperfeksjoner. Sentrale imperfeksjoner er:
+
+1. *Gjeldskapasitet:* Redusert volatilitet til kontantstrømmen gjør det mulig å ta opp mer gjeld som kan gi økt verdi (eks. skattefordel av gjeld)
+1. *Internfinansiering:* Lettere å få til dersom kontantstrømmen jevnes over tid jevnes ut.
+1. *Finansielle krisekostnader:* Blir redusert til kontantstrømmen jevnes ut*
+1. *Komparative fordel ved sikring:* sikringskostnadene kan være spesielt store for små eiere.
+1. *Assymetrisk informasjon:* Ledelsen bedre i stand til å fortea målrettet risikostyring enn eieren fordi det har bedre kunnskap om bedriften.
+1. *Gjeldskostnad:* Swaps kan redusere lånekostnadene og dermed redusere kapitalkostnaden for gjeld, noe som vil øke verdien av egenkapitalen.
+1. *Skatt:* Kravet om framføring av skattbart underskudd gjør at risikostyring øker nåverdi av skatteutbetalingene.
+
+
+---
+
+# Risikokilder (#1-#3)
+
+## Valutakursrisikio (#1)
+
+Valutakursrisiko er usikkerhet om endringer i resultat, kontantstrøm og verdi som følge av av uventede valautakursendringer.
+
 
 &lt;img src="pensum/figurer-81.png" width="40%" style="display: block; margin: auto;" /&gt;
 ---
 
-## Renterisiko
+## Renterisiko (#2)
+
+Renterisiko gjelder effekten av uventede endringer på resultat, kontantstrøm og verdi.  
+
+&lt;img src="pensum/figurer-82.png" width="45%" style="display: block; margin: auto;" /&gt;
 
 
-&lt;img src="pensum/figurer-84.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pensum/figurer-84.png" width="45%" style="display: block; margin: auto;" /&gt;
+---
+
+## Prisrisiko (#3)
+
+Stor prisrisiko er i mange tilfeller knyttet til råvaremarkedene som kan gi store endringer i inntjening og markedsverdi.
+
+&lt;img src="pensum/figurer-83.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Prisrisiko
-
-&lt;img src="pensum/figurer-83.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 # Forwardkontrakter
 
-&lt;img src="pensum/figurer-85.png" width="40%" style="display: block; margin: auto;" /&gt;
+Forwardkontrakter (terminkontrakter) dreier seg om en uridisk bindende avtale mellom to parter som gir kjøperen
+
+1. Plikt til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
+1. For en bestemt pris 
+1. På et forhåndsbestemt fremtidig tidspunkt 
+
+&lt;img src="pensum/figurer-85.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 # Futureskontrakter
 
+En *future* har egenskaper i form av at den gir *kjøperen:*
+
+1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel (standardisert)
+1. For en bestemt pris (*innløsningskursen*)
+1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør skjer i løpet av hele kontraktsperioden.
+
 &lt;img src="pensum/figurer-86.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="pensum/figurer-87.png" width="40%" style="display: block; margin: auto;" /&gt;
+```
 ---
 
-# Opsjoner
+# Opsjoner (repetisjon)
+
+En *opsjon* har egenskaper i form av at den gir *kjøperen:*
+
+1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
+1. For en bestemt pris (*innløsningskursen*)
+1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
 
 ---
 
 # Swaps
 
+Swap, finansiell transaksjon der to aktører avtaler å bytte kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
+
+&lt;img src="pensum/figurer-88.png" width="60%" style="display: block; margin: auto;" /&gt;
 ---
 
 # Empiri om risikostyring
 
----
+En undersøkelse i USA fra 2012 viser:
+- 56 prosent av selskapene (ikke-finansielle) benytter risikostyring 
+- Vesentllige flere selskaper benyttter derivater enn de som ikke gjør det
+- Benyttes primært for å sikre transaksjoner som vil skje de kommende 12 måneder
+- Svært få benytter risikostyring for å redusere kapitalkostnaden eller for å ta posisjoner i rente- og råvarmarkedet.
+
+En annnen undersøkelse viser:
+- Høyer markesverdi for bedrifter som benytter derivater til å sikre markedsverdi
+- Verdiøkningen er betydelig: 4.9 prosent høyere til de bedriftene som sikrer
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
