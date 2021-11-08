@@ -3280,6 +3280,641 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
+---
+
+class: inverse, center, middle
+
+# Forelesning 12: `r tema[12]`
+
+- Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
+- Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
+- Redegjøre for salg-kjøp-paritet og beregne verdien av ett element i pariteten ved hjelp av de øvrige elementene.
+- Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
+- Beregne en kjøpsopsjonens verdi ved hjelp av Black-Scholes-modellen.
+- Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+
+`r paste("Oppdatert:",Sys.Date())`
+
+---
+
+# Innledning
+
+En *opsjon* er en kontrakt som gir opsjonseieren en rett, men ikke en plikt, til å kjøpe eller selge en eiendel til 
+en avtalt pris i løpet av en avtalt periode.
+
+*Opsjonsmodeller* forsøker å prissette verdien av en slik kontrakt. Det mange grunner til at dette er nyttig, her er noen:
+1. Benyttes i bedriftenes risikostyring.  
+1. Øke din avkastning i kapitalmarkedet
+1. Utbredt finansielt instrument
+1. Besvare spørsmål som tidligere ikke hadde noen presise svar.
+
+Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprisingsmodeller, samt vise egenskapene til enkle opsjonsprisingsmodeller.
+
+---
+
+# Grunntrekk ved opsjoner
+
+En *opsjon* har egenskaper i form av at den gir *kjøperen:*
+
+1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
+1. For en bestemt pris (*innløsningskursen*)
+1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
+
+---
+
+## Eksempler på opsjoner på forskjellige eiendeler
+              -
+- **Aksjeopsjoner** (vi skal først se på verdsettingen av disse)
+- Konvertible obligasjoner
+- Valutakursopsjoner
+- Kassakreditt har opsjonstrekk
+- Private kontrakter 
+- **En rekke investerings- og finansieringsbeslutninger har direkte og indirekte opsjonstrekk** (vi skal til slutt se på prinsippene bak verdsettingen av disse)
+
+---
+
+## Standardisert opsjonskontrakt
+
+Standardisering og børsnotering av opsjonskontrakter fordelaktig fordi det øker den underliggende aksjens *likviditet*.
+
+Aksjeopsjoner på Oslø børs er standardisert ved at
+
+- Består av: *Aksjeopsjoner (amerikanske) og indeksopsjoner (europeiske)*
+- Kontraktstørrelse: *En opsjon gir rett til 100 aksjer*
+- Minimumskrav til handel: *10 kontrakter*
+
+For å forenkle den modelltekniske framstillingen, ser vi framover kun på *europeiske opsjoner* hvor det ikke er satt noe minimumskrav til handel. I tillegg ser vi også bort *beskatning*, *transaksjonskostnader* og *vanlig meglerkurtasje*.
+
+---
+
+## Opsjonens kontantstrøm ved forfall (t=T)
+
+Kjøpsopsjon
+\begin{equation}
+K_T = \text{max}[0,(A_T-I)]
+\end{equation}
+
+Salgsopsjon
+\begin{equation}
+S_T = \text{max}[0,(I-A_T)]
+\end{equation}
+
+**Talleksempel 12.2**:
+
+16 .  november kjøpe du både en kjøps- og salgsopsjon på Telenor-aksjen med innløsningskurs 170,-. Aksjekursen var da 149.50,-, mens opsjonskursen var hhv. 0.35,- og 21,-. På forfallsdagoen var høyeste aksjekurs kr 151,50,-. Det gir oss
+\begin{equation*}
+K_T = \text{max}[0,(151.50-170)] = 0
+\end{equation*}
+
+\begin{equation*}
+S_T = \text{max}[0,(170-151.50)] = 18.50
+\end{equation*}
+
+---
+
+**Kontantstrømdiagram for kjøps- og salgsopsjoner**
+
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-67.png"))
+```
+
+[Kraftinvestor Einar Aas](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
+
+---
+
+## Opsjon, aksje og risikofritt prosjekt
+
+Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at den blir gitt den samme kontantstrømmen på innløsningstidspunktet.
+
+\begin{equation*}
+A_T+S_T=B_T+K_T
+\end{equation*}
+
+
+
+```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-68.png"))
+```
+
+*Kontantstrøm for aksje og salgsopsjon (par 1) og risikofri obligasjon og kjøpsopsjonenen (par 2)*
+
+---
+
+Den parvise porteføljekombinasjonen løst for $B_T$ (risikofri kontantstrøm)
+
+\begin{equation*}
+B_T=A_T+S_T-K_T
+\end{equation*}
+
+Viser oss at en risikofri kontantstrøm på innløsningstidspunktet kan skapes av en portefølje bestående av en aksje, salgsopsjon, og en solgt kjøpsopsjon.
+
+```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-69.png"))
+```
+
+
+---
+
+## Salg-kjøp-paritet (SKP)
+
+- Parvise porteføljekombinasjonen kan benyttes til å forklare såkalt salg-kjøp-paritet (SKP) ("put-call-parity").
+- Dette fordi ved feilprising vil arbitrasjehandel sørge for at denne likevekten vil bli opprettholdt
+- Vi har derfor mulighet til å verdsette en salgsopsjon dersom en kjenner verdien på en tilsvarende kjøpsopsjon.
+- Det gjør at vi kun trenger å kunne å konstruere modeller for kjøpsopsjoner.
+
+---
+
+Vi har at investeringsutlegget på $t=0$ er en kjøp av en aksje, kjøp av salgsopsjon, og salg av en kjøpsopsjon. Dette må tilsvare den neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall
+\begin{equation*}
+A_0+S_0-K_0 = \frac{I}{1+r_f}
+\end{equation*}
+
+Omskrevet gir dette oss salg-kjøp-paritet (SKP)
+\begin{equation*}
+K_0-S_0=A_0-\frac{I}{1+r_f}
+\end{equation*}
+Forskjellen mellom kjøps og salgsopsjonens verdi er lik differansen mellom aksjens verdi og nåverdi av innløsningskursen.
+
+## Kontinuerlig forrentning
+
+I opsjonssammenheng er det vanlig å operer med *kontinuerlig tid*. For eks. kan en tre-måneders periode deles inn i uendelige mange underperioder. Den kontinuerlige diskonteringsrenten vil da være gitt ved $e^{-i_f\cdot T}$
+\begin{equation*}
+K_0-S_0=A_0-Ie^{-i_f\cdot T}
+\end{equation*}
+
+---
+
+# Bestemmelse av opsjonsverdi før forfall
+
+```{r, echo=F}
+radnr <- c("Verdi av underliggende aksje",
+	   "Innløsningskurs",
+   "Tid til forfall (løpetid)",
+   "Underliggende eiendels volatilitet",
+   "Risikofri rente")
+tils1 <- c("?","?","?","?","?")
+tils2 <- c("?","?","?","?","?")
+df_prosj_kont <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
+```
+
+**Øvelse:** Hva er dine a-priori oppfatninger om opsjonsverdien ved en isolert økning i disse fem faktorene, og har du en ide om hvorfor?
+---
+
+## Opsjonsverdi og aksjekurs (#1)
+
+Tre betingelser
+
+1. Nedre betingelse: $K_0 \geq 0$
+1. Øvre betingelse: $K_0 \leq A_0$
+1. Verdibetingelse: $K_0 \geq A_0-I$ (ikke lavere verdi enn øyeblikkelig innløsning)
+
+
+```{r, echo=FALSE, out.width="70%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-70.png"))
+```
+
+---
+
+## Opsjonsverdi, innløsningskurs og kontraktstid (#2-3)
+
+Fra Tabell 12.1 i lærebok finner vi at 
+
+- Verdien av kjøpsopsjon avtar med økende innløsningskurs (motsatt for salgsopsjoner)
+- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi [(lenke her for egenksapene ved en random walk prosess modeller)](https://people.duke.edu/~rnau/411rand.htm)
+
+---
+
+## Opsjonsverdi og aksjens volatilitet (# 4)
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-71.png"))
+```
+
+- Opsjonsverdien øker med aksjekursen *volatilitet* (standardavvik/varians)
+
+---
+
+## Opsjonsverdi og rente (# 5)
+
+- Høyere rente fører til høyere opsjonsverdi. Dette fordi høyere rente reduserer nåverdien av innløsningskursen
+
+Vi kan få øye på dette ved å tilbakedatere verdien av kjøpsopsjon til investeringstidspunktet (t=0)
+
+\begin{equation}
+K_0 \geq \text{max}[0,(A_0-\frac{I}{1+r_f})]
+\end{equation}
+
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-72.png"))
+```
+
+---
+
+```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-73.png"))
+```
+
+Den figuren viser det typiske forholdet mellom opsjonskurs og aksjekurs før forfall med utgangspunktet i en modell (Black-Scholes)  for prising av kjøpsopsjoner.
+
+---
+
+## Opsjonens fem verdibestemmende faktorer 
+
+```{r, echo=F}
+radnr <- c("Verdi av underliggende aksje",
+	   "Innløsningskurs",
+   "Tid til forfall (løpetid)",
+   "Underliggende eiendels volatilitet",
+   "Risikofri rente")
+tils1 <- c("+","-","+","+","+")
+tils2 <- c("-","+","+","+","-")
+#tils1 <- c("?","?","?","?","?")
+#tils2 <- c("?","?","?","?","?")
+df_prosj_kont2 <- data.frame(radnr,tils1,tils2)
+htmlTable(df_prosj_kont2, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
+```
+
+---
+
+# Binomisk opsjonsprismodell 
+
+For den binomiske opsjonsprismodellen (OPM-modellen) vil det gjelde at:
+- Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
+
+### Kontantstrømfordelingen av en aksje
+
+**Eksempel 12.5:** Dagens kurs på oljeselskapet Petro er 620,-. Et usikkert oljeboringsprosjekt vil enten føre til at kursen stiger 775,- (dvs. 25 prosent økning som har 70 prosent sannsynlighet), eller falle til 527 (dvs. falle med 15 prosent som har 30 prosent sannsynlighet). Tre-måneders risikofri rente er gitt ved 1 prosent. Innløsningskursen på en opsjon med forfall om 3 måneder er 680,-
+
+
+```{r, echo=FALSE, out.width="45%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-74.png"))
+```
+
+---
+
+### Kontantstrømfordelingen av en kjøpsopsjon
+
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-75.png"))
+```
+### Kontantstrømfordelingen av en sikringsportefølje
+
+```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-76.png"))
+```
+---
+
+### Sikringsporteføljen
+
+Gitt at sikringsporteføljen er risikofri, må de to mulige utfallene på tidspunkt 1 være identiske. Vi må derfor kunne kreve at:
+
+\begin{equation}
+\theta A_0-mK_\theta=nA_0-mK_n
+\end{equation}
+
+Løser vi denne for $m$ får vi *sikringsforholdet* (det antall kjøpsopsjoner som må skrives/selges pr. aksje for at porteføljen av aksjer og opsjoner skal være risikofri:
+
+\begin{equation}
+m = \frac{A_0 (\theta-n)}{K_\theta-K_n}
+\end{equation}
+
+**Eksempel 12.5:** gir oss
+
+$$
+m = \frac{620(1.25-0.85)}{95}=2.61 \text{ kjøpsopsjoner per kjøpte aksje}
+$$
+
+**Øvelse:** Studer tabell 12.3 og forsikr deg om at $m=2.61$ garanterer at du virkelig oppnår en risikofri porteføljekombinasjonen i begge utfallene lik 527,-
+
+---
+
+### Opsjonsprisen
+Kravet om null arbitrasjegevinst betyr derfor at følgende sammenheng må gjelde mellom investeringen ( $t=0$ ) og kontantstrømmen ( $t=1$ ) 
+
+\begin{equation}
+A_0 - mK_0 = \frac{nA_0-mK_n}{1+r_f}
+\end{equation}
+
+Setter inn for $m$ i uttrykket ovenfor og løser for $K_0$ gir etter en del utregninger 
+\begin{equation}
+K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]
+\end{equation}
+
+Hvor de to *sikringssannsynlighetene* (risikojusert sannsynligheter) for $q$ og $1-q$ er definert som
+\begin{equation*}
+q=\frac{1+r_f-n}{\theta-n} \text{ og } (1-q)=\frac{\theta-1-r_f}{\theta-n} 
+\end{equation*}
+
+Verdien til kjøpsopsjonen er derfor bestemt som den neddiskonterte verdien av den sikkerhetsekvivalente kontantstrømmen i periode T (hakeparantesen omdanner en usikker kontantstrøm til dens *sikkerhetskivalente kontantstrømmen*, jmf. forelesning 1)
+
+---
+
+**Eksempel 12.5:** gir oss her
+
+\begin{equation*}
+q=\frac{1+0.01-0.85}{1.25-0.85}=0.4 \\
+(1-q)=\frac{1.25-1-0.01}{1.25-0.85} =0.6
+\end{equation*}
+
+\begin{equation*}
+K_0 = \frac{1}{1+0.01}[0.4\cdot 95+0.6\cdot 0] = 37.62
+\end{equation*}
+
+*Kontroll 1: Nettoinvesteringen i sikringsporteføljen*
+\begin{equation*}
+K_0 = 620 -2.61\cdot 37.62 = 521.80
+\end{equation*}
+
+*Kontroll 2: Sikringsporteføljens avkastning*
+\begin{equation*}
+K_0 = \frac{527}{521.80}-1 = 0.01
+\end{equation*}
+
+*Konklusjon:* Kjøpsopsjonen må være riktig priset fordi den risikofrie sikringsporteføljen gir avkastning lik risikofri rente.
+
+---
+
+Til tross for dens enkle struktur, viser OPM-modellen å vise viktig innikt som holder generelt:
+- Opsjonsverdien avhenger kun av de fem variablene: $A_0,\theta,n,r_f,I$ 
+- Opsjonsverdien er derfor uavhenig av investors risikoholdning
+- Opsjonsverdien er derfor uavhenig av sannsynligheten for aksjekursendring
+- Forventet aksjekurs er irrelevant for opsjonsverdien
+- Kjøpsopsjonens verdi kan uttrykkes som den sikkerhetsekvivalente verdien av kjøpsopsjonen ved forfall diskontert med risikofri rente
+
+---
+
+# Black-Scholes-modellen
+
+Sentrale forutsetninger:
+- Kontinuerlig tid
+- Aksjekursen kan endres 
+- Short-salg er mulig
+- Det er ingen skatt eller transaksjonskostnader
+- Aksjen betaler ikke dividende (men det er enkelt å endre modellen slik at dette blir tatt hensyn til)
+- Risikofri rente er konstant i løpet av kontraktsperioden
+
+\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
+\end{equation}
+
+- $N(d_1)$ har tolkning som antall kroner opsjonsverdien endrer seg med når aksjeprisen endres med en krone
+- $N(d_2)$ har tolkning som sannsynligheten for at opsjonen er "in-the-money" ved forfall (dvs. $A_T \geq I$ )
+
+
+---
+
+Vi har videre at 
+
+\begin{equation}
+d_1=\frac{ln(\frac{A_0}{I})+i_fT}{\sigma\sqrt{T}}+\frac{1}{2}\sigma\sqrt{T} \\
+d_2=d_1 -\sigma\sqrt{T}
+\end{equation}
+
+mens sikringsforholdet  er bestemt av $m = \frac{1}{N(d_1)}$
+
+---
+
+**Eksempel 12.7** 
+
+OBX-indeksen ble 31.08.2015 notert til 532.26-. Samme dag kontinuerlig risikofri årsrente beregnes til 1.2 prosent. Kjøpsopsjoner med innløsningskurs
+530,- og forfall 17.09.2015 ble omsatt til 15,25,-. OBX-indeksen årlige standardavvik er estimert til 30.4%.
+
+Starter med å regne ut de to d-verdiene:
+- $d_1=\frac{ln(\frac{532.26}{530})+0.01217/365}{\sigma\sqrt{17/365}}+\frac{1}{2}\sigma\sqrt{17/365} =0.10618$
+- $d_2=d_1 -\sigma\sqrt{17/365}=0.04057$
+
+Som ved bruk av standardnormalfordelingstabellen (interpolering) gir oss de to sannsynlighetene:
+\begin{equation}
+N(d_1)=1-0.45772=0.542280\\
+N(d_2)=1-0.483818=0.516182
+\end{equation}
+
+```{r, echo=F, eval=F}
+1-0.542280
+# [1] 0.45772
+1-0.516182
+# [1] 0.483818
+
+```
+
+
+Vi kan nå finne opsjonsprisen som er gitt ved
+
+\begin{equation}
+K_0 =532.26\cdot 0.542280 -530e^{-0.012(17/365)}0.516182=15.21
+\end{equation}
+
+---
+
+På bakgrunn av SPK kan salgsopsjonen beregnes som
+\begin{equation}
+S_0 = K_0 -A_0 + Ie^{-r_FT} = \\ 15.212-532.26+530^{-0.012(17li365/)} = 12.65
+\end{equation}
+
+mens sikringsforholdet er gitt ved
+\begin{equation}
+m=\frac{1}{0.54228}=1.84
+\end{equation}
+
+
+---
+
+# Binomiske modellen og Black-Scholes modellen
+
+\begin{equation}
+K_0 = \text{max}[0,(A_0-Ie^{-i_f\cdot T})] 
+\end{equation}
+
+\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
+\end{equation}
+
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-77.png"))
+```
+
+---
+
+# Opsjonstankegang i finansfaget
+
+Som nevnt innledningsvis finnes det både direkte og indirekte (implisitte) opsjonstrekk i en rekke:
+- Finansieringsprosjekter (**F**)
+- Investeringsprosjekter (**I**)
+
+Vi skal se nærmere på prinsippet for verdsettingen av disse nå
+
+---
+
+
+## Kapitalstruktur og opsjonsverdi (**F**)
+
+**Eksempel 12.10** Mopsjon ASA er et lite selskap med en enkel kapitalstruktur Selskapet er finansiert med egenkapital og et lån. Lån er på 500.000,- (inklusive renter) og skal tilbakebetales om ett år. Vi antar også at selskapet skal avvikles om ett år, og at kontantstrømmen inkluderer salgsverdien av selskapet. Kontantstrømmen til eierne er vist i figuren nedenfor.
+
+```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-78.png"))
+```
+
+---
+
+Formelt kan vi derfor skrive den som en kjøpsopsjon på formen
+
+\begin{equation}
+E_T = \text{max}[0,V_T-G_T]
+\end{equation}
+
+siden $V_T=A_T$ og $E_T=K_T$ kan vi skrive SKP som
+
+\begin{equation}
+V_T + S_T = B_T + E_T 
+\end{equation}
+
+Vi har videre at
+\begin{equation}
+V_T = E_T + G_T
+\end{equation}
+
+Som gir oss
+\begin{equation}
+(E_T + G_T) + S_T = B_T + E_T \\
+G_T = B_T-S_T
+\end{equation}
+
+\begin{equation}
+B_T-S_T = \text{min}[V_T,B_T]
+\end{equation}
+
+```{r, echo=FALSE, out.width="30%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-78.png"))
+```
+
+---
+
+.pull-left[
+
+**Vurder som kjøpsopsjon**
+
+- Kreditorene
+  1. Eier selskapet
+  1. Har solgt en kjøpsopsjon på selskapet til aksjonærene
+- Aksjonærene
+  1. Eier en kjøpsopsjon på selskapet
+]
+
+.pull-right[
+
+**Vurder som salgsopsjon**
+
+- Kreditorene
+  1. Har en risikofri fordring
+  1. Har solgt en salgsopsjon til aksjonærene
+- Aksjonærene
+  1. Eier selskapet
+  1. Skylder renter og avdrag til kreditorene
+  1. Eier en salgsopsjon på selskapet
+]
+
+---
+
+## Endret investeringsrisiko (**F**)
+
+Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
+
+- Egenkapitalen vurdert som kjøpsopsjon vil øke
+- Siden KVM forteller oss at dette ikke vil øke selskapsverdien, vil gjeldsverdien måtte avta
+
+I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha strenge betingelser om selskapets investeringsadferd.
+
+---
+
+## Realopsjoner (**I**)
+
+- Mange realinvsteringsprosjekt innehar opsjonstrekk, slike prosjektegenskaper kan kalles *realopsjoner*
+- Det sentrale her er at det dreier seg om en rett, uten samtidig en plikt, til å gjennomføre en realinvestering
+- Disse opsjonene gir *fleksibilitet* som kan være verdifull (selskapet trenger ikke å bestemme i dag om produksjonskapasiteten skal øke, men på et senere tidspunkt når usikkerheten er redusert)
+- Denne verdien av fleksibilitet tas ikke hensyn til når forventet kontantstrøm skal diskonteres med risikojustert rente
+- Beslutningstre (se forelesning nr. 5) gir en nyttig oversikt gjennom en grafisk fremstilling av tidsfordelte beslutningspunkter
+
+**Øvelser:** Kan du komme på noen realinvesteringsprosjekter med opsjonstrekk?
+
+---
+
+### Verdidriverne
+
+1. Dagens aksjekurs
+1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
+1. Standardavviket til kontantstrømmen som gir opsjonens verdi
+1. Tid til forfall (lang tid for realopsjoner)
+1. Risikofri rente
+
+Tre betingelser må være oppfylt for at realopsjonsmodell vil avvike fra diskontering av forventet kontantstrøm
+
+1. Usikkerhet om fremtidig kontantstrøm
+2. Rett, men ikke en plikt, til å gjennomføre framtidige investeringer
+3. Investeringene er irreversible
+
+---
+
+### Typer
+
+Vi kan skille mellom tre typer realopsjoner
+1. *Utsettelsesopsjon*
+1. *Læringsopsjon*
+1. *Vekstopsjon*
+
+```{r, echo=F}
+dradnr <- c("Kontantstrøm",
+	   "Innløsningspris",
+	   "Usikkerhet",
+	   "Tid til forfall")
+dtils1 <- c("Innhenting fra salgs av gass","Kostnaden ved å klargjøre for utvinning","Markedspris for gass","Tid til forfall")
+dtils2 <- c("Inntjening fra salg av medikament","Forskning og utvikling for å bringe medikamentet til markedet","Suksess/fiasko i kliniske prøver","Patentets levetid")
+dtils3 <- c("Inntjening fra mobiltelefonbrukere","Utviklingskostnader for programvare og utbygging","Etterspørsel etter mobile tjenester, spesielt internettbaserte","Lisensens varighet")
+df_prosj <- data.frame(dradnr,dtils1,dtils2,dtils3)
+htmlTable(df_prosj, header=c("Egenskap","Oljeselskapet Gasse","Farmasi","Mobiltelefonlisens"))
+```
+---
+
+### Verdien av fleksibilitet
+
+\begin{equation}
+\text{NV} = \text{Tradisjonell NV} + \text{Opsjonsverdi}
+\end{equation}
+
+Tradisjonell NV er verdien av den kontantstrømmen som ikke tar hensyn til prosjektets fleksibilitet.  Opsjonsverdien kan bli bestemt av opsjonsprismodellene i dette kapitlet, men i praksis krever 
+verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsmodeller som går langt utover det som blir undervist i dette kurset.
+
+**Øvelse:** Se nærmere på eksempel 12.13 dersom du ønsker en tallfasting av disse sammenhengende.
+
+---
+
+### Risiko i KVM kontral OPM
+
+- For investorer med risikoaversjon, har vi tidligere vist under KVM at økt risiko har vært til ulempe
+- Det motsatt viser seg i være tilfelle i OPM
+- Dette betyr allikevel ikke investorene skifter fra risikoaverse til risikosøkende
+- I KVM baserer risikomålet $\beta$ seg på hele sannsynlighetsfordelingens
+- I OPM baserer opsjonsprisen seg kun på sannsynlighetsfordelingens haler:
+  - På kjøpsopsjoner høyrehalen
+  - På salgsopsjoner venstrehalen
+
+---
+
+### Opsjonens systematiske risiko
+
+Selv om vi har vist til nå at det er kun sannsynlighetsfordelingens haler som betyr noe, er det viktig å være klar over at opsjoner er risikofylte og vanligvis består av både usystematisk og systematisk risiko. For aksjeopsjoner det mulig å vise at sammenhengen mellom opsjonsbeta og en (europeisk) kjøpsopsjon er gitt ved:
+
+\begin{equation}
+\beta_K = N(d_1)\frac{A_0}{K_0}\beta_E
+\end{equation}
+
+**Eksempel: 12.14** Fra DN finner du at aksjebeta for OBX var 1.04. OBX-indeksen er notert til 532.26. Kjøpsopsjonen 15.25, mens $N(d_1)$ er beregnet til 0.54227.
+
+\begin{equation}
+\beta_K = 0.54227\frac{532.26}{15.25}1.04=19.68
+\end{equation}
+Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere enn den systematiske aksjerisikoen.
 
 ```{r, echo=F}
 knitr::knit_exit()

@@ -18,5 +18,6 @@ source('../inst/forelesningsnotater/timeplan.R')
 ## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
 ## [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/11_Dividende.pdf)
 ## [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/12_Opsjoner.pdf)
+## [`r tema[13]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/13_Risikostyring.pdf)
 
 

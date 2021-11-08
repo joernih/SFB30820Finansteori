@@ -32,17 +32,10 @@ emneansvarlig.
 
 ## Viktige datoer
 
--   17.08: Første forelesning 08:15-11:00 (på Zoom)
-
--   28.9: Obligatorisk arbeidskrav publiseres
-
--   ~~26.10~~ 28.10: Obligatorisk arbeidskrav innlevering ([Lenke
-    her](https://hiof.instructure.com/courses/5156/assignments/23144))
-
 -   10.12: Eksamen
 
 Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-02 19:27:01**
+**Siste gang oppdatert: 2021-11-08 13:44:24**

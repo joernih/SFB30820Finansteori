@@ -85,9 +85,8 @@ abstract: ''
 
 # Læringsmål kapittel 13
 - Begrunne hvorfor risikostyring kan være viktig.
-- Redegjøre for viktige risikokilder.
-- Redegjøre for forwardkontrakter, samt beregne FRA-betaling.
-- Vise hvordan man kan sikre rente- og valutarisiko med futureskontrakter.
-- Vise hvordan valutarisiko kan reduseres ved hjelp av opsjoner.
-- Vise hvordan renterisiko og valutarisiko kan styres ved hjelp av swaps.  
-
+- Redgjøre for viktige risikokilder.
+- Redgjøre for egenskapene til forwardkontrakter
+- Redegjør for egenskapene til futureskontrakter.
+- Redgjøre for egenskapene til opsjoner.
+- Redgjøre for egenskapen til swaps.  

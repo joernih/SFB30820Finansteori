@@ -4,7 +4,7 @@ library(magrittr)
 library(xaringan)
 # Timeplan
 ## Input
-ukenr <- c(seq(33,45),47,48)
+ukenr <- c(seq(33,45),46,47)
 forenr <- c(seq(1,7),"",seq(8,14))
 timer <- rep(3,15)
 tema <- c(
@@ -20,7 +20,7 @@ tema <- c(
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
 	  "Opsjoner",
-	  "**Finansielle instrumenter til påvirking av kontantstrømmer**",
+	  "**Risikostyring**",
 	  "Erstatter forelesning med rask gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
 	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
 )
