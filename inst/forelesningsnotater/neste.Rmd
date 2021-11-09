@@ -92,7 +92,7 @@ Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 # Hvorfor risikostyring?
 
 Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markeder vil typisk medføre:
-- Forventet kontantstrøm blir den samme, men variansen øker 
+- Forventet kontantstrøm blir den samme, men variansen reduseres 
 - Gitt at konkurrsansynligheten ikke endres, vil kun egenkapitalkostnaden endres
 - Dersom investorene er veldiversifiserte, vil dette kun øke selskapets verdi kun dersom risikostyring påvirker den systematiske risikoen
 
@@ -172,7 +172,7 @@ Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale m
 
 1. Plikt til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
 1. For en bestemt pris 
-1. På et forhåndsbestemt fremtidig tidspunkt 
+1. Til et forhåndsbestemt fremtidig tidspunkt 
 
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-85.png"))
@@ -184,9 +184,9 @@ knitr::include_graphics(c("pensum/figurer-85.png"))
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
-1. Rett til å kjøpe eller selge en bestemt (standardisert) eiendel 
+1. Plikt til å kjøpe eller selge en bestemt (standardisert) eiendel 
 1. For en bestemt pris (*innløsningskursen*)
-1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør (merk: clearingsselskapet gjør denne jobben) skjer i løpet av hele kontraktsperioden.
+1. Til et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør (merk: clearingsselskapet gjør denne jobben) skjer i løpet av hele kontraktsperioden.
 
 [Kraftinvestor Einar Aas I](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
 

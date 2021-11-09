@@ -397,7 +397,7 @@ K_0 = \frac{527}{521.80}-1 = 0.01
 ---
 
 Til tross for dens enkle struktur, viser OPM-modellen å vise viktig innikt som holder generelt:
-- Opsjonsverdien avhenger kun av de fem variablene: $A_0,\theta,n,r_f,I$ 
+- Opsjonsverdien avhenger kun av de fem variablene: $A_0,\theta,n,r_f,I$ (tid til forfall inngår ikke her)
 - Opsjonsverdien er derfor uavhenig av investors risikoholdning
 - Opsjonsverdien er derfor uavhenig av sannsynligheten for aksjekursendring
 - Forventet aksjekurs er irrelevant for opsjonsverdien
@@ -603,7 +603,7 @@ I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha str
 
 ### Verdidriverne
 
-1. Dagens aksjekurs
+1. Nåverdien av prosjektets fremtidigie *frie* kontantstrøm
 1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
 1. Standardavviket til kontantstrømmen som gir opsjonens verdi
 1. Tid til forfall (lang tid for realopsjoner)

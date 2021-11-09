@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x73a499e1c2a4a0b992f0940fc96ac6b","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x710adaca5bc49a18d56643695a41655","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ## Forelesningsnotater
 ### Jørn I.Halvorsen
-### 2021/08/12 (updated: 2021-11-08)
+### 2021/08/12 (updated: 2021-11-09)
 
 ---
 
@@ -64,7 +64,7 @@ class: inverse, center, middle
 - Beregne en kjøpsopsjonens verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
-Oppdatert: 2021-11-08
+Oppdatert: 2021-11-09
 
 ---
 
@@ -444,7 +444,7 @@ K_0 = \frac{527}{521.80}-1 = 0.01
 ---
 
 Til tross for dens enkle struktur, viser OPM-modellen å vise viktig innikt som holder generelt:
-- Opsjonsverdien avhenger kun av de fem variablene: `\(A_0,\theta,n,r_f,I\)` 
+- Opsjonsverdien avhenger kun av de fem variablene: `\(A_0,\theta,n,r_f,I\)` (tid til forfall inngår ikke her)
 - Opsjonsverdien er derfor uavhenig av investors risikoholdning
 - Opsjonsverdien er derfor uavhenig av sannsynligheten for aksjekursendring
 - Forventet aksjekurs er irrelevant for opsjonsverdien
@@ -638,7 +638,7 @@ I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha str
 
 ### Verdidriverne
 
-1. Dagens aksjekurs
+1. Nåverdien av prosjektets fremtidigie *frie* kontantstrøm
 1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
 1. Standardavviket til kontantstrømmen som gir opsjonens verdi
 1. Tid til forfall (lang tid for realopsjoner)
