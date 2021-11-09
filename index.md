@@ -32,10 +32,10 @@ emneansvarlig.
 
 ## Viktige datoer
 
--   10.12: Eksamen
+-   10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
 
 Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-09 13:51:36**
+**Siste gang oppdatert: 2021-11-09 13:59:22**
