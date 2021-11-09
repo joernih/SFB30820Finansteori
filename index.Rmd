@@ -29,7 +29,7 @@ devtools::install()
 pkgdown::build_site()
 ## Specific build
 pkgdown::build_home()
-pkgdown::build_articles()
+kgdown::build_articles()
 pkgdown::build_news()
 ,# Fine build
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
