@@ -68,8 +68,8 @@ oppgaver_bok <- c(
 	  "6.1,6.6,6.7,6.8",
 	  "7.1,7.2,7.8,7.8,7.9",
 	  "8.1,8.3,8.4,8.5,8.7,8.8,8.10",
-	  "",
-	  "",
+	  "11.1,11.2,11.5,11.7,11.8,11.9",
+	  "12.1,12.2,12.5,12.7,12.8,12.9",
 	  "",
 	  "",
 	  ""
@@ -85,7 +85,7 @@ oppgaver_nett <- c(
 	  "N.7.1,N.7.2,N.7.3",
 	  "N.8.1,N.8.2,N.8.3",
 	  "N.11.1,N.11.2,N.11.3",
-	  "",
+	  "N.12.1,N.12.2,12.4,12.6",
 	  "",
 	  "",
 	  ""
@@ -113,4 +113,4 @@ df2 <- data.frame(Forelesning=seq(1,14),
 oppgnavn <- c("Forelesning","Pensumbok","Nettside (ressurs)")
 
 timeplan <- htmlTable(df1,header=timenavn)
-oppgaveplan <- htmlTable(df2,header=oppgnavn)
+oppgaveplan <- htmlTable(df2[c(1:11),],header=oppgnavn)
