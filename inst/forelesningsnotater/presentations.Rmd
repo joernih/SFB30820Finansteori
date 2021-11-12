@@ -2113,6 +2113,12 @@ Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig
 
 En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
 
+```{r}
+knitr::knit_exit()
+```
+
+
+
 ---
 
 class: inverse, center, middle
@@ -4105,4 +4111,7 @@ En undersøkelse i USA fra 2012 viser:
 En annnen undersøkelse viser:
 - Høyer markesverdi for bedrifter som benytter derivater til å sikre markedsverdi
 - Verdiøkningen er betydelig: 4.9 prosent høyere til de bedriftene som sikrer
+
+
+
 
