@@ -23,12 +23,6 @@ emneansvarlig.
 
 -   [Lenke til oppdatert
     regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
--   Som avtalt i dagens forelesning
-    -   Tredje fane i arket inneholder et datasett kun over de
-        tidsperiodene hvor det er registrert observasjoner for *alle* de
-        tre tidsseriene
-    -   Vil etterhvert oppdatere regnearket med mitt løsningsforslag,
-        men forsøk selv først og sjekk om du klarer å bli ferdig før meg
 
 ## Viktige datoer
 
@@ -38,4 +32,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-09 13:59:22**
+**Siste gang oppdatert: 2021-11-10 19:37:02**

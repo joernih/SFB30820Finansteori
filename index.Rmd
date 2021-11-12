@@ -29,7 +29,7 @@ devtools::install()
 pkgdown::build_site()
 ## Specific build
 pkgdown::build_home()
-kgdown::build_articles()
+pkgdown::build_articles()
 pkgdown::build_news()
 ,# Fine build
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
@@ -50,9 +50,6 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Perso
 ## Arbeidskrav
 
 - [Lenke til oppdatert regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
-- Som avtalt i dagens forelesning
-	- Tredje fane i arket inneholder et datasett kun over de tidsperiodene  hvor det er registrert observasjoner for *alle* de tre tidsseriene
-	- Vil etterhvert oppdatere regnearket med mitt løsningsforslag, men forsøk selv først og sjekk om du klarer å bli ferdig før meg
 
 ## Viktige datoer 
 
