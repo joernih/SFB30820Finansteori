@@ -7,6 +7,7 @@ output:
 ---
 
 - [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
+- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
 - [Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
 
 ## Obligatorisk arbeidskrav
