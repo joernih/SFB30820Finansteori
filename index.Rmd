@@ -49,6 +49,8 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Perso
 
 ## Arbeidskrav
 
+- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
+
 - [Lenke til oppdatert regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
 
 ## Viktige datoer 

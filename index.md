@@ -21,6 +21,9 @@ emneansvarlig.
 
 ## Arbeidskrav
 
+-   [Lenke til PDF-versjon
+    løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
+
 -   [Lenke til oppdatert
     regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
 
@@ -32,4 +35,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-15 19:17:40**
+**Siste gang oppdatert: 2021-11-15 19:23:47**
