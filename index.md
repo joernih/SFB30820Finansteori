@@ -19,6 +19,8 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og
 temaer. Personlige spørsmål rettes i [*Canvas*]() meldingsfunksjon til
 emneansvarlig.
 
+-   10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
+
 ## Arbeidskrav
 
 -   [Lenke til PDF-versjon
@@ -27,18 +29,17 @@ emneansvarlig.
 -   [Lenke til oppdatert
     regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
 
-## Eksamen
+## Undervisning
 
 -   23.11 Siste forelesning
-    1.  Ser på eksamensoppgaven fra i fjor [lenke til
-        pdf-fil](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
+    1.  Ser på eksamensoppgaven fra i fjor [(lenke til
+        pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
     2.  Læringsmålene fra kurset
-    3.  Nærmere konkretisering av typen oppgaver en bør fokusere på før
-        eksamen
--   10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
+    3.  Nærmere konkretisering av typen oppgaver (spesielt for siste
+        delen av kurset) en bør fokusere på mot eksamen
 
 Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-17 10:49:14**
+**Siste gang oppdatert: 2021-11-17 11:01:20**
