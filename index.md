@@ -27,12 +27,18 @@ emneansvarlig.
 -   [Lenke til oppdatert
     regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
 
-## Viktige datoer
+## Eksamen
 
+-   23.11 Siste forelesning
+    1.  Ser på eksamensoppgaven fra i fjor [Lenkte til pdf file
+        her](abc)
+    2.  Læringsmålene fra kurset
+    3.  Nærmere konkretisering av typen oppgaver en bør fokusere på før
+        eksamen
 -   10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
 
 Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-15 19:23:47**
+**Siste gang oppdatert: 2021-11-17 10:45:57**
