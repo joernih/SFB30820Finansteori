@@ -1,7 +1,7 @@
-require(rmarkdown);
-require(devtools)
-examplefile=paste0(tempdir(),"/example.docx")
-download.file("https://file-examples.com/wp-content/uploads/2017/02/file-sample_100kB.docx",destfile=examplefile)
-pandoc_convert(examplefile,to="markdown",output = "example.rmd", options=c("--extract-media=."))
-render(paste0(tempdir(), "/example.rmd"),"html_document")
+```{r}
+examplefile='sfb30820-finansteori-24.11.2020.docx'
+rmarkdown::pandoc_convert(examplefile,to="markdown",output = "abc.rmd", options=c("--extract-media=."))
+rmarkdown::render(paste0(tempdir(), "/example.rmd"),"html_document")
 browseURL(paste0(tempdir(),"/example.html"))
+```
+
