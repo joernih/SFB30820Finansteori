@@ -56,7 +56,7 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Perso
 ## Eksamen
 
 - 23.11 Siste forelesning 
-  1. Ser på eksamensoppgaven fra i fjor [Lenkte til pdf file her](abc)
+  1. Ser på eksamensoppgaven fra i fjor [lenke til pdf-fil](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
   1. Læringsmålene fra kurset
   1. Nærmere konkretisering av typen oppgaver en bør fokusere på før eksamen
 

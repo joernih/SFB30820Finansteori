@@ -30,8 +30,8 @@ emneansvarlig.
 ## Eksamen
 
 -   23.11 Siste forelesning
-    1.  Ser på eksamensoppgaven fra i fjor [Lenkte til pdf file
-        her](abc)
+    1.  Ser på eksamensoppgaven fra i fjor [lenke til
+        pdf-fil](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
     2.  Læringsmålene fra kurset
     3.  Nærmere konkretisering av typen oppgaver en bør fokusere på før
         eksamen
@@ -41,4 +41,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-17 10:45:57**
+**Siste gang oppdatert: 2021-11-17 10:49:14**
