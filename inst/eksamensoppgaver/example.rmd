@@ -50,10 +50,12 @@ selskapene Star Oil og Travel?
 
 $$
 Var(r_p) = w_1^2\cdot 10^2 + (1-w_1)^2\cdot 18^2 \\
-2w_1\cdot 10 + 2(1-w_1)\cdot 18= 0 \\
-2w_1\cdot 10 + 2\cdot 18-18w_1 = 0 \\
-2w_1\cdot 10 -18w_1 = -2\cdot 18 \\
-w_1() = -2\cdot 18 \\
+2w_1\cdot 10^2 + 2(1-w_1)\cdot 18^2= 0 \\
+2w_1\cdot 10^2 + 2\cdot 18^2-18^2w_1 = 0 \\
+2w_1\cdot 10^2 -18^2w_1 = -2\cdot 18^2 \\
+w_1(10^2 -18^2) = -2\cdot 18^2 \\
+w_1\cdot 224 = 648 \\
+w_1 = 648/224 =  2.892857
 $$
 </div>
 

@@ -274,11 +274,11 @@ $$
 $$
 k_E=r_f+\beta_E[E(r_m) - rf]= 0.025+0.90[0.05] = 0.07
 $$
-(2): Kapitalkostnad for gjeld
+(3): Kapitalkostnad for gjeld
 $$
 k_G=r_f+\beta_G[E(r_m) - rf] = 0.025+0.20[0.05]= 0.035 
 $$
-(3): Totalkapitalkostnad for selskapet
+(4): Totalkapitalkostnad for selskapet
 $$
 k_T= k_Ew_E + k_G(1-s)w_G = 0.07\cdot 0.6 + 0.035\cdot (1-0.15)\cdot 0.4  = 0.0539
 $$
