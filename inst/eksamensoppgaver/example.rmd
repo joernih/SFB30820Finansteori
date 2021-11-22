@@ -45,7 +45,7 @@ a) Hva er den initiale porteføljestrukturen til Lars?
 
 <div class="solution">
 $$
-0.09 = 0.06w_1 + 0.13(1-w_1) \\
+0.09 = 0.06w + 0.13(1-w) \\
 200w-648(1-w)=0 \\
 w = 81/106 = 0.76
 $$
@@ -59,11 +59,11 @@ b) Hva er den initiale porteføljestrukturen til Sigurd?
 <!-- 0.065 = 0.0*0.928 + 0.13*(1-0.928) -->
 
 $$
-0.065 = 0.06w_1 + 0.13(1-w_1) \\
-0.06w_1-0.13w_1 = 0.065 -0.13 \\
--0.07w_1 = -0.065 \\
-w_1 = 0.065/0.07 \\
-w_1 = 0.928
+0.065 = 0.06w + 0.13(1-w) \\
+0.06w-0.13w = 0.065 -0.13 \\
+-0.07w = -0.065 \\
+w = 0.065/0.07 \\
+w = 0.928
 $$
 </div>
 
@@ -75,13 +75,9 @@ selskapene Star Oil og Travel?
 <div class="solution">
 
 $$
-Var(r_p) = w_1^2\cdot 10^2 + (1-w_1)^2\cdot 18^2 \\
-2w_1\cdot 10^2 + 2(1-w_1)\cdot 18^2= 0 \\
-2w_1\cdot 10^2 + 2\cdot 18^2-18^2w_1 = 0 \\
-2w_1\cdot 10^2 -18^2w_1 = -2\cdot 18^2 \\
-w_1(10^2 -18^2) = -2\cdot 18^2 \\
-w_1\cdot 224 = 648 \\
-w_1 = 648/224 =  2.892857
+Var(r_p) = w^2\cdot 10^2 + (1-w)^2\cdot 18^2 \\
+200 w - 648 (1 - w) = 0 \\
+w = 81/106 = 0.76
 $$
 </div>
 
@@ -92,6 +88,7 @@ porteføljeavkastning når de effektiviserer sine porteføljer
 
 <div class="solution">
 Gevinst: Økt forventet avkastning og/eller redusert risiko
+
 Forskjellen:
 Graden av risiko vil bestemme i hvilken grad man bytter risiko mot forventet avkastning
 </div>

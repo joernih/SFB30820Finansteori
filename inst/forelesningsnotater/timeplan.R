@@ -20,9 +20,9 @@ tema <- c(
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
 	  "Opsjoner",
-	  "**Risikostyring**",
+	  "Risikostyring",
 	  "Erstatter forelesning med rask gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
-	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
+	  "**Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen**"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -37,9 +37,9 @@ literatur <- c(
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
 	       "Kap. 11: Dividende",
 	       "Kap. 12: Opsjoner",
-	       "**Kap. 13: Risikostyring**",
+	       "Kap. 13: Risikostyring",
 	       "",
-	       "Kap. 1,2-4,5-8,11,12,13"
+	       "**Kap. 1,2-4,5-8,11,12,13**"
 )
 undervfor <- c(
 	  "Zoom",
@@ -54,10 +54,11 @@ undervfor <- c(
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone E E1-062/Zoom",
-	  "**Campus Sone E E1-062/Zoom**",
+	  "Campus Sone E E1-062/Zoom",
 	  "Campus Sone G G1-062-Naturfag/Zoom",
-	  "Campus Sone E E1-062/Zoom"
+	  "**Campus Sone G G1-063/Zoom**"
 )
+
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
 	  "2.1,2.2,2.3,2.6",

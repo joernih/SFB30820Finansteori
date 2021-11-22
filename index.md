@@ -29,9 +29,10 @@ emneansvarlig.
 -   [Lenke til oppdatert
     regneark](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit?usp=sharing)
 
-## Undervisning
+## Undervisnings
 
--   23.11 Siste forelesning
+-   23.11 Siste forelesning (G1-063)
+
     1.  Ser på eksamensoppgaven fra i fjor [(lenke til
         pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
     2.  Læringsmålene fra kurset
@@ -42,4 +43,4 @@ Undervisnings og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-21 10:48:38**
+**Siste gang oppdatert: 2021-11-21 20:33:04**
