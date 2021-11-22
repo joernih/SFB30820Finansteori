@@ -1,12 +1,16 @@
 ---
+title: "Formelsamling (SFB30820)"
+output: html_notebook
+---
 
-class: inverse, center, middle
 
-# Forelesning 1: `r tema[1]`
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source("timeplan.R")
+```
 
 ## Nåverdiberegninger med og uten usikkerhet
 
-**Uten usikkerhet (til nå)**
+**Uten usikkerhet**
 
 *Nåverdikriteriet*
 \begin{equation}
@@ -14,7 +18,7 @@ NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} =
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{equation}
 
-**Med usikkerhet/risiko (framover)**
+**Med usikkerhet/risiko**
 
 *Risikojustert-rente-metoden (RJ-metoden)*
 \begin{equation}
@@ -34,12 +38,6 @@ Formelt vil den forventede kontantstrømmen for en bestemt periode t kunne uttry
 E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 \end{equation}
 
-Her uttrykker
-- $Pr(s)$ gir oss *sannsynligheten* (verdi mellom 0 og 1) for at tilstand s inntreffer
-- $s \in \{1,2,..,S\}$ representerer settet av alle mulige *tilstander* som kan inntreffe
-- $X(s)$ er *utfallet* til kontantstrømmen dersom tilstand $s$ inntreffer
-
----
 
 ## Porteføljeavkastning
 
@@ -61,8 +59,6 @@ E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i})=w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N}
 \end{equation}
 
 
-# Forelesning 2: `r tema[2]`
-
 ## Måling av risiko 
 
 **Metode 1 for måling av risiko (1-n investeringsobjekter)**
@@ -78,6 +74,7 @@ Std(X)=\sqrt{Var(X)}
 ---
 
 **Metode 2 for måling av risiko (2 investeringsobjekter)**
+
 - Varians
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
@@ -112,21 +109,6 @@ Som gjør at vi kan skrive
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
 \end{equation}
 
----
-
-class: inverse, center, middle
-
-# Forelesning 3: `r tema[3]`
-
-**Læringsmål:**
-
--  Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
--  Gi eksempler på kilder for systematisk og usystematisk risiko.
--  Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
-
-`r paste("Oppdatert:",Sys.Date())`
-
----
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
@@ -195,26 +177,6 @@ Mens variansen fremkommer som
 Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
 
-Tar vi kvadratroten av denne på begge sider får vi
-
-\begin{equation}
-\frac{Std(r_p)}{Std(r_m)
-}=(1-w) 
-\end{equation}
-
-Porteføljeavkastningen kan dekomponeres til å bestå av
-
-$$
-E(r_p)=wr_f+(1-w)E(r_m) + (r_f - r_f) 
-$$
-
-$$
-E(r_p)=r_f+(1-w)(E(r_m) - r_f) 
-$$
-
-
-# Forelesning 5: `r tema[5]` 
-
 
 ### Kapitalkostnad for egenkapital og gjeld
 
@@ -241,28 +203,11 @@ k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
 k_T= k_Ew_E + k_G(1-s)w_G
 \end{equation}
 
-Framgangsmåte for å bestemme totalkapitalkostnaden til et selskap
-
-1. Beregne vektene (markedsverdi) for egenkapital og gjeld
 \begin{equation*}
-w_E=\frac{E}{E+G}=\frac{12654}{12654+3212}=0.80 \\ 
-w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
+w_E=\frac{E}{E+G \\ 
+w_G=\frac{G}{E+G}
 \end{equation*}
-1. Kapitalkostnad for egenkapital
-$$
-k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
-$$
-1. Kapitalkostnad for gjeld
-$$
-k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
-$$
-1. Totalkapitalkostnad for selskapet
-$$
-k_T= k_Ew_E + k_G(1-s)w_G = 0.0715\cdot0.8 + 0.035\cdot(1-0.05)0.2 = 0.063
-$$
 
-
-# Forelesning 6: `r tema[6]`
 
 #### Beregning av obligasjonspris
 
@@ -313,9 +258,6 @@ P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m}
 T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}
 
-# Forelesning 7: `r tema[7]`
-
-
 # Gjeldsgrad og risiko
 
 1. Gjeldsandel: (mellom 0 og 1) 
@@ -340,9 +282,6 @@ Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
 - Dersom vi løser uttrykket ovenfor for $\beta_I$ får vi
 
 \begin{equation*}
-(E+G)\beta_{I}=E\beta_{E}+G\beta_{G} \\
-E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
-\beta_{E}=\frac{E+G}{E}\beta_{I}-\beta_{G}\frac{G}{E}\\
 \beta_{E}=\beta_{I}+(\beta_I-\beta_G)(\frac{G}{E})
 \end{equation*}
 
@@ -352,8 +291,6 @@ E\beta_{E}=(E+G)\beta_{I}- G\beta_{G} \\
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}
 
-
-# Forelesning 8: `r tema[9]`
 
 ## Miller & Modigliani (M&M)
 
@@ -415,8 +352,6 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 
 ### Miller og Modigliani med skatt
 
-.pull-left[
-
 - **M&M-1**
 \begin{equation*}
 V_{M} = \frac{(OFRS)(1-s)}{k_U} + PGs 
@@ -428,8 +363,6 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = \frac{(OFRS)(1-s)}{k_U} + PGs \\ 
 = V_u + PGs \\ 
 \end{equation*}
-]
-.pull-right[
 
 - **M&M-2**
 \begin{equation*}
@@ -442,7 +375,6 @@ k_E = k_U + (k_U-k_G)\frac{G}{E}
 k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
 \end{equation*}
 
-]
 
 
 ## Toleddsbeskatning
@@ -478,11 +410,6 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
 
 
----
-
-# Forelesning 11: `r tema[11]`
-
-
 ## Lintner-modellen
 
 \begin{equation}
@@ -491,35 +418,6 @@ DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
 
 Hvor både $a$ (justeringsfaktor) og $b$ (målsatt utdelingsforhold) kan variere mellom 0 og 1.
 
-
-
----
-
-## Dividende kontra nettodividende
-
-For å vite hvordan kontantstrømmen fordeler seg mellom selskapet og eierne, må man studere *nettodividenden*:
-\begin{equation}
-ND_t = D_t + TB_t - EM_t
-\end{equation}
-
-- $D_t + TB_t$ (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne tar *ut* av selskapet
-- $EM_t$ (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne *tilfører* selskapet
-- Viktig: Kontantstrømmen må sees i sammeheng med finansieringstrømmen for hele økonomien
-
-#  Skatt (#4)
-
-*Dividendefaktoren* $n^{*}_d$ som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
-
-\begin{equation}
-n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
-\end{equation}
-
-- $n^{*}_d>0$ Dividende skattefavoriseres
-- $n^{*}_d=0$ Dividendenøytralt skattesystem
-- $n^{*}_d<0$ Tilbakepløying skattefavoriseres 
-
-
-# Forelesning 12: `r tema[12]`
 
 ## Opsjonens kontantstrøm ved forfall (t=T)
 
@@ -576,4 +474,10 @@ d_2=d_1 -\sigma\sqrt{T}
 
 mens sikringsforholdet  er bestemt av $m = \frac{1}{N(d_1)}$
 
+
+
+
+```{r include=FALSE}
+knitr::knit_exit()
+```
 
