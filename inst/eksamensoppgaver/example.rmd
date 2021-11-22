@@ -5,6 +5,34 @@ output:
     css: css/ON.css
 ---
 
+```{r, echo=FALSE}
+
+# Oppgave 2
+## a)
+### Obli A
+kr <- 300*0.04
+ut <- 300
+sr <- 0.06
+kr/(1+sr)+kr/(1+sr)^2 + ut/(1+sr)^2
+### Obli B
+kr <- 300*0.04
+ut <- 300
+sr <- 0.06
+kr/(1+sr)+kr/(1+sr)^2+kr/(1+sr)+kr/(1+sr)^3+ut/(1+sr)^3
+### Obli C
+kr <- 300*0.05
+ut <- 300
+sr <- 0.06
+kr/(1+sr)+kr/(1+sr)^2 + ut/(1+sr)^2
+## b)
+(100/87.63)^(1/2)
+(100/87.63)^(1/3)
+
+# Oppgave 4
+Px <- (100000*15+50000*10)/(50000+100000)
+Px - 15
+```
+
 
 # Oppgave 1: Porteføljeteori (Teller 30 prosent) 
 
@@ -18,10 +46,8 @@ a) Hva er den initiale porteføljestrukturen til Lars?
 <div class="solution">
 $$
 0.09 = 0.06w_1 + 0.13(1-w_1) \\
-0.06w_1-0.13w_1 = 0.09-0.13 \\
--0.07w_1 = -0.04 \\
-w_1 = 0.04/0.07 \\
-w_1 = 0.57
+200w-648(1-w)=0 \\
+w = 81/106 = 0.76
 $$
 </div>
 
@@ -85,9 +111,9 @@ markedspris på de tre obligasjonene?
 
 <div class="solution">
 $$
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300}{(1+0.06)^3} = \\
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot 0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  =  \\
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot 0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  = 
+P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300}{(1+0.06)^3} =  288.9996 \\
+P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot =   0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  = 306.1319  \\
+P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot 0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  = 295.2827
 $$
 </div>
 
@@ -234,8 +260,8 @@ a) Gi en verbal tolkning av hvilke risikofaktorer selskapet er eksponert mot
 <div class="solution">
 $$
 Valutakursrisiko \\
-Rentereisiko \\
-Pris(råvare)risiko
+Prisrisiko \\
+(Rentereisiko) 
 $$
 </div>
 
