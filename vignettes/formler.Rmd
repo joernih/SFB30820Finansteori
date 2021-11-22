@@ -5,7 +5,8 @@ output: html_notebook
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-source("timeplan.R")
+library(htmlTable)
+source('../inst/forelesningsnotater/timeplan.R')
 ```
 
 ## Nåverdiberegninger med og uten usikkerhet

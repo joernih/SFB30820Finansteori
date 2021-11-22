@@ -10,6 +10,8 @@ navbar:
       href: "index.html"
     - text: "Forelesningsnotater"
       href: "articles/forelesninger.html"
+    - text: "Formelsamling"
+      href: "articles/formler.html"
     - text: "Timeplan"
       href: "articles/timeplan.html"
     - text: "Arbeidskrav"
