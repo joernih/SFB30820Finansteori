@@ -91,10 +91,9 @@ forklaring på hvordan de to kameratene kan ha ulik effekt på forventet
 porteføljeavkastning når de effektiviserer sine porteføljer   
 
 <div class="solution">
-Gevinst:
-Abc
+Gevinst: Økt forventet avkastning og/eller redusert risiko
 Forskjellen:
-Def
+Graden av risiko vil bestemme i hvilken grad man bytter risiko mot forventet avkastning
 </div>
 
 # Oppgave 2: Obligasjoner (Teller 20 prosent) 
@@ -150,8 +149,7 @@ c) Gi en verbal forklaring på forholdet mellom pålydende verdi og markedspris 
 null-kupong obligasjoner og på kupong obligasjoner.  
 
 <div class="solution">
-123 \\
-123
+Null-kupong: Hvor mange ganger mer man får betalt n-år fram i tid ved å betale i dag.\\
 </div>
 
 
@@ -243,9 +241,7 @@ aksjonærverdiene til gamle aksjonærer i Nordic Oil når aksjonærene selger si
 tegningsretter.   
 
 <div class="solution">
-$$
-Vinningen opp i spinningen
-$$
+Gevinsten av å selge tegningsrettigheten vil tilsvare verditapet som den gamle aksjonæren har på sine akjser etter at tegningsrettigheten har utløpt.
 </div>
 
 # Oppgave 5: Opsjoner (Teller 10 prosent) 
@@ -258,11 +254,8 @@ eller ikke ved hjelp av derivater.
 a) Gi en verbal tolkning av hvilke risikofaktorer selskapet er eksponert mot 
 
 <div class="solution">
-$$
-Valutakursrisiko \\
-Prisrisiko \\
-(Rentereisiko) 
-$$
+- Valutakursrisiko siden salg er priset i USD.
+- Prisrsiko siden prisen på råvaren olje typisk vil ha sterke svingninger over tid.
 </div>
 
 
@@ -272,7 +265,8 @@ oljeproduksjonen. Ville dette valget endret seg om bonusen var basert på snitte
 resultatet for de neste fem årene? 
 
 <div class="solution">
-Tolkning
+- Ett år: Sikre lite, \\
+- Fem år: Sikre mer for å unngå konkurs.
 </div>
 
 
@@ -281,5 +275,6 @@ derivater ville du vurdert? Og hva vil hovedkriteriene for det endelige valget a
 derivat være? 
 
 <div class="solution">
-Tolkning
+Derivater: Opsjoner, futures, forwards og swaps
+Kriteriet for det endelig valget
 </div>
