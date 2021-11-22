@@ -6,6 +6,11 @@ output:
 ---
 
 ```{r, echo=FALSE}
+# Oppgave 1
+w <- 0.5714
+sjekk_1 <- 0.06*w + (1-w)*0.13
+w <- 0.928
+sjekk_2 <- 0.06*w + (1-w)*0.13
 
 # Oppgave 2
 ## a)
@@ -21,16 +26,36 @@ sr <- 0.06
 kr/(1+sr)+kr/(1+sr)^2+kr/(1+sr)+kr/(1+sr)^3+ut/(1+sr)^3
 ### Obli C
 kr <- 300*0.05
-ut <- 300
+ut <- 3000.
 sr <- 0.06
 kr/(1+sr)+kr/(1+sr)^2 + ut/(1+sr)^2
 ## b)
 (100/87.63)^(1/2)
 (100/87.63)^(1/3)
 
+# Oppgave 3
+w_m <- 0.01/0.06
+kvsjekk_m <- w_m*0.03+(1-w_m)*0.09
+w_b <- 0.04/0.09
+kvsjekk_b <- w_b*0.03+(1-w_b)*0.12
+# std
+(1-w_m)*12
+(1-w_b)*15
+# beta
+#0.12=0.03+beta_b*(0.09-0.03)
+beta_b = (0.12-0.03)/(0.09-0.03)
+kon_b <- 0.03+beta_b*(0.09-0.03)
+kon_abc <- 0.01+beta_b*(0.09-0.01)
+
 # Oppgave 4
 Px <- (100000*15+50000*10)/(50000+100000)
-Px - 15
+Px <- 15
+
+(x-190)/190=0.12
+x=1.12*190
+
+(212.8-190)/190
+
 ```
 
 
@@ -46,8 +71,10 @@ a) Hva er den initiale porteføljestrukturen til Lars?
 <div class="solution">
 $$
 0.09 = 0.06w + 0.13(1-w) \\
-200w-648(1-w)=0 \\
-w = 81/106 = 0.76
+0.06w-0.13w = 0.09 -0.13 \\
+-0.07w = -0.04 \\
+w = 0.04/0.07 \\
+w = 0.5714
 $$
 </div>
 
@@ -75,7 +102,8 @@ selskapene Star Oil og Travel?
 <div class="solution">
 
 $$
-Var(r_p) = w^2\cdot 10^2 + (1-w)^2\cdot 18^2 \\
+Min _w Var(r_p) = w^2\cdot 10^2 + (1-w)^2\cdot 18^2 \\
+\text{første ordens betingelsen} \\
 200 w - 648 (1 - w) = 0 \\
 w = 81/106 = 0.76
 $$
@@ -87,10 +115,10 @@ forklaring på hvordan de to kameratene kan ha ulik effekt på forventet
 porteføljeavkastning når de effektiviserer sine porteføljer   
 
 <div class="solution">
-Gevinst: Økt forventet avkastning og/eller redusert risiko
+En effisient portefølje er kjennetegnet ved at hverken Lars eller Sigrud kostnadsfritt kan endre sine portefølje slik
+at kostnadsfritt enten kan oppnå økt forventet avkastning og/eller få redusert sin risiko.
 
-Forskjellen:
-Graden av risiko vil bestemme i hvilken grad man bytter risiko mot forventet avkastning
+I dette tilfelle 
 </div>
 
 # Oppgave 2: Obligasjoner (Teller 20 prosent) 
@@ -154,7 +182,9 @@ Null-kupong: Hvor mange ganger mer man får betalt n-år fram i tid ved å betal
 
 a) Gi en verbal forklaring på hva som menes med kapitalverdimodellen (CAPM). Kommenter spesielt hvilken rolle risikofrirente spiller i kapitalverdimodellen. Anta at forutsetningene som ligger til grunn for CAPM holder. 
 <div class="solution">
+Kapitalverdimodellen (KVM) er en modell som tar for seg forholdet mellom risiko og forventet avkastning. Vi bruker KVM til å finne avkastningskravet til investeringer som inneholder risiko. Det er naturlig at investoren skal kompenseres for risikofri rente og selve risikoen som følger med investeringen.
 Modell til prisetting av risiko (forholdet mellom systemtatisk risiko og kapitalkost)
+Risikofri rente er lang statsobligasjon (typisk 10 år) eller historisk risikofri realrente. Det er med andre ord den renten du får uten noe som helst risiko. Beta-koeffisient er markedets systematiske risiko. Altså den risikoen vi ikke får diversifisert bort. Det kan være nedgangstider, manglende likviditet og markedskollaps.
 </div>
 
  I aksjemarkedet på Færøyene er forventet avkastning på markedsporteføljen kommende  periode 9 prosent, mens tilhørende standardavvik er 12 prosent. Forventet avkastning på 
@@ -173,7 +203,7 @@ $$
 0.08 = w0.03 + (1-w)0.09 \\
 w(0.03-0.09) = 0.08-0.09 \\
 w(0.06) = 0.01 \\
-w = 0.01/0.06 = 0.01/0.06 = 0.33
+w = 0.01/0.06 = 0.01/0.06 = 0.1667
 $$
 </div>
 
@@ -191,20 +221,33 @@ $$
 
 
 c) Finn standardavvik og beta verdien til porteføljen i de to tilfellene beskrevet over. Gi  en verbal forklaring på hvorfor de to risikomålene varierer mellom de to porteføljene.  
+
 <div class="solution">
+Standardavviket er gitt ved
 $$
-Std() = (1-0.33)12 = 8.04\\
-Std() = (1-0.44)15 = 8.4 \\
-\beta = \\
-\beta =
+Std(r_m) = (1-0.1665)12 = 8.04\\
+Std(r_b) = (1-0.44)15 = 8.4 \\
 $$
 
+Selskapets beta fremkomer som
+$$
+0.12=0.03+\beta_b*(0.09-0.03) \\
+\beta_b = (0.12-0.03)/(0.09-0.03) = 1.5
+$$
+Mens markedsporteføljen alltid vil ha
+$$
+\beta_m =1
+$$
 </div>
 
 d) Anta at Beidarin aksjen i dag handles for 190 kroner. Hvis beta verdien på Beidarin  aksjen er 1,5 hvilken kurs vil du predikerer på Beidarin aksjen om ett år?  
 
 <div class="solution">
-123
+Vi har følgende sammenheng
+$$
+(P_1-190)/190=0.12 \Leftrightarrow \\
+P_1=1.12\cdot190 = 212
+$$
 </div>
 
 e) Anta at utviklingen i økonomien svekkes slik at risikofrirente faller til 1 prosent.  
@@ -212,7 +255,11 @@ Hvordan påvirker det predikert kurs på Beidarin aksjen? Gi en verbal forklarin
 hvorfor predikert aksjekurs på Beidarin aksjen endres av at risikofrirente faller.     
 
 <div class="solution">
-456
+Den forventede avkastningen øker fra 0.12 til
+$$
+0.13=0.01+1.5*(0.09-0.01)
+$$
+Noe som betyr at aksjekursen øker. Risikpremien øker, og siden beta større enn 1 fører høere risikokrav
 </div>
 
  
@@ -226,7 +273,7 @@ a) Finn verdien av en tegningsrett i emisjonen til Nordic Oil.
 
 <div class="solution">
 $$
-N = 100000/50000 = 2 \\
+N = n/m = 100000/50000 = 2 \\
 P = \frac{15-10}{2+1} = 5/3 = 1.666
 $$
 </div>
@@ -237,7 +284,9 @@ aksjonærverdiene til gamle aksjonærer i Nordic Oil når aksjonærene selger si
 tegningsretter.   
 
 <div class="solution">
-Gevinsten av å selge tegningsrettigheten vil tilsvare verditapet som den gamle aksjonæren har på sine akjser etter at tegningsrettigheten har utløpt.
+Verdien av tegningsrettigheten vil nøyaktig tilsvare kursfallet etter at tegningsrettigheten er
+utløpt. Gamle aksjonærers formue vil derfor være helt upåvirket av emisjonen såframt man selger 
+tegningsrettigheten i markedet.
 </div>
 
 # Oppgave 5: Opsjoner (Teller 10 prosent) 
