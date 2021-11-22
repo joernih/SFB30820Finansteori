@@ -152,13 +152,12 @@ Null-kupong: Hvor mange ganger mer man får betalt n-år fram i tid ved å betal
 
 # Oppgave 3: CAPM og porteføljer (Teller 30 prosent) 
 
-a) Gi en verbal forklaring på hva som menes med kapitalverdimodellen (CAPM).
+a) Gi en verbal forklaring på hva som menes med kapitalverdimodellen (CAPM). Kommenter spesielt hvilken rolle risikofrirente spiller i kapitalverdimodellen. Anta at forutsetningene som ligger til grunn for CAPM holder. 
 <div class="solution">
-Verbal KVM
+Modell til prisetting av risiko (forholdet mellom systemtatisk risiko og kapitalkost)
 </div>
 
-
-Kommenter spesielt hvilken rolle risikofrirente spiller i kapitalverdimodellen. Anta at forutsetningene som ligger til grunn for CAPM holder.  I aksjemarkedet på Færøyene er forventet avkastning på markedsporteføljen kommende  periode 9 prosent, mens tilhørende standardavvik er 12 prosent. Forventet avkastning på 
+ I aksjemarkedet på Færøyene er forventet avkastning på markedsporteføljen kommende  periode 9 prosent, mens tilhørende standardavvik er 12 prosent. Forventet avkastning på 
 aksjer i Fiskeoppdrett-selskapet Beidarin er 12 prosent, mens tilhørende standardavvik er 15 
 prosent. Risikofri rente på Færøyene er 3 prosent med tilhørende standardavvik på 0 prosent.   
 

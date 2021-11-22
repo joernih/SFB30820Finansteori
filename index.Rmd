@@ -57,7 +57,7 @@ Fremdriftsplanen gir deg detaljert informasjon om forelesninger og temaer. Perso
 
 ## Undervisnings
 
-- 23.11 Siste forelesning (G1-063)
+- 23.11 Siste forelesning (Campus Sone G G1-063/Zoom)
 
   1. Ser på eksamensoppgaven fra i fjor [(lenke til pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
   1. Læringsmålene fra kurset
