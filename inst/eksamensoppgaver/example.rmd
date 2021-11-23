@@ -5,12 +5,17 @@ output:
     css: css/ON.css
 ---
 
-```{r, echo=FALSE}
+```{r eval=FALSE, include=FALSE}
 # Oppgave 1
+## a)
 w <- 0.5714
 sjekk_1 <- 0.06*w + (1-w)*0.13
+## b)
 w <- 0.928
 sjekk_2 <- 0.06*w + (1-w)*0.13
+## c)
+w <- 81/106
+sjekk_3 <- 200*w - 648*(1-w)
 
 # Oppgave 2
 ## a)
@@ -23,15 +28,19 @@ kr/(1+sr)+kr/(1+sr)^2 + ut/(1+sr)^2
 kr <- 300*0.04
 ut <- 300
 sr <- 0.06
-kr/(1+sr)+kr/(1+sr)^2+kr/(1+sr)+kr/(1+sr)^3+ut/(1+sr)^3
+kr/(1+sr)+kr/(1+sr)^2+kr/(1+sr)^3+ut/(1+sr)^3
 ### Obli C
-kr <- 300*0.05
-ut <- 3000.
+kr <- 300*0.05i
+ut <- 300.
 sr <- 0.06
-kr/(1+sr)+kr/(1+sr)^2 + ut/(1+sr)^2
+kr/(1+sr)+kr/(1+sr)^2+kr/(1+sr)^3+ut/(1+sr)^3
+
 ## b)
-(100/87.63)^(1/2)
-(100/87.63)^(1/3)
+ef_a <- (100/87.63)^(1/3)
+ef_b <- (100/87.63)^(1/2)
+
+100/(ef_a)^3
+100/(ef_b)^2
 
 # Oppgave 3
 w_m <- 0.01/0.06
@@ -48,14 +57,14 @@ kon_b <- 0.03+beta_b*(0.09-0.03)
 kon_abc <- 0.01+beta_b*(0.09-0.01)
 
 # Oppgave 4
-Px <- (100000*15+50000*10)/(50000+100000)
-Px <- 15
-
-(x-190)/190=0.12
-x=1.12*190
-
-(212.8-190)/190
-
+N <-100000
+M <- 50000
+n <- N/M
+Pe <- 15
+P0 <- 10
+Px <- (100000*Pe+50000*10)/(50000+100000)
+Px-Pe
+Tx <- (Pe-P0)/(n+1)
 ```
 
 
@@ -63,7 +72,7 @@ x=1.12*190
 
 De to kameratene Lars og Sigurd har begge investert i aksjen til oljeselskapet Star Oil og i 
 aksjen til reiselivsbedriften Travel. Lars sin forventede porteføljeavkastning er 9 prosent og 
-Sigurd har en forventet porteføljeavkastning på 6,5 prosent.   De to aksjene har følgende karakteristika:  Travel Star oil  Forventet avkastning 6 13 Avkastningens standardavvik 10 18                          Korrelasjonskoeffisienten mellom avkastningen på de to aksjene er null.  
+Sigurd har en forventet porteføljeavkastning på 6,5 prosent. De to aksjene har følgende karakteristika:  Travel Star oil  Forventet avkastning 6 13 Avkastningens standardavvik 10 18                          Korrelasjonskoeffisienten mellom avkastningen på de to aksjene er null.  
 
 
 a) Hva er den initiale porteføljestrukturen til Lars? 
@@ -115,10 +124,7 @@ forklaring på hvordan de to kameratene kan ha ulik effekt på forventet
 porteføljeavkastning når de effektiviserer sine porteføljer   
 
 <div class="solution">
-En effisient portefølje er kjennetegnet ved at hverken Lars eller Sigrud kostnadsfritt kan endre sine portefølje slik
-at kostnadsfritt enten kan oppnå økt forventet avkastning og/eller få redusert sin risiko.
-
-I dette tilfelle 
+Det å gå mot en effisient portefølje er kjennetegnet ved at Lars eller Sigrud kan oppnå en gevinst form av økt forventet avkastning og/eller få redusert sin risiko ved å endre sin porteføljesammensetning. Når det er oppnådd, vil det være graden av risikoaversjon som vil være bestemmende for hvilket sett man vil velge, og derfor kunne forklare hvorfor effekten på forventet avkastning vil være forskjellig mellom Lars og Sigurd.  
 </div>
 
 # Oppgave 2: Obligasjoner (Teller 20 prosent) 
@@ -135,9 +141,9 @@ markedspris på de tre obligasjonene?
 
 <div class="solution">
 $$
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300}{(1+0.06)^3} =  288.9996 \\
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot =   0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  = 306.1319  \\
-P_0 = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot 0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^4}  = 295.2827
+P_{0,A} = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300}{(1+0.06)^3} =  288.9996 \\
+P_{0,B} = \frac{300\cdot 0.04}{(1+0.06)^{1}} + \frac{300\cdot 0.04}{(1+0.06)^{2}} + \frac{300\cdot   0.04}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^3}  = 283.9619  \\
+P_{0,C} = \frac{300\cdot 0.05}{(1+0.06)^{1}} + \frac{300\cdot 0.05}{(1+0.06)^{2}} + \frac{300\cdot 0.05}{(1+0.06)^{3}}+\frac{300}{(1+0.06)^3}  = 251.88
 $$
 </div>
 
@@ -151,21 +157,25 @@ b) Hvilke (om noen) av disse to obligasjonene vil de to fondene Palmen og Korall
 investere i ? 
 
 <div class="solution">
-
-
+Obligasjon A
 $$
 87.63=\frac{100}{(1+r)^3}  \Leftrightarrow \\
 (1+r)^3=\frac{100}{87.63} \\
-(1+r)=(\frac{100}{87.63})^{1/3}=
+(1+r)=(\frac{100}{87.63})^{1/3}=1.044999
 $$
 </div>
 
 <div class="solution">
+Obligasjon B
 $$
-87.34=\frac{100}{(1+r)^3}  \Leftrightarrow \\
-(1+r)^3=\frac{100}{87.34} \\
-(1+r)=(\frac{100}{87.34})^{1/3}=
+87.34=\frac{100}{(1+r)^2}  \Leftrightarrow \\
+(1+r)^2=\frac{100}{87.34} \\
+(1+r)=(\frac{100}{87.34})^{1/2}=1.068252
 $$
+<br>
+Palmen krav 7 prosent, hverken obligasjon A eller B siden ingen er høyere enn avkastningskravet.
+<br>
+Koralen krav 3 prosent, både obligasjon A og B tilfredstiller avkastningskravet, men B har høyest, vil derfor investere alt der.
 </div>
 
 
@@ -174,17 +184,18 @@ c) Gi en verbal forklaring på forholdet mellom pålydende verdi og markedspris 
 null-kupong obligasjoner og på kupong obligasjoner.  
 
 <div class="solution">
-Null-kupong: Hvor mange ganger mer man får betalt n-år fram i tid ved å betale i dag.\\
+-Null-kupong: Hvor mange ganger mer man får betalt tre år fram i tid (i form av restbeløpet) ved å investere én krone i dag. 
+
+-Kupong obligasjoner: Hvor mange ganger mer man får betalt i løpet av obligasjonenss løpetid (i form av kupongrente og restbeløp) ved å investere én krone i dag. 
 </div>
 
 
 # Oppgave 3: CAPM og porteføljer (Teller 30 prosent) 
 
 a) Gi en verbal forklaring på hva som menes med kapitalverdimodellen (CAPM). Kommenter spesielt hvilken rolle risikofrirente spiller i kapitalverdimodellen. Anta at forutsetningene som ligger til grunn for CAPM holder. 
+
 <div class="solution">
-Kapitalverdimodellen (KVM) er en modell som tar for seg forholdet mellom risiko og forventet avkastning. Vi bruker KVM til å finne avkastningskravet til investeringer som inneholder risiko. Det er naturlig at investoren skal kompenseres for risikofri rente og selve risikoen som følger med investeringen.
-Modell til prisetting av risiko (forholdet mellom systemtatisk risiko og kapitalkost)
-Risikofri rente er lang statsobligasjon (typisk 10 år) eller historisk risikofri realrente. Det er med andre ord den renten du får uten noe som helst risiko. Beta-koeffisient er markedets systematiske risiko. Altså den risikoen vi ikke får diversifisert bort. Det kan være nedgangstider, manglende likviditet og markedskollaps.
+Kapitalverdimodellen (KVM) er en modell til prisetting av risiko (forholdet mellom systemtatisk risiko og kapitalkost). Vi bruker KVM til å finne avkastningskravet til investeringer som inneholder risiko. Det er naturlig at investoren skal kompenseres for risikofri rente og selve risikoen som følger med investeringen. Risikofri rente er lang statsobligasjon (typisk 10 år) eller historisk risikofri realrente. Det er med andre ord den renten du får uten noe som helst risiko. Beta-koeffisient er markedets systematiske risiko. Altså den risikoen vi ikke får diversifisert bort. Det kan være nedgangstider, manglende likviditet og markedskollaps.
 </div>
 
  I aksjemarkedet på Færøyene er forventet avkastning på markedsporteføljen kommende  periode 9 prosent, mens tilhørende standardavvik er 12 prosent. Forventet avkastning på 
@@ -225,16 +236,16 @@ c) Finn standardavvik og beta verdien til porteføljen i de to tilfellene beskre
 <div class="solution">
 Standardavviket er gitt ved
 $$
-Std(r_m) = (1-0.1665)12 = 8.04\\
-Std(r_b) = (1-0.44)15 = 8.4 \\
+Std(r_m) = (1-0.1665)12 = 10\\
+Std(r_b) = (1-0.44)15 = 8.33 
 $$
 
 Selskapets beta fremkomer som
 $$
-0.12=0.03+\beta_b*(0.09-0.03) \\
+0.12=0.03+\beta_b\cdot (0.09-0.03) \Leftrightarrow \\
 \beta_b = (0.12-0.03)/(0.09-0.03) = 1.5
 $$
-Mens markedsporteføljen alltid vil ha
+Mens markedsporteføljens alltid vil være
 $$
 \beta_m =1
 $$
@@ -257,7 +268,7 @@ hvorfor predikert aksjekurs på Beidarin aksjen endres av at risikofrirente fall
 <div class="solution">
 Den forventede avkastningen øker fra 0.12 til
 $$
-0.13=0.01+1.5*(0.09-0.01)
+0.13=0.01+1.5\cdot(0.09-0.01)
 $$
 Noe som betyr at aksjekursen øker. Risikpremien øker, og siden beta større enn 1 fører høere risikokrav
 </div>
@@ -274,7 +285,7 @@ a) Finn verdien av en tegningsrett i emisjonen til Nordic Oil.
 <div class="solution">
 $$
 N = n/m = 100000/50000 = 2 \\
-P = \frac{15-10}{2+1} = 5/3 = 1.666
+T_x = \frac{15-10}{2+1} = 5/3 = 1.666
 $$
 </div>
 
@@ -299,8 +310,8 @@ eller ikke ved hjelp av derivater.
 a) Gi en verbal tolkning av hvilke risikofaktorer selskapet er eksponert mot 
 
 <div class="solution">
-- Valutakursrisiko siden salg er priset i USD.
-- Prisrsiko siden prisen på råvaren olje typisk vil ha sterke svingninger over tid.
+- Valutakursrisiko siden salg av råolje er priset i USD.
+- Prisrsiko siden prisen på råolje (råvare) typisk vil ha sterke svingninger over tid.
 </div>
 
 
@@ -310,8 +321,8 @@ oljeproduksjonen. Ville dette valget endret seg om bonusen var basert på snitte
 resultatet for de neste fem årene? 
 
 <div class="solution">
-- Ett år: Sikre lite, \\
-- Fem år: Sikre mer for å unngå konkurs.
+- Ett år: Sikre lite av oljeproduksjonen, det kan gi svært høy bonus dersom prisrisikokompnentene gir høy inntekt, og ingen intekt dersom prisrisikokompnentene går i motsatt retning.\\
+- Fem år:  Siden snittet vil avhenge av alle fem år, vil det kunne være  fordelaktig å unngå konkur i løpet av perioden. Dette kan gjøres ved å sikre mer.
 </div>
 
 
@@ -320,6 +331,16 @@ derivater ville du vurdert? Og hva vil hovedkriteriene for det endelige valget a
 derivat være? 
 
 <div class="solution">
-Derivater: Opsjoner, futures, forwards og swaps
-Kriteriet for det endelig valget
+Finansielle derivater gjenomgått i dette kurset som påvirker kontantstrømmen består av.
+
+- Opsjoner
+- Futures 
+- Forwards 
+- Swaps
+
+Kriteriet for det endelig valget: Asymetrisk, dvs. oppnå en positiv kontantstrøm fra derivatetet i det tilfelle det underliggende objektet i form av råoljeprisen går ned. Kan gjørs ved en salgsopsjon på råoljeprisen, $Max(0,I-O_T)$.
+Eventuelt sikre dette i form futurekontrakt på valutakursen.
 </div>
+
+
+
