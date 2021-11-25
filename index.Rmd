@@ -53,8 +53,8 @@ rmarkdown::render("index.Rmd")
 - Ser på eksamensoppgaven fra i fjor [(lenke til pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 - Løsningsforslag (kommer snart)
 - Videopptak fra siste forelesning (kommer snart)
-
-Undervisnings (jornih at hiof.no)
+articles/presentations.html
+Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 

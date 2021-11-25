@@ -1,0 +1,13 @@
+.pagebreak { page-break-before: always; }
+
+.symboler{
+    zoom: 80%;
+    color: black;
+    page-break-before: always;
+}
+
+.solution {
+    font-weight: bold;
+    color: blue;
+    font-size: 100% ;
+}

@@ -19,9 +19,11 @@ Finansteori (SFB30820)
     pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 -   Løsningsforslag (kommer snart)
 -   Videopptak fra siste forelesning (kommer snart)
+    articles/presentations.html Undervisningsansvarlig (jornih at
+    hiof.no)
 
-Undervisnings (jornih at hiof.no)
+[abc](articles/example.html)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-23 23:25:48**
+**Siste gang oppdatert: 2021-11-23 23:35:07**

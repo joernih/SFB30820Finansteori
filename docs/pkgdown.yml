@@ -3,13 +3,15 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   abc: abc.html
+  abc: abc.html
   anbefalte_oppgaver: anbefalte_oppgaver.html
   arbeidskrav2021_F: arbeidskrav2021_F.html
+  example: example.html
   forelesninger: forelesninger.html
   formler: formler.html
   læringsmaal: læringsmaal.html
   timeplan: timeplan.html
-last_built: 2021-11-22T14:46Z
+last_built: 2021-11-23T22:32Z
 urls:
   reference: https://pkgdown.r-lib.org/reference
   article: https://pkgdown.r-lib.org/articles

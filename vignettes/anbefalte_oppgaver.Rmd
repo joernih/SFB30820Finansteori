@@ -9,6 +9,3 @@ library(htmlTable)
 source('../inst/forelesningsnotater/timeplan.R')
 oppgaveplan
 ```
-
-
-
