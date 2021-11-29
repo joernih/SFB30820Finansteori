@@ -50,8 +50,8 @@ rmarkdown::render("index.Rmd")
 - 10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
 - Ser på eksamensoppgaven fra i fjor [(lenke til pdf-fil)](https://github.com/joernih/sfb30820finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 - Løsningsforslag tilhørende fjorårets eksamen [(lenke til pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020_losningsforslag_JIH.pdf)
-- Videopptak fra siste forelesning (kommer snart)
-articles/presentations.html
+- Videopptak fra siste forelesning er nå publisert på Canvas
+
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
