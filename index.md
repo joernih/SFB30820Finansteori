@@ -20,9 +20,14 @@ Finansteori (SFB30820)
 -   Løsningsforslag tilhørende fjorårets eksamen [(lenke til
     pdf-fil)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020_losningsforslag_JIH.pdf)
 -   Videopptak fra siste forelesning er nå publisert på Canvas
+-   Under fanen anbefalte oppgaver er det nå markert med fet skrift hva
+    jeg anser som standard oppgaver tilknyttet kapittel 6-12 fra kurset.
+    Som nevnt under siste forelesning er disse kapitlene en sentral del
+    av pensum, men inngikk ikke som temaer hverken i arbeidskravet eller
+    eksamensoppgaven fra i fjor.
 
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-29 14:39:40**
+**Siste gang oppdatert: 2021-11-30 14:59:52**

@@ -9,3 +9,6 @@ library(htmlTable)
 source('../inst/forelesningsnotater/timeplan.R')
 oppgaveplan
 ```
+
+
+[Lenke til bokens nettside](https://finans2.portfolio.no/)
