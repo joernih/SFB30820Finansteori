@@ -14,7 +14,11 @@ Finansteori (SFB30820)
 
 ## Eksamen
 
--   10.12: Eksamen (skriftlig på skolen ved bruk av penn og papir)
+![](man/figures/eksamen.png)
+
+Releveant formelsamling er inkludert som vedlegg i eksamensoppgaven.
+<br>
+
 -   Ser på eksamensoppgaven fra i fjor [(lenke til
     pdf-fil)](https://github.com/joernih/sfb30820finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 -   Løsningsforslag tilhørende fjorårets eksamen [(lenke til
@@ -30,4 +34,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2021-11-30 14:59:52**
+**Siste gang oppdatert: 2021-12-07 10:11:05**
