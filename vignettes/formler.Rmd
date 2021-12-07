@@ -31,7 +31,7 @@ E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X
 \text{k}=\text{risikofri rente}+\text{risikopremie}
 \end{equation}
 
-## Nærmere om forventet kontantstrøm
+## Forventet kontantstrøm
 
 \begin{equation}
 E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
@@ -455,9 +455,7 @@ d_2=d_1 -\sigma\sqrt{T}
 mens sikringsforholdet  er bestemt av $m = \frac{1}{N(d_1)}$
 
 
-
-
-```{r include=FALSE}
+```{r include=FALSE, echo=F}
 knitr::knit_exit()
 ```
 
