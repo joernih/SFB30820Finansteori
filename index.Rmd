@@ -52,9 +52,9 @@ Releveant formelsamling er inkludert som vedlegg i eksamensoppgaven. <br>
 - Videopptak fra siste forelesning er nå publisert på Canvas
 - Under fanen anbefalte oppgaver er det nå markert med fet skrift hva jeg anser som standard oppgaver tilknyttet kapittel 6-12 fra kurset. Som nevnt under siste forelesning er disse kapitlene en sentral del av pensum, men inngikk ikke som temaer hverken i arbeidskravet eller eksamensoppgaven fra i fjor.
 
-- [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/sfb30820-finansteori-06.12.2021.pdf
+- [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-06.12.2021.pdf
 )
-- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/sfb30820-finansteori-06.12.2021_losningsforslag_JIH.pdf
+- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-06.12.2021_losningsforslag_JIH.pdf
 )
 
 Undervisningsansvarlig (jornih at hiof.no)
