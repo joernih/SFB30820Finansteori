@@ -30,13 +30,13 @@ Releveant formelsamling er inkludert som vedlegg i eksamensoppgaven.
     eksamensoppgaven fra i fjor.
 
 -   [Lenke til
-    PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-06.12.2021.pdf)
+    PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
 
 -   [Lenke til PDF-versjon
-    løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-06.12.2021_losningsforslag_JIH.pdf)
+    løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021_losningsforslag_JIH.pdf)
 
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-01-04 12:16:46**
+**Siste gang oppdatert: 2022-01-04 12:22:21**
