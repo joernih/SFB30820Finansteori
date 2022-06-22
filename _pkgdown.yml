@@ -2,7 +2,8 @@ url: https://pkgdown.r-lib.org
 title: Finansteori (SFB30820)
 template:
   params:
-    bootswatch: flatly
+    bootswatch: simplex
+    bootstrap: 5
 navbar:
   type: inverse
   left:

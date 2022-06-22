@@ -41,7 +41,6 @@ rmarkdown::render("index.Rmd")
 ```
 
 # Finansteori (høsten 2022)
-
 - Abc
 - Def
 
