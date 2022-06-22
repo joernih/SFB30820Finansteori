@@ -7,23 +7,23 @@ navbar:
   type: inverse
   left:
     - icon: fa-home 
-      href: "index.html"
+      #      href: "index.html"
     - text: "Forelesningsnotater"
-      href: "articles/forelesninger.html"
+      #href: "articles/forelesninger.html"
     - text: "Formelsamling"
-      href: "articles/formler.html"
+      #href: "articles/formler.html"
     - text: "Timeplan"
       href: "articles/timeplan.html"
     - text: "Arbeidskrav"
-      href: "articles/arbeidskrav2021_F.html"
+      #href: "articles/arbeidskrav2021_F.html"
     - text: "Anbefalte oppgaver"
-      href: "articles/anbefalte_oppgaver.html"
+      #href: "articles/anbefalte_oppgaver.html"
     - text: "Læringsmålene"
-      href: "articles/læringsmaal.html"
+      #href: "articles/læringsmaal.html"
     - text: "Presentasjoner (alle)"
-      href: "articles/presentations.html" 
+      #href: "articles/presentations.html" 
     - text: "News"
-      href: "news/index.html" 
+      #href: "news/index.html" 
   right:
     - icon: fa-github fa-lg
       text: "github"

@@ -2,11 +2,15 @@
 library(htmlTable)
 library(magrittr)
 library(xaringan)
+library(aweek)
 # Timeplan
 ## Input
-ukenr <- c(seq(33,45),46,47)
+ukenr <- c(seq(33,47))
+ln <- length(ukenr)
+datoer <- get_date( ukenr, day=3, year = 2022)
+star <- rep("09:15",ln)
+timer <- rep(3,ln)
 forenr <- c(seq(1,7),"",seq(8,14))
-timer <- rep(3,15)
 tema <- c(
 	  "Introduksjon og overblikk",
 	  "Relevant risiko: Porteføljeteori to objekter",
@@ -42,23 +46,36 @@ literatur <- c(
 	       "**Kap. 1,2-4,5-8,11,12,13**"
 )
 undervfor <- c(
-	  "Zoom",
-	  "Zoom",
-	  "Zoom",
-	  "Zoom",
-	  "Zoom/Campus",
-	  "Zoom/Campus",
-	  "Zoom/Campus",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
 	  "",
-	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone E E1-062/Zoom",
-	  "Campus Sone G G1-062-Naturfag/Zoom",
-	  "**Campus Sone G G1-063/Zoom**"
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037"
 )
 
+df1 <- data.frame(
+		  Uke=ukenr,
+		  Dato=datoer,
+		  Tidspunkt=star,
+		  Forelesning=forenr,
+		  Literatur=literatur,
+		  Temaer=tema,
+		  Undervisningsform=undervfor,
+		  Timer=timer
+)
+
+View(df1)
+###########################################################################################################3
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
 	  "2.1,2.2,2.3,2.6",
@@ -110,8 +127,4 @@ timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
 		 OppgaverN=oppgaver_nett)
-
-oppgnavn <- c("Forelesning","Pensumbok","Nettside (ressurs)")
-
-timeplan <- htmlTable(df1,header=timenavn)
-oppgaveplan <- htmlTable(df2[c(1:11),],header=oppgnavn)
+View(df2)
