@@ -73,8 +73,6 @@ df1 <- data.frame(
 		  Undervisningsform=undervfor,
 		  Timer=timer
 )
-
-View(df1)
 ###########################################################################################################3
 oppgaver_bok <- c(
 	  "1.1,1.2,1.4,1.5,1.7.1.8",
@@ -127,4 +125,3 @@ timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
 		 OppgaverN=oppgaver_nett)
-View(df2)

@@ -9,7 +9,7 @@ articles:
   formler: formler.html
   læringsmaal: læringsmaal.html
   timeplan: timeplan.html
-last_built: 2022-06-22T13:01Z
+last_built: 2022-06-22T13:03Z
 urls:
   reference: https://pkgdown.r-lib.org/reference
   article: https://pkgdown.r-lib.org/articles
