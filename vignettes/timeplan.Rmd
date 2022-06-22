@@ -15,4 +15,4 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 #kableExtra::kbl(timeplan) %>% kableExtra::row_spec(forel, bold = T)
 ```
 
-**Eksamen avholdes den **
+**Eksamen (4-timers skriftlig eksamen) avholdes den 12.12.2022**
