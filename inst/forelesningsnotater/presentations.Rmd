@@ -42,7 +42,7 @@ servr::daemon_stop()
 source("timeplan.R")
 ```
 
-## Timeplan
+# Timeplan
 
 ```{r echo=F}
 timep_i
@@ -4112,7 +4112,4 @@ En undersøkelse i USA fra 2012 viser:
 En annnen undersøkelse viser:
 - Høyer markesverdi for bedrifter som benytter derivater til å sikre markedsverdi
 - Verdiøkningen er betydelig: 4.9 prosent høyere til de bedriftene som sikrer
-
-
-
 

@@ -22,6 +22,7 @@ git2r::config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
 # R-pakker
 devtools::document()
 devtools::install()
+inst/forelesningsnotater/presentations.Rmd
 ```
 
 ```{r, eval=F, echo=F}
@@ -38,6 +39,18 @@ rmarkdown::render("index.Rmd")
 ## Tasks
 #- Sjekke timeplanenummer
 ```
+
+
+Undervisningsansvarlig (jornih at hiof.no)
+
+Jørn I. Halvorsen
+
+**Siste gang oppdatert: `r Sys.time()`**
+
+```{r}
+knitr::knit_exit()
+```
+
 
 ## Arbeidskrav
 - [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
@@ -56,10 +69,3 @@ Releveant formelsamling er inkludert som vedlegg i eksamensoppgaven. <br>
 )
 - [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021_losningsforslag_JIH.pdf
 )
-
-Undervisningsansvarlig (jornih at hiof.no)
-
-Jørn I. Halvorsen
-
-**Siste gang oppdatert: `r Sys.time()`**
-

@@ -317,7 +317,7 @@ one+two+thr+P_o
 
 ### Obligasjoner
 
-En obligasjon med 3 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.07$ som utbetales n=1 ganger i året og årlige effektiv rente $r=0.06$. 
+En obligasjon med 2 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.03$. 
 
 1. Beregn prisen for en ordinær obligasjon.
 <div class="solution">
@@ -491,5 +491,5 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
 ```{r include=FALSE}
 knitr::knit_exit()
 ```
-
+Exam_SFB30820_Finansteori_H2021.Rmd
 
