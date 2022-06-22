@@ -42,7 +42,9 @@ rmarkdown::render("index.Rmd")
 
 # Finansteori (høsten 2022)
 
-ABC
+- Abc
+- Def
+
 
 Undervisningsansvarlig (jornih at hiof.no)
 

@@ -5,9 +5,9 @@ library(xaringan)
 library(aweek)
 # Timeplan
 ## Input
-ukenr <- c(seq(33,47))
+ukenr <- c(34,seq(34,47))
 ln <- length(ukenr)
-datoer <- get_date( ukenr, day=3, year = 2022)
+datoer <- c(get_date(ukenr[1], day=1, year = 2022),get_date(ukenr[-1], day=3, year = 2022))
 star <- rep("09:15",ln)
 timer <- rep(3,ln)
 forenr <- c(seq(1,7),"",seq(8,14))
@@ -25,7 +25,7 @@ tema <- c(
 	  "Dividende",
 	  "Opsjoner",
 	  "Risikostyring",
-	  "Erstatter forelesning med rask gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
+	  "Gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
 	  "**Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen**"
 )
 literatur <- c(
@@ -125,3 +125,6 @@ timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
 		 OppgaverN=oppgaver_nett)
+
+
+
