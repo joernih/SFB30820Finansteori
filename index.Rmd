@@ -42,6 +42,8 @@ rmarkdown::render("index.Rmd")
 
 # Finansteori (høsten 2022)
 
+ABC
+
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
