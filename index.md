@@ -10,10 +10,10 @@
 [Finans: Teori og praksis. Bøhren, Michalsen og
 Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
-<img src="man/figures/pensum.jpg" width="25%" />
+<img src="man/figures/pensum.jpg" width="15%" />
 
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-06-23 10:06:50**
+**Siste gang oppdatert: 2022-06-23 10:13:05**

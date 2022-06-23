@@ -48,7 +48,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
-```{r, echo=FALSE, out.width="25%", fig.cap=""}
+```{r, echo=FALSE, out.width="15%", fig.cap=""}
 knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
@@ -63,3 +63,4 @@ Jørn I. Halvorsen
 knitr::knit_exit()
 ```
 
+https://hiof.instructure.com/courses/6622
