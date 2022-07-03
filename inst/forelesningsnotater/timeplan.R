@@ -26,7 +26,7 @@ tema <- c(
 	  "Opsjoner",
 	  "Risikostyring",
 	  "Gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
-	  "**Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen**"
+	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -43,7 +43,7 @@ literatur <- c(
 	       "Kap. 12: Opsjoner",
 	       "Kap. 13: Risikostyring",
 	       "",
-	       "**Kap. 1,2-4,5-8,11,12,13**"
+	       "Kap. 1,2-4,5-8,11,12,13"
 )
 undervfor <- c(
 	  "Campus Sone E E1-037",
@@ -125,6 +125,3 @@ timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
 		 OppgaverN=oppgaver_nett)
-
-
-

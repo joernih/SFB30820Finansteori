@@ -29,7 +29,8 @@ inst/forelesningsnotater/presentations.Rmd
 ## Simple build
 pkgdown::build_home()
 ## Specific build
-pkgdown::build_site() pkgdown::build_articles()
+pkgdown::build_site() 
+pkgdown::build_articles()
 pkgdown::build_news()
 ,# Fine build
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
@@ -40,6 +41,8 @@ rmarkdown::render("index.Rmd")
 ```
 
 # Finansteori (høsten 2022)
+
+Mer info vil bli publisert etter sommerferien. Inntil videre, ha en riktig god sommer!
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
@@ -52,7 +55,6 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
-
 Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
@@ -62,5 +64,6 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
+https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622
+https://joernih.github.io/SFB30820Finansteori/

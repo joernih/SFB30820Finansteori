@@ -12,7 +12,6 @@ source('../inst/forelesningsnotater/timeplan.R')
 timeplan <- df1
 #htmlTable::htmlTable(df1)
 kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::row_spec(forel, bold = T)
-#kableExtra::kbl(timeplan) %>% kableExtra::row_spec(forel, bold = T)
 ```
 
 **Eksamen (4-timers skriftlig eksamen) avholdes den 12.12.2022**
