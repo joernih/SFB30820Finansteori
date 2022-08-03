@@ -64,6 +64,7 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+inst/forelesningsnotater/presentations.Rmd
 https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/

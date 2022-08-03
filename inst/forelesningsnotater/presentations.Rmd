@@ -62,7 +62,7 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) #%>% kable
 # Anbefalte oppgaver
 
 ```{r, echo=F}
-oppgaveplan
+#soppgaveplan
 ```
 
 ---
@@ -153,6 +153,7 @@ X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)
 \end{equation}
 
 Beslutningsregel:
+adsf
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) $> 0$
 - Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de $>0$ igangsettes 
 
@@ -225,6 +226,7 @@ NV=9.17
 ---
 
 ## Investerings- vs. finansierinsgprosjekt
+
 
 Et investeringsprosjekt viser bedriftens bruker av penger for å skaffe seg eiendeler i form av anlegg- og omløpsmidler (regnskapsbalansens venstreside)
 
@@ -393,9 +395,6 @@ Oppgave til neste forelesning:
 knitr::include_graphics("drawio/oversiktsbildet.png")
 ```
 
-```{r, echo=F, eval=T}
-knitr::knit_exit()
-```
 
 ---
 
@@ -780,6 +779,10 @@ g2 <- ggplot(data=dfn12, aes(x=beskr, y=bedriften)) + geom_bar(stat="identity")
 g3 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_ikkediv)) + geom_bar(stat="identity")
 g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="identity")
 htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
+```
+
+```{r, echo=F, eval=T}
+knitr::knit_exit()
 ```
 
 ---
