@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Finansteori (SFB30820)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jørn I.Halvorsen" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbc8f89b0b30403fa31d9c4ef7153dd3","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Finansteori (SFB30820)
+]
+.subtitle[
+## Forelesningsnotater (shift+o for oversiksbilde)
+]
+.author[
+### Jørn I.Halvorsen
+]
+.date[
+### 2021/08/12 (updated: 2022-08-03)
+]
+
+---
+
+
+
+
+
+
+
+
+
+# Timeplan
+
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Uke &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Forelesning &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Literatur &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Temaer &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Undervisningsform &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Timer &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 1: Introduksjon &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Introduksjon og overblikk &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 2: Relevant risiko &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Relevant risiko: Porteføljeteori to objekter &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 2: Relevant risiko &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Relevant risiko: Porteføljeteori 3-n objekter &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 36 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 3: Relevant risiko og kapitalkostnad &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Effisiens &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 37 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 3: Relevant risiko og kapitalkostnad &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kapitalverdimodellen &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 38 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 5: Langsiktige finansieringsformer &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Langsiktige finansieringsformer &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Uke &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Forelesning &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Literatur &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Temaer &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Undervisningsform &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Timer &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 42 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 8: Gjeldsgrad og verdi med imperfeksjoner &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Gjeldgrad og verdi med imperfeksjoner &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 43 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 11: Dividende &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dividende &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 44 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 12: Opsjoner &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Opsjoner &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 13: Risikostyring &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Risikostyring &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 46 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 47 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Kap. 1,2-4,5-8,11,12,13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Campus Sone E E1-037 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+# Anbefalte oppgaver
+
+
+
+---
+
+# Pensumliste
+
+.pull-left[
+
+## Hovedbok
+
+
+&lt;img src="pensum/figurer-01.png" width="75%" /&gt;
+
+[Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
+
+]
+
+.pull-right[
+
+## Supplerende
+&lt;img src="pensum/falitt.jpg" width="25%" /&gt;
+
+[fallitt-norske-finansielle-kriser](https://respublica.no/produkter/fallitt-norske-finansielle-kriser/)
+
+]
+
+---
+
+# Kursgodkjennelse
+
+Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen. 
+
+## Obligatorisk innleveringsoppgave
+
+28.9: obligatorisk arbeidskrav publiseres (før høstferien)
+
+26.10: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
+
+## Eksamen
+
+Eksamen avholdes den 12.12.
+
+Individuell, skriftlig firetimers eksamen.
+
+Karakterregel: A-F.
+
+Hjelpemidler: godkjent kalkulator.
+
+---
+
+# Lenker benyttet i kurset (foreløpig liste)
+- [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
+- [Bokens nettside](https://finans2.portfolio.no/)
+- [Statens pensjonsfond utland](https://www.nbim.no/no/)
+- [Canvas](https://hiof.instructure.com/courses/5156)
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 1: Introduksjon og overblikk
+
+**Læringsmål:**
+
+- Forklare strukturen i risikojustert rente metoden for beregning av nåverdi.
+- Redegjøre for forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt.
+- Konstruere en kontantstrøm fra prosjektdata.
+- Forklare hva som menes med begrepene sannsynlighet, tilstand og utfall.
+- Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+
+Oppdatert: 2022-08-03
+
+---
+
+## Nåverdiberegninger med og uten usikkerhet
+
+**Uten usikkerhet (til nå)**
+
+*Nåverdikriteriet*
+`\begin{equation}
+NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} = 
+X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
+\end{equation}`
+
+Beslutningsregel:
+adsf
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) `\(&gt; 0\)`
+- Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de `\(&gt;0\)` igangsettes 
+
+Merk: Ved inkludering av faktorer som inflasjon, skatt og finansiering, endres benevningen *både*
+i teller og nevner.
+
+---
+
+**Med usikkerhet/risiko (framover)**
+
+*Risikojustert-rente-metoden (RJ-metoden)*
+`\begin{equation}
+NV = \sum_{t=0}^{T} \frac{E(X_{t})}{(1+k)^t} = 
+E(X_{0}) + \frac{E(X_{1})}{(1+k)^1} + \frac{E(X_{2})}{(1+k)^2} + ... + \frac{E(X_{T})}{(1+k)^T} 
+\end{equation}`
+
+- Telleren er nå erstattet med *forventet* kontantstrøm
+- Nevneren er nå erstattet med kapitalkostnad som er *risikojustert*
+
+Beslutningsregel (som tidligere):
+- Gitt uavhengig prosjekter, prosjektet igangsettes dersom *forventet* nåverdi (NV) &gt; 0
+- Gitt avhengige prosjekter, det prosjekt som har høyest *forventet* nåverdi (NV) av de `\(&gt;0\)` igangsettes 
+
+Et alternativ til RJ-metoden (som gir samme svar) er å foreta selve risikojusteringen i telleren av uttrykket. Dette gjøres ved å trekke risikokostnaden fra den forventede kontantstrømmen. Nettbeløpet som blir igjen omtales som *sikkerhetsekvivalenten*. I tråd med prinsippet om samme type benevning i teller og nevner, må dette beløpet deles på den risikofrie renten.
+
+---
+
+Sammenlignet med nåverdikriteriet, krever RJ-metoden at vi i tillegg klare å
+beregne
+
+- Forventet kontantstrøm
+
+Utgangspunktet her er at vi betrakter framtiden i form av ulike scenarioer, hvor vi tilknytter en sannsynlighet til hvert enkelt scenario.
+
+- Kapitalkostnad (risikojustert-rente)
+
+Dette uttrykket består nå både av en *tids-* og *usikkerhetsdimensjon*.
+
+Formelt kan vi uttrykke dette som
+`\begin{equation}
+\text{Risikojusert rente}=\text{risikofri rente}+\text{risikopremie}
+\end{equation}`
+
+Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosjekt vil denne komponentene er produktet av en *pris (kostnad per risikokomponent)* og *kvantumkomponent (antall risikoenheter tilhørende prosjektet)*. 
+---
+
+**Oppgave** N.1.1
+
+Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
+
+Hva er kontantstrømmen verd i dag?
+&lt;br&gt;**Svar:**&lt;br&gt;
+`\begin{equation}
+NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
+\end{equation}`
+
+Hva er sikkerhetsekvivalenten ved slutten av perioden?
+&lt;br&gt;**Svar:**&lt;br&gt;
+`\begin{equation}
+9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
+X=9.17\cdot (1.02)=9.17\cdot (1.02)=9.35
+\end{equation}`
+
+Hva er sikkerhetsekvivalenten ved periodens begynnelse?
+&lt;br&gt;**Svar:**&lt;br&gt;
+`\begin{equation}
+NV=9.17
+\end{equation}`
+
+---
+
+## Investerings- vs. finansierinsgprosjekt
+
+
+Et investeringsprosjekt viser bedriftens bruker av penger for å skaffe seg eiendeler i form av anlegg- og omløpsmidler (regnskapsbalansens venstreside)
+
+Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld og egenkapital (regnskapsbalansens høyreside)
+---
+
+**Oppgave N.1.4**
+
+1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
+&lt;br&gt;**Svar:**&lt;br&gt;
+- I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+- Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
+&lt;br&gt;**Svar:**&lt;br&gt;
+For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+
+&lt;!--1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?--&gt;
+---
+
+## Prosjektets Kontantstrøm
+For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
+
+Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand:&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;1&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;2&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;3&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Salgsinntekt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1350&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Driftsutgift&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;500&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;400&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Investering&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Ny arbeidskapital&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Avskrivninger&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;6&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skattbart overskudd&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;550&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;100&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;650&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;7&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;440&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;80&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;520&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;8&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Kontantstrøm etter skatt&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;160&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;70&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;180&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;9&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.42&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.28&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.18&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+Den forventede kontantstrømmen framkommer derfor som 
+
+$$
+0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
+$$
+
+---
+
+## Nærmere om forventet kontantstrøm
+
+Formelt vil den forventede kontantstrømmen for en bestemt periode t kunne uttrykkes som den forventede verdien til en sannsynlighetsfordeling:
+
+`\begin{equation}
+E(X)=\sum_{s=1}^{S}Pr(s)X(s)=Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
+\end{equation}`
+
+Her uttrykker
+- `\(Pr(s)\)` gir oss *sannsynligheten* (verdi mellom 0 og 1) for at tilstand s inntreffer
+- `\(s \in \{1,2,..,S\}\)` representerer settet av alle mulige *tilstander* som kan inntreffe
+- `\(X(s)\)` er *utfallet* til kontantstrømmen dersom tilstand `\(s\)` inntreffer
+
+---
+
+## Porteføljeavkastning
+
+Selve porteføljeavkastningen (rp) uten skatt er gitt ved
+
+`\(rp=\frac{P_{T}+Div_{0,T}-P_{0}}{P_{0}}\)`
+
+### Metode 1: Forventet avkastning
+
+`\begin{equation}
+E(rp) = \sum_{s=1}^{S}Pr(s)X(s) = 
+Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S) 
+\end{equation}`
+
+### Metode 2: Forventet avkastning
+
+`\begin{equation}
+E(rp) = \sum_{i=1}^{N}w_{i}E(X_{i})=w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
+\end{equation}`
+
+---
+
+**Oppgave N.1.2**
+
+AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsbeskrivelse&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt X&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Y&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Prosjekt Z&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.7&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;12&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+1. Hva er særtrekket ved prosjekt X?
+&lt;br&gt;**Svar:**&lt;br&gt;
+Kontantstrømmen er sikker (lik 3 i begge perioder)
+2. Beregn forventet avkastning for hvert prosjekt.
+&lt;br&gt;**Svar:**&lt;br&gt;
+`\begin{equation}
+E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
+E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
+E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
+\end{equation}`
+---
+&lt;p&gt;3.&lt;/p&gt; Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
+.panelset[
+.panel[.panel-name[Metode 1]
+&lt;br&gt;
+&lt;br&gt;
+$$
+E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
+$$
+]
+.panel[.panel-name[Metode 2]
+&lt;br&gt;
+&lt;br&gt;
+$$
+E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
+$$
+]
+]
+
+&lt;p&gt;4.&lt;/p&gt; Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
+&lt;br&gt;**Svar:**&lt;br&gt; 
+$$
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + 
+0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
+$$ 
+---
+
+**Oppgave** N.1.3
+
+Gå tilbake til de tre prosjektene fra oppgave N.1.2.
+
+1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
+&lt;br&gt;**Svar:**&lt;br&gt;
+Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
+1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
+&lt;br&gt;**Svar:**&lt;br&gt;
+Nei, prosjekt gir høyere avkastning under oppgangstid.
+1. Er det fornuftig å sette alle pengene i prosjekt X?
+&lt;br&gt;**Svar:**&lt;br&gt;
+Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
+
+---
+
+## Veien framover
+
+Oppgave til neste forelesning:
+- Gi et oversiktsbilde av innholdet i boken og bokens nettside.
+![]()
+
+&lt;img src="drawio/oversiktsbildet.png" width="25%" /&gt;
+
+
+---
+
+class: inverse, center, middle
+
+# Forelesning 2: Relevant risiko: Porteføljeteori to objekter
+
+**Læringsmål:**
+
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+Oppdatert: 2022-08-03
+
+---
+
+## Prosjektrisiko for eierne vs. bedriften
+
+Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som maksimerer verdien av egenkapitalen til eierne. 
+
+Vi tar utgangspunkt i følgende tabell
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynl.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsb.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Bedriftens portefølje&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nytt prosjekt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (ikke div.)&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (div.)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Trend&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;50&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Risiko for bedriften
+
+De nye prosjektets bidrag til bedriftens kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-12-1.png" width="45%" /&gt;
+
+---
+
+### Risiko for eierne
+
+- Udeversifiserte eiere: 
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **bedriftens** allerede eksisterende kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-13-1.png" width="20%" /&gt;
+
+- Veldiversifiserte eiere: 
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **porteføljens** eksisterende kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-14-1.png" width="20%" /&gt;
+
+---
+
+## Måling av risiko 
+
+**Metode 1 for måling av risiko (1-n investeringsobjekter)**
+- Varians
+`\begin{equation}
+Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
+\end{equation}`
+- Standardavvik
+`\begin{equation}
+Std(X)=\sqrt{Var(X)}
+\end{equation}`
+
+Merk: Mens standardavviket gir oss samme benevning som forventet verdi, er benevningen til variansen vanskeligere å forholde seg til ("tolkning: Det kvadrerte til benevningen av standardavviket")
+
+
+---
+
+**Metode 2 for måling av risiko (2 investeringsobjekter)**
+- Varians
+`\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
+\end{equation}`
+Hvor samvariasjonen er gitt ved
+`\begin{equation}
+Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_2)] \\
+Pr(1)[r_1(1)-E(r_1)][r_2(1)-E(r_2)]+\\Pr(2)[r_1(2)-E(r_1)][r_2(2)-E(r_2)]+...+ \\ Pr(S)[r_1(S)-E(r_1)][r_2(S)-E(r_2)] 
+\end{equation}`
+
+- Standardavviket
+`\begin{equation}
+Std(r_p)=\sqrt{Var(r_p)}
+\end{equation}`
+
+---
+
+## Måling av risiko
+### Enkelobjekter
+
+**Eksempel 2.1**
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+Fra Metode 1 oppgitt under første forelesning har vi at 
+
+`$$E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$$` 
+`$$E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$$`
+
+Fond **A**
+`\begin{equation*}
+Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013 \\
+Std(r_a)=\sqrt{0.0013}=0.03605551
+\end{equation*}`
+
+Fond **B**
+`\begin{equation*}
+Var(r_b) =0.2[0.05-0.23]^2+0.5[0.20-0.23]^2+0.3[0.40-0.23]^2=0.0156 \\
+Std(r_b)=\sqrt{0.0156}=0.1249
+\end{equation*}`
+
+---
+
+## Måling av risiko
+### Sammensatt fond 
+
+Vi antar nå at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)`. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. B&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_a&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_b&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. C&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.105&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Risikoen til det sammensatte fondet C kan måles ved bruk av både metode 1 og 2.
+
+---
+
+**Metode 1**
+`\begin{equation*}
+Var(r_c) =0.2[0.105-0.17]^2+0.5[0.16-0.17]^2+0.3[0.23-0.17]^2=0.001975\\
+Std(r_c)=\sqrt{0.001975}=0.044
+\end{equation*}`
+
+**Metode 2**
+`\begin{equation*}
+Var(r_c) =(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.0045=0.001975 \\
+Std(r_c)=\sqrt{0.001975}=0.044
+\end{equation*}`
+
+Hvor vi har benyttet at
+`\begin{equation*}
+Kov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
+0.3[0.06-0.11][0.40-0.23]=-0.0045\\
+\end{equation*}`
+
+
+
+---
+
+## Risikoholdning og risikokompensasjon
+
+### Holdning
+
+Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
+
+- Risikonøytral kun opptatt av forventet avkastning (+)
+	- Bedre ut: *Nordover* et diagram med risiko på x-aksen og forventet avkastning på y-aksen
+- Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+- Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
+
+I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
+
+---
+
+&lt;img src="pensum/figurer-04.png" width="75%" /&gt;
+
+---
+
+### Risikokompenasjon (litt empiri)
+
+Finner man igjen dette i det observerte tallmateriale?
+
+#### Veldiversifisert portefølje
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Risikofri rente&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.015&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Aksjeindeks&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.068&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.127&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+#### Udiversifisert portefølje
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Yara&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.29&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Itera&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Aker Solutions&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Portefølje (3 aksjer)&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+**Hovedresultater fra undersøkelsen**
+
+1. Det er mye å hente ved diversifisering: Risikoen kan reduseres kraftig uten at du taper noe i form av lavere forventet avkastning
+2. Risikokompensasjonen for en enkeltaksje er ikke knyttet til aksjens standardavvik (totalrisiko). Relevant risiko må derfor måles på andre måter.
+
+---
+
+## Endring av porteføljevekter og samvariasjon
+
+### Porteføljevekter
+
+&lt;img src="pensum/figurer-06.png" width="75%" /&gt;
+
+---
+
+**øvelse:** forsøk å repliker følgende resultater i excel
+
+.panelset[
+.panel[.panel-name[tabell]
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;avkastning a&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;avkastning b&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+.panel[.panel-name[r-kode (ikke pensum)]
+
+```r
+#r &lt;- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+#plotwf &lt;- c(r) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
+#	w &lt;- seq(0,1,0.01)
+#	v &lt;- as.vector(df[,(2)])
+#	m &lt;- as.matrix(df[,(3:4)])
+#	covall &lt;- cov.wt(m,v,method='ml')
+#	avk &lt;- as.vector(covall$center)
+#	kov &lt;- covall$cov[lower.tri(covall$cov)] 
+#	var &lt;- as.vector(diag(as.matrix(covall$cov)))
+#	avkdf &lt;- data.frame(corr=r,w1=1-w, w2=w) %&gt;%
+# 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %&gt;%
+# 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %&gt;%
+# 		dplyr::mutate(stdavk=sqrt(varians))
+#			 }
+#)
+```
+]
+.panel[.panel-name[figur]
+
+]
+]
+
+---
+
+### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
+
+`\begin{equation}
+Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
+\end{equation}`
+
+- `\(Kor(r_a,r_b)=1\)` (helt avhengige)
+- `\(Kor(r_a,r_b)=0\)` (helt uavhengige)
+- `\(Kor(r_a,r_b)=-1\)` (helt motsatt avhengige)
+
+Løser denne for `\(Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)\)`
+
+Som gjør at vi kan skrive
+`\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+\end{equation}`
+
+---
+
+Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
+`\begin{equation*}
+Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
+\end{equation*}`
+
+Mens variansen til porteføljen kan uttrykkes som
+`\begin{equation*}
+Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 \\= 0.001975
+\end{equation*}`
+
+---
+
+&lt;img src="pensum/figurer-05.png" width="75%" /&gt;
+
+---
+
+
+&lt;img src="pensum/figurer-07.png" width="75%" /&gt;
+
+---
+
+**Øvelse:** Forsøk å replikere følgende tabell i Excel
+
+.panelset[
+.panel[.panel-name[Tabell]
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+.panel[.panel-name[R-kode (ikke pensum)]
+
+```r
+plotwf &lt;- c(-1,0,1) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w &lt;- seq(0,1,0.01)
+	v &lt;- as.vector(df[,(2)])
+	m &lt;- as.matrix(df[,(3:4)])
+	covall &lt;- cov.wt(m,v,method='ML')
+	avk &lt;- as.vector(covall$center)
+	kov &lt;- covall$cov[lower.tri(covall$cov)] 
+	var &lt;- as.vector(diag(as.matrix(covall$cov)))
+	avkdf &lt;- data.frame(corr=r,w1=1-w, w2=w) %&gt;%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %&gt;%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %&gt;%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
+```
+
+]
+.panel[.panel-name[Figur]
+
+]
+]
+Følgende tabell
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynl.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsb.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Bedriftens portefølje&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nytt prosjekt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (ikke div.)&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (div.)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Trend&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

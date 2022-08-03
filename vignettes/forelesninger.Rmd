@@ -9,6 +9,8 @@ source('../inst/forelesningsnotater/timeplan.R')
 
 ## [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/1_introduksjon_og_overblikk.pdf)
 ## [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/2_relevant_risiko_2_obj.pdf)
+<!--
+
 ## [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/3_relevant_risiko_3_N_obj.pdf)
 ## [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/4_Effisiens.pdf)
 ## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/5_Kapitalverdimodellen.pdf)
@@ -19,5 +21,5 @@ source('../inst/forelesningsnotater/timeplan.R')
 ## [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/11_Dividende.pdf)
 ## [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/12_Opsjoner.pdf)
 ## [`r tema[13]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/13_Risikostyring.pdf)
-
+-->
 

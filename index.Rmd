@@ -27,15 +27,18 @@ inst/forelesningsnotater/presentations.Rmd
 
 ```{r, eval=F, echo=F}
 ## Simple build
-pkgdown::build_home()
-## Specific build
 pkgdown::build_site() 
+rmarkdown::render("index.Rmd")
+system("cp -R inst/forelesningsnotater/presentations.html docs/articles")
+
+## Specific build
+pkgdown::build_home()
 pkgdown::build_articles()
 pkgdown::build_news()
+rmarkdown::render("index.Rmd")
 ,# Fine build
 rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
-rmarkdown::render("index.Rmd")
 ## Tasks
 #- Sjekke timeplanenummer
 ```
@@ -47,6 +50,9 @@ Mer info vil bli publisert etter sommerferien. Inntil videre, ha en riktig god s
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
+
+Starter opp
+
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)

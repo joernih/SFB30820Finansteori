@@ -29,6 +29,10 @@ abstract: ''
 - Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 - Gi eksempler på kilder for systematisk og usystematisk risiko.
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 # Læringsmål kapittel 3
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.

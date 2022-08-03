@@ -28,6 +28,11 @@ system("brave arbeidskrav2021_F.html")
 #servr::httw()
 ```
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
+
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
 

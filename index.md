@@ -8,6 +8,8 @@ riktig god sommer!
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
+Starter opp
+
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -19,4 +21,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-07-03 16:09:20**
+**Siste gang oppdatert: 2022-08-03 15:35:49**
