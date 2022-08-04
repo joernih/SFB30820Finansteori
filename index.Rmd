@@ -30,6 +30,7 @@ inst/forelesningsnotater/presentations.Rmd
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
 system("cp -R inst/forelesningsnotater/presentations.html docs/articles")
+system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
 
 ## Specific build
 pkgdown::build_home()
@@ -45,14 +46,13 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 
 # Finansteori (høsten 2022)
 
-Mer info vil bli publisert etter sommerferien. Inntil videre, ha en riktig god sommer!
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
-Starter opp
-
+Starter oppdatert:
+  1. "2022-08-22": Introdukson
+  1. "2022-08-24": Tema 1
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -70,6 +70,7 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+
 inst/forelesningsnotater/presentations.Rmd
 https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622

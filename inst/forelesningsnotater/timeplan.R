@@ -8,6 +8,7 @@ library(aweek)
 ukenr <- c(34,seq(34,47))
 ln <- length(ukenr)
 datoer <- c(get_date(ukenr[1], day=1, year = 2022),get_date(ukenr[-1], day=3, year = 2022))
+
 star <- rep("09:15",ln)
 timer <- rep(3,ln)
 forenr <- c(seq(1,7),"",seq(8,14))

@@ -6,17 +6,19 @@ output:
     css: PAA.css
 ---
 
-- [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
-- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
-- [Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
 
 ## Obligatorisk arbeidskrav
-- Versjon 1.1
 - Leveres ut: 28.09.2021 (Canvas)
 - Leveres inn: 26.10.2021 (Canvas)
   - Del I: kan lastes opp som dokument-fil eller pdf.
   - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
 
+<!--
+- [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
+- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
+- [Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
+
+-->
 
 ```{r eval=T, echo=F}
 #library(htmlTable)

@@ -3,12 +3,9 @@
 
 # Finansteori (høsten 2022)
 
-Mer info vil bli publisert etter sommerferien. Inntil videre, ha en
-riktig god sommer!
-
 <img src="man/figures/01_finans.jpg" width="75%" />
 
-Starter opp
+Starter oppdatert: 1. “2022-08-22”: Introdukson 1. “2022-08-24”: Tema 1
 
 # Pensum
 
@@ -21,4 +18,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-03 15:35:49**
+**Siste gang oppdatert: 2022-08-04 12:34:03**
