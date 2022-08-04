@@ -5,7 +5,10 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
-Starter oppdatert: 1. “2022-08-22”: Introdukson 1. “2022-08-24”: Tema 1
+Starter oppdatert:
+
+-   “2022-08-22”: Introduksjon og overblikk
+-   “2022-08-24”: Relevant risiko: Porteføljeteori to objekter
 
 # Pensum
 
@@ -18,4 +21,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-04 12:34:03**
+**Siste gang oppdatert: 2022-08-04 16:39:39**

@@ -51,8 +51,9 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 Starter oppdatert:
-  1. "2022-08-22": Introdukson
-  1. "2022-08-24": Tema 1
+
+- "2022-08-22": Introduksjon og overblikk 
+- "2022-08-24": Relevant risiko: Porteføljeteori to objekter 
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)

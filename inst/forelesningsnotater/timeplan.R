@@ -125,4 +125,7 @@ timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 
 df2 <- data.frame(Forelesning=seq(1,14),
 		 OppgaverB=oppgaver_bok,
-		 OppgaverN=oppgaver_nett)
+		 OppgaverN=oppgaver_nett)[1:11,]
+
+
+
