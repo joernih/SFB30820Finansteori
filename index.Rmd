@@ -29,8 +29,8 @@ inst/forelesningsnotater/presentations.Rmd
 ## Complete build
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
-system("cp -R inst/forelesningsnotater/ docs/articles")
-system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
+system("cp -R inst/forelesningsnotater/* docs/articles")
+#system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
 
 ## Specific build
 pkgdown::build_home()
