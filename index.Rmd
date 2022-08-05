@@ -26,7 +26,7 @@ inst/forelesningsnotater/presentations.Rmd
 ```
 
 ```{r, eval=F, echo=F}
-## Simple build
+## Complete build
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
 system("cp -R inst/forelesningsnotater/ docs/articles")
