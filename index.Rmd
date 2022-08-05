@@ -29,7 +29,7 @@ inst/forelesningsnotater/presentations.Rmd
 ## Simple build
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
-system("cp -R inst/forelesningsnotater/presentations.html docs/articles")
+system("cp -R inst/forelesningsnotater/ docs/articles")
 system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
 
 ## Specific build

@@ -30,16 +30,14 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr("presentations.Rmd")
-#xaringan::inf_mr("presentations.Rmd")
-rmarkdown::render("presentations.Rmd")
-system("brave presentations.html")
+xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'presentations.Rmd'))
+system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.html'))
 servr::daemon_stop()
 ```
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-source("timeplan.R")
+source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 ```
 
 # Timeplan
