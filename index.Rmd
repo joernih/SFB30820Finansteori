@@ -31,7 +31,6 @@ pkgdown::build_site()
 rmarkdown::render("index.Rmd")
 system("cp -R inst/forelesningsnotater/* docs/articles")
 #system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
-
 ## Specific build
 pkgdown::build_home()
 pkgdown::build_articles()
@@ -77,6 +76,11 @@ inst/forelesningsnotater/presentations.Rmd
 https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
+
+
+inst/forelesningsnotater/illustrasjoner/
+
+
 
 ## Oppgaver
 Timeplan størrelse

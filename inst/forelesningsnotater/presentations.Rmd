@@ -395,7 +395,7 @@ Oppgave til neste forelesning:
 ![]()
 
 ```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("drawio/oversiktsbildet.png")
+knitr::include_graphics("illustrasjoner/oversiktsbildet.png")
 ```
 
 
