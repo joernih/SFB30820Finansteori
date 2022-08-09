@@ -60,6 +60,11 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 # Anbefalte oppgaver
 
 ```{r, echo=F}
+kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
+```
+
+
+```{r, echo=F}
 #soppgaveplan
 ```
 

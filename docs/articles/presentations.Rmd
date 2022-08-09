@@ -56,11 +56,16 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 
 ---
 
-
 # Anbefalte oppgaver
 
 ```{r, echo=F}
-#soppgaveplan
+timeplan <- tail(df1,n=7)
+kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
+#kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
+```
+
+```{r, echo=F, eval=T}
+knitr::knit_exit()
 ```
 
 ---
