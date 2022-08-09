@@ -30,7 +30,7 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'presentations.Rmd'))
+xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.Rmd'))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.html'))
 servr::daemon_stop()
 ```
@@ -43,15 +43,15 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 # Timeplan
 
 ```{r echo=F}
-timeplan <- head(df1)
-kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) #%>% kableExtra::row_spec(forel, bold = T)
+timeplan <- head(df1,n=8)
+kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
 ```
 
 ---
 
 ```{r echo=F}
-timeplan <- tail(df1)
-kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) #%>% kableExtra::row_spec(forel, bold = T)
+timeplan <- tail(df1,n=7)
+kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
 ```
 
 ---

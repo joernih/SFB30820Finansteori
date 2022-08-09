@@ -72,7 +72,12 @@ Jørn I. Halvorsen
 knitr::knit_exit()
 ```
 
+## Abc
 inst/forelesningsnotater/presentations.Rmd
 https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
+
+## Oppgaver
+Timeplan størrelse
+Illustrasjonsbilde
