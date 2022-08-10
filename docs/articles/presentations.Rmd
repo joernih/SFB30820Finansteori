@@ -392,9 +392,8 @@ Oppgave til neste forelesning:
 ![]()
 
 ```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("drawio/oversiktsbildet.png")
+knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/illustrasjoner/oversiktsbildet.jpg'))
 ```
-
 
 ---
 

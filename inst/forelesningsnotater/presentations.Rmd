@@ -35,7 +35,6 @@ system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsno
 servr::daemon_stop()
 ```
 
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 ```
@@ -394,8 +393,8 @@ Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 ![]()
 
-```{r, echo=FALSE, out.width="25%", fig.cap=""}
-knitr::include_graphics("illustrasjoner/oversiktsbildet.png")
+```{r, echo=FALSE, out.width="55%", fig.cap=""}
+#knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
 ```
 
 
