@@ -649,7 +649,7 @@ knitr::include_graphics("pensum/figurer-06.png")
 
 ---
 
-**øvelse:** forsøk å repliker følgende resultater i excel
+**Øvelse:** forsøk å repliker følgende resultater i excel
 
 .panelset[
 .panel[.panel-name[tabell]
@@ -657,23 +657,25 @@ knitr::include_graphics("pensum/figurer-06.png")
 htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkastning b"))
 ```
 ]
-.panel[.panel-name[r-kode (ikke pensum)]
+.panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-#r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-#plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-#	w <- seq(0,1,0.01)
-#	v <- as.vector(df[,(2)])
-#	m <- as.matrix(df[,(3:4)])
-#	covall <- cov.wt(m,v,method='ml')
-#	avk <- as.vector(covall$center)
-#	kov <- covall$cov[lower.tri(covall$cov)] 
-#	var <- as.vector(diag(as.matrix(covall$cov)))
-#	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
-# 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
-# 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
-# 		dplyr::mutate(stdavk=sqrt(varians))
-#			 }
-#)
+r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
+r
+plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
+					  browser()
+	w <- seq(0,1,0.01)
+	v <- as.vector(df[,(2)])
+	m <- as.matrix(df[,(3:4)])
+	covall <- cov.wt(m,v,method='ml')
+	avk <- as.vector(covall$center)
+	kov <- covall$cov[lower.tri(covall$cov)] 
+	var <- as.vector(diag(as.matrix(covall$cov)))
+	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
 ```
 ]
 .panel[.panel-name[figur]
