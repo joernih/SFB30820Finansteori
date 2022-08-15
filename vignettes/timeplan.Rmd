@@ -8,7 +8,7 @@ output: github_document
 library(kableExtra)
 library(dplyr)
 forel <- 1
-source('../inst/forelesningsnotater/timeplan.R')
+source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 timeplan <- df1
 #htmlTable::htmlTable(df1)
 kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::row_spec(forel, bold = T)

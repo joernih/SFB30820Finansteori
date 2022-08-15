@@ -1,22 +1,22 @@
 ---
-title: "Finansteori (SFB30820), Høsten 2021"
+title: "Obligatorisk arbeidskrav"
 output:
   html_document:
   #html_notebook:
     css: PAA.css
 ---
 
+- Leveres ut: xx.09.2022 (Canvas)
+- Leveres inn: xx.10.2022 (Canvas)
+  - Del I: kan lastes opp som dokument-fil eller pdf.
+  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
+
+<!--
 - [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
 - [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
 - [Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
 
-## Obligatorisk arbeidskrav
-- Versjon 1.1
-- Leveres ut: 28.09.2021 (Canvas)
-- Leveres inn: 26.10.2021 (Canvas)
-  - Del I: kan lastes opp som dokument-fil eller pdf.
-  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
-
+-->
 
 ```{r eval=T, echo=F}
 #library(htmlTable)
@@ -27,6 +27,11 @@ rmarkdown::render("arbeidskrav2021_F.Rmd")
 system("brave arbeidskrav2021_F.html")
 #servr::httw()
 ```
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)

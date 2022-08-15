@@ -21,6 +21,10 @@ abstract: ''
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 # Læringsmål kapittel 2
 - Tallfeste risiko i en portefølje ved å beregne standardavvik.
 - Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
@@ -28,6 +32,10 @@ abstract: ''
 - Beskrive hvorfor risikoen i en portefølje reduseres når antall prosjekter i porteføljen øker.
 - Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 - Gi eksempler på kilder for systematisk og usystematisk risiko.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 # Læringsmål kapittel 3
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.

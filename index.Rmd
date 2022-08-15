@@ -26,27 +26,31 @@ inst/forelesningsnotater/presentations.Rmd
 ```
 
 ```{r, eval=F, echo=F}
-## Simple build
-pkgdown::build_home()
-## Specific build
+## Complete build
 pkgdown::build_site() 
+rmarkdown::render("index.Rmd")
+system("cp -r inst/forelesningsnotater/* docs/articles")
+#system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
+## Specific build
+pkgdown::build_home()
 pkgdown::build_articles()
 pkgdown::build_news()
-,# Fine build
-rmarkdown::render('inst/forelesningsnotater/presentations.html', 'xaringan::moon_reader')
-rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 rmarkdown::render("index.Rmd")
+,# Fine build
+rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 ## Tasks
 #- Sjekke timeplanenummer
 ```
 
 # Finansteori (høsten 2022)
 
-Mer info vil bli publisert etter sommerferien. Inntil videre, ha en riktig god sommer!
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
+
+Vi starter opp først i uke 34, da med forelesninger både på mandag og onsdag. Notatene til den første forelesningen er nå publisert. Det vil nok oppleves som en stor fordel å ha kikket på disse i forkant av forelesningen, spesielt nyttig vil det være å gjøre et forsøk på besvare spørsmålene som inngår i notatene. Vi sees snart!
+
+Jørn
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -65,10 +69,17 @@ Jørn I. Halvorsen
 knitr::knit_exit()
 ```
 
-inst/forelesningsnotater/drawio/oversiktsbildet.odg
-inst/forelesningsnotater/drawio/oversiktsbildet.png
+# Abc
+inst/forelesningsnotater/drawio/
 
+## Oppgaver
+Illustrasjonsbilde
 inst/forelesningsnotater/presentations.Rmd
-https://outlook.office.com/mail/
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
+r-kode
+
+?xaringan::style_extra_css()
+
+
+
