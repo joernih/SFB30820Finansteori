@@ -614,7 +614,7 @@ Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
 - Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
 
-I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
+I dette kurset legger vi til grunn at *alle aktørene* er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
 
 ---
 
@@ -661,12 +661,12 @@ knitr::include_graphics("pensum/figurer-06.png")
 
 ---
 
-**Øvelse:** forsøk å repliker følgende resultater i excel
+**Øvelse:** Forsøk å repliker følgende resultater i Excel
 
 .panelset[
-.panel[.panel-name[tabell]
+.panel[.panel-name[Tabell]
 ```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkastning b"))
+htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkastning b"))
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
@@ -688,7 +688,7 @@ htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkas
 #)
 ```
 ]
-.panel[.panel-name[figur]
+.panel[.panel-name[Figur]
 ```{r, echo=F}
 #gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 #plotly::ggplotly(gg)
