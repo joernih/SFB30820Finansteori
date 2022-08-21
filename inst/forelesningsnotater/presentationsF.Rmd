@@ -34,6 +34,9 @@ xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsn
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.Rmd'))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
 servr::daemon_stop()
+### Tasks
+#* kursiv svar
+#* N.1.4
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
