@@ -30,6 +30,7 @@ inst/forelesningsnotater/presentations.Rmd
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
 system("cp -r inst/forelesningsnotater/* docs/articles")
+system("cp -r inst/eksamensoppgaver/* docs/eksamensoppgaver")
 #system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
 ## Specific build
 pkgdown::build_home()
@@ -47,6 +48,9 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
+
+
+**Nyheter**
 
 Vi starter opp først i uke 34, da med forelesninger både på mandag og onsdag. Notatene til den første forelesningen er nå publisert. Det vil nok oppleves som en stor fordel å ha kikket på disse i forkant av forelesningen, spesielt nyttig vil det være å gjøre et forsøk på besvare spørsmålene som inngår i notatene. Vi sees snart!
 

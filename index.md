@@ -5,6 +5,8 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
+**Nyheter**
+
 Vi starter opp først i uke 34, da med forelesninger både på mandag og
 onsdag. Notatene til den første forelesningen er nå publisert. Det vil
 nok oppleves som en stor fordel å ha kikket på disse i forkant av
@@ -24,4 +26,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-15 20:18:23**
+**Siste gang oppdatert: 2022-08-22 09:05:21**
