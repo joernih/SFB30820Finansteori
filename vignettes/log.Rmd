@@ -5,4 +5,4 @@ output: github_document
 
 ## 23.8 
 
-Abc
+**Forelesning #1:** Under prosjektets kontantstrøm, lagt inn et plot som viser fordelingen til de ulike kontantstrømmene.
