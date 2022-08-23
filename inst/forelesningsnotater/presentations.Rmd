@@ -680,7 +680,6 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
 df <- df_eks_2_1
-r <- -1
 w <- seq(0,1,0.01)
 v <- as.vector(df[,(2)])
 m <- as.matrix(df[,(3:4)])
@@ -688,9 +687,9 @@ covall <- cov.wt(m,v,method='ML')
 avk <- as.vector(covall$center)
 kov <- covall$cov[lower.tri(covall$cov)] 
 var <- as.vector(diag(as.matrix(covall$cov)))
-plotwf <- data.frame(corr=r,w1=1-w, w2=w) %>%
+plotwf <- data.frame(kov=kov,corr=r,w1=1-w, w2=w) %>%
 	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
-	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
+	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %>%
 	dplyr::mutate(stdavk=sqrt(varians))
 ```
 ]
@@ -778,7 +777,7 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 .panel[.panel-name[Figur 2.4 (replikasjon)]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-#plotly::ggplotly(ggf)
+plotly::ggplotly(ggf)
 ```
 ]
 ]
