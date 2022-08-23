@@ -248,15 +248,14 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
 <br>**Svar:**<br>
-I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
-Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+*I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)*
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
 <br>**Svar:**<br>
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
-1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
+*For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?*
 <br>**Svar:**<br>
-.!
-
+*Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.*
 ---
 
 ## Prosjektets Kontantstrøm

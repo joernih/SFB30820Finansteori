@@ -25,10 +25,25 @@
     <loc>https://pkgdown.r-lib.org/articles/læringsmaal.html</loc>
   </url>
   <url>
+    <loc>https://pkgdown.r-lib.org/articles/mathjax-equation-numbers.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/articles/presentations.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/articles/tavlefil.html</loc>
+  </url>
+  <url>
     <loc>https://pkgdown.r-lib.org/articles/timeplan.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/eksamensoppgaver/example.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/eksamensoppgaver/example.nb.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/index.html</loc>

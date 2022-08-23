@@ -5,16 +5,6 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
-**Nyheter**
-
-Vi starter opp først i uke 34, da med forelesninger både på mandag og
-onsdag. Notatene til den første forelesningen er nå publisert. Det vil
-nok oppleves som en stor fordel å ha kikket på disse i forkant av
-forelesningen, spesielt nyttig vil det være å gjøre et forsøk på besvare
-spørsmålene som inngår i notatene. Vi sees snart!
-
-Jørn
-
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -26,4 +16,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-22 09:05:21**
+**Siste gang oppdatert: 2022-08-23 09:28:40**
