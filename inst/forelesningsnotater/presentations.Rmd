@@ -687,7 +687,7 @@ covall <- cov.wt(m,v,method='ML')
 avk <- as.vector(covall$center)
 kov <- covall$cov[lower.tri(covall$cov)] 
 var <- as.vector(diag(as.matrix(covall$cov)))
-plotwf <- data.frame(kov=kov,corr=r,w1=1-w, w2=w) %>%
+plotwf <- data.frame(kov=kov,w1=1-w, w2=w) %>%
 	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
 	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %>%
 	dplyr::mutate(stdavk=sqrt(varians))
@@ -781,7 +781,7 @@ plotly::ggplotly(ggf)
 ```
 ]
 ]
-```{r, echo=F, eval=F}
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
 

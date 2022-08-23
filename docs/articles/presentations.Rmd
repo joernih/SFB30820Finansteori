@@ -91,6 +91,8 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 knitr::include_graphics("pensum/figurer-01.png")
 ```
 
+
+
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 ]
@@ -127,6 +129,8 @@ Individuell, skriftlig firetimers eksamen.
 Karakterregel: A-F.
 
 Hjelpemidler: godkjent kalkulator.
+
+
 
 ---
 
@@ -675,27 +679,24 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-#r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-#plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-#	w <- seq(0,1,0.01)
-#	v <- as.vector(df[,(2)])
-#	m <- as.matrix(df[,(3:4)])
-#	covall <- cov.wt(m,v,method='ml')
-#	avk <- as.vector(covall$center)
-#	kov <- covall$cov[lower.tri(covall$cov)] 
-#	var <- as.vector(diag(as.matrix(covall$cov)))
-#	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
-# 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
-# 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
-# 		dplyr::mutate(stdavk=sqrt(varians))
-#			 }
-#)
+df <- df_eks_2_1
+w <- seq(0,1,0.01)
+v <- as.vector(df[,(2)])
+m <- as.matrix(df[,(3:4)])
+covall <- cov.wt(m,v,method='ML')
+avk <- as.vector(covall$center)
+kov <- covall$cov[lower.tri(covall$cov)] 
+var <- as.vector(diag(as.matrix(covall$cov)))
+plotwf <- data.frame(kov=kov,w1=1-w, w2=w) %>%
+	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %>%
+	dplyr::mutate(stdavk=sqrt(varians))
 ```
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Figur 2.3 (replikasjon)]
 ```{r, echo=F}
-#gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-#plotly::ggplotly(gg)
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
+plotly::ggplotly(gg)
 ```
 ]
 ]
@@ -708,9 +709,9 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \end{equation}
 
-- $Kor(r_a,r_b)=1$ (helt avhengige)
-- $Kor(r_a,r_b)=0$ (helt uavhengige)
-- $Kor(r_a,r_b)=-1$ (helt motsatt avhengige)
+- $Kor(r_a,r_b)=1$ (fullstendig avhengige)
+- $Kor(r_a,r_b)=0$ (fullstendig uavhengige)
+- $Kor(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
 
 Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)Std(r_a)Std(r_b)$
 
@@ -773,29 +774,13 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 ```
 
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Figur 2.4 (replikasjon)]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-#plotly::ggplotly(ggf)
+plotly::ggplotly(ggf)
 ```
 ]
 ]
-Følgende tabell
-```{r, echo=FALSE, out.width="25%"}
-dfn12 <- data.frame(prob=c(0.20,0.30,0.50),
-		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
-		    tilstand=c(1,2,3),
-		    bedriften=c(-60,5,60),
-		    nyttprosj=c(30,2.5,-30),
-		    portefoljen_ikkediv=c(-60,5,60),
-		    portefoljen_div=c(10,5,-10))
-g1 <- ggplot(data=dfn12, aes(x=beskr, y=nyttprosj)) + geom_bar(stat="identity")
-g2 <- ggplot(data=dfn12, aes(x=beskr, y=bedriften)) + geom_bar(stat="identity")
-g3 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_ikkediv)) + geom_bar(stat="identity")
-g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="identity")
-htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
-```
-
 ```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
@@ -950,6 +935,11 @@ Var(r_p)=\frac{1}{N}(0.21) + (1-\frac{1}{N})(0.0229)
 
 
 .panelset[
+.panel[.panel-name[Figur]
+```{r, out.width="55%",echo=F}
+#ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
+```
+]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
 varo <- 0.21
@@ -957,11 +947,6 @@ kovo <- 0.0229
 tportvar <- '(1/N)*varo + (1-1/N)*kovo'
 N <- 1:60
 df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
-```
-]
-.panel[.panel-name[Figur]
-```{r, out.width="55%",echo=F}
-ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
 ]]
 
@@ -1025,6 +1010,10 @@ knitr::include_graphics("pensum/figurer-09.png")
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-10.png")
+```
+
+```{r, echo=F, eval=T}
+knitr::knit_exit()
 ```
 
 ---
