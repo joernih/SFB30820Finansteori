@@ -22,7 +22,7 @@ navbar:
     - text: "Læringsmålene"
       href: "articles/læringsmaal.html"
     - text: "Utskrifter"
-      #href: "articles/forelesninger.html"
+      href: "articles/forelesninger.html"
     - text: "Log"
       href: "articles/log.html"
   right:
