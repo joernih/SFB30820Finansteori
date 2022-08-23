@@ -10,6 +10,13 @@ navbar:
     - icon: fa-home 
       #      href: "index.html"
     - text: "Slides til forelesninger"
+      menu:
+      - text: "Praktisk informasjon"
+        href: "articles/presentations.html#1" 
+      - text: "#1: Introduksjon og overblikk"
+        href: "articles/presentations.html#8" 
+      - text: "#2: Relevant risiko: Porteføljeteori to objekter"
+        href: "articles/presentations.html#23" 
       href: "articles/presentations.html" 
     - text: "Formelsamling"
       href: "articles/formler.html"
