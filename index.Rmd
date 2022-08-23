@@ -65,7 +65,6 @@ knitr::knit_exit()
 ## Oppgaver
 Illustrasjonsbilde
 inst/forelesningsnotater/presentations.Rmd
-inst/forelesningsnotater/presentationsF.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 
