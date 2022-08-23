@@ -3,6 +3,15 @@ title: ""
 output: github_document
 ---
 
+## Tidligere eksamensoppgaver
+
+[Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
+
+[Eksamen 2022 (kontinuasjon)]()
+
+[Eksamen 2020](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
+
+## Fra lærebok og nettside
 
 ```{r, echo=F}
 library(htmlTable)
@@ -11,10 +20,6 @@ oppgaver <- df2[c(-12,-13,-14)]
 #htmlTable::htmlTable(df1)
 kableExtra::kbl(oppgaver) %>% kableExtra::kable_paper(full_width = F) 
 ```
-
-
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
 
-
-[Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
 

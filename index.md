@@ -16,4 +16,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-23 09:28:40**
+**Siste gang oppdatert: 2022-08-23 09:42:37**
