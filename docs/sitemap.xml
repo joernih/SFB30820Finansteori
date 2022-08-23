@@ -22,6 +22,9 @@
     <loc>https://pkgdown.r-lib.org/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://pkgdown.r-lib.org/articles/log.html</loc>
+  </url>
+  <url>
     <loc>https://pkgdown.r-lib.org/articles/læringsmaal.html</loc>
   </url>
   <url>
@@ -29,6 +32,9 @@
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/articles/presentations.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/articles/presentationsF.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/articles/tavlefil.html</loc>

@@ -7,9 +7,10 @@ articles:
   example: example.html
   forelesninger: forelesninger.html
   formler: formler.html
+  log: log.html
   læringsmaal: læringsmaal.html
   timeplan: timeplan.html
-last_built: 2022-08-23T09:16Z
+last_built: 2022-08-23T09:25Z
 urls:
   reference: https://pkgdown.r-lib.org/reference
   article: https://pkgdown.r-lib.org/articles

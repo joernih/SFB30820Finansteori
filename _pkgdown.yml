@@ -24,7 +24,7 @@ navbar:
     - text: "Utskrifter"
       #href: "articles/forelesninger.html"
     - text: "Log"
-      #href: "news/index.html" 
+      href: "articles/log.html"
   right:
     - icon: fa-github fa-lg
       text: "github"
