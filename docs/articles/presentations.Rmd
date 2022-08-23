@@ -411,9 +411,6 @@ Oppgave til neste forelesning:
 knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
 ```
 
-```{r, echo=F, eval=T}
-knitr::knit_exit()
-```
 ---
 
 class: inverse, center, middle
