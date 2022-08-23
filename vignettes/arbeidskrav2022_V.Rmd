@@ -6,8 +6,8 @@ output:
     css: PAA.css
 ---
 
-- Leveres ut: xx.09.2022 (Canvas)
-- Leveres inn: xx.10.2022 (Canvas)
+- Leveres ut: 28.09.2022 (Canvas)
+- Leveres inn: 26.10.2022 (Canvas)
   - Del I: kan lastes opp som dokument-fil eller pdf.
   - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
 
