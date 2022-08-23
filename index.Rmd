@@ -32,15 +32,11 @@ rmarkdown::render("index.Rmd")
 system("cp -r inst/forelesningsnotater/* docs/articles")
 system("cp -r inst/eksamensoppgaver/* docs/eksamensoppgaver")
 #system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
-## Specific build
 pkgdown::build_home()
 pkgdown::build_articles()
 pkgdown::build_news()
 rmarkdown::render("index.Rmd")
-,# Fine build
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
-## Tasks
-#- Sjekke timeplanenummer
 ```
 
 # Finansteori (høsten 2022)
@@ -65,7 +61,6 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
 # Abc
 inst/forelesningsnotater/drawio/
 
@@ -76,8 +71,6 @@ inst/forelesningsnotater/presentationsF.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 r-kode
-
-?xaringan::style_extra_css()
 
 
 

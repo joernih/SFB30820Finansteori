@@ -34,6 +34,9 @@ xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsn
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.Rmd'))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.html'))
 servr::daemon_stop()
+### Tasks
+#* kursiv svar
+#* N.1.4
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -162,8 +165,8 @@ NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} =
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{equation}
 
+
 Beslutningsregel:
-adsf
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) $> 0$
 - Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de $>0$ igangsettes 
 
@@ -215,29 +218,22 @@ Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapi
 Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
-<!--
 <br>**Svar:**<br>
 \begin{equation}
 NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
 \end{equation}
--->
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
-<!--
 <br>**Svar:**<br>
 \begin{equation}
 9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
-X=9.17(1.02)=9.17\cdot (1.02)=9.35
+X=9.17(1+0.02)=9.17\cdot (1.02)=9.35
 \end{equation}
--->
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
-<!--
 <br>**Svar:**<br>
 \begin{equation}
 NV=9.17
 \end{equation}
--->
-
 ---
 
 ## Investerings- vs. finansierinsgprosjekt
@@ -251,19 +247,17 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
-<!--
 <br>**Svar:**<br>
-I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
-Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
--->
+*I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)*
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-<!--
 <br>**Svar:**<br>
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
--->
-1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
-
+*For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?*
+<br>**Svar:**<br>
+*Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.*
 ---
+
 
 ## Prosjektets Kontantstrøm
 For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
@@ -297,7 +291,13 @@ $$
 0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
 $$
 
+```{r, echo=F, warning=F}
+dfp <- data.frame(pr=as.numeric(df_prosj_kontantstrøm[9,])[-1],ks=as.numeric(df_prosj_kontantstrøm[8,])[-1])
+ggplot(dfp,aes(ks, pr)) + geom_col() + labs(x='Kontantstrøm', y='Sannsynlighet')
+```
+
 ---
+
 
 ## Nærmere om forventet kontantstrøm
 
@@ -319,6 +319,8 @@ Her uttrykker
 Selve porteføljeavkastningen ( $r_p$ ) uten skatt mellom to perioder ( $0$ og $T$ ) er gitt ved
 
 $r_p=\frac{P_{T}+Div_{0,T}-P_{0}}{P_{0}}$
+
+<br>
 
 ### Metode 1: Forventet avkastning
 
@@ -351,47 +353,37 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 ```
 
 1. Hva er særtrekket ved prosjekt X?
-<!--
 <br>**Svar:**<br>
 Kontantstrømmen er sikker (lik 3 i begge perioder)
--->
 2. Beregn forventet avkastning for hvert prosjekt.
-<!--
 <br>**Svar:**<br>
-\begin{equation}
+$$
 E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
 E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
 E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
-\end{equation}
--->
+$$
 ---
 <p>3.</p> Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-.panelset[
-.panel[.panel-name[Metode 1]
 <br>
-<br>
-$$
-E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
-0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
-$$
-]
-.panel[.panel-name[Metode 2]
-<br>
-<br>
-$$
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
-$$
-]
-]
+**Metode 1**
 
-<p>4.</p> Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-<!--
+$$
+E(r_p)=0.3(1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+0.7(1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
+$$
+
+**Metode 2**
+
+$$
+E(r_p)=(1/3)3+(1/3)9.9 +(1/3)10.4=1/3(3+9.9+10.4) = 7.76
+$$
+
+<p>4.</p> Hva er svaret på spm. 3 dersom begge tilstander er like sannsynlige?
 <br>**Svar:**<br> 
 $$
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + 
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
 $$ 
--->
 ---
 
 **Oppgave** N.1.3
@@ -399,20 +391,14 @@ $$
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-<!--
 <br>**Svar:**<br>
 Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
--->
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-<!--
 <br>**Svar:**<br>
 Nei, prosjekt gir høyere avkastning under oppgangstid.
--->
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-<!--
 <br>**Svar:**<br>
 Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
--->
 ---
 
 ## Veien framover
@@ -421,15 +407,13 @@ Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 ![]()
 
-```{r, echo=FALSE, out.width="55%", fig.cap=""}
-#knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
+```{r, echo=FALSE, out.width="45%", fig.cap=""}
+knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
 ```
 
 ```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
-
-
 ---
 
 class: inverse, center, middle
@@ -637,7 +621,7 @@ Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
 - Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
 - Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
 
-I dette kurset legger vi til grunn at alle aktørene er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
+I dette kurset legger vi til grunn at *alle aktørene* er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
 
 ---
 
@@ -684,12 +668,12 @@ knitr::include_graphics("pensum/figurer-06.png")
 
 ---
 
-**Øvelse:** forsøk å repliker følgende resultater i excel
+**Øvelse:** Forsøk å repliker følgende resultater i Excel
 
 .panelset[
-.panel[.panel-name[tabell]
+.panel[.panel-name[Tabell]
 ```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkastning b"))
+htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkastning b"))
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
@@ -711,7 +695,7 @@ htmlTable(df_eks_2_1, header=c("tilstand","sannsynlighet","avkastning a", "avkas
 #)
 ```
 ]
-.panel[.panel-name[figur]
+.panel[.panel-name[Figur]
 ```{r, echo=F}
 #gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 #plotly::ggplotly(gg)

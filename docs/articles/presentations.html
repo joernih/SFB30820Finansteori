@@ -7,7 +7,7 @@
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xca97b296d274228ac1cfc6c7983e53c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9851968e68d403595047bb06769236a","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -51,7 +51,7 @@ class: center, middle, inverse, title-slide
 ### Jørn I.Halvorsen
 ]
 .date[
-### 2021/08/12 (updated: 2022-08-15)
+### 2021/08/12 (updated: 2022-08-23)
 ]
 
 ---
@@ -405,7 +405,7 @@ class: inverse, center, middle
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
-Oppdatert: 2022-08-15
+Oppdatert: 2022-08-23
 
 ---
 
@@ -419,8 +419,8 @@ NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} =
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{equation}`
 
+
 Beslutningsregel:
-adsf
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) `\(&gt; 0\)`
 - Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de `\(&gt;0\)` igangsettes 
 
@@ -472,29 +472,22 @@ Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapi
 Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad er 2 %, og prosjektet har en risikokostnad på 7 %.
 
 Hva er kontantstrømmen verd i dag?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 `\begin{equation}
 NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
 \end{equation}`
---&gt;
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 `\begin{equation}
 9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
-X=9.17(1.02)=9.17\cdot (1.02)=9.35
+X=9.17(1+0.02)=9.17\cdot (1.02)=9.35
 \end{equation}`
---&gt;
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 `\begin{equation}
 NV=9.17
 \end{equation}`
---&gt;
-
 ---
 
 ## Investerings- vs. finansierinsgprosjekt
@@ -508,19 +501,17 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 **Oppgave N.1.4**
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
-I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
-Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
---&gt;
+*I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)*
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
---&gt;
-1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
-
+*For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?*
+&lt;br&gt;**Svar:**&lt;br&gt;
+*Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.*
 ---
+
 
 ## Prosjektets Kontantstrøm
 For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
@@ -622,7 +613,10 @@ $$
 0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
 $$
 
+![](presentations_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
 ---
+
 
 ## Nærmere om forventet kontantstrøm
 
@@ -644,6 +638,8 @@ Her uttrykker
 Selve porteføljeavkastningen ( `\(r_p\)` ) uten skatt mellom to perioder ( `\(0\)` og `\(T\)` ) er gitt ved
 
 `\(r_p=\frac{P_{T}+Div_{0,T}-P_{0}}{P_{0}}\)`
+
+&lt;br&gt;
 
 ### Metode 1: Forventet avkastning
 
@@ -695,47 +691,37 @@ AS Condor står overfor tre investeringsprosjekter med følgende avkastning:
 &lt;/table&gt;
 
 1. Hva er særtrekket ved prosjekt X?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 Kontantstrømmen er sikker (lik 3 i begge perioder)
---&gt;
 2. Beregn forventet avkastning for hvert prosjekt.
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
-`\begin{equation}
+$$
 E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
 E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
 E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
-\end{equation}`
---&gt;
+$$
 ---
 &lt;p&gt;3.&lt;/p&gt; Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
-.panelset[
-.panel[.panel-name[Metode 1]
 &lt;br&gt;
-&lt;br&gt;
-$$
-E(r_p)=0.3\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
-0.7\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
-$$
-]
-.panel[.panel-name[Metode 2]
-&lt;br&gt;
-&lt;br&gt;
-$$
-E(r_p)=1/3\cdot 3+1/3\cdot 9.9 +1/3\cdot 10.4=1/3\cdot(3+9.9+10.4) = 7.76
-$$
-]
-]
+**Metode 1**
 
-&lt;p&gt;4.&lt;/p&gt; Hva er svaret på spm. 3 hvis begge tilstander er like sannsynlige?
-&lt;!--
+$$
+E(r_p)=0.3(1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+0.7(1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
+$$
+
+**Metode 2**
+
+$$
+E(r_p)=(1/3)3+(1/3)9.9 +(1/3)10.4=1/3(3+9.9+10.4) = 7.76
+$$
+
+&lt;p&gt;4.&lt;/p&gt; Hva er svaret på spm. 3 dersom begge tilstander er like sannsynlige?
 &lt;br&gt;**Svar:**&lt;br&gt; 
 $$
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + 
+E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
 $$ 
---&gt;
 ---
 
 **Oppgave** N.1.3
@@ -743,20 +729,14 @@ $$
 Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
---&gt;
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 Nei, prosjekt gir høyere avkastning under oppgangstid.
---&gt;
 1. Er det fornuftig å sette alle pengene i prosjekt X?
-&lt;!--
 &lt;br&gt;**Svar:**&lt;br&gt;
 Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
---&gt;
 ---
 
 ## Veien framover
@@ -765,7 +745,7 @@ Oppgave til neste forelesning:
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 ![]()
 
-
+&lt;img src="illustrasjoner/oversiktsbildet.jpg" width="45%" /&gt;
 
 
 
