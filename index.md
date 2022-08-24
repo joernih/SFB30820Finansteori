@@ -5,6 +5,8 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
+# **Vi er på E1-059** (onsdag 24.8)
+
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -16,4 +18,4 @@ Undervisningsansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-23 14:57:57**
+**Siste gang oppdatert: 2022-08-24 09:05:28**
