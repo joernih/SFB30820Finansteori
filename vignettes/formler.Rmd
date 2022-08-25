@@ -97,9 +97,9 @@ Std(r_p)=\sqrt{Var(r_p)}
 Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \end{equation}
 
-- $Kor(r_a,r_b)=1$ (helt avhengige)
-- $Kor(r_a,r_b)=0$ (helt uavhengige)
-- $Kor(r_a,r_b)=-1$ (helt motsatt avhengige)
+- $Kor(r_a,r_b)=1$ (fullstendig avhengige)
+- $Kor(r_a,r_b)=0$ (uavhengige)
+- $Kor(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
 
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)Std(r_a)Std(r_b)

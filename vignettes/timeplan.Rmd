@@ -7,7 +7,7 @@ output: github_document
 ```{r, echo=F, message=F, warning=F}
 library(kableExtra)
 library(dplyr)
-forel <- 2
+forel <- 3
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 timeplan <- df1
 #htmlTable::htmlTable(df1)

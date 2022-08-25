@@ -46,7 +46,8 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
-# **Vi er på E1-059** (onsdag 24.8)
+# Nyheter
+- Under fanen anbefalte oppgaver, er det nå lagt ut forslag til oppgaver som dere kan forsøke å løse etter forelesningen førstkommende onsdag.
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -55,7 +56,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
-Undervisningsansvarlig (jornih at hiof.no)
+Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 

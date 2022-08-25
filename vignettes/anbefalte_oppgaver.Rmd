@@ -3,6 +3,24 @@ title: ""
 output: github_document
 ---
 
+## Oppgaveløsning etter forelesning
+
+**31.8 fra kl. 12:15**
+
+Eksamensoppgave 2021: 
+Oppgave 1, spørsmål 1 og 2. Oppgave 2
+
+Eksamensoppgave 2022: 
+Oppgave 1, spørsmål 1. Oppgave 2
+
+Eksamensoppgave 2020: 
+Oppgave 1
+
+
+
+
+
+
 ## Tidligere eksamensoppgaver
 
 [Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)

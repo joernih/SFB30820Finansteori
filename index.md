@@ -5,7 +5,11 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
-# **Vi er på E1-059** (onsdag 24.8)
+# Nyheter
+
+-   Under fanen anbefalte oppgaver, er det nå lagt ut forslag til
+    oppgaver som dere kan forsøke å løse etter forelesningen
+    førstkommende onsdag.
 
 # Pensum
 
@@ -14,8 +18,8 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 <img src="man/figures/pensum.jpg" width="15%" />
 
-Undervisningsansvarlig (jornih at hiof.no)
+Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-24 09:05:28**
+**Siste gang oppdatert: 2022-08-25 11:01:18**
