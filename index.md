@@ -8,8 +8,8 @@
 # Nyheter
 
 -   Under fanen anbefalte oppgaver, er det nå lagt ut forslag til
-    oppgaver som dere kan forsøke å løse etter forelesningen
-    førstkommende onsdag.
+    oppgaver som dere enten kan forsøke å løse i forkant eller etter
+    forelesningen førstkommende onsdag.
 
 # Pensum
 
@@ -22,4 +22,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-25 11:01:18**
+**Siste gang oppdatert: 2022-08-25 12:55:51**

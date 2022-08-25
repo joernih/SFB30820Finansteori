@@ -47,7 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Under fanen anbefalte oppgaver, er det nå lagt ut forslag til oppgaver som dere kan forsøke å løse etter forelesningen førstkommende onsdag.
+- Under fanen anbefalte oppgaver, er det nå lagt ut forslag til oppgaver som dere enten kan forsøke å løse i forkant eller etter forelesningen førstkommende onsdag.
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
