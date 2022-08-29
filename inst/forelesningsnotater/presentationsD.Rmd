@@ -30,9 +30,10 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.Rmd'))
+filp <- '/inst/forelesningsnotater/presentationsD.Rmd'
+xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.Rmd'))
-system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.html'))
+system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
 servr::daemon_stop()
 ### Tasks
 #* kursiv svar

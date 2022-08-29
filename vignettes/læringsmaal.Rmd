@@ -30,17 +30,19 @@ abstract: ''
 - Beregne betaverdien til et prosjekt og forklare hva den fanger opp.
 - Gi eksempler på kilder for systematisk og usystematisk risiko.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 # Læringsmål kapittel 3
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
 - Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
 - Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 - Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
+
+
 
 # Læringsmål kapittel 5
 - Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.

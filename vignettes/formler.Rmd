@@ -105,9 +105,6 @@ Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
@@ -152,6 +149,10 @@ Std(r_p)=\sqrt{Var(rp)}
 \begin{equation}
 \beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
+
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 
 ---
 
