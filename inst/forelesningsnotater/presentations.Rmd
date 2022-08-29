@@ -30,11 +30,11 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/forelesningsnotater/presentationsD.Rmd'
+filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
-rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.Rmd'))
-system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
-servr::daemon_stop()
+rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
+#system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
+#servr::daemon_stop()
 ### Tasks
 #* kursiv svar
 #* N.1.4
@@ -707,25 +707,25 @@ plotly::ggplotly(gg)
 ### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
 \begin{equation}
-Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
+Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \end{equation}
 
-- $Kor(r_a,r_b)=1$ (fullstendig avhengige)
-- $Kor(r_a,r_b)=0$ (fullstendig uavhengige)
-- $Kor(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
+- $Korr(r_a,r_b)=1$ (fullstendig avhengige)
+- $Korr(r_a,r_b)=0$ (fullstendig uavhengige)
+- $Korr(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
 
-Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)Std(r_a)Std(r_b)$
+Løser denne for $Kov(r_a,r_b)=Korr(r_a,r_b)Std(r_a)Std(r_b)$
 
 Som gjør at vi kan skrive
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)Std(r_a)Std(r_b)
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
 
 ---
 
 Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
 \begin{equation*}
-Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
+Korr(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
 \end{equation*}
 
 Mens variansen til porteføljen kan uttrykkes som
@@ -876,12 +876,13 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ### Diversifisering og risikoreduksjon
 
-- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ ledd, mens siste består av $N^2-N$ ledd
+- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ ledd, mens siste består av 
+  ( $N^2-N$ ) ledd
 
 - Dersom vi antar at en like stort andel $1/N$ blir investert i hvert av de n objektene, kan vi skrive 
 \begin{equation}
 Var(r_p)=\frac{1}{N}^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(N^2-N)(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
++(\frac{1}{N})^2(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))))
 \end{equation}
 
 Vi har at gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
@@ -893,7 +894,7 @@ $$
 Mens gjennomsnittlig kovarians ( $\overline{Kov}$ ) er gitt ved
 
 $$
-\overline{Kov}=\frac{1}{N}(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))
+\overline{Kov}=\frac{1}{(N^2-N)}(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))
 $$
 
 ---
@@ -934,15 +935,28 @@ Var(r_p)=\frac{1}{N}(0.21) + (1-\frac{1}{N})(0.0229)
 
 ---
 
+```{r, echo=F}
+varo <- 0.21
+kovo <- 0.0229
+tportvar <- '(1/N)*varo + (1-1/N)*kovo'
+N <- 1:60
+df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+```
 
 .panelset[
 .panel[.panel-name[Figur]
 ```{r, out.width="55%",echo=F}
+ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
-]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
+varo <- 0.21
+kovo <- 0.0229
+tportvar <- '(1/N)*varo + (1-1/N)*kovo'
+N <- 1:60
+df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
 ```
+]
 ]]
 
 **Øvelse:** Se om du klarer å replikere figuren som er vist her ved bruk av et regneark.
@@ -989,10 +1003,10 @@ forholdet mellom aksjens eller prosjektets risiko i forhold til markedsporteføl
 - $\beta_j<1$ - Mindre følsom enn markedsporteføljen
 - $\beta_j=0$ - Risikofri aksje (null systematisk risiko, man kan innehold usystematisk risiko)
 
-Ved å utnytte sammenhengen om at $Kor(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}$, kan vi også uttrykke beta som 
+Ved å utnytte sammenhengen om at $Korr(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}$, kan vi også uttrykke beta som 
 
 \begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
 ---

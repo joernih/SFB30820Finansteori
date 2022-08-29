@@ -93,16 +93,17 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
+
 \begin{equation}
-Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
+Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \end{equation}
 
-- $Kor(r_a,r_b)=1$ (fullstendig avhengige)
-- $Kor(r_a,r_b)=0$ (uavhengige)
-- $Kor(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
+- $Korr(r_a,r_b)=1$ (fullstendig avhengige)
+- $Korr(r_a,r_b)=0$ (uavhengige)
+- $Korr(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
 
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)Std(r_a)Std(r_b)
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
 
 
@@ -141,13 +142,12 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ## Betaverdien til en aksje eller et prosjekt
 
-
 \begin{equation}
 \beta_j=\frac{Kov(r_j,r_m)}{Var(r_m)}
 \end{equation}
 
 \begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
 ```{r include=FALSE, echo=F}
@@ -447,8 +447,6 @@ K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
 - $N(d_1)$ har tolkning som antall kroner opsjonsverdien endrer seg med når aksjeprisen endres med en krone
 - $N(d_2)$ har tolkning som sannsynligheten for at opsjonen er "in-the-money" ved forfall (dvs. $A_T \geq I$ )
 
-
-
 Vi har videre at 
 
 \begin{equation}
@@ -457,7 +455,6 @@ d_2=d_1 -\sigma\sqrt{T}
 \end{equation}
 
 mens sikringsforholdet  er bestemt av $m = \frac{1}{N(d_1)}$
-
 
 ```{r include=FALSE, echo=F}
 knitr::knit_exit()
