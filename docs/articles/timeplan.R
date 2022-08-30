@@ -49,19 +49,19 @@ literatur <- c(
 undervfor <- c(
 	  "Campus Sone E E1-037",
 	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
+	  "Campus Sone E E1-041",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
 	  "",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059"
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037"
 )
 ###########################################################################################################3
 oppgaver_bok <- c(

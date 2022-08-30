@@ -7,6 +7,7 @@
 
 # Nyheter
 
+-   Nok et rombytte, neste forelesning er på Sone E E1-041
 -   Under fanen anbefalte oppgaver, er det nå lagt ut forslag til
     oppgaver som dere enten kan forsøke å løse i forkant eller etter
     forelesningen førstkommende onsdag.
@@ -22,4 +23,6 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-29 12:07:48**
+**Siste gang oppdatert: 2022-08-30 09:21:57**
+
+Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.

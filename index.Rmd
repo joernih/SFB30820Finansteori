@@ -47,6 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
+- Nok et rombytte, neste forelesning er på Sone E E1-041
 - Under fanen anbefalte oppgaver, er det nå lagt ut forslag til oppgaver som dere enten kan forsøke å løse i forkant eller etter forelesningen førstkommende onsdag.
 
 # Pensum 
@@ -61,6 +62,8 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 Jørn I. Halvorsen
 
 **Siste gang oppdatert: `r Sys.time()`**
+
+Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.
 
 ```{r, echo=F}
 knitr::knit_exit()

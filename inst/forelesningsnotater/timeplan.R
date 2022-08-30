@@ -49,19 +49,19 @@ literatur <- c(
 undervfor <- c(
 	  "Campus Sone E E1-037",
 	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
+	  "Campus Sone E E1-041",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
 	  "",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-059"
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037"
 )
 ###########################################################################################################3
 oppgaver_bok <- c(
@@ -118,4 +118,4 @@ df2 <- data.frame(Forelesning=seq(1,14),
 		 Oppgaver_nett=oppgaver_nett)[1:11,]
 
 
-
+#https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
