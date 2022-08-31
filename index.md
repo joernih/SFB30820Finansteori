@@ -23,6 +23,6 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-30 09:21:57**
+**Siste gang oppdatert: 2022-08-31 08:33:08**
 
 Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.
