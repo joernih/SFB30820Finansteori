@@ -7,10 +7,7 @@
 
 # Nyheter
 
--   Nok et rombytte, neste forelesning er på Sone E E1-041
--   Under fanen anbefalte oppgaver, er det nå lagt ut forslag til
-    oppgaver som dere enten kan forsøke å løse i forkant eller etter
-    forelesningen førstkommende onsdag.
+-   Oppgaveseminiar er på **Sone E E1-042**
 
 # Pensum
 
@@ -23,6 +20,6 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-31 10:48:45**
+**Siste gang oppdatert: 2022-08-31 12:31:47**
 
 Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.

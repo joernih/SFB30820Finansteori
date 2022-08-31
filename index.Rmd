@@ -41,14 +41,12 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 
 # Finansteori (høsten 2022)
 
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Nok et rombytte, neste forelesning er på Sone E E1-041
-- Under fanen anbefalte oppgaver, er det nå lagt ut forslag til oppgaver som dere enten kan forsøke å løse i forkant eller etter forelesningen førstkommende onsdag.
+- Oppgaveseminiar er på **Sone E E1-042** 
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -71,7 +69,7 @@ knitr::knit_exit()
 
 ## Oppgaver
 Illustrasjonsbilde
-inst/forelesningsnotater/presentationsD.Rmd
+inst/forelesningsnotater/presentationsF.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 

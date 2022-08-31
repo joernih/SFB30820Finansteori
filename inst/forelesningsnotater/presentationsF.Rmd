@@ -30,7 +30,7 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/forelesningsnotater/presentations.Rmd'
+filp <- '/inst/forelesningsnotater/presentationsF.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 #system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
@@ -87,11 +87,9 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 
 ## Hovedbok
 
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
 ```
-
 
 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -1021,7 +1019,7 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-```{r, echo=F, eval=T}
+```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -1200,6 +1198,10 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
   -  $Std(r_p)=\sqrt{.02}  =0.045$
 
 ---
+
+```{r}
+knit_exit::knit_exit()
+```
 
 class: inverse, center, middle
 
