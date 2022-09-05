@@ -61,7 +61,6 @@ Jørn I. Halvorsen
 
 **Siste gang oppdatert: `r Sys.time()`**
 
-Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.
 
 ```{r, echo=F}
 knitr::knit_exit()

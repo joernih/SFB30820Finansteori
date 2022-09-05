@@ -7,8 +7,6 @@
 
 # Nyheter
 
--   Oppgaveseminiar er på **Sone E E1-042**
-
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -20,6 +18,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-08-31 12:31:47**
-
-Nok et rombytte, vi møtes på Sone E E1-041 på onsdag.
+**Siste gang oppdatert: 2022-09-05 20:22:15**
