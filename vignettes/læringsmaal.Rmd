@@ -32,12 +32,12 @@ abstract: ''
 
 # Læringsmål kapittel 3
 - Forklare begrepene effisiente og ineffisiente porteføljer og konstruere slike porteføljer ut fra data.
-- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
-- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
 
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+- Skrive opp kapitalverdimodellen og forklare modellens økonomiske innhold.
+- Bruke kapitalverdimodellen til å beregne kostnaden for egenkapital, gjeld og totalkapital.
 - Forklare forskjellen mellom kapitalkostnaden for bedriften og kapitalkostnaden for et enkeltstående prosjekt i bedriften.
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.

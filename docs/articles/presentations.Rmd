@@ -33,7 +33,7 @@ library(plotly)
 filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
-#system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
+system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
 #servr::daemon_stop()
 ### Tasks
 #* kursiv svar
@@ -53,7 +53,6 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 #<div class=".losning">
 #Nei, vi operer i dette kurset med et såkalt ordinalt nyttebegrep i mikroøkonomi. Dvs. at verdien til nyttefunksjonen kun har som egenskap at den kan rangere ulike godekombinasjoner i forhold til hverandre. Således ikke egnet til å si noe om forskjellen i lykken mellom personer.
 #</div>
-#
 ```
 
 ---
@@ -87,11 +86,9 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 
 ## Hovedbok
 
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
 ```
-
 
 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -681,7 +678,7 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
 df <- df_eks_2_1
-w <- seq(0,1,0.01)
+w <- seq(0,1)
 v <- as.vector(df[,(2)])
 m <- as.matrix(df[,(3:4)])
 covall <- cov.wt(m,v,method='ML')
@@ -782,6 +779,7 @@ plotly::ggplotly(ggf)
 ```
 ]
 ]
+
 ```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
@@ -950,11 +948,16 @@ ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
+kovo <- c(0.0229,0.1,0.3)
 varo <- 0.21
-kovo <- 0.0229
+plotwf <- kovo %>% purrr::map_dfr(function(x){
 tportvar <- '(1/N)*varo + (1-1/N)*kovo'
 N <- 1:60
-df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+#  df_n <- data.frame(ind=x)
+df_n <- data.frame(ind=x,N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=x,list(N=N))))
+})
+#tdf <- tidyr::pivot_longer(df_n,)
+#plotwf
 ```
 ]
 ]]
@@ -1021,7 +1024,7 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-```{r, echo=F, eval=T}
+```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -1199,7 +1202,12 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 ---
+
 
 class: inverse, center, middle
 

@@ -71,6 +71,9 @@
     <li>
       <a href="../articles/presentations.html#44">#3: Relevant risiko: Porteføljeteori tre til n objekter</a>
     </li>
+    <li>
+      <a href="../articles/presentations.html#57">#4: Effisiens</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -119,7 +122,7 @@
       <h1 data-toc-skip>Formelsamling (SFB30820)</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/joernih/SFB30820Finansteori/blob/HEAD/vignettes/formler.Rmd" class="external-link"><code>vignettes/formler.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/joernih/SFB30820Finansteori/blob/HEAD/inst/forelesningsnotater/vignettes/formler.Rmd" class="external-link"><code>inst/forelesningsnotater/vignettes/formler.Rmd</code></a></small>
       <div class="hidden name"><code>formler.Rmd</code></div>
 
     </div>
@@ -266,6 +269,49 @@ Std(r_p)=\sqrt{Var(rp)}
 <p><span class="math display">\[\begin{equation}
 \beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}\]</span></p>
+<hr>
+<div class="section level3">
+<h3 id="utledning-av-kapitalmarkedslinjen-n2-kombinasjon-av-risikofri-investering-og-markedsporteføljen-m">Utledning av kapitalmarkedslinjen (n=2, kombinasjon av risikofri
+investering og markedsporteføljen M<a class="anchor" aria-label="anchor" href="#utledning-av-kapitalmarkedslinjen-n2-kombinasjon-av-risikofri-investering-og-markedsportef%C3%B8ljen-m"></a>
+</h3>
+<p><span class="math display">\[\begin{equation}
+E(r_p)=wr_f+(1-w)E(r_m)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+Var(r_p)=(1-w)^2Var(r_m)
+\end{equation}\]</span></p>
+</div>
+<div class="section level3">
+<h3 id="kapitalkostnad-for-egenkapital-og-gjeld">Kapitalkostnad for egenkapital og gjeld<a class="anchor" aria-label="anchor" href="#kapitalkostnad-for-egenkapital-og-gjeld"></a>
+</h3>
+<ul>
+<li>Kapitalkostnad for egenkapital</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_E=r_f+\beta_E[E(r_m) - r_f]
+\end{equation}\]</span></p>
+<ul>
+<li>Kapitalkostnad for gjeld</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_G=r_f+\beta_G[E(r_m) - r_f]
+\end{equation}\]</span></p>
+<ul>
+<li>Totalkapitalkostnaden (gjennomsnittskostnaden) for egenkapital og
+gjeld</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_T= k_E\underset{=w_E}{\frac{E}{E+G}} +
+k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+k_T= k_Ew_E + k_G(1-s)w_G
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+w_E=\frac{E}{E+G \\
+w_G=\frac{G}{E+G}
+\end{equation*}\]</span></p>
+</div>
 </div>
   </div>
 

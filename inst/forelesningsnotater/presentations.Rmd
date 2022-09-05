@@ -30,10 +30,10 @@ library(plotly)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/forelesningsnotater/presentationsF.Rmd'
+filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
-#system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
+system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
 #servr::daemon_stop()
 ### Tasks
 #* kursiv svar
@@ -53,7 +53,6 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 #<div class=".losning">
 #Nei, vi operer i dette kurset med et såkalt ordinalt nyttebegrep i mikroøkonomi. Dvs. at verdien til nyttefunksjonen kun har som egenskap at den kan rangere ulike godekombinasjoner i forhold til hverandre. Således ikke egnet til å si noe om forskjellen i lykken mellom personer.
 #</div>
-#
 ```
 
 ---
@@ -780,6 +779,7 @@ plotly::ggplotly(ggf)
 ```
 ]
 ]
+
 ```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
@@ -948,11 +948,16 @@ ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
+kovo <- c(0.0229,0.1,0.3)
 varo <- 0.21
-kovo <- 0.0229
+plotwf <- kovo %>% purrr::map_dfr(function(x){
 tportvar <- '(1/N)*varo + (1-1/N)*kovo'
 N <- 1:60
-df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
+#  df_n <- data.frame(ind=x)
+df_n <- data.frame(ind=x,N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=x,list(N=N))))
+})
+#tdf <- tidyr::pivot_longer(df_n,)
+#plotwf
 ```
 ]
 ]]
