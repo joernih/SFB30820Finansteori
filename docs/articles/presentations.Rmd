@@ -33,7 +33,7 @@ library(plotly)
 filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
-system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsD.html'))
+system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentations.html'))
 #servr::daemon_stop()
 ### Tasks
 #* kursiv svar
@@ -1085,7 +1085,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 	port_returns <- (sum(w *df_eks_2_6$erp))
         # Varians	
 	port_risk_v <- t(w) %*% (cov_mat %*% w)
-	port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+	port_risk_s <- sqrt(port_risk_v)
 	avkdf <- data.frame(pdraw=pd,w1=1-w[1], w2=w[2], w3=w[3],wc=sum(w)) %>%
  	dplyr::mutate(forvavk=port_returns) %>%
  	dplyr::mutate(varians=port_risk_v) %>%
@@ -1185,7 +1185,7 @@ Fra eksempel 3.1-3.2 har vi følgende opplysninger
 ```{r, echo=F}
 radnr <- c("Markedsporteføljen",
 	   "Portefølje I",
-	   "Portefølje I",
+	   "Portefølje II",
 	   "Risikofri rente")
 tils1 <- c(0.07,0.05,0.08,0.04)
 tils2 <- c(0.03,0.02,0.06,0.00)
