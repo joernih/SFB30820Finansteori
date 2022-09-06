@@ -1093,7 +1093,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 ```
 
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Plot av forskjellige porteføljesammensetninger]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwfd,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 plotly::ggplotly(ggf)

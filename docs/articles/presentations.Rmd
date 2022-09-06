@@ -1058,12 +1058,11 @@ knitr::include_graphics("pensum/figurer-15.png")
 .panelset[
 .panel[.panel-name[Tabell]
 ```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
+htmlTable(df_eks_2_6, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-# Gjøres enklere til R-funkjson?=
 porttrekk <- 1:1000 
 plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
         # Trekker investeringsandelene
@@ -1094,7 +1093,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 ```
 
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Plot av forskjellige porteføljesammensetninger]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwfd,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 plotly::ggplotly(ggf)
@@ -1112,16 +1111,16 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```
 
 - Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
- - Til venstre for C vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til venstre for C, vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
  - Til høyre for C, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
 ---
 
 - Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effisiente akjseporteføljen M
- - Til venstre for M vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til venstre for M, vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
  - Til høyre for M, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
-Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
+**Merk:** Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
 
 **Tofondsresultatet:**
 
@@ -1165,7 +1164,7 @@ $$
 
 ---
 
-Kombinerer uttrykket for forventet avkastning og standardavvik ved å sett inn for $1-w$ gjør at vi kan skrive
+Kombinerer uttrykket for forventet avkastning og standardavvik ved å sette inn for $1-w$, gjør at vi kan skrive
 \begin{equation}
 E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - r_f) \Leftrightarrow
 \end{equation}
