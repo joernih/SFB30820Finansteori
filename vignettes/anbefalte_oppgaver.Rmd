@@ -16,10 +16,7 @@ Oppgave 1, spørsmål 1. Oppgave 2
 Eksamensoppgave 2020: 
 Oppgave 1
 
-
-
-
-
+[Mappe til løsningsforslag](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/eksamensoppgaver/losningsforslag)
 
 ## Tidligere eksamensoppgaver
 
