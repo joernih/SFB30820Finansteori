@@ -61,11 +61,9 @@ Jørn I. Halvorsen
 
 **Siste gang oppdatert: `r Sys.time()`**
 
-
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
 ## Oppgaver
 Illustrasjonsbilde
 inst/forelesningsnotater/presentations.Rmd

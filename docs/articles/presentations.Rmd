@@ -1058,7 +1058,7 @@ knitr::include_graphics("pensum/figurer-15.png")
 .panelset[
 .panel[.panel-name[Tabell]
 ```{r, echo=F}
-htmlTable(df_eks_2_6, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
+htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standard avvik", "Korrelasjonskoeffisient"))
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
@@ -1171,7 +1171,7 @@ E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - r_f) \Leftrightarrow
 
 - Gitt at $0<w<1 \Rightarrow E(r_p) < E(r_m)$ 
 - Gitt at $w=1 \Rightarrow E(r_p) = E(r_m)$
-- Gitt at $w>1 \Rightarrow E(r_p) > E(r_m)$ 
+- Gitt at $w<0 \Rightarrow E(r_p) > E(r_m)$ 
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-17.png")
