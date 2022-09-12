@@ -187,10 +187,10 @@ k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
 k_T= k_Ew_E + k_G(1-s)w_G
 \end{equation}
 
-\begin{equation*}
-w_E=\frac{E}{E+G \\ 
+\begin{equation}
+w_E=\frac{E}{E+G} \\ 
 w_G=\frac{G}{E+G}
-\end{equation*}
+\end{equation}
 
 ```{r include=FALSE, echo=F}
 knitr::knit_exit()

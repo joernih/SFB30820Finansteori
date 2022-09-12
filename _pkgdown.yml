@@ -21,6 +21,8 @@ navbar:
         href: "articles/presentations.html#44" 
       - text: "#4: Effisiens"
         href: "articles/presentations.html#57" 
+      - text: "#5: Kapitalverdimodellen"
+        href: "articles/presentations.html#65" 
       href: "articles/presentations.html" 
     - text: "Formelsamling"
       href: "articles/formler.html"
