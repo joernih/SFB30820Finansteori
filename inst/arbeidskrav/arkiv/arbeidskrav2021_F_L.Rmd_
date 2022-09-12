@@ -1,14 +1,14 @@
 ---
-title: "Finansteori (SFB30820), Høsten 2022"
+title: "Finansteori (SFB30820), Høsten 2021"
 output:
   #html_notebook:
   html_document:
-    css: css/OFF.css
+    css: css/ON.css
 ---
 
 ## Obligatorisk arbeidskrav
-- Versjon 0.1
-- Leveres ut (hele): 28.09.2021 (Canvas)
+- Versjon 1.1
+- Leveres ut: 28.09.2021 (Canvas)
 - Leveres inn: 26.10.2021 (Canvas)
   - Del I: kan lastes opp som dokument-fil eller pdf.
   - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
@@ -20,9 +20,7 @@ library(reticulate)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/arbeidskrav/arbeidskrav2022_F_L.Rmd'
-# [1] "/home/joernih/teaching/SFB30820Finansteori/inst/arbeidskrav/forelesningsnotater/presentations.Rmd"
-rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
+rmarkdown::render("arbeidskrav2021_F_L.Rmd")
 system("brave arbeidskrav2021_F_L.html")
 #servr::httw()
 ```
@@ -83,15 +81,13 @@ Nei, paradoksalt trenger man noen aktører som ikke tror på modellens antagelse
 for at *feilprisede* aksjer skal korrigeres slik at antagelsen om kapitalmarkedet er i likevekt skal holde.
 </div>
 
-(8) ...
-<!--Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? -->
+(8) Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? 
 <div class="solution">
 Er en kontrakt som består av to parter, hvor den ene parten mottar kapital fra den andre parten, mens den andre parten med det oppnår visse rettigheter ovenfor den andre parten.
 Finansielle instrumenter kan for eks. dreie seg om ulike typer lån (banklån og obligasjonslån) og finansielle derivater i form av opsjoner, forward, futures og swaps.
 </div>
 
-(9) ...
-<!--Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?-->
+(9) Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 <div class="solution">
 Forholdet mellom gjeld og egenkapital er gitt ved $G/E$ og kan isolert økes enten ved at $G$ går opp eller $E$ går ned. For $G$ gå opp kan skje ved ordinære lån eller obligasjonslån, mens for at 
 $E$ skal gå ned ved at selskapet tilbakekjøper egne aksjer.
@@ -125,6 +121,7 @@ port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
 rownames(df_eks_gen) <- c(" ","   ","     ")
 htmlTable::htmlTable(df_eks_gen, header=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B"))
 ```
+
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
 <div class="solution">
 <ol>
@@ -138,7 +135,10 @@ htmlTable::htmlTable(df_eks_gen, header=c("Tilstand ","Sannsynlighet ","Avkastni
     $Std(X_a)=\sqrt{`r vx_a`}=`r sx_a`$</li> <br>
     $Std(X_b)=\sqrt{`r vx_b`}=`r sx_b`$</li>
 </ol>
+
+
 </div>
+
 1. Ta utgangspunkt i at 4.000,- av investeringsbeløpet investeres i selskap B, mens det resterende går til selskap A. Finn forventet avkastning, varians og standardavvik til porteføljen av de to selskapene.
 <div class="solution">
 <ol>
@@ -199,6 +199,7 @@ htmlTable::htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning",
 
 Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.000,- som de ønsker å investere.
 
+1. 
 <div class="solution">
 Vi har at $E(r_p)=wr_f+(1-w)E(r_m)$. <br>
 For Ole betyr dette at 
@@ -227,8 +228,14 @@ $Var(r_p)=0.4^2=0.16$ <br>
 For Lise <br>
 $Std(r_p)=0\cdot 0.02=0$ <br>
 $Var(r_p)=0^2=0$ <br>
+
 </div>
 1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjennomføre sin strategi, og er det helt sikkert at han vil oppnå en høyere avkastning enn det som Lise sikter imot?
+<div class="solution">
+Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten. <br>
+Ole kan forvente å få høyere avkastning enn Lise, men det er usikkerhet knyttet til Oles strategi i motsetning til Lise. Om ikke sannsynlig, er det i alle fall mulig at den realiserte verdien gir ham en lavere avastning enn Lise. 
+</div>
+
 
 ## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
@@ -290,19 +297,6 @@ $$
 </div>
 
 ## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
-
-Kommer mer senere
-
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-
 
 ```{r include=FALSE}
 y <- 3
