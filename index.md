@@ -7,7 +7,8 @@
 
 # Nyheter
 
--   E1-042
+-   Etter forelesning på E1-042 (tidligere anbefalte oppgaver pluss
+    deler av semesteroppgaven)
 
 # Pensum
 
@@ -20,4 +21,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-13 10:30:39**
+**Siste gang oppdatert: 2022-09-13 11:52:02**

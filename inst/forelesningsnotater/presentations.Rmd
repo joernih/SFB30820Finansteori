@@ -1405,11 +1405,11 @@ w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
 \end{equation*}
 1. Kapitalkostnad for egenkapital
 $$
-k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
+k_E=r_f+\beta_E [E(r_m) - r_f ]=0.03+0.83[0.08 - 0.03] = 0.0715
 $$
 1. Kapitalkostnad for gjeld
 $$
-k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
+k_G=r_f+\beta_G [E(r_m) - r_f ] = 0.03+0.1[0.05]= 0.035 
 $$
 1. Totalkapitalkostnad for selskapet
 $$
@@ -1425,9 +1425,9 @@ $$
 
 ## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
 
-Som allerede omtalt under forelesning 3 (`r tema[3]`), ville den relevante risikoen (systematiske risikoen) kunne knytte opp mot både en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
+Som allerede omtalt under forelesning 3 (`r tema[3]`), ville den relevante risikoen (systematiske risikoen) kunne knyttes opp mot *både* en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
 \begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\beta_j=\frac{Std(r_j)Korr(r_j,r_m)}{Std(r_m)}
 \end{equation}
 
 Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden (risikojusert-rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
