@@ -47,6 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
+- Etter forelesning på E1-042 (tidligere anbefalte oppgaver pluss deler av semesteroppgaven)
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
