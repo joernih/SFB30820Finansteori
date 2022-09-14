@@ -9,3 +9,5 @@ output: github_document
 
 **Forelesning #4:** Fikset på overskriften tabell side 59. Side 63 $omega$ endret til mindren enn 0.
 
+
+64 Endret Var (ingen betydning)

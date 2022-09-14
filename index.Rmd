@@ -47,7 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Vil publisere deler av arbeidskravet etter forelesningen på onsdag. De som ønsker å sitte igjen å jobbe med 
+- Vil publisere deler av arbeidskravet etter forelesningen på onsdag (se under fanen arbeidskrav). De som ønsker å sitte igjen å jobbe med 
   denne og evt. andre oppgaver kan gjøre dette på rom E1-042 (fra kl. 12:15 og utover)
 
 # Pensum 
