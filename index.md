@@ -7,9 +7,10 @@
 
 # Nyheter
 
--   Vil publisere deler av arbeidskravet etter forelesningen på onsdag.
-    De som ønsker å sitte igjen å jobbe med denne og evt. andre oppgaver
-    kan gjøre dette på rom E1-042 (fra kl. 12:15 og utover)
+-   Vil publisere deler av arbeidskravet etter forelesningen på onsdag
+    (se under fanen arbeidskrav). De som ønsker å sitte igjen å jobbe
+    med denne og evt. andre oppgaver kan gjøre dette på rom E1-042 (fra
+    kl. 12:15 og utover)
 
 # Pensum
 
@@ -22,4 +23,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-14 10:01:30**
+**Siste gang oppdatert: 2022-09-14 13:23:33**

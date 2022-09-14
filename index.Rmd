@@ -47,8 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Vil publisere deler av arbeidskravet etter forelesningen på onsdag (se under fanen arbeidskrav). De som ønsker å sitte igjen å jobbe med 
-  denne og evt. andre oppgaver kan gjøre dette på rom E1-042 (fra kl. 12:15 og utover)
+- Vil publisere deler av arbeidskravet etter forelesningen på onsdag (se under fanen arbeidskrav). De som ønsker å sitte igjen å jobbe med denne og evt. andre oppgaver kan gjøre dette på rom E1-042 (fra kl. 12:15 og utover)
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -66,7 +65,7 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
+options(scipen = 100)
 ## Oppgaver
 inst/forelesningsnotater/presentations.Rmd
 https://hiof.instructure.com/courses/6622
