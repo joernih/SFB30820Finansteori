@@ -38,6 +38,10 @@ pkgdown::build_news()
 rmarkdown::render("index.Rmd")
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 #0.2*(0.16−0.11)*(0.05−0.23)+0.5*( 0.12 − 0.11 )(0.20 − 0.23)+0.3*( 0.06 − 0.11 )(0.40 − 0.23)
+
+
+
+0.03+0.1*(0.05)
 ```
 
 # Finansteori (høsten 2022)
@@ -67,7 +71,7 @@ knitr::knit_exit()
 ```
 options(scipen = 100)
 ## Oppgaver
-inst/forelesningsnotater/presentations.Rmd
+inst/forelesningsnotater/presentationsF.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F_L.Rmd
