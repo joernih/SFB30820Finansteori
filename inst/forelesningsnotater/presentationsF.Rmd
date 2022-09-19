@@ -28,6 +28,7 @@ xaringanExtra::use_scribble()
 xaringanExtra::use_webcam()
 #xaringanExtra::use_slide_tone()
 xaringanExtra::use_panelset()
+xaringanExtra::use_search(show_icon = TRUE)
 library(htmlTable)
 library(magrittr)
 library(xaringan)
@@ -1656,14 +1657,14 @@ knitr::include_graphics("illustrasjoner/finansiering.png")
 
 - Finansielle instrumenter
 	- Er en kontrakt som består av to parter
-	- Part A: Mottar kapital fra den andre parten 
-	- Part B: Tilfører kapital samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
+	  - Part A: Mottar kapital fra den andre parten 
+	  - Part B: Tilfører kapital, samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
 
 ---
 
-- Under idealiserte betingelser om fullkommen konkurranse (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
+- Under idealiserte betingelser om fullkommen konkurranse, (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
 
-- I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
+- I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av
   - Letter å skaffe finansiering for store bedrifter enn små bedrifter
   - Informasjonsineffisiens
   - Avvik mellom Bedriftsøkonomisk og samfunnsøkonomisk lønnsomhet
