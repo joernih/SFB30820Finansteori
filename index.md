@@ -7,11 +7,6 @@
 
 # Nyheter
 
--   Vil publisere deler av arbeidskravet etter forelesningen på onsdag
-    (se under fanen arbeidskrav). De som ønsker å sitte igjen å jobbe
-    med denne og evt. andre oppgaver kan gjøre dette på rom E1-042 (fra
-    kl. 12:15 og utover)
-
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -23,4 +18,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-15 09:41:11**
+**Siste gang oppdatert: 2022-09-19 11:03:33**
