@@ -1821,7 +1821,7 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 
 ---
 
-**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000,- og årlig kupongutbetalinger på 60 kroner. Videre har vi
 ```{r, echo=F}
 stats_df <- data.frame(lopetid=c(1,2,3),
 		       M=c(1000,1000,1000),
@@ -1868,15 +1868,21 @@ _{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 
 ---
 
+Dersom vi løser dette for inflasjonsforventingene, får vi 
+
+\begin{equation}
+_{t-1}j^R_t=\frac{_{t-1}f^N_t-_{t-1}f^R_t}{1+_{t-i}f_t^R}
+\end{equation}
+
 **Eksempel 5.3:**
 
-*Forventet realrente periode 2*
+*Forventet inflasjonsprosenter periode 2*
 \begin{equation*}
 _{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
 =\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}
 
-*Forventet realrente periode 3*
+*Forventet inflasjonsprosenter periode 3*
 \begin{equation*}
 _{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
 =\frac{0.0651-0.0317}{1+0.0317}=0.0324
