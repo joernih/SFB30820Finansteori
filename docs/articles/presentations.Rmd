@@ -1915,7 +1915,7 @@ Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å deri
 
 Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er gitt ved
 \begin{equation}
-D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
+D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_2)}{P_0}\right]+\left[3 \frac{NV(X_3)}{P_0}\right]...\left[T \frac{NV(X_T)+M}{P_0}\right]
 \end{equation}
 
 Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi.
