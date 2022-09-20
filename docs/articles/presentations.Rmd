@@ -1795,7 +1795,7 @@ Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens re
 Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i periode T og de implisitte terminrenten er da gitt ved
 
 \begin{equation}
-(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T-1}f_{T})
 \end{equation}
 
 Løser mhp. $(1+_{t-1}f_{t})$ 
@@ -1910,20 +1910,21 @@ Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er git
 D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
 \end{equation}
 
-Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?).
+Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi.
+
+---
 
 - Durasjonen *D* er kortere enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
 
-```{r, echo=F}
+```{r, echo=F, eval=T}
 durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
 	dur <- data.frame(per=seq(1,T*n-1)) %>% 
 		dplyr::mutate(kont=(M*r_m)/n) %>%
 		dplyr::mutate(disk=round((1/(1+r/n))^per,digits=6)) %>%
 		dplyr::mutate(NV=round(kont*disk,digits=6)) %>%
 		dplyr::mutate(wNV=round(per*NV,digits=6))
-
 }
 r <- 0.0153
 r_m <- 0.0175
@@ -1932,10 +1933,20 @@ n <- 2
 T <-  10
 M <- 1000
 dur <- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
-htmlTable(head(dur), header=
-	  c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
+htmlTable(head(dur), header= c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
+```
+
+```{r, echo=F}
+htmlTable(head(dur), header= c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
+```
+
+```{r, echo=F, eval=T}
 term <- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
 durasjon <- (sum(dur$wNV[1:18])+term)/po
+c("halvårlig"=durasjon,"årlig"=durasjon/2)
+```
+
+```{r, echo=F}
 c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 
@@ -2054,7 +2065,7 @@ knitr::include_graphics(c("pensum/figurer-44.png"))
 - **Beregning av tegningsrettigheter:**
 
 
-*Rights-on-kursen* ( $P_0$ ) og emisjonskursen ( $P_e$ )
+*Rights-on-kursen* ( $P_x$ ) og emisjonskursen ( $P_e$ )
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
