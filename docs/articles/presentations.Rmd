@@ -1791,7 +1791,7 @@ knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 
 Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
 
-- **Beregning av spotrente og implisitte renter:**
+- **Beregning av implisitte renter:**
 
 Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i periode T og de implisitte terminrenten er da gitt ved
 
@@ -1799,21 +1799,23 @@ Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative l�
 (1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T-1}f_{T})
 \end{equation}
 
-Løser mhp. $(1+_{t-1}f_{t})$ 
+---
+Sluttperioden for $t$ kan derfor skrives som
+\begin{equation}
+(1+_{o}r_{t})^t=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t})
+\end{equation}
+Mens $t-1$ som
+\begin{equation}
+(1+_{o}r_{t-1})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})
+\end{equation}
+
+Løser vi den øverste ligningen mhp. $(1+_{t-1}f_{t})$ gir oss
 \begin{equation*}
 (1+_{t-1}f_{t})=\frac{(1+_{o}r_{t})^t}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})
 }
 \end{equation*}
 
-Setter inn for $(1+_{o}r_{t-1})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})$
-
-\begin{equation*}
-_{t-1}f_{t}+1=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}}
-\end{equation*}
-
----
-
-Som forteller oss at termin-/forwardrenten for periode $t$ er bestemt ved 
+Fra ligningen under kan vi sette inn for $(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})$. Som forteller oss at **termin-/forwardrenten** for periode $t$ er bestemt ved 
 
 \begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
@@ -1866,25 +1868,24 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 _{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 \end{equation}
 
----
-
-Dersom vi løser dette for inflasjonsforventingene, får vi 
+Løser dette for inflasjonsforventingene 
 
 \begin{equation}
 _{t-1}j^R_t=\frac{_{t-1}f^N_t-_{t-1}f^R_t}{1+_{t-i}f_t^R}
 \end{equation}
+---
 
-**Eksempel 5.3:**
+**Eksempel 5.3:** Fra eksempel 5.2 fant vi at de implisitte terminrenten for to og tre år var på hhv. 6.01 og 6.51 prosent. Vi tror nå at realrenten de nærmeste tre årene vil være på 3.17 prosent.
 
-*Forventet inflasjonsprosenter periode 2*
+*Forventet inflasjonsprosenter for periode 2 sett fra periode 1*
 \begin{equation*}
-_{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
+_{1}j^R_2=\frac{_{1}f^N_2-_{1}f^R{2}}{1+_{1}f_2^R}
 =\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}
 
-*Forventet inflasjonsprosenter periode 3*
+*Forventet inflasjonsprosenter for periode 3 sett fra periode 2*
 \begin{equation*}
-_{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
+_{2}j^R_3=\frac{_{2}f^N_3-_{2}f_{2}^R}{1+_{2}f_3^R}
 =\frac{0.0651-0.0317}{1+0.0317}=0.0324
 \end{equation*}
 
