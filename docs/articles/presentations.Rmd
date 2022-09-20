@@ -33,6 +33,7 @@ library(htmlTable)
 library(magrittr)
 library(xaringan)
 library(plotly)
+library(SFB30820Finansteori)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -1933,7 +1934,9 @@ n <- 2
 T <-  10
 M <- 1000
 dur <- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
-htmlTable(head(dur), header= c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
+term <- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
+durasjon <- (sum(dur$wNV[1:18])+term)/po
+c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 
 ```{r, echo=F}
@@ -1941,9 +1944,6 @@ htmlTable(head(dur), header= c("Periode","Kontantstrømselement","Diskontering",
 ```
 
 ```{r, echo=F, eval=T}
-term <- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
-durasjon <- (sum(dur$wNV[1:18])+term)/po
-c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
 
 ```{r, echo=F}

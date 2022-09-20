@@ -1,4 +1,4 @@
----
+q--
 title: ""
 output: github_document
 ---
@@ -70,3 +70,6 @@ https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F_L.Rmd
 inst/arbeidskrav/arbeidskrav2022_F_L_Utvikling.Rmd
+
+###
+https://www.dn.no/klima/nicolai-tangen/oljefondet/norges-bank-investment-management/oljefondet-vil-be-om-nullutslippsmal-fra-alle-selskapene-det-investerer-i/2-1-1302696?fbclid=IwAR2FEoVPzSYRHlEGKhOp2_hPHOFp4POXjFXi4A_y14SMaQwG5Q4qpP6LAiQ
