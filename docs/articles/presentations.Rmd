@@ -2005,7 +2005,7 @@ Hovedkjennetegn OA:
 .pull-right[
 
 - Markedsverdi (framtidig inntjening)
-	- Aksjekursen gir uttrykk for nåverdien av framtidig inntjening per aksje
+	- Aksjekursen gir uttrykk for nåverdien av framtidig forventet inntjening per aksje
 	- Markedsverdi EK = Aksjekurs $\cdot$ Antall utestående aksjer
 ]
 
@@ -2050,7 +2050,7 @@ knitr::include_graphics(c("pensum/figurer-42.png"))
 
 For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 
-- Markedsverdien må være på mins 300 mill
+- Markedsverdien må være på minst 300 mill
 - Minimum 500 aksjonærer med aksjer verdt minst 10 000,-
 - Offentlig årsregnskap og årsberetning i henhold til regnskapslovgivningen i de tre siste årene før børsnotering
 
@@ -2071,14 +2071,14 @@ knitr::include_graphics(c("pensum/figurer-44.png"))
 
 - **Beregning av tegningsrettigheter:**
 
-
-*Rights-on-kursen* ( $P_x$ ) og emisjonskursen ( $P_e$ )
+Ex-rights-kursen ( $P_x$ ) er bestemt som et veid snitt av rights-on-kursen ( $P_0$ ) og 
+emisjonskursen ( $P_e$ )
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}
 
-Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer $N=n/m$.
+Dersom vi definerer forholdet mellom antall gamle aksjer ( $n$ ) og nye ( $m$ ) emiterte aksjer $N=n/m$.
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
@@ -2103,15 +2103,19 @@ $$
 P_x=\frac{172476762\cdot 13.20+94862219\cdot 9.45}{172476762+94862219}=11.86935
 $$
 
-Eller, dersom vi har at $N=n/m=1.82$
+Eller, dersom vi benytter at $N=n/m=\frac{172476762}{94862219}=1.82$
 
-Aksjen vil derfor falle med $11.86935$
+$$
+P_x=\frac{1.82\cdot 13.20+9.45}{1+1.82}=11.86935
+$$
 
 Verdien av tegningsretten $T_x$ vil derfor være
 
 $$
-T_x=\frac{13.20-9.45}{1.82+1}=1.33
+T_n=\frac{13.20-9.45}{1.82+1}=1.33
 $$
+
+---
 
 Mens kursfallet vil være på
 $$
@@ -2144,6 +2148,8 @@ Kjøpe tilbake egne aksjer i annenhåndsmarkedet. Dette *reduserer* antallet ute
 Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig slik at total aksjekapital og fordelingen av aksjekapital eierne imellom er den samme før og etter splitten.
 
 En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
+
+Felles for aksjesplitt og fondsemisjon er at *kontantstrømmseffekten* er null.
 
 ```{r, echo=F}
 knitr::knit_exit()
