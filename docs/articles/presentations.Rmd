@@ -2119,7 +2119,7 @@ $$
 
 Mens kursfallet vil være på
 $$
-P_x-P_e=13.20-11.86935=1.33
+P_x-P_0=11.86935-13.20=-1.33
 $$
 
 Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.

@@ -12,7 +12,7 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ## Forelesning #3: [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/3_relevant_risiko_3_N_obj.pdf)
 ## Forelesning #4: [`r tema[4]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/4_Effisiens.pdf)
 ## Forelesning #5: [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/5_Kapitalverdimodellen.pdf)
-## Forelesning #6: [`r tema[6]`]
+## Forelesning #6: [`r tema[6]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/6_Langsiktige_finansieringsformer.pdf)
 <!--
 
 ## [`r tema[5]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/5_Kapitalverdimodellen.pdf)
