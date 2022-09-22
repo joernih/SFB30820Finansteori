@@ -21,6 +21,11 @@ output:
 
 
 ```{r xaringan-tile-view, echo=FALSE, message=F, warning=F}
+library(htmlTable)
+library(magrittr)
+library(xaringan)
+library(plotly)
+library(SFB30820Finansteori)
 xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
@@ -29,15 +34,10 @@ xaringanExtra::use_webcam()
 #xaringanExtra::use_slide_tone()
 xaringanExtra::use_panelset()
 xaringanExtra::use_search(show_icon = TRUE)
-library(htmlTable)
-library(magrittr)
-library(xaringan)
-library(plotly)
-library(SFB30820Finansteori)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/forelesningsnotater/presentations.Rmd'
+filp <- '/inst/forelesningsnotater/presentationsF.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
@@ -2159,7 +2159,7 @@ knitr::knit_exit()
 
 class: inverse, center, middle
 
-# Forelesning 7: `r tema[7]`
+# Forelesning 7 abc: `r tema[7]`
 
 **Læringsmål:**
 
@@ -2170,6 +2170,11 @@ class: inverse, center, middle
 - Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
 
 `r paste("Oppdatert:",Sys.Date())`
+
+
+```{r}
+knitr::knit_exit()
+```
 
 ```{r, eval=T, echo=F}
 sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
@@ -2261,47 +2266,27 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ---
 
 
-### Forventet avkastning og total risiko
-
+### Forventet avkastning og total risiko 123
 
 ```{r, eval=T, echo=F}
-#.pull-left[
-#mu <- mean(til_u$opa)
-#mm <- mean(til_m$opa)
-#su <- round(sd.p(c(til_u$opa)),digits=0)
-#sm <- round(sd.p(c(til_m$opa)),digits=0)
-#vu <- round(su/mu,digits=1)
-#vm <- round(sm/mm,digi=1)
-#uu <- max(til_u$opa)-min(til_u$opa)
-#um <- max(til_m$opa)-min(til_m$opa)
-#**Ingen gjeld**
-#<!--
-#- Forventet avkastning: `r mu` 
-#- Standardavvik: `r su`  
-#- Variasjonskoeffisienten: `r vu` 
-#- Utfallsspekteret: `r uu` 
-#]
-#.pull-right[
-#]
-#-->
-#
-#**Med gjeldsandel på 50%**
-#<!--
-#- Forventet avkastning: `r mm` 
-#- Standardavvik: `r sm`  
-#- Variasjonskoeffisienten: `r vm` 
-#- Utfallsspekteret: `r um` 
-#-->
-#
-#**Fem effekter av økt gjeldsgrad:**
-#
-#1. OPA øker
-#1. OPA blir mer usikkert (høyere total risiko)
-#1. OPA blir høyere i gode tider, men lavere i dårlige tider
-#1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
-#1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
-#
+kableExtra::kbl(til_u) %>% kableExtra::kable_classic_2(full_width = F)
 ```
+
+```{r, eval=T, echo=F}
+kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
+```
+
+```{r}
+mu <- mean(til_u$opa)
+mm <- mean(til_m$opa)
+su <- round(sd.p(c(til_u$opa)),digits=0)
+sm <- round(sd.p(c(til_m$opa)),digits=0)
+vu <- round(su/mu,digits=1)
+vm <- round(sm/mm,digi=1)
+uu <- max(til_u$opa)-min(til_u$opa)
+um <- max(til_m$opa)-min(til_m$opa)
+```
+
 
 ---
 
