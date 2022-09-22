@@ -30,3 +30,6 @@ durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
 		dplyr::mutate(NV=round(kont*disk,digits=6)) %>%
 		dplyr::mutate(wNV=round(per*NV,digits=6))
 }
+#' @export
+sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+bm()

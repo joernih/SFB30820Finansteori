@@ -2171,11 +2171,6 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
-```{r, eval=T, echo=F}
-sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-```
-
-
 ---
 
 # Gjeldsgrad og risiko
@@ -2264,10 +2259,6 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ---
 
 
-```{r}
-knitr::knit_exit()
-```
-
 ### Forventet avkastning og total risiko 123
 
 ```{r, eval=T, echo=F}
@@ -2279,16 +2270,16 @@ kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
 ```
 
 ```{r}
+sd.p <- function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
-su <- round(sd.p(c(til_u$opa)),digits=0)
-sm <- round(sd.p(c(til_m$opa)),digits=0)
+su <- 123#round(sd.p(c(til_u$opa)),digits=0)
+sm <- 123#round(SFB30820Finansteori::sd.p(c(til_m$opa)),digits=0)
 vu <- round(su/mu,digits=1)
 vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
-
 
 ---
 
@@ -2359,7 +2350,6 @@ htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
 ```
-
 
 ```{r}
 knitr::knit_exit()
