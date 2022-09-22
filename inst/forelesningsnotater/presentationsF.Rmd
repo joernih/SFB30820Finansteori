@@ -2274,11 +2274,11 @@ kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
 ---
 
 ```{r}
-sd.p <- function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
-su <- 123#round(sd.p(c(til_u$opa)),digits=0)
-sm <- 123#round(SFB30820Finansteori::sd.p(c(til_m$opa)),digits=0)
+su <- round(sd.p(c(til_u$opa)),digits=0)
+sm <- round(sd.p(c(til_m$opa)),digits=0)
 vu <- round(su/mu,digits=1)
 vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
