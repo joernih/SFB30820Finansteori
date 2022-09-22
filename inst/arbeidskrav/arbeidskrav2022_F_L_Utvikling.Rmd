@@ -3,7 +3,7 @@ title: "Finansteori (SFB30820), Høsten 2022"
 output:
   #html_notebook:
   html_document:
-    css: css/ON.css
+    css: css/OFF.css
 ---
 
 ## Obligatorisk arbeidskrav
@@ -403,8 +403,8 @@ _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
 =\frac{(1.003356)^3}{(1.005038)^2}-1=`r 0.05354398`
 $$
 </div>
-1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven).
-1. Kan du gi en kortfattet tolkning av hva denne kurven forteller oss?
+1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.
+1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
 <div class="solution">
 ```{r echo=FALSE, eval=F}
 f12
@@ -417,13 +417,8 @@ plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå
 <div class="solution">
 </div>
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
-[Lenke til Google Spreadsheet løsningsforslag](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit#gid=126699775)
 
 Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
@@ -448,6 +443,10 @@ Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme 
 <div class="solution">
 Løsning her
 </div>
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 ## Porteføljesammensetninger
 
