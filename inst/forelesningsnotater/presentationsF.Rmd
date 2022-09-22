@@ -2159,7 +2159,7 @@ knitr::knit_exit()
 
 class: inverse, center, middle
 
-# Forelesning 7 abc: `r tema[7]`
+# Forelesning 7: `r tema[7]`
 
 **Læringsmål:**
 
@@ -2171,14 +2171,10 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
-
-```{r}
-knitr::knit_exit()
-```
-
 ```{r, eval=T, echo=F}
 sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 ```
+
 
 ---
 
@@ -2260,11 +2256,17 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_iii,
 
 ]
 
+
+
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
 ---
 
+
+```{r}
+knitr::knit_exit()
+```
 
 ### Forventet avkastning og total risiko 123
 
