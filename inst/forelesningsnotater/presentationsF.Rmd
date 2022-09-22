@@ -2259,15 +2259,19 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ---
 
 
-### Forventet avkastning og total risiko 123
+### Forventet avkastning og total risiko 
 
-```{r, eval=T, echo=F}
+```{r}
 kableExtra::kbl(til_u) %>% kableExtra::kable_classic_2(full_width = F)
 ```
 
-```{r, eval=T, echo=F}
+---
+
+```{r}
 kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
 ```
+
+---
 
 ```{r}
 sd.p <- function(x){sd(x)*sqrt((length(x)-1)/length(x))}
