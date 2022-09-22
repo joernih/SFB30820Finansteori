@@ -14,9 +14,11 @@ output:
   - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
 
 
-```{r eval=T, echo=F}
+```{r eval=T, echo=F, warning=F, message=F}
 library(htmlTable)
 library(reticulate)
+library(dplyr)
+options(scipen=999)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -83,15 +85,15 @@ Nei, paradoksalt trenger man noen aktører som ikke tror på modellens antagelse
 for at *feilprisede* aksjer skal korrigeres slik at antagelsen om kapitalmarkedet er i likevekt skal holde.
 </div>
 
-(8) ...
-<!--Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette? -->
+(8) 
+Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette?
 <div class="solution">
 Er en kontrakt som består av to parter, hvor den ene parten mottar kapital fra den andre parten, mens den andre parten med det oppnår visse rettigheter ovenfor den andre parten.
 Finansielle instrumenter kan for eks. dreie seg om ulike typer lån (banklån og obligasjonslån) og finansielle derivater i form av opsjoner, forward, futures og swaps.
 </div>
 
-(9) ...
-<!--Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?-->
+(9) 
+Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
 <div class="solution">
 Forholdet mellom gjeld og egenkapital er gitt ved $G/E$ og kan isolert økes enten ved at $G$ går opp eller $E$ går ned. For $G$ gå opp kan skje ved ordinære lån eller obligasjonslån, mens for at 
 $E$ skal gå ned ved at selskapet tilbakekjøper egne aksjer.
@@ -122,8 +124,8 @@ port_returns <- (sum(w *c(ex_a,ex_b)))
 cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T, method='ML')$cov
 port_risk_v <- t(w) %*% (cov_mat %*% w)
 port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
-rownames(df_eks_gen) <- c(" ","   ","     ")
-htmlTable::htmlTable(df_eks_gen, header=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B"))
+kableExtra::kbl(df_eks_gen,col.names=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B")) %>% kableExtra::kable_classic_2(full_width = F)
+
 ```
 1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
 <div class="solution">
@@ -165,34 +167,32 @@ radnr <- c("Markedsporteføljen",
 	   "Risikofri rente")
 tils1 <- c(0.04,0.02)
 tils2 <- c(0.02,0.00)
-
 df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
-rownames(df_prosj_kontantstrøm) <- c(" ","   ")
-htmlTable::htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardavik"))
+kableExtra::kbl(df_prosj_kontantstrøm,col.names=c("","Forventet avkastning","Standardavik")) %>% kableExtra::kable_classic_2(full_width = F)
 ```
 
 ```{python, echo=F}
-# import json
-# import sympy
-# import numpy
-# ## import matplotlib.pyplot as plt
-# from sympy import solve, Eq, symbols, latex, simplify
-# Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
-# ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
-# ## Risk-lover investorene
-# Er_pn = 0.44
-# Er_mn = 0.04
-# r_fn = 0.02
-# w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
-# w2 = 1-w1
-# #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
-# #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
-# # Risikoavers investor
-# Er_pn = 0.02
-# Er_mn = 0.04
-# r_fn = 0.02
-# w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
-# w2 = 1-w1
+#import json
+#import sympy
+#import numpy
+### import matplotlib.pyplot as plt
+#from sympy import solve, Eq, symbols, latex, simplify
+#Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
+#ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
+### Risk-lover investorene
+#Er_pn = 0.44
+#Er_mn = 0.04
+#r_fn = 0.02
+#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+## Risikoavers investor
+#Er_pn = 0.02
+#Er_mn = 0.04
+#r_fn = 0.02
+#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
 #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
 #Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
 ```
@@ -291,9 +291,6 @@ $$
 
 ## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
 
-
-
-
 ```{r include=FALSE}
 y <- 3
 n <- 1
@@ -344,7 +341,7 @@ P_0=\frac{M}{(1+r)^T}=\frac{5000}{(1+0.025)^4}= 4529.753
 
 ### Rentens terminstruktur
 
-Den kortsiktige spotrenten $_0r_1$ for ett år fram i tid er ved 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger
+Den kortsiktige spotrenten, $_0r_1$, for ett år fram i tid er på 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger
 
 ```{r echo=FALSE}
 Mv <- c(500,500,500)
@@ -353,19 +350,23 @@ P2 <-500/(1+0.015)^2
 P3 <-500/(1+0.015)^3
 stats_df <- data.frame(lopetid=c(2,3),
 		       M=Mv[2:3],
-		       p=c(495,495)
+		       p=c(480,465)
 		       )
-
-one <- 500/492.61
-two <- (500/495)^(1/2)
-thr <- (500/495)^(1/3)
-P1 <-500/(one)
-P2 <-500/(two)^2
-P3 <-500/(thr)^3
-f01 <- 0.015
-f12 <- two/one-1
-f23 <- thr/two-1
-htmlTable::htmlTable(stats_df, header=c("Løpetid ","Pålydende ","Markedspris"))
+r01 <- 0.015
+r02 <- (500/480)^(1/2)
+# [1] 1.020621
+r03 <- (500/465)^(1/3)
+# [1] 1.024485
+P2 <-500/(r02)^2
+# [1] 480
+P3 <-500/(r03)^3
+# [1] 465
+f01 <- r01
+f12 <- (two^2/one)-1
+# [1] 0.02627083
+f23 <- (thr)^3/(two)^1-1
+# [1] 0.05354398
+kableExtra::kbl(stats_df,col.names=c("Løpetid ","Pålydende ","Markedspris")) %>% kableExtra::kable_classic_2(full_width = F)
 ```
 
 Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved 
@@ -373,8 +374,6 @@ Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved
 \begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 \end{equation}
-`r `
-
 
 1. Hvilken sentral forutsetning ligger til grunn for at dette uttrykket holder ved likhet?
 <div class="solution">
@@ -387,32 +386,35 @@ $$
 $$
 Løser formelen for null-kupong obligasjoner mph. effektiv rente. Det gjør at vi kan finne
 $$
-1+_0r_2=(500/495)^(1/2)=1.005038
+1+_0r_2=(500/480)^{1/2}=`r (500/480)^(1/2)`
 $$
 og 
 $$
-1+_0r_3=(500/495)^(1/3)=1.003356
+1+_0r_3=(500/465)^{1/3}=`r (500/465)^(1/3)`
 $$
 *Terminrente periode 2*
 $$
 _{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
-\frac{(1.005038)^2}{(1.015)^1}-1= -0.00981
+\frac{(1.005038)^2}{(1.015)^1}-1=`r 0.02627083`
 $$
 *Terminrente periode 3*
 $$
 _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
-=\frac{(1.003356)^3}{(1.005038)^2}-1= -0.00167
+=\frac{(1.003356)^3}{(1.005038)^2}-1=`r 0.05354398`
 $$
 </div>
 1. Vis ved hjelp av en figur rentens terminstruktur (yield-kurven).
-<div class="solution">
-```{r echo=FALSE}
-plot(x=c(1,2,3),y=c(f01,f12,f23), xlab="Periode", ylab="Rentenivå")
-```
-</div>
 1. Kan du gi en kortfattet tolkning av hva denne kurven forteller oss?
 <div class="solution">
-Dagens forventninger til framtidige korte renter er at de for to perioder framover vil synke til et neagativt nivå, for deretter i tredje periode hente seg noe opp igjen.
+```{r echo=FALSE, eval=F}
+f12
+# [1] 0.02627083
+f23
+# [1] 0.05354398
+plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
+```
+</div>
+<div class="solution">
 </div>
 
 ```{r, echo=F}
@@ -482,6 +484,8 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
   <div class="solution">
   Løsning her
   </div>
+
+## Oppgave 6
 
 
 ```{r include=FALSE}

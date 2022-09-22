@@ -1,4 +1,4 @@
-q--
+---
 title: ""
 output: github_document
 ---
@@ -64,6 +64,7 @@ Jørn I. Halvorsen
 knitr::knit_exit()
 ```
 options(scipen = 100)
+
 ## Oppgaver
 inst/forelesningsnotater/presentations.Rmd
 https://hiof.instructure.com/courses/6622
