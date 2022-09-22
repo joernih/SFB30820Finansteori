@@ -7,11 +7,11 @@ output:
 ---
 
 ## Obligatorisk arbeidskrav
-- Versjon 0.1
+- Versjon 0.9
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle)
   - Del I: kan lastes opp som dokument-fil eller pdf eller leveres i postkassehyllen min (ved inngangen til Remmen)
-  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
+  - Del II: som regneark (kan enten printes ut lastes opp som xlsx-fil) 
 
 
 ```{r eval=T, echo=F, warning=F, message=F}
@@ -417,10 +417,31 @@ plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå
 <div class="solution">
 </div>
 
+## Oppgave 6: OPA og økt gjeldsgrad
+
+Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer, noe som innebærer en reduksjons i antall aksjonærer. Forutsatt en M&M-verden uten skatt og med usikre investeringsprosjekter. Tilhørende overskudd per aksje (OPA), forklar hva som skjer med:
+
+a. Forventet OPA
+
+<div class="solution">
+Vil øke fordi OPA vil stige når OER deles på færre aksjonærer.
+</div>
+
+b. Usikkerheten til OPA 
+
+<div class="solution">
+Økt usikkerhet (totalrisiko) fordi spredningen til OPA vil øke.
+</div>
+
+c. OPA i gode og dårliger tider
+
+<div class="solution">
+OPA vil gjennomgående bli bedre i gode og reduseres i dårlige tider.
+</div>
 
 # Del II: Porteføljeutregninger ved bruk av regnearket
 
-Basert på vedlagte regnearket *cryptos_nyse.xlsx* som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
+Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
 ## Enkeltinvesteringer
 

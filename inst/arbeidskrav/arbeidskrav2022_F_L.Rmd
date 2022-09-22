@@ -425,6 +425,32 @@ plot(x=c(1,2,3),y=c(f01,f12,f23), xlab="Periode", ylab="Rentenivå")
 Dagens forventninger til framtidige korte renter er at de for to perioder framover vil synke til et neagativt nivå, for deretter i tredje periode hente seg noe opp igjen.
 </div>
 
+## Oppgave 6: OPA og økt gjeldsgrad 
+
+<!-- Oppgave N.7.2-->
+Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer, noe som innebærer en reduksjons i antall aksjonærer. Forutsatt en M&M-verden uten skatt og med usikre investeringsprosjekter. Tilhørende overskudd per aksje (OPA), forklar hva som skjer med:
+
+a. Forventet OPA
+
+<div class="solution">
+Vil øke fordi OPA vil stige når OER deles på færre aksjonærer.
+</div>
+
+b. Usikkerheten til OPA 
+
+<div class="solution">
+Økt usikkerhet (totalrisiko) fordi spredningen til OPA vil øke.
+</div>
+
+c. OPA i gode og dårliger tider
+
+<div class="solution">
+OPA vil gjennomgående bli bedre i gode og reduseres i dårlige tider.
+</div>
+
+
+
+
 ```{r, echo=F}
 knitr::knit_exit()
 ```
