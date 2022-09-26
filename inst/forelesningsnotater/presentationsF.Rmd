@@ -19,6 +19,9 @@ output:
 #    toc_depth: 5
 ---
 
+```{r, echo=F, eval=F}
+knitr::knit_exit()
+```
 
 ```{r xaringan-tile-view, echo=FALSE, message=F, warning=F}
 library(htmlTable)
@@ -2109,7 +2112,7 @@ $$
 P_x=\frac{1.82\cdot 13.20+9.45}{1+1.82}=11.86935
 $$
 
-Verdien av tegningsretten $T_x$ vil derfor være
+Verdien av tegningsretten $T_n$ vil derfor være
 
 $$
 T_n=\frac{13.20-9.45}{1.82+1}=1.33
@@ -2151,7 +2154,7 @@ En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egen
 
 Felles for aksjesplitt og fondsemisjon er at *kontantstrømmseffekten* er null.
 
-```{r, echo=F, eval=F}
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
 
@@ -2173,7 +2176,7 @@ class: inverse, center, middle
 
 ---
 
-# Gjeldsgrad og risiko
+# Gjeldsgrad og risiko 
 
 - Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
 
@@ -2252,28 +2255,17 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_iii,
 ]
 
 
-
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
----
-
-
-### Forventet avkastning og total risiko 
-
-```{r}
-kableExtra::kbl(til_u) %>% kableExtra::kable_classic_2(full_width = F)
-```
 
 ---
 
-```{r}
-kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
-```
+### Forventet avkastning og total risiko  
 
----
+.pull-left[
 
-```{r}
+```{r, eval=T, echo=F}
 sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
@@ -2284,6 +2276,34 @@ vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
+
+**Ingen gjeld**
+
+- Forventet avkastning: `r mu` 
+- Standardavvik: `r su`  
+- Variasjonskoeffisienten: `r vu` 
+- Utfallsspekteret: `r uu` 
+
+]
+
+.pull-right[
+
+**Med gjeldsandel på 50%**
+
+- Forventet avkastning: `r mm` 
+- Standardavvik: `r sm`  
+- Variasjonskoeffisienten: `r vm` 
+- Utfallsspekteret: `r um` 
+
+]
+
+**Fem effekter av økt gjeldsgrad:**
+
+1. OPA øker
+1. OPA blir mer usikkert (høyere total risiko)
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
 ---
 
