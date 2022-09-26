@@ -19,8 +19,16 @@ output:
 #    toc_depth: 5
 ---
 
+```{r, echo=F, eval=F}
+knitr::knit_exit()
+```
 
 ```{r xaringan-tile-view, echo=FALSE, message=F, warning=F}
+library(htmlTable)
+library(magrittr)
+library(xaringan)
+library(plotly)
+library(SFB30820Finansteori)
 xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
@@ -29,11 +37,6 @@ xaringanExtra::use_webcam()
 #xaringanExtra::use_slide_tone()
 xaringanExtra::use_panelset()
 xaringanExtra::use_search(show_icon = TRUE)
-library(htmlTable)
-library(magrittr)
-library(xaringan)
-library(plotly)
-library(SFB30820Finansteori)
 ```
 
 ```{r eval=FALSE, include=FALSE}
@@ -2109,7 +2112,7 @@ $$
 P_x=\frac{1.82\cdot 13.20+9.45}{1+1.82}=11.86935
 $$
 
-Verdien av tegningsretten $T_x$ vil derfor være
+Verdien av tegningsretten $T_n$ vil derfor være
 
 $$
 T_n=\frac{13.20-9.45}{1.82+1}=1.33
@@ -2151,7 +2154,7 @@ En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egen
 
 Felles for aksjesplitt og fondsemisjon er at *kontantstrømmseffekten* er null.
 
-```{r, echo=F}
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
 
@@ -2171,13 +2174,9 @@ class: inverse, center, middle
 
 `r paste("Oppdatert:",Sys.Date())`
 
-```{r, eval=T, echo=F}
-sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-```
-
 ---
 
-# Gjeldsgrad og risiko
+# Gjeldsgrad og risiko 
 
 - Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
 
@@ -2255,53 +2254,57 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_iii,
 
 ]
 
+
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
+
 ---
 
-
-### Forventet avkastning og total risiko
-
+### Forventet avkastning og total risiko  
 
 ```{r, eval=T, echo=F}
-#.pull-left[
-#mu <- mean(til_u$opa)
-#mm <- mean(til_m$opa)
-#su <- round(sd.p(c(til_u$opa)),digits=0)
-#sm <- round(sd.p(c(til_m$opa)),digits=0)
-#vu <- round(su/mu,digits=1)
-#vm <- round(sm/mm,digi=1)
-#uu <- max(til_u$opa)-min(til_u$opa)
-#um <- max(til_m$opa)-min(til_m$opa)
-#**Ingen gjeld**
-#<!--
-#- Forventet avkastning: `r mu` 
-#- Standardavvik: `r su`  
-#- Variasjonskoeffisienten: `r vu` 
-#- Utfallsspekteret: `r uu` 
-#]
-#.pull-right[
-#]
-#-->
-#
-#**Med gjeldsandel på 50%**
-#<!--
-#- Forventet avkastning: `r mm` 
-#- Standardavvik: `r sm`  
-#- Variasjonskoeffisienten: `r vm` 
-#- Utfallsspekteret: `r um` 
-#-->
-#
-#**Fem effekter av økt gjeldsgrad:**
-#
-#1. OPA øker
-#1. OPA blir mer usikkert (høyere total risiko)
-#1. OPA blir høyere i gode tider, men lavere i dårlige tider
-#1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
-#1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
-#
+sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
+mu <- mean(til_u$opa)
+mm <- mean(til_m$opa)
+su <- round(sd.p(c(til_u$opa)),digits=0)
+sm <- round(sd.p(c(til_m$opa)),digits=0)
+vu <- round(su/mu,digits=1)
+vm <- round(sm/mm,digi=1)
+uu <- max(til_u$opa)-min(til_u$opa)
+um <- max(til_m$opa)-min(til_m$opa)
 ```
+
+
+.pull-left[
+
+**Ingen gjeld**
+
+- Forventet avkastning: `r mu` 
+- Standardavvik: `r su`  
+- Variasjonskoeffisienten: `r vu` 
+- Utfallsspekteret: `r uu` 
+
+]
+
+.pull-right[
+
+**Med gjeldsandel på 50%**
+
+- Forventet avkastning: `r mm` 
+- Standardavvik: `r sm`  
+- Variasjonskoeffisienten: `r vm` 
+- Utfallsspekteret: `r um` 
+
+]
+
+**Fem effekter av økt gjeldsgrad:**
+
+1. OPA øker
+1. OPA blir mer usikkert (høyere total risiko)
+1. OPA blir høyere i gode tider, men lavere i dårlige tider
+1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
+1. Positiv gjeldsgrad gir automatisk *finansieringsrisiko*
 
 ---
 
@@ -2372,7 +2375,6 @@ htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
 ```
-
 
 ```{r}
 knitr::knit_exit()
