@@ -2300,7 +2300,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 **Fem effekter av økt gjeldsgrad:**
 
-1. OPA øker
+1. Forventet OPA øker
 1. OPA blir mer usikkert (høyere total risiko)
 1. OPA blir høyere i gode tider, men lavere i dårlige tider
 1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
