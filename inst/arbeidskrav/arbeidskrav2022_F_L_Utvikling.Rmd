@@ -3,7 +3,7 @@ title: "Finansteori (SFB30820), Høsten 2022"
 output:
   #html_notebook:
   html_document:
-    css: css/OFF.css
+    css: css/ON.css
 ---
 
 ## Obligatorisk arbeidskrav
