@@ -2264,7 +2264,8 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 ### Forventet avkastning og total risiko  
 
 ```{r, eval=T, echo=F}
-sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
+library(SFB30820Finansteori)
+#sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
 su <- round(sd.p(c(til_u$opa)),digits=0)
