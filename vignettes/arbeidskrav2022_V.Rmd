@@ -29,7 +29,7 @@ output:
 rmarkdown::render("arbeidskrav2021_F.Rmd")
 system("brave arbeidskrav2021_F.html")
 #servr::httw()
-```
+``
 
 ```{r, echo=F}
 knitr::knit_exit()
