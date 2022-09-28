@@ -8,6 +8,8 @@
 # Nyheter
 
 -   Fullstendig versjon av arbeidskravet er nå publisert
+-   <https://www.nettavisen.no/okonomi/slik-investerer-petter-warren-na-onsker-ikke-vare-avhengig-av-aksjemarkedet/s/5-95-664548>
+    <br>
 
 # Pensum
 
@@ -20,4 +22,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-28 13:03:31**
+**Siste gang oppdatert: 2022-09-28 13:19:39**

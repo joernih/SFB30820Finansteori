@@ -11,14 +11,9 @@ output:
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle min på Remmen)
 
-<!--
-- [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
-- [Lenke til PDF-versjon løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1_losning.pdf)
-- [Lenke til regneark](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
-
--->
-
 [Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
+
+[Porteføljedata.xslx](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
 
 
 ```{r eval=T, echo=F}
