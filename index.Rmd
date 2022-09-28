@@ -46,8 +46,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-
-Vi er på E E1-062 i dag
+- Fullstendig versjon av arbeidskravet er nå publisert
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -72,10 +71,3 @@ inst/forelesningsnotater/presentations.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F_L.Rmd
-inst/arbeidskrav/arbeidskrav2022_F_L_Utvikling.Rmd
-
-###
-https://www.dn.no/klima/nicolai-tangen/oljefondet/norges-bank-investment-management/oljefondet-vil-be-om-nullutslippsmal-fra-alle-selskapene-det-investerer-i/2-1-1302696?fbclid=IwAR2FEoVPzSYRHlEGKhOp2_hPHOFp4POXjFXi4A_y14SMaQwG5Q4qpP6LAiQ
-https://www.dn.no/marked/idar-vollvik/kryptovaluta/geddit/idar-vollvik-selskap-forhandssolgte-kryptomynt-som-fortsatt-ikke-finnes-for-126-millioner-kroner-i-fjor/2-1-1302032?utm_source=facebook.com&utm_medium=organic_social&utm_campaign=editorial&fbclid=IwAR1_sG4D80PZfQ7GMAcCV3SesT-3KDVsprf3G_GvVx8R_hGDy5NAUvJRKNY
-
-https://www.nettavisen.no/okonomi/slik-investerer-petter-warren-na-onsker-ikke-vare-avhengig-av-aksjemarkedet/s/5-95-664548

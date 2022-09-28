@@ -7,11 +7,9 @@ output:
 ---
 
 ## Obligatorisk arbeidskrav
-- Versjon 0.9
+- Versjon 1.0
 - Leveres ut (hele): 28.09.2022 (Canvas)
-- Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle)
-  - Del I: kan lastes opp som dokument-fil eller pdf eller leveres i postkassehyllen min (ved inngangen til Remmen)
-  - Del II: som regneark (kan enten printes ut lastes opp som xlsx-fil) 
+- Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle på Remmen)
 
 
 ```{r eval=T, echo=F, warning=F, message=F}

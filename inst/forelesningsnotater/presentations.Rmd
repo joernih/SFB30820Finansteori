@@ -2265,15 +2265,19 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 ```{r, eval=T, echo=F}
 library(SFB30820Finansteori)
-#sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
+sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
 mu <- mean(til_u$opa)
+# [1] 15
 mm <- mean(til_m$opa)
+# [1] 20
 su <- round(sd.p(c(til_u$opa)),digits=0)
+# [1] 7
 sm <- round(sd.p(c(til_m$opa)),digits=0)
 vu <- round(su/mu,digits=1)
 vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
+1/5*((25-15)^2+(20-15)^2(15-15)^2+(10-15)^2+(5-5)^2)
 ```
 
 

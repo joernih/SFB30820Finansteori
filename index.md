@@ -7,7 +7,7 @@
 
 # Nyheter
 
-Vi er på E E1-062 i dag
+-   Fullstendig versjon av arbeidskravet er nå publisert
 
 # Pensum
 
@@ -20,4 +20,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-28 08:41:45**
+**Siste gang oppdatert: 2022-09-28 12:40:22**

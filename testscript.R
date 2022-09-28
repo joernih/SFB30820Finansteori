@@ -31,14 +31,17 @@ kableExtra::kbl(til_m) %>% kableExtra::kable_classic_2(full_width = F)
 
 mu <- mean(til_u$opa)
 mm <- mean(til_m$opa)
-su <- round(sd.p(c(til_u$opa)),digits=0)
-sm <- round(sd.p(c(til_m$opa)),digits=0)
-vu <- round(su/mu,digits=1)
-vm <- round(sm/mm,digi=1)
+su <- round(sd.p(c(til_u$opa)),digits=2)
+sm <- round(sd.p(c(til_m$opa)),digits=2)
+vu <- round(su/mu,digits=2)
+vm <- round(sm/mm,digi=2)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 
-
-
-
+varx1 <- (1/5*((25-15)^2+(20-15)^2+(15-15)^2+(10-15)^2+(5-15)^2))
+varx2 <- (1/5*((40-20)^2+(30-20)^2+(20-20)^2+(10-20)^2+(0-20)^2))
+stdx1 <- varx1^(1/2)
+# [1] 7.071068
+stdx2 <- varx2^(1/2)
+# [1] 14.14214
 
