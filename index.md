@@ -7,7 +7,7 @@
 
 # Nyheter
 
-Vi er på E E1-042 i dag
+Vi er på E E1-062 i dag
 
 # Pensum
 
@@ -20,4 +20,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-28 08:28:37**
+**Siste gang oppdatert: 2022-09-28 08:35:41**
