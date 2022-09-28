@@ -47,6 +47,8 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 
 # Nyheter
 
+Vi er på E E1-042 i dag
+
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 

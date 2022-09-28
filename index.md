@@ -7,6 +7,8 @@
 
 # Nyheter
 
+Vi er på E E1-042 i dag
+
 # Pensum
 
 [Finans: Teori og praksis. Bøhren, Michalsen og
@@ -18,4 +20,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-09-27 12:29:31**
+**Siste gang oppdatert: 2022-09-28 08:28:37**

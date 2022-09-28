@@ -3,7 +3,7 @@ title: "Finansteori (SFB30820), Høsten 2022"
 output:
   #html_notebook:
   html_document:
-    css: css/ON.css
+    css: css/OFF.css
 ---
 
 ## Obligatorisk arbeidskrav
@@ -22,10 +22,10 @@ options(scipen=999)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/arbeidskrav/arbeidskrav2022_F_L.Rmd'
+filp <- '/inst/arbeidskrav/arbeidskrav2022_F.Rmd'
 # [1] "/home/joernih/teaching/SFB30820Finansteori/inst/arbeidskrav/forelesningsnotater/presentations.Rmd"
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
-system("brave arbeidskrav2021_F_L.html")
+system("brave arbeidskrav2022_F.html")
 #servr::httw()
 ```
 
