@@ -6,10 +6,10 @@ output:
     css: PAA.css
 ---
 
-- Leveres ut: 28.09.2022 (Canvas)
-- Leveres inn: 26.10.2022 (Canvas)
-  - Del I: kan lastes opp som dokument-fil eller pdf.
-  - Del II: som regneark (merk: svarene på tekstspørsmålene kan her føres rett inn i regnearket)
+## Obligatorisk arbeidskrav
+- Versjon 1.0
+- Leveres ut (hele): 28.09.2022 (Canvas)
+- Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle min på Remmen)
 
 <!--
 - [Lenke til PDF-versjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/arbeidskrav2021_v_1.1.pdf)
@@ -18,7 +18,7 @@ output:
 
 -->
 
-[Lenke til delvis publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
+[Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
 
 
 ```{r eval=T, echo=F}
@@ -34,7 +34,6 @@ system("brave arbeidskrav2021_F.html")
 ```{r, echo=F}
 knitr::knit_exit()
 ```
-
 
 # Del I: Generelle forståelse og tradisjonelle oppgaver
 ## Oppgave 1: Generell forståelse (forsøk å svar så kortfattet og presist som mulig)
