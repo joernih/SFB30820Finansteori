@@ -52,7 +52,37 @@ system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsno
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
+library(SFB30820Finansteori)
+sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
+radnr_ii <- c("OFR","Renter","OER","OPA")
+rm <- 0.00
+M <- 0
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+radnr_iii <- c("OFR","Renter","OER","OPA")
+rm <- 0.05
+M <- 1000
+utaksjer <- 5
+til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=M*rm) %>%
+	dplyr::mutate(oer=ofr-r) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+mu <- mean(til_u$opa)
+# [1] 15
+mm <- mean(til_m$opa)
+# [1] 20
+su <- round(sd.p(c(til_u$opa)),digits=0)
+# [1] 7
+sm <- round(sd.p(c(til_m$opa)),digits=0)
+vu <- round(su/mu,digits=1)
+vm <- round(sm/mm,digi=1)
+uu <- max(til_u$opa)-min(til_u$opa)
+um <- max(til_m$opa)-min(til_m$opa)
 ```
+
 
 # Timeplan
 
@@ -2263,23 +2293,6 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 ### Forventet avkastning og total risiko  
 
-```{r, eval=T, echo=F}
-library(SFB30820Finansteori)
-sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
-mu <- mean(til_u$opa)
-# [1] 15
-mm <- mean(til_m$opa)
-# [1] 20
-su <- round(sd.p(c(til_u$opa)),digits=0)
-# [1] 7
-sm <- round(sd.p(c(til_m$opa)),digits=0)
-vu <- round(su/mu,digits=1)
-vm <- round(sm/mm,digi=1)
-uu <- max(til_u$opa)-min(til_u$opa)
-um <- max(til_m$opa)-min(til_m$opa)
-1/5*((25-15)^2+(20-15)^2(15-15)^2+(10-15)^2+(5-5)^2)
-```
-
 
 .pull-left[
 
@@ -2379,10 +2392,6 @@ htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
-```
-
-```{r}
-knitr::knit_exit()
 ```
 
 ---
@@ -2490,9 +2499,7 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 
 ## Miller & Modigliani (M&M)
 
-Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir bestemt i markedet?
-
-Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
+Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir bestemt i markedet? Svar: Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
@@ -2507,7 +2514,6 @@ Forutsetninger for verdsetting av selskaper i Miller & Modigliani:
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
-
 .pull-right[
 **Finansieringsiden:**
 - Fast evigvarende gjeld
@@ -2617,9 +2623,9 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 **Konklusjon:M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
 
----
-
-
+```{r}
+knitr::knit_exit()
+```
 
 ---
 
