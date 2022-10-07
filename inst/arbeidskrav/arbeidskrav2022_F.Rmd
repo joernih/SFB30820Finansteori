@@ -8,6 +8,7 @@ output:
 
 ## Obligatorisk arbeidskrav
 - Versjon 1.1
+  - Oppgave 3. Nytt spørsmål lagt til.
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle på Remmen)
 
