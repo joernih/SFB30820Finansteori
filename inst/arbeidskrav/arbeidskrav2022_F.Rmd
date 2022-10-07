@@ -7,7 +7,7 @@ output:
 ---
 
 ## Obligatorisk arbeidskrav
-- Versjon 1.0
+- Versjon 1.1
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle på Remmen)
 
@@ -197,15 +197,17 @@ kableExtra::kbl(df_prosj_kontantstrøm,col.names=c("","Forventet avkastning","St
 
 Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.000,- som de ønsker å investere.
 
+1. Ole Spetalen er en risikosøkende investor som ønsker at forventet avkastning på sin portefølje skal
+være på 42 prosent. Gitt at vi legger til grunn porteføljeteorien, hvordan vil han fordele sin investeringer?
 <div class="solution">
 Vi har at $E(r_p)=wr_f+(1-w)E(r_m)$. <br>
-For Ole betyr dette at 
 <br>
 $0.42=w\cdot 0.02 + (1-w)\cdot 0.04$ <br>
 Som løst mhp. $w$ gir oss <br>
 $w=-19$ og $1-w=1+19=20$<br>
 Dette tilsvarer investeringsbeløp tilsvarerende $w=20\cdot 2.000.000=40.000.000$, hvor $38000000$ er som en følge av et risikofritt lån.
 </div>
+
 1. Lise Sparegris ønsker med god margin å sikre pensjonen sin. Ved bruk av samme porteføljeteori som Spetalen, hvordan vil hun fordele sine investeringer som forventet avkastning skal være på 2 prosent?
 <div class="solution">
 For Lise betyr dette at 
