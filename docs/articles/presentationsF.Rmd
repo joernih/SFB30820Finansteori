@@ -13,9 +13,22 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 #bibliography: pensum.bib
+#output:
+#  html_document:
+#    toc: true
+#    toc_depth: 5
 ---
 
+```{r, echo=F, eval=F}
+knitr::knit_exit()
+```
+
 ```{r xaringan-tile-view, echo=FALSE, message=F, warning=F}
+library(htmlTable)
+library(magrittr)
+library(xaringan)
+library(plotly)
+library(SFB30820Finansteori)
 xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_tile_view()
 #xaringanExtra::use_share_again()
@@ -23,17 +36,15 @@ xaringanExtra::use_scribble()
 xaringanExtra::use_webcam()
 #xaringanExtra::use_slide_tone()
 xaringanExtra::use_panelset()
-library(htmlTable)
-library(magrittr)
-library(xaringan)
-library(plotly)
+xaringanExtra::use_search(show_icon = TRUE)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.Rmd'))
-rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.Rmd'))
+filp <- '/inst/forelesningsnotater/presentationsF.Rmd'
+xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
+rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
-servr::daemon_stop()
+#servr::daemon_stop()
 ### Tasks
 #* kursiv svar
 #* N.1.4
@@ -41,7 +52,37 @@ servr::daemon_stop()
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
+library(SFB30820Finansteori)
+sd.p <- function(x) {sd(x)*sqrt((length(x)-1)/length(x))}
+radnr_ii <- c("OFR","Renter","OER","OPA")
+rm <- 0.00
+M <- 0
+utaksjer <- 10
+til_u <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=ofr*rm) %>%
+	dplyr::mutate(oer=ofr-M*rm) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+radnr_iii <- c("OFR","Renter","OER","OPA")
+rm <- 0.05
+M <- 1000
+utaksjer <- 5
+til_m <- data.frame(ofr=c(250,200,150,100,50)) %>%
+	dplyr::mutate(r=M*rm) %>%
+	dplyr::mutate(oer=ofr-r) %>%
+	dplyr::mutate(opa=oer/utaksjer)
+mu <- mean(til_u$opa)
+# [1] 15
+mm <- mean(til_m$opa)
+# [1] 20
+su <- round(sd.p(c(til_u$opa)),digits=0)
+# [1] 7
+sm <- round(sd.p(c(til_m$opa)),digits=0)
+vu <- round(su/mu,digits=1)
+vm <- round(sm/mm,digi=1)
+uu <- max(til_u$opa)-min(til_u$opa)
+um <- max(til_m$opa)-min(til_m$opa)
 ```
+
 
 # Timeplan
 
@@ -52,7 +93,6 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 #<div class=".losning">
 #Nei, vi operer i dette kurset med et såkalt ordinalt nyttebegrep i mikroøkonomi. Dvs. at verdien til nyttefunksjonen kun har som egenskap at den kan rangere ulike godekombinasjoner i forhold til hverandre. Således ikke egnet til å si noe om forskjellen i lykken mellom personer.
 #</div>
-#
 ```
 
 ---
@@ -64,15 +104,11 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 
 ---
 
-
 # Anbefalte oppgaver
-
-
 
 ```{r, echo=F}
 kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
 ```
-
 
 ```{r, echo=F}
 #soppgaveplan
@@ -86,10 +122,10 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 
 ## Hovedbok
 
-
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
 ```
+
 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
@@ -127,6 +163,8 @@ Individuell, skriftlig firetimers eksamen.
 Karakterregel: A-F.
 
 Hjelpemidler: godkjent kalkulator.
+
+
 
 ---
 
@@ -248,14 +286,14 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
 <br>**Svar:**<br>
-*I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
-Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)*
+I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
 <br>**Svar:**<br>
-*For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
-1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?*
+For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
 <br>**Svar:**<br>
-*Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.*
+Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.
 ---
 
 
@@ -675,27 +713,24 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-#r <- cor(df_eks_2_1[,3],df_eks_2_1[,4])
-#plotwf <- c(r) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
-#	w <- seq(0,1,0.01)
-#	v <- as.vector(df[,(2)])
-#	m <- as.matrix(df[,(3:4)])
-#	covall <- cov.wt(m,v,method='ml')
-#	avk <- as.vector(covall$center)
-#	kov <- covall$cov[lower.tri(covall$cov)] 
-#	var <- as.vector(diag(as.matrix(covall$cov)))
-#	avkdf <- data.frame(corr=r,w1=1-w, w2=w) %>%
-# 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
-# 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %>%
-# 		dplyr::mutate(stdavk=sqrt(varians))
-#			 }
-#)
+df <- df_eks_2_1
+w <- seq(0,1)
+v <- as.vector(df[,(2)])
+m <- as.matrix(df[,(3:4)])
+covall <- cov.wt(m,v,method='ML')
+avk <- as.vector(covall$center)
+kov <- covall$cov[lower.tri(covall$cov)] 
+var <- as.vector(diag(as.matrix(covall$cov)))
+plotwf <- data.frame(kov=kov,w1=1-w, w2=w) %>%
+	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
+	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %>%
+	dplyr::mutate(stdavk=sqrt(varians))
 ```
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Figur 2.3 (replikasjon)]
 ```{r, echo=F}
-#gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
-#plotly::ggplotly(gg)
+gg <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
+plotly::ggplotly(gg)
 ```
 ]
 ]
@@ -705,25 +740,25 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 ### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
 
 \begin{equation}
-Kor(r_a,r_b)=\frac{Kov(r_a,r_b)}{S(r_a)S(r_b)}
+Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \end{equation}
 
-- $Kor(r_a,r_b)=1$ (helt avhengige)
-- $Kor(r_a,r_b)=0$ (helt uavhengige)
-- $Kor(r_a,r_b)=-1$ (helt motsatt avhengige)
+- $Korr(r_a,r_b)=1$ (fullstendig avhengige)
+- $Korr(r_a,r_b)=0$ (fullstendig uavhengige)
+- $Korr(r_a,r_b)=-1$ (fullstendig motsatt avhengige)
 
-Løser denne for $Kov(r_a,r_b)=Kor(r_a,r_b)S(r_a)S(r_b)$
+Løser denne for $Kov(r_a,r_b)=Korr(r_a,r_b)Std(r_a)Std(r_b)$
 
 Som gjør at vi kan skrive
 \begin{equation}
-Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kor(r_a,r_b)S(r_a)S(r_b)
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
 
 ---
 
 Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
 \begin{equation*}
-Kor(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
+Korr(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
 \end{equation*}
 
 Mens variansen til porteføljen kan uttrykkes som
@@ -773,30 +808,15 @@ plotwf <- c(-1,0,1) %>% purrr::map_dfr(function(r,df=df_eks_2_1){
 ```
 
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Figur 2.4 (replikasjon)]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwf,ggplot2::aes(x=stdavk,y=forvavk, group_by=corr)) + ggplot2::geom_point() 
-#plotly::ggplotly(ggf)
+plotly::ggplotly(ggf)
 ```
 ]
 ]
-Følgende tabell
-```{r, echo=FALSE, out.width="25%"}
-dfn12 <- data.frame(prob=c(0.20,0.30,0.50),
-		    beskr=c("Nedgangstid","Trend","Oppgangstid"),
-		    tilstand=c(1,2,3),
-		    bedriften=c(-60,5,60),
-		    nyttprosj=c(30,2.5,-30),
-		    portefoljen_ikkediv=c(-60,5,60),
-		    portefoljen_div=c(10,5,-10))
-g1 <- ggplot(data=dfn12, aes(x=beskr, y=nyttprosj)) + geom_bar(stat="identity")
-g2 <- ggplot(data=dfn12, aes(x=beskr, y=bedriften)) + geom_bar(stat="identity")
-g3 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_ikkediv)) + geom_bar(stat="identity")
-g4 <- ggplot(data=dfn12, aes(x=beskr, y=portefoljen_div)) + geom_bar(stat="identity")
-htmlTable(dfn12, header=c("Sannsynl.","Tilstandsb.","Tilstand","Bedriftens portefølje","Nytt prosjekt","Eierens portefølje (ikke div.)", "Eierens portefølje (div.)"))
-```
 
-```{r, echo=F, eval=T}
+```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -890,12 +910,13 @@ Std(r_p)=\sqrt{Var(rp)}
 
 ### Diversifisering og risikoreduksjon
 
-- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ ledd, mens siste består av $N^2-N$ ledd
+- Legg merke til at første del av uttrykket for porteføljevariansbestår av $N$ ledd, mens siste består av 
+  ( $N^2-N$ ) ledd
 
 - Dersom vi antar at en like stort andel $1/N$ blir investert i hvert av de n objektene, kan vi skrive 
 \begin{equation}
 Var(r_p)=\frac{1}{N}^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(N^2-N)(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))))
++(\frac{1}{N})^2(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))))
 \end{equation}
 
 Vi har at gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
@@ -907,7 +928,7 @@ $$
 Mens gjennomsnittlig kovarians ( $\overline{Kov}$ ) er gitt ved
 
 $$
-\overline{Kov}=\frac{1}{N}(Kov(r_1,r_2)+Kov(r_1,r_2)+...+Kov(r_1,r_2))
+\overline{Kov}=\frac{1}{(N^2-N)}(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))
 $$
 
 ---
@@ -948,21 +969,33 @@ Var(r_p)=\frac{1}{N}(0.21) + (1-\frac{1}{N})(0.0229)
 
 ---
 
-
-.panelset[
-.panel[.panel-name[R-kode (ikke pensum)]
-```{r}
+```{r, echo=F}
 varo <- 0.21
 kovo <- 0.0229
 tportvar <- '(1/N)*varo + (1-1/N)*kovo'
 N <- 1:60
 df_n <- data.frame(N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=kovo,list(N=N))))
 ```
-]
+
+.panelset[
 .panel[.panel-name[Figur]
 ```{r, out.width="55%",echo=F}
 ggplot2::ggplot(df_n, aes(x=N,y=varp)) + geom_line()
 ```
+.panel[.panel-name[R-kode (ikke pensum)]
+```{r}
+kovo <- c(0.0229,0.1,0.3)
+varo <- 0.21
+plotwf <- kovo %>% purrr::map_dfr(function(x){
+tportvar <- '(1/N)*varo + (1-1/N)*kovo'
+N <- 1:60
+#  df_n <- data.frame(ind=x)
+df_n <- data.frame(ind=x,N=N,varp=eval(parse(text=tportvar),c(varo=varo,kovo=x,list(N=N))))
+})
+#tdf <- tidyr::pivot_longer(df_n,)
+#plotwf
+```
+]
 ]]
 
 **Øvelse:** Se om du klarer å replikere figuren som er vist her ved bruk av et regneark.
@@ -1009,10 +1042,10 @@ forholdet mellom aksjens eller prosjektets risiko i forhold til markedsporteføl
 - $\beta_j<1$ - Mindre følsom enn markedsporteføljen
 - $\beta_j=0$ - Risikofri aksje (null systematisk risiko, man kan innehold usystematisk risiko)
 
-Ved å utnytte sammenhengen om at $Kor(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}$, kan vi også uttrykke beta som 
+Ved å utnytte sammenhengen om at $Korr(j,m)=\frac{Kov(j,m)}{Std(j)Std(m)}$, kan vi også uttrykke beta som 
 
 \begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
 ---
@@ -1025,6 +1058,10 @@ knitr::include_graphics("pensum/figurer-09.png")
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-10.png")
+```
+
+```{r, echo=F, eval=F}
+knitr::knit_exit()
 ```
 
 ---
@@ -1057,12 +1094,11 @@ knitr::include_graphics("pensum/figurer-15.png")
 .panelset[
 .panel[.panel-name[Tabell]
 ```{r, echo=F}
-htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning A", "Avkastning B"))
+htmlTable(df_eks_2_6, header=c("Aksje","Forventet avkastning","Standard avvik", "Korrelasjonskoeffisient"))
 ```
 ]
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
-# Gjøres enklere til R-funkjson?=
 porttrekk <- 1:1000 
 plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
         # Trekker investeringsandelene
@@ -1084,7 +1120,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 	port_returns <- (sum(w *df_eks_2_6$erp))
         # Varians	
 	port_risk_v <- t(w) %*% (cov_mat %*% w)
-	port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+	port_risk_s <- sqrt(port_risk_v)
 	avkdf <- data.frame(pdraw=pd,w1=1-w[1], w2=w[2], w3=w[3],wc=sum(w)) %>%
  	dplyr::mutate(forvavk=port_returns) %>%
  	dplyr::mutate(varians=port_risk_v) %>%
@@ -1093,7 +1129,7 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 ```
 
 ]
-.panel[.panel-name[Figur]
+.panel[.panel-name[Plot av forskjellige porteføljesammensetninger]
 ```{r, echo=F}
 ggf <- ggplot2::ggplot(data=plotwfd,ggplot2::aes(x=stdavk,y=forvavk)) + ggplot2::geom_point() 
 plotly::ggplotly(ggf)
@@ -1111,16 +1147,16 @@ knitr::include_graphics("pensum/figurer-16.png")
 ```
 
 - Den blå linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effiseinte akjseporteføljen C
- - Til venstre for C vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til venstre for C, vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
  - Til høyre for C, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
 ---
 
 - Den grønn linjen viser kombinasjoner av investeringer i risikofritt alternativ og den effisiente akjseporteføljen M
- - Til venstre for M vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
+ - Til venstre for M, vil en andel av de oppsparte innvesteringsbeløpet plasseres i banken 
  - Til høyre for M, ingen sparing så akjseporteføljen blir der finansiert ved bruk av banklån   
 
-Merk: Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
+**Merk:** Vi forutsetter her (1) ingen kredittrestriksjoner og at (2) sparerenten er lik utlånsrenten
 
 **Tofondsresultatet:**
 
@@ -1164,14 +1200,14 @@ $$
 
 ---
 
-Kombinerer uttrykket for forventet avkastning og standardavvik ved å sett inn for $1-w$ gjør at vi kan skrive
+Kombinerer uttrykket for forventet avkastning og standardavvik ved å sette inn for $1-w$, gjør at vi kan skrive
 \begin{equation}
 E(r_p)=r_f+\frac{Std(r_p)}{Std(r_m)}(E(r_m) - r_f) \Leftrightarrow
 \end{equation}
 
 - Gitt at $0<w<1 \Rightarrow E(r_p) < E(r_m)$ 
 - Gitt at $w=1 \Rightarrow E(r_p) = E(r_m)$
-- Gitt at $w>1 \Rightarrow E(r_p) > E(r_m)$ 
+- Gitt at $w<0 \Rightarrow E(r_p) > E(r_m)$ 
 
 ```{r, echo=FALSE, out.width="55%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-17.png")
@@ -1184,7 +1220,7 @@ Fra eksempel 3.1-3.2 har vi følgende opplysninger
 ```{r, echo=F}
 radnr <- c("Markedsporteføljen",
 	   "Portefølje I",
-	   "Portefølje I",
+	   "Portefølje II",
 	   "Risikofri rente")
 tils1 <- c(0.07,0.05,0.08,0.04)
 tils2 <- c(0.03,0.02,0.06,0.00)
@@ -1194,14 +1230,15 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
 
 - Vi har at investor A (stor grad av risikoaversjon) ønsker å plassere 80 prosent av formuen risikofritt
   -  $E(r_p)=0.8\cdot 0.04 + 0.2\cdot 0.07=0.046$ 
-  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.8\cdot 0.4\cdot 0=0.00004$
+  -  $Var(r_p)=0.8^2\cdot 0 + 0.2^2\cdot 0.03^2 +2\cdot 0.0\cdot 0.3\cdot 0=0.00004$
   -  $Std(r_p)=\sqrt{0.00004}  =0.006$
 - Vi har at investor B (liten grad av risikoaversjon) ønsker at forventet avkastning i porteføljen skal være på 8.5%
   -  $0.085=w\cdot 0.04 +(1-w)\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
-  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.5\cdot 1.5\cdot 0=0.02$
+  -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.0\cdot 0.03\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$
 
 ---
+
 
 class: inverse, center, middle
 
@@ -1274,7 +1311,7 @@ w1 <- c(1000,3000,4000,2000)
 w2 <- c(1000,3000,4000,6000)
 w3 <- c(1000,3000,4000,4000)
 df_prosj_kontantstrøm_lik <- data.frame(radnr_i,w1,w2,w3)
-htmlTable(df_prosj_kontantstrøm_lik, header=c("","w_1=1/6","w_2=1/6","w_3=1/6"))
+htmlTable(df_prosj_kontantstrøm_lik, header=c("","w_1=1/3","w_2=1/3","w_3=1/3"))
 ```
 	- Ikke forenlig med likevekt
 
@@ -1408,11 +1445,11 @@ w_G=\frac{G}{E+G}=\frac{3212}{12654+3212}=0.20
 \end{equation*}
 1. Kapitalkostnad for egenkapital
 $$
-k_E=r_f+\beta_E[E(r_m) - rf]=0.03+0.83[0.08 - 0.03] = 0.0715
+k_E=r_f+\beta_E [E(r_m) - r_f ]=0.03+0.83[0.08 - 0.03] = 0.0715
 $$
 1. Kapitalkostnad for gjeld
 $$
-k_G=r_f+\beta_G[E(r_m) - rf] = 0.03+0.1[0.05]= 0.035 
+k_G=r_f+\beta_G [E(r_m) - r_f ] = 0.03+0.1[0.05]= 0.035 
 $$
 1. Totalkapitalkostnad for selskapet
 $$
@@ -1428,9 +1465,9 @@ $$
 
 ## Kapitalkostnad for nye prosjekter vs. bedriftens eksisterende virksomhet
 
-Som allerede omtalt under forelesning 3 (`r tema[3]`), ville den relevante risikoen (systematiske risikoen) kunne knytte opp mot både en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
+Som allerede omtalt under forelesning 3 (`r tema[3]`), ville den relevante risikoen (systematiske risikoen) kunne knyttes opp mot *både* en enkelt aksje eller et prosjekt, hvor beta ble beregnet på grunnlag av 
 \begin{equation}
-\beta_j=\frac{Kor(r_j,r_m)Std(r_j)}{Std(r_m)}
+\beta_j=\frac{Std(r_j)Korr(r_j,r_m)}{Std(r_m)}
 \end{equation}
 
 Foreløpig har kun benyttet dette målet opp mot en aksje (selskapet), men vi nevnte allerede under forelesning 1 (`r tema[1]`) at vi ønsket å komme fram til kapitalkostnaden (risikojusert-rente) for det nye prosjektet fordi den inngikk som en sentral del av risikojustert-rente-metoden (dvs. nevneren)
@@ -1608,6 +1645,10 @@ Fordeler:
 + ...
 + ...
 
+```{r, echo=F, eval=F}
+knitr::knit_exit()
+```
+
 ---
 
 class: inverse, center, middle
@@ -1632,7 +1673,7 @@ class: inverse, center, middle
 ### Illustrasjon av finanssektoren sin plass i realøkonomien
 
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
-knitr::include_graphics("drawio/finansiering.png")
+knitr::include_graphics("illustrasjoner/finansiering.png")
 ```
 
 ---
@@ -1644,20 +1685,20 @@ knitr::include_graphics("drawio/finansiering.png")
 	- Offentlige myndigheter (sentralbanken, finanstilsynet, statsbanker, m.m)
 
 - Kapitalmarkedets *tre* hovedoppgaver
-	- Kanalisere og samle kapital
+	- Samle og kanalisere kapital
 	- Omfordele og spre risiko
 	- Verdsette økonomisk virksomhet
 
 - Finansielle instrumenter
 	- Er en kontrakt som består av to parter
-	- Part A: Mottar kapital fra den andre parten 
-	- Part B: Tilfører kapital samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
+	  - Part A: Mottar kapital fra den andre parten 
+	  - Part B: Tilfører kapital, samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
 
 ---
 
-- Under idealiserte betingelser om fullkommen konkurranse (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
+- Under idealiserte betingelser om fullkommen konkurranse, (jmf. m1. velferdsteorem fra mikroøkonomi) vil kapitalmarkedets tre hovedoppgaver kunne bli ivaretatt uten noen form for offentlige reguleringer.
 
-- I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av:
+- I praksis vil *imperfeksjoner* i kapitalmarkedet forekomme. For eks. i form av
   - Letter å skaffe finansiering for store bedrifter enn små bedrifter
   - Informasjonsineffisiens
   - Avvik mellom Bedriftsøkonomisk og samfunnsøkonomisk lønnsomhet
@@ -1745,9 +1786,7 @@ P_0=\sum_{t=1}^{5\cdot 2}\frac{10000\cdot 0.05/2}{(1+0.06/2)^{5\cdot 2}} + \frac
 \end{equation}
 
 ```{r, eval=F, echo=F} 
-(0.05*10000)*
-((1-(1/(0.03))^(10+1))/
-(1-(1/(0.03))))
+(0.05*10000)*((1-(1/(0.03))^(10+1))/(1-(1/(0.03))))
 # [1] 7440.939
 10000/(1-(1/0.03))^10
 # [1] 8.007468e-12
@@ -1783,29 +1822,31 @@ knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 
 Terminstrukturen kan også benyttes til å avdekke sammenhengen mellom dagens renter (*spotrenter*) og forventede framtidige renter (*terminrenter/forwardrenter*).
 
-- **Beregning av spotrente og implisitte renter:**
+- **Beregning av implisitte renter:**
 
 Vi har som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi. Den generelle sammenhengen mellom spotrenten for en obligasjon med forfall i periode T og de implisitte terminrenten er da gitt ved
 
 \begin{equation}
-(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T}f_{T})
+(1+_{o}r_{T})^T=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{T-1}f_{T})
 \end{equation}
 
-Løser mhp. $(1+_{t-1}f_{t})$ 
+---
+Sluttperioden for $t$ kan derfor skrives som
+\begin{equation}
+(1+_{o}r_{t})^t=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-1}f_{t})
+\end{equation}
+Mens $t-1$ som
+\begin{equation}
+(1+_{o}r_{t-1})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})
+\end{equation}
+
+Løser vi den øverste ligningen mhp. $(1+_{t-1}f_{t})$ gir oss
 \begin{equation*}
 (1+_{t-1}f_{t})=\frac{(1+_{o}r_{t})^t}{(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})
 }
 \end{equation*}
 
-Setter inn for $(1+_{o}r_{t-1})^{t-1}=(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})$
-
-\begin{equation*}
-_{t-1}f_{t}+1=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}}
-\end{equation*}
-
----
-
-Som forteller oss at termin-/forwardrenten for periode $t$ er bestemt ved 
+Fra ligningen under kan vi sette inn for $(1+_{o}r_{1})(1+_{1}f_{2})...(1+_{t-2}f_{t-1})$. Som forteller oss at **termin-/forwardrenten** for periode $t$ er bestemt ved 
 
 \begin{equation}
 _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
@@ -1813,7 +1854,7 @@ _{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
 
 ---
 
-**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000 og årlig kupongrente på 60 kroner. Videre har vi
+**Eksempel 5.2:** Vi har tre statsobligasjoner med pålydende 1000,- og årlig kupongutbetalinger på 60 kroner. Videre har vi
 ```{r, echo=F}
 stats_df <- data.frame(lopetid=c(1,2,3),
 		       M=c(1000,1000,1000),
@@ -1858,19 +1899,24 @@ Uttrykt ved symbolene for terminrenter gjør at vi kan skrive
 _{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
 \end{equation}
 
+Løser dette for inflasjonsforventingene 
+
+\begin{equation}
+_{t-1}j^R_t=\frac{_{t-1}f^N_t-_{t-1}f^R_t}{1+_{t-i}f_t^R}
+\end{equation}
 ---
 
-**Eksempel 5.3:**
+**Eksempel 5.3:** Fra eksempel 5.2 fant vi at de implisitte terminrenten for to og tre år var på hhv. 6.01 og 6.51 prosent. Vi tror nå at realrenten de nærmeste tre årene vil være på 3.17 prosent.
 
-*Forventet realrente periode 2*
+*Forventet inflasjonsprosenter for periode 2 sett fra periode 1*
 \begin{equation*}
-_{1}f^R_2=\frac{_{1}f^N_2-_{1}j_{2}}{1+_{1}j_2}
+_{1}j^R_2=\frac{_{1}f^N_2-_{1}f^R{2}}{1+_{1}f_2^R}
 =\frac{0.0601-0.0317}{1+0.0317}=0.0275
 \end{equation*}
 
-*Forventet realrente periode 3*
+*Forventet inflasjonsprosenter for periode 3 sett fra periode 2*
 \begin{equation*}
-_{2}f^R_3=\frac{_{2}f^N_3-_{2}j_{2}}{1+_{2}j_3}
+_{2}j^R_3=\frac{_{2}f^N_3-_{2}f_{2}^R}{1+_{2}f_3^R}
 =\frac{0.0651-0.0317}{1+0.0317}=0.0324
 \end{equation*}
 
@@ -1900,35 +1946,25 @@ Et kvantitativt mål som reflekterer disse sammenhengen kan vi finne ved å deri
 
 Komponenten D omtales som Maculay-durasjonen (mål på prisfølsomhet) og er gitt ved
 \begin{equation}
-D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_1)}{P_0}\right]+\left[3 \frac{NV(X_1)}{P_0}\right]...\left[T \frac{NV(X_1)}{P_0}\right]
+D=\frac{\sum_{t=1}^{T}\frac{tX}{(1+r)^t} + \frac{T\cdot M}{(1+r)^T}}{P_o}=\\ \left[1 \frac{NV(X_1)}{P_0}\right]+\left[2 \frac{NV(X_2)}{P_0}\right]+\left[3 \frac{NV(X_3)}{P_0}\right]...\left[T \frac{NV(X_T)+M}{P_0}\right]
 \end{equation}
 
-Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi(?).
+Tolkning: Durasjonsmålet kan tolkes som et slags gjennomsnitt av hvor lang tid det tar før hvert kontantstrømselement forfaller, og av hvor viktig kontantstrømelmenet er for obligasjonens verdi.
+
+---
 
 - Durasjonen *D* er kortere enn obligasjonens løpetid $T$
 - For obligasjoner med samme løpetid og markedsrente er durasjonen lengre jo lavere kupongrenten er
 - For obligasjoner med samme kupong- og markedsrente er durasjonen lengre desto lengre løpetiden er
 
----
-
-
-.panelset[
-.panel[.panel-name[R-kode (ikke pensum)]
-
-```{r, echo=F}
+```{r, echo=F, eval=T}
 durasjon_df <- function(r=0.0153,r_m=0.0175,n=2,T=10,M=1000){
 	dur <- data.frame(per=seq(1,T*n-1)) %>% 
 		dplyr::mutate(kont=(M*r_m)/n) %>%
 		dplyr::mutate(disk=round((1/(1+r/n))^per,digits=6)) %>%
 		dplyr::mutate(NV=round(kont*disk,digits=6)) %>%
 		dplyr::mutate(wNV=round(per*NV,digits=6))
-
 }
-```
-]
-.panel[.panel-name[Tabell]
-
-```{r}
 r <- 0.0153
 r_m <- 0.0175
 po <- 1019.50
@@ -1936,20 +1972,21 @@ n <- 2
 T <-  10
 M <- 1000
 dur <- durasjon_df(r=r,r_m=r_m,n=2,T=T,M=M)
-htmlTable(head(dur), header=
-	  c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
-```
-]
-.panel[.panel-name[Durasjon]
-
-```{r}
 term <- rev(dur$wNV)[1]+(T*n-1)*(M/(1+r/n)^(T*n-1))
 durasjon <- (sum(dur$wNV[1:18])+term)/po
 c("halvårlig"=durasjon,"årlig"=durasjon/2)
 ```
-]
-]
 
+```{r, echo=F}
+htmlTable(head(dur), header= c("Periode","Kontantstrømselement","Diskontering","NV","veid NV"))
+```
+
+```{r, echo=F, eval=T}
+```
+
+```{r, echo=F}
+c("halvårlig"=durasjon,"årlig"=durasjon/2)
+```
 
 ---
 
@@ -1999,7 +2036,7 @@ Hovedkjennetegn OA:
 .pull-right[
 
 - Markedsverdi (framtidig inntjening)
-	- Aksjekursen gir uttrykk for nåverdien av framtidig inntjening per aksje
+	- Aksjekursen gir uttrykk for nåverdien av framtidig forventet inntjening per aksje
 	- Markedsverdi EK = Aksjekurs $\cdot$ Antall utestående aksjer
 ]
 
@@ -2044,7 +2081,7 @@ knitr::include_graphics(c("pensum/figurer-42.png"))
 
 For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 
-- Markedsverdien må være på mins 300 mill
+- Markedsverdien må være på minst 300 mill
 - Minimum 500 aksjonærer med aksjer verdt minst 10 000,-
 - Offentlig årsregnskap og årsberetning i henhold til regnskapslovgivningen i de tre siste årene før børsnotering
 
@@ -2065,14 +2102,14 @@ knitr::include_graphics(c("pensum/figurer-44.png"))
 
 - **Beregning av tegningsrettigheter:**
 
-
-*Rights-on-kursen* ( $P_0$ ) og emisjonskursen ( $P_e$ )
+Ex-rights-kursen ( $P_x$ ) er bestemt som et veid snitt av rights-on-kursen ( $P_0$ ) og 
+emisjonskursen ( $P_e$ )
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}
 
-Dersom vi definerer forholdet mellom antall gamle aksjer og nye emiterte aksjer $N=n/m$.
+Dersom vi definerer forholdet mellom antall gamle aksjer ( $n$ ) og nye ( $m$ ) emiterte aksjer $N=n/m$.
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
@@ -2097,19 +2134,23 @@ $$
 P_x=\frac{172476762\cdot 13.20+94862219\cdot 9.45}{172476762+94862219}=11.86935
 $$
 
-Eller, dersom vi har at $N=n/m=1.82$
-
-Aksjen vil derfor falle med $11.86935$
-
-Verdien av tegningsretten $T_x$ vil derfor være
+Eller, dersom vi benytter at $N=n/m=\frac{172476762}{94862219}=1.82$
 
 $$
-T_x=\frac{13.20-9.45}{1.82+1}=1.33
+P_x=\frac{1.82\cdot 13.20+9.45}{1+1.82}=11.86935
 $$
+
+Verdien av tegningsretten $T_n$ vil derfor være
+
+$$
+T_n=\frac{13.20-9.45}{1.82+1}=1.33
+$$
+
+---
 
 Mens kursfallet vil være på
 $$
-P_x-P_e=13.20-11.86935=1.33
+P_x-P_0=11.86935-13.20=-1.33
 $$
 
 Verdien av tegningsrettigheten nøyaktig tilsvarer kursfallet. Gamle aksjonærers formue vil derfor være *helt* upåvirket av emisjonen.
@@ -2139,11 +2180,11 @@ Ved en *aksesplitt* økes antall aksjer. Pålydende pr. aksje reduseres samtidig
 
 En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egenkapital til kontoen aksjekapital.
 
-```{r}
+Felles for aksjesplitt og fondsemisjon er at *kontantstrømmseffekten* er null.
+
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
-
-
 
 ---
 
@@ -2153,21 +2194,17 @@ class: inverse, center, middle
 
 **Læringsmål:**
 
-1. Definere begrepene gjeldsgrad og gjeldsandel.
-1. Forklare hva som bestemmer selskapets investeringsrisiko.
-1. Redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
-1. Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
-1. Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
+- Definere begrepene gjeldsgrad og gjeldsandel.
+- Forklare hva som bestemmer selskapets investeringsrisiko.
+- Redegjøre for hvordan finansieringsrisiko påvirker risiko for eierne.
+- Forklare hvorfor finansieringsrisiko ikke primært skyldes konkursrisiko.
+- Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
 
 `r paste("Oppdatert:",Sys.Date())`
 
-```{r, eval=T, echo=F}
-sd.p=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-```
-
 ---
 
-# Gjeldsgrad og risiko
+# Gjeldsgrad og risiko 
 
 - Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
 
@@ -2245,25 +2282,17 @@ htmlTable(t(til_m), header=c(seq(1,5)),rnames=radnr_iii,
 
 ]
 
+
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-46.png"))
 ```
+
 ---
 
-### Forventet avkastning og total risiko
+### Forventet avkastning og total risiko  
+
 
 .pull-left[
-
-```{r, eval=T, echo=F}
-mu <- mean(til_u$opa)
-mm <- mean(til_m$opa)
-su <- round(sd.p(c(til_u$opa)),digits=0)
-sm <- round(sd.p(c(til_m$opa)),digits=0)
-vu <- round(su/mu,digits=1)
-vm <- round(sm/mm,digi=1)
-uu <- max(til_u$opa)-min(til_u$opa)
-um <- max(til_m$opa)-min(til_m$opa)
-```
 
 **Ingen gjeld**
 
@@ -2287,7 +2316,7 @@ um <- max(til_m$opa)-min(til_m$opa)
 
 **Fem effekter av økt gjeldsgrad:**
 
-1. OPA øker
+1. Forventet OPA øker
 1. OPA blir mer usikkert (høyere total risiko)
 1. OPA blir høyere i gode tider, men lavere i dårlige tider
 1. Variasjonskoeffisienten ved gjeldsgrad lik 0 reflekterer kun *investeringsrisiko*
@@ -2362,7 +2391,6 @@ htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 ```{r, echo=FALSE, align='rights', out.width="60%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-47.png"))
 ```
-
 
 ---
 
@@ -2469,9 +2497,7 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 
 ## Miller & Modigliani (M&M)
 
-Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir bestemt i markedet?
-
-Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
+Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir bestemt i markedet? Svar: Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
@@ -2486,7 +2512,6 @@ Forutsetninger for verdsetting av selskaper i Miller & Modigliani:
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
-
 .pull-right[
 **Finansieringsiden:**
 - Fast evigvarende gjeld
@@ -2596,9 +2621,9 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 **Konklusjon:M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
 
----
-
-
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 ---
 
@@ -3107,20 +3132,20 @@ Empiri for Norge (1980-1995) for 25 selskaper gav b=0.20 og a=0.50.
 **Eksempel 11.4:** Et selskap som startet i 2013 har som mål å betale ut 30 prosent som dividende. For å unngå ustabile dividender, ønsker man samtidig at dividenden skal justeres med 60 prosent av hva overskuddsendringen tilsier. 
 
 ```{r, echo=F, eval=T}
-nu <- 100*0.3
-en <- 120*0.3*0.6 + nu-0.6*nu
-to <- 150*0.3*0.6 + en-0.6*en
-tr <- 80*0.3*0.6 + to-0.6*to
-radnr <- c("Salgsinntekt",
-	   "Driftsutgift",
-	   "Investering",
-	   "Sannsynlighet")
-y2013 <- c(100,"-",30,"")
-y2014 <- c(120,"20%",34,"12%")
-y2015 <- c(150,"25%",40,"20%")
-y2016 <- c(80,"-47%",31,"-24%")
-just_df <- data.frame(radnr,y2013,y2014,y2015,y2016)
-htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
+#nu <- 100*0.3
+#en <- 120*0.3*0.6 + nu-0.6*nu
+#to <- 150*0.3*0.6 + en-0.6*en
+#tr <- 80*0.3*0.6 + to-0.6*to
+#radnr <- c("Salgsinntekt",
+#	   "Driftsutgift",
+#	   "Investering",
+#	   "Sannsynlighet")
+#y2013 <- c(100,"-",30,"")
+#y2014 <- c(120,"20%",34,"12%")
+#y2015 <- c(150,"25%",40,"20%")
+#y2016 <- c(80,"-47%",31,"-24%")
+#just_df <- data.frame(radnr,y2013,y2014,y2015,y2016)
+#htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
 ```
 
 **Øvelse:** Ved bruk av Lintner-modellen, se om du klarer å replikere tallene som er oppgitt i tabellen.

@@ -27,6 +27,8 @@ navbar:
         href: "articles/presentations.html#89" 
       - text: "#7: Gjeldsgrad og risiko"
         href: "articles/presentations.html#120" 
+      - text: "#8: Gjeldsgrad og verdi med imperfeksjoner"
+        href: "articles/presentations.html#129" 
       href: "articles/presentations.html" 
     - text: "Formelsamling"
       href: "articles/formler.html"

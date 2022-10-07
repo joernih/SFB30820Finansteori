@@ -269,10 +269,6 @@ Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
-
 
 
 ## Miller & Modigliani (M&M)
@@ -301,6 +297,9 @@ k_E = k_T + (k_T-k_G)\frac{G}{E}
 =k_U + (k_U-k_G)\frac{G}{E}
 \end{equation}
 
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 ---
 
 ## Ettledsbeskatning

@@ -40,7 +40,7 @@ xaringanExtra::use_search(show_icon = TRUE)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-filp <- '/inst/forelesningsnotater/presentationsF.Rmd'
+filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
@@ -2621,7 +2621,7 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 **Konklusjon:M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
 
-```{r}
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
