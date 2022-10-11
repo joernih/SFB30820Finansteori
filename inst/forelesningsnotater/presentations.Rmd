@@ -12,7 +12,6 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-#bibliography: pensum.bib
 #output:
 #  html_document:
 #    toc: true
@@ -2204,7 +2203,7 @@ class: inverse, center, middle
 
 ---
 
-# Gjeldsgrad og risiko 
+## Gjeldsgrad og risiko 
 
 - Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
 
@@ -2222,7 +2221,7 @@ I selve omtalen av bedriftens kapitalstruktur benyttes disse begrepene gjerne om
 
 ---
 
-## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+### Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
 Alternative navn på investeringsrisiko: *eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.*
 
@@ -2289,7 +2288,7 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 ---
 
-### Forventet avkastning og total risiko  
+#### Forventet avkastning og total risiko  
 
 
 .pull-left[
@@ -2324,7 +2323,7 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 ---
 
-## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+### Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
 
 Benytter $\beta_{I}$ for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert).
 
@@ -2332,7 +2331,7 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 
 ---
 
-### Formelt (uten skatt, men med konkursrisiko) ###
+#### Formelt (uten skatt, men med konkursrisiko) ###
 
 - Systematisk investeringsrisiko
 \begin{equation*}
@@ -2411,7 +2410,7 @@ class: inverse, center, middle
 
 ---
 
-# Gjeldsgrad og verdi i perfekte kapitalmarkeder
+## Gjeldsgrad og verdi i perfekte kapitalmarkeder
 
 I kapittel 6 så vi at økt gjeldsgrad førte til
 1. Økt forventet avkastning
@@ -2452,7 +2451,7 @@ til_u <- data.frame(gjeld=c(100,200,400,600,700),
 htmlTable::htmlTable(t(til_u),rnames=radm)
 ```
 
-**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere (interesentene), men ikke den totale kontantstrømmen**
+**Resultat: Gjeldsgrad påvirker kun fordelingen mellom kreditorer og eiere (interesentene), men *ikke* den totale kontantstrømmen**
 
 ---
 
@@ -2489,7 +2488,7 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 1. Selg dine *aksjer* i det overprisede selskapet
 1. Kjøp deg inn i det underprisede selskapet. Porteføljen må da tilpasses slik at
 	- Gitt uten  gjeld i det overprisede selskapet, kjøper du samme andel av egenkapital og gjeld i det underprise selskapet
-	- Gitt med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet
+	- Gitt med gjeld i det overprisede selskapet, låner du privat for å få samme gjeldsgrad som i det overprisede selskapet og benytter dette beløpet til å kjøpe egenkapital i det underprisede selskapet.
 
 **Resultat:** Den arbitrasjestrategien fører til at verdifastsettelsen blir lik (pga. økt tilbud av det overprisede selskapet samt økt etterspørsel av det underprise selskapet) mellom de to selskapene.
 
@@ -2512,6 +2511,7 @@ Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastse
 - OFR er evigvarende
 - Sannsynlighetfordelingen for OFR den samme i alle perioder for begge selskaper
 ]
+
 .pull-right[
 **Finansieringsiden:**
 - Fast evigvarende gjeld
@@ -2550,8 +2550,8 @@ k_E = k_T + (k_T-k_G)\frac{G}{E}
 
 *Seperasjonsprinsippet*
 - M&M impliserer at det ikke er mulig å øke bedriftens eller enkeltstående prosjekters verdi gjennom finansieringsformen:
-	1. Økt gjeldsgrad fører til *økt* finansieringsrisiko og dermed en økning i eiernes avkastningskrav
-	1. Men totalkapitalkostnaden påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
+	1. Økt gjeldsgrad fører til økt finansieringsrisiko og dermed en økning i *eiernes avkastningskrav*
+	1. Men *totalkapitalkostnaden* påvirkes ikke av gjeldsgraden, og selskapsverdien foreblir derfor uendret
 	1. Dette resultatet blir ofte omtalt som *seperasjonsprinsippet*
 
 ---
@@ -2579,12 +2579,12 @@ knitr::include_graphics(c("pensum/figurer-52.png"))
 
 ---
 
-### Sammenhengen mellom KVM og M&M
+## Sammenhengen mellom KVM og M&M
 
 Vi løsner nå på forutsetningen om de to selskapene som sammenlignes skal være i samme risikoklasse (som innbærer lik total og systematisk risiko). Vi definerer istedet risikoklasse (som i KVM) some alle selskaper med en bestemt investeringsbeta.
 
-**Eksempel 7.5**: For Demo ASA er $\beta_G=0.20$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.05$.
-Den risikofrie renten i markedet $r_f=0.03$, mens markedsporteføljen forventede avkastning $E(rp)=0.08$.
+**Eksempel 7.5**: For Demo ASA er $\beta_G=0.20$ og $\beta_E=1.4$. Selskapet er finansiert med like mye gjeld som egenkapital, $w_G=w_E=0.50$.
+Den risikofrie renten i markedet $r_f=0.03$, mens markedsporteføljen forventede avkastning $E(r_p)=0.08$.
 
 ---
 
@@ -2610,7 +2610,7 @@ Hvor vi ved bruk av KVM kan finne både $k_U$ og $k_G$
 k_U=0.03 + 0.80(0.08-0.03)=0.074
 \end{equation*}
 \begin{equation*}
-k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ = 0.03 + 0.2(0.08-0.03)=0.04
+k_G=r_f+\beta_G \left[E(r_m)-r_f \right] \\ = 0.03 + 0.20(0.08-0.03)=0.04
 \end{equation*}
 Vi kan derfor benytte M&M-2:
 \begin{equation*}
@@ -2618,8 +2618,7 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 \end{equation*}
 ]
 
-**Konklusjon:M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
-
+**Konklusjon: M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
 ```{r, echo=F}
 knitr::knit_exit()
@@ -2641,30 +2640,31 @@ class: inverse, center, middle
 
 ---
 
-# Intro
+## Intro
 
-Interessentene
+- Interessentene
 
-- Investorer
-	- Aksjonærer
-	- Kreditorer
-- Myndighetene
+  - Investorer (aksjonærer og kreditorer)
+  - Myndighetene
 
-Ettleddsbeskatning
-- Selskapsskatt ( $s_S$ )
-Toleddsbeskatning
-- Selskapsskatt ( $s_S$ )
-- Investorskatt, dvs. kreditorer ( $s_E$ ) og aksjonærer ( $s_E$ )
+- Ettleddsbeskatning
+  - Selskapsskatt ( $s_S$ )
+- Toleddsbeskatning
+  - Selskapsskatt ( $s_S$ )
+  - Investorskatt, dvs. kreditorer ( $s_E$ ) og aksjonærer ( $s_E$ )
 
 **Øvelse:** Hva er disse tallene for Norge?
-Løsning: 
-- $s_S==0.25$ 
-- $s_E=0.14$ 
-- $s_K=0$ (for bedrifter) og $s_E=(0.02875)$ (for privatpersoner)
+
+```{r, echo=F}
+#Løsning: 
+#- $s_S=0.25$ 
+#- $s_E=0.14$ 
+#- $s_K=0$ (for bedrifter) og $s_E=(0.02875)$ (for privatpersoner)
+```
 
 ---
 
-### Imperfeksjoner som vi ser på i dette kurset
+### Imperfeksjoner som vi skal se på framover i dette kurset
 - Skatt
  - Ettleddsbeskatningbeskatning
  - Toleddsbeskatning
@@ -2677,7 +2677,7 @@ Løsning:
 
 ---
 
-# Skatt, kontantstrøm og verdi
+## Skatt, kontantstrøm og verdi
 
 
 **Tabell 8.1:** Forenklet resultat for eksempelselskapet AS Resultat.
@@ -2701,7 +2701,7 @@ Selskapet har 2 500,- i pålydende gjeld til 4 prosent rente. Skattesatsen er 25
 
 ---
 
-## Overskudd og kontantstrøm
+### Overskudd og kontantstrøm
 
 - Driftsresultatet etter skatt (overskuddet før renter) er gitt ved
 \begin{equation}
@@ -2716,7 +2716,7 @@ OFR+A-I=(SI-FK-VK-A)(1-s) + A - I
 \begin{equation}
 I=A
 \end{equation}
--Kontantsrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
+- Kontantsrøm fra driften vil derfor være nå være identisk med driftsresultatet etter skatt og gitt ved
 \begin{equation}
 OFR=(SI-FK-VK-A)(1-s) 
 \end{equation}
@@ -2754,7 +2754,7 @@ $$
 $$
 Eller
 $$
-800\cdot(1-0.25)+0.04\cdot2500\cdot 0.25 \\
+800(1-0.25)+0.04\cdot2500\cdot 0.25 \\
 =600+25\\
 =625
 $$
@@ -2867,6 +2867,7 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 	- $dvs. gjeldsfavorieserende$
 
 Det norske skattesystemet gir moderate incentiver til å finansiere med gjeld
+
 ---
 
 .pull-left[
@@ -2893,7 +2894,7 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 ---
 
-# Kapitalverdimodellen med beskatning
+### Kapitalverdimodellen med beskatning
 
 **Ingen skatt**
 
@@ -2919,9 +2920,9 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 ---
 
-# Andre imperfeksjoner
+## Andre imperfeksjoner
 
-## Emisjonskostnader 
+### Emisjonskostnader 
 
 - I kapitalmarkeder med imperfeksjoner kan emisjonskostnadene for egenkapital avvike fra gjeld (lån).
 - Gitt at egenkapitalen kommer i form av tilbakeholdt overskudd (intern egenkapital), er i praksis emisjonskostnadene lavest for egenkapital
@@ -2929,7 +2930,7 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 ---
 
-## Vekst kontra kontroll 
+### Vekst kontra kontroll 
 
 - Små selskaper med rask investeringsvekst vil typisk oppleve at de får et større kapitalbehov enn det som kan finansierer fra driften og ny egenkapital
 - De betyr at selskapene enten må låne fra helt nye aksjonærer eller ta opp gjeld
@@ -2937,7 +2938,7 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 ---
 
-## Assymetrisk informasjon 
+### Assymetrisk informasjon 
 
 *Informasjonsøkonomiske modeller* bygger på antagelsen om at det er **Asymmetrisk** informasjon mellom selskapets interessenter (eier, ledelsen, kreditorer etc.)
 
@@ -2949,7 +2950,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ---
 
-## Interessekonflikt mellom eierne og ledelsen
+### Interessekonflikt mellom eierne og ledelsen
 
 - *Agentteorien* bygger på forutsetning om asymmetrisk informasjon og antar målkonflikter mellom selskapets interessenter
 - Eierne ønsker at selskapets verdi blir maksimert, mens ledelsen ønsker å gjøre primært det som er best for dem selv
@@ -2960,7 +2961,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ---
 
-## Interessekonflikt mellom eierne og kreditorene
+### Interessekonflikt mellom eierne og kreditorene
 
 - Agentkostnader ved høy gjeld skyldes at eierne av et aksjeselskap vet at de har *begrense ansvar* når investeringsbeslutninger tas
 - Det gjør at overinvesteringer i risikable prosjekter er en fare for kreditorene når gjeldsgraden er høy
@@ -2968,7 +2969,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ---
 
-## Finansielle krisekostnader
+### Finansielle krisekostnader
 
 - Ved høy gjeldsgrad kan lånerenten komme til å stige mer enn hva ordinær risikokompensasjon skulle tilsi
 - Det skyldes at kreditorene i en potensiell krisesituasjon må bære en uforholdsmessige stor del av kostnadene 
@@ -2992,16 +2993,26 @@ V_M = V_U \\
 -NV(\text{underprisingskostnader ved ny egenkapital})\\
 \end{equation}
 
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-59.png"))
-```
-
-```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-65.png"))
-```
+---
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-66.png"))
+```
+
+.pull-left[
+```{r, echo=FALSE, out.width="70%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-59.png"))
+```
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width="70%", fig.cap="", fig.align="center"}
+knitr::include_graphics(c("pensum/figurer-65.png"))
+```
+]
+
+```{r, echo=F}
+knitr::knit_exit()
 ```
 
 ---
@@ -3009,7 +3020,7 @@ knitr::include_graphics(c("pensum/figurer-66.png"))
 class: inverse, center, middle
 
 
-# Forelesning 11: `r tema[11]`
+# Forelesning 10: `r tema[11]`
 
 - Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
 - Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
@@ -3034,9 +3045,9 @@ class: inverse, center, middle
 
 ---
 
-# Varianter
+## Varianter
 
-## Kontantdividende
+### Kontantdividende
 
 Dette er den vanligste varianten
 
@@ -3048,7 +3059,7 @@ Dette er den vanligste varianten
 
 ---
 
-## Tilbakekjøp av egne aksjer
+### Tilbakekjøp av egne aksjer
 
 - Istedenfor direkte utbytte, mottat aksjonærene her kun et tilbud om å selge sine aksjer
 - Det innebærer at kun de som velger å selge sine aksjer mottat likvider
@@ -3057,7 +3068,7 @@ Dette er den vanligste varianten
 
 ---
 
-## Opphørsdividende, fondsemisjon og aksjesplitter
+### Opphørsdividende, fondsemisjon og aksjesplitter
 
 - Opphørsdividene kommer som et resultat av en beslutning fra selskapet om å nedlegge driften 
 	- Beløpet $$\text{salg av eiendeler} - (\text{avviklingskostander} + \text{gjeld})$$
@@ -3067,7 +3078,7 @@ Dette er den vanligste varianten
 
 ---
 
-## Utbytteaksjer og naturalier
+### Utbytteaksjer og naturalier
 
 - *Utbytteaksjer* innebærer at eierne kan velge mellom å motta dividende som kontantdividende eller som nyutstede aksjer
   - Den kan derfor betraktes som en rettet egenkapitalemisjon uten tegningsrettigheter
@@ -3078,7 +3089,7 @@ Dette er den vanligste varianten
 
 ---
 
-# Praksis
+## Praksis
 
 - Ansvaret for utformingen av dividendepolitikken ligger hos styret og ledelsen.
 - Beslutningen tas formelt på generealforsamlingen (men de kan ikke vedta et høyere dividende enn hva styret foreslår)
@@ -3089,7 +3100,7 @@ Norsk Aksjelov legger et øvre tak på dividenen ved å si at dividenden består
 
 ---
 
-## Bransjemønstre i dividendepolitikken
+### Bransjemønstre i dividendepolitikken
 
 **Tabell 11.1:** Dividendepraksis for selskaper notert på Oslo Børs i perioden 1995-2015
 ```{r, echo=F, eval=T}
@@ -3112,7 +3123,7 @@ htmlTable(divpraksis, header=c("Næring","Dividendebetalere, %","Utdelingsforhol
 
 ---
 
-## Lintner-modellen
+### Lintner-modellen
 
 Undersøkelser tyder på at fastsatt dividende er basert på følgende kjennetegn
 
@@ -3152,7 +3163,7 @@ Empiri for Norge (1980-1995) for 25 selskaper gav b=0.20 og a=0.50.
 
 ---
 
-## Tilbakekjøp
+### Tilbakekjøp
 
 Tilbakejøp kan benyttes som et fleksibelt supplement til den langt mer stabile kontantdividenden
 - Svinger sterkere i takt med overskuddet enn hva dividenden gjør:
@@ -3161,7 +3172,7 @@ Tilbakejøp kan benyttes som et fleksibelt supplement til den langt mer stabile 
 
 ---
 
-## Norsk dividentpoltikk over tid
+### Norsk dividentpoltikk over tid
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-63.png"))
@@ -3174,7 +3185,7 @@ knitr::include_graphics(c("pensum/figurer-63.png"))
 
 ---
 
-## Norge kontra andre land
+### Norge kontra andre land
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-64.png"))
@@ -3182,7 +3193,7 @@ knitr::include_graphics(c("pensum/figurer-64.png"))
 
 ---
 
-## Dividende kontra nettodividende
+### Dividende kontra nettodividende
 
 For å vite hvordan kontantstrømmen fordeler seg mellom selskapet og eierne, må man studere *nettodividenden*:
 \begin{equation}
@@ -3199,7 +3210,7 @@ knitr::include_graphics(c("pensum/figurer-65.png"))
 
 ---
 
-## Dividende og avkastningskrav
+### Dividende og avkastningskrav
 
 - Nærliggende å betrake eier på linje med kreditor. Dvs. dividendeinntekten er paralell med renteinntekten for kreditorene
 - Men dette blander sammen likviditetseffekten for selskapet med avkastningskravet for eiernes
@@ -3207,7 +3218,7 @@ knitr::include_graphics(c("pensum/figurer-65.png"))
 
 ---
 
-# Irrelevans (#0)
+## Irrelevans (#0)
 
 Endring av eiernes verdi kan knyttes til to komponenter:
 1. Kursendringer
@@ -3241,7 +3252,7 @@ Basert på antagelsen om gitt investerings- og gjeldsgradsbeslutninger, vil vi h
 
 ---
 
-## Empiri fra USA
+### Empiri fra USA
 
 En undersøkelse  fra 1972-1999 avdekker følgende mønstre
 
@@ -3252,7 +3263,7 @@ En undersøkelse  fra 1972-1999 avdekker følgende mønstre
 
 ---
 
-# Likviditet (#1) 
+## Likviditet (#1) 
 
 - Med *hjemmelaget dividendepoltikk* forstås at enkeltinvestorer aktivt går inn for å fjerne den uønskede likviditetseffekten av selskapets dividendepolitikk
 - Synes investoren at selskapets gir ham for liten (stor) kontantbeholdning, kan denne økes (reduseres) ved å selge (kjøpe) noen av aksjene i selskapet
@@ -3270,7 +3281,7 @@ En undersøkelse  fra 1972-1999 avdekker følgende mønstre
 
 ---
 
-# Signalfunksjonen (#2)
+## Signalfunksjonen (#2)
 
 - Ledelsen kan bli stillt ovenfor et dillemma dersom kun de får tilgang til positiv informasjon om selskapets 
 framtidige kontantstrøm.
@@ -3294,7 +3305,7 @@ knitr::include_graphics(c("pensum/figurer-66.png"))
 
 ---
 
-# Interessekonflikter (#3)
+## Interessekonflikter (#3)
 
 - **Agenkostnader:** tap i selskapsverdi som følge av interessekonflikter mellom selskapets interesenter (prinsipal vs. agent).
 Eks. 
@@ -3323,7 +3334,7 @@ Skaper **verdier** igjennom:
 
 ---
 
-#  Skatt (#4)
+##  Skatt (#4)
 
 *Dividendefaktoren* $n^{*}_d$ som årlig skattefordel ved dividende kontra tilbakehold overskudd pr. krone av selskapets egenkapitalstrøm før skatt:
 
@@ -3341,7 +3352,7 @@ Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet s
 
 class: inverse, center, middle
 
-# Forelesning 12: `r tema[12]`
+# Forelesning 11: `r tema[12]`
 
 - Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
 - Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
@@ -3354,7 +3365,7 @@ class: inverse, center, middle
 
 ---
 
-# Innledning
+## Innledning
 
 En *opsjon* er en kontrakt som gir opsjonseieren en rett, men ikke en plikt, til å kjøpe eller selge en eiendel til 
 en avtalt pris i løpet av en avtalt periode.
@@ -3369,7 +3380,7 @@ Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprising
 
 ---
 
-# Grunntrekk ved opsjoner
+## Grunntrekk ved opsjoner
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
@@ -3379,7 +3390,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ---
 
-## Eksempler på opsjoner på forskjellige eiendeler
+### Eksempler på opsjoner på forskjellige eiendeler
               -
 - **Aksjeopsjoner** (vi skal først se på verdsettingen av disse)
 - Konvertible obligasjoner
@@ -3390,7 +3401,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ---
 
-## Standardisert opsjonskontrakt
+### Standardisert opsjonskontrakt
 
 Standardisering og børsnotering av opsjonskontrakter fordelaktig fordi det øker den underliggende aksjens *likviditet*.
 
@@ -3404,7 +3415,7 @@ For å forenkle den modelltekniske framstillingen, ser vi framover kun på *euro
 
 ---
 
-## Opsjonens kontantstrøm ved forfall (t=T)
+### Opsjonens kontantstrøm ved forfall (t=T)
 
 Kjøpsopsjon
 \begin{equation}
@@ -3439,7 +3450,7 @@ knitr::include_graphics(c("pensum/figurer-67.png"))
 
 ---
 
-## Opsjon, aksje og risikofritt prosjekt
+### Opsjon, aksje og risikofritt prosjekt
 
 Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at den blir gitt den samme kontantstrømmen på innløsningstidspunktet.
 
@@ -3472,7 +3483,7 @@ knitr::include_graphics(c("pensum/figurer-69.png"))
 
 ---
 
-## Salg-kjøp-paritet (SKP)
+### Salg-kjøp-paritet (SKP)
 
 - Parvise porteføljekombinasjonen kan benyttes til å forklare såkalt salg-kjøp-paritet (SKP) ("put-call-parity").
 - Dette fordi ved feilprising vil arbitrasjehandel sørge for at denne likevekten vil bli opprettholdt
@@ -3492,7 +3503,7 @@ K_0-S_0=A_0-\frac{I}{1+r_f}
 \end{equation*}
 Forskjellen mellom kjøps og salgsopsjonens verdi er lik differansen mellom aksjens verdi og nåverdi av innløsningskursen.
 
-## Kontinuerlig forrentning
+### Kontinuerlig forrentning
 
 I opsjonssammenheng er det vanlig å operer med *kontinuerlig tid*. For eks. kan en tre-måneders periode deles inn i uendelige mange underperioder. Den kontinuerlige diskonteringsrenten vil da være gitt ved $e^{-i_f\cdot T}$
 \begin{equation*}
@@ -3501,7 +3512,7 @@ K_0-S_0=A_0-Ie^{-i_f\cdot T}
 
 ---
 
-# Bestemmelse av opsjonsverdi før forfall
+## Bestemmelse av opsjonsverdi før forfall
 
 ```{r, echo=F}
 radnr <- c("Verdi av underliggende aksje",
@@ -3516,9 +3527,10 @@ htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
 ```
 
 **Øvelse:** Hva er dine a-priori oppfatninger om opsjonsverdien ved en isolert økning i disse fem faktorene, og har du en ide om hvorfor?
+
 ---
 
-## Opsjonsverdi og aksjekurs (#1)
+### Opsjonsverdi og aksjekurs (#1)
 
 Tre betingelser
 
@@ -3533,7 +3545,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 
 ---
 
-## Opsjonsverdi, innløsningskurs og kontraktstid (#2-3)
+### Opsjonsverdi, innløsningskurs og kontraktstid (#2-3)
 
 Fra Tabell 12.1 i lærebok finner vi at 
 
@@ -3542,7 +3554,7 @@ Fra Tabell 12.1 i lærebok finner vi at
 
 ---
 
-## Opsjonsverdi og aksjens volatilitet (# 4)
+### Opsjonsverdi og aksjens volatilitet (# 4)
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-71.png"))
@@ -3552,7 +3564,7 @@ knitr::include_graphics(c("pensum/figurer-71.png"))
 
 ---
 
-## Opsjonsverdi og rente (# 5)
+### Opsjonsverdi og rente (# 5)
 
 - Høyere rente fører til høyere opsjonsverdi. Dette fordi høyere rente reduserer nåverdien av innløsningskursen
 
@@ -3576,7 +3588,7 @@ Den figuren viser det typiske forholdet mellom opsjonskurs og aksjekurs før for
 
 ---
 
-## Opsjonens fem verdibestemmende faktorer 
+### Opsjonens fem verdibestemmende faktorer 
 
 ```{r, echo=F}
 radnr <- c("Verdi av underliggende aksje",
@@ -3594,7 +3606,7 @@ htmlTable(df_prosj_kont2, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
 
 ---
 
-# Binomisk opsjonsprismodell 
+## Binomisk opsjonsprismodell 
 
 For den binomiske opsjonsprismodellen (OPM-modellen) vil det gjelde at:
 - Ved opsjonens forfallstidspunkt vil opsjonen ha en av to mulige verdier (binomisk)
@@ -3701,7 +3713,7 @@ Til tross for dens enkle struktur, viser OPM-modellen å vise viktig innikt som 
 
 ---
 
-# Black-Scholes-modellen
+## Black-Scholes-modellen
 
 Sentrale forutsetninger:
 - Kontinuerlig tid
@@ -3777,7 +3789,7 @@ m=\frac{1}{0.54228}=1.84
 
 ---
 
-# Binomiske modellen og Black-Scholes modellen
+## Binomiske modellen og Black-Scholes modellen
 
 \begin{equation}
 K_0 = \text{max}[0,(A_0-Ie^{-i_f\cdot T})] 
@@ -3794,7 +3806,7 @@ knitr::include_graphics(c("pensum/figurer-77.png"))
 
 ---
 
-# Opsjonstankegang i finansfaget
+## Opsjonstankegang i finansfaget
 
 Som nevnt innledningsvis finnes det både direkte og indirekte (implisitte) opsjonstrekk i en rekke:
 - Finansieringsprosjekter 
@@ -3805,7 +3817,7 @@ Vi skal se nærmere på prinsippet for verdsettingen av disse nå
 ---
 
 
-## Kapitalstruktur og opsjonsverdi 
+### Kapitalstruktur og opsjonsverdi 
 
 **Eksempel 12.10** Mopsjon ASA er et lite selskap med en enkel kapitalstruktur Selskapet er finansiert med egenkapital og et lån. Lån er på 500.000,- (inklusive renter) og skal tilbakebetales om ett år. Vi antar også at selskapet skal avvikles om ett år, og at kontantstrømmen inkluderer salgsverdien av selskapet. Kontantstrømmen til eierne er vist i figuren nedenfor.
 
@@ -3874,7 +3886,7 @@ knitr::include_graphics(c("pensum/figurer-78.png"))
 
 ---
 
-## Endret investeringsrisiko 
+### Endret investeringsrisiko 
 
 Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
 
@@ -3885,7 +3897,7 @@ I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha str
 
 ---
 
-## Realopsjoner
+### Realopsjoner
 
 - Mange realinvsteringsprosjekt innehar opsjonstrekk, slike prosjektegenskaper kan kalles *realopsjoner*
 - Det sentrale her er at det dreier seg om en rett, uten samtidig en plikt, til å gjennomføre en realinvestering
@@ -3977,7 +3989,7 @@ Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere
 
 class: inverse, center, middle
 
-# Forelesning 13: `r tema[13]`
+# Forelesning 12: `r tema[13]`
 
 - Begrunne hvorfor risikostyring kan være viktig.
 - Redgjøre for viktige risikokilder.
@@ -3988,7 +4000,7 @@ class: inverse, center, middle
 
 ---
 
-# Innledning 
+## Innledning 
 
 Risikostyring (*financial-management*) er basert på
 1. *Identifisere* økonomisk usikkerhet som kan få store negative økonomiske konsekvenser
@@ -4017,7 +4029,7 @@ Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 ---
 
-# Hvorfor risikostyring?
+## Hvorfor risikostyring?
 
 Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markeder vil typisk medføre:
 - Forventet kontantstrøm blir den samme, men variansen reduseres 
@@ -4057,9 +4069,9 @@ For børsnoterte selskaper med veldiversifiserte eiere vil risikostyring kunne s
 
 ---
 
-# Risikokilder (#1-#3)
+## Risikokilder (#1-#3)
 
-## Valutakursrisikio (#1)
+### Valutakursrisikio (#1)
 
 Valutakursrisiko er usikkerhet om endringer i resultat, kontantstrøm og verdi som følge av av uventede valautakursendringer.
 
@@ -4069,7 +4081,7 @@ knitr::include_graphics(c("pensum/figurer-81.png"))
 ```
 ---
 
-## Renterisiko (#2)
+### Renterisiko (#2)
 
 Renterisiko gjelder effekten av uventede endringer på resultat, kontantstrøm og verdi.  
 
@@ -4083,7 +4095,7 @@ knitr::include_graphics(c("pensum/figurer-84.png"))
 ```
 ---
 
-## Prisrisiko (#3)
+### Prisrisiko (#3)
 
 Stor prisrisiko er i mange tilfeller knyttet til råvaremarkedene som kan gi store endringer i inntjening og markedsverdi.
 
@@ -4094,7 +4106,7 @@ knitr::include_graphics(c("pensum/figurer-83.png"))
 ---
 
 
-# Forwardkontrakter
+## Forwardkontrakter
 
 Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale mellom to parter som gir kjøperen
 
@@ -4108,7 +4120,7 @@ knitr::include_graphics(c("pensum/figurer-85.png"))
 
 ---
 
-# Futureskontrakter
+## Futureskontrakter
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
@@ -4132,7 +4144,7 @@ knitr::include_graphics(c("pensum/figurer-87.png"))
 ```
 ---
 
-# Opsjoner (repetisjon)
+## Opsjoner (repetisjon)
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
@@ -4142,7 +4154,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ---
 
-# Swaps
+## Swaps
 
 Swap, finansiell transaksjon der to aktører avtaler å bytte kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
 
@@ -4151,7 +4163,7 @@ knitr::include_graphics(c("pensum/figurer-88.png"))
 ```
 ---
 
-# Empiri om risikostyring
+## Empiri om risikostyring
 
 En undersøkelse i USA fra 2012 viser:
 - 56 prosent av selskapene (ikke-finansielle) benytter risikostyring 
