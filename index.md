@@ -5,9 +5,12 @@
 
 <img src="man/figures/01_finans.jpg" width="75%" />
 
-## \# Nyheter
+# Nyheter
 
-<br>
+-   [Øystein Stray Spetalen advarer grønne investorer: – De vil tape
+    alle pengene
+    sine](https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786)
+    <br>
 
 # Pensum
 
@@ -20,4 +23,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-10-12 12:52:23**
+**Siste gang oppdatert: 2022-10-12 12:57:06**

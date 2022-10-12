@@ -46,8 +46,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- 
-
+- [Øystein Stray Spetalen advarer grønne investorer: – De vil tape alle pengene sine](https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786)
 <br>
 
 # Pensum 
