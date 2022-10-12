@@ -46,8 +46,8 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Fullstendig versjon av arbeidskravet er nå publisert
-- [https://www.nettavisen.no/okonomi/slik-investerer-petter-warren-na-onsker-ikke-vare-avhengig-av-aksjemarkedet/s/5-95-664548](https://www.nettavisen.no/okonomi/slik-investerer-petter-warren-na-onsker-ikke-vare-avhengig-av-aksjemarkedet/s/5-95-664548)
+- 
+
 <br>
 
 # Pensum 
@@ -72,6 +72,4 @@ inst/forelesningsnotater/presentations.Rmd
 https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F.Rmd
-
-
 
