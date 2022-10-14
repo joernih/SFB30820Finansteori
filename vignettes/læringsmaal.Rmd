@@ -62,16 +62,16 @@ abstract: ''
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 # Læringsmål kapittel 8
 - Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
 - Definere et nøytralt skattesystem ved toleddsskatt.
 - Fedegjøre for hva som skaper Miller-likevekt (rente-likevekt) i et gjeldsfavoriserende skattesystem.
 - Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 - Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 # Læringsmål kapittel 11
 - Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.

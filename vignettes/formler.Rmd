@@ -1,4 +1,4 @@
----
+--
 title: "Formelsamling (SFB30820)"
 output: html_notebook
 ---
@@ -297,9 +297,6 @@ k_E = k_T + (k_T-k_G)\frac{G}{E}
 =k_U + (k_U-k_G)\frac{G}{E}
 \end{equation}
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
 ---
 
 ## Ettledsbeskatning
@@ -391,6 +388,9 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 1. $k_T=w_Ek_E + w_Gk_G(1-s)$
 1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
 
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 
 ## Lintner-modellen
 

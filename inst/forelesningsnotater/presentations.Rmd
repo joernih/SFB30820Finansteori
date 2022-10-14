@@ -2620,7 +2620,7 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 
 **Konklusjon: M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
-```{r, echo=F}
+```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -3011,7 +3011,7 @@ knitr::include_graphics(c("pensum/figurer-65.png"))
 ```
 ]
 
-```{r, echo=F}
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
 
