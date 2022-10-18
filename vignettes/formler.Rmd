@@ -326,15 +326,10 @@ V(\text{Renteskattegevinst}) = \frac{srPG}{r}=sPG
 \begin{equation}
 V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = V_{U} + sPG \\ 
-=\frac{E(OFRS)(1-s)}{r} + sPG
+=\frac{E(OFRS)(1-s)}{k_U} + sPG
 \end{equation}
 
 ### Miller og Modigliani med skatt
-
-- **M&M-1**
-\begin{equation*}
-V_{M} = \frac{(OFRS)(1-s)}{k_U} + PGs 
-\end{equation*}
 
 - **M&MSkatt-1**
 \begin{equation*}
@@ -343,21 +338,13 @@ V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = V_u + PGs \\ 
 \end{equation*}
 
-- **M&M-2**
-\begin{equation*}
-k_E = k_U + (k_U-k_G)\frac{G}{E}
-\end{equation*}
-
 - **M&MSkatt-2**
 
 \begin{equation*}
 k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
 \end{equation*}
 
-
-
 ## Toleddsbeskatning
-
 
 \begin{equation}
 n^*= (1-s_K)-(1-s_S)(1-s_E)

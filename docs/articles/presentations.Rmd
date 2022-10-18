@@ -2709,7 +2709,7 @@ Selskapet har 2 500,- i pålydende gjeld til 4 prosent rente. Skattesatsen er 25
 
 ### Overskudd og kontantstrøm
 
-- Driftsresultatet etter skatt (overskuddet før renter) er gitt ved
+- Driftsresultatet etter skatt (overskuddet før renter ved 100% egenkapitalfinansiering) er gitt ved
 \begin{equation}
 OFR=OFRS(1-s) \\
 OFR=(SI-FK-VK-A)(1-s) 
