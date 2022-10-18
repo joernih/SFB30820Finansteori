@@ -10,7 +10,7 @@ output:
 - Versjon 1.1
   - Oppgave 3. Nytt spørsmål lagt til.
 - Leveres ut (hele): 28.09.2022 (Canvas)
-- Leveres inn: ~~26~~28.10.2022 (Canvas og/eller postkassehylle min på Remmen)
+- Leveres inn: ~~26~~ 28.10.2022 (Canvas og/eller postkassehyllen min på Remmen)
 
 [Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
 

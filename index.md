@@ -7,6 +7,9 @@
 
 # Nyheter
 
+-   Trenger litt ekstra hjelp til arbeidskravet før fristen (evt. andre
+    ting)?. Tilbyr veiledning etter forelesningen 26.10 (fra kl. 12:15).
+    Rom kommer senere
 -   [Øystein Stray Spetalen advarer grønne investorer: – De vil tape
     alle pengene
     sine](https://www.nettavisen.no/okonomi/oystein-stray-spetalen-advarer-gronne-investorer-de-vil-tape-alle-pengene-sine/s/12-95-3424177786)
@@ -23,4 +26,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-10-12 12:57:06**
+**Siste gang oppdatert: 2022-10-17 10:01:06**
