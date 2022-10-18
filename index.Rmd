@@ -74,3 +74,5 @@ https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F.Rmd
 
+# Knut Andre Vedøy
+# Julie G. Lund

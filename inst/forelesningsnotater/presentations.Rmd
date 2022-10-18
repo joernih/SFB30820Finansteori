@@ -2738,6 +2738,8 @@ $$
 800(1-0.25)+500-500 = 600
 $$
 
+Dvs. uten gjeld, endres overskuddet (O) fra tabell 8.1 fra 525 til 600.
+
 ---
 
 ## Ettledsbeskatning
@@ -2872,7 +2874,7 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)$ = 0.105
 	- $dvs. gjeldsfavorieserende$
 
-Det norske skattesystemet (basert på tall fra 2016) gir moderate incentiver til å finansiere med gjeld
+Det norske skattesystemet (basert på tall fra 2016) gir moderate incentiver til å finansiere med gjeld.
 
 ---
 
