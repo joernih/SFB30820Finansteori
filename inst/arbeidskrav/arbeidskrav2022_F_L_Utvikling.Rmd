@@ -1,0 +1,515 @@
+---
+title: "Finansteori (SFB30820), Høsten 2022"
+output:
+  #html_notebook:
+  html_document:
+    css: css/OFF.css
+---
+
+## Obligatorisk arbeidskrav
+- Versjon 0.9
+- Leveres ut (hele): 28.09.2022 (Canvas)
+- Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle)
+  - Del I: kan lastes opp som dokument-fil eller pdf eller leveres i postkassehyllen min (ved inngangen til Remmen)
+  - Del II: som regneark (kan enten printes ut lastes opp som xlsx-fil) 
+
+
+```{r eval=T, echo=F, warning=F, message=F}
+library(htmlTable)
+library(reticulate)
+library(dplyr)
+options(scipen=999)
+```
+
+```{r eval=FALSE, include=FALSE}
+filp <- '/inst/arbeidskrav/arbeidskrav2022_F_L.Rmd'
+# [1] "/home/joernih/teaching/SFB30820Finansteori/inst/arbeidskrav/forelesningsnotater/presentations.Rmd"
+rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
+system("brave arbeidskrav2021_F_L.html")
+#servr::httw()
+```
+
+# Del I: Generelle forståelse og tradisjonelle oppgaver
+## Oppgave 1: Generell forståelse (forsøk svar så kortfattet og presist som mulig)
+
+(1) Forklare forskjellen mellom nåverdiutrykkene som benyttes for med og uten usikkerhet.
+<div class="solution">
+Med usikkerhet vil selve formen på nåverdiuttrykket være det samme som uten usikkerhet. Imidlertid vil 
+beregningene som utføres i teller og never være forskjellige. Med usikkerhet erstattes i telleren en sikker kontantstrøm av den forventede kontantstrømmen.
+I nevneren blir den risikofrie renten av risikojustert rente (kapitalkostnaden) som hensyntar både tidskostnaden og usikkerheten tilknyttet prosjektet.
+</div>
+
+(2) Hva er forskjellen mellom forventet og realiserte verdi av en kontantstrøm?
+<div class="solution">
+Den forventede kontantstrømmen gir oss forventningsverdien til en usikre kontanstrømmen *før* usikkerheten har blitt realisert. Den realiserte verdien gis ett av utfallene 
+fra den usikre kontantstrømmen *etter* at usikkerheten har blitt realisert.
+</div>
+
+(3) Ved vurdering av nye investeringprosjekter, forklar hvorfor det lett kan oppstå konflikt mellom forskjellige eiere i et selskap.
+<div class="solution">
+Med flere eiere vil man typisk kunne oppleve at man har både uderversifiserte og veldiversifiserte eiere. Konflikt kan da lett oppstå siden de udiversifiserte 
+ser forventet kontantstrøm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm, mens de veldiversifiserte eierne
+ser forventet kontantstrøm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
+</div>
+
+(4) Hva menes med prosjektets eller aksjens beta?
+<div class="solution">
+Dette er et mål for prosjektet eller aksjens systematiske risiko. I utgangsunktet kan risikoen til et prosjekt eller aksje splittes opp i usystemtatiske og systematisk risiko, hvor
+førstnevte utgjør den risikoen som man kan bli kvitt ved diversifisering. Den systematisk risiko utgjør den risikoen som da står igjen etter diversifisering. Den risikoen 
+er drevet av makrofaktorer (eks. konjunkturer, pandemier, krig og fred) og kan forstås som forholdet mellom aksjens eller prosjektets risiko i forhold til markedsporteføljen.
+Formelt blir den beregnet som 
+$$
+\beta_j=\frac{Kov(r_j,r_m)}{Var(r_m)}
+$$
+Hvor $\beta_j>1$ mer følsom enn markedsporteføljen, mens $\beta=1$ lik markedsporteføljen og $\beta<1$ mindre følsom en markedsporteføljen.
+</div>
+
+(5) Gi en forklaring om mekanismene som ligger til grunn for Tofondsresultatet.
+<div class="solution">
+Tofondsresultatet går ut på at (1) Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte. (2)
+Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikable komponenten framfor den risikofrie. Resultat oppstår fordi
+under antagelsen om risikoaversjon vil alltid en investor velge en kombiasjon av et risikofritt alternativ og den effisiente aksjeporteføljen M. Andre aksjeporteføljer medfører at
+investorene kostnadsfritt enten kan få sin risiko redusert og/eller få økt sin avkastning. 
+</div>
+
+(6) Forklar hvordan KVM er knyttet sammen med porteføljeteorien.
+<div class="solution">
+I tillegg til forutsetningene som ligger bak porteføljeteorien ((1) risikoaversjon, (2) en periodisk horisont, (3) låne og spare til samme rente og (4) samme informasjon), 
+antar også KVM at kapitalmarkedet er i likevekt, dvs. det beløpet som investorene i hvert selskapet tilsvarer den verdiveide markedsporteføljen. Dette gjør det mulig å prise 
+*samtlige* aksjer som inngår i markedsporteføljen.
+</div>
+
+(7) Gitt at KVM skal virke i praksis, er det da nødvendig at alle investorene tror på modellens forutsetninger (begrunn svaret)?
+<div class="solution"> 
+Nei, paradoksalt trenger man noen aktører som ikke tror på modellens antagelser om informasjonseffisiens (dvs. at all relevant eksisterende informasjon er hensyntatt i aksjekursen)
+for at *feilprisede* aksjer skal korrigeres slik at antagelsen om kapitalmarkedet er i likevekt skal holde.
+</div>
+
+(8) 
+Hva menes med et finansielt instrument, og kan du gi noen eksemplar på bruken av dette?
+<div class="solution">
+Er en kontrakt som består av to parter, hvor den ene parten mottar kapital fra den andre parten, mens den andre parten med det oppnår visse rettigheter ovenfor den andre parten.
+Finansielle instrumenter kan for eks. dreie seg om ulike typer lån (banklån og obligasjonslån) og finansielle derivater i form av opsjoner, forward, futures og swaps.
+</div>
+
+(9) 
+Hvordan kan teknisk et selskap øke forholdet mellom gjeld og egenkapital (kapitalstrukturen)?
+<div class="solution">
+Forholdet mellom gjeld og egenkapital er gitt ved $G/E$ og kan isolert økes enten ved at $G$ går opp eller $E$ går ned. For $G$ gå opp kan skje ved ordinære lån eller obligasjonslån, mens for at 
+$E$ skal gå ned ved at selskapet tilbakekjøper egne aksjer.
+</div>
+
+## Oppgave 2: Porteføljeteori to selskaper
+
+For din portefølje har du mulighet til å investere et beløp på 10.000,- i selskap A og B. Avkastningen og sannsynligheten for de tre ulike tilstandene er gitt ved følgende tabell
+
+```{r, echo=F}
+df_eks_gen <- data.frame(tilstand=c(1,2,3),
+                         prob=c(0.5,0.20,0.30),
+                         avk_a=c(-0.10,0.50,0.20),
+                         avk_b=c(0.20,-0.30,0.10)
+                         )
+# Et objekt
+## Forventet avkasting, varians og standardavvik 
+ex_a <- c(df_eks_gen$avk_a%*%df_eks_gen$prob) 
+ex_b <- c(df_eks_gen$avk_b%*%df_eks_gen$prob)
+vx_a <- c((df_eks_gen$avk_a-ex_a)^2%*%df_eks_gen$prob)
+vx_b <- c((df_eks_gen$avk_b-ex_b)^2%*%df_eks_gen$prob)
+sx_a <- vx_a^(1/2) 
+sx_b <- vx_b^(1/2)
+# Flere objekter
+## Forventet avkasting, kovarians, standardavvik og korr 
+w <- c(6000/10000,4000/10000)
+port_returns <- (sum(w *c(ex_a,ex_b)))
+cov_mat <- cov.wt(df_eks_gen[,c(3,4)], wt =df_eks_gen[,c(2)], cor = T, method='ML')$cov
+port_risk_v <- t(w) %*% (cov_mat %*% w)
+port_risk_s <- sqrt(t(w) %*% (cov_mat %*% w))
+kableExtra::kbl(df_eks_gen,col.names=c("Tilstand ","Sannsynlighet ","Avkastning A ","Avkastning B")) %>% kableExtra::kable_classic_2(full_width = F)
+
+```
+1. Finn forventet avkastning, variansen og standardavviket til hvert enkelt av de to selskapene.
+<div class="solution">
+<ol>
+  <li>Forventet avkastning:<br>
+  $E(X_a)=-0.5\cdot 0.1 + 0.2\cdot 0.5+0.3\cdot 0.2=`r ex_a`$</li>
+  $E(X_b)=0.5\cdot 0.2 - 0.2\cdot 0.3+0.3\cdot 0.1=`r ex_b`$</li>
+  <li>Varians:</li>
+    $Var(X_a)=0.5[-0.1-0.11]^2+ 0.2[0.5-0.11]^2 +0.3[0.2-0.11]^2=`r vx_a`$</li> <br>
+    $Var(X_b)=0.5[0.2-0.07]^2 + 0.2[-0.3-0.07]^2+0.3[0.1-0.07]^2=`r vx_b`$</li>
+  <li>Standardavvik:</li>
+    $Std(X_a)=\sqrt{`r vx_a`}=`r sx_a`$</li> <br>
+    $Std(X_b)=\sqrt{`r vx_b`}=`r sx_b`$</li>
+</ol>
+</div>
+1. Ta utgangspunkt i at 4.000,- av investeringsbeløpet investeres i selskap B, mens det resterende går til selskap A. Finn forventet avkastning, varians og standardavvik til porteføljen av de to selskapene.
+<div class="solution">
+<ol>
+  <li>Vekter:<br>
+  $w_b=4000/10000=0.4 \text{ } w_a=1-0.4=0.6$
+  <li>Forventet avkastning:<br>
+  $E(r_p)$=0.6\cdot(0.11)+0.4\cdot (0.07) $=`r port_returns`$</li>
+  <li>Varians:</li>
+  Vi har først at
+  $Kov(r_a,r_b)=0.5[(-0.1-0.11)(0.2-0.07)]+ 0.2[(0.5-0.11)(-0.3-0.07)] +0.3[(0.2-0.11)(0.1-0.07)]=`r cov_mat[1,2]`$
+  Som forteller oss at <br>
+  $Var(r_p)=0.4^2(0.0549)+0.6^2(0.0361)-2(0.4)(0.6)0.0417=`r port_risk_v`$</li> <br>
+  <li>Standardavvik:</li>
+    $Std(rp)=\sqrt{`r port_risk_v`}=`r port_risk_s`$</li> <br>
+</ol>
+</div>
+
+## Oppgave 3: Porteføljeteorien
+
+I utgangspunktet har vi følgende opplysninger fra markedet som vi har analysert
+
+```{r, echo=F}
+radnr <- c("Markedsporteføljen",
+	   "Risikofri rente")
+tils1 <- c(0.04,0.02)
+tils2 <- c(0.02,0.00)
+df_prosj_kontantstrøm <- data.frame(radnr,tils1,tils2)
+kableExtra::kbl(df_prosj_kontantstrøm,col.names=c("","Forventet avkastning","Standardavik")) %>% kableExtra::kable_classic_2(full_width = F)
+```
+
+```{python, echo=F}
+#import json
+#import sympy
+#import numpy
+### import matplotlib.pyplot as plt
+#from sympy import solve, Eq, symbols, latex, simplify
+#Er_p, Er_m, r_f, r_m, w, var1, var2, rho = sympy.symbols("Er_p, Er_m, r_f, r_m, w, var1, var2, rho")
+#ERP = Eq(Er_p,w*r_f + (1-w)*r_m)
+### Risk-lover investorene
+#Er_pn = 0.44
+#Er_mn = 0.04
+#r_fn = 0.02
+#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+##Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+## Risikoavers investor
+#Er_pn = 0.02
+#Er_mn = 0.04
+#r_fn = 0.02
+#w1 = sympy.solve(ERP,w)[0].subs([(r_f,r_fn),(r_m,Er_mn),(Er_p,Er_pn)])
+#w2 = 1-w1
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)
+#Varpe.subs([(w_1,w1),(var1,0),(var2,0.03**2),(rho,0)])**(1/2)**(1/2)
+```
+
+Både Ole Spetalen og Lise Sparegris har i utgangspunktet et beløp på 2.000.000,- som de ønsker å investere.
+
+<div class="solution">
+Vi har at $E(r_p)=wr_f+(1-w)E(r_m)$. <br>
+For Ole betyr dette at 
+<br>
+$0.42=w\cdot 0.02 + (1-w)\cdot 0.04$ <br>
+Som løst mhp. $w$ gir oss <br>
+$w=-19$ og $1-w=1+19=20$<br>
+Dette tilsvarer investeringsbeløp tilsvarerende $w=20\cdot 2.000.000=40.000.000$, hvor $38000000$ er som en følge av et risikofritt lån.
+</div>
+1. Lise Sparegris ønsker med god margin å sikre pensjonen sin. Ved bruk av samme porteføljeteori som Spetalen, hvordan vil hun fordele sine investeringer som forventet avkastning skal være på 2 prosent?
+<div class="solution">
+For Lise betyr dette at 
+<br>
+$0.02=w\cdot 0.02 + (1-w)\cdot 0.04$ <br>
+Som løst mhp. $w$ gir oss <br>
+$w=1$ og $1-w=1-1=0$<br>
+Dette tilsvarer investeringsbeløp tilsvarerende $w=1\cdot 2.000.000=2.000.000$ i det risikofrie lånet.
+</div>
+1. Både får Ole og Lise finn varians og tilhørende standardavvik for deres respektive portefølje.
+<div class="solution">
+For Ole
+<br>
+$Std(r_p)=20\cdot 0.02=0.4$ <br>
+$Var(r_p)=0.4^2=0.16$ <br>
+<br>
+For Lise <br>
+$Std(r_p)=0\cdot 0.02=0$ <br>
+$Var(r_p)=0^2=0$ <br>
+</div>
+1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjennomføre sin strategi, og er det helt sikkert at han vil oppnå en høyere avkastning enn det som Lise sikter imot?
+
+## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
+
+Frøken Permanent er et lite AS som holder til på Halden Storsenter. Selskapet har som har som spesialitet microblading permanent makeup av bryn.
+I forbindelse med et oppkjøp er det estimert at selskapets egenkapitalbeta $\beta_E=0.90$ og gjeldsbeta lik $\beta_G=0.20$. Den risikofrie renten i markedet på $2.5$ prosent, mens markedets risikopremie anslås til 5 prosent og Bryns skattesats er lik 15 prosent. Totalt sett har Bryn AS 200 aksjer utestående med beregnet markedspris lik 1.500,-. Utestående gjeld er på 200.000,-
+
+```{r, echo=F, eval=F}
+#1. Beregne vektene (markedsverdi) for egenkapital og gjeld
+beta_E <- 0.90
+beta_G <- 0.20
+r_f <- 0.025
+Er_m <- 0.05+0.025
+ant_aksj <- 200
+E <- 1500*200
+G <- 200000
+t <- 0.15
+vec_var <- list(E=E,G=G,r_f=r_f,Er_m=Er_m,beta_E=beta_E,beta_G=beta_G,t=t)
+w_E <- eval(parse(text='E/(E+G)'),vec_var)
+w_G <- eval(parse(text='G/(E+G)'),list(E=E))
+k_E <- eval(parse(text='r_f+beta_E*(Er_m-r_f)'),list(E=E))
+k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
+k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
+100000/(k_T)
+#(100000/(k_E))/ant_aksj
+```
+
+1. Basert på disse opplysningene, klarer du å finne totalkapitalkostnaden til selskapet?
+<div class="solution">
+Framgangsmåte for å bestemme totalkapitalkostnaden til et selskap <br>
+(1): Beregne vektene (markedsverdi) for egenkapital og gjeld
+$$
+w_E=\frac{300000}{300000+200000}=0.6\\ 
+w_G=\frac{200000}{300000+200000}=0.4
+$$
+(2): Kapitalkostnad for egenkapital
+$$
+k_E=r_f+\beta_E[E(r_m) - rf]= 0.025+0.90[0.05] = 0.07
+$$
+(3): Kapitalkostnad for gjeld
+$$
+k_G=r_f+\beta_G[E(r_m) - rf] = 0.025+0.20[0.05]= 0.035 
+$$
+(4): Totalkapitalkostnad for selskapet
+$$
+k_T= k_Ew_E + k_G(1-s)w_G = 0.07\cdot 0.6 + 0.035\cdot (1-0.15)\cdot 0.4  = 0.0539
+$$
+</div>
+
+2. Dersom selskapet framover anslås å ha en evigvarende driftsresultat (OFR) på 100.000,-, hva er verdien til selskapet i dag?
+<div class="solution">
+Uten skatt
+$$
+NV =\frac{100.000}{0.0539}=1855288
+$$
+Med skatt (helt korrekt)
+$$
+NV =\frac{(1-0.15)100.000}{0.0539}=1576.994
+$$
+</div>
+
+## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
+
+```{r include=FALSE}
+y <- 3
+n <- 1
+T <- y*n
+M <- 5000
+r_k <- 0.07
+r <- 0.06
+# [1] 7440.939
+one <- M*r_k/(1+r)^1
+two <- M*r_k/(1+r)^2
+thr <- M*r_k/(1+r)^3
+P_o <- M/(1+0.06)^T
+one+two+thr+P_o
+# [1] 8396.193
+```
+
+
+### Obligasjoner
+
+En obligasjon med 2 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.03$. 
+
+1. Beregn prisen for en ordinær obligasjon.
+<div class="solution">
+\begin{equation}
+P_0= \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + \frac{Mr_k/n}{(1+r/n)^{3}}+\frac{M}{(1+r/n)^3}= \\
+\frac{350}{1+0.06}+\frac{350}{(1+0.06)^2}+\frac{350}{(1+0.06)^3}+\frac{5000}{(1+0.06)^3}=5133.651
+\end{equation}
+</div>
+
+
+En null-kupong-obligasjon med 4 år til forfall har pålydende 5.000,- med årlig effektiv rente $r=0.025$. 
+
+```{r, eval=T, echo=F} 
+T <- 4
+M_o <- 5000
+r <- 0.025
+M_o/(1+r)^T
+```
+
+
+1. Beregn prisen for null-kupong rente obligasjonen 
+<div class="solution">
+Null-kupong obligasjoner (dvs. uten periodevise utbetalinger)
+\begin{equation}
+P_0=\frac{M}{(1+r)^T}=\frac{5000}{(1+0.025)^4}= 4529.753
+\end{equation}
+</div>
+
+### Rentens terminstruktur
+
+Den kortsiktige spotrenten, $_0r_1$, for ett år fram i tid er på 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger
+
+```{r echo=FALSE}
+Mv <- c(500,500,500)
+P1 <-500/(1+0.015)
+P2 <-500/(1+0.015)^2
+P3 <-500/(1+0.015)^3
+stats_df <- data.frame(lopetid=c(2,3),
+		       M=Mv[2:3],
+		       p=c(480,465)
+		       )
+r01 <- 0.015
+r02 <- (500/480)^(1/2)
+# [1] 1.020621
+r03 <- (500/465)^(1/3)
+# [1] 1.024485
+P2 <-500/(r02)^2
+# [1] 480
+P3 <-500/(r03)^3
+# [1] 465
+f01 <- r01
+f12 <- (two^2/one)-1
+# [1] 0.02627083
+f23 <- (thr)^3/(two)^1-1
+# [1] 0.05354398
+kableExtra::kbl(stats_df,col.names=c("Løpetid ","Pålydende ","Markedspris")) %>% kableExtra::kable_classic_2(full_width = F)
+```
+
+Fra læreboka har vi at termin-/forwardrenten for periode $t$ er bestemt ved 
+
+\begin{equation}
+_{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
+\end{equation}
+
+1. Hvilken sentral forutsetning ligger til grunn for at dette uttrykket holder ved likhet?
+<div class="solution">
+Vi har her som utgangspunkt at en investor er *indifferent* mellom to alternative lån med samme sluttverdi.
+</div>
+1. Beregn terminrenten (forwardrenten) for 2 og 3 år framover i tid.
+<div class="solution">
+$$
+1+_0r_1=1.015
+$$
+Løser formelen for null-kupong obligasjoner mph. effektiv rente. Det gjør at vi kan finne
+$$
+1+_0r_2=(500/480)^{1/2}=`r (500/480)^(1/2)`
+$$
+og 
+$$
+1+_0r_3=(500/465)^{1/3}=`r (500/465)^(1/3)`
+$$
+*Terminrente periode 2*
+$$
+_{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 = 
+\frac{(1.005038)^2}{(1.015)^1}-1=`r 0.02627083`
+$$
+*Terminrente periode 3*
+$$
+_{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
+=\frac{(1.003356)^3}{(1.005038)^2}-1=`r 0.05354398`
+$$
+</div>
+1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.
+1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
+<div class="solution">
+```{r echo=FALSE, eval=F}
+f12
+# [1] 0.02627083
+f23
+# [1] 0.05354398
+plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
+```
+</div>
+<div class="solution">
+</div>
+
+## Oppgave 6: OPA og økt gjeldsgrad
+
+Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer, noe som innebærer en reduksjons i antall aksjonærer. Forutsatt en M&M-verden uten skatt og med usikre investeringsprosjekter. Tilhørende overskudd per aksje (OPA), forklar hva som skjer med:
+
+a. Forventet OPA
+
+<div class="solution">
+Vil øke fordi OPA vil stige når OER deles på færre aksjonærer.
+</div>
+
+b. Usikkerheten til OPA 
+
+<div class="solution">
+Økt usikkerhet (totalrisiko) fordi spredningen til OPA vil øke.
+</div>
+
+c. OPA i gode og dårliger tider
+
+<div class="solution">
+OPA vil gjennomgående bli bedre i gode og reduseres i dårlige tider.
+</div>
+
+# Del II: Porteføljeutregninger ved bruk av regnearket
+
+Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
+
+## Enkeltinvesteringer
+
+**Deskriptiv statistikk**
+
+1. Lag en tidsserie som viser avkastningen for de to kryptovalutaene og New York børsen (NYSE). 
+1. For hver enkelt tidsserie beregn:
+	1. Gjennomsnittlig avkastning
+	1. Varians
+	1. Standardavvik
+	1. Høyeste og laveste verdi
+
+**Grafisk visning**
+
+1. For hver enkelt tidsserie lag et scatterplot (x-aksen dager, y-aksen avkastning i prosent)
+
+**Økonomisk tolkning**
+
+Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme observasjoner du finner i tidsserien?
+<div class="solution">
+Løsning her
+</div>
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
+## Porteføljesammensetninger
+
+**Deskriptiv statistikk**
+
+1. Opprett et datasett som inneholder data kun over de tidsperiodene  hvor det er registrert observasjoner for *alle* de tre tidsseriene
+1. Basert på dette datasettet beregn:
+	1. Gjennomsnittlig avkastning
+	2. Varians
+	3. Standardavvik
+	4. Korrelasjonskoeffisienten mellom de tre investeringsobjektene
+
+**Grafisk visning**
+
+1. Lag et scatterplot for hver ulike kombiversjonen av de tre investeringsobjektene (x-akse avkastning det ene objektet, y-aksen avkastning det andre objektet). Forsøk også få inn regresjonslinjen som oppsummerer graden av samvariasjon mellom de to objektene. 
+
+**Porteføljeanalyse**
+
+1. Basert på at brukeren selv kan justere porteføljevektene, lag en tabell i regnearket som viser utregningene av
+```{r, echo=F}
+radm <- c("BTC","ETH","NSE","BTC og ETH", "BTC og NSE", "BTC, ETH og NSE")
+lr <- length(radm)
+fi <- rep("Beregn",lr)
+df_portf <- data.frame(var=fi, std=fi) 
+htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføljen",header=c("Porteføljens varians","Porteføljens standardavvik"))
+```
+
+1. Ved flere investeringsobjekter har du lært i dette kurset at porteføljerisikoen kan forklares av to komponenter: (1) usystematisk-risiko (2) for systematisk-risiko. Førstnevnte vil vanligvis reduseres når antall objekter som inngår i porteføljen øker.
+	1. Hvordan stemmer dette resultat overens med de beregningene som du har utført her?
+  <div class="solution">
+  Løsning her
+  </div>
+  1. Hvilke sentrale faktorer tror du kan være utslagsgivende for de resultatene du har kommet fram til?
+  <div class="solution">
+  Løsning her
+  </div>
+
+## Oppgave 6
+
+
+```{r include=FALSE}
+knitr::knit_exit()
+```
+Exam_SFB30820_Finansteori_H2021.Rmd
+
