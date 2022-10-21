@@ -2738,6 +2738,8 @@ $$
 800(1-0.25)+500-500 = 600
 $$
 
+Dvs. uten gjeld, endres overskuddet (O) fra tabell 8.1 fra 525 til 600.
+
 ---
 
 ## Ettledsbeskatning
@@ -2872,7 +2874,7 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 	- $Skattenøytralitet:$ $n^*=(1-s_K)-(1-s_S)(1-s_E)=(1-0.25)-(1-0.25)(1-0.14)$ = 0.105
 	- $dvs. gjeldsfavorieserende$
 
-Det norske skattesystemet (basert på tall fra 2016) gir moderate incentiver til å finansiere med gjeld
+Det norske skattesystemet (basert på tall fra 2016) gir moderate incentiver til å finansiere med gjeld.
 
 ---
 
@@ -3004,7 +3006,7 @@ knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
 
 
-```{r}
+```{r, eval=F}
 knitr::knit_exit()
 ```
 
@@ -3340,6 +3342,11 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 - $n^{*}_d<0$ Tilbakepløying skattefavoriseres 
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
+
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 ---
 

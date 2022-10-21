@@ -375,10 +375,6 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 1. $k_T=w_Ek_E + w_Gk_G(1-s)$
 1. $\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}$
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
-
 ## Lintner-modellen
 
 \begin{equation}
@@ -386,6 +382,11 @@ DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
 \end{equation}
 
 Hvor både $a$ (justeringsfaktor) og $b$ (målsatt utdelingsforhold) kan variere mellom 0 og 1.
+
+
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 
 
 ## Opsjonens kontantstrøm ved forfall (t=T)
