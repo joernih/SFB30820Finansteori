@@ -477,15 +477,11 @@ if (window.hljs) {
 
 
 <style type="text/css">.pagebreak { page-break-before: always; }
-.symboler{
-zoom: 80%;
-color: black;
-page-break-before: always;
-}
 .solution {
 font-weight: bold;
-color: blue;
-font-size: 100% ;
+color: white;
+zoom: 0%;
+font-size: 0% ;
 }
 </style>
 
@@ -605,9 +601,11 @@ pre code {
 <div id="obligatorisk-arbeidskrav" class="section level2">
 <h2>Obligatorisk arbeidskrav</h2>
 <ul>
-<li>Versjon 1.1
+<li>Versjon 1.2
 <ul>
 <li>Oppgave 3. Nytt spørsmål lagt til.</li>
+<li>Lagt til en <em>frivillig</em> ekstraoppgave under del II om
+porteføljesammensetninger.</li>
 </ul></li>
 <li>Leveres ut (hele): 28.09.2022 (Canvas)</li>
 <li>Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle på
@@ -615,7 +613,8 @@ Remmen)</li>
 </ul>
 </div>
 <div id="del-i-generelle-forståelse-og-tradisjonelle-oppgaver" class="section level1">
-<h1>Del I: Generelle forståelse og tradisjonelle oppgaver</h1>
+<h1><strong>Del I: Generelle forståelse og tradisjonelle
+oppgaver</strong></h1>
 <div id="oppgave-1-generell-forståelse-forsøk-svar-så-kortfattet-og-presist-som-mulig" class="section level2">
 <h2>Oppgave 1: Generell forståelse (forsøk svar så kortfattet og presist
 som mulig)</h2>
@@ -1087,7 +1086,8 @@ hva som skjer med:</p>
 </ol>
 </div>
 <div id="del-ii-porteføljeutregninger-ved-bruk-av-regnearket" class="section level2">
-<h2>Del II: Porteføljeutregninger ved bruk av regnearket</h2>
+<h2><strong>Del II: Porteføljeutregninger ved bruk av
+regnearket</strong></h2>
 <p>Basert på vedlagte regnearket <strong>cryptos_nyse.xlsx</strong> som
 viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium
 (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre
@@ -1118,6 +1118,118 @@ ekstreme observasjoner du finner i tidsserien?
 <div class="solution">
 <p>Løsning her</p>
 </div>
+</div>
+<div id="porteføljesammensetninger-bonus-oppgave-til-de-spesielt-interesserte" class="section level2">
+<h2>Porteføljesammensetninger (bonus oppgave til de spesielt
+interesserte)</h2>
+<p><strong>Deskriptiv statistikk</strong></p>
+<ol style="list-style-type: decimal">
+<li>Opprett et datasett som inneholder data kun over de tidsperiodene
+hvor det er registrert observasjoner for <em>alle</em> de tre
+tidsseriene</li>
+<li>Basert på dette datasettet beregn:
+<ol style="list-style-type: decimal">
+<li>Gjennomsnittlig avkastning</li>
+<li>Varians</li>
+<li>Standardavvik</li>
+<li>Korrelasjonskoeffisienten mellom de tre investeringsobjektene</li>
+</ol></li>
+</ol>
+<p><strong>Grafisk visning</strong></p>
+<ol style="list-style-type: decimal">
+<li>Lag et scatterplot for hver ulike kombiversjonen av de tre
+investeringsobjektene (x-akse avkastning det ene objektet, y-aksen
+avkastning det andre objektet). Forsøk også få inn regresjonslinjen som
+oppsummerer graden av samvariasjon mellom de to objektene.</li>
+</ol>
+<p><strong>Porteføljeanalyse</strong></p>
+<ol style="list-style-type: decimal">
+<li>Basert på at brukeren selv kan justere porteføljevektene, lag en
+tabell i regnearket som viser utregningene av
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid grey; font-weight: 900; border-top: 2px solid grey; text-align: center;">
+Sammensetning av porteføljen
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Porteføljens varians
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Porteføljens standardavvik
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">
+BTC
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+ETH
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+NSE
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+BTC og ETH
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+BTC og NSE
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+<td style="text-align: center;">
+Beregn
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 2px solid grey; text-align: left;">
+BTC, ETH og NSE
+</td>
+<td style="border-bottom: 2px solid grey; text-align: center;">
+Beregn
+</td>
+<td style="border-bottom: 2px solid grey; text-align: center;">
+Beregn
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
 </div>
 </div>
 

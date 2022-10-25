@@ -3,15 +3,15 @@ title: "Finansteori (SFB30820), Høsten 2022"
 output:
   #html_notebook:
   html_document:
-    css: css/ON.css
+    css: css/OFF.css
 ---
 
 ## Obligatorisk arbeidskrav
-- Versjon 1.1
+- Versjon 1.2
   - Oppgave 3. Nytt spørsmål lagt til.
+  - Lagt til en *frivillig* ekstraoppgave under del II om porteføljesammensetninger.
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 26.10.2022 (Canvas og/eller postkassehylle på Remmen)
-
 
 ```{r eval=T, echo=F, warning=F, message=F}
 library(htmlTable)
@@ -28,7 +28,7 @@ system("brave arbeidskrav2022_F.html")
 #servr::httw()
 ```
 
-# Del I: Generelle forståelse og tradisjonelle oppgaver
+# **Del I: Generelle forståelse og tradisjonelle oppgaver**
 ## Oppgave 1: Generell forståelse (forsøk svar så kortfattet og presist som mulig)
 
 (1) Forklare forskjellen mellom nåverdiutrykkene som benyttes for med og uten usikkerhet.
@@ -426,7 +426,7 @@ a. Forventet OPA
 b. Usikkerheten til OPA 
 c. OPA i gode og dårliger tider
 
-## Del II: Porteføljeutregninger ved bruk av regnearket
+## **Del II: Porteføljeutregninger ved bruk av regnearket**
 
 Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
@@ -452,11 +452,7 @@ Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme 
 Løsning her
 </div>
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-## Porteføljesammensetninger
+## Porteføljesammensetninger (bonus oppgave til de spesielt interesserte)
 
 **Deskriptiv statistikk**
 
@@ -482,6 +478,13 @@ df_portf <- data.frame(var=fi, std=fi)
 htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføljen",header=c("Porteføljens varians","Porteføljens standardavvik"))
 ```
 
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
+## Oppgave 6
+
 1. Ved flere investeringsobjekter har du lært i dette kurset at porteføljerisikoen kan forklares av to komponenter: (1) usystematisk-risiko (2) for systematisk-risiko. Førstnevnte vil vanligvis reduseres når antall objekter som inngår i porteføljen øker.
 	1. Hvordan stemmer dette resultat overens med de beregningene som du har utført her?
   <div class="solution">
@@ -491,9 +494,6 @@ htmlTable::htmlTable(df_portf, rnames=radm, rowlabel="Sammensetning av porteføl
   <div class="solution">
   Løsning her
   </div>
-
-## Oppgave 6
-
 
 ```{r include=FALSE}
 knitr::knit_exit()
