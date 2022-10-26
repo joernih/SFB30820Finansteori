@@ -22,7 +22,7 @@ Oppgave 1
 
 [Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
 
-[Eksamen 2021 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
+[Eksamen 2021 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021_losningsforslag_JIH.pdf)
 
 [Eksamen 2022 kontinuasjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Exam_SFB30820_Finansteori_C_S2022.pdf)
 
