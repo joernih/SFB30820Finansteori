@@ -16,10 +16,10 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ## Forelesning #7: [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/7_Gjeldsgrad_og_risiko.pdf)
 ## Forelesning #8: [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
 ## Forelesning #9: [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
+## Forelesning #10: [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/10_Dividende.pdf)
 
 <!--
 
-## [`r tema[6]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/6_Langsiktige_finansieringsformer.pdf)
 ## [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/7_Gjeldsgrad_og_risiko.pdf)
 ## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
 ## [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/11_Dividende.pdf)
