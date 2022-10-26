@@ -33,6 +33,8 @@ navbar:
         href: "articles/presentations.html#141" 
       - text: "#10: Dividende"
         href: "articles/presentations.html#163" 
+      - text: "#11: Opsjoner"
+        href: "articles/presentations.html#187" 
       href: "articles/presentations.html" 
     - text: "Formelsamling"
       href: "articles/formler.html"

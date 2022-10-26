@@ -384,10 +384,6 @@ DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
 Hvor både $a$ (justeringsfaktor) og $b$ (målsatt utdelingsforhold) kan variere mellom 0 og 1.
 
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
-
 
 ## Opsjonens kontantstrøm ved forfall (t=T)
 

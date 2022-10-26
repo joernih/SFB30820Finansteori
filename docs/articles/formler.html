@@ -92,6 +92,9 @@
     <li>
       <a href="../articles/presentations.html#163">#10: Dividende</a>
     </li>
+    <li>
+      <a href="../articles/presentations.html#187">#11: Opsjoner</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -542,6 +545,68 @@ DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
 og <span class="math inline">\(b\)</span> (målsatt utdelingsforhold) kan
 variere mellom 0 og 1.</p>
 </div>
+<div class="section level3">
+<h3 id="opsjonens-kontantstrøm-ved-forfall-tt">Opsjonens kontantstrøm ved forfall (t=T)<a class="anchor" aria-label="anchor" href="#opsjonens-kontantstr%C3%B8m-ved-forfall-tt"></a>
+</h3>
+<p>Kjøpsopsjon <span class="math display">\[\begin{equation}
+K_T = \text{max}[0,(A_T-I)]
+\end{equation}\]</span></p>
+<p>Salgsopsjon <span class="math display">\[\begin{equation}
+S_T = \text{max}[0,(I-A_T)]
+\end{equation}\]</span></p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="opsjon-aksje-og-risikofritt-prosjekt">Opsjon, aksje og risikofritt prosjekt<a class="anchor" aria-label="anchor" href="#opsjon-aksje-og-risikofritt-prosjekt"></a>
+</h3>
+<p>Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres
+parvis slik at den blir gitt den samme kontantstrømmen på
+innløsningstidspunktet.</p>
+<p><span class="math display">\[\begin{equation*}
+A_T+S_T=B_T+K_T
+\end{equation*}\]</span></p>
+</div>
+<div class="section level3">
+<h3 id="salg-kjøp-paritet-skp">Salg-kjøp-paritet (SKP)<a class="anchor" aria-label="anchor" href="#salg-kj%C3%B8p-paritet-skp"></a>
+</h3>
+</div>
+</div>
+<div class="section level2">
+<h2 id="bestemmelse-av-opsjonsverdi-før-forfall">Bestemmelse av opsjonsverdi før forfall<a class="anchor" aria-label="anchor" href="#bestemmelse-av-opsjonsverdi-f%C3%B8r-forfall"></a>
+</h2>
+<p><span class="math display">\[\begin{equation}
+K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]
+\end{equation}\]</span></p>
+<p>Hvor de to <em>sikringssannsynlighetene</em> (risikojusert
+sannsynligheter) for <span class="math inline">\(q\)</span> og <span class="math inline">\(1-q\)</span> er definert som <span class="math display">\[\begin{equation*}
+q=\frac{1+r_f-n}{\theta-n} \text{ og }
+(1-q)=\frac{\theta-1-r_f}{\theta-n}
+\end{equation*}\]</span></p>
+</div>
+<div class="section level2">
+<h2 id="black-scholes-modellen">Black-Scholes-modellen<a class="anchor" aria-label="anchor" href="#black-scholes-modellen"></a>
+</h2>
+<p><span class="math display">\[\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)
+\end{equation}\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(N(d_1)\)</span> har tolkning som antall
+kroner opsjonsverdien endrer seg med når aksjeprisen endres med en
+krone</li>
+<li>
+<span class="math inline">\(N(d_2)\)</span> har tolkning som
+sannsynligheten for at opsjonen er “in-the-money” ved forfall (dvs.
+<span class="math inline">\(A_T \geq I\)</span> )</li>
+</ul>
+<p>Vi har videre at</p>
+<p><span class="math display">\[\begin{equation}
+d_1=\frac{ln(\frac{A_0}{I})+i_fT}{\sigma\sqrt{T}}+\frac{1}{2}\sigma\sqrt{T}
+\\
+d_2=d_1 -\sigma\sqrt{T}
+\end{equation}\]</span></p>
+<p>mens sikringsforholdet er bestemt av <span class="math inline">\(m =
+\frac{1}{N(d_1)}\)</span></p>
 </div>
   </div>
 
