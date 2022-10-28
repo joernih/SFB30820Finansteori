@@ -7,7 +7,7 @@
 
 # Nyheter
 
-<br>
+<br> Satt siste frist for arbeidskravet til søndag (30.10) før midnatt.
 
 # Pensum
 
@@ -20,4 +20,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-10-26 11:56:55**
+**Siste gang oppdatert: 2022-10-28 10:46:20**

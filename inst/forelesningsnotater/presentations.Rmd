@@ -3156,11 +3156,15 @@ htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
 
 **Øvelse:** Ved bruk av Lintner-modellen, se om du klarer å replikere tallene som er oppgitt i tabellen.
 
+Svar:
+
+
+
 ```{r, echo=F}
-nu <- 100*0.3
-en <- 120*0.3*0.6 + nu-0.6*nu
-to <- 150*0.3*0.6 + en-0.6*en
-tr <- 80*0.3*0.6 + to-0.6*to
+2013 <- 100*0.3
+2014 <- 120*0.3*0.6 + nu-0.6*nu
+2015 <- 150*0.3*0.6 + en-0.6*en
+2016 <- 80*0.3*0.6 + to-0.6*to
 ```
 
 ---
