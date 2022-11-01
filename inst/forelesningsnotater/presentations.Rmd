@@ -43,10 +43,11 @@ filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
-#servr::daemon_stop()
-### Tasks
-#* kursiv svar
-#* N.1.4
+# Flytte Einar Aas
+```
+
+```{r, echo=F, eval=F}
+knitr::knit_exit()
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -3161,10 +3162,10 @@ Svar:
 
 
 ```{r, echo=F}
-2013 <- 100*0.3
-2014 <- 120*0.3*0.6 + nu-0.6*nu
-2015 <- 150*0.3*0.6 + en-0.6*en
-2016 <- 80*0.3*0.6 + to-0.6*to
+#2013 <- 100*0.3
+#2014 <- 120*0.3*0.6 + nu-0.6*nu
+#2015 <- 150*0.3*0.6 + en-0.6*en
+#2016 <- 80*0.3*0.6 + to-0.6*to
 ```
 
 ---
@@ -3402,7 +3403,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 ---
 
 ### Eksempler på opsjoner på forskjellige eiendeler
-              -
+
 - **Aksjeopsjoner** (vi skal først se på verdsettingen av disse)
 - Konvertible obligasjoner
 - Valutakursopsjoner
@@ -3419,7 +3420,7 @@ Standardisering og børsnotering av opsjonskontrakter fordelaktig fordi det øke
 Aksjeopsjoner på Oslø børs er standardisert ved at
 
 - Består av: *Aksjeopsjoner (amerikanske) og indeksopsjoner (europeiske)*
-- Kontraktstørrelse: *En opsjon gir rett til 100 aksjer*
+- Kontraktstørrelse: *Én opsjon gir rett til 100 aksjer*
 - Minimumskrav til handel: *10 kontrakter*
 
 For å forenkle den modelltekniske framstillingen, ser vi framover kun på *europeiske opsjoner* hvor det ikke er satt noe minimumskrav til handel. I tillegg ser vi også bort *beskatning*, *transaksjonskostnader* og *vanlig meglerkurtasje*.
@@ -3455,9 +3456,9 @@ S_T = \text{max}[0,(170-151.50)] = 18.50
 
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-67.png"))
+#[Kraftinvestor Einar Aas](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
 ```
 
-[Kraftinvestor Einar Aas](https://www.nettavisen.no/okonomi/agderposten-einar-aas-far-tilbake-200-millioner-kroner/s/12-95-3423885736)
 
 ---
 
@@ -3503,6 +3504,8 @@ knitr::include_graphics(c("pensum/figurer-69.png"))
 
 ---
 
+### Diskret tid
+
 Vi har at investeringsutlegget på $t=0$ er en kjøp av en aksje, kjøp av salgsopsjon, og salg av en kjøpsopsjon. Dette må tilsvare den neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall
 \begin{equation*}
 A_0+S_0-K_0 = \frac{I}{1+r_f}
@@ -3513,6 +3516,8 @@ Omskrevet gir dette oss salg-kjøp-paritet (SKP)
 K_0-S_0=A_0-\frac{I}{1+r_f}
 \end{equation*}
 Forskjellen mellom kjøps og salgsopsjonens verdi er lik differansen mellom aksjens verdi og nåverdi av innløsningskursen.
+
+---
 
 ### Kontinuerlig forrentning
 
@@ -3561,7 +3566,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 Fra Tabell 12.1 i lærebok finner vi at 
 
 - Verdien av kjøpsopsjon avtar med økende innløsningskurs (motsatt for salgsopsjoner)
-- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi [(lenke her for egenksapene ved en random walk prosess modeller)](https://people.duke.edu/~rnau/411rand.htm)
+- Verdien av kjøpsopsjon avhenger av kontraktstiden: Lengre kontraktstid økt verdi [(lenke her for egenkskapene ved en random walk prosess modeller)](https://people.duke.edu/~rnau/411rand.htm)
 
 ---
 
@@ -3703,12 +3708,12 @@ K_0 = \frac{1}{1+0.01}[0.4\cdot 95+0.6\cdot 0] = 37.62
 
 *Kontroll 1: Nettoinvesteringen i sikringsporteføljen*
 \begin{equation*}
-K_0 = 620 -2.61\cdot 37.62 = 521.80
+A_0-m\cdot K = 620 -2.61\cdot 37.62 = 521.80
 \end{equation*}
 
 *Kontroll 2: Sikringsporteføljens avkastning*
 \begin{equation*}
-K_0 = \frac{527}{521.80}-1 = 0.01
+r = \frac{527}{521.80}-1 = 0.01
 \end{equation*}
 
 *Konklusjon:* Kjøpsopsjonen må være riktig priset fordi den risikofrie sikringsporteføljen gir avkastning lik risikofri rente.
@@ -3998,7 +4003,7 @@ Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere
 
 
 ```{r, echo=T}
-knitr::knit_exit()
+#knitr::knit_exit()
 ```
 
 ---
