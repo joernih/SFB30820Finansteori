@@ -26,7 +26,7 @@ Oppgave 1
 
 [Eksamen 2022 kontinuasjon](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Exam_SFB30820_Finansteori_C_S2022.pdf)
 
-[Eksamen 2022 kontinuasjon (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021_losningsforslag_JIH.pdf)
+[Eksamen 2022 kontinuasjon (løsningsforslag: oppdatert versjon kommer snart)]()
 
 [Eksamen 2020](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 

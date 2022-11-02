@@ -7,7 +7,7 @@ output: github_document
 ```{r, echo=F, message=F, warning=F}
 library(kableExtra)
 library(dplyr)
-forel <- 12
+forel <- 13
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 timeplan <- df1
 #htmlTable::htmlTable(df1)
@@ -16,6 +16,4 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 ```
 
 **Eksamen (4-timers skriftlig eksamen) avholdes den 12.12.2022**
-
-
 

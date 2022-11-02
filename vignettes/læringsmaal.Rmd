@@ -84,11 +84,6 @@ abstract: ''
 - Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-
 # Læringsmål kapittel 13
 - Begrunne hvorfor risikostyring kan være viktig.
 - Redgjøre for viktige risikokilder.
