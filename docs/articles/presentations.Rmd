@@ -3159,13 +3159,23 @@ htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
 
 Svar:
 
-
-
 ```{r, echo=F}
-#2013 <- 100*0.3
-#2014 <- 120*0.3*0.6 + nu-0.6*nu
-#2015 <- 150*0.3*0.6 + en-0.6*en
-#2016 <- 80*0.3*0.6 + to-0.6*to
+a2013 <- 100*0.3
+a2014 <- 120*0.3*0.6 + nu-0.6*nu
+a2015 <- 150*0.3*0.6 + en-0.6*en
+a2016 <- 80*0.3*0.6 + to-0.6*to
+```
+```{r, echo=F}
+a2013
+```
+```{r, echo=F}
+a2014
+```
+```{r, echo=F}
+a2015
+```
+```{r, echo=F}
+a2016
 ```
 
 ---
@@ -3551,7 +3561,7 @@ htmlTable(df_prosj_kont, header=c("Faktor","Kjøpsopsjon","Salgsopsjon"))
 Tre betingelser
 
 1. Nedre betingelse: $K_0 \geq 0$
-1. Øvre betingelse: $K_0 \leq A_0$
+1. Øvre betingelse: $K_0 \leq A_0$ (ikke høyere enn aksjens verdi)
 1. Verdibetingelse: $K_0 \geq A_0-I$ (ikke lavere verdi enn øyeblikkelig innløsning)
 
 
