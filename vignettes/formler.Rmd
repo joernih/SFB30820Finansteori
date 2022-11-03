@@ -407,7 +407,27 @@ Aksjer, obligasjoner, og kjøps- og salgsopsjoner kan kombineres parvis slik at 
 A_T+S_T=B_T+K_T
 \end{equation*}
 
-## Salg-kjøp-paritet (SKP)
+### Salg-kjøp-paritet (SKP)
+
+- Diskret tid
+
+Vi har at investeringsutlegget på $t=0$ er en kjøp av en aksje, kjøp av salgsopsjon, og salg av en kjøpsopsjon. Dette må tilsvare den neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall
+
+\begin{equation*}
+A_0+S_0-K_0 = \frac{I}{1+r_f}
+\end{equation*}
+
+Omskrevet gir dette oss salg-kjøp-paritet (SKP)
+\begin{equation*}
+K_0-S_0=A_0-\frac{I}{1+r_f}
+\end{equation*}
+
+- Kontinuerlig forrentning
+
+I opsjonssammenheng er det vanlig å operer med *kontinuerlig tid*. For eks. kan en tre-måneders periode deles inn i uendelige mange underperioder. Den kontinuerlige diskonteringsrenten vil da være gitt ved $e^{-i_f\cdot T}$
+\begin{equation*}
+K_0-S_0=A_0-Ie^{-i_f\cdot T}
+\end{equation*}
 
 # Bestemmelse av opsjonsverdi før forfall
 

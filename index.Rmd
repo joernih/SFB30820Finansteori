@@ -47,7 +47,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 
 # Nyheter
 <br>
-Satt siste frist for arbeidskravet til søndag (30.10) før midnatt.
+
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)

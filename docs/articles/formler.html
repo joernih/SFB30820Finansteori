@@ -93,7 +93,10 @@
       <a href="../articles/presentations.html#163">#10: Dividende</a>
     </li>
     <li>
-      <a href="../articles/presentations.html#187">#11: Opsjoner</a>
+      <a href="../articles/presentations.html#188">#11: Opsjoner</a>
+    </li>
+    <li>
+      <a href="../articles/presentations.html#229">#12: Risikostyring</a>
     </li>
   </ul>
 </li>
@@ -565,10 +568,31 @@ innløsningstidspunktet.</p>
 <p><span class="math display">\[\begin{equation*}
 A_T+S_T=B_T+K_T
 \end{equation*}\]</span></p>
+<div class="section level4">
+<h4 id="salg-kjøp-paritet-skp">Salg-kjøp-paritet (SKP)<a class="anchor" aria-label="anchor" href="#salg-kj%C3%B8p-paritet-skp"></a>
+</h4>
+<ul>
+<li>Diskret tid</li>
+</ul>
+<p>Vi har at investeringsutlegget på <span class="math inline">\(t=0\)</span> er en kjøp av en aksje, kjøp av
+salgsopsjon, og salg av en kjøpsopsjon. Dette må tilsvare den
+neddiskonterte verdien av den risikofrie kontantstrømmen ved forfall</p>
+<p><span class="math display">\[\begin{equation*}
+A_0+S_0-K_0 = \frac{I}{1+r_f}
+\end{equation*}\]</span></p>
+<p>Omskrevet gir dette oss salg-kjøp-paritet (SKP) <span class="math display">\[\begin{equation*}
+K_0-S_0=A_0-\frac{I}{1+r_f}
+\end{equation*}\]</span></p>
+<ul>
+<li>Kontinuerlig forrentning</li>
+</ul>
+<p>I opsjonssammenheng er det vanlig å operer med <em>kontinuerlig
+tid</em>. For eks. kan en tre-måneders periode deles inn i uendelige
+mange underperioder. Den kontinuerlige diskonteringsrenten vil da være
+gitt ved <span class="math inline">\(e^{-i_f\cdot T}\)</span> <span class="math display">\[\begin{equation*}
+K_0-S_0=A_0-Ie^{-i_f\cdot T}
+\end{equation*}\]</span></p>
 </div>
-<div class="section level3">
-<h3 id="salg-kjøp-paritet-skp">Salg-kjøp-paritet (SKP)<a class="anchor" aria-label="anchor" href="#salg-kj%C3%B8p-paritet-skp"></a>
-</h3>
 </div>
 </div>
 <div class="section level2">
