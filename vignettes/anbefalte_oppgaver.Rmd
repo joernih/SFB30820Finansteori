@@ -45,4 +45,3 @@ kableExtra::kbl(oppgaver, col.names=cn) %>% kableExtra::kable_paper(full_width =
 ```
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
 
-
