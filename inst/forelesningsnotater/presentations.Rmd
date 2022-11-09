@@ -4053,7 +4053,7 @@ Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 ## Hvorfor risikostyring?
 
-Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markeder vil typisk medføre:
+Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i *friksjonsfrie* markeder vil typisk medføre:
 - Forventet kontantstrøm blir den samme, men variansen reduseres 
 - Gitt at konkurrsansynligheten ikke endres, vil kun egenkapitalkostnaden endres
 - Dersom investorene er veldiversifiserte, vil dette kun øke selskapets verdi kun dersom risikostyring påvirker den systematiske risikoen
@@ -4132,7 +4132,7 @@ knitr::include_graphics(c("pensum/figurer-83.png"))
 
 Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale mellom to parter som gir kjøperen
 
-1. Plikt til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
+1. *Plikt* til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
 1. For en bestemt pris 
 1. Til et forhåndsbestemt fremtidig tidspunkt 
 
@@ -4146,7 +4146,7 @@ knitr::include_graphics(c("pensum/figurer-85.png"))
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
-1. Plikt til å kjøpe eller selge en bestemt (standardisert) eiendel 
+1. *Plikt* til å kjøpe eller selge en bestemt (standardisert) eiendel 
 1. For en bestemt pris (*innløsningskursen*)
 1. Til et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør (merk: clearingsselskapet gjør denne jobben) skjer i løpet av hele kontraktsperioden.
 
@@ -4170,7 +4170,7 @@ knitr::include_graphics(c("pensum/figurer-87.png"))
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
-1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
+1. *Rett* til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
 1. For en bestemt pris (*innløsningskursen*)
 1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
 
@@ -4178,7 +4178,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ## Swaps
 
-Swap, finansiell transaksjon der to aktører avtaler å bytte kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
+Swap, finansiell transaksjon der to aktører avtaler å *bytte* kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
 
 ```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-88.png"))
