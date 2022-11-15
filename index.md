@@ -7,6 +7,8 @@
 
 # Nyheter
 
+[Zoom lenke til onsdagens
+forelesning](https://hiof.zoom.us/j/63892645817?pwd=WmxGYlJBV2tpdUtaZ3NWeGtQTWt3UT09)
 <br>
 
 # Pensum
@@ -20,4 +22,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-09 13:37:47**
+**Siste gang oppdatert: 2022-11-15 10:38:37**
