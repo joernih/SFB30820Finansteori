@@ -46,7 +46,17 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-[Zoom lenke til onsdagens forelesning](https://hiof.zoom.us/j/63892645817?pwd=WmxGYlJBV2tpdUtaZ3NWeGtQTWt3UT09)
+- De to siste undervisningstimene i kurset blir både streamet, gjort opptak av og gjennomført fysisk på Campus
+  - [Zoom lenke til forelesning](https://hiof.zoom.us/j/63892645817?pwd=WmxGYlJBV2tpdUtaZ3NWeGtQTWt3UT09)
+- Onsdag 16.11: 
+  - Gjennomgang av Arbeidskrav
+  - Forslag til temaer for Bacheloroppgaven
+  - Spørsmål og svar (ikke opptak)
+- Onsdag 23.11: 
+  - Gjennomgang av forrige eksamensoppgave
+  - Gjennomgang av anbefalt oppgaver: (liste kommer snart)
+  - Tips til eksamen
+  - Spørsmål og svar (ikke opptak)
 <br>
 
 # Pensum 

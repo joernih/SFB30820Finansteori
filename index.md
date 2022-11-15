@@ -7,9 +7,19 @@
 
 # Nyheter
 
-[Zoom lenke til onsdagens
-forelesning](https://hiof.zoom.us/j/63892645817?pwd=WmxGYlJBV2tpdUtaZ3NWeGtQTWt3UT09)
-<br>
+-   De to siste undervisningstimene i kurset blir både streamet, gjort
+    opptak av og gjennomført fysisk på Campus
+    -   [Zoom lenke til
+        forelesning](https://hiof.zoom.us/j/63892645817?pwd=WmxGYlJBV2tpdUtaZ3NWeGtQTWt3UT09)
+-   Onsdag 16.11:
+    -   Gjennomgang av Arbeidskrav
+    -   Forslag til temaer for Bacheloroppgaven
+    -   Spørsmål og svar (ikke opptak)
+-   Onsdag 23.11:
+    -   Gjennomgang av forrige eksamensoppgave
+    -   Gjennomgang av anbefalt oppgaver: (liste kommer snart)
+    -   Tips til eksamen
+    -   Spørsmål og svar (ikke opptak) <br>
 
 # Pensum
 
@@ -22,4 +32,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-15 10:38:37**
+**Siste gang oppdatert: 2022-11-15 14:07:33**
