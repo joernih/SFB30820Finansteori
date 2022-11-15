@@ -461,9 +461,6 @@ Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for t
 **Økonomisk tolkning**
 
 Klarer du knytte noen økonomisk forklaringer tilhørende noen av mest ekstreme observasjoner du finner i tidsserien?
-<div class="solution">
-Løsning her
-</div>
 
 ## Porteføljesammensetninger (bonus oppgave til de spesielt interesserte)
 
