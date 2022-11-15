@@ -143,7 +143,7 @@ kableExtra::kbl(df_eks_gen,col.names=c("Tilstand ","Sannsynlighet ","Avkastning 
   <li>Vekter:<br>
   $w_b=4000/10000=0.4 \text{ } w_a=1-0.4=0.6$
   <li>Forventet avkastning:<br>
-  $E(r_p)$=0.6\cdot(0.11)+0.4\cdot (0.07) $=`r port_returns`$</li>
+  $E(r_p)=0.4\cdot 0.11+0.6\cdot 0.07=0.086$</li>
   <li>Varians:</li>
   Vi har først at
   $Kov(r_a,r_b)=0.5[(-0.1-0.11)(0.2-0.07)]+ 0.2[(0.5-0.11)(-0.3-0.07)] +0.3[(0.2-0.11)(0.1-0.07)]=`r cov_mat[1,2]`$
@@ -270,11 +270,11 @@ w_G=\frac{200000}{300000+200000}=0.4
 $$
 (2): Kapitalkostnad for egenkapital
 $$
-k_E=r_f+\beta_E[E(r_m) - rf]= 0.025+0.90[0.05] = 0.07
+k_E=r_f+\beta_E[E(r_m) - r_f]= 0.025+0.90[0.05] = 0.07
 $$
 (3): Kapitalkostnad for gjeld
 $$
-k_G=r_f+\beta_G[E(r_m) - rf] = 0.025+0.20[0.05]= 0.035 
+k_G=r_f+\beta_G[E(r_m) - r_f] = 0.025+0.20[0.05]= 0.035 
 $$
 (4): Totalkapitalkostnad for selskapet
 $$
@@ -284,6 +284,7 @@ $$
 
 2. Dersom selskapet framover anslås å ha en evigvarende driftsresultat (OFR) på 100.000,-, hva er verdien til selskapet i dag?
 <div class="solution">
+Med skatt
 $$
 NV =\frac{(1-0.15)100.000}{0.0539}=1576.994
 $$
@@ -319,8 +320,8 @@ En obligasjon med 2 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.0
 <div class="solution">
 \begin{equation}
 P_0= \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + \frac{Mr_k/n}{(1+r/n)^{3}}+\frac{Mr_k/n}{(1+r/n)^{4}}+\frac{M}{(1+r/n)^4}+= \\
-\frac{5000\cdot 0.05/2}{(1+0.03/2)}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^2}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^3}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^4}+\frac{5000}{(1+0.03/2)^4}=
-5192.71
+\frac{5000\cdot 0.05/2}{(1+0.03/2)}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^2}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^3}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^4}+\frac{5000}{(1+0.03/2)^4}=\\
+123.1527+121.3327+119.5396+117.773+4710.921=5192.719=5192.71
 \end{equation}
 </div>
 
@@ -356,18 +357,14 @@ stats_df <- data.frame(lopetid=c(2,3),
 		       p=c(480,465)
 		       )
 r01 <- 0.015
-r02 <- (500/480)^(1/2)
-# [1] 1.020621
-r03 <- (500/465)^(1/3)
-# [1] 1.024485
+r02 <- (500/480)^(1/2)-1
+r03 <- (500/465)^(1/3)-1
 P2 <-500/(r02)^2
-# [1] 480
 P3 <-500/(r03)^3
-# [1] 465
 f01 <- r01
-f12 <- (two^2/one)-1
+f12 <- (1+r02)^2/(1+r01)-1
 # [1] 0.02627083
-f23 <- (thr)^3/(two)^1-1
+f23 <- (1+r03)^3/(1+r02)-1
 # [1] 0.05354398
 kableExtra::kbl(stats_df,col.names=c("Løpetid ","Pålydende ","Markedspris")) %>% kableExtra::kable_classic_2(full_width = F)
 ```
@@ -407,27 +404,15 @@ _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
 $$
 </div>
 1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.
-1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
-
-```{r }
-plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
-```
-
 <div class="solution">
-
-```{r echo=FALSE, eval=T}
-f12
-# [1] 0.02627083
-f23
-# [1] 0.05354398
-plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
+```{r, echo=F}
+plot(x=c(1,2,3),y=c(f01,f12,f23), xlab="Periode", ylab="Rentenivå")
 ```
-[google spreadsheet](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit#gid=1266997759)
-
 </div>
 
+1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
 <div class="solution">
-ABC
+De kortsiktige rentene forventes å stige de to neste årene framover.
 </div>
 
 ## Oppgave 6: OPA og økt gjeldsgrad
@@ -436,20 +421,27 @@ Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer,
 
 a. Forventet OPA
 <div class="solution">
-A
+Forventet overskudd per aksje stiger i denne situasjonen, dette siden forventede overskuddet etter
+de økte faste renteutbetalingene vil måtte deles på færre aksjonærer.
 </div>
 b. Usikkerheten til OPA 
 <div class="solution">
-B
+En slik situasjon vil føre til at de økte faste renteutbetalingene vil gjøre at 
+overskudd per aksje vil få en større spredning og med det høyere usikkerhet.
 </div>
 c. OPA i gode og dårliger tider
 <div class="solution">
-C
+De økte faste renteutbetalingene vil gjøre at overskudd per aksje vil øke i gode tider (og motsatt i dårlige tider).
 </div>
 
 ## **Del II: Porteføljeutregninger ved bruk av regnearket**
 
 Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
+
+<div class="solution">
+[Løsningsforslag (lenke google spreadsheet)](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit#gid=1266997759)
+</div>
+
 
 ## Enkeltinvesteringer
 
