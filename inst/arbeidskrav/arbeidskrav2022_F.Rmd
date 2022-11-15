@@ -33,24 +33,21 @@ system("brave arbeidskrav2022_F.html")
 
 (1) Forklare forskjellen mellom nåverdiutrykkene som benyttes for med og uten usikkerhet.
 <div class="solution">
-Med usikkerhet vil selve formen på nåverdiuttrykket være det samme som uten usikkerhet. Imidlertid vil 
-beregningene som utføres i teller og never være forskjellige. Med usikkerhet erstattes i telleren en sikker kontantstrøm av den forventede kontantstrømmen.
-I nevneren blir den risikofrie renten av risikojustert rente (kapitalkostnaden) som hensyntar både tidskostnaden og usikkerheten tilknyttet prosjektet.
+Med usikkerhet vil selve formen på nåverdiuttrykket være det samme som uten usikkerhet, men 
+beregningene som utføres i teller og never er forskjellige: (1) Under usikkerhet erstattes i telleren en sikker kontantstrøm av den forventede kontantstrømmen. (2) I nevneren blir den risikofrie renten av risikojustert rente (kapitalkostnaden) som hensyntar både tidskostnaden og usikkerheten tilknyttet prosjektet.
 </div>
 
 (2) Hva er forskjellen mellom forventet og realiserte verdi av en kontantstrøm?
 <div class="solution">
-Den forventede kontantstrømmen gir oss forventningsverdien til en usikre kontanstrømmen *før* usikkerheten har blitt realisert. Den realiserte verdien gis ett av utfallene 
-fra den usikre kontantstrømmen *etter* at usikkerheten har blitt realisert.
+Den forventede kontantstrømmen gir oss forventningsverdien til fordelingen til den usikre kontanstrømmen *før* usikkerheten har blitt realisert. Den realiserte verdien gir oss kontantstrømmen til et av utfallene *etter* at usikkerheten har blitt realisert.
 </div>
 
 (3) Ved vurdering av nye investeringprosjekter, forklar hvorfor det lett kan oppstå konflikt mellom forskjellige eiere i et selskap.
 <div class="solution">
 Med flere eiere vil man typisk kunne oppleve at man har både uderversifiserte og veldiversifiserte eiere. Konflikt kan da lett oppstå siden de udiversifiserte 
 ser forventet kontantstrøm fra det nye prosjektet i sammenheng med bedriftens allerede eksisterende kontantstrøm, mens de veldiversifiserte eierne
-ser forventet kontantstrøm fra det nye prosjektet i sammenheng med porteføljens eksisterende kontantstrøm
+ser forventet kontantstrøm fra det nye prosjektet i sammenheng med sin porteføljes eksisterende kontantstrøm.
 </div>
-
 (4) Hva menes med prosjektets eller aksjens beta?
 <div class="solution">
 Dette er et mål for prosjektet eller aksjens systematiske risiko. I utgangsunktet kan risikoen til et prosjekt eller aksje splittes opp i usystemtatiske og systematisk risiko, hvor
@@ -66,7 +63,7 @@ Hvor $\beta_j>1$ mer følsom enn markedsporteføljen, mens $\beta=1$ lik markeds
 (5) Gi en forklaring om mekanismene som ligger til grunn for Tofondsresultatet.
 <div class="solution">
 Tofondsresultatet går ut på at (1) Uansett graden av risikoaversjon, setter alle investorer sammen sin aksjeportefølje på nøyaktig samme måte. (2)
-Den enkelte investors risikoaversjon avgjør bare hvor mye som totalt skal satses på den risikable komponenten framfor den risikofrie. Resultat oppstår fordi
+Den enkelte investors risikoaversjon avgjør bare hvor mye eller hvor stor andel som totalt skal satses på den risikable komponenten framfor den risikofrie. Resultat oppstår fordi
 under antagelsen om risikoaversjon vil alltid en investor velge en kombiasjon av et risikofritt alternativ og den effisiente aksjeporteføljen M. Andre aksjeporteføljer medfører at
 investorene kostnadsfritt enten kan få sin risiko redusert og/eller få økt sin avkastning. 
 </div>
@@ -206,7 +203,7 @@ Vi har at $E(r_p)=wr_f+(1-w)E(r_m)$. <br>
 $0.42=w\cdot 0.02 + (1-w)\cdot 0.04$ <br>
 Som løst mhp. $w$ gir oss <br>
 $w=-19$ og $1-w=1+19=20$<br>
-Dette tilsvarer investeringsbeløp tilsvarerende $w=20\cdot 2.000.000=40.000.000$, hvor $38000000$ er som en følge av et risikofritt lån.
+Dette tilsvarer investeringsbeløp tilsvarerende $w=20\cdot 2.000.000=40.000.000$, hvor $38.000.000$ er som en følge av et risikofritt lån.
 </div>
 
 1. Lise Sparegris ønsker med god margin å sikre pensjonen sin. Ved bruk av samme porteføljeteori som Spetalen, hvordan vil hun fordele sine investeringer som forventet avkastning skal være på 2 prosent?
@@ -231,6 +228,11 @@ $Var(r_p)=0^2=0$ <br>
 </div>
 1. Hvilken forutsetning om finansiering må være oppfylt for at Spetalen kan gjennomføre sin strategi, og er det helt sikkert at han vil oppnå en høyere avkastning enn det som Lise sikter imot?
 
+<div class="solution">
+- Tilgang til banklån hvor utlånsrenten er den samme som innlånsrenten.
+- I forkant er det sannsynlig at han oppnår en høyere avkastning enn Lise, men det utelukker ikke at det er muligheter for at den realiserte verdien faktisk vil bli lavere. 
+</div>
+
 ## Oppgave 4: Kapitalverdimodellen og justert-nåverdi
 
 Frøken Permanent er et lite AS som holder til på Halden Storsenter. Selskapet har som har som spesialitet microblading permanent makeup av bryn.
@@ -254,6 +256,8 @@ k_G <- eval(parse(text='r_f+beta_G*(Er_m-r_f)'),list(E=E))
 k_T <- eval(parse(text='w_E*k_E+(1-t)*w_G*k_G'),list(E=E))
 100000/(k_T)
 #(100000/(k_E))/ant_aksj
+((1-0.15)*100.000)/0.0539
+# [1] 1576.994
 ```
 
 1. Basert på disse opplysningene, klarer du å finne totalkapitalkostnaden til selskapet?
@@ -280,11 +284,6 @@ $$
 
 2. Dersom selskapet framover anslås å ha en evigvarende driftsresultat (OFR) på 100.000,-, hva er verdien til selskapet i dag?
 <div class="solution">
-Uten skatt
-$$
-NV =\frac{100.000}{0.0539}=1855288
-$$
-Med skatt (helt korrekt)
 $$
 NV =\frac{(1-0.15)100.000}{0.0539}=1576.994
 $$
@@ -293,20 +292,22 @@ $$
 ## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
 
 ```{r include=FALSE}
-y <- 3
-n <- 1
+y <- 2
+n <- 2
 T <- y*n
 M <- 5000
-r_k <- 0.07
-r <- 0.06
+r_k <- 0.05
+r <- 0.03
 # [1] 7440.939
 one <- M*r_k/(1+r)^1
 two <- M*r_k/(1+r)^2
 thr <- M*r_k/(1+r)^3
-P_o <- M/(1+0.06)^T
-one+two+thr+P_o
-# [1] 8396.193
+fou <- M*r_k/(1+r)^4
+P_o <- M/(1+r)^T
+one+two+thr+fou+P_o
+# [1] 5470.247
 ```
+
 
 
 ### Obligasjoner
@@ -316,8 +317,9 @@ En obligasjon med 2 år til forfall har pålydende 5.000,-, kupongrente $r_k=0.0
 1. Beregn prisen for en ordinær obligasjon.
 <div class="solution">
 \begin{equation}
-P_0= \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + \frac{Mr_k/n}{(1+r/n)^{3}}+\frac{M}{(1+r/n)^3}= \\
-\frac{350}{1+0.06}+\frac{350}{(1+0.06)^2}+\frac{350}{(1+0.06)^3}+\frac{5000}{(1+0.06)^3}=5133.651
+P_0= \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + \frac{Mr_k/n}{(1+r/n)^{3}}+\frac{Mr_k/n}{(1+r/n)^{4}}+\frac{M}{(1+r/n)^4}+= \\
+\frac{5000\cdot 0.05/2}{(1+0.03/2)}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^2}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^3}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^4}+\frac{5000}{(1+0.03/2)^4}=
+5470.247
 \end{equation}
 </div>
 
@@ -328,9 +330,8 @@ En null-kupong-obligasjon med 4 år til forfall har pålydende 5.000,- med årli
 T <- 4
 M_o <- 5000
 r <- 0.025
-M_o/(1+r)^T
+#M_o/(1+r)^T
 ```
-
 
 1. Beregn prisen for null-kupong rente obligasjonen 
 <div class="solution">
@@ -406,16 +407,26 @@ $$
 </div>
 1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.
 1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
+
+```{r }
+plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
+```
+
 <div class="solution">
-```{r echo=FALSE, eval=F}
+
+```{r echo=FALSE, eval=T}
 f12
 # [1] 0.02627083
 f23
 # [1] 0.05354398
 plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå")
 ```
+[google spreadsheet](https://docs.google.com/spreadsheets/d/1RBtpzzrAY5OIzlgBSLfzGvJeHmMJxMC_cEl3rOXV4m8/edit#gid=1266997759)
+
 </div>
+
 <div class="solution">
+ABC
 </div>
 
 ## Oppgave 6: OPA og økt gjeldsgrad
@@ -423,8 +434,17 @@ plot(x=c(1,2,3),y=c(f01,0.02627083,0.05354398), xlab="Periode", ylab="Rentenivå
 Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer, noe som innebærer en reduksjons i antall aksjonærer. Forutsatt en M&M-verden uten skatt og med usikre investeringsprosjekter. Tilhørende overskudd per aksje (OPA), forklar hva som skjer med:
 
 a. Forventet OPA
+<div class="solution">
+A
+</div>
 b. Usikkerheten til OPA 
+<div class="solution">
+B
+</div>
 c. OPA i gode og dårliger tider
+<div class="solution">
+C
+</div>
 
 ## **Del II: Porteføljeutregninger ved bruk av regnearket**
 
