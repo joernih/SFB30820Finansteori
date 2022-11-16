@@ -46,9 +46,9 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Endret løsningforslag arbeidskrav 
-  - Fra: $E(rp)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
-  - Til: $E(rp)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
+- Endring løsningforslag til arbeidskrav: Oppgave 2.2.2
+  - Fra: $E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
+  - Til: $E(r_p)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
 - Onsdag 23.11: 
   - Gjennomgang av forrige eksamensoppgave
   - Gjennomgang av anbefalte oppgaver: (liste kommer snart)
