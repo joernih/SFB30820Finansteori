@@ -19,7 +19,8 @@
     -   Gjennomgang av forrige eksamensoppgave
     -   Gjennomgang av anbefalt oppgaver: (liste kommer snart)
     -   Tips til eksamen
-    -   Spørsmål og svar (ikke opptak) <br>
+    -   Spørsmål, svar og tilbakemelding til de som ønsker det på
+        arbeidskravet (ikke opptak) <br>
 
 # Pensum
 
@@ -32,4 +33,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-15 14:07:33**
+**Siste gang oppdatert: 2022-11-16 13:00:15**

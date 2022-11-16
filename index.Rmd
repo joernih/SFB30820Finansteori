@@ -56,7 +56,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
   - Gjennomgang av forrige eksamensoppgave
   - Gjennomgang av anbefalt oppgaver: (liste kommer snart)
   - Tips til eksamen
-  - Spørsmål og svar (ikke opptak)
+  - Spørsmål, svar og tilbakemelding til de som ønsker det på arbeidskravet (ikke opptak)
 <br>
 
 # Pensum 
