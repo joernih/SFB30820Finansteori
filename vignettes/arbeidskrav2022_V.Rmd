@@ -14,6 +14,10 @@ output:
 
 [Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
 
+[Lenke til publisert versjon her med løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
+
+
+
 [Porteføljedata.xslx](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/cryptos_nyse.xlsx)
 
 

@@ -60,8 +60,8 @@ undervfor <- c(
 	  "Campus Sone E E1-037",
 	  "Campus Sone E E1-037",
 	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037/Zoom",
-	  "Campus Sone E E1-037/Zoom"
+	  "Campus Sone E E1-037",
+	  "Campus Sone E E1-037"
 )
 ###########################################################################################################3
 oppgaver_bok <- c(

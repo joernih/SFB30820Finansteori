@@ -32,7 +32,6 @@ Oppgave 1
 
 [Eksamen 2020 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020_losningsforslag_JIH.pdf)
 
-
 ## Fra lærebok og nettside
 
 ```{r, echo=F}
@@ -44,6 +43,4 @@ cn <- c("Forelesning","Bok","Nettside")
 kableExtra::kbl(oppgaver, col.names=cn) %>% kableExtra::kable_paper(full_width = F) 
 ```
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
-
-
 

@@ -1777,6 +1777,13 @@ P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\
 P_0=\frac{M}{(1+r)^T} 
 \end{equation}
 
+Som kan løses mhp. $1+r$
+\begin{equation}
+P_0=\frac{M}{(1+r)^T} \\
+(1+r)^T=\frac{M}{P_0} \\
+1+r=(\frac{M}{P_0})^{1/T}
+\end{equation}
+
 ---
 
 **Eksempel 5.1:** En obligasjon med 5 år til forfall har pålydende 10 000,-, kupongrente $r_k=0.05$ som utbetales n=2 ganger i året og årlige effektiv rente $r=0.06$. Innsatt i uttrykket ovenfor gir oss
@@ -4053,7 +4060,7 @@ Vi skal her se nærmer på bruken av fire forskjellige finansielle derivater:
 
 ## Hvorfor risikostyring?
 
-Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i friksjonsfrie markeder vil typisk medføre:
+Sikring mot uventede endringer i kontantstrømmen ved bruk av finansielle derivater i *friksjonsfrie* markeder vil typisk medføre:
 - Forventet kontantstrøm blir den samme, men variansen reduseres 
 - Gitt at konkurrsansynligheten ikke endres, vil kun egenkapitalkostnaden endres
 - Dersom investorene er veldiversifiserte, vil dette kun øke selskapets verdi kun dersom risikostyring påvirker den systematiske risikoen
@@ -4132,7 +4139,7 @@ knitr::include_graphics(c("pensum/figurer-83.png"))
 
 Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale mellom to parter som gir kjøperen
 
-1. Plikt til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
+1. *Plikt* til å kjøpe en bestemt eiendel (eks. valuta, framtidig renteavtaler, råvare)
 1. For en bestemt pris 
 1. Til et forhåndsbestemt fremtidig tidspunkt 
 
@@ -4146,7 +4153,7 @@ knitr::include_graphics(c("pensum/figurer-85.png"))
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
-1. Plikt til å kjøpe eller selge en bestemt (standardisert) eiendel 
+1. *Plikt* til å kjøpe eller selge en bestemt (standardisert) eiendel 
 1. For en bestemt pris (*innløsningskursen*)
 1. Til et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*), men hvor daglig markedsoppgjør (merk: clearingsselskapet gjør denne jobben) skjer i løpet av hele kontraktsperioden.
 
@@ -4170,7 +4177,7 @@ knitr::include_graphics(c("pensum/figurer-87.png"))
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
-1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
+1. *Rett* til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
 1. For en bestemt pris (*innløsningskursen*)
 1. På et forhåndsbestemt fremtidig tidspunkt (*forfallstidspunktet*)
 
@@ -4178,7 +4185,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ## Swaps
 
-Swap, finansiell transaksjon der to aktører avtaler å bytte kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
+Swap, finansiell transaksjon der to aktører avtaler å *bytte* kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
 
 ```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-88.png"))
