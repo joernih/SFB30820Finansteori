@@ -49,6 +49,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 - Endring løsningforslag til arbeidskrav: Oppgave 2.2.2
   - Fra: $E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
   - Til: $E(r_p)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
+  - [Lenke til løsningsforslag arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
 - Onsdag 23.11: 
   - Gjennomgang av forrige eksamensoppgave
   - Gjennomgang av anbefalte oppgaver: (liste kommer snart)
