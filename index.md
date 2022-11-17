@@ -20,7 +20,8 @@
         arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
 -   Onsdag 23.11:
     -   Gjennomgang av forrige eksamensoppgave
-    -   Gjennomgang av anbefalte oppgaver: (liste kommer snart)
+    -   Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3
+        og 7.1**
     -   Tips til eksamen
     -   Spørsmål, svar og tilbakemelding til de som ønsker det på
         arbeidskravet (ikke opptak) <br>
@@ -36,4 +37,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-17 13:34:32**
+**Siste gang oppdatert: 2022-11-17 14:45:01**
