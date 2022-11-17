@@ -370,8 +370,8 @@ f01 <- r01
 r02
 f12 <- (1+r02)^2/(1+r01)-1
 # [1] 0.02627083
-f23 <- (1+r03)^3/(1+r02)-1
-# [1] 0.05354398
+f23 <- (1+r03)^3/(1+r02)^2-1
+# [1] 0.03225806
 kableExtra::kbl(stats_df,col.names=c("Løpetid ","Pålydende ","Markedspris")) %>% kableExtra::kable_classic_2(full_width = F)
 ```
 
@@ -406,7 +406,7 @@ $$
 *Terminrente periode 3*
 $$
 _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
-=\frac{(1+0.02448519)^3}{(1+0.02062073)^2}-1=`r 0.05354398`
+=\frac{(1+0.02448519)^3}{(1+0.02062073)^2}-1= `r 0.03225806`
 $$
 </div>
 1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.

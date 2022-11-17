@@ -46,9 +46,12 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- Endring løsningforslag til arbeidskrav: Oppgave 2.2.2
-  - Fra: $E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
-  - Til: $E(r_p)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
+- Endring i løsningforslag tilhørende arbeidskravet:
+  - Oppgave 2.2.2 og   
+        - Fra: $E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
+  	- Til: $E(r_p)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
+  - Oppgave 5.2 (3. termin)
+    - Fra: $_{2}f_{3}=\cancel{0.05354398}=0.03225806$
   - [Lenke til løsningsforslag arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
 - Onsdag 23.11: 
   - Gjennomgang av forrige eksamensoppgave
@@ -73,6 +76,9 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+
+../Template/SFB30820_Finansteori_Plates/arbeidskrav/SFB30820-Finansteori-En-innlevering--Høst-2022.xlsx
+
 
 # Nyheter
 - Arbeidskrav
