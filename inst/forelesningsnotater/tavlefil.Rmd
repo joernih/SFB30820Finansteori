@@ -36,12 +36,33 @@ xaringan::inf_mr("tavlefil.Rmd")
 ![](anb_oppgaver/12_3.png)
 <br>
 
+$$
+K_T=max[,]=
+$$
+<br>
+$$
+S_T=max[,]=
+$$
 ---
 
 **12.6**
 <br>
 ![](anb_oppgaver/12_6.png)
 <br>
+
+a.
+\begin{equation}
+m = \frac{A_0 (\theta-n)}{K_\theta-K_n}
+\end{equation}
+b.
+
+\begin{equation}
+K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]=\frac{}{}[] 
+\end{equation}
+Hvor
+\begin{equation*}
+q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
+\end{equation*}
 
 ---
 
