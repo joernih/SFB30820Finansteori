@@ -30,7 +30,53 @@ Sys.which('decktape')
 xaringan::inf_mr("tavlefil.Rmd")
 ```
 
-# Risikostyring ("finanical-managment")
+# Opsjoner 
+**12.3**
+<br>
+![](anb_oppgaver/12_3.png)
+<br>
+
+---
+
+**12.6**
+<br>
+![](anb_oppgaver/12_6.png)
+<br>
+
+---
+
+**12.8**
+<br>
+![](anb_oppgaver/12_8.png)
+<br>
+
+---
+
+# Dividende
+**11.2**
+
+<br>
+![](anb_oppgaver/11_2.png)
+<br>
+
+
+---
+
+# Gjeldsgrad og verdi i perfekte kapitalmarkeder
+
+**7.1**
+<br>
+![](anb_oppgaver/7_1.png)
+<br>
+
+---
+
+<br>
+**7.3**
+<br>
+<br>
+![](anb_oppgaver/7_3.png)
+<br>
 
 
 

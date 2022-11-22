@@ -7,7 +7,7 @@
 
 # Nyheter
 
--   Endring i løsningforslag tilhørende arbeidskravet:
+-   Endringer i løsningforslag tilhørende arbeidskravet:
     -   Oppgave 2.2.2 og  
         - Fra:
         ![E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;E%28r_p%29%3D%5Ccancel%7B0.4%7D%20%5Ccdot%200.11%2B%5Ccancel%7B0.6%7D%5Ccdot%200.07%3D%5Ccancel%7B0.086%7D "E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}")
@@ -37,4 +37,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-17 14:45:01**
+**Siste gang oppdatert: 2022-11-22 10:54:54**
