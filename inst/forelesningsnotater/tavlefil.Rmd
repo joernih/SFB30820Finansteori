@@ -129,10 +129,15 @@ knitr::include_graphics("anb_oppgaver/11_2_los_i.png")
 
 <br>
 **7.3**
-<br>
-<br>
-![](anb_oppgaver/7_3.png)
-<br>
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("anb_oppgaver/7_3_a.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap="A nice image."}
+knitr::include_graphics("anb_oppgaver/7_3_b.png")
+```
+
 
 ---
 
