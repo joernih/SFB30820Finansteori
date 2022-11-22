@@ -43,6 +43,13 @@ $$
 $$
 S_T=max[,]=
 $$
+
+---
+
+<br>
+![](anb_oppgaver/12_3_los.png)
+<br>
+
 ---
 
 **12.6**
@@ -66,9 +73,21 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 
 ---
 
+<br>
+![](anb_oppgaver/12_6_los.png)
+<br>
+
+---
+
 **12.8**
 <br>
 ![](anb_oppgaver/12_8.png)
+<br>
+
+---
+
+<br>
+![](anb_oppgaver/12_8_los.png)
 <br>
 
 ---
@@ -79,6 +98,16 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 <br>
 ![](anb_oppgaver/11_2.png)
 <br>
+
+---
+
+```{r, echo=FALSE, out.width="50%", fig.cap=""}
+knitr::include_graphics("anb_oppgaver/11_2_los_ii.png")
+```
+
+```{r, echo=FALSE, out.width="50%", fig.cap="A nice image."}
+knitr::include_graphics("anb_oppgaver/11_2_los_i.png")
+```
 
 
 ---
@@ -93,14 +122,23 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 ---
 
 <br>
+![](anb_oppgaver/7_1_los.png)
+<br>
+
+---
+
+<br>
 **7.3**
 <br>
 <br>
 ![](anb_oppgaver/7_3.png)
 <br>
 
+---
 
-
+<br>
+![](anb_oppgaver/7_3_los.png)
+<br>
 
 
 
