@@ -148,7 +148,7 @@ kableExtra::kbl(df_eks_gen,col.names=c("Tilstand ","Sannsynlighet ","Avkastning 
   Vi har først at
   $Kov(r_a,r_b)=0.5[(-0.1-0.11)(0.2-0.07)]+ 0.2[(0.5-0.11)(-0.3-0.07)] +0.3[(0.2-0.11)(0.1-0.07)]=`r cov_mat[1,2]`$
   Som forteller oss at <br>
-  $Var(r_p)=0.4^2(0.0549)+0.6^2(0.0361)-2(0.4)(0.6)0.0417=`r port_risk_v`$</li> <br>
+  $Var(r_p)=0.6^2(0.0549)+0.4^2(0.0361)-2(0.4)(0.6)0.0417=`r port_risk_v`$</li> <br>
   <li>Standardavvik:</li>
     $Std(rp)=\sqrt{`r port_risk_v`}=`r port_risk_s`$</li> <br>
 </ol>
@@ -514,5 +514,6 @@ knitr::knit_exit()
 ```{r include=FALSE}
 knitr::knit_exit()
 ```
+
 Exam_SFB30820_Finansteori_H2021.Rmd
 

@@ -36,13 +36,13 @@ class: center, middle, inverse, title-slide
 # Finansteori (SFB30820)
 ]
 .subtitle[
-## Beregninger
+## Anbefalte oppgaver
 ]
 .author[
 ### Jørn I.Halvorsen
 ]
 .date[
-### 2021/08/12 (updated: 2022-11-22)
+### 2021/08/12 (updated: 2022-11-23)
 ]
 
 ---
@@ -53,53 +53,66 @@ class: center, middle, inverse, title-slide
 
 
 # Opsjoner 
+## Kontantstrømverdi 
 **12.3**
 &lt;br&gt;
 ![](anb_oppgaver/12_3.png)
 &lt;br&gt;
 
 $$
-K_T=max[,]=
+K_T=maks[0,(140.50-120)]=20.5
 $$
 &lt;br&gt;
 $$
-S_T=max[,]=
+S_T=maks[0,(115-140.50)]=0
 $$
 
 ---
 
-&lt;br&gt;
-![](anb_oppgaver/12_3_los.png)
-&lt;br&gt;
-
----
+## Binomisk opsjonsprismodell 
 
 **12.6**
 &lt;br&gt;
 ![](anb_oppgaver/12_6.png)
 &lt;br&gt;
 
-a.
+a. Sikringsforholdet
 `\begin{equation}
-m = \frac{A_0 (\theta-n)}{K_\theta-K_n}
+m = \frac{100 (1.5-0.75)}{45-0}=1.67
 \end{equation}`
-b.
+
+---
+
+b. Kjøpsopsjonens verdi i dag
 
 `\begin{equation}
-K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]=\frac{}{}[] 
+K_0 = \frac{1}{1+r_f}[qK_\theta+(1-q)K_n]=\\
+\frac{1}{1+0.01}[0.35\cdot 45+0.65\cdot 0] =15.45
 \end{equation}`
 Hvor
 `\begin{equation*}
-q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
+q=\frac{1+r_f-n}{\theta-n}=\frac{1+0.01-0.75}{1.50-0.75}=0.35 \\ 
+(1-q)=\frac{\theta-1-r_f}{\theta-n} = 1-0.35=0.65
 \end{equation*}`
 
+$$
+K_{\theta}=45
+$$
+
+$$
+K_n=0
+$$
+
+
 ---
 
-&lt;br&gt;
-![](anb_oppgaver/12_6_los.png)
-&lt;br&gt;
+&lt;img src="anb_oppgaver/12_6_los_a.png" width="30%" /&gt;
+
+&lt;img src="anb_oppgaver/12_6_los_b.png" width="60%" /&gt;
 
 ---
+
+## Black-Scholes modellen
 
 **12.8**
 &lt;br&gt;
@@ -108,9 +121,48 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 
 ---
 
-&lt;br&gt;
-![](anb_oppgaver/12_8_los.png)
-&lt;br&gt;
+a)
+`\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2)=\\
+280\cdot 0.33 -400e^{-0.03\cdot 6/12}0.17=23.98
+\end{equation}`
+`\begin{equation}
+N(d_1=-0.433)=1-0.=0.000\\
+N(d_2=-0.933)=1-0.=0.000
+\end{equation}`
+[Standar Normalfordelignstabell](https://www.mathsisfun.com/data/standard-normal-distribution-table.html)
+
+Som gir
+`\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2) = 23.98
+\end{equation}`
+
+---
+
+b) Antall kjøpsopsjoner per aksje
+`\begin{equation}
+m = \frac{1}{N(d_1)} = 1/0.33 = 3.01
+\end{equation}`
+
+Som for 1000 akser gir oss `\(3.01\cdot 1000\)` = `\(3010\)`
+
+`\begin{equation}
+K_0 = A_0N(d_1) -Ie^{-i_fT}N(d_2) = 
+\end{equation}`
+
+c) 
+`\begin{equation}
+m = \frac{1}{N(d_1)} = 1/0.4077 = 2.45
+\end{equation}`
+
+---
+
+
+&lt;img src="anb_oppgaver/12_8_los_a.png" width="50%" /&gt;
+
+---
+
+&lt;img src="anb_oppgaver/12_8_los_b.png" width="50%" /&gt;
 
 ---
 
@@ -123,13 +175,34 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 
 ---
 
-&lt;img src="anb_oppgaver/11_2_los_ii.png" width="50%" /&gt;
+a)
 
-&lt;div class="figure"&gt;
-&lt;img src="anb_oppgaver/11_2_los_i.png" alt="A nice image." width="50%" /&gt;
-&lt;p class="caption"&gt;A nice image.&lt;/p&gt;
-&lt;/div&gt;
+&lt;br&gt;
+![](anb_oppgaver/11_2_ta.png)
+&lt;br&gt;
 
+`\begin{equation}
+DPA_2= 9.40 + 0.2[0.35(15)-9.40]=8.57
+\end{equation}`
+
+---
+
+b)
+
+&lt;br&gt;
+![](anb_oppgaver/11_2_tb.png)
+&lt;br&gt;
+
+`\begin{equation}
+DPA_2 = 7.60 + 0.8[0.35(15)-7.60]=5.72
+\end{equation}`
+
+c)
+Sammenligning
+
+---
+
+&lt;img src="anb_oppgaver/11_2_los_ii.png" width="60%" /&gt;
 
 ---
 
@@ -139,6 +212,16 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 &lt;br&gt;
 ![](anb_oppgaver/7_1.png)
 &lt;br&gt;
+
+
+```r
+2+2
+```
+
+```
+## [1] 4
+```
+
 
 ---
 
@@ -153,10 +236,7 @@ q=\frac{1+r_f-n}{\theta-n}=... \\ (1-q)=\frac{\theta-1-r_f}{\theta-n} = ...
 
 &lt;img src="anb_oppgaver/7_3_a.png" width="50%" /&gt;
 
-&lt;div class="figure"&gt;
-&lt;img src="anb_oppgaver/7_3_b.png" alt="A nice image." width="50%" /&gt;
-&lt;p class="caption"&gt;A nice image.&lt;/p&gt;
-&lt;/div&gt;
+&lt;img src="anb_oppgaver/7_3_b.png" width="50%" /&gt;
 
 
 ---
