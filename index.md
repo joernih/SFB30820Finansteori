@@ -7,6 +7,19 @@
 
 # Nyheter
 
+-   Har tekniske problemer med å få konvertert Zoom-opptaket fra siste
+    forelesning til MP4-format. Håper det lar seg gjøre, men foreløpig
+    ikke sikker. Det første Zoom-opptaket ligger nederst på
+    Canvas-siden.
+-   Onsdag 23.11:
+    -   Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3
+        og 7.1**
+        -   [Lenke til
+            notater](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/anb_oppg.pdf)
+    -   Gjennomgang av forrige eksamensoppgave
+    -   Tips til eksamen
+    -   Spørsmål, svar og tilbakemelding til de som ønsker det på
+        arbeidskravet (ikke opptak)
 -   Endringer i løsningforslag tilhørende arbeidskravet:
     -   Oppgave 2.2.2 og  
         - Fra:
@@ -18,15 +31,7 @@
             ![\_{2}f\_{3}=\cancel{0.05354398}=0.03225806](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;_%7B2%7Df_%7B3%7D%3D%5Ccancel%7B0.05354398%7D%3D0.03225806 "_{2}f_{3}=\cancel{0.05354398}=0.03225806")
     -   [Lenke til løsningsforslag
         arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
--   Onsdag 23.11:
-    -   Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3
-        og 7.1**
-        -   [Lenke til
-            notater](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/anb_oppg.pdf)
-    -   Gjennomgang av forrige eksamensoppgave
-    -   Tips til eksamen
-    -   Spørsmål, svar og tilbakemelding til de som ønsker det på
-        arbeidskravet (ikke opptak) <br>
+        <br>
 
 # Pensum
 
@@ -39,4 +44,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-23 12:37:13**
+**Siste gang oppdatert: 2022-11-25 13:54:49**
