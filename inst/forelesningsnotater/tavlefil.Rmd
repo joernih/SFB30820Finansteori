@@ -98,7 +98,6 @@ knitr::include_graphics("anb_oppgaver/12_6_los_b.png")
 
 ---
 
-
 ## Black-Scholes modellen
 
 **12.8**
