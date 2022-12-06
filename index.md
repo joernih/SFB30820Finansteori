@@ -7,10 +7,8 @@
 
 # Nyheter
 
--   Har tekniske problemer med å få konvertert Zoom-opptaket fra siste
-    forelesning til MP4-format. Håper det lar seg gjøre, men foreløpig
-    ikke sikker. Det første Zoom-opptaket ligger nederst på
-    Canvas-siden.
+-   **Zoom-opptakene**\* fra de to siste forelesningene ligger nå neders
+    på Canvas siden.
 -   Onsdag 23.11:
     -   Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3
         og 7.1**
@@ -44,4 +42,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2022-11-25 13:54:49**
+**Siste gang oppdatert: 2022-12-06 10:55:13**
