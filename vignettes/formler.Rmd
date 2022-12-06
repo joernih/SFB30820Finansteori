@@ -429,6 +429,18 @@ I opsjonssammenheng er det vanlig å operer med *kontinuerlig tid*. For eks. kan
 K_0-S_0=A_0-Ie^{-i_f\cdot T}
 \end{equation*}
 
+# Bestemmelse av sikringsverdi før forfall
+
+\begin{equation}
+\theta A_0-mK_\theta=nA_0-mK_n
+\end{equation}
+
+Løser vi denne for $m$ får vi *sikringsforholdet* (det antall kjøpsopsjoner som må skrives/selges pr. aksje for at porteføljen av aksjer og opsjoner skal være risikofri:
+
+\begin{equation}
+m = \frac{A_0 (\theta-n)}{K_\theta-K_n}
+\end{equation}
+
 # Bestemmelse av opsjonsverdi før forfall
 
 \begin{equation}
