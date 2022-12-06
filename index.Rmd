@@ -46,7 +46,7 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
 # Nyheter
-- **Zoom-opptakene*** fra de to siste forelesningene ligger nå neders på Canvas siden.
+- **Zoom-opptakene** fra de to siste forelesningene ligger nå neders på Canvas siden.
 - Onsdag 23.11: 
   - Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3 og 7.1**
     - [Lenke til notater](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/anb_oppg.pdf)
