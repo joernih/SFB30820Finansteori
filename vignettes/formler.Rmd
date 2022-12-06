@@ -378,7 +378,7 @@ n^*= (1-s_K)-(1-s_S)(1-s_E)
 ## Lintner-modellen
 
 \begin{equation}
-DPA_t = DPA_{t-1} + a[b(OPA)-DPA_{t-1}]
+DPA_t = DPA_{t-1} + a[b(OPA_t)-DPA_{t-1}]
 \end{equation}
 
 Hvor både $a$ (justeringsfaktor) og $b$ (målsatt utdelingsforhold) kan variere mellom 0 og 1.
