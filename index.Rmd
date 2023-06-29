@@ -40,28 +40,11 @@ rmarkdown::render("index.Rmd")
 rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader')
 ```
 
-# Finansteori (høsten 2022)
+# Finansteori (høsten 2023)
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
-
-# Nyheter
-- **Zoom-opptakene** fra de to siste forelesningene ligger nå neders på Canvas siden.
-- Onsdag 23.11: 
-  - Gjennomgang av anbefalte oppgaver: **12.8, 12.6, 12.3, 11.2, 7.3 og 7.1**
-    - [Lenke til notater](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/anb_oppg.pdf)
-  - Gjennomgang av forrige eksamensoppgave
-  - Tips til eksamen
-  - Spørsmål, svar og tilbakemelding til de som ønsker det på arbeidskravet (ikke opptak)
-- Endringer i løsningforslag tilhørende arbeidskravet:
-  - Oppgave 2.2.2 og   
-        - Fra: $E(r_p)=\cancel{0.4} \cdot 0.11+\cancel{0.6}\cdot 0.07=\cancel{0.086}$ 
-  	- Til: $E(r_p)=0.6\cdot 0.11+0.4\cdot 0.07=0.094$
-  - Oppgave 5.2 (3. termin)
-    - Fra: $_{2}f_{3}=\cancel{0.05354398}=0.03225806$
-  - [Lenke til løsningsforslag arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
-<br>
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
