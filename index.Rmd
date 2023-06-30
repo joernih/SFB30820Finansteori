@@ -81,3 +81,6 @@ https://hiof.instructure.com/courses/6622
 https://joernih.github.io/SFB30820Finansteori/
 inst/arbeidskrav/arbeidskrav2022_F.Rmd
 DP 929992
+
+# Lenker
+https://hiof.instructure.com/courses/7627
