@@ -21,6 +21,10 @@ abstract: ''
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 
 # Læringsmål kapittel 2
 - Tallfeste risiko i en portefølje ved å beregne standardavvik.

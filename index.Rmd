@@ -31,7 +31,7 @@ inst/forelesningsnotater/presentations.Rmd
 pkgdown::build_site() 
 rmarkdown::render("index.Rmd")
 system("cp -r inst/forelesningsnotater/* docs/articles")
-system("cp -r inst/eksamensoppgaver/* docs/eksamensoppgaver")
+#system("cp -r inst/eksamensoppgaver/* docs/eksamensoppgaver")
 #system("cp -R inst/forelesningsnotater/pensum docs/articles/pensum")
 pkgdown::build_home()
 pkgdown::build_articles()
@@ -62,22 +62,13 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+# Task
+Eksamensdato
+https://fsweb.no/fagpersonweb/emne.jsf?id=SFB30820%3A224%3A1
 
-../Template/SFB30820_Finansteori_Plates/arbeidskrav/SFB30820-Finansteori-En-innlevering--Høst-2022.xlsx
-
-# Nyheter
-- Arbeidskrav
-inst/arbeidskrav/arbeidskrav2022_F.Rmd
-Temaet Bacheloroppgaver
-  - Strømselskaper
-  - Svenske sentralbanken tap på obligasjonslån
-  - IKT
-
-## Oppgaver
-options(scipen = 100)
-vignettes/formler.rmd
+# Lenker
 inst/forelesningsnotater/presentations.Rmd
-https://hiof.instructure.com/courses/6622
-https://joernih.github.io/SFB30820Finansteori/
-inst/arbeidskrav/arbeidskrav2022_F.Rmd
-DP 929992
+vignettes/formler.Rmd
+vignettes/forelesninger.Rmd
+vignettes/arbeidskrav2023_V.Rmd
+vignettes/anbefalte_oppgaver.Rmd
