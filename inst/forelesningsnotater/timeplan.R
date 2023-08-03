@@ -5,29 +5,27 @@ library(xaringan)
 library(aweek)
 # Timeplan
 ## Input
-ukenr <- c(34,seq(34,47))
+ukenr <- seq(34,47)
 ln <- length(ukenr)
-datoer <- c(get_date(ukenr[1], day=1, year = 2022),get_date(ukenr[-1], day=3, year = 2022))
-
+datoer <- c(get_date(ukenr, day=3, year = 2023))
 star <- rep("09:15",ln)
 timer <- rep(3,ln)
-forenr <- c(seq(1,7),"",seq(8,14))
+forenr <- c(seq(1,5),"",seq(7,14))
 tema <- c(
 	  "Introduksjon og overblikk",
 	  "Relevant risiko: Porteføljeteori to objekter",
 	  "Relevant risiko: Porteføljeteori 3-n objekter",
 	  "Effisiens",
 	  "Kapitalverdimodellen",
+	  "",
 	  "Langsiktige finansieringsformer",
 	  "Gjeldgrad og risiko",
-	  "",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Gjeldgrad og verdi med imperfeksjoner",
 	  "Dividende",
 	  "Opsjoner",
 	  "Risikostyring",
-	  "Gjennomgang av arbeidskrav + indiviuell tilbakemedling til de som ønsker dette",
-	  "Repetisjon, læringsmå og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
+	  "Repetisjon, læringsmål og nærmere konkretisering om typen oppgaver som er relevant for eksamen"
 )
 literatur <- c(
 	       "Kap. 1: Introduksjon",
@@ -35,33 +33,31 @@ literatur <- c(
 	       "Kap. 2: Relevant risiko",
 	       "Kap. 3: Relevant risiko og kapitalkostnad",
 	       "Kap. 3: Relevant risiko og kapitalkostnad",
+	       "**Høstferie**",
 	       "Kap. 5: Langsiktige finansieringsformer",
 	       "Kap. 6: Gjeldsgrad og risiko",
-	       "**Høstferie**",
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
 	       "Kap. 11: Dividende",
 	       "Kap. 12: Opsjoner",
 	       "Kap. 13: Risikostyring",
-	       "",
 	       "Kap. 1,2-4,5-8,11,12,13"
 )
 undervfor <- c(
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-059",
-	  "Campus Sone E E1-041",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-062",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
 	  "",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037",
-	  "Campus Sone E E1-037"
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063",
+	  "Campus Sone F FU1-063"
 )
 ###########################################################################################################3
 oppgaver_bok <- c(
@@ -96,7 +92,6 @@ oppgaver_nett <- c(
 	  "",
 	  ""
 )
-
 ## output
 df1 <- data.frame(
 		  Uke=ukenr,
@@ -112,10 +107,26 @@ timenavn <- c("Uke","Datoer","Tidspunkt","Forelesning","Literatur","Sentrale tem
 timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
 timep_ii <- htmlTable(df1[8:15,],header=timenavn)
-
 df2 <- data.frame(Forelesning=seq(1,14),
 		 Oppgaver_bok=oppgaver_bok,
 		 Oppgaver_nett=oppgaver_nett)[1:11,]
-
-
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
+
+#                               2023                               
+#
+#        juli                  august                september     
+#ma ti on to fr lø sø   ma ti on to fr lø sø   ma ti on to fr lø sø
+#                1  2       1  2  3  4  5  6                1  2  3
+# 3  4  5  6  7  8  9    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+#10 11 12 13 14 15 16   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+#17 18 19 20 21 22 23   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+#24 25 26 27 28 29 30   28 29 30 31            25 26 27 28 29 30   
+#31                                                                
+#       oktober               november               desember      
+#ma ti on to fr lø sø   ma ti on to fr lø sø   ma ti on to fr lø sø
+#                   1          1  2  3  4  5                1  2  3
+# 2  3  4  5  6  7  8    6  7  8  9 10 11 12    4  5  6  7  8  9 10
+# 9 10 11 12 13 14 15   13 14 15 16 17 18 19   11 12 13 14 15 16 17
+#16 17 18 19 20 21 22   20 21 22 23 24 25 26   18 19 20 21 22 23 24
+#23 24 25 26 27 28 29   27 28 29 30            25 26 27 28 29 30 31
+#30 31                                                             

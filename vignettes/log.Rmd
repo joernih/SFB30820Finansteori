@@ -3,15 +3,3 @@ title: ""
 output: github_document
 ---
 
-## 23.8 
-
-**Forelesning #1:** 
-- Under prosjektets kontantstrøm, lagt inn et plot som viser fordelingen til de ulike kontantstrømmene.
-
-**Forelesning #4:** 
-- Fikset på overskriften tabell side 59. Side 63 $omega$ endret til mindren enn 0.
-- Rettet opp noen feil på noen av tallene som inngår i variansformelen (endrer ikke sluttresultate) på slide 64.
-
-## 21.9
-**Forelesning #6:** 
-- Rettet opp feil i formel på slide 117.

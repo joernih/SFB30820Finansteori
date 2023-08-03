@@ -6,6 +6,11 @@ output:
     css: PAA.css
 ---
 
+
+```{r, echo=T}
+knitr::knit_exit()
+```
+
 ## Obligatorisk arbeidskrav
 - Versjon 1.1
   - Oppgave 3. Nytt spørsmål lagt til.

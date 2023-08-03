@@ -5,6 +5,17 @@ output: github_document
 
 ## Oppgaveløsning etter forelesning
 
+## Tidligere eksamensoppgaver
+
+## Fra lærebok og nettside
+
+```{r}
+knitr::knit_exit()
+```
+
+
+## Oppgaveløsning etter forelesning
+
 **31.8 fra kl. 12:15**
 
 Eksamensoppgave 2021: 
