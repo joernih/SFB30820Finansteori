@@ -2,7 +2,7 @@
 title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
-date: "2021/08/12 (updated: `r Sys.Date()`)"
+date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     includes:
@@ -150,13 +150,13 @@ Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen.
 
 ## Obligatorisk innleveringsoppgave
 
-28.9: obligatorisk arbeidskrav publiseres (før høstferien)
+XX.X: obligatorisk arbeidskrav publiseres 
 
-26.10: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
+XX.XX: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
 
 ## Eksamen
 
-Eksamen avholdes den 12.12.
+Eksamen avholdes den XX.XX.2023
 
 Individuell, skriftlig firetimers eksamen.
 
@@ -449,7 +449,12 @@ Oppgave til neste forelesning:
 knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
 ```
 
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
+
 ---
+
 
 class: inverse, center, middle
 
