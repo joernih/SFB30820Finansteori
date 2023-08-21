@@ -42,9 +42,11 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 
 # Finansteori (høsten 2023)
 
+
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
+
 
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
@@ -52,6 +54,10 @@ knitr::include_graphics("man/figures/01_finans.jpg")
 ```{r, echo=FALSE, out.width="15%", fig.cap=""}
 knitr::include_graphics("man/figures/pensum.jpg")
 ```
+
+# Nyheter
+  - Velkommen til nytt kurs! Vi starter opp første forelesning onsdag 24. august
+    - Forelesningsnotatene er publisert. 
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
@@ -62,8 +68,9 @@ Jørn I. Halvorsen
 ```{r, echo=F}
 knitr::knit_exit()
 ```
+
 # Task
-Eksamensdato
+Eksamensdato: 12.12.2023
 https://fsweb.no/fagpersonweb/emne.jsf?id=SFB30820%3A224%3A1
 
 # Lenker
@@ -72,3 +79,6 @@ vignettes/formler.Rmd
 vignettes/forelesninger.Rmd
 vignettes/arbeidskrav2023_V.Rmd
 vignettes/anbefalte_oppgaver.Rmd
+
+
+https://tp.educloud.no/hiof/und-detaljer/?activity=23H-SFB30820-1-1-2

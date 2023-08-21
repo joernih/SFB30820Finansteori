@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-output:
-  xaringan::moon_reader:
-    includes:
-      in_header: "mathjax-equation-numbers.html"
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
 #output:
-#  html_document:
-#    toc: true
-#    toc_depth: 5
+#  xaringan::moon_reader:
+#    includes:
+#      in_header: "mathjax-equation-numbers.html"
+#    lib_dir: libs
+#    nature:
+#      highlightStyle: github
+#      highlightLines: true
+#      countIncrementalSlides: false
+output:
+  html_document:
+    toc: true
+    toc_depth: 5
 ---
 
 ```{r, echo=F, eval=F}
@@ -83,8 +83,11 @@ uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
 
+# Praktisk inormasjon om kurset
 
-# Timeplan
+---
+
+## Timeplan
 
 ```{r echo=F}
 #xaringanthemer::style_extra_css(css=list(".losning"=list(color='red',"font-size" = "90%")),outfile = stdout())
@@ -104,7 +107,7 @@ kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableE
 
 ---
 
-# Anbefalte oppgaver
+## Anbefalte oppgaver
 
 ```{r, echo=F}
 kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
@@ -116,11 +119,11 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 
 ---
 
-# Pensumliste
+## Pensumliste
 
 .pull-left[
 
-## Hovedbok
+### Hovedbok
 
 ```{r, echo=FALSE, out.width="75%", fig.cap=""}
 knitr::include_graphics("pensum/figurer-01.png")
@@ -133,7 +136,7 @@ knitr::include_graphics("pensum/figurer-01.png")
 
 .pull-right[
 
-## Supplerende
+### Supplerende
 ```{r, echo=FALSE, out.width="25%", fig.cap=""}
 knitr::include_graphics("pensum/falitt.jpg")
 ```
@@ -144,17 +147,17 @@ knitr::include_graphics("pensum/falitt.jpg")
 
 ---
 
-# Kursgodkjennelse
+## Kursgodkjennelse
 
 Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen. 
 
-## Obligatorisk innleveringsoppgave
+### Obligatorisk innleveringsoppgave
 
 XX.X: obligatorisk arbeidskrav publiseres 
 
 XX.XX: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
 
-## Eksamen
+### Eksamen
 
 Eksamen avholdes den XX.XX.2023
 
@@ -165,10 +168,9 @@ Karakterregel: A-F.
 Hjelpemidler: godkjent kalkulator.
 
 
-
 ---
 
-# Lenker benyttet i kurset (foreløpig liste)
+## Lenker benyttet i kurset (foreløpig liste)
 - [Kursbeskrivelse](https://www.hiof.no/studier/emner/oss/2020/host/sfb30820.html)
 - [Bokens nettside](https://finans2.portfolio.no/)
 - [Statens pensjonsfond utland](https://www.nbim.no/no/)
