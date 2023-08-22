@@ -56,8 +56,9 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
-  - Velkommen til nytt kurs! Vi starter opp første forelesning onsdag 24. august
-    - Forelesningsnotatene er publisert. 
+  - Velkommen til nytt kurs! Vi starter opp første forelesning onsdag 24. august. Før det kan dere:
+     - Kjøp pensumboken
+     - Se igjennom forelesningsnotatene til første forelesning
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 

@@ -43,7 +43,6 @@ filp <- '/inst/forelesningsnotater/presentations.Rmd'
 xaringan::inf_mr(paste0(rprojroot::find_rstudio_root_file(),filp))
 rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
-# Flytte Einar Aas
 ```
 
 ```{r, echo=F, eval=F}
@@ -83,7 +82,7 @@ uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
 
-# Praktisk inormasjon om kurset
+# Praktisk informasjon om kurset
 
 ---
 
@@ -153,13 +152,13 @@ Består av (1) obligatorisk arbeidskrav og (2) skriftlig eksamen.
 
 ### Obligatorisk innleveringsoppgave
 
-XX.X: obligatorisk arbeidskrav publiseres 
+28.09: obligatorisk arbeidskrav publiseres  (senest)
 
-XX.XX: obligatorisk arbeidskrav innlevering (to uker etter høstferien)
+28.10: obligatorisk arbeidskrav innlevering 
 
 ### Eksamen
 
-Eksamen avholdes den XX.XX.2023
+Eksamen avholdes den 12.12.2023
 
 Individuell, skriftlig firetimers eksamen.
 
@@ -251,6 +250,7 @@ Formelt kan vi uttrykke dette som
 \end{equation}
 
 Hvor *Risikopremien (risikokostnaden)* representerer den nye komponenten. I kapittel 2-3 i læreboka vises det at for et prosjekt vil denne komponenten være et produkt av en *pris (kostnad per risikokomponent)* og *kvantumkomponent (antall risikoenheter tilhørende prosjektet)*. 
+
 ---
 
 **Oppgave** N.1.1
@@ -282,6 +282,7 @@ NV=9.17
 Et investeringsprosjekt viser bedriftens bruker av penger for å skaffe seg eiendeler i form av anlegg- og omløpsmidler (regnskapsbalansens venstreside)
 
 Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld og egenkapital (regnskapsbalansens høyreside)
+
 ---
 
 **Oppgave N.1.4**
@@ -296,6 +297,7 @@ For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For fin
 1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
 <br>**Svar:**<br>
 Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.
+
 ---
 
 

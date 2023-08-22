@@ -14,13 +14,13 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- Velkommen til nytt kurs. Vi starter opp første forelesning onsdag 24.
-  august
-  - Kjøp boken  
-  - Se igjennom notatene
+- Velkommen til nytt kurs! Vi starter opp første forelesning onsdag 24.
+  august. Før det kan dere:
+  - Kjøp pensumboken
+  - Se igjennom forelesningsnotatene til første forelesning
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-08-16 10:33:34.389879**
+**Siste gang oppdatert: 2023-08-22 09:59:46.415712**
