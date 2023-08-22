@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-#output:
-#  xaringan::moon_reader:
-#    includes:
-#      in_header: "mathjax-equation-numbers.html"
-#    lib_dir: libs
-#    nature:
-#      highlightStyle: github
-#      highlightLines: true
-#      countIncrementalSlides: false
 output:
-  html_document:
-    toc: true
-    toc_depth: 5
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#output:
+#  html_document:
+#    toc: true
+#    toc_depth: 5
 ---
 
 ```{r, echo=F, eval=F}
@@ -81,6 +81,8 @@ vm <- round(sm/mm,digi=1)
 uu <- max(til_u$opa)-min(til_u$opa)
 um <- max(til_m$opa)-min(til_m$opa)
 ```
+
+class: inverse, center, middle
 
 # Praktisk informasjon om kurset
 
@@ -204,7 +206,6 @@ NV = \sum_{t=0}^{T} \frac{X_{t}}{(1+k)^t} =
 X_{0} + \frac{X_{1}}{(1+k)^1} + \frac{X_{2}}{(1+k)^2} + ... + \frac{X_{T}}{(1+k)^T} 
 \end{equation}
 
-
 Beslutningsregel:
 - Gitt uavhengig prosjekter, prosjektet igangsettes dersom nåverdien (NV) $> 0$
 - Gitt avhengige prosjekter, det prosjekt som har høyest nåverdi (NV) av de $>0$ igangsettes 
@@ -260,19 +261,19 @@ Forventet kontantstrøm om ett år er 10 mill. kroner. Risikofri kapitalkostnad 
 Hva er kontantstrømmen verd i dag?
 <br>**Svar:**<br>
 \begin{equation}
-NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
+%NV=\frac{10}{1+(0.02+0.07)}=\frac{10}{1.09}=9.17
 \end{equation}
 Hva er sikkerhetsekvivalenten ved slutten av perioden?
 <br>**Svar:**<br>
 \begin{equation}
-9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
-X=9.17(1+0.02)=9.17\cdot (1.02)=9.35
+%9.17=\frac{X}{1+(0.02)} \Leftrightarrow  \\
+%X=9.17(1+0.02)=9.17\cdot (1.02)=9.35
 \end{equation}
 
 Hva er sikkerhetsekvivalenten ved periodens begynnelse?
 <br>**Svar:**<br>
 \begin{equation}
-NV=9.17
+%NV=9.17
 \end{equation}
 ---
 
@@ -289,19 +290,26 @@ Et finansieringsprosjekt viser bedriftens anskaffelse av penger i form av gjeld 
 
 1. Hvordan vil du beskrive forskjellen mellom et investeringsprosjekt og et finansieringsprosjekt ut fra egenskaper ved kontantstrømmene de gir?
 <br>**Svar:**<br>
-I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
-Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+\begin{equation*}
+%I et investeringsprosjekt er tegnfølgen i kontantstrømmen (–,+,+,…,+)
+%Tegnfølgen i et finansieringsprosjekt er (+,–,–,…,–)
+\end{equation*}
+
 1. Hva er forholdet mellom kapitalkostnad og nåverdi for et investeringsprosjekt kontra for et finansieringsprosjekt?
 <br>**Svar:**<br>
-For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+\begin{equation*}
+% For investeringsprosjekter faller nåverdien med økende kapitalkostnad. For finansieringsprosjekter stiger den.
+\end{equation*}
 1. Hva reflekterer kapitalkostnaden (diskonteringsrenten) i et finansieringsprosjekt?
 <br>**Svar:**<br>
-Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.
+\begin{equation*}
+%Kapitalkostnaden i et finansieringsprosjekt reflekterer den kostnaden du alternativt kunne ha skaffet gjeld eller egenkapital til. Jo høyere denne alternativkostnaden er, desto mer verd er det finansieringsprosjektet du verdsetter gjennom nåverdiberegningen.
+\end{equation*}
 
 ---
 
 
-## Prosjektets Kontantstrøm
+## Prosjektets kontantstrøm
 For prosjektets kontantstrøm kan velkjente prinsipper tas i bruk til beregning av kontantstrømmen, en trenger kun å spesifere de ulike scenarioene/tilstandene og tilknytte en sannsynlighet til hver av disse.
 
 Fra Oljefelteksemplet eksempel 1.3 i læreboka har vi
@@ -396,35 +404,37 @@ htmlTable(dfn12,header=c("Sannsynlighet","Tilstandsbeskrivelse","Prosjekt X","Pr
 
 1. Hva er særtrekket ved prosjekt X?
 <br>**Svar:**<br>
-Kontantstrømmen er sikker (lik 3 i begge perioder)
+\begin{equation*}
+% Kontantstrømmen er sikker (lik 3 i begge perioder)
+\end{equation*}
 2. Beregn forventet avkastning for hvert prosjekt.
 <br>**Svar:**<br>
 $$
-E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
-E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
-E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
+%E(r_x)=0.30\cdot 3+0.70\cdot 3 = 3\\
+%E(r_y)=0.30\cdot 5+0.70\cdot 12 = 9.9\\
+%E(r_z)=0.30\cdot 9+0.70\cdot 11 = 10.4
 $$
 ---
 <p>3.</p> Hva er forventet avkastning på en portefølje med like stort beløp investert i hvert av prosjektene?
 <br>
-**Metode 1**
+**Svar metode 1**
 
 $$
-E(r_p)=0.3(1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
-0.7(1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
+% E(r_p)=0.3(1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+% 0.7(1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.76
 $$
 
-**Metode 2**
+**Svar metode 2**
 
 $$
-E(r_p)=(1/3)3+(1/3)9.9 +(1/3)10.4=1/3(3+9.9+10.4) = 7.76
+% E(r_p)=(1/3)3+(1/3)9.9 +(1/3)10.4=1/3(3+9.9+10.4) = 7.76
 $$
 
 <p>4.</p> Hva er svaret på spm. 3 dersom begge tilstander er like sannsynlige?
 <br>**Svar:**<br> 
 $$
-E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
-0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
+% E(r_p)=0.5\cdot (1/3\cdot 3+ 1/3\cdot 5 +1/3\cdot 9) + \\
+% 0.5\cdot (1/3\cdot 3+ 1/3\cdot 12 +1/3\cdot 11) = 7.16 
 $$ 
 ---
 
@@ -434,13 +444,19 @@ Gå tilbake til de tre prosjektene fra oppgave N.1.2.
 
 1. Hvordan bør du velge porteføljevekter for å få høyest mulig forventet avkastning?
 <br>**Svar:**<br>
-Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
+\begin{equation}
+% Sette alt i prosjekt Z (vekt lik 1), siden dette gir den høyeste forventede avkastningen.
+\end{equation}
 1. Er porteføljen du valgte under spm. 1 også den beste porteføljen som kan velges?
 <br>**Svar:**<br>
-Nei, prosjekt gir høyere avkastning under oppgangstid.
+\begin{equation}
+% Nei, prosjekt gir høyere avkastning under oppgangstid.
+\end{equation}
 1. Er det fornuftig å sette alle pengene i prosjekt X?
 <br>**Svar:**<br>
-Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
+\begin{equation}
+% Nei, både Y og Z gir bedre avkastning enn X uansett tilstand.
+\end{equation}
 ---
 
 ## Veien framover
@@ -450,8 +466,8 @@ Oppgave til neste forelesning:
 ![]()
 
 ```{r, echo=FALSE, out.width="45%", fig.cap=""}
-knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
-```
+#knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
+#```
 
 ```{r include=FALSE, echo=F}
 knitr::knit_exit()
