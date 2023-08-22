@@ -14,7 +14,7 @@ navbar:
       - text: "Praktisk informasjon"
         href: "articles/presentations.html#1" 
       - text: "#1: Introduksjon og overblikk"
-        href: "articles/presentations.html#8" 
+        href: "articles/presentations.html#9" 
       - text: "#2: Relevant risiko: Porteføljeteori to objekter"
         #        href: "articles/presentations.html#23" 
       - text: "#3: Relevant risiko: Porteføljeteori tre til n objekter"
