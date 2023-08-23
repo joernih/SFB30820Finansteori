@@ -7,7 +7,7 @@ output: github_document
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
 ```
 
-## Forelesning #1: [`r tema[1]`]()
+## Forelesning #1: [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/1_introduksjon_og_overblikk.pdf)
 ## Forelesning #2: [`r tema[2]`]()
 ## Forelesning #3: [`r tema[3]`]()
 ## Forelesning #4: [`r tema[4]`]()

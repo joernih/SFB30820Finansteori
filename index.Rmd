@@ -20,7 +20,6 @@ git2r::config(user.name = "joernih", user.email = "jorn.halvorsen@gmail.com")
 
 ```{r, eval=F, echo=F}
 # R-pakker
-
 devtools::document()
 devtools::install()
 inst/forelesningsnotater/presentations.Rmd

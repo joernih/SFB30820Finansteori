@@ -17,8 +17,8 @@ tema <- c(
 	  "Relevant risiko: Porteføljeteori 3-n objekter",
 	  "Effisiens",
 	  "Kapitalverdimodellen",
-	  "",
 	  "Langsiktige finansieringsformer",
+	  "",
 	  "Gjeldgrad og risiko",
 	  "Gjeldgrad og verdi i perfekte kapitalmarkeder",
 	  "Gjeldgrad og verdi med imperfeksjoner",
@@ -33,8 +33,8 @@ literatur <- c(
 	       "Kap. 2: Relevant risiko",
 	       "Kap. 3: Relevant risiko og kapitalkostnad",
 	       "Kap. 3: Relevant risiko og kapitalkostnad",
-	       "**Høstferie**",
 	       "Kap. 5: Langsiktige finansieringsformer",
+	       "**Høstferie**",
 	       "Kap. 6: Gjeldsgrad og risiko",
 	       "Kap. 7: Gjeldsgrad og verdi i perfekte kapitalmarkeder",
 	       "Kap. 8: Gjeldsgrad og verdi med imperfeksjoner",
@@ -49,8 +49,8 @@ undervfor <- c(
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
-	  "",
 	  "Campus Sone F FU1-063",
+	  "",
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
@@ -111,7 +111,7 @@ df2 <- data.frame(Forelesning=seq(1,14),
 		 Oppgaver_bok=oppgaver_bok,
 		 Oppgaver_nett=oppgaver_nett)[1:11,]
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
-
+View(df1)
 #                               2023                               
 #
 #        juli                  august                september     
