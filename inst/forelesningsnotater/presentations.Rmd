@@ -458,8 +458,8 @@ Oppgave til neste forelesning:
 ![]()
 
 ```{r, echo=FALSE, out.width="45%", fig.cap=""}
-#knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
-#```
+knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
+```
 
 ```{r include=FALSE, echo=F}
 knitr::knit_exit()
