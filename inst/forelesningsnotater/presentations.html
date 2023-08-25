@@ -4,11 +4,11 @@
     <title>Finansteori (SFB30820)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jørn I.Halvorsen" />
-    <meta name="date" content="2023-08-23" />
+    <meta name="date" content="2023-08-25" />
     <script src="libs/header-attrs-2.24/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"fde4e648e52c4539a789cbe7a396bc30","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x62d390cf24547cba4d00379eb9cd904","expires":1}</script>
     <script src="libs/himalaya-1.1.0/himalaya.js"></script>
     <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -29,6 +29,14 @@
     <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
     <script src="libs/kePrint-0.0.1/kePrint.js"></script>
     <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding-4.10.2/plotly.js"></script>
+    <script src="libs/typedarray-0.1/typedarray.min.js"></script>
+    <script src="libs/jquery-3.5.1/jquery.min.js"></script>
+    <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -56,11 +64,10 @@ class: center, middle, inverse, title-slide
 ### Jørn I.Halvorsen
 ]
 .date[
-### 2023-08-23
+### 2023-08-25
 ]
 
 ---
-
 
 
 
@@ -284,6 +291,7 @@ class: inverse, center, middle
    &lt;th style="text-align:right;"&gt; Forelesning &lt;/th&gt;
    &lt;th style="text-align:left;"&gt; Oppgaver_bok &lt;/th&gt;
    &lt;th style="text-align:left;"&gt; Oppgaver_nett &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Oppgaver_eksamen &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
@@ -291,56 +299,67 @@ class: inverse, center, middle
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 1.1,1.2,1.4,1.5,1.7.1.8 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.1.1,N.1.2,N.1.3,N.1.4, &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 1 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 2.1,2.2,2.3,2.6 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.2.1,N.2.2,N.2.3,N.2.4, &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 2 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 2.7,2.8,2.9,2.10 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.2.5,N.5.6,N.2.7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 3 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 3.1,3.2,3.3,3.5,3.6 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.3.3_1,N.3.4,N.3.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 4 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 3.3,3.4,3.7,3.8,3.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.3.6,N.3.9,N.3.10,N.3.11 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 5 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 5.1,5.2,5.3,5.8,5.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.5.1,N.5.2,N.5.3,N.5.5,N.5.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 6 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 6.1,6.6,6.7,6.8 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.6.1,**N.6.2**,**N.6.3** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 7 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 7.1,7.2,7.8,7.8,7.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; **N.7.1**,**N.7.2**,**N.7.3** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 8 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 8.1,8.3,8.4,8.5,8.7,8.8,8.10 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.8.1,N.8.2,**N.8.3** &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 9 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 10 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 11.1,**11.2**,11.5,11.7,11.8,11.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; **N.11.1**,N.11.2,N.11.3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 10 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; 12.1,12.2,**12.3**,12.5, **12.6**,12.7,**12.8**,12.9 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; N.12.1,N.12.2,12.4,12.6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Test 11 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -417,7 +436,7 @@ class: inverse, center, middle
 - Beregne forventet kontantstrøm og forventet avkastning for et prosjekt og en portefølje.
 - Gi et oversiktsbilde av innholdet i boken og bokens nettside.
 
-Oppdatert: 2023-08-23
+Oppdatert: 2023-08-25
 
 ---
 
@@ -634,7 +653,7 @@ $$
 0.42\cdot 160+0.28\cdot 70+0.18\cdot 180 +0.12\cdot 90 = 130 
 $$
 
-![](presentations_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](presentations_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -768,42 +787,545 @@ Oppgave til neste forelesning:
 
 
 
+---
+
+
+class: inverse, center, middle
+
+# Forelesning 2: Relevant risiko: Porteføljeteori to objekter
+
+**Læringsmål:**
+
+-  Forklare gjennom et eksempel hvorfor et prosjekt som er risikabelt vurdert alene kan ha lav risiko når prosjektet inngår i en portefølje.
+-  Tallfeste risiko i en portefølje ved å beregne standardavvik.
+-  Forklare hvorfor porteføljens risiko avhenger av samvariasjonen mellom prosjektene som inngår i porteføljen og de andelene som er investert i hvert prosjekt.
+
+Oppdatert: 2023-08-25
+
+---
+
+## Prosjektrisiko for eierne vs. bedriften
+
+Grunnleggende forutsetning: Ledelsen i bedriften har som oppgave å treffe beslutninger som maksimerer verdien av egenkapitalen til eierne. 
+
+Vi tar utgangspunkt i følgende tabell
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynl.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstandsb.&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Bedriftens portefølje&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Nytt prosjekt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (ikke div.)&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Eierens portefølje (div.)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Nedgangstid&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;30&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;-60&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Trend&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Oppgangstid&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-30&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;60&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;-10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Risiko for bedriften
+
+De nye prosjektets bidrag til bedriftens kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-16-1.png" width="45%" /&gt;
+
+---
+
+### Risiko for eierne
+
+- Udeversifiserte eiere: 
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **bedriftens** allerede eksisterende kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-17-1.png" width="20%" /&gt;
+
+- Veldiversifiserte eiere: 
+  - Ser forventet kontantstrøm fra det nye prosjektet i sammenheng med **porteføljens** eksisterende kontantstrøm
+
+&lt;img src="presentations_files/figure-html/unnamed-chunk-18-1.png" width="20%" /&gt;
+
+---
+
+## Måling av risiko 
+
+**Metode 1 for måling av risiko (1-n investeringsobjekter)**
+
+- Varians
+`\begin{equation}
+Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
+\end{equation}`
+- Standardavvik
+`\begin{equation}
+Std(X)=\sqrt{Var(X)}
+\end{equation}`
+
+Merk: Mens standardavviket gir oss samme benevning som forventet verdi, er benevningen til variansen vanskeligere å forholde seg til ("tolkning: Det kvadrerte til benevningen av standardavviket")
+
+
+---
+
+**Metode 2 for måling av risiko (2 investeringsobjekter)**
+
+- Varians
+`\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
+\end{equation}`
+Hvor samvariasjonen er gitt ved
+`\begin{equation}
+Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_2)] \\
+Pr(1)[r_1(1)-E(r_1)][r_2(1)-E(r_2)]+\\Pr(2)[r_1(2)-E(r_1)][r_2(2)-E(r_2)]+...+ \\ Pr(S)[r_1(S)-E(r_1)][r_2(S)-E(r_2)] 
+\end{equation}`
+
+- Standardavviket
+`\begin{equation}
+Std(r_p)=\sqrt{Var(r_p)}
+\end{equation}`
+
+---
+
+### Enkelobjekter
+
+**Eksempel 2.1**
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+Fra Metode 1 oppgitt under første forelesning har vi at 
+
+`$$E(r_a)=0.2\cdot 0.16+0.5\cdot 0.12+0.3\cdot 0.06=0.11$$` 
+`$$E(r_b)=0.2\cdot 0.05+0.5\cdot 0.20+0.3\cdot 0.40=0.23$$`
+
+Fond **A**
+`\begin{equation*}
+Var(r_a) =0.2[0.16-0.11]^2+0.5[0.12-0.11]^2+0.3[0.06-0.11]^2=0.0013 \\
+Std(r_a)=\sqrt{0.0013}=0.03605551
+\end{equation*}`
+
+Fond **B**
+`\begin{equation*}
+Var(r_b) =0.2[0.05-0.23]^2+0.5[0.20-0.23]^2+0.3[0.40-0.23]^2=0.0156 \\
+Std(r_b)=\sqrt{0.0156}=0.1249
+\end{equation*}`
+
+---
+
+### Sammensatt fond 
+
+Vi antar nå at investeringsbeløpet er likt fordelt mellom de to fondene, dvs `\(w_1=1/2,w_2=1-w_2=1/2\)`. 
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sansynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. B&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_a&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;w_b&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avk. C&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.105&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Risikoen til det sammensatte fondet C kan måles ved bruk av både metode 1 og 2.
+
+---
+
+**Metode 1**
+`\begin{equation*}
+Var(r_c) =0.2[0.105-0.17]^2+0.5[0.16-0.17]^2+0.3[0.23-0.17]^2=0.001975\\
+Std(r_c)=\sqrt{0.001975}=0.044
+\end{equation*}`
+
+**Metode 2**
+`\begin{equation*}
+Var(r_c) =(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.0045=0.001975 \\
+Std(r_c)=\sqrt{0.001975}=0.044
+\end{equation*}`
+
+Hvor vi har benyttet at
+`\begin{equation*}
+Kov(r_a,r_b) = 0.2[0.16-0.11][0.05-0.23]+0.5[0.12-0.11][0.20-0.23]+\\
+0.3[0.06-0.11][0.40-0.23]=-0.0045\\
+\end{equation*}`
 
 
 
+---
+
+## Risikoholdning og risikokompensasjon
+
+### Holdning
+
+Vi kan skille mellom *risiknøytrale* og *risikoaversje* aktører
+
+- Risikonøytral kun opptatt av forventet avkastning (+)
+	- Bedre ut: *Nordover* et diagram med risiko på x-aksen og forventet avkastning på y-aksen
+- Risikoaversj opptatt av forholdet mellom forventet avkastning (+) og risiko (-)
+- Bedre ut: *Nordvestover* (*forventning-varians/standardavvik-kriteriet*) i et diagram (forventet avkastning varians/standardavvik kriteriet) med risiko på x-aksen og forventet avkastning på y-aksen
+
+I dette kurset legger vi til grunn at *alle aktørene* er risikoaversje (ikke villig til å bære usikkerhet gratis), men at graden av risikoaversjon kan variere mellom de ulike aktørene.
+
+---
+
+&lt;img src="pensum/figurer-04.png" width="75%" /&gt;
+
+---
+
+### Risikokompenasjon (litt empiri)
+
+Finner man igjen dette i det observerte tallmateriale?
+
+#### Veldiversifisert portefølje
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Risikofri rente&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.015&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Aksjeindeks&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.068&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.127&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+#### Udiversifisert portefølje
+
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Gjennomsnitt&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Standardavvik&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Yara&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.29&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Itera&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;Aker Solutions&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.08&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;4&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;5&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;Portefølje (3 aksjer)&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.07&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+**Hovedresultater fra undersøkelsen**
+
+1. Det er mye å hente ved diversifisering: Risikoen kan reduseres kraftig uten at du taper noe i form av lavere forventet avkastning
+2. Risikokompensasjonen for en enkeltaksje er ikke knyttet til aksjens standardavvik (totalrisiko). Relevant risiko må derfor måles på andre måter.
+
+---
+
+## Endring av porteføljevekter og samvariasjon
+
+### Porteføljevekter
+
+&lt;img src="pensum/figurer-06.png" width="75%" /&gt;
+
+---
+
+**Øvelse:** Forsøk å repliker følgende resultater i Excel
+
+.panelset[
+.panel[.panel-name[Tabell]
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning a&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning b&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+.panel[.panel-name[R-kode (ikke pensum)]
+
+```r
+df &lt;- df_eks_2_1
+w &lt;- seq(0,1)
+v &lt;- as.vector(df[,(2)])
+m &lt;- as.matrix(df[,(3:4)])
+covall &lt;- cov.wt(m,v,method='ML')
+avk &lt;- as.vector(covall$center)
+kov &lt;- covall$cov[lower.tri(covall$cov)] 
+var &lt;- as.vector(diag(as.matrix(covall$cov)))
+plotwf &lt;- data.frame(kov=kov,w1=1-w, w2=w) %&gt;%
+	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %&gt;%
+	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %&gt;%
+	dplyr::mutate(stdavk=sqrt(varians))
+```
+]
+.panel[.panel-name[Figur 2.3 (replikasjon)]
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5b316f83d08735b13b34" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-5b316f83d08735b13b34">{"x":{"data":[{"x":[0.03605551275463989,0.12489995996796796],"y":[0.11,0.23000000000000001],"text":["stdavk: 0.03605551<br />forvavk: 0.11","stdavk: 0.12489996<br />forvavk: 0.23"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":48.949771689497723},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.031613290393973488,0.12934218232863437],"tickmode":"array","ticktext":["0.050","0.075","0.100","0.125"],"tickvals":[0.050000000000000003,0.075000000000000011,0.10000000000000001,0.125],"categoryorder":"array","categoryarray":["0.050","0.075","0.100","0.125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.23600000000000002],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15000000000000002,0.20000000000000001],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"9a0763c442ff":{"x":{},"y":{},"type":"scatter"}},"cur_data":"9a0763c442ff","visdat":{"9a0763c442ff":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+---
+
+### Korrelasjonskoeffisienten (standardisert mål på samvariasjon)
+
+`\begin{equation}
+Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
+\end{equation}`
+
+- `\(Korr(r_a,r_b)=1\)` (fullstendig avhengige)
+- `\(Korr(r_a,r_b)=0\)` (fullstendig uavhengige)
+- `\(Korr(r_a,r_b)=-1\)` (fullstendig motsatt avhengige)
+
+Løser denne for `\(Kov(r_a,r_b)=Korr(r_a,r_b)Std(r_a)Std(r_b)\)`
+
+Som gjør at vi kan skrive
+`\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
+\end{equation}`
+
+---
+
+Holder vi oss til eksempel 2.1, innebærer dette at beregningene av porteføljevariansen også kan uttrykkes som
+`\begin{equation*}
+Korr(r_a,r_b)=\frac{-0.0045}{0.036\cdot 0.125}=-1
+\end{equation*}`
+
+Mens variansen til porteføljen kan uttrykkes som
+`\begin{equation*}
+Var(r_p)=(1/2)^2(0.0013)+(1/2)^2(0.0156)-2(1/2)(1/2)0.036\cdot 0.125 \\= 0.001975
+\end{equation*}`
+
+---
+
+&lt;img src="pensum/figurer-05.png" width="75%" /&gt;
+
+---
 
 
+&lt;img src="pensum/figurer-07.png" width="75%" /&gt;
 
+---
 
+**Øvelse:** Forsøk å replikere følgende tabell i Excel
 
+.panelset[
+.panel[.panel-name[Tabell]
+&lt;table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' &gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'&gt;&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Tilstand&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Sannsynlighet&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning A&lt;/th&gt;
+&lt;th style='font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'&gt;Avkastning B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;1&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.16&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='text-align: left;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;2&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.5&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.12&lt;/td&gt;
+&lt;td style='text-align: center;'&gt;0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: left;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.3&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.06&lt;/td&gt;
+&lt;td style='border-bottom: 2px solid grey; text-align: center;'&gt;0.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+.panel[.panel-name[R-kode (ikke pensum)]
 
+```r
+plotwf &lt;- c(-1,0,1) %&gt;% purrr::map_dfr(function(r,df=df_eks_2_1){
+	w &lt;- seq(0,1,0.01)
+	v &lt;- as.vector(df[,(2)])
+	m &lt;- as.matrix(df[,(3:4)])
+	covall &lt;- cov.wt(m,v,method='ML')
+	avk &lt;- as.vector(covall$center)
+	kov &lt;- covall$cov[lower.tri(covall$cov)] 
+	var &lt;- as.vector(diag(as.matrix(covall$cov)))
+	avkdf &lt;- data.frame(corr=r,w1=1-w, w2=w) %&gt;%
+ 		dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %&gt;%
+ 		dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*r*sqrt(var[1])*sqrt(var[2])) %&gt;%
+ 		dplyr::mutate(stdavk=sqrt(varians))
+			 }
+)
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+]
+.panel[.panel-name[Figur 2.4 (replikasjon)]
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c641f85e13c43a1808e0" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-c641f85e13c43a1808e0">{"x":{"data":[{"x":[0.03605551275463989,0.034445958027413813,0.032836403300187736,0.031226848572961659,0.029617293845735578,0.028007739118509498,0.02639818439128342,0.02478862966405734,0.023179074936831263,0.021569520209605193,0.019959965482379112,0.018350410755153031,0.016740856027926951,0.015131301300700875,0.013521746573474791,0.011912191846248711,0.01030263711902263,0.0086930823917965548,0.0070835276645704994,0.0054739729373444049,0.0038644182101183356,0.0022548634828922455,0.00064530875566615328,0.00096424597155992937,0.0025738006987859785,0.0041833554260120847,0.0057929101532381436,0.007402464880464245,0.0090120196076903178,0.010621574334916407,0.012231129062142469,0.013840683789368553,0.015450238516594631,0.01705979324382071,0.018669347971046787,0.020278902698272872,0.021888457425498942,0.023498012152725019,0.025107566879951092,0.02671712160717718,0.028326676334403264,0.029936231061629338,0.031545785788855397,0.033155340516081482,0.034764895243307566,0.036374449970533643,0.03798400469775972,0.039593559424985811,0.041203114152211874,0.042812668879437944,0.044422223606664035,0.046031778333890112,0.047641333061116196,0.049250887788342274,0.050860442515568351,0.052469997242794428,0.054079551970020512,0.055689106697246603,0.057298661424472652,0.058908216151698736,0.06051777087892482,0.062127325606150897,0.063736880333376988,0.065346435060603059,0.066955989787829143,0.068565544515055213,0.070175099242281297,0.071784653969507381,0.073394208696733451,0.075003763423959535,0.076613318151185619,0.078222872878411676,0.07983242760563776,0.08144198233286383,0.083051537060089914,0.084661091787315998,0.086270646514542068,0.087880201241768152,0.089489755968994236,0.09109931069622032,0.092708865423446404,0.094318420150672488,0.095927974877898559,0.097537529605124643,0.099147084332350699,0.10075663905957678,0.10236619378680285,0.10397574851402894,0.10558530324125501,0.10719485796848111,0.10880441269570719,0.11041396742293326,0.11202352215015933,0.11363307687738543,0.1152426316046115,0.11685218633183758,0.11846174105906364,0.12007129578628972,0.12168085051351579,0.12329040524074188,0.12489995996796796,0.03605551275463989,0.035716802768444994,0.035422591661254825,0.035173996076647306,0.034971988791031028,0.034817380717107368,0.034710805234105413,0.034652705522080086,0.034643325475479395,0.034682704623486334,0.034770677301427425,0.034906876113453639,0.035090739519138096,0.035321523183464217,0.035598314566844314,0.035920050111323619,0.03628553430776512,0.036693459907727426,0.037142428568956019,0.037630971286959893,0.038157568056677832,0.038720666316580866,0.039318697842120866,0.039950093867223889,0.040613298314714601,0.041306779104645766,0.042029037581177132,0.042778616153400756,0.043554104284211838,0.044354142985745991,0.04517742799230607,0.046022711784509181,0.046888804633942203,0.047774574828040067,0.048678948221998392,0.049600907249767116,0.050539489510678673,0.051493786032879733,0.052462939300043032,0.053446141114209547,0.054442630355264802,0.055451690686578708,0.056472648246739761,0.057504869359037758,0.058547758283302359,0.059600755028774592,0.060663333241753208,0.061734998177694962,0.06281528476414,0.063903755758171199,0.065000000000000002,0.066103630762613941,0.067214284196143906,0.068331617864645935,0.069455309372286292,0.07058505507541947,0.071720568876717655,0.072861581097310821,0.074007837422802716,0.075159097919014428,0.07631513611335565,0.077475738137819633,0.078640701929725929,0.079809836486488303,0.080982961170853712,0.082159905063236296,0.083340506357952981,0.084524611800350785,0.08571207616199715,0.086902761751281532,0.088096537956948121,0.089293280822243276,0.090492872647518485,0.091695201619277744,0.092900161463799397,0.094107651123593553,0.095317574455081461,0.096529839945998036,0.097744360451127818,0.098961052945085434,0.10017983829094555,0.10140064102361485,0.10262338914691914,0.10384801394345489,0.10507444979632298,0.10630263402192816,0.10753250671308652,0.10876401059173939,0.10999709087062257,0.11123169512328759,0.11246777316191514,0.11370527692240145,0.11494416035623557,0.11618437932872044,0.11742589152312194,0.1186686563503607,0.11991263486388747,0.12115778967940938,0.12240408489915684,0.12365148604040307,0.12489995996796796,0.03605551275463989,0.036943957226773169,0.037832401698906455,0.038720846171039734,0.039609290643173013,0.040497735115306292,0.041386179587439571,0.042274624059572857,0.043163068531706136,0.044051513003839422,0.044939957475972701,0.04582840194810598,0.046716846420239259,0.047605290892372545,0.048493735364505824,0.049382179836639103,0.050270624308772383,0.051159068780905662,0.052047513253038948,0.052935957725172227,0.053824402197305506,0.054712846669438785,0.055601291141572064,0.056489735613705343,0.057378180085838629,0.058266624557971908,0.059155069030105187,0.060043513502238473,0.060931957974371752,0.061820402446505031,0.062708846918638317,0.063597291390771596,0.064485735862904875,0.065374180335038154,0.066262624807171433,0.067151069279304726,0.068039513751437991,0.06892795822357127,0.069816402695704563,0.070704847167837842,0.071593291639971121,0.0724817361121044,0.073370180584237679,0.074258625056370958,0.075147069528504237,0.07603551400063753,0.076923958472770809,0.077812402944904088,0.078700847417037367,0.079589291889170646,0.080477736361303925,0.081366180833437204,0.082254625305570483,0.083143069777703763,0.084031514249837042,0.084919958721970334,0.085808403194103613,0.086696847666236893,0.087585292138370172,0.088473736610503451,0.08936218108263673,0.090250625554770009,0.091139070026903288,0.092027514499036581,0.09291595897116986,0.093804403443303139,0.094692847915436418,0.095581292387569697,0.09646973685970299,0.097358181331836269,0.098246625803969548,0.099135070276102827,0.10002351474823611,0.10091195922036937,0.10180040369250266,0.10268884816463594,0.10357729263676922,0.1044657371089025,0.10535418158103579,0.10624262605316907,0.10713107052530235,0.10801951499743564,0.10890795946956891,0.10979640394170219,0.11068484841383545,0.11157329288596873,0.11246173735810203,0.11335018183023532,0.11423862630236858,0.11512707077450188,0.11601551524663516,0.11690395971876844,0.11779240419090171,0.11868084866303501,0.11956929313516829,0.12045773760730157,0.12134618207943484,0.12223462655156811,0.12312307102370139,0.12401151549583468,0.12489995996796796],"y":[0.11,0.11119999999999999,0.1124,0.11360000000000001,0.1148,0.11599999999999999,0.1172,0.11839999999999999,0.1196,0.1208,0.12200000000000001,0.1232,0.1244,0.12559999999999999,0.12680000000000002,0.128,0.12919999999999998,0.13039999999999999,0.13159999999999999,0.13280000000000003,0.13400000000000001,0.13520000000000001,0.13639999999999999,0.1376,0.13880000000000001,0.14000000000000001,0.14119999999999999,0.1424,0.14360000000000001,0.14479999999999998,0.14600000000000002,0.1472,0.14839999999999998,0.14960000000000001,0.15079999999999999,0.15200000000000002,0.1532,0.15440000000000001,0.15560000000000002,0.15679999999999999,0.15800000000000003,0.15920000000000001,0.16040000000000001,0.16160000000000002,0.1628,0.16400000000000001,0.16520000000000001,0.16640000000000002,0.1676,0.16880000000000001,0.17000000000000001,0.17119999999999999,0.1724,0.1736,0.17480000000000001,0.17600000000000002,0.17720000000000002,0.1784,0.17959999999999998,0.18079999999999999,0.18200000000000002,0.1832,0.18440000000000001,0.18559999999999999,0.18679999999999999,0.18800000000000003,0.18920000000000001,0.19040000000000001,0.19159999999999999,0.1928,0.19400000000000003,0.19520000000000001,0.19639999999999999,0.1976,0.19880000000000003,0.20000000000000001,0.20120000000000002,0.2024,0.2036,0.20480000000000004,0.20600000000000002,0.20720000000000002,0.2084,0.20960000000000001,0.21080000000000002,0.21200000000000002,0.2132,0.21440000000000001,0.21559999999999999,0.21680000000000002,0.21800000000000003,0.21920000000000001,0.22040000000000001,0.22159999999999999,0.22280000000000003,0.22400000000000003,0.22520000000000001,0.22639999999999999,0.22760000000000002,0.2288,0.23000000000000001,0.11,0.11119999999999999,0.1124,0.11360000000000001,0.1148,0.11599999999999999,0.1172,0.11839999999999999,0.1196,0.1208,0.12200000000000001,0.1232,0.1244,0.12559999999999999,0.12680000000000002,0.128,0.12919999999999998,0.13039999999999999,0.13159999999999999,0.13280000000000003,0.13400000000000001,0.13520000000000001,0.13639999999999999,0.1376,0.13880000000000001,0.14000000000000001,0.14119999999999999,0.1424,0.14360000000000001,0.14479999999999998,0.14600000000000002,0.1472,0.14839999999999998,0.14960000000000001,0.15079999999999999,0.15200000000000002,0.1532,0.15440000000000001,0.15560000000000002,0.15679999999999999,0.15800000000000003,0.15920000000000001,0.16040000000000001,0.16160000000000002,0.1628,0.16400000000000001,0.16520000000000001,0.16640000000000002,0.1676,0.16880000000000001,0.17000000000000001,0.17119999999999999,0.1724,0.1736,0.17480000000000001,0.17600000000000002,0.17720000000000002,0.1784,0.17959999999999998,0.18079999999999999,0.18200000000000002,0.1832,0.18440000000000001,0.18559999999999999,0.18679999999999999,0.18800000000000003,0.18920000000000001,0.19040000000000001,0.19159999999999999,0.1928,0.19400000000000003,0.19520000000000001,0.19639999999999999,0.1976,0.19880000000000003,0.20000000000000001,0.20120000000000002,0.2024,0.2036,0.20480000000000004,0.20600000000000002,0.20720000000000002,0.2084,0.20960000000000001,0.21080000000000002,0.21200000000000002,0.2132,0.21440000000000001,0.21559999999999999,0.21680000000000002,0.21800000000000003,0.21920000000000001,0.22040000000000001,0.22159999999999999,0.22280000000000003,0.22400000000000003,0.22520000000000001,0.22639999999999999,0.22760000000000002,0.2288,0.23000000000000001,0.11,0.11119999999999999,0.1124,0.11360000000000001,0.1148,0.11599999999999999,0.1172,0.11839999999999999,0.1196,0.1208,0.12200000000000001,0.1232,0.1244,0.12559999999999999,0.12680000000000002,0.128,0.12919999999999998,0.13039999999999999,0.13159999999999999,0.13280000000000003,0.13400000000000001,0.13520000000000001,0.13639999999999999,0.1376,0.13880000000000001,0.14000000000000001,0.14119999999999999,0.1424,0.14360000000000001,0.14479999999999998,0.14600000000000002,0.1472,0.14839999999999998,0.14960000000000001,0.15079999999999999,0.15200000000000002,0.1532,0.15440000000000001,0.15560000000000002,0.15679999999999999,0.15800000000000003,0.15920000000000001,0.16040000000000001,0.16160000000000002,0.1628,0.16400000000000001,0.16520000000000001,0.16640000000000002,0.1676,0.16880000000000001,0.17000000000000001,0.17119999999999999,0.1724,0.1736,0.17480000000000001,0.17600000000000002,0.17720000000000002,0.1784,0.17959999999999998,0.18079999999999999,0.18200000000000002,0.1832,0.18440000000000001,0.18559999999999999,0.18679999999999999,0.18800000000000003,0.18920000000000001,0.19040000000000001,0.19159999999999999,0.1928,0.19400000000000003,0.19520000000000001,0.19639999999999999,0.1976,0.19880000000000003,0.20000000000000001,0.20120000000000002,0.2024,0.2036,0.20480000000000004,0.20600000000000002,0.20720000000000002,0.2084,0.20960000000000001,0.21080000000000002,0.21200000000000002,0.2132,0.21440000000000001,0.21559999999999999,0.21680000000000002,0.21800000000000003,0.21920000000000001,0.22040000000000001,0.22159999999999999,0.22280000000000003,0.22400000000000003,0.22520000000000001,0.22639999999999999,0.22760000000000002,0.2288,0.23000000000000001],"text":["stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr: -1","stdavk: 0.0344459580<br />forvavk: 0.1112<br />corr: -1","stdavk: 0.0328364033<br />forvavk: 0.1124<br />corr: -1","stdavk: 0.0312268486<br />forvavk: 0.1136<br />corr: -1","stdavk: 0.0296172938<br />forvavk: 0.1148<br />corr: -1","stdavk: 0.0280077391<br />forvavk: 0.1160<br />corr: -1","stdavk: 0.0263981844<br />forvavk: 0.1172<br />corr: -1","stdavk: 0.0247886297<br />forvavk: 0.1184<br />corr: -1","stdavk: 0.0231790749<br />forvavk: 0.1196<br />corr: -1","stdavk: 0.0215695202<br />forvavk: 0.1208<br />corr: -1","stdavk: 0.0199599655<br />forvavk: 0.1220<br />corr: -1","stdavk: 0.0183504108<br />forvavk: 0.1232<br />corr: -1","stdavk: 0.0167408560<br />forvavk: 0.1244<br />corr: -1","stdavk: 0.0151313013<br />forvavk: 0.1256<br />corr: -1","stdavk: 0.0135217466<br />forvavk: 0.1268<br />corr: -1","stdavk: 0.0119121918<br />forvavk: 0.1280<br />corr: -1","stdavk: 0.0103026371<br />forvavk: 0.1292<br />corr: -1","stdavk: 0.0086930824<br />forvavk: 0.1304<br />corr: -1","stdavk: 0.0070835277<br />forvavk: 0.1316<br />corr: -1","stdavk: 0.0054739729<br />forvavk: 0.1328<br />corr: -1","stdavk: 0.0038644182<br />forvavk: 0.1340<br />corr: -1","stdavk: 0.0022548635<br />forvavk: 0.1352<br />corr: -1","stdavk: 0.0006453088<br />forvavk: 0.1364<br />corr: -1","stdavk: 0.0009642460<br />forvavk: 0.1376<br />corr: -1","stdavk: 0.0025738007<br />forvavk: 0.1388<br />corr: -1","stdavk: 0.0041833554<br />forvavk: 0.1400<br />corr: -1","stdavk: 0.0057929102<br />forvavk: 0.1412<br />corr: -1","stdavk: 0.0074024649<br />forvavk: 0.1424<br />corr: -1","stdavk: 0.0090120196<br />forvavk: 0.1436<br />corr: -1","stdavk: 0.0106215743<br />forvavk: 0.1448<br />corr: -1","stdavk: 0.0122311291<br />forvavk: 0.1460<br />corr: -1","stdavk: 0.0138406838<br />forvavk: 0.1472<br />corr: -1","stdavk: 0.0154502385<br />forvavk: 0.1484<br />corr: -1","stdavk: 0.0170597932<br />forvavk: 0.1496<br />corr: -1","stdavk: 0.0186693480<br />forvavk: 0.1508<br />corr: -1","stdavk: 0.0202789027<br />forvavk: 0.1520<br />corr: -1","stdavk: 0.0218884574<br />forvavk: 0.1532<br />corr: -1","stdavk: 0.0234980122<br />forvavk: 0.1544<br />corr: -1","stdavk: 0.0251075669<br />forvavk: 0.1556<br />corr: -1","stdavk: 0.0267171216<br />forvavk: 0.1568<br />corr: -1","stdavk: 0.0283266763<br />forvavk: 0.1580<br />corr: -1","stdavk: 0.0299362311<br />forvavk: 0.1592<br />corr: -1","stdavk: 0.0315457858<br />forvavk: 0.1604<br />corr: -1","stdavk: 0.0331553405<br />forvavk: 0.1616<br />corr: -1","stdavk: 0.0347648952<br />forvavk: 0.1628<br />corr: -1","stdavk: 0.0363744500<br />forvavk: 0.1640<br />corr: -1","stdavk: 0.0379840047<br />forvavk: 0.1652<br />corr: -1","stdavk: 0.0395935594<br />forvavk: 0.1664<br />corr: -1","stdavk: 0.0412031142<br />forvavk: 0.1676<br />corr: -1","stdavk: 0.0428126689<br />forvavk: 0.1688<br />corr: -1","stdavk: 0.0444222236<br />forvavk: 0.1700<br />corr: -1","stdavk: 0.0460317783<br />forvavk: 0.1712<br />corr: -1","stdavk: 0.0476413331<br />forvavk: 0.1724<br />corr: -1","stdavk: 0.0492508878<br />forvavk: 0.1736<br />corr: -1","stdavk: 0.0508604425<br />forvavk: 0.1748<br />corr: -1","stdavk: 0.0524699972<br />forvavk: 0.1760<br />corr: -1","stdavk: 0.0540795520<br />forvavk: 0.1772<br />corr: -1","stdavk: 0.0556891067<br />forvavk: 0.1784<br />corr: -1","stdavk: 0.0572986614<br />forvavk: 0.1796<br />corr: -1","stdavk: 0.0589082162<br />forvavk: 0.1808<br />corr: -1","stdavk: 0.0605177709<br />forvavk: 0.1820<br />corr: -1","stdavk: 0.0621273256<br />forvavk: 0.1832<br />corr: -1","stdavk: 0.0637368803<br />forvavk: 0.1844<br />corr: -1","stdavk: 0.0653464351<br />forvavk: 0.1856<br />corr: -1","stdavk: 0.0669559898<br />forvavk: 0.1868<br />corr: -1","stdavk: 0.0685655445<br />forvavk: 0.1880<br />corr: -1","stdavk: 0.0701750992<br />forvavk: 0.1892<br />corr: -1","stdavk: 0.0717846540<br />forvavk: 0.1904<br />corr: -1","stdavk: 0.0733942087<br />forvavk: 0.1916<br />corr: -1","stdavk: 0.0750037634<br />forvavk: 0.1928<br />corr: -1","stdavk: 0.0766133182<br />forvavk: 0.1940<br />corr: -1","stdavk: 0.0782228729<br />forvavk: 0.1952<br />corr: -1","stdavk: 0.0798324276<br />forvavk: 0.1964<br />corr: -1","stdavk: 0.0814419823<br />forvavk: 0.1976<br />corr: -1","stdavk: 0.0830515371<br />forvavk: 0.1988<br />corr: -1","stdavk: 0.0846610918<br />forvavk: 0.2000<br />corr: -1","stdavk: 0.0862706465<br />forvavk: 0.2012<br />corr: -1","stdavk: 0.0878802012<br />forvavk: 0.2024<br />corr: -1","stdavk: 0.0894897560<br />forvavk: 0.2036<br />corr: -1","stdavk: 0.0910993107<br />forvavk: 0.2048<br />corr: -1","stdavk: 0.0927088654<br />forvavk: 0.2060<br />corr: -1","stdavk: 0.0943184202<br />forvavk: 0.2072<br />corr: -1","stdavk: 0.0959279749<br />forvavk: 0.2084<br />corr: -1","stdavk: 0.0975375296<br />forvavk: 0.2096<br />corr: -1","stdavk: 0.0991470843<br />forvavk: 0.2108<br />corr: -1","stdavk: 0.1007566391<br />forvavk: 0.2120<br />corr: -1","stdavk: 0.1023661938<br />forvavk: 0.2132<br />corr: -1","stdavk: 0.1039757485<br />forvavk: 0.2144<br />corr: -1","stdavk: 0.1055853032<br />forvavk: 0.2156<br />corr: -1","stdavk: 0.1071948580<br />forvavk: 0.2168<br />corr: -1","stdavk: 0.1088044127<br />forvavk: 0.2180<br />corr: -1","stdavk: 0.1104139674<br />forvavk: 0.2192<br />corr: -1","stdavk: 0.1120235222<br />forvavk: 0.2204<br />corr: -1","stdavk: 0.1136330769<br />forvavk: 0.2216<br />corr: -1","stdavk: 0.1152426316<br />forvavk: 0.2228<br />corr: -1","stdavk: 0.1168521863<br />forvavk: 0.2240<br />corr: -1","stdavk: 0.1184617411<br />forvavk: 0.2252<br />corr: -1","stdavk: 0.1200712958<br />forvavk: 0.2264<br />corr: -1","stdavk: 0.1216808505<br />forvavk: 0.2276<br />corr: -1","stdavk: 0.1232904052<br />forvavk: 0.2288<br />corr: -1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr: -1","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  0","stdavk: 0.0357168028<br />forvavk: 0.1112<br />corr:  0","stdavk: 0.0354225917<br />forvavk: 0.1124<br />corr:  0","stdavk: 0.0351739961<br />forvavk: 0.1136<br />corr:  0","stdavk: 0.0349719888<br />forvavk: 0.1148<br />corr:  0","stdavk: 0.0348173807<br />forvavk: 0.1160<br />corr:  0","stdavk: 0.0347108052<br />forvavk: 0.1172<br />corr:  0","stdavk: 0.0346527055<br />forvavk: 0.1184<br />corr:  0","stdavk: 0.0346433255<br />forvavk: 0.1196<br />corr:  0","stdavk: 0.0346827046<br />forvavk: 0.1208<br />corr:  0","stdavk: 0.0347706773<br />forvavk: 0.1220<br />corr:  0","stdavk: 0.0349068761<br />forvavk: 0.1232<br />corr:  0","stdavk: 0.0350907395<br />forvavk: 0.1244<br />corr:  0","stdavk: 0.0353215232<br />forvavk: 0.1256<br />corr:  0","stdavk: 0.0355983146<br />forvavk: 0.1268<br />corr:  0","stdavk: 0.0359200501<br />forvavk: 0.1280<br />corr:  0","stdavk: 0.0362855343<br />forvavk: 0.1292<br />corr:  0","stdavk: 0.0366934599<br />forvavk: 0.1304<br />corr:  0","stdavk: 0.0371424286<br />forvavk: 0.1316<br />corr:  0","stdavk: 0.0376309713<br />forvavk: 0.1328<br />corr:  0","stdavk: 0.0381575681<br />forvavk: 0.1340<br />corr:  0","stdavk: 0.0387206663<br />forvavk: 0.1352<br />corr:  0","stdavk: 0.0393186978<br />forvavk: 0.1364<br />corr:  0","stdavk: 0.0399500939<br />forvavk: 0.1376<br />corr:  0","stdavk: 0.0406132983<br />forvavk: 0.1388<br />corr:  0","stdavk: 0.0413067791<br />forvavk: 0.1400<br />corr:  0","stdavk: 0.0420290376<br />forvavk: 0.1412<br />corr:  0","stdavk: 0.0427786162<br />forvavk: 0.1424<br />corr:  0","stdavk: 0.0435541043<br />forvavk: 0.1436<br />corr:  0","stdavk: 0.0443541430<br />forvavk: 0.1448<br />corr:  0","stdavk: 0.0451774280<br />forvavk: 0.1460<br />corr:  0","stdavk: 0.0460227118<br />forvavk: 0.1472<br />corr:  0","stdavk: 0.0468888046<br />forvavk: 0.1484<br />corr:  0","stdavk: 0.0477745748<br />forvavk: 0.1496<br />corr:  0","stdavk: 0.0486789482<br />forvavk: 0.1508<br />corr:  0","stdavk: 0.0496009072<br />forvavk: 0.1520<br />corr:  0","stdavk: 0.0505394895<br />forvavk: 0.1532<br />corr:  0","stdavk: 0.0514937860<br />forvavk: 0.1544<br />corr:  0","stdavk: 0.0524629393<br />forvavk: 0.1556<br />corr:  0","stdavk: 0.0534461411<br />forvavk: 0.1568<br />corr:  0","stdavk: 0.0544426304<br />forvavk: 0.1580<br />corr:  0","stdavk: 0.0554516907<br />forvavk: 0.1592<br />corr:  0","stdavk: 0.0564726482<br />forvavk: 0.1604<br />corr:  0","stdavk: 0.0575048694<br />forvavk: 0.1616<br />corr:  0","stdavk: 0.0585477583<br />forvavk: 0.1628<br />corr:  0","stdavk: 0.0596007550<br />forvavk: 0.1640<br />corr:  0","stdavk: 0.0606633332<br />forvavk: 0.1652<br />corr:  0","stdavk: 0.0617349982<br />forvavk: 0.1664<br />corr:  0","stdavk: 0.0628152848<br />forvavk: 0.1676<br />corr:  0","stdavk: 0.0639037558<br />forvavk: 0.1688<br />corr:  0","stdavk: 0.0650000000<br />forvavk: 0.1700<br />corr:  0","stdavk: 0.0661036308<br />forvavk: 0.1712<br />corr:  0","stdavk: 0.0672142842<br />forvavk: 0.1724<br />corr:  0","stdavk: 0.0683316179<br />forvavk: 0.1736<br />corr:  0","stdavk: 0.0694553094<br />forvavk: 0.1748<br />corr:  0","stdavk: 0.0705850551<br />forvavk: 0.1760<br />corr:  0","stdavk: 0.0717205689<br />forvavk: 0.1772<br />corr:  0","stdavk: 0.0728615811<br />forvavk: 0.1784<br />corr:  0","stdavk: 0.0740078374<br />forvavk: 0.1796<br />corr:  0","stdavk: 0.0751590979<br />forvavk: 0.1808<br />corr:  0","stdavk: 0.0763151361<br />forvavk: 0.1820<br />corr:  0","stdavk: 0.0774757381<br />forvavk: 0.1832<br />corr:  0","stdavk: 0.0786407019<br />forvavk: 0.1844<br />corr:  0","stdavk: 0.0798098365<br />forvavk: 0.1856<br />corr:  0","stdavk: 0.0809829612<br />forvavk: 0.1868<br />corr:  0","stdavk: 0.0821599051<br />forvavk: 0.1880<br />corr:  0","stdavk: 0.0833405064<br />forvavk: 0.1892<br />corr:  0","stdavk: 0.0845246118<br />forvavk: 0.1904<br />corr:  0","stdavk: 0.0857120762<br />forvavk: 0.1916<br />corr:  0","stdavk: 0.0869027618<br />forvavk: 0.1928<br />corr:  0","stdavk: 0.0880965380<br />forvavk: 0.1940<br />corr:  0","stdavk: 0.0892932808<br />forvavk: 0.1952<br />corr:  0","stdavk: 0.0904928726<br />forvavk: 0.1964<br />corr:  0","stdavk: 0.0916952016<br />forvavk: 0.1976<br />corr:  0","stdavk: 0.0929001615<br />forvavk: 0.1988<br />corr:  0","stdavk: 0.0941076511<br />forvavk: 0.2000<br />corr:  0","stdavk: 0.0953175745<br />forvavk: 0.2012<br />corr:  0","stdavk: 0.0965298399<br />forvavk: 0.2024<br />corr:  0","stdavk: 0.0977443605<br />forvavk: 0.2036<br />corr:  0","stdavk: 0.0989610529<br />forvavk: 0.2048<br />corr:  0","stdavk: 0.1001798383<br />forvavk: 0.2060<br />corr:  0","stdavk: 0.1014006410<br />forvavk: 0.2072<br />corr:  0","stdavk: 0.1026233891<br />forvavk: 0.2084<br />corr:  0","stdavk: 0.1038480139<br />forvavk: 0.2096<br />corr:  0","stdavk: 0.1050744498<br />forvavk: 0.2108<br />corr:  0","stdavk: 0.1063026340<br />forvavk: 0.2120<br />corr:  0","stdavk: 0.1075325067<br />forvavk: 0.2132<br />corr:  0","stdavk: 0.1087640106<br />forvavk: 0.2144<br />corr:  0","stdavk: 0.1099970909<br />forvavk: 0.2156<br />corr:  0","stdavk: 0.1112316951<br />forvavk: 0.2168<br />corr:  0","stdavk: 0.1124677732<br />forvavk: 0.2180<br />corr:  0","stdavk: 0.1137052769<br />forvavk: 0.2192<br />corr:  0","stdavk: 0.1149441604<br />forvavk: 0.2204<br />corr:  0","stdavk: 0.1161843793<br />forvavk: 0.2216<br />corr:  0","stdavk: 0.1174258915<br />forvavk: 0.2228<br />corr:  0","stdavk: 0.1186686564<br />forvavk: 0.2240<br />corr:  0","stdavk: 0.1199126349<br />forvavk: 0.2252<br />corr:  0","stdavk: 0.1211577897<br />forvavk: 0.2264<br />corr:  0","stdavk: 0.1224040849<br />forvavk: 0.2276<br />corr:  0","stdavk: 0.1236514860<br />forvavk: 0.2288<br />corr:  0","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  0","stdavk: 0.0360555128<br />forvavk: 0.1100<br />corr:  1","stdavk: 0.0369439572<br />forvavk: 0.1112<br />corr:  1","stdavk: 0.0378324017<br />forvavk: 0.1124<br />corr:  1","stdavk: 0.0387208462<br />forvavk: 0.1136<br />corr:  1","stdavk: 0.0396092906<br />forvavk: 0.1148<br />corr:  1","stdavk: 0.0404977351<br />forvavk: 0.1160<br />corr:  1","stdavk: 0.0413861796<br />forvavk: 0.1172<br />corr:  1","stdavk: 0.0422746241<br />forvavk: 0.1184<br />corr:  1","stdavk: 0.0431630685<br />forvavk: 0.1196<br />corr:  1","stdavk: 0.0440515130<br />forvavk: 0.1208<br />corr:  1","stdavk: 0.0449399575<br />forvavk: 0.1220<br />corr:  1","stdavk: 0.0458284019<br />forvavk: 0.1232<br />corr:  1","stdavk: 0.0467168464<br />forvavk: 0.1244<br />corr:  1","stdavk: 0.0476052909<br />forvavk: 0.1256<br />corr:  1","stdavk: 0.0484937354<br />forvavk: 0.1268<br />corr:  1","stdavk: 0.0493821798<br />forvavk: 0.1280<br />corr:  1","stdavk: 0.0502706243<br />forvavk: 0.1292<br />corr:  1","stdavk: 0.0511590688<br />forvavk: 0.1304<br />corr:  1","stdavk: 0.0520475133<br />forvavk: 0.1316<br />corr:  1","stdavk: 0.0529359577<br />forvavk: 0.1328<br />corr:  1","stdavk: 0.0538244022<br />forvavk: 0.1340<br />corr:  1","stdavk: 0.0547128467<br />forvavk: 0.1352<br />corr:  1","stdavk: 0.0556012911<br />forvavk: 0.1364<br />corr:  1","stdavk: 0.0564897356<br />forvavk: 0.1376<br />corr:  1","stdavk: 0.0573781801<br />forvavk: 0.1388<br />corr:  1","stdavk: 0.0582666246<br />forvavk: 0.1400<br />corr:  1","stdavk: 0.0591550690<br />forvavk: 0.1412<br />corr:  1","stdavk: 0.0600435135<br />forvavk: 0.1424<br />corr:  1","stdavk: 0.0609319580<br />forvavk: 0.1436<br />corr:  1","stdavk: 0.0618204024<br />forvavk: 0.1448<br />corr:  1","stdavk: 0.0627088469<br />forvavk: 0.1460<br />corr:  1","stdavk: 0.0635972914<br />forvavk: 0.1472<br />corr:  1","stdavk: 0.0644857359<br />forvavk: 0.1484<br />corr:  1","stdavk: 0.0653741803<br />forvavk: 0.1496<br />corr:  1","stdavk: 0.0662626248<br />forvavk: 0.1508<br />corr:  1","stdavk: 0.0671510693<br />forvavk: 0.1520<br />corr:  1","stdavk: 0.0680395138<br />forvavk: 0.1532<br />corr:  1","stdavk: 0.0689279582<br />forvavk: 0.1544<br />corr:  1","stdavk: 0.0698164027<br />forvavk: 0.1556<br />corr:  1","stdavk: 0.0707048472<br />forvavk: 0.1568<br />corr:  1","stdavk: 0.0715932916<br />forvavk: 0.1580<br />corr:  1","stdavk: 0.0724817361<br />forvavk: 0.1592<br />corr:  1","stdavk: 0.0733701806<br />forvavk: 0.1604<br />corr:  1","stdavk: 0.0742586251<br />forvavk: 0.1616<br />corr:  1","stdavk: 0.0751470695<br />forvavk: 0.1628<br />corr:  1","stdavk: 0.0760355140<br />forvavk: 0.1640<br />corr:  1","stdavk: 0.0769239585<br />forvavk: 0.1652<br />corr:  1","stdavk: 0.0778124029<br />forvavk: 0.1664<br />corr:  1","stdavk: 0.0787008474<br />forvavk: 0.1676<br />corr:  1","stdavk: 0.0795892919<br />forvavk: 0.1688<br />corr:  1","stdavk: 0.0804777364<br />forvavk: 0.1700<br />corr:  1","stdavk: 0.0813661808<br />forvavk: 0.1712<br />corr:  1","stdavk: 0.0822546253<br />forvavk: 0.1724<br />corr:  1","stdavk: 0.0831430698<br />forvavk: 0.1736<br />corr:  1","stdavk: 0.0840315142<br />forvavk: 0.1748<br />corr:  1","stdavk: 0.0849199587<br />forvavk: 0.1760<br />corr:  1","stdavk: 0.0858084032<br />forvavk: 0.1772<br />corr:  1","stdavk: 0.0866968477<br />forvavk: 0.1784<br />corr:  1","stdavk: 0.0875852921<br />forvavk: 0.1796<br />corr:  1","stdavk: 0.0884737366<br />forvavk: 0.1808<br />corr:  1","stdavk: 0.0893621811<br />forvavk: 0.1820<br />corr:  1","stdavk: 0.0902506256<br />forvavk: 0.1832<br />corr:  1","stdavk: 0.0911390700<br />forvavk: 0.1844<br />corr:  1","stdavk: 0.0920275145<br />forvavk: 0.1856<br />corr:  1","stdavk: 0.0929159590<br />forvavk: 0.1868<br />corr:  1","stdavk: 0.0938044034<br />forvavk: 0.1880<br />corr:  1","stdavk: 0.0946928479<br />forvavk: 0.1892<br />corr:  1","stdavk: 0.0955812924<br />forvavk: 0.1904<br />corr:  1","stdavk: 0.0964697369<br />forvavk: 0.1916<br />corr:  1","stdavk: 0.0973581813<br />forvavk: 0.1928<br />corr:  1","stdavk: 0.0982466258<br />forvavk: 0.1940<br />corr:  1","stdavk: 0.0991350703<br />forvavk: 0.1952<br />corr:  1","stdavk: 0.1000235147<br />forvavk: 0.1964<br />corr:  1","stdavk: 0.1009119592<br />forvavk: 0.1976<br />corr:  1","stdavk: 0.1018004037<br />forvavk: 0.1988<br />corr:  1","stdavk: 0.1026888482<br />forvavk: 0.2000<br />corr:  1","stdavk: 0.1035772926<br />forvavk: 0.2012<br />corr:  1","stdavk: 0.1044657371<br />forvavk: 0.2024<br />corr:  1","stdavk: 0.1053541816<br />forvavk: 0.2036<br />corr:  1","stdavk: 0.1062426261<br />forvavk: 0.2048<br />corr:  1","stdavk: 0.1071310705<br />forvavk: 0.2060<br />corr:  1","stdavk: 0.1080195150<br />forvavk: 0.2072<br />corr:  1","stdavk: 0.1089079595<br />forvavk: 0.2084<br />corr:  1","stdavk: 0.1097964039<br />forvavk: 0.2096<br />corr:  1","stdavk: 0.1106848484<br />forvavk: 0.2108<br />corr:  1","stdavk: 0.1115732929<br />forvavk: 0.2120<br />corr:  1","stdavk: 0.1124617374<br />forvavk: 0.2132<br />corr:  1","stdavk: 0.1133501818<br />forvavk: 0.2144<br />corr:  1","stdavk: 0.1142386263<br />forvavk: 0.2156<br />corr:  1","stdavk: 0.1151270708<br />forvavk: 0.2168<br />corr:  1","stdavk: 0.1160155152<br />forvavk: 0.2180<br />corr:  1","stdavk: 0.1169039597<br />forvavk: 0.2192<br />corr:  1","stdavk: 0.1177924042<br />forvavk: 0.2204<br />corr:  1","stdavk: 0.1186808487<br />forvavk: 0.2216<br />corr:  1","stdavk: 0.1195692931<br />forvavk: 0.2228<br />corr:  1","stdavk: 0.1204577376<br />forvavk: 0.2240<br />corr:  1","stdavk: 0.1213461821<br />forvavk: 0.2252<br />corr:  1","stdavk: 0.1222346266<br />forvavk: 0.2264<br />corr:  1","stdavk: 0.1231230710<br />forvavk: 0.2276<br />corr:  1","stdavk: 0.1240115155<br />forvavk: 0.2288<br />corr:  1","stdavk: 0.1248999600<br />forvavk: 0.2300<br />corr:  1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":48.949771689497723},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.0055674238049489375,0.13111269252858304],"tickmode":"array","ticktext":["0.00","0.04","0.08","0.12"],"tickvals":[0,0.040000000000000001,0.080000000000000016,0.11999999999999998],"categoryorder":"array","categoryarray":["0.00","0.04","0.08","0.12"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"stdavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.104,0.23600000000000002],"tickmode":"array","ticktext":["0.15","0.20"],"tickvals":[0.15000000000000002,0.20000000000000001],"categoryorder":"array","categoryarray":["0.15","0.20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"forvavk","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"9a0721e4a344":{"x":{},"y":{},"group_by":{},"type":"scatter"}},"cur_data":"9a0721e4a344","visdat":{"9a0721e4a344":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+]
 
 
 

@@ -92,6 +92,21 @@ oppgaver_nett <- c(
 	  "",
 	  ""
 )
+oppgaver_eks <- c(
+"Test 1",
+"Test 2",
+"Test 3",
+"Test 4",
+"Test 5",
+"Test 6",
+"Test 7",
+"Test 8",
+"Test 9",
+"Test 10",
+"Test 11"
+)
+
+
 ## output
 df1 <- data.frame(
 		  Uke=ukenr,
@@ -107,9 +122,15 @@ timenavn <- c("Uke","Datoer","Tidspunkt","Forelesning","Literatur","Sentrale tem
 timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
 timep_ii <- htmlTable(df1[8:15,],header=timenavn)
-df2 <- data.frame(Forelesning=seq(1,14),
-		 Oppgaver_bok=oppgaver_bok,
-		 Oppgaver_nett=oppgaver_nett)[1:11,]
+df2 <- data.frame(Forelesning=seq(1,11),
+		 Oppgaver_bok=oppgaver_bok[1:11],
+		 Oppgaver_nett=oppgaver_nett[1:11],
+		 Oppgaver_eksamen=oppgaver_eks[1:11])
+
+#View(df2)
+
+
+
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
 #                               2023                               
 #

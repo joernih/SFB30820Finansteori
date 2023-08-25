@@ -56,8 +56,8 @@ Pr(1)X(1) + Pr(2)X(2) + ... + Pr(S)X(S)
 E(r_p) = \sum_{i=1}^{N}w_{i}E(X_{i})=w_{1}E(X_{1})+w_{2}E(X_{2})+...+w_{N}E(X_{N})
 \end{equation}
 
-```{r include=FALSE, echo=T}
-knitr::knit_exit()
+```{r include=FALSE, echo=F, eval=F}
+#knitr::knit_exit()
 ```
 
 ## Måling av risiko 
@@ -107,6 +107,10 @@ Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
+
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 
 
 ## Måling av risiko (portefølje fra 3 til n fonds)

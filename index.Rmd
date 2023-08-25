@@ -54,9 +54,6 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
-- Velkommen til nytt kurs! Vi starter opp første forelesning onsdag 24. august. Før det kan dere:
-  - Kjøp pensumboken
-  - Se igjennom forelesningsnotatene til første forelesning
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
@@ -74,11 +71,11 @@ https://fsweb.no/fagpersonweb/emne.jsf?id=SFB30820%3A224%3A1
 
 # Lenker
 inst/forelesningsnotater/presentations.Rmd
-vignettes/formler.Rmd
 vignettes/timeplan.Rmd
-vignettes/forelesninger.Rmd
-vignettes/arbeidskrav2023_V.Rmd
+vignettes/formler.Rmd
+vignettes/læringsmaal.Rmd
 vignettes/anbefalte_oppgaver.Rmd
+vignettes/arbeidskrav2023_V.Rmd
+vignettes/forelesninger.Rmd
 vignettes/log.Rmd
-
 https://tp.educloud.no/hiof/und-detaljer/?activity=23H-SFB30820-1-1-2

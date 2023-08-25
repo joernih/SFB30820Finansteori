@@ -16,7 +16,7 @@ navbar:
       - text: "#1: Introduksjon og overblikk"
         href: "articles/presentations.html#9" 
       - text: "#2: Relevant risiko: Porteføljeteori to objekter"
-        #        href: "articles/presentations.html#23" 
+        href: "articles/presentations.html#24" 
       - text: "#3: Relevant risiko: Porteføljeteori tre til n objekter"
         #        href: "articles/presentations.html#44" 
       - text: "#4: Effisiens"

@@ -187,6 +187,60 @@ E(r_p) =
 \end{equation}\]</span></p>
 </div>
 </div>
+<div class="section level2">
+<h2 id="måling-av-risiko">Måling av risiko<a class="anchor" aria-label="anchor" href="#m%C3%A5ling-av-risiko"></a>
+</h2>
+<p><strong>Metode 1 for måling av risiko (1-n
+investeringsobjekter)</strong></p>
+<ul>
+<li>Varians <span class="math display">\[\begin{equation}
+Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\
+Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
+\end{equation}\]</span>
+</li>
+<li>Standardavvik <span class="math display">\[\begin{equation}
+Std(X)=\sqrt{Var(X)}
+\end{equation}\]</span>
+</li>
+</ul>
+<hr>
+<p><strong>Metode 2 for måling av risiko (2
+investeringsobjekter)</strong></p>
+<ul>
+<li><p>Varians <span class="math display">\[\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
+\end{equation}\]</span> Hvor samvariasjonen er gitt ved <span class="math display">\[\begin{equation}
+Kov(r_1,r_2)=\sum_{s=1}^{S}Pr(s)[r_1(s)-E(r_1)][r_2(s)-E(r_2)] \\
+Pr(1)[r_1(1)-E(r_1)][r_2(1)-E(r_2)]+\\Pr(2)[r_1(2)-E(r_1)][r_2(2)-E(r_2)]+...+
+\\ Pr(S)[r_1(S)-E(r_1)][r_2(S)-E(r_2)]
+\end{equation}\]</span></p></li>
+<li><p>Standardavviket <span class="math display">\[\begin{equation}
+Std(r_p)=\sqrt{Var(r_p)}
+\end{equation}\]</span></p></li>
+</ul>
+<hr>
+<div class="section level3">
+<h3 id="korrelasjonskoeffisienten-standardisert-mål-på-samvariasjon">Korrelasjonskoeffisienten (standardisert mål på samvariasjon)<a class="anchor" aria-label="anchor" href="#korrelasjonskoeffisienten-standardisert-m%C3%A5l-p%C3%A5-samvariasjon"></a>
+</h3>
+<p><span class="math display">\[\begin{equation}
+Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
+\end{equation}\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(Korr(r_a,r_b)=1\)</span> (fullstendig
+avhengige)</li>
+<li>
+<span class="math inline">\(Korr(r_a,r_b)=0\)</span>
+(uavhengige)</li>
+<li>
+<span class="math inline">\(Korr(r_a,r_b)=-1\)</span> (fullstendig
+motsatt avhengige)</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
+\end{equation}\]</span></p>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

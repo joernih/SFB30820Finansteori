@@ -3,28 +3,33 @@ title: ""
 output: github_document
 ---
 
-## Oppgaveløsning etter forelesning
-
 ## Tidligere eksamensoppgaver
-[Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
 
 [Eksamen 2022](
 https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
+
+[Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
+
+[Eksamen 2020](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 
 ## Fra lærebok og nettside
 
 ```{r, echo=F}
 library(htmlTable)
-source('../inst/forelesningsnotater/timeplan.R')
+source(paste0(rprojroot::find_rstudio_root_file(),"/inst/forelesningsnotater/timeplan.R"))
 oppgaver <- df2[c(-12,-13,-14)]
-#htmlTable::htmlTable(df1)
-cn <- c("Forelesning","Bok","Nettside")
+htmlTable::htmlTable(df1)
+cn <- c("Forelesning","Bok","Nettside","Eksamen")
 kableExtra::kbl(oppgaver, col.names=cn) %>% kableExtra::kable_paper(full_width = F) 
 ```
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
 
 
-```{r}
+## Oppgaveløsning etter forelesning
+
+Kommer mer her senere
+
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
@@ -43,7 +48,6 @@ Eksamensoppgave 2020:
 Oppgave 1
 
 [Mappe til løsningsforslag](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/eksamensoppgaver/losningsforslag)
-
 ## Tidligere eksamensoppgaver
 
 [Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
@@ -57,4 +61,5 @@ Oppgave 1
 [Eksamen 2020](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 
 [Eksamen 2020 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020_losningsforslag_JIH.pdf)
+
 

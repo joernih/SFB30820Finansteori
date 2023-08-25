@@ -18,9 +18,6 @@ output:
 #    toc_depth: 5
 ---
 
-```{r, echo=F, eval=F}
-knitr::knit_exit()
-```
 
 ```{r xaringan-tile-view, echo=FALSE, message=F, warning=F}
 library(htmlTable)
@@ -461,7 +458,7 @@ Oppgave til neste forelesning:
 knitr::include_graphics(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/illustrasjoner/oversiktsbildet.jpg'))
 ```
 
-```{r include=FALSE, echo=F}
+```{r include=FALSE, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -535,6 +532,7 @@ gridExtra::grid.arrange(g1,g4,ncol=2)
 ## Måling av risiko 
 
 **Metode 1 for måling av risiko (1-n investeringsobjekter)**
+
 - Varians
 \begin{equation}
 Var(X)=\sum_{s=1}^{S}Pr(s)[X(s)-E(X)]^2=\\ Pr(1)[X(1)-E(X)]^2+Pr(2)[X(2)-E(X)]^2+...+\\Pr(S)[X(S)-E(X)]^2
@@ -550,6 +548,7 @@ Merk: Mens standardavviket gir oss samme benevning som forventet verdi, er benev
 ---
 
 **Metode 2 for måling av risiko (2 investeringsobjekter)**
+
 - Varians
 \begin{equation}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Kov(r_1,r_2)
@@ -567,7 +566,6 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ---
 
-## Måling av risiko
 ### Enkelobjekter
 
 **Eksempel 2.1**
@@ -606,7 +604,6 @@ Std(r_b)=\sqrt{0.0156}=0.1249
 
 ---
 
-## Måling av risiko
 ### Sammensatt fond 
 
 Vi antar nå at investeringsbeløpet er likt fordelt mellom de to fondene, dvs $w_1=1/2,w_2=1-w_2=1/2$. 
@@ -833,9 +830,11 @@ plotly::ggplotly(ggf)
 ]
 ]
 
-```{r, echo=F, eval=F}
+
+```{r, echo=F, eval=T}
 knitr::knit_exit()
 ```
+
 
 ---
 
