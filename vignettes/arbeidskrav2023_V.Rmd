@@ -10,7 +10,7 @@ output:
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 28.10.2022 (Canvas og/eller postkassehyllen min på Remmen)
 
-```{r, echo=T}
+```{r, echo=T, echo=F}
 knitr::knit_exit()
 ```
 
