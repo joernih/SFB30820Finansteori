@@ -45,7 +45,6 @@ rmarkdown::render('inst/forelesningsnotater/dagens.Rmd', 'xaringan::moon_reader'
 knitr::include_graphics("man/figures/01_finans.jpg")
 ```
 
-
 # Pensum 
 [Finans: Teori og praksis. Bøhren, Michalsen og Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
@@ -79,3 +78,6 @@ vignettes/arbeidskrav2023_V.Rmd
 vignettes/forelesninger.Rmd
 vignettes/log.Rmd
 https://tp.educloud.no/hiof/und-detaljer/?activity=23H-SFB30820-1-1-2
+
+
+

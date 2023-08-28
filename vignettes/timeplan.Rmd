@@ -15,5 +15,5 @@ timeplan <- df1
 kableExtra::kbl(timeplan) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::row_spec(forel, bold = T)
 ```
 
-**Eksamen (4-timers skriftlig eksamen) avholdes den xx.xx.2023**
+**Eksamen (4-timers skriftlig eksamen) avholdes den 12.12.2023**
 
