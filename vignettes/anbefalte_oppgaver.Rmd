@@ -3,6 +3,13 @@ title: ""
 output: github_document
 ---
 
+## Anbefalte oppgaver
+
+```{r echo=F}
+source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
+kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
+```
+
 ## Tidligere eksamensoppgaver
 
 [Eksamen 2022](
@@ -17,12 +24,6 @@ https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/F
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
 
 
-## Anbefalte oppgaver
-
-```{r echo=F}
-source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
-kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
-```
 
 ```{r, echo=F}
 knitr::knit_exit()
