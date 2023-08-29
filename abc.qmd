@@ -1,0 +1,28 @@
+
+
+```{r, echo=F}
+library(FinancialMath)
+```
+
+# Oppgave 1.1
+
+## Med 1 prosent
+```{r}
+dk1 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.01)
+print(dk1)
+```
+
+## Med 0 prosent
+```{r}
+dk2 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.00)
+print(dk2)
+```
+
+## Tidskostnaden blir dermed
+```{r}
+print(dk2-dk1)
+```
+
+
+
+

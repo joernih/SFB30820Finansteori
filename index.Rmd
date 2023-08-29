@@ -79,5 +79,10 @@ vignettes/forelesninger.Rmd
 vignettes/log.Rmd
 https://tp.educloud.no/hiof/und-detaljer/?activity=23H-SFB30820-1-1-2
 
-
+```{r}
+library(FinancialMath)
+dk1 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.01)
+dk2 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.00)
+dk2-dk1
+```
 
