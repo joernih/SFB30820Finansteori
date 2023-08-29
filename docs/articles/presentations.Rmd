@@ -566,7 +566,7 @@ Std(r_p)=\sqrt{Var(r_p)}
 
 ---
 
-### Enkelobjekter
+### Enkeltobjekter
 
 **Eksempel 2.1**
 ```{r, echo=F}
@@ -728,7 +728,7 @@ htmlTable(df_eks_2_1, header=c("Tilstand","Sannsynlighet","Avkastning a", "Avkas
 .panel[.panel-name[R-kode (ikke pensum)]
 ```{r}
 df <- df_eks_2_1
-w <- seq(0,1)
+w <- seq(0,1,0.01)
 v <- as.vector(df[,(2)])
 m <- as.matrix(df[,(3:4)])
 covall <- cov.wt(m,v,method='ML')
