@@ -832,12 +832,6 @@ plotly::ggplotly(ggf)
 ]
 ]
 
-
-```{r, echo=F, eval=T}
-knitr::knit_exit()
-```
-
-
 ---
 
 class: inverse, center, middle
@@ -1078,7 +1072,7 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-```{r, echo=F, eval=F}
+```{r, eval=T}
 knitr::knit_exit()
 ```
 
