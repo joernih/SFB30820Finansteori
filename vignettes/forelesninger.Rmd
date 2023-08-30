@@ -8,8 +8,22 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ```
 
 ## Forelesning #1: [`r tema[1]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/1_introduksjon_og_overblikk.pdf)
-## Forelesning #2: [`r tema[2]`]()
-## Forelesning #3: [`r tema[3]`]()
+## Forelesning #2: [`r tema[2]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/2_relevant_risiko_2_obj.pdf)
+## Forelesning #3: [`r tema[3]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/3_relevant_risiko_3_N_obj.pdf)
+## Forelesning #4:  `r tema[4]`
+## Forelesning #5:  `r tema[5]`
+## Forelesning #6:  `r tema[6]`
+## Forelesning #7:  `r tema[7]`
+## Forelesning #8:  `r tema[9]`
+## Forelesning #9:  `r tema[10]`
+## Forelesning #10: `r tema[11]`
+## Forelesning #11: `r tema[12]`
+## Forelesning #12: `r tema[13]`
+
+```{r, echo=F, eval=T}
+knitr::knit_exit()
+```
+
 ## Forelesning #4: [`r tema[4]`]()
 ## Forelesning #5: [`r tema[5]`]()
 ## Forelesning #6: [`r tema[6]`]()
@@ -19,13 +33,3 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ## Forelesning #10: [`r tema[11]`]()
 ## Forelesning #11: [`r tema[12]`]()
 ## Forelesning #12: [`r tema[13]`]()
-
-<!--
-
-## [`r tema[7]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/7_Gjeldsgrad_og_risiko.pdf)
-## [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
-## [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/11_Dividende.pdf)
-## [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/12_Opsjoner.pdf)
-## [`r tema[13]`](https://github.com/joernih/SFB30820Finansteori/tree/main/inst/forelesningsnotater/13_Risikostyring.pdf)
--->
-
