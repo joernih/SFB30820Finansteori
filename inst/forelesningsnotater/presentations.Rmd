@@ -739,6 +739,8 @@ plotwf <- data.frame(kov=kov,w1=1-w, w2=w) %>%
 	dplyr::mutate(forvavk=w1*avk[1]+w2*avk[2]) %>%
 	dplyr::mutate(varians=w1^2*var[1]+w2^2*var[2]+2*w1*w2*kov) %>%
 	dplyr::mutate(stdavk=sqrt(varians))
+#plotwf
+#l()
 ```
 ]
 .panel[.panel-name[Figur 2.3 (replikasjon)]
