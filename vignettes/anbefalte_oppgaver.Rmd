@@ -14,11 +14,11 @@ kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra:
 
 [Eksamen 2022](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
 
-[Eksamen 2022 (løsningsforslag)]()
+[Eksamen 2022 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
 
 [Eksamen 2021](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021.pdf)
 
-[Eksamen 2021 (løsningsforslag)]()
+[Eksamen 2021 (løsningsforslag)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-10.12.2021_losningsforslag_JIH.pdf)
 
 [Eksamen 2020](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/sfb30820-finansteori-24.11.2020.pdf)
 
