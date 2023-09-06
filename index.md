@@ -14,8 +14,10 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
+- Abc
+
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-09-06 14:45:41.073454**
+**Siste gang oppdatert: 2023-09-06 15:03:24.7994**

@@ -53,6 +53,7 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
+- Abc
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
