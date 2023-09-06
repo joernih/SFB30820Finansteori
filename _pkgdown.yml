@@ -20,7 +20,7 @@ navbar:
       - text: "#3: Relevant risiko: Porteføljeteori tre til n objekter"
         href: "articles/presentations.html#47" 
       - text: "#4: Effisiens"
-        #        href: "articles/presentations.html#57" 
+        href: "articles/presentations.html#61" 
       - text: "#5: Kapitalverdimodellen"
         #        href: "articles/presentations.html#65" 
       - text: "#6: Langsiktige finansieringsformer"

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> • Finansteori (SFB30820)</title>
+<title>Formelsamling (SFB30820) • Finansteori (SFB30820)</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Formelsamling (SFB30820)">
 <meta property="og:description" content="SFB30820Finansteori">
 <meta property="og:image" content="https://pkgdown.r-lib.org/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -71,7 +71,9 @@
     <li>
       <a href="../articles/presentations.html#47">#3: Relevant risiko: Porteføljeteori tre til n objekter</a>
     </li>
-    <li class="dropdown-header">#4: Effisiens</li>
+    <li>
+      <a href="../articles/presentations.html#61">#4: Effisiens</a>
+    </li>
     <li class="dropdown-header">#5: Kapitalverdimodellen</li>
     <li class="dropdown-header">#6: Langsiktige finansieringsformer</li>
     <li class="dropdown-header">#7: Gjeldsgrad og risiko</li>
@@ -125,7 +127,7 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip></h1>
+      <h1 data-toc-skip>Formelsamling (SFB30820)</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/joernih/SFB30820Finansteori/blob/HEAD/vignettes/formler.Rmd" class="external-link"><code>vignettes/formler.Rmd</code></a></small>
@@ -135,14 +137,6 @@
 
     
     
-<table class="table"><tbody>
-<tr class="odd">
-<td>title: “Formelsamling (SFB30820)”</td>
-</tr>
-<tr class="even">
-<td>output: html_notebook</td>
-</tr>
-</tbody></table>
 <div class="section level2">
 <h2 id="nåverdiberegninger-med-og-uten-usikkerhet">Nåverdiberegninger med og uten usikkerhet<a class="anchor" aria-label="anchor" href="#n%C3%A5verdiberegninger-med-og-uten-usikkerhet"></a>
 </h2>
@@ -283,6 +277,49 @@ Std(r_p)=\sqrt{Var(rp)}
 <p><span class="math display">\[\begin{equation}
 \beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}\]</span></p>
+<hr>
+<div class="section level3">
+<h3 id="utledning-av-kapitalmarkedslinjen-n2-kombinasjon-av-risikofri-investering-og-markedsporteføljen-m">Utledning av kapitalmarkedslinjen (n=2, kombinasjon av risikofri
+investering og markedsporteføljen M<a class="anchor" aria-label="anchor" href="#utledning-av-kapitalmarkedslinjen-n2-kombinasjon-av-risikofri-investering-og-markedsportef%C3%B8ljen-m"></a>
+</h3>
+<p><span class="math display">\[\begin{equation}
+E(r_p)=wr_f+(1-w)E(r_m)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+Var(r_p)=(1-w)^2Var(r_m)
+\end{equation}\]</span></p>
+</div>
+<div class="section level3">
+<h3 id="kapitalkostnad-for-egenkapital-og-gjeld">Kapitalkostnad for egenkapital og gjeld<a class="anchor" aria-label="anchor" href="#kapitalkostnad-for-egenkapital-og-gjeld"></a>
+</h3>
+<ul>
+<li>Kapitalkostnad for egenkapital</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_E=r_f+\beta_E[E(r_m) - r_f]
+\end{equation}\]</span></p>
+<ul>
+<li>Kapitalkostnad for gjeld</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_G=r_f+\beta_G[E(r_m) - r_f]
+\end{equation}\]</span></p>
+<ul>
+<li>Totalkapitalkostnaden (gjennomsnittskostnaden) for egenkapital og
+gjeld</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_T= k_E\underset{=w_E}{\frac{E}{E+G}} +
+k_G(1-s)\underset{=w_G}{\frac{G}{E+G}}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+k_T= k_Ew_E + k_G(1-s)w_G
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+w_E=\frac{E}{E+G} \\
+w_G=\frac{G}{E+G}
+\end{equation}\]</span></p>
+</div>
 </div>
   </div>
 

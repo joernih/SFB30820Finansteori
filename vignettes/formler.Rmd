@@ -1,4 +1,4 @@
---
+---
 title: "Formelsamling (SFB30820)"
 output: html_notebook
 ---
@@ -153,10 +153,6 @@ Std(r_p)=\sqrt{Var(rp)}
 \beta_j=\frac{Korr(r_j,r_m)Std(r_j)}{Std(r_m)}
 \end{equation}
 
-```{r include=FALSE, echo=T, eval=T}
-knitr::knit_exit()
-```
-
 ---
 
 ### Utledning av kapitalmarkedslinjen (n=2, kombinasjon av risikofri investering og markedsporteføljen M
@@ -199,6 +195,11 @@ k_T= k_Ew_E + k_G(1-s)w_G
 w_E=\frac{E}{E+G} \\ 
 w_G=\frac{G}{E+G}
 \end{equation}
+
+```{r include=FALSE, echo=T, eval=T}
+knitr::knit_exit()
+```
+
 
 #### Beregning av obligasjonspris
 

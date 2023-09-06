@@ -964,7 +964,7 @@ Std(r_p)=\sqrt{Var(rp)}
 - Dersom vi antar at en like stort andel $1/N$ blir investert i hvert av de n objektene, kan vi skrive 
 \begin{equation}
 Var(r_p)=\frac{1}{N}^2(Var(r_1)+Var(r_2)+...+Var(r_N)))\\
-+(\frac{1}{N})^2(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))))
++(\frac{1}{N})^2(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_{N-1}))))
 \end{equation}
 
 Vi har at gjennomsnittlig varians ( $\overline{Var}$ ) er gitt ved
@@ -975,9 +975,9 @@ $$
 
 Mens gjennomsnittlig kovarians ( $\overline{Kov}$ ) er gitt ved
 
-$$
-\overline{Kov}=\frac{1}{(N^2-N)}(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_N))
-$$
+\begin{equation}
+\overline{Kov}=\frac{1}{(N^2-N)}(Kov(r_1,r_2)+Kov(r_1,r_3)+...+Kov(r_N,r_{N-1}))
+\end{equation}
 
 ---
 
@@ -1108,7 +1108,7 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-```{r, eval=T, echo=F}
+```{r, eval=F, echo=F}
 knitr::knit_exit()
 ```
 
@@ -1284,6 +1284,11 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
   -  $0.085=w\cdot 0.04 +(1-w)\cdot 0.07 \Leftrightarrow w =-0.5$ og $1-w=1.5$ 
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.0\cdot 0.03\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$
+
+  
+```{r, eval=T, echo=F}
+knitr::knit_exit()
+```
 
 ---
 
