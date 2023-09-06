@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-#output:
-#  xaringan::moon_reader:
-#    includes:
-#      in_header: "mathjax-equation-numbers.html"
-#    lib_dir: libs
-#    nature:
-#      highlightStyle: github
-#      highlightLines: true
-#      countIncrementalSlides: false
 output:
-  html_document:
-    toc: true
-    toc_depth: 5
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#output:
+#  html_document:
+#    toc: true
+#    toc_depth: 5
 ---
 
 
@@ -834,6 +834,32 @@ plotly::ggplotly(ggf)
 
 ---
 
+## Appendiks: Utledning av variansen av summen av to tilfeldige variabler $X$ og $Y$.
+
+Vi ønsker å finne variansen til $Z$, som er gitt ved:
+
+$$Var(Z) = E[(Z - \mu_Z)^2]$$
+$$= E[((X + Y) - (\mu_X + \mu_Y))^2]$$
+$$= E[(X - \mu_X + Y - \mu_Y)^2]$$
+$$= E[(X - \mu_X)^2 + 2(X - \mu_X)(Y - \mu_Y) + (Y - \mu_Y)^2]$$
+$$= E[(X - \mu_X)^2] + 2E[(X - \mu_X)(Y - \mu_Y)] + E[(Y - \mu_Y)^2]$$
+$$= Var(X) + 2E[(X - \mu_X)(Y - \mu_Y)] + Var(Y).$$
+
+---
+
+Nå, når vi fokuserer på leddet $2E[(X - \mu_X)(Y - \mu_Y)]$, som innebærer kryssproduktet mellom $X$ og $Y$, betegner vi det som kovariansen mellom $X$ og $Y$ ($Cov(X,Y)$):
+
+$$Cov(X,Y) = E[(X - \mu_X)(Y - \mu_Y)].$$
+
+Ved å sette kovariansleddet tilbake i ligningen for $Var(Z)$, får vi:
+
+$$Var(Z) = Var(X) + 2Cov(X,Y) + Var(Y).$$
+
+Dette er formelen for variansen av summen av to tilfeldige variabler $X$ og $Y$.
+
+
+---
+
 class: inverse, center, middle
 
 # Forelesning 3: `r tema[3]`
@@ -855,6 +881,16 @@ class: inverse, center, middle
 Porteføljens varians er gitt ved
 \begin{equation}
 Var(r_p)=w_a^2Var(r_a)+w^2_bVar(r_b)+w^2_cVar(r_c) + \\
+2w_aw_bKov(a,b)+\\
+2w_aw_cKov(a,c)+\\
+2w_bw_cKov(b,c)+\\
+\end{equation}
+
+---
+
+Dersom vi utnytter sammenhengen om at $Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}$, kan vi også skrive dette som:
+\begin{equation}
+=w_a^2Var(r_a)+w^2_bVar(r_b)+w^2_cVar(r_c) + \\
 2w_aw_bStd(a)Std(b)Korr(a,b)+\\
 2w_aw_cStd(a)Std(c)Korr(a,c)+\\
 2w_bw_cStd(b)Std(c)Korr(b,c) 
@@ -960,7 +996,7 @@ Var(r_p)=\frac{1}{N}(\overline{Var}) + (1-\frac{1}{N})(\overline{Kov})
 Dette uttrykket forteller oss:
 
 - Større N (dvs. desto flere aksjer i porteføljen), desto mer dominerer porteføljevariansen av $(1-\frac{1}{N})\overline{Kov}$ framfor $\frac{1}{N}\overline {Var}$
-- Når $N \rightarrow \infty$, synker porteføljevariansen mot sin nedre grense gitt ved $\overline(Kov)$
+- Når $N \rightarrow \infty$, synker porteføljevariansen mot sin nedre grense gitt ved $\overline{Kov}$
 - Desto lavere $\overline{Kov}$ er i forhold til 
   $\overline{Var}$, desto rasker synker porteføljevariansen når antall aksjer i porteføljen stiger
 
@@ -1072,7 +1108,7 @@ knitr::include_graphics("pensum/figurer-09.png")
 knitr::include_graphics("pensum/figurer-10.png")
 ```
 
-```{r, eval=T}
+```{r, eval=T, echo=F}
 knitr::knit_exit()
 ```
 
