@@ -14,10 +14,13 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- Abc
-
-Undervisnings- og emneansvarlig (jornih at hiof.no)
+- Vi bruker litt av den avsluttende delen av forelesningen på onsdag til
+  klassen time: Profileringen i Økonomisk Analyse får valgt
+  tillitsvalgt.
+- Veiledning og oppgaveløsning etter lunsj (fra 12:15-14:00). Vi må da
+  forflytte oss til rom G1-063. Undervisnings- og emneansvarlig (jornih
+  at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-09-06 15:03:24.7994**
+**Siste gang oppdatert: 2023-09-11 10:38:11.483263**

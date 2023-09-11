@@ -95,7 +95,7 @@ oppgaver_nett <- c(
 oppgaver_eks <- c(
 "Eks 2021: Oppg.1: 1",
 "Eks 2021: Oppg.2: 1,2, Eks 2022: Oppg.2: 1,2",
-"",
+"Eks 2020: Oppg.1: a,b,(c),d,Eks 2021: Oppg.1: 2, Eks 2022: Oppg.1: 2",
 "",
 "",
 "",
