@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-#output:
-#  xaringan::moon_reader:
-#    includes:
-#      in_header: "mathjax-equation-numbers.html"
-#    lib_dir: libs
-#    nature:
-#      highlightStyle: github
-#      highlightLines: true
-#      countIncrementalSlides: false
 output:
-  html_document:
-    toc: true
-    toc_depth: 5
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#output:
+#  html_document:
+#    toc: true
+#    toc_depth: 5
 ---
 
 
@@ -1158,7 +1158,8 @@ plotwfd <- porttrekk  %>% purrr::map_dfr(function(pd){
 	erp <- c(0.12,0.15,0.25)
 	std <- c(0.10,0.20,0.40)
 	korr <- c(0.8,0.5,-0.10)
-	kor_matq <- matrix(c(std[1],korr[1],korr[2],korr[1],std[2],korr[3],korr[2],korr[3],std[3]),nrow=3)
+	#korr <- c(1,1,1)
+	#kor_matq <- matrix(c(std[1],korr[1],korr[2],korr[1],std[2],korr[3],korr[2],korr[3],std[3]),nrow=3)
 	kovv <- c(0,0,0)
 	kovv[1]<- korr[1]*std[1]*std[2]  
 	kovv[2]<- korr[2]*std[1]*std[3]
@@ -1285,7 +1286,66 @@ htmlTable(df_prosj_kontantstrøm, header=c("","Forventet avkastning","Standardav
   -  $Var(r_p)=-0.5^2\cdot 0 + 1.5^2\cdot 0.03^2 \cdot 0.07 + 2 \cdot 0.0\cdot 0.03\cdot 0=0.02$
   -  $Std(r_p)=\sqrt{.02}  =0.045$
 
-  
+---
+
+## Appendiks: Regneregler for forventninger og varians
+
+### Forventninger
+
+Forventningsverdi er lineær, noe som betyr at den følger egenskapene til lineær transformasjon for tilfeldige variabler:
+
+$$
+E[aX + b] = aE[X] + b \quad \text{for alle konstanter } a \text{ og } b
+$$
+
+Dette betyr at du kan trekke konstanter ut av forventningsverdien og fordele dem over tilfeldige variabler.
+
+Forventningsverdien av en konstant er konstanten selv:
+
+$$
+E[c] = c \quad \text{for alle konstanter } c
+$$
+
+Forventningsverdien av summen av to tilfeldige variabler er lik summen av deres individuelle forventningsverdier:
+
+$$
+E[X + Y] = E[X] + E[Y]
+$$
+
+Forventningsverdien av summen av to tilfeldige variabler er lik summen av deres individuelle forventningsverdier:
+
+$$
+E[X + Y] = E[X] + E[Y]
+$$
+
+Dette er en spesiell tilfelle av lineariteten av forventningsverdi.
+
+---
+
+### Varians
+Variansen er ikke lineær, men den følger likevel noen regler for lineære transformasjoner av tilfeldige variabler:
+
+$$
+\text{Var}(aX + b) = a^2\text{Var}(X) \quad \text{for alle konstanter } a \text{ og } b
+$$
+
+Dette betyr at variansen av en konstant multiplisert med en tilfeldig variabel $X$ er lik kvadratet av konstanten multiplisert med variansen til $X$.
+
+
+Variansen av summen av to tilfeldige variabler $X$ og $Y$ er lik summen av deres individuelle varianser, pluss to ganger kovariansen mellom dem (hvis de er avhengige):
+
+$$
+\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X, Y)
+$$
+
+Her representerer $\text{Cov}(X, Y)$ kovariansen mellom $X$ og $Y$. Hvis $X$ og $Y$ er uavhengige, er kovariansen null, og du får tilbake den enkle regelen at variansen av summen er lik summen av variansene.
+
+Hvis $a$ er en konstant, er variansen av produktet $aX$ lik $a^2$ ganger variansen til $X$:
+
+$$
+\text{Var}(aX) = a^2\text{Var}(X)
+$$
+
 ```{r, eval=T, echo=F}
 knitr::knit_exit()
 ```
