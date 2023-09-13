@@ -3,3 +3,5 @@ title: ""
 output: github_document
 ---
 
+
+- Eksamen er den 13.12.2023 (ikke 12. som tidligere publisert) 

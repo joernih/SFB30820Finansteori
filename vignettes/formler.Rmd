@@ -192,9 +192,12 @@ w_E=\frac{E}{E+G} \\
 w_G=\frac{G}{E+G}
 \end{equation}
 
-```{r include=FALSE, echo=F, eval=F}
+```{r include=FALSE, echo=F}
 knitr::knit_exit()
 ```
+
+
+
 
 
 
