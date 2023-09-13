@@ -1,4 +1,5 @@
 ---
+title: "Finansteori (SFB30820), Høsten 2023"
 format:
   html:
     toc: true
