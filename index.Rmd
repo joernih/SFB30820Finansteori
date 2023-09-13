@@ -54,7 +54,8 @@ knitr::include_graphics("man/figures/pensum.jpg")
 
 # Nyheter
 - Vi bruker litt av den avsluttende delen av forelesningen på onsdag til klassen time: Profileringen i Økonomisk Analyse får valgt tillitsvalgt.
-- Veiledning og oppgaveløsning etter lunsj (fra 12:15-14:00). Vi må da forflytte oss til rom G1-063.
+- Veiledning og oppgaveløsning etter lunsj (fra 12:15-14:00). Vi må da forflytte oss til rom **G1-063**.
+
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
