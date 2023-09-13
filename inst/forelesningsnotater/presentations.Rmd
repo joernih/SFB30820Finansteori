@@ -1346,7 +1346,7 @@ $$
 \text{Var}(aX) = a^2\text{Var}(X)
 $$
 
-```{r, eval=T, echo=F}
+```{r, eval=F, echo=F}
 knitr::knit_exit()
 ```
 
@@ -1758,7 +1758,7 @@ Fordeler:
 + ...
 + ...
 
-```{r, echo=F, eval=F}
+```{r, eval=T, echo=F}
 knitr::knit_exit()
 ```
 

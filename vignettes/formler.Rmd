@@ -105,10 +105,6 @@ Korr(r_a,r_b)=\frac{Kov(r_a,r_b)}{Std(r_a)Std(r_b)}
 Var(r_p)=w_1^2Var(r_1)+w^2_2Var(r_2)+2w_1w_2Korr(r_a,r_b)Std(r_a)Std(r_b)
 \end{equation}
 
-```{r include=FALSE, echo=F, eval=F}
-knitr::knit_exit()
-```
-
 
 ## Måling av risiko (portefølje fra 3 til n fonds)
 
@@ -196,9 +192,10 @@ w_E=\frac{E}{E+G} \\
 w_G=\frac{G}{E+G}
 \end{equation}
 
-```{r include=FALSE, echo=T, eval=T}
+```{r include=FALSE, echo=F, eval=F}
 knitr::knit_exit()
 ```
+
 
 
 #### Beregning av obligasjonspris

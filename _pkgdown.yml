@@ -22,7 +22,7 @@ navbar:
       - text: "#4: Effisiens"
         href: "articles/presentations.html#61" 
       - text: "#5: Kapitalverdimodellen"
-        #        href: "articles/presentations.html#65" 
+        href: "articles/presentations.html#71" 
       - text: "#6: Langsiktige finansieringsformer"
         #        href: "articles/presentations.html#89" 
       - text: "#7: Gjeldsgrad og risiko"
