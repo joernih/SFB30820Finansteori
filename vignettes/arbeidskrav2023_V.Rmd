@@ -10,7 +10,7 @@ output:
 - Leveres ut (hele): 28.09.2022 (Canvas)
 - Leveres inn: 28.10.2022 (Canvas og/eller postkassehyllen min på Remmen)
 
-[Lenke til deler av oppgaven her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
+[Lenke til deler av oppgaven her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023.pdf)
 
 ```{r, echo=T, echo=F}
 knitr::knit_exit()
@@ -21,7 +21,8 @@ knitr::knit_exit()
 28.10: obligatorisk arbeidskrav innlevering 
 
 
-[Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022.pdf)
+[Lenke til publisert versjon her](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023.pdf)
+
 <br>
 [Lenke til publisert versjon her med løsningsforslag](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202022_losningsforslag.pdf)
 
