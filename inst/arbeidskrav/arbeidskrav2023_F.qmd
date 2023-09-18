@@ -293,10 +293,6 @@ NV =\frac{100.000}{0.0539}=1855288
 $$
 </div>
 
-```{r}
-knitr::knit_exit()
-```
-
 ## Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur
 
 ```{r include=FALSE}
@@ -316,8 +312,6 @@ P_o <- M/(1+r/2)^T
 one+two+thr+fou+P_o
 # [1] 5192.719
 ```
-
-
 
 ### Obligasjoner
 
@@ -412,12 +406,6 @@ _{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
 $$
 </div>
 1. Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.
-<div class="solution">
-```{r, echo=F}
-plot(x=c(1,2,3),y=c(f01,f12,f23), xlab="Periode", ylab="Rentenivå")
-```
-</div>
-
 1. Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
 <div class="solution">
 De kortsiktige rentene forventes å stige de to neste årene framover.
@@ -441,6 +429,11 @@ c. OPA i gode og dårliger tider
 <div class="solution">
 De økte faste renteutbetalingene vil gjøre at overskudd per aksje vil øke i gode tider (og motsatt i dårlige tider).
 </div>
+
+```{r}
+knitr::knit_exit()
+```
+
 
 ## **Del II: Porteføljeutregninger ved bruk av regnearket**
 

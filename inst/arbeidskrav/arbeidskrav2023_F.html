@@ -92,6 +92,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#oppgave-2-porteføljeteori-to-selskaper" id="toc-oppgave-2-porteføljeteori-to-selskaper" class="nav-link" data-scroll-target="#oppgave-2-porteføljeteori-to-selskaper">Oppgave 2: Porteføljeteori to selskaper</a></li>
   <li><a href="#oppgave-3-porteføljeteorien" id="toc-oppgave-3-porteføljeteorien" class="nav-link" data-scroll-target="#oppgave-3-porteføljeteorien">Oppgave 3: Porteføljeteorien</a></li>
   <li><a href="#oppgave-4-kapitalverdimodellen-og-justert-nåverdi" id="toc-oppgave-4-kapitalverdimodellen-og-justert-nåverdi" class="nav-link" data-scroll-target="#oppgave-4-kapitalverdimodellen-og-justert-nåverdi">Oppgave 4: Kapitalverdimodellen og justert-nåverdi</a></li>
+  <li><a href="#oppgave-5-statsobligasjoner-terminrenter-og-rentens-terminstruktur" id="toc-oppgave-5-statsobligasjoner-terminrenter-og-rentens-terminstruktur" class="nav-link" data-scroll-target="#oppgave-5-statsobligasjoner-terminrenter-og-rentens-terminstruktur">Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur</a>
+  <ul class="collapse">
+  <li><a href="#obligasjoner" id="toc-obligasjoner" class="nav-link" data-scroll-target="#obligasjoner">Obligasjoner</a></li>
+  <li><a href="#rentens-terminstruktur" id="toc-rentens-terminstruktur" class="nav-link" data-scroll-target="#rentens-terminstruktur">Rentens terminstruktur</a></li>
+  </ul></li>
+  <li><a href="#oppgave-6-opa-og-økt-gjeldsgrad" id="toc-oppgave-6-opa-og-økt-gjeldsgrad" class="nav-link" data-scroll-target="#oppgave-6-opa-og-økt-gjeldsgrad">Oppgave 6: OPA og økt gjeldsgrad</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -338,8 +344,117 @@ NV =\frac{100.000}{0.0539}=1855288
 \]</span></p>
 </div></li>
 </ol>
+</section>
+<section id="oppgave-5-statsobligasjoner-terminrenter-og-rentens-terminstruktur" class="level2">
+<h2 class="anchored" data-anchor-id="oppgave-5-statsobligasjoner-terminrenter-og-rentens-terminstruktur">Oppgave 5: Statsobligasjoner, terminrenter og rentens terminstruktur</h2>
+<section id="obligasjoner" class="level3">
+<h3 class="anchored" data-anchor-id="obligasjoner">Obligasjoner</h3>
+<p>En obligasjon med 2 år til forfall har pålydende 5.000,-, kupongrente <span class="math inline">\(r_k=0.05\)</span> som utbetales n=2 ganger i året og årlige effektiv rente <span class="math inline">\(r=0.03\)</span>.</p>
+<ol type="1">
+<li>Beregn prisen for en ordinær obligasjon.
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span><span class="math display">\[\begin{equation}
+P_0= \frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + \frac{Mr_k/n}{(1+r/n)^{3}}+\frac{Mr_k/n}{(1+r/n)^{4}}+\frac{M}{(1+r/n)^4}+= \\
+\frac{5000\cdot 0.05/2}{(1+0.03/2)}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^2}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^3}+\frac{5000\cdot 0.05/2}{(1+0.03/2)^4}+\frac{5000}{(1+0.03/2)^4}=\\
+123.1527+121.3327+119.5396+117.773+4710.921=5192.719=5192.71
+\end{equation}\]</span></p>
+</div></li>
+</ol>
+<p>En null-kupong-obligasjon med 4 år til forfall har pålydende 5.000,- med årlig effektiv rente <span class="math inline">\(r=0.025\)</span>.</p>
+<ol type="1">
+<li>Beregn prisen for null-kupong rente obligasjonen
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Null-kupong obligasjoner (dvs. uten periodevise utbetalinger) <span class="math display">\[\begin{equation}
+P_0=\frac{M}{(1+r)^T}=\frac{5000}{(1+0.025)^4}= 4529.753
+\end{equation}\]</span></p>
+</div></li>
+</ol>
+</section>
+<section id="rentens-terminstruktur" class="level3">
+<h3 class="anchored" data-anchor-id="rentens-terminstruktur">Rentens terminstruktur</h3>
+<p>Den kortsiktige spotrenten, <span class="math inline">\(_0r_1\)</span>, for ett år fram i tid er på 1.5 prosent. Vider kan vi notere for null-kupongrente-obligasjoner for 2 og 3 år framover følgende opplysninger</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">knit_exit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02062073</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="lightable-classic-2 table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Løpetid</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Pålydende</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Markedspris</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">480</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">465</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Fra læreboka har vi at termin-/forwardrenten for periode <span class="math inline">\(t\)</span> er bestemt ved</p>
+<p><span class="math display">\[\begin{equation}
+_{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
+\end{equation}\]</span></p>
+<ol type="1">
+<li>Hvilken sentral forutsetning ligger til grunn for at dette uttrykket holder ved likhet?
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Vi har her som utgangspunkt at en investor er <em>indifferent</em> mellom to alternative lån med samme sluttverdi.</p>
+</div></li>
+<li>Beregn terminrenten (forwardrenten) for 2 og 3 år framover i tid.
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span><span class="math display">\[
+1+_0r_1=1+0.15
+\]</span> Løser formelen for null-kupong obligasjoner mph. effektiv rente. Det gjør at vi kan finne <span class="math display">\[
+1+_0r_2=(500/480)^{1/2}=1.0206207
+\]</span> og <span class="math display">\[
+1+_0r_3=(500/465)^{1/3}=1.0244852
+\]</span> <em>Terminrente periode 2</em> <span class="math display">\[
+_{1}f_{2}=\frac{(1+_{0}r_{2})^{2}}{(1+_{0}r_{1})^{1}} - 1 =
+\frac{(1+0.02062073)^2}{(1+0.15)^1}-1=0.0262708
+\]</span> <em>Terminrente periode 3</em> <span class="math display">\[
+_{2}f_{3}=\frac{(1+_{0}r_{3})^{3}}{(1+_{0}r_{2})^{2}} - 1
+=\frac{(1+0.02448519)^3}{(1+0.02062073)^2}-1= 0.0322581
+\]</span></p>
+</div></li>
+<li>Vis ved hjelp av et scatterplot de implisitte rentenes utvikling for de tre periodene.</li>
+<li>Kan du gi en kortfattet tolkning av hva denne utviklingen forteller oss?
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>De kortsiktige rentene forventes å stige de to neste årene framover.</p>
+</div></li>
+</ol>
+</section>
+</section>
+<section id="oppgave-6-opa-og-økt-gjeldsgrad" class="level2">
+<h2 class="anchored" data-anchor-id="oppgave-6-opa-og-økt-gjeldsgrad">Oppgave 6: OPA og økt gjeldsgrad</h2>
+<p>Et selskap tar opp ny gjeld og bruker pengene til å kjøpe tilbake egne aksjer, noe som innebærer en reduksjons i antall aksjonærer. Forutsatt en M&amp;M-verden uten skatt og med usikre investeringsprosjekter. Tilhørende overskudd per aksje (OPA), forklar hva som skjer med:</p>
+<ol type="a">
+<li>Forventet OPA
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>Forventet overskudd per aksje stiger i denne situasjonen, dette siden forventede overskuddet etter de økte faste renteutbetalingene vil måtte deles på færre aksjonærer.</p>
+</div></li>
+<li>Usikkerheten til OPA
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>En slik situasjon vil føre til at de økte faste renteutbetalingene vil gjøre at overskudd per aksje vil få en større spredning og med det høyere usikkerhet.</p>
+</div></li>
+<li>OPA i gode og dårliger tider
+<div class="solution proof">
+<p><span class="proof-title"><em>Solution</em>. </span>De økte faste renteutbetalingene vil gjøre at overskudd per aksje vil øke i gode tider (og motsatt i dårlige tider).</p>
+</div></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">knit_exit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
