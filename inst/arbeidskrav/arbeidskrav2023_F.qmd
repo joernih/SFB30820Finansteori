@@ -430,12 +430,13 @@ c. OPA i gode og dårliger tider
 De økte faste renteutbetalingene vil gjøre at overskudd per aksje vil øke i gode tider (og motsatt i dårlige tider).
 </div>
 
-```{r}
+## **Del II: Porteføljeutregninger ved bruk av regnearket (frivillig - kommer snart)**
+
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
 
-## **Del II: Porteføljeutregninger ved bruk av regnearket**
 
 Basert på vedlagte regnearket **cryptos_nyse.xlsx** som viser utviklingen for to ulike kryptovalutaer Bitcoin (BTC), Etherium (ETH) og utviklingen på New York børsen (NYSE), blir du bedt om å utføre følgende beregninger
 
@@ -510,5 +511,4 @@ knitr::knit_exit()
 knitr::knit_exit()
 ```
 
-Exam_SFB30820_Finansteori_H2021.Rmd
 
