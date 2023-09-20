@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-#output:
-#  xaringan::moon_reader:
-#    includes:
-#      in_header: "mathjax-equation-numbers.html"
-#    lib_dir: libs
-#    nature:
-#      highlightStyle: github
-#      highlightLines: true
-#      countIncrementalSlides: false
 output:
-  html_document:
-    toc: true
-    toc_depth: 5
+  xaringan::moon_reader:
+    includes:
+      in_header: "mathjax-equation-numbers.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+#output:
+#  html_document:
+#    toc: true
+#    toc_depth: 5
 ---
 
 
@@ -1590,8 +1590,8 @@ Merk: Skal nåverdibeslutningen bli helt korrekt, er det denne kapitalkostnaden 
 ---
 
 Likefullt blir i praksis bedriftens totalkapitalkostnad hyppig benyttet som kapitalkostnaden også for nye prosjekter. Være imidlertid klar at konsekvensen av dette vil bli:
-1. Ved for lav $\beta$, gjennomgående for *få* investeringsprosjekter vil bli satt i gang
-1. Ved for høy $\beta$, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
+1. Ved $\beta$ lavere på det nye prosjektet enn hva som gjelder for hele selskapet, gjennomgående for *få* investeringsprosjekter vil bli satt i gang
+1. Ved høyere $\beta$ på det nye prosjektet enn hva som gjelder for hele selskapet, gjennomgående for *mange* investeringsprosjekter vil bli satt i gang
 
 ---
 
