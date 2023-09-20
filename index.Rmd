@@ -53,6 +53,8 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
+  - Nytt undervisningsrom fra neste uke (see oppdatert timeplan)
+  - Vider utover vil det etter forelesningen bli satt av to timer (i samme rom som benyttet under forelesningen) til oppgaveløsning og veiledning.
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
