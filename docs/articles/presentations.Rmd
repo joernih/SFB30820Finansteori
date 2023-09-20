@@ -42,9 +42,6 @@ rmarkdown::render(paste0(rprojroot::find_rstudio_root_file(),filp))
 system(paste0('brave ',rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/presentationsF.html'))
 ```
 
-```{r, echo=F, eval=F}
-knitr::knit_exit()
-```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
@@ -1758,7 +1755,7 @@ Fordeler:
 + ...
 + ...
 
-```{r, eval=T, echo=F}
+```{r, eval=F, echo=F}
 knitr::knit_exit()
 ```
 
@@ -2302,7 +2299,7 @@ En *fondsemisjon* skjer ved bokføringsmessig overføring fra kontoopptjent egen
 
 Felles for aksjesplitt og fondsemisjon er at *kontantstrømmseffekten* er null.
 
-```{r, echo=F, eval=T}
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
@@ -4316,4 +4313,8 @@ En undersøkelse i USA fra 2012 viser:
 En annnen undersøkelse viser:
 - Høyer markesverdi for bedrifter som benytter derivater til å sikre markedsverdi
 - Verdiøkningen er betydelig: 4.9 prosent høyere til de bedriftene som sikrer
+
+```{r, echo=F, eval=F}
+knitr::knit_exit()
+```
 

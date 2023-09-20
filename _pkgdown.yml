@@ -24,7 +24,7 @@ navbar:
       - text: "#5: Kapitalverdimodellen"
         href: "articles/presentations.html#71" 
       - text: "#6: Langsiktige finansieringsformer"
-        #        href: "articles/presentations.html#89" 
+        href: "articles/presentations.html#95" 
       - text: "#7: Gjeldsgrad og risiko"
         #        href: "articles/presentations.html#120" 
       - text: "#8: Gjeldsgrad og verdi i perfekte kapitalmarkeder"

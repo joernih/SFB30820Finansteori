@@ -77,7 +77,9 @@
     <li>
       <a href="../articles/presentations.html#71">#5: Kapitalverdimodellen</a>
     </li>
-    <li class="dropdown-header">#6: Langsiktige finansieringsformer</li>
+    <li>
+      <a href="../articles/presentations.html#95">#6: Langsiktige finansieringsformer</a>
+    </li>
     <li class="dropdown-header">#7: Gjeldsgrad og risiko</li>
     <li class="dropdown-header">#8: Gjeldsgrad og verdi i perfekte kapitalmarkeder</li>
     <li class="dropdown-header">#9: Gjeldsgrad og verdi med imperfeksjoner</li>
@@ -320,6 +322,55 @@ k_T= k_Ew_E + k_G(1-s)w_G
 <p><span class="math display">\[\begin{equation}
 w_E=\frac{E}{E+G} \\
 w_G=\frac{G}{E+G}
+\end{equation}\]</span></p>
+<div class="section level4">
+<h4 id="beregning-av-obligasjonspris">Beregning av obligasjonspris<a class="anchor" aria-label="anchor" href="#beregning-av-obligasjonspris"></a>
+</h4>
+<ul>
+<li>Ordinær obligasjon (dvs. med periodevise utbetalinger)</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+P_0=\sum_{t=1}^{T}\frac{Mr_k/n}{(1+r/n)^{t}} + \frac{M}{(1+r/n)^T} = \\
+\frac{Mr_k/n}{(1+r/n)^{1}} + \frac{Mr_k/n}{(1+r/n)^{2}} + ... +
+\frac{Mr_k/n}{(1+r/n)^{T}}+\frac{M}{(1+r/n)^T}
+\end{equation}\]</span></p>
+<ul>
+<li>Null-kupong obligasjoner (dvs. uten periodevise utbetalinger)</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+P_0=\frac{M}{(1+r)^T}
+\end{equation}\]</span></p>
+</div>
+<div class="section level4">
+<h4 id="forventningshypotesen">Forventningshypotesen<a class="anchor" aria-label="anchor" href="#forventningshypotesen"></a>
+</h4>
+<p>Som forteller oss at termin-/forwardrenten for periode <span class="math inline">\(t\)</span> er bestemt ved</p>
+<p><span class="math display">\[\begin{equation}
+_{t-1}f_{t}=\frac{(1+_{0}r_{t})^{t}}{(1+_{0}r_{t-1})^{t-1}} - 1
+\end{equation}\]</span></p>
+<ul>
+<li><strong>Beregning av inflasjonsforventningene</strong></li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+_{t-1}f^R_t=\frac{_{t-1}f^N_t-_{t-1}j_{t}}{1+_{t-i}j_t}
+\end{equation}\]</span></p>
+<hr>
+</div>
+</div>
+<div class="section level3">
+<h3 id="tegningsrettigheter">Tegningsrettigheter<a class="anchor" aria-label="anchor" href="#tegningsrettigheter"></a>
+</h3>
+<ul>
+<li><strong>Beregning av tegningsrettigheter:</strong></li>
+</ul>
+<p><em>Rights-on-kursen</em> ( <span class="math inline">\(P_0\)</span>
+) og emisjonskursen ( <span class="math inline">\(P_e\)</span> )</p>
+<p><span class="math display">\[\begin{equation}
+P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} =
+\frac{P_o-P_e}{N+1}
 \end{equation}\]</span></p>
 </div>
 </div>

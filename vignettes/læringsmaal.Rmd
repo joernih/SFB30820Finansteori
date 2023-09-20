@@ -37,18 +37,18 @@ abstract: ''
 - Beskrive kapitalverdimodellens sterke og svake sider.
 - Forklare hva slags type risiko følsomhetsanalyse og beslutningstre tar hensyn til.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
-
 # Læringsmål kapittel 5
+
 - Redegjøre for hovedkjennetegn ved ordinære lån, obligasjonslån og konvertible lån.
 - Beregne markedsverdi og effektiv rente for en obligasjon.
 - Finne terminrenter fra spotrenter samt beregne durasjon (varighet) og rentefølsomhet for en obligasjon.
 - Lage en balanseoppstilling basert på bokverdier og markedsverdier.
 - Redegjøre for egenkapitalemisjoner og kjøp av egne aksjer samt beregne verdien av en tegningsrett.
 - Forklare de økonomiske effektene av aksjesplitter og fondsemisjoner.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 # Læringsmål kapittel 6
 - Definere begrepene gjeldsgrad og gjeldsandel.

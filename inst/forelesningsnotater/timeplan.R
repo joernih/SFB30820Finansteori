@@ -96,7 +96,7 @@ oppgaver_eks <- c(
 "Eks 2021: Oppg.1: 1",
 "Eks 2021: Oppg.2: 1,2, Eks 2022: Oppg.2: 1,2",
 "Eks 2020: Oppg.1: a,b,(c),d,Eks 2021: Oppg.1: 2, Eks 2022: Oppg.1: 2",
-"",
+"Eks 2021: Oppg.3: 1,2, Eks. Oppg.3: a,b,c,d,e.",
 "",
 "",
 "",
@@ -123,14 +123,10 @@ timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
 timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,11),
+		 Oppgaver_eksamen=oppgaver_eks[1:11],
 		 Oppgaver_bok=oppgaver_bok[1:11],
-		 Oppgaver_nett=oppgaver_nett[1:11],
-		 Oppgaver_eksamen=oppgaver_eks[1:11])
-
-#View(df2)
-
-
-
+		 Oppgaver_nett=oppgaver_nett[1:11]
+)
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
 #                               2023                               
 #
