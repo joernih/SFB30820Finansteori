@@ -14,16 +14,18 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- Nytt undervisningsrom fra neste uke (see oppdatert timeplan)
-- **Pga karrieredagen starter forelesningen da opp kl. 12.15 (kommer en
-  kunngjøring om dette så fort jeg har fått en bekreftelse på at dette
-  er oppdatert i timeplanen.**
-- Vider utover vil det etter forelesningen bli satt av to timer (i samme
-  rom som benyttet under forelesningen) til oppgaveløsning og
-  veiledning.
+- Vi har et nytt undervisningsrom denne uken. Vennligst sjekk den
+  oppdaterte timeplanen for detaljer.
+- På grunn av karrieredagen vil undervisningen denne uken foregå fra kl.
+  12:15 til 15:00.
+- For de som har mulighet og ønsker å jobbe med oppgaver med veiledning
+  før forelesningen, er det mulig fra kl. 09:15.
+- Videre utover fra uke 41 vil det etter forelesningen være satt av to
+  timer (i samme rom som brukes under forelesningen) til oppgaveløsning
+  og veiledning.
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-09-22 08:37:36.793704**
+**Siste gang oppdatert: 2023-09-25 17:50:44.83623**
