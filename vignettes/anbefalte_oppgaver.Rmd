@@ -7,7 +7,8 @@ output: github_document
 
 ```{r echo=F}
 source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/timeplan.R'))
-kableExtra::kbl(df2) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12)
+cns <- c("Forelesnin","Eksamen og arbeidskrav","Fra bok","Fra nettside")
+kableExtra::kbl(df2,col.names=cns) %>% kableExtra::kable_paper(full_width = F) %>% kableExtra::kable_styling(font_size=12, )
 ```
 
 ## Tidligere eksamensoppgaver
