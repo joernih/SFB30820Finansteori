@@ -9,7 +9,8 @@ ukenr <- seq(34,47)
 ln <- length(ukenr)
 datoer <- c(get_date(ukenr, day=3, year = 2023))
 star <- rep("09:15",ln)
-timer <- rep(3,ln)
+timer <- c(rep("3: Forelesninger",5),rep("3: Forelesninger.2: oppgaver og veiledning",9))
+timer[7] <- ""
 forenr <- c(seq(1,5),"",seq(7,14))
 tema <- c(
 	  "Introduksjon og overblikk",
@@ -49,15 +50,15 @@ undervfor <- c(
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
 	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
+	  "Sone E E1-061",
 	  "",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063",
-	  "Campus Sone F FU1-063"
+	  "Sone D D1-052  IT",
+	  "Sone D D1-052  IT",
+	  "Sone D D1-052  IT",
+	  "Sone D D1-061  IT",
+	  "Sone D D1-063  IT",
+	  "Sone D D1-052  IT",
+	  "Sone D D1-052  IT"
 )
 ###########################################################################################################3
 oppgaver_bok <- c(
@@ -96,7 +97,7 @@ oppgaver_eks <- c(
 "Eks 2021: Oppg.1: 1",
 "Eks 2021: Oppg.2: 1,2, Eks 2022: Oppg.2: 1,2",
 "Eks 2020: Oppg.1: a,b,(c),d,Eks 2021: Oppg.1: 2, Eks 2022: Oppg.1: 2",
-"",
+"Eks 2021: Oppg.3: 1,2, Eks. Oppg.3: a,b,c,d,e.",
 "",
 "",
 "",
@@ -123,14 +124,10 @@ timep <- htmlTable(df1,header=timenavn)
 timep_i <- htmlTable(df1[1:7,],header=timenavn)
 timep_ii <- htmlTable(df1[8:15,],header=timenavn)
 df2 <- data.frame(Forelesning=seq(1,11),
+		 Oppgaver_eksamen=oppgaver_eks[1:11],
 		 Oppgaver_bok=oppgaver_bok[1:11],
-		 Oppgaver_nett=oppgaver_nett[1:11],
-		 Oppgaver_eksamen=oppgaver_eks[1:11])
-
-#View(df2)
-
-
-
+		 Oppgaver_nett=oppgaver_nett[1:11]
+)
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
 #                               2023                               
 #
@@ -150,3 +147,4 @@ df2 <- data.frame(Forelesning=seq(1,11),
 #16 17 18 19 20 21 22   20 21 22 23 24 25 26   18 19 20 21 22 23 24
 #23 24 25 26 27 28 29   27 28 29 30            25 26 27 28 29 30 31
 #30 31                                                             
+

@@ -1801,8 +1801,8 @@ knitr::include_graphics("illustrasjoner/finansiering.png")
 
 - Finansielle instrumenter
 	- Er en kontrakt som består av to parter
-	  - Part A: Mottar kapital fra den andre parten 
-	  - Part B: Tilfører kapital, samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
+	  - Part B: Mottar kapital fra den andre parten 
+	  - Part A: Tilfører kapital, samtidig med at vedkommende oppnår *visse rettigheter* ovenfor den andre parten
 
 ---
 
@@ -1814,7 +1814,7 @@ knitr::include_graphics("illustrasjoner/finansiering.png")
   - Avvik mellom Bedriftsøkonomisk og samfunnsøkonomisk lønnsomhet
   - ...
 
-- Det offentlig forsøker å redusere disse imperfeksjonene i form av institusjoner som finanstilsynet og lover og regler
+- Det offentlig kan forsøke å redusere disse imperfeksjonene i form av institusjoner som finanstilsynet og lover og regler
   - Minimumskrav om informasjonsinnhold i emisjonsprosjekter
   - Egenkapitalkrav
   - Støtteordninger for spesielle prosjekter
@@ -1933,6 +1933,7 @@ Rentens *terminstruktur* gjelder sammenhengen mellom løpetid (tid til forfall) 
 ```{r, echo=FALSE, out.width="40%", fig.cap=""} 
 knitr::include_graphics(c("pensum/figurer-36.png", "pensum/figurer-37.png"))
 ```
+
 ---
 
 #### Forventningshypotesen
@@ -2162,6 +2163,7 @@ Hovedkjennetegn OA:
 ```{r, echo=FALSE, out.width="50%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-40.png"))
 ```
+
 ---
 
 
@@ -2206,6 +2208,7 @@ For opptak på Oslo Børs (EuroNext) kreves det (blant annet)
 ```{r, echo=FALSE, out.width="90%", fig.cap=""}
 knitr::include_graphics(c("pensum/figurer-44.png"))
 ```
+
 ---
 
 
@@ -2226,7 +2229,7 @@ emisjonskursen ( $P_e$ )
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m} 
 \end{equation}
 
-Dersom vi definerer forholdet mellom antall gamle aksjer ( $n$ ) og nye ( $m$ ) emiterte aksjer $N=n/m$.
+Dersom vi definerer forholdet mellom antall gamle aksjer ( $m$ ) og nye ( $m$ ) emiterte aksjer $N=n/m$.
 
 \begin{equation}
 P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{NP_0+P_e}{N+1} 
