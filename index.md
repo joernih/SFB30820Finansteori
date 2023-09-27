@@ -14,10 +14,15 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- Vi har et nytt undervisningsrom denne uken. Vennligst sjekk den
-  oppdaterte timeplanen for detaljer.
+- [Obligatorisk
+  arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023.pdf)
+  - Leveres inn: 28.10.2022 (Canvas og/eller postkassehyllen min på
+    Remmen)
+  - Kan gjøres alene eller i gruppe på maks 2 personer
 - På grunn av karrieredagen vil undervisningen denne uken foregå fra kl.
   12:15 til 15:00.
+- Vi har et nytt undervisningsrom denne uken. Vennligst sjekk den
+  oppdaterte timeplanen for detaljer.
 - For de som har mulighet og ønsker å jobbe med oppgaver med veiledning
   før forelesningen, er det mulig fra kl. 09:15.
 - Videre utover fra uke 41 vil det etter forelesningen være satt av to
@@ -28,4 +33,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-09-25 17:50:44.83623**
+**Siste gang oppdatert: 2023-09-27 11:04:30.177652**
