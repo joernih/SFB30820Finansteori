@@ -237,13 +237,6 @@ P_x=\frac{n}{n+m}P_0+\frac{m}{n+m}P_e= \frac{nP_0+mP_e}{n+m}
 T_n=\left(\frac{nP_0+mP_e}{n+m} - P_e\right)\frac{1}{1/N} = \frac{P_o-P_e}{N+1}
 \end{equation}
 
-```{r include=FALSE, echo=F}
-knitr::knit_exit()
-```
-
-
-
-
 # Gjeldsgrad og risiko
 
 1. Gjeldsandel: (mellom 0 og 1) 
@@ -254,8 +247,6 @@ G/(G+E)
 \begin{equation}
 G/E
 \end{equation}
-
-
 
 ### Formelt (uten skatt, men med konkursrisiko) ###
 
@@ -276,6 +267,9 @@ Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}
 
+```{r include=FALSE, echo=F}
+knitr::knit_exit()
+```
 
 
 ## Miller & Modigliani (M&M)
