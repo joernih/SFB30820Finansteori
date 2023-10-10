@@ -2310,7 +2310,7 @@ knitr::knit_exit()
 
 class: inverse, center, middle
 
-# Forelesning 7: `r tema[7]`
+# Forelesning 7: `r tema[8]`
 
 **Læringsmål:**
 
@@ -2324,7 +2324,7 @@ class: inverse, center, middle
 
 ---
 
-## Gjeldsgrad og risiko 
+## Gjeldsandel og gjeldsgrad
 
 - Problemstilling: Hvilken effekt har endring i kapitalstrukturen (forholdet mellom gjeld og egenkapitalen) på finansieringsrisikoen?
 
@@ -2342,8 +2342,9 @@ I selve omtalen av bedriftens kapitalstruktur benyttes disse begrepene gjerne om
 
 ---
 
-### Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
+## Sammenhengen mellom forventet avkastning og totalrisiko for et gitt investeringsprosjekt
 
+### Investeringsrisiko
 Alternative navn på investeringsrisiko: *eiendelsrisiko, prosjektrisiko, driftsrisiko elle forretningsrisiko.*
 
 Samtlige betegnelser signaliserer at usikkerheten skriver seg fra bedriftens *produksjonsvirksomhet*. Faktorer som påvirker denne kan være:
@@ -2444,15 +2445,15 @@ knitr::include_graphics(c("pensum/figurer-46.png"))
 
 ---
 
-### Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
+## Sammenhengen mellom forventet avkastning og systemrisiko for et gitt investeringsprosjekt
 
 Benytter $\beta_{I}$ for *systematisk risko* som et mål på ikke-diversifisebar risiko i den kontantstrømmen som driften gir (dvs. uten hensyn hvordan driften er finansiert).
 
-Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller driftsbeta*.
+Alterntive navn er: *investeringsbeta, prosjektbeta, forretningsbeta,  eller driftsbeta*.
 
 ---
 
-#### Formelt (uten skatt, men med konkursrisiko) ###
+### Formelt (uten skatt, men med konkursrisiko) ###
 
 - Systematisk investeringsrisiko
 \begin{equation*}
@@ -2461,7 +2462,7 @@ Alterntive navn er: *investeringsbeta, foretningsbeta, prosjektbeta eller drifts
 
 Hvor $w_E=\frac{E}{E+G}$ og $w_G=\frac{G}{E+G}$.
 
-- Dersom vi løser uttrykket ovenfor for $\beta_I$ får vi
+- Dersom vi løser uttrykket ovenfor for $\beta_E$ får vi
 
 \begin{equation*}
 (E+G)\beta_{I}=E\beta_{E}+G\beta_{G} \\
@@ -2503,8 +2504,7 @@ inb_v <- rep(c(0.8),7)
 gjb_v <- c(0,0,0,0,0.05,0.10,0.2)
 til_b <- data.frame(goe=goe_v, invb=inb_v) %>%
 	dplyr::mutate(gjb=gjb_v) %>%
-	dplyr::mutate(akb=invb+(invb-gjb)*gjb) 
-a <- data.frame(t(til_b))
+	dplyr::mutate(akb=invb+(invb-gjb)*goe) 
 htmlTable::htmlTable(t(til_b),rnames=radnr_p)
 ```
 
