@@ -28,7 +28,7 @@ navbar:
       - text: "#7: Gjeldsgrad og risiko"
         href: "articles/presentations.html#126" 
       - text: "#8: Gjeldsgrad og verdi i perfekte kapitalmarkeder"
-        #        href: "articles/presentations.html#129" 
+        href: "articles/presentations.html#135" 
       - text: "#9: Gjeldsgrad og verdi med imperfeksjoner"
         #        href: "articles/presentations.html#141" 
       - text: "#10: Dividende"

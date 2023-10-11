@@ -10,7 +10,6 @@ abstract: ''
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #source("timeplan.R")
 #`r tema[12]`
-
 ```
 
 # Læringsmål kapittel 1
@@ -54,17 +53,18 @@ abstract: ''
 - Skille mellom den positive og negative effekten av høyere gjeldsgrad sett med eiernes øyne.
 - Regne sammenhengen mellom gjeldsgrad og aksjekurs i en situasjon der selskapsverdien er uavhengig av gjeldsgraden.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 # Læringsmål kapittel 7
 - Beregne kontantstrøm til kreditorene og overskuddet for eierne med utgangspunkt i data om et investeringsprosjekt og et finansieringsprosjekt.
-- Bise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (se kapittel 6).
+- Vise med et eksempel at forventet overskudd pr. aksje stiger med stigende gjeldsgrad (se kapittel 6).
 - Forklare hva en arbitrasjemulighet er.
 - Konstruere en arbitrasjestrategi for å høste en arbitrasjegevinst.
 - Gjengi de to hovedresultatene til Miller og Modigliani (M&M) med formler og ord for en verden uten skatt.
 - Forklare hvorfor kapitalverdimodellen kan gi to prosjekter samme kapitalkostnad selv om de ifølge M&M ikke er i samme risikoklasse.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
 
 # Læringsmål kapittel 8
 - Forklare forskjellen mellom ettleddsskatt og toleddsskatt og fortelle hvilket alternativ Norge benytter.
