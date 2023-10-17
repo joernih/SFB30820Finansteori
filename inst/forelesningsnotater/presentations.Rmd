@@ -2617,7 +2617,7 @@ Arbitrasjegevinst ("pengepumpe"): 90,- av et beløp på 100,- kan benyttes til �
 
 ## Miller & Modigliani (M&M)
 
-Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi *fastsette* verdien som blir bestemt i markedet? Svar: Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
+Som vist vil arbitrasje føre til lik verdifastsette, men hvordan kan vi fastsette *tallverdien* som blir bestemt i markedet? Svar: Forutsetninger for verdsetting av selskaper i Miller & Modigliani: 
 
 **Markedet:**
 - Alle investorer har full informasjon om markedsmulighetene
@@ -2741,7 +2741,69 @@ k_E = 0.074+(0.074-0.04)\frac{1}{1} = 0.10
 
 **Konklusjon: M&Ms konklusjoner holder også under mer robuste og velkjente forutsetninger.**
 
-```{r}
+---
+
+
+## Appendiks: Utledning av formelen for summen av en uendlig kontantstrøm
+
+Nåverdien av en enkelt fremtidig kontantstrøm kan finnes ved hjelp av formelen:
+$$PV = \frac{C}{(1 + r)^n}$$
+
+Hvor:
+
+- $PV$  er nåverdien av kontantstrømmen
+- $C$ er kontantstrømmen i fremtiden
+- $r$ er avkastningskravet (diskonteringsrenten)
+- $n$ er antall perioder (for eksempel år) i fremtiden
+
+---
+
+Hvis vi tenker på en evigvarende kontantstrøm der vi mottar $C$ hvert år, kan vi begynne med å beregne nåverdien for de første få årene:
+
+For år 1: 
+$$ PV_1 = \frac{C}{(1 + r)}$$
+
+For år 2: 
+$$ PV_2 = \frac{C}{(1 + r)^2}$$
+
+For år 3: 
+$$ PV_3 = \frac{C}{(1 + r)^3}$$
+
+... og så videre.
+
+---
+
+Nåverdien av hele den evigvarende kontantstrømmen vil være summen av nåverdiene av alle disse individuelle kontantstrømmene. Matematisk kan vi skrive dette som en uendelig rekke:
+
+$$ PV = C \times \left( \frac{1}{(1 + r)} + \frac{1}{(1 + r)^2} + \frac{1}{(1 + r)^3} + ... \right)$$
+
+Dette er en geometrisk rekke hvor hver term er et tall ganger forrige term. For denne rekken, er ratioen mellom etterfølgende termer $\frac{1}{(1 + r)}$.
+
+For en geometrisk rekke med ratio $|r|<1$ (i vårt tilfelle er dette $\frac{1}{(1 + r)}$), er summen av rekken gitt ved:
+
+$$
+S = \frac{a}{1 - r} 
+$$
+
+Hvor $a$ er den første termen i rekken. 
+
+---
+
+For vår kontantstrømrekke er $a = \frac{C}{(1 + r)}$ og $r=\frac{1}{(1 + r)}$.
+
+Setter inn verdiene vi har:
+
+$$ PV = \frac{\frac{C}{(1 + r)}}{1 - \frac{1}{(1 + r)}}$$
+
+Forenkle videre:
+
+$$ PV = \frac{C}{(1 + r) - 1} = \frac{C}{r}$$
+
+Og det er hvordan vi kommer frem til formelen for en evigvarende kontantstrøm:
+
+$$ PV = \frac{C}{r}$$
+
+```{r, echo=F}
 knitr::knit_exit()
 ```
 
