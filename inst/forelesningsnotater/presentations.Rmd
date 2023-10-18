@@ -2803,9 +2803,6 @@ Og det er hvordan vi kommer frem til formelen for en evigvarende kontantstrøm:
 
 $$ PV = \frac{C}{r}$$
 
-```{r, echo=F}
-knitr::knit_exit()
-```
 
 ---
 
@@ -3189,7 +3186,7 @@ knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
 
 
-```{r, eval=F}
+```{r}
 knitr::knit_exit()
 ```
 
