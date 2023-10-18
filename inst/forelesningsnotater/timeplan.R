@@ -99,10 +99,10 @@ oppgaver_eks <- c(
 "Eks 2020: Oppg.1: a,b,(c),d,Eks 2021: Oppg.1: 2, Eks 2022: Oppg.1: 2",
 "Eks 2021: Oppg.1: 3., Eks 2021: Oppg.3: 1,2, Eks. Oppg.3: a,b,c,d,e, Arbeidskrav 2023: Oppg. 4.",
 "Eks 2022: Oppg.4: 1-4, Arbeidskrav 2023: Oppg. 5.",
-"",
-"",
-"",
-"",
+"Eks 2020: Oppg.4 a,b. Eks 2022: Oppg.4: 1-4",
+"Arbeidskrav: Oppg.6, Eks. 2022: Oppg. 5,6",
+"Eks. 2022: Oppg 3-6, Eks 2021: Oppg.4: 1-2",
+"Eks 2021: Oppg.4: 3-4",
 "",
 ""
 )
