@@ -2823,10 +2823,10 @@ class: inverse, center, middle
 ## Intro
 
 - Interessentene
-
-  - Investorer (aksjonærer og kreditorer)
+  - Investorer 
+    - Aksjonærer 
+    - Kreditorer
   - Myndighetene
-
 - Ettleddsbeskatning
   - Selskapsskatt ( $s_S$ )
 - Toleddsbeskatning
@@ -2852,8 +2852,8 @@ class: inverse, center, middle
 
 ### Imperfeksjoner som vi skal se på framover i dette kurset
 - Skatt
- - Ettleddsbeskatningbeskatning
- - Toleddsbeskatning
+  - Ettleddsbeskatningbeskatning
+  - Toleddsbeskatning
 - Emisjonskostnader
 - Vekst kontra kontroll
 - Asymmetrisk informasjon
@@ -2994,14 +2994,14 @@ knitr::include_graphics(c("pensum/figurer-56.png"))
 
 - **M&M-1**
 \begin{equation*}
-V_{M} = \frac{E(OFRS)}{k_U}  
+V = \frac{E(OFRS)}{k_U}  
 \end{equation*}
 
 - **M&MSkatt-1**
 \begin{equation*}
 V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
 = \frac{E(OFRS)(1-s)}{k_U} + PGs \\ 
-= V_u + PGs \\ 
+= V_{U} + PGs \\ 
 \end{equation*}
 ]
 .pull-right[
@@ -3122,7 +3122,7 @@ knitr::include_graphics(c("pensum/figurer-58.png"))
 
 - Små selskaper med rask investeringsvekst vil typisk oppleve at de får et større kapitalbehov enn det som kan finansierer fra driften og ny egenkapital
 - De betyr at selskapene enten må låne fra helt nye aksjonærer eller ta opp gjeld
-- For å beholde styringsretten vil typisk mange eierer ønske at (opp til et vist nivå) skjer i form av gjeld framfor egenkapital. 
+- For å beholde styringsretten, vil typisk mange eierer ønske at (opp til et vist nivå) skjer i form av gjeld framfor egenkapital. 
 
 ---
 
@@ -3140,7 +3140,7 @@ Den mest kjente av disse modellene er *Pecking-order-theory (hakkeordensteorien)
 
 ### Interessekonflikt mellom eierne og ledelsen
 
-- *Agentteorien* bygger på forutsetning om asymmetrisk informasjon og antar målkonflikter mellom selskapets interessenter
+- *Agentteorien* bygger på forutsetning om asymmetrisk informasjon *samt* antar målkonflikter mellom selskapets interessenter
 - Eierne ønsker at selskapets verdi blir maksimert, mens ledelsen ønsker å gjøre primært det som er best for dem selv
 - Fri kontantstrøm = Selskapets drift - Investeringer + Likvide eiendeler på balansen
 - Økt gjeldsgrad er fordelaktig fordi det reduserer den fri kontantstrømmen som ledelsen har tilgjengelig 
