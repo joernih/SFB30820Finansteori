@@ -2824,8 +2824,8 @@ class: inverse, center, middle
 
 - Interessentene
   - Investorer 
-    - Aksjonærer 
-    - Kreditorer
+     - Aksjonærer 
+     - Kreditorer
   - Myndighetene
 - Ettleddsbeskatning
   - Selskapsskatt ( $s_S$ )

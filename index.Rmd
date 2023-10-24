@@ -58,7 +58,6 @@ knitr::include_graphics("man/figures/pensum.jpg")
   - Kan gjøres alene eller i gruppe på maks 2 personer
 - Videre utover fra uke 41 vil det etter forelesningen være satt av to timer (i samme rom som brukes under forelesningen) til oppgaveløsning og veiledning.
 
-
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
