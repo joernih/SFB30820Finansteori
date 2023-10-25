@@ -68,16 +68,16 @@ abstract: ''
 - Forklare hvorfor verdien av selskapet stiger og totalkapitalkostnaden synker med gjeldsgraden under ettleddsskatt.
 - Redegjøre for fire gjeldsgradsbestemmende faktorer som ikke har med skatt å gjøre.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 # Læringsmål kapittel 11
 - Forklare forholdet mellom målsatt dividende og utbetalt dividende ifølge Lintner-modellen.
 - Forklare hva som menes med hjemmelaget dividendepolitikk og hvorfor dette kan gjøre selskapets dividendepolitikk irrelevant.
 - Redegjøre for teori og empiri om dividendens signalfunksjon.
 - Forklare hvorfor dividende kan påvirke agentkostnader.
 - Forklare hvorfor det norske skattesystemet er dividendenøytralt.
+
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 # Læringsmål kapittel 12
 - Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.

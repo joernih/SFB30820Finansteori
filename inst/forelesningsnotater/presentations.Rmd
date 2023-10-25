@@ -3186,9 +3186,6 @@ knitr::include_graphics(c("pensum/figurer-59.png"))
 ```
 
 
-```{r}
-knitr::knit_exit()
-```
 
 ---
 
@@ -3535,11 +3532,9 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
-
-```{r, echo=T}
-#knitr::knit_exit()
+```{r}
+knitr::knit_exit()
 ```
-
 ---
 
 class: inverse, center, middle

@@ -89,7 +89,9 @@
     <li>
       <a href="../articles/presentations.html#151">#9: Gjeldsgrad og verdi med imperfeksjoner</a>
     </li>
-    <li class="dropdown-header">#10: Dividende</li>
+    <li>
+      <a href="../articles/presentations.html#173">#10: Dividende</a>
+    </li>
     <li class="dropdown-header">#11: Opsjoner</li>
     <li class="dropdown-header">#12: Risikostyring</li>
   </ul>
@@ -415,6 +417,117 @@ G/E
 \beta_{E}=\beta_{I}(1+\frac{G}{E})
 \end{equation*}\]</span></p>
 </div>
+<div class="section level3">
+<h3 id="miller-modigliani-mm">Miller &amp; Modigliani (M&amp;M)<a class="anchor" aria-label="anchor" href="#miller-modigliani-mm"></a>
+</h3>
+<p><span class="math display">\[\begin{equation}
+k_G = \frac{r\cdot PG}{G}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+k_E = \frac{E(OER)}{E}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+k_T = \frac{E(OFR)}{V}
+\end{equation}\]</span></p>
+<ul>
+<li><p><strong>M&amp;M-1:</strong> <span class="math display">\[\begin{equation}
+V = \frac{E(OFR)}{k_T}=\frac{E(OFR)}{k_U}
+\end{equation}\]</span></p></li>
+<li><p><strong>M&amp;M-2:</strong></p></li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+k_E = k_T + (k_T-k_G)\frac{G}{E}
+=k_U + (k_U-k_G)\frac{G}{E}
+\end{equation}\]</span></p>
+<hr>
+</div>
+<div class="section level3">
+<h3 id="ettledsbeskatning">Ettledsbeskatning<a class="anchor" aria-label="anchor" href="#ettledsbeskatning"></a>
+</h3>
+<div class="section level4">
+<h4 id="selskapsskatt-og-kontantstrøm">Selskapsskatt og kontantstrøm<a class="anchor" aria-label="anchor" href="#selskapsskatt-og-kontantstr%C3%B8m"></a>
+</h4>
+<p><span class="math display">\[\begin{equation}
+KE+KK = O + rPG \\
+KE+KK = (OFRS-rPG)(1-s) + rPG \\
+KE+KK = (OFRS)(1-s) + rPGs
+\end{equation}\]</span></p>
+</div>
+<div class="section level4">
+<h4 id="selskapsskatt-og-verdi">Selskapsskatt og verdi<a class="anchor" aria-label="anchor" href="#selskapsskatt-og-verdi"></a>
+</h4>
+<p><span class="math display">\[\begin{equation}
+KE+KK = OFRS(1-s) + rPGs
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+V_{U} = \frac{E(OFRS)(1-s)}{k_U}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+V(\text{Renteskattegevinst}) = \frac{srPG}{r}=sPG
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= V_{U} + sPG \\
+=\frac{E(OFRS)(1-s)}{k_U} + sPG
+\end{equation}\]</span></p>
+</div>
+<div class="section level4">
+<h4 id="miller-og-modigliani-med-skatt">Miller og Modigliani med skatt<a class="anchor" aria-label="anchor" href="#miller-og-modigliani-med-skatt"></a>
+</h4>
+<ul>
+<li><p><strong>M&amp;MSkatt-1</strong> <span class="math display">\[\begin{equation*}
+V_{M} = V_{U} + V(\text{Renteskattegevinst}) \\
+= \frac{(OFRS)(1-s)}{k_U} + PGs \\
+= V_u + PGs \\
+\end{equation*}\]</span></p></li>
+<li><p><strong>M&amp;MSkatt-2</strong></p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+k_E = k_U + (k_U-k_G)(1-s)\frac{G}{E}
+\end{equation*}\]</span></p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="toleddsbeskatning">Toleddsbeskatning<a class="anchor" aria-label="anchor" href="#toleddsbeskatning"></a>
+</h3>
+<p><span class="math display">\[\begin{equation}
+n^*= (1-s_K)-(1-s_S)(1-s_E)
+\end{equation}\]</span></p>
+<hr>
+</div>
+</div>
+<div class="section level2">
+<h2 id="kapitalverdimodellen-med-beskatning">Kapitalverdimodellen med beskatning<a class="anchor" aria-label="anchor" href="#kapitalverdimodellen-med-beskatning"></a>
+</h2>
+<p><strong>Ingen skatt</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(k_E=r_f +
+\beta_E[E(r_m)-r_f]\)</span></li>
+<li><span class="math inline">\(k_G=r_f +
+\beta_G[E(r_m)-r_f]\)</span></li>
+<li><span class="math inline">\(k_T=w_Ek_E + w_Gk_G\)</span></li>
+<li><span class="math inline">\(\beta_E=\beta_I+(\beta_I-\beta_G)\frac{G}{E}\)</span></li>
+</ol>
+<p><strong>Ettledsskatt</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(k_E=r_f +
+\beta_E[E(r_m)-r_f]\)</span></li>
+<li><span class="math inline">\(k_G=r_f +
+\beta_G[E(r_m)-r_f]\)</span></li>
+<li><span class="math inline">\(k_T=w_Ek_E + w_Gk_G(1-s)\)</span></li>
+<li><span class="math inline">\(\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}\)</span></li>
+</ol>
+<p><strong>Toleddsskatt med Miller-likevekt</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(k_E=r_f(1-s) +
+\beta_E[E(r_m)-r_f(1-s)]\)</span></li>
+<li><span class="math inline">\(k_G=r_f(1-s) +
+\beta_G[E(r_m)-r_f(1-s)]\)</span></li>
+<li><span class="math inline">\(k_T=w_Ek_E + w_Gk_G(1-s)\)</span></li>
+<li><span class="math inline">\(\beta_E=\beta_I+(\beta_I-\beta_G)(1-s)\frac{G}{E}\)</span></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/knit_exit.html" class="external-link">knit_exit</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
   </div>
 
