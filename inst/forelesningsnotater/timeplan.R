@@ -128,6 +128,7 @@ df2 <- data.frame(Forelesning=seq(1,11),
 		 Oppgaver_bok=oppgaver_bok[1:11],
 		 Oppgaver_nett=oppgaver_nett[1:11]
 )
+View(df2)
 #https://tp.educloud.no/hiof/timeplan/timeplan.php?type=course&id%5b%5d=SFB10816%2C1&sort=week&id[]=SFB30820%2C1
 #                               2023                               
 #

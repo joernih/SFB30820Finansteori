@@ -74,6 +74,7 @@ https://fsweb.no/fagpersonweb/emne.jsf?id=SFB30820%3A224%3A1
 
 # Lenker
 inst/forelesningsnotater/presentations.Rmd
+inst/forelesningsnotater/timeplan.R
 vignettes/timeplan.Rmd
 vignettes/formler.Rmd
 vignettes/læringsmaal.Rmd
