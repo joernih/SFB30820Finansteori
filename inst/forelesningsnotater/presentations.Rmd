@@ -3,19 +3,19 @@ title: "Finansteori (SFB30820)"
 subtitle: "Forelesningsnotater (shift+o for oversiksbilde)"
 author: "Jørn I.Halvorsen"
 date: "`r Sys.Date()`"
-output:
-  xaringan::moon_reader:
-    includes:
-      in_header: "mathjax-equation-numbers.html"
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
 #output:
-#  html_document:
-#    toc: true
-#    toc_depth: 5
+#  xaringan::moon_reader:
+#    includes:
+#      in_header: "mathjax-equation-numbers.html"
+#    lib_dir: libs
+#    nature:
+#      highlightStyle: github
+#      highlightLines: true
+#      countIncrementalSlides: false
+output:
+  html_document:
+    toc: true
+    toc_depth: 5
 ---
 
 
@@ -3246,7 +3246,7 @@ Dette er den vanligste varianten
 	- Beløpet $$\text{salg av eiendeler} - (\text{avviklingskostnader} + \text{gjeld})$$
 	- Siden dette er en investering (desinvestering) om avvikling framfor fortsatt drift, behandles ikke videre i dette kapitlet
 - Hverken fondsemisjon eller aksjesplitter innebærer noen utbetaling fra selskapet til eierne (se forelesning 6 `r tema[6]`)
-	- Vi betrakter derfor ikke i dette kurest dette som en dividendevariant
+	- Vi betrakter derfor i dette kurset ikke dette som en dividendevariant
 
 ---
 
