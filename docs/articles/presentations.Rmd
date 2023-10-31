@@ -3246,7 +3246,7 @@ Dette er den vanligste varianten
 	- Beløpet $$\text{salg av eiendeler} - (\text{avviklingskostnader} + \text{gjeld})$$
 	- Siden dette er en investering (desinvestering) om avvikling framfor fortsatt drift, behandles ikke videre i dette kapitlet
 - Hverken fondsemisjon eller aksjesplitter innebærer noen utbetaling fra selskapet til eierne (se forelesning 6 `r tema[6]`)
-	- Vi betrakter derfor ikke i dette kurest dette som en dividendevariant
+	- Vi betrakter derfor i dette kurset ikke dette som en dividendevariant
 
 ---
 
@@ -3333,10 +3333,8 @@ htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
 
 **Øvelse:** Ved bruk av Lintner-modellen, se om du klarer å replikere tallene som er oppgitt i tabellen.
 
----
-
 **Svar:**
-
+<!--
 2013: `r 100*0.3` $=100\cdot 0.3$
 <br>
 2014: `r 120*0.3*0.6 + nu-0.6*nu` $=120\cdot 0.3\cdot 0.6 + 30-0.6\cdot 30$
@@ -3344,6 +3342,7 @@ htmlTable(just_df, header=c("Tilstand:","1","2","3","4"))
 2015: `r 150*0.3*0.6 + en-0.6*en` $=150\cdot 0.3\cdot 0.6 + 33.6-0.6\cdot 33.6$
 <br>
 2016: `r 80*0.3*0.6 + to-0.6*to` $=80\cdot 0.3\cdot 0.6 + 40.44-0.6\cdot 40.44$
+-->
 
 ---
 
@@ -3532,9 +3531,10 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
-```{r}
+```{r, echo=F}
 knitr::knit_exit()
 ```
+
 ---
 
 class: inverse, center, middle
