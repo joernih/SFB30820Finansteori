@@ -3383,8 +3383,8 @@ For å vite hvordan kontantstrømmen fordeler seg mellom selskapet og eierne, m�
 ND_t = D_t + TB_t - EM_t
 \end{equation}
 
-- $D_t + TB_t$ (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne tar *ut* av selskapet
-- $EM_t$ (Dividende pluss tilbakekjøpte aksjer) kontantstrømmen som eierne *tilfører* selskapet
+- $D_t + TB_t$ (Dividende pluss betaling for tilbakekjøpte aksjer) kontantstrømmen som eierne tar *ut* av selskapet
+- $EM_t$ (Emisjonsbeløpet ved emisjons av aksjer) kontantstrømmen som eierne *tilfører* selskapet
 - Viktig: Kontantstrømmen må sees i sammeheng med finansieringstrømmen for hele økonomien
 
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
@@ -3478,7 +3478,7 @@ I denne situajonen: Dividenden er budbringeren, mens budskapet er endredet forve
 
 Signalteorien predikerer at
 
-1. Økt (redusert) uventet dividende vil medføre (lavere) høyere akssjekurs
+1. Økt (redusert) uventet dividende vil medføre (lavere) høyere aksjekurs
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-66.png"))
 ```
