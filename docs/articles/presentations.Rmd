@@ -3531,7 +3531,7 @@ n^{*}_d = (1-s)(s_{Eg}-s_{Ed})
 
 Dagens norske skattesystem er dividendenøytralt, mens det har vært unntaktet snarere enn regelen de siste 50-årene.
 
-```{r, echo=F}
+```{r, echo=F, eval=F}
 knitr::knit_exit()
 ```
 
@@ -4178,7 +4178,7 @@ Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere
 
 
 ```{r, echo=T}
-#knitr::knit_exit()
+knitr::knit_exit()
 ```
 
 ---
