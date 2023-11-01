@@ -103,8 +103,8 @@ oppgaver_eks <- c(
 "Arbeidskrav: Oppg.6, Eks. 2022: Oppg. 5,6",
 "Eks. 2022: Oppg 3-6, Eks 2021: Oppg.4: 1-2",
 "Eks 2021: Oppg.4: 3-4",
-"",
-""
+"Eks 2022: Oppg 3",
+"Eks. 2021: Oppg. 5, Eks 2022: Oppg 5"
 )
 
 

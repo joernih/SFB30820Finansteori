@@ -31,7 +31,6 @@ kableExtra::kbl(df2,col.names=cns) %>% kableExtra::kable_paper(full_width = F) %
 [Lenke til bokens nettside](https://finans2.portfolio.no/)
 
 
-
 ```{r, echo=F}
 knitr::knit_exit()
 ```
