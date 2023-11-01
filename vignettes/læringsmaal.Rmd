@@ -75,10 +75,6 @@ abstract: ''
 - Forklare hvorfor dividende kan påvirke agentkostnader.
 - Forklare hvorfor det norske skattesystemet er dividendenøytralt.
 
-```{r, echo=F}
-knitr::knit_exit()
-```
-
 # Læringsmål kapittel 12
 - Redegjøre for max-funksjonene til kjøpsopsjoner og salgsopsjoner ved forfall.
 - Konstruere kontantstrømsdiagram for kjøpsopsjoner og salgsopsjoner.
@@ -86,6 +82,9 @@ knitr::knit_exit()
 - Beregne verdien av en kjøpsopsjon med den binomiske opsjonsprismodellen.
 - Beregne en kjøpsopsjons verdi ved hjelp av Black-Scholes-modellen.
 - Redegjøre for hvordan opsjonsprismodeller kan brukes til å verdsette fleksibilitet.
+```{r, echo=F}
+knitr::knit_exit()
+```
 
 # Læringsmål kapittel 13
 - Begrunne hvorfor risikostyring kan være viktig.
