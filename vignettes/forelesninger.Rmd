@@ -17,7 +17,7 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ## Forelesning #8:  [`r tema[9]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/8_Gjeldsgrad_og_verdi_i_perfekte_kapitalmarkeder.pdf)
 ## Forelesning #9:  [`r tema[10]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/9_Gjeldsgrad_og_verdi_under_imperfeksjoner.pdf)
 ## Forelesning #10: [`r tema[11]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/10_Dividende.pdf)
-## Forelesning #11: `r tema[12]`
+## Forelesning #11: [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/11_Opsjoner.pdf)
 ## Forelesning #12: `r tema[13]`
 ```{r, echo=F, eval=T}
 knitr::knit_exit()
