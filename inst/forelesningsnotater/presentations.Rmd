@@ -3570,6 +3570,7 @@ Hovedvekten i dette kapitlet er å forklare intuisjonen bak slike opsjonsprising
 
 ## Grunntrekk ved opsjoner
 
+### Egenskaper
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 1. Rett til å kjøpe (kjøpsopsjon) eller selge (salgsopsjon) en bestemt eiendel
@@ -3578,7 +3579,7 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ---
 
-### Eksempler på opsjoner på forskjellige eiendeler
+### Eksempler på opsjoner til forskjellige eiendeler
 
 - **Aksjeopsjoner** (vi skal først se på verdsettingen av disse)
 - Konvertible obligasjoner
@@ -3737,7 +3738,7 @@ knitr::include_graphics(c("pensum/figurer-70.png"))
 
 ---
 
-### Opsjonsverdi, innløsningskurs og kontraktstid (#2-3)
+### Opsjonsverdi, innløsningskurs og kontraktstid (#2-#3)
 
 Fra Tabell 12.1 i lærebok finner vi at 
 
@@ -3819,11 +3820,13 @@ knitr::include_graphics(c("pensum/figurer-74.png"))
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-75.png"))
 ```
+
 ### Kontantstrømfordelingen av en sikringsportefølje
 
 ```{r, echo=FALSE, out.width="60%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-76.png"))
 ```
+
 ---
 
 ### Sikringsporteføljen

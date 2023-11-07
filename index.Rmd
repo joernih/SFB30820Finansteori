@@ -53,8 +53,6 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
-- På grunn av vanskelige vær og føreforhold til Campus, gis det mulighet til å følge forlesningen på onsdag også på [Zoom](https://hiof.zoom.us/j/69818514088?pwd=a2hFcEdGRDJDNHYweWtTcU54WlZ5Zz09)
-- Som vanlig er det etter forelesningen satt av to timer (i samme rom som brukes under forelesningen) til oppgaveløsning og veiledning.
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
@@ -91,5 +89,3 @@ dk2-dk1
 
 MABMM301DKM189N,MABMM301NOM189S
 wkhtmltopdf --page-ranges 1-5,8 input.html output.pdf
-
-
