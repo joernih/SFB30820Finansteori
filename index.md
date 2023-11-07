@@ -14,14 +14,8 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- På grunn av vanskelige vær og føreforhold til Campus, gis det mulighet
-  til å følge forlesningen på onsdag også på
-  [Zoom](https://hiof.zoom.us/j/69818514088?pwd=a2hFcEdGRDJDNHYweWtTcU54WlZ5Zz09)
-- Som vanlig er det etter forelesningen satt av to timer (i samme rom
-  som brukes under forelesningen) til oppgaveløsning og veiledning.
-
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-11-01 12:19:20.625695**
+**Siste gang oppdatert: 2023-11-07 14:39:13.419877**
