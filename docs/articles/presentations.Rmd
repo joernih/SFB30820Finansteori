@@ -4180,11 +4180,6 @@ Selv om vi har vist til nå at det er kun sannsynlighetsfordelingens haler som b
 \end{equation}
 Den systematiske risikoen for kjøpsopsjoner var derfor nesten 20 ganger høyere enn den systematiske aksjerisikoen.
 
-
-```{r, echo=T}
-knitr::knit_exit()
-```
-
 ---
 
 class: inverse, center, middle
@@ -4375,7 +4370,4 @@ En annnen undersøkelse viser:
 - Høyer markesverdi for bedrifter som benytter derivater til å sikre markedsverdi
 - Verdiøkningen er betydelig: 4.9 prosent høyere til de bedriftene som sikrer
 
-```{r, echo=F, eval=F}
-knitr::knit_exit()
-```
 
