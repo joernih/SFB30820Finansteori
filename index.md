@@ -14,8 +14,11 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
+- [Løsningsforslag
+  arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losningsforslag.pdf)
+
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-11-07 14:39:13.419877**
+**Siste gang oppdatert: 2023-11-08 12:25:25.999113**
