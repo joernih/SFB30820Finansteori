@@ -4081,7 +4081,7 @@ knitr::include_graphics(c("pensum/figurer-78.png"))
 
 ---
 
-### Endret investeringsrisiko 
+#### Endret investeringsrisiko 
 
 Anta at selskapet gjennomfører investeringer som har nåverdi lik null men som øker selskapets investeringsrisiko (kun usystematisk)
 
@@ -4104,7 +4104,7 @@ I praksis vil kreditorene forsøke å forsikre seg mot slik adferd ved å ha str
 
 ---
 
-### Verdidriverne
+#### Verdidriverne
 
 1. Dagens aksjekurs
 1. Innløsningskursen tilsvarer investeringene som trengs for å produsere prosjektets innbetalinger
@@ -4120,7 +4120,7 @@ Tre betingelser må være oppfylt for at realopsjonsmodell vil avvike fra diskon
 
 ---
 
-### Typer
+#### Typer
 
 Vi kan skille mellom tre typer realopsjoner
 1. *Utsettelsesopsjon*
@@ -4140,7 +4140,7 @@ htmlTable(df_prosj, header=c("Egenskap","Oljeselskapet Gasse","Farmasi","Mobilte
 ```
 ---
 
-### Verdien av fleksibilitet
+#### Verdien av fleksibilitet
 
 \begin{equation}
 \text{NV} = \text{Tradisjonell NV} + \text{Opsjonsverdi}
@@ -4153,7 +4153,7 @@ verdsettelse av realopsjoner krever ofte inngående kunnskap om opsjonsprisingsm
 
 ---
 
-### Risiko i KVM kontral OPM
+### Risiko i KVM kontra OPM
 
 - For investorer med risikoaversjon, har vi tidligere vist under KVM at økt risiko har vært til ulempe
 - Det motsatt viser seg i være tilfelle i OPM
@@ -4274,6 +4274,7 @@ Valutakursrisiko er usikkerhet om endringer i resultat, kontantstrøm og verdi s
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-81.png"))
 ```
+
 ---
 
 ### Renterisiko (#2)
@@ -4288,6 +4289,7 @@ knitr::include_graphics(c("pensum/figurer-82.png"))
 ```{r, echo=FALSE, out.width="40%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-84.png"))
 ```
+
 ---
 
 ### Prisrisiko (#3)
@@ -4300,8 +4302,9 @@ knitr::include_graphics(c("pensum/figurer-83.png"))
 
 ---
 
+## Finansielle derivater
 
-## Forwardkontrakter
+### Forwardkontrakter
 
 Forwardkontrakter (terminkontrakter) dreier seg om en juridisk bindende avtale mellom to parter som gir kjøperen
 
@@ -4315,7 +4318,7 @@ knitr::include_graphics(c("pensum/figurer-85.png"))
 
 ---
 
-## Futureskontrakter
+### Futureskontrakter
 
 En *future* har egenskaper i form av at den gir *kjøperen:*
 
@@ -4336,10 +4339,10 @@ knitr::include_graphics(c("pensum/figurer-86.png"))
 ```{r, echo=FALSE, out.width="50%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-87.png"))
 ```
-```
+
 ---
 
-## Opsjoner (repetisjon)
+### Opsjoner (repetisjon)
 
 En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
@@ -4349,13 +4352,14 @@ En *opsjon* har egenskaper i form av at den gir *kjøperen:*
 
 ---
 
-## Swaps
+### Swaps
 
 Swap, finansiell transaksjon der to aktører avtaler å *bytte* kontantstrømmer over tid. De vanligste typer av swap-kontrakter er valutaswap og renteswap.
 
 ```{r, echo=FALSE, out.width="80%", fig.cap="", fig.align="center"}
 knitr::include_graphics(c("pensum/figurer-88.png"))
 ```
+
 ---
 
 ## Empiri om risikostyring

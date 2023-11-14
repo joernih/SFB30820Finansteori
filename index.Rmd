@@ -88,5 +88,9 @@ dk2 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.00)
 dk2-dk1
 ```
 
-MABMM301DKM189N,MABMM301NOM189S
-wkhtmltopdf --page-ranges 1-5,8 input.html output.pdf
+#MABMM301DKM189N,MABMM301NOM189S
+#wkhtmltopdf --page-ranges 1-5,8 input.html output.pdf
+
+
+
+
