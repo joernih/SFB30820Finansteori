@@ -160,6 +160,9 @@ E(r_p)=wr_f+(1-w)E(r_m)
 \begin{equation}
 Var(r_p)=(1-w)^2Var(r_m)
 \end{equation}
+\begin{equation}
+Std(r_p)=(1-w)Std(r_m)
+\end{equation}
 
 
 ### Kapitalkostnad for egenkapital og gjeld
