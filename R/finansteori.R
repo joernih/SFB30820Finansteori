@@ -42,7 +42,9 @@ kob <- function(A0=620,I=680,rf=0.01,theta=1.25,n=0.85){
   qm1 <- 1-q
   kob <- le1*(q*k_t+(1-q)*k_n)
 }
-print(kob())
+#print(kob(rf=0.01))
+#print(kob(rf=0.03))
+
 
 
 

@@ -4050,7 +4050,7 @@ B_T-S_T = \text{min}[V_T,B_T]
 \end{equation}
 
 ```{r, echo=FALSE, out.width="30%", fig.cap="", fig.align="center"}
-knitr::include_graphics(c("pensum/figurer-78.png"))
+knitr::include_graphics(c("pensum/figurer-79.png"))
 ```
 
 ---
