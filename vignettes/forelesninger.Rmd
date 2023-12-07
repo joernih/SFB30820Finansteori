@@ -20,9 +20,9 @@ source(paste0(rprojroot::find_rstudio_root_file(),'/inst/forelesningsnotater/tim
 ## Forelesning #11: [`r tema[12]`](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/11_Opsjoner.pdf)
 ## Forelesning #12: [`r tema[13]`]('https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/12_Risikostyring.pdf')
 
-## [Læringsmål](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/Formelsamling.pdf)
+## [Formelsamling](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/Formelsamling.pdf)
 
-## [Læringsmål](formler)
+## [Læringsmål](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/forelesningsnotater/L%C3%A6ringsm%C3%A5l.pdf)
 
 ```{r, echo=F, eval=T}
 knitr::knit_exit()
