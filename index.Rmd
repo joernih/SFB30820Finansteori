@@ -92,3 +92,4 @@ dk2-dk1
 #MABMM301DKM189N,MABMM301NOM189S
 #wkhtmltopdf --page-ranges 1-5,8 input.html output.pdf
 
+
