@@ -53,9 +53,7 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
-- [Lenke til kursevaluering](https://nettskjema.no/a/380336)
-- [Løsningsforslag arbeidskrav](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/arbeidskrav/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losningsforslag.pdf)
-- Formler og læringsmål til kurset er nå lagt ut som pdf under fanen utskrifter
+- [Sensorveiledning, Eksamen 2023]()
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
