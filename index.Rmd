@@ -53,7 +53,7 @@ knitr::include_graphics("man/figures/pensum.jpg")
 ```
 
 # Nyheter
-- [Sensorveiledning, Eksamen 2023]()
+- [Eksamen 2023 (utkast til sensorveiledning)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losning.pdf)
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
