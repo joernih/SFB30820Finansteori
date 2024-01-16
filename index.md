@@ -14,11 +14,11 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
-- [Eksamen 2023 (utkast til
-  sensorveiledning)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losning.pdf)
+- [Eksamen 2023
+  (sensorveiledning)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losning.pdf)
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2023-12-20 13:01:28.166378**
+**Siste gang oppdatert: 2024-01-16 15:14:34.331035**
