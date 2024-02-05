@@ -2597,7 +2597,7 @@ Dersom gjeldsgraden ikke påvirker den totale kontantstrømmen, hva betyr dette 
 - Verdien av selskapet 900. Hvor $V_M=900$, $E_M=400$ og $G_M=500$ med en pålydende gjeld på 6 prosent
 - Gir dividiende $=OFR-0.06\cdot 500=OFR-30$
 - Arbitrasjestrage (kjøp undervurdert for samme risikoprofil):
-	- Investering: Aksjer $0.1\cdot 500$ og Obligasjoner $0.1\cdot 400$ som totalt koster 90
+	- Investering: Aksjer $0.1\cdot 400 og Obligasjoner $0.1\cdot 500$ som totalt koster 90
 	- Mottar: $0.1\cdot OFR$
 ]
 
