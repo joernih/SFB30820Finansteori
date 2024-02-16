@@ -20,9 +20,11 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
   her](https://hiof.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c5900f5d-4478-4361-80d2-b10d00f807aa)
 - [Eksamen 2023
   (sensorveiledning)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Finansteori%20(SFB30820)%2C%20H%C3%B8sten%202023_losning.pdf)
+  - Fikset en syntaksfeil i oppgave 4, sp. 2: opphøyd i 1,2,3 skal være
+    1/1,1/2,1/3
 
 Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2024-02-12 11:08:59.643811**
+**Siste gang oppdatert: 2024-02-16 09:26:06.563904**
