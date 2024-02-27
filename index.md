@@ -14,6 +14,8 @@ Norli](https://www.fagbokforlaget.no/Finans-Teori-og-praksis/I9788245022193)
 
 # Nyheter
 
+- [Eksamen 2024 Kontinuasjon (sensorveiledning,
+  utkast)](https://github.com/joernih/SFB30820Finansteori/blob/main/inst/eksamensoppgaver/Eksamen_SFB10816_Finansteori_2024_V_K_losning.pdf)
 - Som tilbud til de som ønsker å forbedre seg til kontinuasjonseksamen,
   video hvor jeg går igjennom og diskuterer alle læringsmålene er nå
   lagt ut: [Lenke
@@ -28,4 +30,4 @@ Undervisnings- og emneansvarlig (jornih at hiof.no)
 
 Jørn I. Halvorsen
 
-**Siste gang oppdatert: 2024-02-27 14:17:28.357985**
+**Siste gang oppdatert: 2024-02-27 14:24:55.968**
