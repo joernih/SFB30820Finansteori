@@ -71,28 +71,11 @@ Jørn I. Halvorsen
 knitr::knit_exit()
 ```
 
-# Task
-Eksamensdato: 12.12.2023
-https://fsweb.no/fagpersonweb/emne.jsf?id=SFB30820%3A224%3A1
+########################################################################
+# Lenke
+# -
+# -
+# -
+########################################################################
+########################################################################
 
-# Lenker
-inst/forelesningsnotater/presentations.Rmd
-inst/forelesningsnotater/timeplan.R
-vignettes/timeplan.Rmd
-vignettes/formler.Rmd
-vignettes/læringsmaal.Rmd
-vignettes/anbefalte_oppgaver.Rmd
-vignettes/arbeidskrav2023_V.Rmd
-vignettes/forelesninger.Rmd
-vignettes/log.Rmd
-https://tp.educloud.no/hiof/und-detaljer/?activity=23H-SFB30820-1-1-2
-#MABMM301DKM189N,MABMM301NOM189S
-#wkhtmltopdf --page-ranges 1-5,8 input.html output.pdf
-23.02.2024
-
-```{r}
-library(FinancialMath)
-dk1 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.01)
-dk2 <- NPV(cf0=-518400, cf=c(299520,282240), times=c(1:2), i=.00)
-dk2-dk1
-```
