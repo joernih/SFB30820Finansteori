@@ -1,8 +1,0 @@
-
-```{r}
-examplefile='sfb30820-finansteori-24.11.2020.docx'
-rmarkdown::pandoc_convert(examplefile,to="markdown",output = "abc.rmd", options=c("--extract-media=."))
-rmarkdown::render(paste0(tempdir(), "/example.rmd"),"html_document")
-browseURL(paste0(tempdir(),"/example.html"))
-```
-
