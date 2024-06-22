@@ -1,10 +1,24 @@
 ---
 title: "Finansteori"
+filters:
+  - panelize
+  - webr
+  - pyodide
 ---
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+:::{.to-webr}
+```{r}
+1 + 1
+```
+:::
+
+:::{.to-pyodide}
+```{python}
+4 + 5
+```
+:::
 
 
 ![](man/figures/01_finans.jpg)
