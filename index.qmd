@@ -5,3 +5,10 @@ title: "."
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+library(yaml)
+yaml_data <- yaml::yaml.load_file("_variables.yml")
+
+```
+
