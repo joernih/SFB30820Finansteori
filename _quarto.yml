@@ -3,14 +3,16 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
+    - "lecture.qmd"
 
 website:
   title: "Finansteori"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Indeks"
+        href: index.qmd
+      - text: "Timeplan"
+        href: lecture.qmd
 
 format:
   html:

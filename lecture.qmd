@@ -1,0 +1,35 @@
+---
+title: "Lecture plan"
+output:
+  html_document:
+    engine: knitr
+---
+
+abc
+
+```{r, echo=F, ,message=F}
+# script/lecture.R
+#library(huxtable)
+#lecnr <- 13
+### ../script/lecture.R
+#source(paste0(rprojroot::find_rstudio_root_file(),'/script/lecture.R'))
+### https://hughjonesd.github.io/huxtable/huxtable.html
+#md <- jsonlite::fromJSON(paste0(rprojroot::find_rstudio_root_file(),"/data-raw/metadata.json"))
+#names(dft) <- c("#","Topic","Syllabus","Responsible","Week","Date")
+##abc <- huxtable::hux(dft,add_colnames = FALSE) %>% 
+##	add_colnames() %>%
+##	set_text_color(2:2, 1:6, "red") %>%
+##	set_bold(row = lecnr, col = everywhere) %>% 
+##	set_caption("Changes")
+#kableExtra::kbl(dft,col.names=c("#","Topic","Syllabus","Responsible","Week","Date")) %>% kableExtra::kable_classic_2(full_width = F) %>% kableExtra::row_spec(lecnr, bold = T)
+```
+Note: Changes may occur. 
+
+[Rooms](https://tp.educloud.no/hiof/timeplan/timeplan.php?&type=course&sem=24v&campus=&id[]=%C3%98KA201%2C1)
+
+**Last time updated: `r as.Date(Sys.time(),format = "%Y-%m-%d-%H-%M")`**
+
+```{r, echo=F}
+knitr::knit_exit()
+```
+
